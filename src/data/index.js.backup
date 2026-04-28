@@ -1,0 +1,11 @@
+import cet4 from './cet4.json'
+import programmer from './programmer.json'
+
+export const dictionaries = [cet4, programmer]
+
+export const getDictionary = (id) => dictionaries.find(d => d.id === id)
+
+export const getChapter = (dictId, chapterId) => {
+  const dict = getDictionary(dictId)
+  return dict?.chapters.find(c => c.id === Number(chapterId))
+}

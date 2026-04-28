@@ -1,0 +1,1529 @@
+{
+  "timestamp": "2026-04-27T12:23:14.897Z",
+  "internalDuplicates": [],
+  "levelCompliance": [
+    {
+      "lowDict": "英语专八",
+      "highDict": "考研词汇",
+      "levelDiff": 1,
+      "overlap": 4431,
+      "lowTotal": 12197,
+      "rate": "36.33",
+      "threshold": 60,
+      "samples": [
+        "reproduce",
+        "pen",
+        "malignant",
+        "benign",
+        "relative",
+        "pasture",
+        "button",
+        "trait"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "英语4级",
+      "highDict": "英语专八",
+      "levelDiff": 3,
+      "overlap": 4230,
+      "lowTotal": 4544,
+      "rate": "93.09",
+      "threshold": 15,
+      "samples": [
+        "abruptly",
+        "absorb",
+        "abuse",
+        "academic",
+        "access",
+        "accessible",
+        "accommodate",
+        "accomplish"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语专四",
+      "highDict": "英语专八",
+      "levelDiff": 1,
+      "overlap": 3942,
+      "lowTotal": 4025,
+      "rate": "97.94",
+      "threshold": 60,
+      "samples": [
+        "flutter",
+        "prawn",
+        "spine",
+        "delivery",
+        "streamline",
+        "pause",
+        "seizure",
+        "foundation"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语6级",
+      "highDict": "英语专八",
+      "levelDiff": 2,
+      "overlap": 3534,
+      "lowTotal": 3991,
+      "rate": "88.55",
+      "threshold": 35,
+      "samples": [
+        "absolutely",
+        "abstract",
+        "abuse",
+        "accelerate",
+        "accomplish",
+        "accountant",
+        "accrue",
+        "accurate"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高中英语词汇",
+      "highDict": "英语专八",
+      "levelDiff": 5,
+      "overlap": 3459,
+      "lowTotal": 3665,
+      "rate": "94.38",
+      "threshold": 5,
+      "samples": [
+        "although",
+        "effort",
+        "preference",
+        "beneath",
+        "currency",
+        "warmth",
+        "adapt",
+        "rewrite"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "托福词汇",
+      "highDict": "考研词汇",
+      "levelDiff": 1,
+      "overlap": 3377,
+      "lowTotal": 9212,
+      "rate": "36.66",
+      "threshold": 60,
+      "samples": [
+        "significant",
+        "table",
+        "south",
+        "local",
+        "cover",
+        "purpose",
+        "function",
+        "rise"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "英语4级",
+      "highDict": "托福词汇",
+      "levelDiff": 3,
+      "overlap": 3330,
+      "lowTotal": 4544,
+      "rate": "73.28",
+      "threshold": 15,
+      "samples": [
+        "abruptly",
+        "absorb",
+        "abuse",
+        "academic",
+        "access",
+        "accessible",
+        "accommodate",
+        "accomplish"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语4级",
+      "highDict": "考研词汇",
+      "levelDiff": 4,
+      "overlap": 3193,
+      "lowTotal": 4544,
+      "rate": "70.27",
+      "threshold": 5,
+      "samples": [
+        "absorb",
+        "academic",
+        "access",
+        "accommodate",
+        "accomplish",
+        "accumulate",
+        "achieve",
+        "acknowledge"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语6级",
+      "highDict": "托福词汇",
+      "levelDiff": 2,
+      "overlap": 2713,
+      "lowTotal": 3991,
+      "rate": "67.98",
+      "threshold": 35,
+      "samples": [
+        "abandonment",
+        "absolutely",
+        "abstract",
+        "abuse",
+        "accelerate",
+        "accomplish",
+        "accountant",
+        "accurate"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语专八",
+      "highDict": "SAT词汇",
+      "levelDiff": 1,
+      "overlap": 2699,
+      "lowTotal": 12197,
+      "rate": "22.13",
+      "threshold": 60,
+      "samples": [
+        "reproduce",
+        "malignant",
+        "serene",
+        "benign",
+        "independent",
+        "knighthood",
+        "unaccountable",
+        "trait"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "高中英语词汇",
+      "highDict": "英语4级",
+      "levelDiff": 2,
+      "overlap": 2661,
+      "lowTotal": 3665,
+      "rate": "72.61",
+      "threshold": 35,
+      "samples": [
+        "although",
+        "effort",
+        "preference",
+        "beneath",
+        "currency",
+        "warmth",
+        "adapt",
+        "fourteen"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高中英语词汇",
+      "highDict": "托福词汇",
+      "levelDiff": 5,
+      "overlap": 2512,
+      "lowTotal": 3665,
+      "rate": "68.54",
+      "threshold": 5,
+      "samples": [
+        "effort",
+        "preference",
+        "beneath",
+        "currency",
+        "warmth",
+        "adapt",
+        "rewrite",
+        "steam"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语6级",
+      "highDict": "考研词汇",
+      "levelDiff": 3,
+      "overlap": 2489,
+      "lowTotal": 3991,
+      "rate": "62.37",
+      "threshold": 15,
+      "samples": [
+        "abstract",
+        "accelerate",
+        "accomplish",
+        "accountant",
+        "accuse",
+        "achieve",
+        "acquaintance",
+        "activate"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语专四",
+      "highDict": "托福词汇",
+      "levelDiff": 1,
+      "overlap": 2358,
+      "lowTotal": 4025,
+      "rate": "58.58",
+      "threshold": 60,
+      "samples": [
+        "flutter",
+        "spine",
+        "delivery",
+        "streamline",
+        "foundation",
+        "turtle",
+        "blacksmith",
+        "combine"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "高中英语词汇",
+      "highDict": "考研词汇",
+      "levelDiff": 6,
+      "overlap": 2277,
+      "lowTotal": 3665,
+      "rate": "62.13",
+      "threshold": 5,
+      "samples": [
+        "effort",
+        "preference",
+        "beneath",
+        "warmth",
+        "adapt",
+        "fourteen",
+        "steam",
+        "firm"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "雅思词汇",
+      "highDict": "考研词汇",
+      "levelDiff": 1,
+      "overlap": 2215,
+      "lowTotal": 3427,
+      "rate": "64.63",
+      "threshold": 60,
+      "samples": [
+        "sensible",
+        "sign",
+        "explicit",
+        "wreck",
+        "thesis",
+        "precedent",
+        "lofty",
+        "fridge"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语6级",
+      "highDict": "雅思词汇",
+      "levelDiff": 2,
+      "overlap": 2088,
+      "lowTotal": 3991,
+      "rate": "52.32",
+      "threshold": 35,
+      "samples": [
+        "abstract",
+        "abuse",
+        "accelerate",
+        "accountant",
+        "accuse",
+        "achieve",
+        "activate",
+        "addict"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语专四",
+      "highDict": "考研词汇",
+      "levelDiff": 2,
+      "overlap": 2066,
+      "lowTotal": 4025,
+      "rate": "51.33",
+      "threshold": 35,
+      "samples": [
+        "spine",
+        "delivery",
+        "streamline",
+        "pause",
+        "foundation",
+        "combine",
+        "dismiss",
+        "revolt"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语6级",
+      "highDict": "英语专四",
+      "levelDiff": 1,
+      "overlap": 1968,
+      "lowTotal": 3991,
+      "rate": "49.31",
+      "threshold": 60,
+      "samples": [
+        "abstract",
+        "abuse",
+        "accelerate",
+        "accomplish",
+        "accountant",
+        "accurate",
+        "accuse",
+        "accustom"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "英语4级",
+      "highDict": "英语6级",
+      "levelDiff": 1,
+      "overlap": 1873,
+      "lowTotal": 4544,
+      "rate": "41.22",
+      "threshold": 60,
+      "samples": [
+        "absorb",
+        "abuse",
+        "academic",
+        "access",
+        "accommodate",
+        "accomplish",
+        "accumulate",
+        "accurate"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "托福词汇",
+      "highDict": "SAT词汇",
+      "levelDiff": 1,
+      "overlap": 1821,
+      "lowTotal": 9212,
+      "rate": "19.77",
+      "threshold": 60,
+      "samples": [
+        "significant",
+        "set",
+        "table",
+        "characteristic",
+        "statement",
+        "range",
+        "charge",
+        "right"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "英语专四",
+      "highDict": "雅思词汇",
+      "levelDiff": 1,
+      "overlap": 1744,
+      "lowTotal": 4025,
+      "rate": "43.33",
+      "threshold": 60,
+      "samples": [
+        "flutter",
+        "combine",
+        "dismiss",
+        "revolt",
+        "legal",
+        "slide",
+        "comic",
+        "saturate"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "英语4级",
+      "highDict": "英语专四",
+      "levelDiff": 2,
+      "overlap": 1676,
+      "lowTotal": 4544,
+      "rate": "36.88",
+      "threshold": 35,
+      "samples": [
+        "absorb",
+        "abuse",
+        "access",
+        "accommodate",
+        "accomplish",
+        "accumulate",
+        "accurate",
+        "acknowledge"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语4级",
+      "highDict": "雅思词汇",
+      "levelDiff": 3,
+      "overlap": 1656,
+      "lowTotal": 4544,
+      "rate": "36.44",
+      "threshold": 15,
+      "samples": [
+        "absorb",
+        "abuse",
+        "academic",
+        "access",
+        "accommodate",
+        "accumulate",
+        "achieve",
+        "acknowledge"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "高中英语词汇",
+      "levelDiff": 2,
+      "overlap": 1403,
+      "lowTotal": 1418,
+      "rate": "98.94",
+      "threshold": 35,
+      "samples": [
+        "boat",
+        "group",
+        "nineteen",
+        "marriage",
+        "clean",
+        "bottle",
+        "tail",
+        "very"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "英语专八",
+      "levelDiff": 7,
+      "overlap": 1392,
+      "lowTotal": 1418,
+      "rate": "98.17",
+      "threshold": 5,
+      "samples": [
+        "boat",
+        "group",
+        "nineteen",
+        "party",
+        "marriage",
+        "clean",
+        "bottle",
+        "tail"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语4级高频",
+      "highDict": "英语专八",
+      "levelDiff": 3,
+      "overlap": 1343,
+      "lowTotal": 1500,
+      "rate": "89.53",
+      "threshold": 15,
+      "samples": [
+        "abruptly",
+        "absorb",
+        "abuse",
+        "academic",
+        "access",
+        "accessible",
+        "accommodate",
+        "accomplish"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语6级高频",
+      "highDict": "英语专八",
+      "levelDiff": 2,
+      "overlap": 1269,
+      "lowTotal": 1500,
+      "rate": "84.60",
+      "threshold": 35,
+      "samples": [
+        "absolutely",
+        "abstract",
+        "abuse",
+        "accelerate",
+        "accomplish",
+        "accountant",
+        "accrue",
+        "accurate"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "雅思词汇",
+      "highDict": "SAT词汇",
+      "levelDiff": 1,
+      "overlap": 1245,
+      "lowTotal": 3427,
+      "rate": "36.33",
+      "threshold": 60,
+      "samples": [
+        "explicit",
+        "ravage",
+        "impede",
+        "thesis",
+        "precedent",
+        "immune",
+        "circulate",
+        "nitrogen"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "英语6级",
+      "highDict": "SAT词汇",
+      "levelDiff": 3,
+      "overlap": 1176,
+      "lowTotal": 3991,
+      "rate": "29.47",
+      "threshold": 15,
+      "samples": [
+        "abstract",
+        "accelerate",
+        "accomplish",
+        "accountant",
+        "accuse",
+        "acquaintance",
+        "adverse",
+        "aggravate"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语4级高频",
+      "highDict": "托福词汇",
+      "levelDiff": 3,
+      "overlap": 1135,
+      "lowTotal": 1500,
+      "rate": "75.67",
+      "threshold": 15,
+      "samples": [
+        "abruptly",
+        "absorb",
+        "abuse",
+        "academic",
+        "access",
+        "accessible",
+        "accommodate",
+        "accomplish"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语6级高频",
+      "highDict": "托福词汇",
+      "levelDiff": 2,
+      "overlap": 1088,
+      "lowTotal": 1500,
+      "rate": "72.53",
+      "threshold": 35,
+      "samples": [
+        "abandonment",
+        "absolutely",
+        "abstract",
+        "abuse",
+        "accelerate",
+        "accomplish",
+        "accountant",
+        "accurate"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高中英语词汇",
+      "highDict": "英语6级",
+      "levelDiff": 3,
+      "overlap": 1058,
+      "lowTotal": 3665,
+      "rate": "28.87",
+      "threshold": 15,
+      "samples": [
+        "preference",
+        "currency",
+        "adapt",
+        "stream",
+        "late",
+        "charge",
+        "statesman",
+        "reservation"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "英语4级",
+      "levelDiff": 4,
+      "overlap": 1048,
+      "lowTotal": 1418,
+      "rate": "73.91",
+      "threshold": 5,
+      "samples": [
+        "boat",
+        "group",
+        "nineteen",
+        "party",
+        "marriage",
+        "clean",
+        "bottle",
+        "bag"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语4级高频",
+      "highDict": "考研词汇",
+      "levelDiff": 4,
+      "overlap": 1013,
+      "lowTotal": 1500,
+      "rate": "67.53",
+      "threshold": 5,
+      "samples": [
+        "absorb",
+        "academic",
+        "access",
+        "accommodate",
+        "accomplish",
+        "accumulate",
+        "achieve",
+        "acknowledge"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语专四",
+      "highDict": "SAT词汇",
+      "levelDiff": 2,
+      "overlap": 984,
+      "lowTotal": 4025,
+      "rate": "24.45",
+      "threshold": 35,
+      "samples": [
+        "reasoning",
+        "dismiss",
+        "emit",
+        "preparatory",
+        "bass",
+        "tortuous",
+        "exhale",
+        "polytechnic"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "托福词汇",
+      "levelDiff": 7,
+      "overlap": 957,
+      "lowTotal": 1418,
+      "rate": "67.49",
+      "threshold": 5,
+      "samples": [
+        "boat",
+        "nineteen",
+        "party",
+        "marriage",
+        "clean",
+        "bottle",
+        "tail",
+        "bag"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语6级高频",
+      "highDict": "考研词汇",
+      "levelDiff": 3,
+      "overlap": 932,
+      "lowTotal": 1500,
+      "rate": "62.13",
+      "threshold": 15,
+      "samples": [
+        "abstract",
+        "accelerate",
+        "accomplish",
+        "accountant",
+        "accuse",
+        "achieve",
+        "acquaintance",
+        "activate"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高中英语词汇",
+      "highDict": "雅思词汇",
+      "levelDiff": 5,
+      "overlap": 870,
+      "lowTotal": 3665,
+      "rate": "23.74",
+      "threshold": 5,
+      "samples": [
+        "currency",
+        "adapt",
+        "charge",
+        "simplify",
+        "statesman",
+        "framework",
+        "superior",
+        "foresee"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语4级高频",
+      "highDict": "英语6级",
+      "levelDiff": 1,
+      "overlap": 862,
+      "lowTotal": 1500,
+      "rate": "57.47",
+      "threshold": 60,
+      "samples": [
+        "absorb",
+        "abuse",
+        "academic",
+        "access",
+        "accommodate",
+        "accomplish",
+        "accumulate",
+        "accurate"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "英语4级",
+      "highDict": "SAT词汇",
+      "levelDiff": 4,
+      "overlap": 850,
+      "lowTotal": 4544,
+      "rate": "18.71",
+      "threshold": 5,
+      "samples": [
+        "absorb",
+        "academic",
+        "access",
+        "accessible",
+        "accommodate",
+        "accomplish",
+        "accumulate",
+        "acknowledge"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语4级",
+      "highDict": "英语6级高频",
+      "levelDiff": 1,
+      "overlap": 803,
+      "lowTotal": 4544,
+      "rate": "17.67",
+      "threshold": 60,
+      "samples": [
+        "abuse",
+        "access",
+        "accommodate",
+        "accomplish",
+        "accumulate",
+        "accurate",
+        "achieve",
+        "address"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "高中英语词汇",
+      "highDict": "英语4级高频",
+      "levelDiff": 2,
+      "overlap": 782,
+      "lowTotal": 3665,
+      "rate": "21.34",
+      "threshold": 35,
+      "samples": [
+        "although",
+        "preference",
+        "beneath",
+        "adapt",
+        "bake",
+        "simplify",
+        "reservation",
+        "superior"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "考研词汇",
+      "levelDiff": 8,
+      "overlap": 779,
+      "lowTotal": 1418,
+      "rate": "54.94",
+      "threshold": 5,
+      "samples": [
+        "boat",
+        "group",
+        "nineteen",
+        "marriage",
+        "clean",
+        "bottle",
+        "bag",
+        "tuesday"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语6级高频",
+      "highDict": "雅思词汇",
+      "levelDiff": 2,
+      "overlap": 766,
+      "lowTotal": 1500,
+      "rate": "51.07",
+      "threshold": 35,
+      "samples": [
+        "abstract",
+        "abuse",
+        "accelerate",
+        "accountant",
+        "accuse",
+        "achieve",
+        "activate",
+        "addict"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语6级高频",
+      "highDict": "英语专四",
+      "levelDiff": 1,
+      "overlap": 704,
+      "lowTotal": 1500,
+      "rate": "46.93",
+      "threshold": 60,
+      "samples": [
+        "abstract",
+        "abuse",
+        "accelerate",
+        "accomplish",
+        "accountant",
+        "accurate",
+        "accuse",
+        "accustom"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "高中英语词汇",
+      "highDict": "英语专四",
+      "levelDiff": 4,
+      "overlap": 687,
+      "lowTotal": 3665,
+      "rate": "18.74",
+      "threshold": 5,
+      "samples": [
+        "effort",
+        "warmth",
+        "adapt",
+        "simplify",
+        "statesman",
+        "superior",
+        "urgent",
+        "try"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语4级高频",
+      "highDict": "英语专四",
+      "levelDiff": 2,
+      "overlap": 652,
+      "lowTotal": 1500,
+      "rate": "43.47",
+      "threshold": 35,
+      "samples": [
+        "absorb",
+        "abuse",
+        "access",
+        "accommodate",
+        "accomplish",
+        "accumulate",
+        "accurate",
+        "acknowledge"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语4级高频",
+      "highDict": "雅思词汇",
+      "levelDiff": 3,
+      "overlap": 628,
+      "lowTotal": 1500,
+      "rate": "41.87",
+      "threshold": 15,
+      "samples": [
+        "absorb",
+        "abuse",
+        "academic",
+        "access",
+        "accommodate",
+        "accumulate",
+        "achieve",
+        "acknowledge"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高中英语词汇",
+      "highDict": "SAT词汇",
+      "levelDiff": 6,
+      "overlap": 455,
+      "lowTotal": 3665,
+      "rate": "12.41",
+      "threshold": 5,
+      "samples": [
+        "preference",
+        "charge",
+        "simplify",
+        "superior",
+        "urgent",
+        "mask",
+        "contradict",
+        "persuade"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语6级高频",
+      "highDict": "SAT词汇",
+      "levelDiff": 3,
+      "overlap": 448,
+      "lowTotal": 1500,
+      "rate": "29.87",
+      "threshold": 15,
+      "samples": [
+        "abstract",
+        "accelerate",
+        "accomplish",
+        "accountant",
+        "accuse",
+        "acquaintance",
+        "adverse",
+        "aggravate"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "英语4级高频",
+      "highDict": "英语6级高频",
+      "levelDiff": 1,
+      "overlap": 444,
+      "lowTotal": 1500,
+      "rate": "29.60",
+      "threshold": 60,
+      "samples": [
+        "abuse",
+        "access",
+        "accommodate",
+        "accomplish",
+        "accumulate",
+        "accurate",
+        "achieve",
+        "address"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "高中英语词汇",
+      "highDict": "英语6级高频",
+      "levelDiff": 3,
+      "overlap": 404,
+      "lowTotal": 3665,
+      "rate": "11.02",
+      "threshold": 15,
+      "samples": [
+        "preference",
+        "currency",
+        "reservation",
+        "urgent",
+        "foresee",
+        "mask",
+        "assume",
+        "available"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "英语4级高频",
+      "highDict": "SAT词汇",
+      "levelDiff": 4,
+      "overlap": 380,
+      "lowTotal": 1500,
+      "rate": "25.33",
+      "threshold": 5,
+      "samples": [
+        "absorb",
+        "academic",
+        "access",
+        "accessible",
+        "accommodate",
+        "accomplish",
+        "accumulate",
+        "acknowledge"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "英语4级高频",
+      "levelDiff": 4,
+      "overlap": 193,
+      "lowTotal": 1418,
+      "rate": "13.61",
+      "threshold": 5,
+      "samples": [
+        "boat",
+        "bag",
+        "cancel",
+        "be",
+        "america",
+        "monitor",
+        "blue",
+        "at"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "英语6级",
+      "levelDiff": 5,
+      "overlap": 173,
+      "lowTotal": 1418,
+      "rate": "12.20",
+      "threshold": 5,
+      "samples": [
+        "cancel",
+        "check",
+        "monitor",
+        "culture",
+        "blue",
+        "coke",
+        "video",
+        "capital"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "英语专四",
+      "levelDiff": 6,
+      "overlap": 137,
+      "lowTotal": 1418,
+      "rate": "9.66",
+      "threshold": 5,
+      "samples": [
+        "quick",
+        "health",
+        "order",
+        "piece",
+        "direct",
+        "wet",
+        "express",
+        "rich"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "雅思词汇",
+      "levelDiff": 7,
+      "overlap": 115,
+      "lowTotal": 1418,
+      "rate": "8.11",
+      "threshold": 5,
+      "samples": [
+        "be",
+        "check",
+        "monitor",
+        "culture",
+        "festival",
+        "hobby",
+        "part",
+        "single"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "SAT词汇",
+      "levelDiff": 8,
+      "overlap": 74,
+      "lowTotal": 1418,
+      "rate": "5.22",
+      "threshold": 5,
+      "samples": [
+        "table",
+        "giraffe",
+        "order",
+        "skirt",
+        "height",
+        "edge",
+        "period",
+        "vegetable"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "英语6级高频",
+      "levelDiff": 5,
+      "overlap": 54,
+      "lowTotal": 1418,
+      "rate": "3.81",
+      "threshold": 5,
+      "samples": [
+        "cancel",
+        "check",
+        "capital",
+        "concert",
+        "house",
+        "through",
+        "box",
+        "way"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "中考英语核心词汇",
+      "levelDiff": 1,
+      "overlap": 2,
+      "lowTotal": 1418,
+      "rate": "0.14",
+      "threshold": 60,
+      "samples": [
+        "accept",
+        "ability"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "高中英语词汇",
+      "levelDiff": 1,
+      "overlap": 2,
+      "lowTotal": 2,
+      "rate": "100.00",
+      "threshold": 60,
+      "samples": [
+        "ability",
+        "accept"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "英语4级",
+      "levelDiff": 3,
+      "overlap": 2,
+      "lowTotal": 2,
+      "rate": "100.00",
+      "threshold": 15,
+      "samples": [
+        "ability",
+        "accept"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "英语4级高频",
+      "levelDiff": 3,
+      "overlap": 2,
+      "lowTotal": 2,
+      "rate": "100.00",
+      "threshold": 15,
+      "samples": [
+        "ability",
+        "accept"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高中英语词汇",
+      "highDict": "高考英语核心词汇",
+      "levelDiff": 1,
+      "overlap": 2,
+      "lowTotal": 3665,
+      "rate": "0.05",
+      "threshold": 60,
+      "samples": [
+        "abandon",
+        "absolute"
+      ],
+      "isBad": false
+    },
+    {
+      "lowDict": "高考英语核心词汇",
+      "highDict": "英语4级",
+      "levelDiff": 1,
+      "overlap": 2,
+      "lowTotal": 2,
+      "rate": "100.00",
+      "threshold": 60,
+      "samples": [
+        "abandon",
+        "absolute"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高考英语核心词汇",
+      "highDict": "英语4级高频",
+      "levelDiff": 1,
+      "overlap": 2,
+      "lowTotal": 2,
+      "rate": "100.00",
+      "threshold": 60,
+      "samples": [
+        "abandon",
+        "absolute"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高考英语核心词汇",
+      "highDict": "英语专四",
+      "levelDiff": 3,
+      "overlap": 2,
+      "lowTotal": 2,
+      "rate": "100.00",
+      "threshold": 15,
+      "samples": [
+        "abandon",
+        "absolute"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高考英语核心词汇",
+      "highDict": "英语专八",
+      "levelDiff": 4,
+      "overlap": 2,
+      "lowTotal": 2,
+      "rate": "100.00",
+      "threshold": 5,
+      "samples": [
+        "abandon",
+        "absolute"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高考英语核心词汇",
+      "highDict": "托福词汇",
+      "levelDiff": 4,
+      "overlap": 2,
+      "lowTotal": 2,
+      "rate": "100.00",
+      "threshold": 5,
+      "samples": [
+        "abandon",
+        "absolute"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高考英语核心词汇",
+      "highDict": "考研词汇",
+      "levelDiff": 5,
+      "overlap": 2,
+      "lowTotal": 2,
+      "rate": "100.00",
+      "threshold": 5,
+      "samples": [
+        "abandon",
+        "absolute"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "英语专八",
+      "levelDiff": 6,
+      "overlap": 1,
+      "lowTotal": 2,
+      "rate": "50.00",
+      "threshold": 5,
+      "samples": [
+        "ability"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "托福词汇",
+      "levelDiff": 6,
+      "overlap": 1,
+      "lowTotal": 2,
+      "rate": "50.00",
+      "threshold": 5,
+      "samples": [
+        "accept"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高考英语核心词汇",
+      "highDict": "英语6级",
+      "levelDiff": 2,
+      "overlap": 1,
+      "lowTotal": 2,
+      "rate": "50.00",
+      "threshold": 35,
+      "samples": [
+        "abandon"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高考英语核心词汇",
+      "highDict": "雅思词汇",
+      "levelDiff": 4,
+      "overlap": 1,
+      "lowTotal": 2,
+      "rate": "50.00",
+      "threshold": 5,
+      "samples": [
+        "abandon"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "高考英语核心词汇",
+      "highDict": "SAT词汇",
+      "levelDiff": 5,
+      "overlap": 1,
+      "lowTotal": 2,
+      "rate": "50.00",
+      "threshold": 5,
+      "samples": [
+        "abandon"
+      ],
+      "isBad": true
+    },
+    {
+      "lowDict": "初中英语词汇",
+      "highDict": "高考英语核心词汇",
+      "levelDiff": 3,
+      "overlap": 0,
+      "lowTotal": 1418,
+      "rate": "0.00",
+      "threshold": 15,
+      "samples": [],
+      "isBad": false
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "高考英语核心词汇",
+      "levelDiff": 2,
+      "overlap": 0,
+      "lowTotal": 2,
+      "rate": "0.00",
+      "threshold": 35,
+      "samples": [],
+      "isBad": false
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "英语6级",
+      "levelDiff": 4,
+      "overlap": 0,
+      "lowTotal": 2,
+      "rate": "0.00",
+      "threshold": 5,
+      "samples": [],
+      "isBad": false
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "英语6级高频",
+      "levelDiff": 4,
+      "overlap": 0,
+      "lowTotal": 2,
+      "rate": "0.00",
+      "threshold": 5,
+      "samples": [],
+      "isBad": false
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "英语专四",
+      "levelDiff": 5,
+      "overlap": 0,
+      "lowTotal": 2,
+      "rate": "0.00",
+      "threshold": 5,
+      "samples": [],
+      "isBad": false
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "雅思词汇",
+      "levelDiff": 6,
+      "overlap": 0,
+      "lowTotal": 2,
+      "rate": "0.00",
+      "threshold": 5,
+      "samples": [],
+      "isBad": false
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "SAT词汇",
+      "levelDiff": 7,
+      "overlap": 0,
+      "lowTotal": 2,
+      "rate": "0.00",
+      "threshold": 5,
+      "samples": [],
+      "isBad": false
+    },
+    {
+      "lowDict": "中考英语核心词汇",
+      "highDict": "考研词汇",
+      "levelDiff": 7,
+      "overlap": 0,
+      "lowTotal": 2,
+      "rate": "0.00",
+      "threshold": 5,
+      "samples": [],
+      "isBad": false
+    },
+    {
+      "lowDict": "高考英语核心词汇",
+      "highDict": "英语6级高频",
+      "levelDiff": 2,
+      "overlap": 0,
+      "lowTotal": 2,
+      "rate": "0.00",
+      "threshold": 35,
+      "samples": [],
+      "isBad": false
+    }
+  ],
+  "summary": {
+    "totalDicts": 15,
+    "totalInternalDups": 0,
+    "badLevelPairs": 57
+  }
+}

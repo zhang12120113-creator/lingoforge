@@ -1,0 +1,16 @@
+{
+  "id": "gaokao",
+  "name": "高考英语核心词汇",
+  "category": "高中英语",
+  "description": "高考英语高频核心词汇",
+  "chapters": [
+    {
+      "id": "gaokao-01",
+      "name": "Chapter 1",
+      "words": [
+        { "name": "abandon", "trans": ["放弃", "抛弃"], "usphone": "əˈbændən", "ukphone": "əˈbændən" },
+        { "name": "absolute", "trans": ["绝对的", "完全的"], "usphone": "ˈæbsəluːt", "ukphone": "ˈæbsəluːt" }
+      ]
+    }
+  ]
+}

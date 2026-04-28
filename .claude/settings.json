@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -c \"^$\\\\|^#\" standards/zhongkao-standard.txt)",
+      "Bash(grep -i \"^back$\" standards/toefl-standard.txt)",
+      "Bash(grep -i \"^skill$\" standards/toefl-standard.txt)",
+      "Bash(grep -i \"^go$\" standards/toefl-standard.txt)",
+      "Bash(grep -i \"^marriage$\" standards/junior-standard.txt)",
+      "Bash(grep -i \"^giraffe$\" standards/junior-standard.txt)",
+      "Bash(node scripts/check-dictionaries.mjs)",
+      "Bash(node -e ' *)",
+      "Bash(grep -E '\"$')",
+      "Bash(grep -E '^[a-z]+$')",
+      "Bash(grep -E 'r$')"
+    ]
+  }
+}

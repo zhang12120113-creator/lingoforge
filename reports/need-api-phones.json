@@ -1,0 +1,4798 @@
+{
+  "totalUnique": 670,
+  "totalOccurrences": 772,
+  "words": {
+    "anybody": {
+      "name": "anybody",
+      "count": 4,
+      "dicts": [
+        "cet4",
+        "cet4freq",
+        "cet6",
+        "cet6freq"
+      ]
+    },
+    "cigaret": {
+      "name": "cigaret",
+      "count": 2,
+      "dicts": [
+        "cet4",
+        "postgraduate"
+      ]
+    },
+    "ocean": {
+      "name": "ocean",
+      "count": 1,
+      "dicts": [
+        "cet4"
+      ]
+    },
+    "reservior": {
+      "name": "reservior",
+      "count": 1,
+      "dicts": [
+        "cet4"
+      ]
+    },
+    "watchful": {
+      "name": "watchful",
+      "count": 2,
+      "dicts": [
+        "cet6",
+        "cet6freq"
+      ]
+    },
+    "commonsense": {
+      "name": "commonsense",
+      "count": 3,
+      "dicts": [
+        "cet6",
+        "cet6freq",
+        "toefl"
+      ]
+    },
+    "islam": {
+      "name": "Islam",
+      "count": 4,
+      "dicts": [
+        "cet6",
+        "cet6freq",
+        "tem4",
+        "tem8"
+      ]
+    },
+    "experimentally": {
+      "name": "experimentally",
+      "count": 1,
+      "dicts": [
+        "cet6"
+      ]
+    },
+    "siren": {
+      "name": "siren",
+      "count": 1,
+      "dicts": [
+        "cet6"
+      ]
+    },
+    "workpiece": {
+      "name": "workpiece",
+      "count": 1,
+      "dicts": [
+        "cet6"
+      ]
+    },
+    "fighter": {
+      "name": "fighter",
+      "count": 1,
+      "dicts": [
+        "cet6"
+      ]
+    },
+    "pedlar": {
+      "name": "pedlar",
+      "count": 2,
+      "dicts": [
+        "cet6",
+        "tem8"
+      ]
+    },
+    "xerox": {
+      "name": "xerox",
+      "count": 3,
+      "dicts": [
+        "cet6",
+        "tem4",
+        "tem8"
+      ]
+    },
+    "dvd": {
+      "name": "DVD",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "organiser": {
+      "name": "organiser",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "repairs": {
+      "name": "repairs",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "dr": {
+      "name": "Dr",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "website": {
+      "name": "website",
+      "count": 4,
+      "dicts": [
+        "gaokao",
+        "junior",
+        "senior",
+        "zhongkao"
+      ]
+    },
+    "hibernation": {
+      "name": "hibernation",
+      "count": 3,
+      "dicts": [
+        "gaokao",
+        "senior",
+        "toefl"
+      ]
+    },
+    "behavious": {
+      "name": "behavious",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "noisily": {
+      "name": "noisily",
+      "count": 3,
+      "dicts": [
+        "gaokao",
+        "senior",
+        "toefl"
+      ]
+    },
+    "cd": {
+      "name": "CD",
+      "count": 4,
+      "dicts": [
+        "gaokao",
+        "junior",
+        "senior",
+        "zhongkao"
+      ]
+    },
+    "pm": {
+      "name": "PM",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "hur": {
+      "name": "hur",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "handtruck": {
+      "name": "handtruck",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "walkman": {
+      "name": "walkman",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "un": {
+      "name": "UN",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "uk": {
+      "name": "UK",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "gy": {
+      "name": "gy",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "westerner": {
+      "name": "westerner",
+      "count": 3,
+      "dicts": [
+        "gaokao",
+        "senior",
+        "toefl"
+      ]
+    },
+    "windbreaker": {
+      "name": "windbreaker",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "sideway": {
+      "name": "sideway",
+      "count": 2,
+      "dicts": [
+        "gaokao",
+        "senior"
+      ]
+    },
+    "ok": {
+      "name": "OK",
+      "count": 4,
+      "dicts": [
+        "gaokao",
+        "junior",
+        "senior",
+        "zhongkao"
+      ]
+    },
+    "pliable": {
+      "name": "pliable",
+      "count": 2,
+      "dicts": [
+        "ielts",
+        "toefl"
+      ]
+    },
+    "stuntman": {
+      "name": "stuntman",
+      "count": 1,
+      "dicts": [
+        "ielts"
+      ]
+    },
+    "aupair": {
+      "name": "aupair",
+      "count": 1,
+      "dicts": [
+        "ielts"
+      ]
+    },
+    "viable": {
+      "name": "viable",
+      "count": 2,
+      "dicts": [
+        "ielts",
+        "tem8"
+      ]
+    },
+    "tranquility": {
+      "name": "tranquility",
+      "count": 2,
+      "dicts": [
+        "ielts",
+        "tem8"
+      ]
+    },
+    "tumour": {
+      "name": "tumour",
+      "count": 4,
+      "dicts": [
+        "ielts",
+        "postgraduate",
+        "tem4",
+        "tem8"
+      ]
+    },
+    "chiche": {
+      "name": "chiche",
+      "count": 1,
+      "dicts": [
+        "ielts"
+      ]
+    },
+    "advent": {
+      "name": "advent",
+      "count": 5,
+      "dicts": [
+        "ielts",
+        "postgraduate",
+        "sat",
+        "tem8",
+        "toefl"
+      ]
+    },
+    "relinguish": {
+      "name": "relinguish",
+      "count": 1,
+      "dicts": [
+        "ielts"
+      ]
+    },
+    "groa": {
+      "name": "groa",
+      "count": 1,
+      "dicts": [
+        "ielts"
+      ]
+    },
+    "rusia": {
+      "name": "Rusia",
+      "count": 2,
+      "dicts": [
+        "junior",
+        "zhongkao"
+      ]
+    },
+    "vcd": {
+      "name": "VCD",
+      "count": 2,
+      "dicts": [
+        "junior",
+        "zhongkao"
+      ]
+    },
+    "goodby": {
+      "name": "goodby",
+      "count": 1,
+      "dicts": [
+        "postgraduate"
+      ]
+    },
+    "dogmatist": {
+      "name": "dogmatist",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "nemesis": {
+      "name": "nemesis",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "preeminence": {
+      "name": "preeminence",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "stoic": {
+      "name": "stoic",
+      "count": 2,
+      "dicts": [
+        "sat",
+        "tem8"
+      ]
+    },
+    "meddler": {
+      "name": "meddler",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "submersion": {
+      "name": "submersion",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "cerebration": {
+      "name": "cerebration",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "weightlessness": {
+      "name": "weightlessness",
+      "count": 2,
+      "dicts": [
+        "sat",
+        "toefl"
+      ]
+    },
+    "avidity": {
+      "name": "avidity",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "assonate": {
+      "name": "assonate",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "assonant": {
+      "name": "assonant",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "canon": {
+      "name": "canon",
+      "count": 3,
+      "dicts": [
+        "sat",
+        "tem4",
+        "tem8"
+      ]
+    },
+    "altruist": {
+      "name": "altruist",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "munificence": {
+      "name": "munificence",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "ratiocination": {
+      "name": "ratiocination",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "rampart": {
+      "name": "rampart",
+      "count": 2,
+      "dicts": [
+        "sat",
+        "tem8"
+      ]
+    },
+    "compressible": {
+      "name": "compressible",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "salvageable": {
+      "name": "salvageable",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "demagoguery": {
+      "name": "demagoguery",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "cajolery": {
+      "name": "cajolery",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "heartrending": {
+      "name": "heartrending",
+      "count": 2,
+      "dicts": [
+        "sat",
+        "tem8"
+      ]
+    },
+    "ebullience": {
+      "name": "ebullience",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "perspicuity": {
+      "name": "perspicuity",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "flagella": {
+      "name": "flagella",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "factorable": {
+      "name": "factorable",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "underexposure": {
+      "name": "underexposure",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "oxidizer": {
+      "name": "oxidizer",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "vaporization": {
+      "name": "vaporization",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "solidification": {
+      "name": "solidification",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "bacchanalia": {
+      "name": "bacchanalia",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "abridgement": {
+      "name": "abridgement",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "paroxysm": {
+      "name": "paroxysm",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "gaucherie": {
+      "name": "gaucherie",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "xenophobe": {
+      "name": "xenophobe",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "recrudescent": {
+      "name": "recrudescent",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "torturous": {
+      "name": "torturous",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "subjection": {
+      "name": "subjection",
+      "count": 2,
+      "dicts": [
+        "sat",
+        "tem8"
+      ]
+    },
+    "gypsy": {
+      "name": "gypsy",
+      "count": 3,
+      "dicts": [
+        "sat",
+        "tem4",
+        "toefl"
+      ]
+    },
+    "unsavoury": {
+      "name": "unsavoury",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "elocutionist": {
+      "name": "elocutionist",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "blase": {
+      "name": "blase",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "tutorship": {
+      "name": "tutorship",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "armada": {
+      "name": "armada",
+      "count": 2,
+      "dicts": [
+        "sat",
+        "tem8"
+      ]
+    },
+    "panacea": {
+      "name": "panacea",
+      "count": 2,
+      "dicts": [
+        "sat",
+        "tem8"
+      ]
+    },
+    "perspicacity": {
+      "name": "perspicacity",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "transience": {
+      "name": "transience",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "spartan": {
+      "name": "spartan",
+      "count": 1,
+      "dicts": [
+        "sat"
+      ]
+    },
+    "aurora": {
+      "name": "aurora",
+      "count": 2,
+      "dicts": [
+        "sat",
+        "toefl"
+      ]
+    },
+    "persian": {
+      "name": "Persian",
+      "count": 3,
+      "dicts": [
+        "tem4",
+        "tem8",
+        "toefl"
+      ]
+    },
+    "deadweight": {
+      "name": "deadweight",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "sherry": {
+      "name": "sherry",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "phd": {
+      "name": "PhD",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "celluloid": {
+      "name": "celluloid",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "unaccepted": {
+      "name": "unaccepted",
+      "count": 1,
+      "dicts": [
+        "tem4"
+      ]
+    },
+    "springlock": {
+      "name": "springlock",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "entrepot": {
+      "name": "entrepot",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "nazi": {
+      "name": "Nazi",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "repairable": {
+      "name": "repairable",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "precis": {
+      "name": "precis",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "vip": {
+      "name": "VIP",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "birthrate": {
+      "name": "birthrate",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "gothic": {
+      "name": "Gothic",
+      "count": 3,
+      "dicts": [
+        "tem4",
+        "tem8",
+        "toefl"
+      ]
+    },
+    "mongolian": {
+      "name": "Mongolian",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "throatily": {
+      "name": "throatily",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "biographic": {
+      "name": "biographic",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "airbase": {
+      "name": "airbase",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "thinker": {
+      "name": "thinker",
+      "count": 3,
+      "dicts": [
+        "tem4",
+        "tem8",
+        "toefl"
+      ]
+    },
+    "shockproof": {
+      "name": "shockproof",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "politburo": {
+      "name": "politburo",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "leftovers": {
+      "name": "leftovers",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "secureness": {
+      "name": "secureness",
+      "count": 1,
+      "dicts": [
+        "tem4"
+      ]
+    },
+    "barometre": {
+      "name": "barometre",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "lb": {
+      "name": "lb",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "greyhound": {
+      "name": "greyhound",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "flowchart": {
+      "name": "flowchart",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "tarmac": {
+      "name": "tarmac",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "milligramme": {
+      "name": "milligramme",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "crosscheck": {
+      "name": "crosscheck",
+      "count": 2,
+      "dicts": [
+        "tem4",
+        "tem8"
+      ]
+    },
+    "rhythmic": {
+      "name": "rhythmic",
+      "count": 2,
+      "dicts": [
+        "tem8",
+        "toefl"
+      ]
+    },
+    "mileometer": {
+      "name": "mileometer",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "hardbitten": {
+      "name": "hardbitten",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "heartstring": {
+      "name": "heartstring",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "knowhow": {
+      "name": "knowhow",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "tailplane": {
+      "name": "tailplane",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "sickbay": {
+      "name": "sickbay",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "playoff": {
+      "name": "playoff",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "frontbench": {
+      "name": "frontbench",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "raiser": {
+      "name": "raiser",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "hacked": {
+      "name": "hacked",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "whizz": {
+      "name": "whizz",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "straitlaced": {
+      "name": "straitlaced",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "housecraft": {
+      "name": "housecraft",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "poplar": {
+      "name": "poplar",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "mechanise": {
+      "name": "mechanise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "uneasiness": {
+      "name": "uneasiness",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "karate": {
+      "name": "karate",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "fantasise": {
+      "name": "fantasise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "sabbatical": {
+      "name": "sabbatical",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "tatters": {
+      "name": "tatters",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "idolise": {
+      "name": "idolise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "familiarise": {
+      "name": "familiarise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "donator": {
+      "name": "donator",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "seals": {
+      "name": "seals",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "mesmerise": {
+      "name": "mesmerise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "tantalise": {
+      "name": "tantalise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "proliferation": {
+      "name": "proliferation",
+      "count": 2,
+      "dicts": [
+        "tem8",
+        "toefl"
+      ]
+    },
+    "dacron": {
+      "name": "Dacron",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "yahoo": {
+      "name": "yahoo",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "horseracing": {
+      "name": "horseracing",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "fiberglass": {
+      "name": "fiberglass",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "satanic": {
+      "name": "satanic",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "habitue": {
+      "name": "habitue",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "kilogramme": {
+      "name": "kilogramme",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "requiem": {
+      "name": "requiem",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "titanic": {
+      "name": "titanic",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "irruption": {
+      "name": "irruption",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "retrievable": {
+      "name": "retrievable",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "volitional": {
+      "name": "volitional",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "tacitly": {
+      "name": "tacitly",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "treeline": {
+      "name": "treeline",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "fertilise": {
+      "name": "fertilise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "takings": {
+      "name": "takings",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "tartly": {
+      "name": "tartly",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "stereotypically": {
+      "name": "stereotypically",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "itemise": {
+      "name": "itemise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "legalise": {
+      "name": "legalise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "economise": {
+      "name": "economise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "troubleshooter": {
+      "name": "troubleshooter",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "folivore": {
+      "name": "folivore",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "messiah": {
+      "name": "Messiah",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "satiation": {
+      "name": "satiation",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "homogenise": {
+      "name": "homogenise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "henpecked": {
+      "name": "henpecked",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "autobiographic": {
+      "name": "autobiographic",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "narcissus": {
+      "name": "narcissus",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "civilise": {
+      "name": "civilise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "sneakily": {
+      "name": "sneakily",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "neutralise": {
+      "name": "neutralise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "naturalise": {
+      "name": "naturalise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "harmonise": {
+      "name": "harmonise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "valour": {
+      "name": "valour",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "viciousness": {
+      "name": "viciousness",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "hiv": {
+      "name": "HIV",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "insensibility": {
+      "name": "insensibility",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "arsenal": {
+      "name": "arsenal",
+      "count": 2,
+      "dicts": [
+        "tem8",
+        "toefl"
+      ]
+    },
+    "hovercraft": {
+      "name": "hovercraft",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "vandal": {
+      "name": "vandal",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "dietician": {
+      "name": "dietician",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "containerization": {
+      "name": "containerization",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "materialise": {
+      "name": "materialise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "hallo": {
+      "name": "hallo",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "python": {
+      "name": "python",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "monopolise": {
+      "name": "monopolise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "anxiously": {
+      "name": "anxiously",
+      "count": 2,
+      "dicts": [
+        "tem8",
+        "toefl"
+      ]
+    },
+    "satirise": {
+      "name": "satirise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "deliverer": {
+      "name": "deliverer",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "systematise": {
+      "name": "systematise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "upmarket": {
+      "name": "upmarket",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "incensed": {
+      "name": "incensed",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "formalise": {
+      "name": "formalise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "sanctification": {
+      "name": "sanctification",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "launderette": {
+      "name": "launderette",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "pathologic": {
+      "name": "pathologic",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "subjectivity": {
+      "name": "subjectivity",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "featherbrained": {
+      "name": "featherbrained",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "hrh": {
+      "name": "HRH",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "airhostess": {
+      "name": "airhostess",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "handsomely": {
+      "name": "handsomely",
+      "count": 2,
+      "dicts": [
+        "tem8",
+        "toefl"
+      ]
+    },
+    "radiochemical": {
+      "name": "radiochemical",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "thereabout": {
+      "name": "thereabout",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "moisturise": {
+      "name": "moisturise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "thoughtlessness": {
+      "name": "thoughtlessness",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "glamourous": {
+      "name": "glamourous",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "metro": {
+      "name": "Metro",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "vocally": {
+      "name": "vocally",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "airforce": {
+      "name": "airforce",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "industrialise": {
+      "name": "industrialise",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "baroque": {
+      "name": "baroque",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "extremities": {
+      "name": "extremities",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "revaluation": {
+      "name": "revaluation",
+      "count": 1,
+      "dicts": [
+        "tem8"
+      ]
+    },
+    "pastoralist": {
+      "name": "pastoralist",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "industrialization": {
+      "name": "industrialization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pullman": {
+      "name": "pullman",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "ogallala": {
+      "name": "ogallala",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "archaeological": {
+      "name": "archaeological",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pastoralism": {
+      "name": "pastoralism",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "seawater": {
+      "name": "seawater",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "kinetoscope": {
+      "name": "kinetoscope",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "sumerian": {
+      "name": "sumerian",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "fossilization": {
+      "name": "fossilization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "yucatan": {
+      "name": "Yucatan",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "himalaya": {
+      "name": "Himalaya",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "massachusetts": {
+      "name": "Massachusetts",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "deco": {
+      "name": "deco",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nitinol": {
+      "name": "nitinol",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hopewell": {
+      "name": "hopewell",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "proterozoic": {
+      "name": "proterozoic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "columbian": {
+      "name": "columbian",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "tiredness": {
+      "name": "tiredness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "carver": {
+      "name": "carver",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "canoes": {
+      "name": "canoes",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "exchanger": {
+      "name": "exchanger",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "psychodynamic": {
+      "name": "psychodynamic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "orleans": {
+      "name": "orleans",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "beringia": {
+      "name": "beringia",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "frontality": {
+      "name": "frontality",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lomas": {
+      "name": "lomas",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "alpine": {
+      "name": "alpine",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "abigail": {
+      "name": "abigail",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "caledonian": {
+      "name": "Caledonian",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "allende": {
+      "name": "allende",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "chemically": {
+      "name": "chemically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "flora": {
+      "name": "flora",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "jurassic": {
+      "name": "jurassic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "traditionally": {
+      "name": "traditionally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "faunal": {
+      "name": "faunal",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "richness": {
+      "name": "richness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lithospheric": {
+      "name": "lithospheric",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "conventionally": {
+      "name": "conventionally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "mutoscope": {
+      "name": "mutoscope",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "cheaply": {
+      "name": "cheaply",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "eusocial": {
+      "name": "eusocial",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nutritionally": {
+      "name": "nutritionally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "dy": {
+      "name": "dy",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "eka": {
+      "name": "eka",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "overirrigation": {
+      "name": "overirrigation",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "mineralization": {
+      "name": "mineralization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "peruvian": {
+      "name": "peruvian",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "timescale": {
+      "name": "timescale",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "habituation": {
+      "name": "habituation",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "waterpower": {
+      "name": "waterpower",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "fieldstone": {
+      "name": "fieldstone",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lumiere": {
+      "name": "lumiere",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "deglaciation": {
+      "name": "deglaciation",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pangaea": {
+      "name": "pangaea",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lys": {
+      "name": "lys",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "midcontinent": {
+      "name": "midcontinent",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "foraminifera": {
+      "name": "foraminifera",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lawlike": {
+      "name": "lawlike",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "oppositely": {
+      "name": "oppositely",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "signaler": {
+      "name": "signaler",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "recrystallize": {
+      "name": "recrystallize",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "overgraze": {
+      "name": "overgraze",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "imagist": {
+      "name": "imagist",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "valse": {
+      "name": "valse",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "variously": {
+      "name": "variously",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "extermination": {
+      "name": "extermination",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "suburbanization": {
+      "name": "suburbanization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "substantiated": {
+      "name": "substantiated",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "domelike": {
+      "name": "domelike",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "elliot": {
+      "name": "elliot",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "bluefin": {
+      "name": "bluefin",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "peregrine": {
+      "name": "peregrine",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nss": {
+      "name": "nss",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nonhuman": {
+      "name": "nonhuman",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "forager": {
+      "name": "forager",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "glasslike": {
+      "name": "glasslike",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "treeless": {
+      "name": "treeless",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nystatin": {
+      "name": "nystatin",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "shoemaking": {
+      "name": "shoemaking",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "technologically": {
+      "name": "technologically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "proportionately": {
+      "name": "proportionately",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "virginian": {
+      "name": "Virginian",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "biologically": {
+      "name": "biologically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "humanness": {
+      "name": "humanness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "archaeocyte": {
+      "name": "archaeocyte",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "intentionally": {
+      "name": "intentionally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lazuli": {
+      "name": "lazuli",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "refreeze": {
+      "name": "refreeze",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hydrologic": {
+      "name": "hydrologic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "alaskan": {
+      "name": "Alaskan",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "prairies": {
+      "name": "prairies",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "artistically": {
+      "name": "artistically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "limner": {
+      "name": "limner",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "dropstone": {
+      "name": "dropstone",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "talbot": {
+      "name": "Talbot",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "metalworker": {
+      "name": "metalworker",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "microbiologist": {
+      "name": "microbiologist",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "paleoecologist": {
+      "name": "paleoecologist",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "regulatory": {
+      "name": "regulatory",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "isotopic": {
+      "name": "isotopic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "macdonald": {
+      "name": "macdonald",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "ethological": {
+      "name": "ethological",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hydrological": {
+      "name": "hydrological",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "brewster": {
+      "name": "brewster",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "basaltic": {
+      "name": "basaltic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "yale": {
+      "name": "Yale",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "streambed": {
+      "name": "streambed",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "successional": {
+      "name": "successional",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pulverization": {
+      "name": "pulverization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "homemaking": {
+      "name": "homemaking",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "guilde": {
+      "name": "guilde",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "invisibly": {
+      "name": "invisibly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "delft": {
+      "name": "delft",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lateness": {
+      "name": "lateness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "foresightedness": {
+      "name": "foresightedness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pointillist": {
+      "name": "pointillist",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "crudely": {
+      "name": "crudely",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "endotherms": {
+      "name": "endotherms",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "aviator": {
+      "name": "aviator",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "bullrush": {
+      "name": "bullrush",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "dna": {
+      "name": "DNA",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "plutonic": {
+      "name": "plutonic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "soilless": {
+      "name": "soilless",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nebular": {
+      "name": "nebular",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "usa": {
+      "name": "USA",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lesley": {
+      "name": "lesley",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "ppm": {
+      "name": "ppm",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "wispy": {
+      "name": "wispy",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hydroxyapatite": {
+      "name": "hydroxyapatite",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "mudflats": {
+      "name": "mudflats",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "agriculturally": {
+      "name": "agriculturally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "organically": {
+      "name": "organically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hatchling": {
+      "name": "hatchling",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "receptiveness": {
+      "name": "receptiveness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "impersonation": {
+      "name": "impersonation",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "henderson": {
+      "name": "Henderson",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nonagricultural": {
+      "name": "nonagricultural",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "neurospora": {
+      "name": "neurospora",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "erectus": {
+      "name": "erectus",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "toolmaking": {
+      "name": "toolmaking",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "conestoga": {
+      "name": "conestoga",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nowcasting": {
+      "name": "nowcasting",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "mesopotamian": {
+      "name": "mesopotamian",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "somerset": {
+      "name": "somerset",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "textural": {
+      "name": "textural",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pluto": {
+      "name": "pluto",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "subtropic": {
+      "name": "subtropic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "prolifically": {
+      "name": "prolifically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unionization": {
+      "name": "unionization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "semicircular": {
+      "name": "semicircular",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "rougher": {
+      "name": "rougher",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hander": {
+      "name": "hander",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "colonizer": {
+      "name": "colonizer",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "brilliantly": {
+      "name": "brilliantly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "internationally": {
+      "name": "internationally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "fortuitously": {
+      "name": "fortuitously",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "plentifully": {
+      "name": "plentifully",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "comparably": {
+      "name": "comparably",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "basketmaking": {
+      "name": "basketmaking",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "inducible": {
+      "name": "inducible",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "structurally": {
+      "name": "structurally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nonself": {
+      "name": "nonself",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "virgo": {
+      "name": "virgo",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "thinly": {
+      "name": "thinly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "shorebird": {
+      "name": "shorebird",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "glassmaking": {
+      "name": "glassmaking",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "malleability": {
+      "name": "malleability",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "baedeker": {
+      "name": "baedeker",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "microfossil": {
+      "name": "microfossil",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "immobility": {
+      "name": "immobility",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hydrographic": {
+      "name": "hydrographic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nonthreatening": {
+      "name": "nonthreatening",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "harshness": {
+      "name": "harshness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "irresponsibly": {
+      "name": "irresponsibly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "revealingly": {
+      "name": "revealingly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "meteoritic": {
+      "name": "meteoritic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "chondritic": {
+      "name": "chondritic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "weldon": {
+      "name": "weldon",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "duchenne": {
+      "name": "duchenne",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "homeotherm": {
+      "name": "homeotherm",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "literalness": {
+      "name": "literalness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "semimolten": {
+      "name": "semimolten",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "topographical": {
+      "name": "topographical",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "overcultivation": {
+      "name": "overcultivation",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nonfunctional": {
+      "name": "nonfunctional",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "periodization": {
+      "name": "periodization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "reflectivity": {
+      "name": "reflectivity",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "regionalization": {
+      "name": "regionalization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "cany": {
+      "name": "cany",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "militarily": {
+      "name": "militarily",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "enforcer": {
+      "name": "enforcer",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "chronobiology": {
+      "name": "chronobiology",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "overgeneralize": {
+      "name": "overgeneralize",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "keplerian": {
+      "name": "keplerian",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "diffusely": {
+      "name": "diffusely",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "ductless": {
+      "name": "ductless",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "idealization": {
+      "name": "idealization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "understandably": {
+      "name": "understandably",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "yuan": {
+      "name": "Yuan",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unfavorably": {
+      "name": "unfavorably",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "compactness": {
+      "name": "compactness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "miami": {
+      "name": "Miami",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "outgassing": {
+      "name": "outgassing",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "netherland": {
+      "name": "Netherland",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "impressively": {
+      "name": "impressively",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "infinitesimally": {
+      "name": "infinitesimally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "condenses": {
+      "name": "condenses",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "looseness": {
+      "name": "looseness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "romanize": {
+      "name": "romanize",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nonporous": {
+      "name": "nonporous",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "conclusively": {
+      "name": "conclusively",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "radiometric": {
+      "name": "radiometric",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "eletricity": {
+      "name": "eletricity",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "monoid": {
+      "name": "monoid",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "harper": {
+      "name": "harper",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "leafcutter": {
+      "name": "leafcutter",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "zagros": {
+      "name": "zagros",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lvory": {
+      "name": "lvory",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "impermanence": {
+      "name": "impermanence",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "verbalizable": {
+      "name": "verbalizable",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "physiologically": {
+      "name": "physiologically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "circumstantially": {
+      "name": "circumstantially",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "geochemical": {
+      "name": "geochemical",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "cloudlike": {
+      "name": "cloudlike",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "quickest": {
+      "name": "quickest",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "marvelously": {
+      "name": "marvelously",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "resourcefulness": {
+      "name": "resourcefulness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "sugarcane": {
+      "name": "sugarcane",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pennycress": {
+      "name": "pennycress",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hydroponically": {
+      "name": "hydroponically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "gaslit": {
+      "name": "gaslit",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "londoner": {
+      "name": "londoner",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "experimenter": {
+      "name": "experimenter",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "affectional": {
+      "name": "affectional",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "rentable": {
+      "name": "rentable",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "perceivable": {
+      "name": "perceivable",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "incompletely": {
+      "name": "incompletely",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "powerfully": {
+      "name": "powerfully",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unnecessarily": {
+      "name": "unnecessarily",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "caribbean": {
+      "name": "Caribbean",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "upriver": {
+      "name": "upriver",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "neatness": {
+      "name": "neatness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nonnative": {
+      "name": "nonnative",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "biogeochemical": {
+      "name": "biogeochemical",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "loder": {
+      "name": "loder",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unselective": {
+      "name": "unselective",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "sensitively": {
+      "name": "sensitively",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "floodplain": {
+      "name": "floodplain",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "snugly": {
+      "name": "snugly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "harmfully": {
+      "name": "harmfully",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "boxlike": {
+      "name": "boxlike",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "amazingly": {
+      "name": "amazingly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "anthropologically": {
+      "name": "anthropologically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "horticulturalist": {
+      "name": "horticulturalist",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "brusquely": {
+      "name": "brusquely",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "geothermally": {
+      "name": "geothermally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "subfreezing": {
+      "name": "subfreezing",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "centrally": {
+      "name": "centrally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "incapacitated": {
+      "name": "incapacitated",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "waling": {
+      "name": "waling",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "permineralization": {
+      "name": "permineralization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unanticipated": {
+      "name": "unanticipated",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "windswept": {
+      "name": "windswept",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "dimply": {
+      "name": "dimply",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "carbonization": {
+      "name": "carbonization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "usefully": {
+      "name": "usefully",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "multivolume": {
+      "name": "multivolume",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "untraditional": {
+      "name": "untraditional",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "bergere": {
+      "name": "bergere",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "regionalist": {
+      "name": "regionalist",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "inflexibly": {
+      "name": "inflexibly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unwillingness": {
+      "name": "unwillingness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "generically": {
+      "name": "generically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "industrially": {
+      "name": "industrially",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "restatement": {
+      "name": "restatement",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "globally": {
+      "name": "globally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "overproduction": {
+      "name": "overproduction",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "loyally": {
+      "name": "loyally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "misinterprete": {
+      "name": "misinterprete",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "intelligently": {
+      "name": "intelligently",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "uncarved": {
+      "name": "uncarved",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "vitascope": {
+      "name": "vitascope",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unfocused": {
+      "name": "unfocused",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "beng": {
+      "name": "beng",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "diviner": {
+      "name": "diviner",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "belter": {
+      "name": "belter",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "terylene": {
+      "name": "terylene",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "humorously": {
+      "name": "humorously",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "needlelike": {
+      "name": "needlelike",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "salal": {
+      "name": "salal",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hugely": {
+      "name": "hugely",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "abruptness": {
+      "name": "abruptness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pantomimic": {
+      "name": "pantomimic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "rhythmically": {
+      "name": "rhythmically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "cleverness": {
+      "name": "cleverness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lounger": {
+      "name": "lounger",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "threadlike": {
+      "name": "threadlike",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "sugarlike": {
+      "name": "sugarlike",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "survivability": {
+      "name": "survivability",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "neurilemmal": {
+      "name": "neurilemmal",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unsureness": {
+      "name": "unsureness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hohokam": {
+      "name": "hohokam",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "feverishly": {
+      "name": "feverishly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "speechwriter": {
+      "name": "speechwriter",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "climatically": {
+      "name": "climatically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "datebase": {
+      "name": "datebase",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "disorientation": {
+      "name": "disorientation",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "bureaucratization": {
+      "name": "bureaucratization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "definitively": {
+      "name": "definitively",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "helplessness": {
+      "name": "helplessness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unfailingly": {
+      "name": "unfailingly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "helplessly": {
+      "name": "helplessly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "leo": {
+      "name": "leo",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lazily": {
+      "name": "lazily",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "reaumur": {
+      "name": "reaumur",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "dazzlingly": {
+      "name": "dazzlingly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "inconspicuously": {
+      "name": "inconspicuously",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "romantically": {
+      "name": "romantically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "wildcatter": {
+      "name": "wildcatter",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "trespasser": {
+      "name": "trespasser",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "waxes": {
+      "name": "waxes",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "doggedly": {
+      "name": "doggedly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nonelectronic": {
+      "name": "nonelectronic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "reverently": {
+      "name": "reverently",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "miasmic": {
+      "name": "miasmic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "colorfully": {
+      "name": "colorfully",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "sturdiness": {
+      "name": "sturdiness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nearness": {
+      "name": "nearness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pavlova": {
+      "name": "pavlova",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "fruitfulness": {
+      "name": "fruitfulness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "gobi": {
+      "name": "gobi",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "summarization": {
+      "name": "summarization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "haphazardly": {
+      "name": "haphazardly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "geometrically": {
+      "name": "geometrically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "participator": {
+      "name": "participator",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "telecommuter": {
+      "name": "telecommuter",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "iconographic": {
+      "name": "iconographic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "folkloric": {
+      "name": "folkloric",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "chaotically": {
+      "name": "chaotically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "sluggishly": {
+      "name": "sluggishly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "replant": {
+      "name": "replant",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "nationally": {
+      "name": "nationally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "vaguest": {
+      "name": "vaguest",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "clayware": {
+      "name": "clayware",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "falsely": {
+      "name": "falsely",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "landownership": {
+      "name": "landownership",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "oxidizable": {
+      "name": "oxidizable",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "difluoride": {
+      "name": "difluoride",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "scrubbiness": {
+      "name": "scrubbiness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hairlike": {
+      "name": "hairlike",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "worthiness": {
+      "name": "worthiness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "loudness": {
+      "name": "loudness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "centralization": {
+      "name": "centralization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "shortness": {
+      "name": "shortness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "behaviorist": {
+      "name": "behaviorist",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "proficiently": {
+      "name": "proficiently",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "wirephoto": {
+      "name": "wirephoto",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "attractively": {
+      "name": "attractively",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "modus": {
+      "name": "modus",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "laborsaving": {
+      "name": "laborsaving",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "terrifyingly": {
+      "name": "terrifyingly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "wingless": {
+      "name": "wingless",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "multifunctional": {
+      "name": "multifunctional",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pella": {
+      "name": "pella",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "woodblock": {
+      "name": "woodblock",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "irregularly": {
+      "name": "irregularly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "placental": {
+      "name": "placental",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "insensitivity": {
+      "name": "insensitivity",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "serigraphy": {
+      "name": "serigraphy",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "multipurpose": {
+      "name": "multipurpose",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unwillingly": {
+      "name": "unwillingly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "impartially": {
+      "name": "impartially",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unavoidably": {
+      "name": "unavoidably",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "struggler": {
+      "name": "struggler",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "ingeniously": {
+      "name": "ingeniously",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "reinterpretation": {
+      "name": "reinterpretation",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "rainer": {
+      "name": "rainer",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "musicologist": {
+      "name": "musicologist",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "multistory": {
+      "name": "multistory",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "midocean": {
+      "name": "midocean",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unprocessed": {
+      "name": "unprocessed",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "advantageously": {
+      "name": "advantageously",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "merchandis": {
+      "name": "merchandis",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "tranquillity": {
+      "name": "tranquillity",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "atomization": {
+      "name": "atomization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unbridgeable": {
+      "name": "unbridgeable",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "determinedly": {
+      "name": "determinedly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pinon": {
+      "name": "pinon",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "midlatitude": {
+      "name": "midlatitude",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "infrequently": {
+      "name": "infrequently",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "romancer": {
+      "name": "romancer",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pleasantly": {
+      "name": "pleasantly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "dependably": {
+      "name": "dependably",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "distinctively": {
+      "name": "distinctively",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "briskness": {
+      "name": "briskness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "platitudinous": {
+      "name": "platitudinous",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "shaper": {
+      "name": "shaper",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "avocational": {
+      "name": "avocational",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "wearability": {
+      "name": "wearability",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "explosively": {
+      "name": "explosively",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "megafossil": {
+      "name": "megafossil",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "educationally": {
+      "name": "educationally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "profitability": {
+      "name": "profitability",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "skeletally": {
+      "name": "skeletally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "muscularly": {
+      "name": "muscularly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "tinplate": {
+      "name": "tinplate",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "communally": {
+      "name": "communally",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "sociably": {
+      "name": "sociably",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "aie": {
+      "name": "aie",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "plainspoken": {
+      "name": "plainspoken",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "tessellation": {
+      "name": "tessellation",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "familiarization": {
+      "name": "familiarization",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "woodlot": {
+      "name": "woodlot",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "hydra": {
+      "name": "hydra",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "plantlike": {
+      "name": "plantlike",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "homeownership": {
+      "name": "homeownership",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "dictaphone": {
+      "name": "dictaphone",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "melange": {
+      "name": "melange",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "negligibly": {
+      "name": "negligibly",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "newberry": {
+      "name": "newberry",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "sargeant": {
+      "name": "sargeant",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "rarer": {
+      "name": "rarer",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "humanlike": {
+      "name": "humanlike",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "topographically": {
+      "name": "topographically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pont": {
+      "name": "pont",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "resettle": {
+      "name": "resettle",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "pointe": {
+      "name": "pointe",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "woodcutting": {
+      "name": "woodcutting",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "unreachable": {
+      "name": "unreachable",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "bryn": {
+      "name": "bryn",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "narrower": {
+      "name": "narrower",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "evenness": {
+      "name": "evenness",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "poikilotherm": {
+      "name": "poikilotherm",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "lyrically": {
+      "name": "lyrically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "theatrically": {
+      "name": "theatrically",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "ectothermic": {
+      "name": "ectothermic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "poikilothermic": {
+      "name": "poikilothermic",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "locomote": {
+      "name": "locomote",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "inadequately": {
+      "name": "inadequately",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "onetime": {
+      "name": "onetime",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "tavernkeeper": {
+      "name": "tavernkeeper",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "laboriously": {
+      "name": "laboriously",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    },
+    "uncrumple": {
+      "name": "uncrumple",
+      "count": 1,
+      "dicts": [
+        "toefl"
+      ]
+    }
+  }
+}

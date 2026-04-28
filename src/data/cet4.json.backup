@@ -1,0 +1,31 @@
+{
+  "id": "cet4",
+  "name": "CET-4 核心词汇",
+  "description": "大学英语四级考试核心词汇",
+  "category": "英语考试",
+  "totalChapters": 2,
+  "chapters": [
+    {
+      "id": 1,
+      "name": "第 1 章",
+      "words": [
+        { "word": "abandon", "phonetic": "/əˈbændən/", "translation": "放弃，抛弃" },
+        { "word": "ability", "phonetic": "/əˈbɪləti/", "translation": "能力，才能" },
+        { "word": "absent", "phonetic": "/ˈæbsənt/", "translation": "缺席的" },
+        { "word": "absolute", "phonetic": "/ˈæbsəluːt/", "translation": "绝对的" },
+        { "word": "absorb", "phonetic": "/əbˈzɔːrb/", "translation": "吸收" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "第 2 章",
+      "words": [
+        { "word": "abstract", "phonetic": "/ˈæbstrækt/", "translation": "抽象的" },
+        { "word": "abundant", "phonetic": "/əˈbʌndənt/", "translation": "丰富的" },
+        { "word": "academic", "phonetic": "/ˌækəˈdemɪk/", "translation": "学术的" },
+        { "word": "academy", "phonetic": "/əˈkædəmi/", "translation": "学院" },
+        { "word": "accelerate", "phonetic": "/əkˈseləreɪt/", "translation": "加速" }
+      ]
+    }
+  ]
+}

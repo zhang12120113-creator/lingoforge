@@ -1,0 +1,1444 @@
+{
+  "timestamp": "2026-04-27T16:25:05.666Z",
+  "summary": {
+    "totalDicts": 15,
+    "totalWords": 61176,
+    "totalErrors": 0,
+    "totalDuplicates": 0,
+    "checkedLevels": 12,
+    "totalSuspicious": 11757
+  },
+  "dictionaries": [
+    {
+      "name": "cet4",
+      "file": "src\\dictionaries\\cet4.json",
+      "totalWords": 4543,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 648,
+        "complianceRate": "85.7%",
+        "suspicious": [
+          {
+            "word": "abruptly",
+            "chapter": 1,
+            "index": 1
+          },
+          {
+            "word": "accessible",
+            "chapter": 1,
+            "index": 6
+          },
+          {
+            "word": "acknowledge",
+            "chapter": 1,
+            "index": 12
+          },
+          {
+            "word": "addiction",
+            "chapter": 1,
+            "index": 16
+          },
+          {
+            "word": "administrative",
+            "chapter": 1,
+            "index": 21
+          },
+          {
+            "word": "admiration",
+            "chapter": 1,
+            "index": 23
+          },
+          {
+            "word": "advancement",
+            "chapter": 2,
+            "index": 3
+          },
+          {
+            "word": "advisory",
+            "chapter": 2,
+            "index": 5
+          },
+          {
+            "word": "advocate",
+            "chapter": 2,
+            "index": 6
+          },
+          {
+            "word": "advocator",
+            "chapter": 2,
+            "index": 7
+          },
+          {
+            "word": "affectionate",
+            "chapter": 2,
+            "index": 8
+          },
+          {
+            "word": "affirmation",
+            "chapter": 2,
+            "index": 9
+          },
+          {
+            "word": "affirm",
+            "chapter": 2,
+            "index": 10
+          },
+          {
+            "word": "album",
+            "chapter": 2,
+            "index": 14
+          },
+          {
+            "word": "alert",
+            "chapter": 2,
+            "index": 16
+          },
+          {
+            "word": "ambitious",
+            "chapter": 2,
+            "index": 19
+          },
+          {
+            "word": "analyze",
+            "chapter": 2,
+            "index": 20
+          },
+          {
+            "word": "annually",
+            "chapter": 2,
+            "index": 24
+          },
+          {
+            "word": "antique",
+            "chapter": 3,
+            "index": 1
+          },
+          {
+            "word": "applicant",
+            "chapter": 3,
+            "index": 6
+          }
+        ],
+        "missingCount": 669
+      }
+    },
+    {
+      "name": "cet4freq",
+      "file": "src\\dictionaries\\cet4freq.json",
+      "totalWords": 1500,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 396,
+        "complianceRate": "73.6%",
+        "suspicious": [
+          {
+            "word": "abruptly",
+            "chapter": 1,
+            "index": 1
+          },
+          {
+            "word": "accessible",
+            "chapter": 1,
+            "index": 6
+          },
+          {
+            "word": "acknowledge",
+            "chapter": 1,
+            "index": 12
+          },
+          {
+            "word": "addiction",
+            "chapter": 1,
+            "index": 16
+          },
+          {
+            "word": "administrative",
+            "chapter": 1,
+            "index": 21
+          },
+          {
+            "word": "admiration",
+            "chapter": 1,
+            "index": 23
+          },
+          {
+            "word": "advancement",
+            "chapter": 2,
+            "index": 3
+          },
+          {
+            "word": "advisory",
+            "chapter": 2,
+            "index": 5
+          },
+          {
+            "word": "advocate",
+            "chapter": 2,
+            "index": 6
+          },
+          {
+            "word": "advocator",
+            "chapter": 2,
+            "index": 7
+          },
+          {
+            "word": "affectionate",
+            "chapter": 2,
+            "index": 8
+          },
+          {
+            "word": "affirmation",
+            "chapter": 2,
+            "index": 9
+          },
+          {
+            "word": "affirm",
+            "chapter": 2,
+            "index": 10
+          },
+          {
+            "word": "album",
+            "chapter": 2,
+            "index": 14
+          },
+          {
+            "word": "alert",
+            "chapter": 2,
+            "index": 16
+          },
+          {
+            "word": "ambitious",
+            "chapter": 2,
+            "index": 19
+          },
+          {
+            "word": "analyze",
+            "chapter": 2,
+            "index": 20
+          },
+          {
+            "word": "annually",
+            "chapter": 2,
+            "index": 24
+          },
+          {
+            "word": "antique",
+            "chapter": 3,
+            "index": 1
+          },
+          {
+            "word": "applicant",
+            "chapter": 3,
+            "index": 6
+          }
+        ],
+        "missingCount": 3460
+      }
+    },
+    {
+      "name": "cet6",
+      "file": "src\\dictionaries\\cet6.json",
+      "totalWords": 3991,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 1779,
+        "complianceRate": "55.4%",
+        "suspicious": [
+          {
+            "word": "abandonment",
+            "chapter": 1,
+            "index": 1
+          },
+          {
+            "word": "abnormally",
+            "chapter": 1,
+            "index": 2
+          },
+          {
+            "word": "absolutely",
+            "chapter": 1,
+            "index": 3
+          },
+          {
+            "word": "accountant",
+            "chapter": 1,
+            "index": 8
+          },
+          {
+            "word": "accrue",
+            "chapter": 1,
+            "index": 9
+          },
+          {
+            "word": "accustom",
+            "chapter": 1,
+            "index": 12
+          },
+          {
+            "word": "achieve",
+            "chapter": 1,
+            "index": 13
+          },
+          {
+            "word": "acutely",
+            "chapter": 1,
+            "index": 16
+          },
+          {
+            "word": "address",
+            "chapter": 1,
+            "index": 18
+          },
+          {
+            "word": "adventure",
+            "chapter": 1,
+            "index": 21
+          },
+          {
+            "word": "adventurer",
+            "chapter": 1,
+            "index": 22
+          },
+          {
+            "word": "adversely",
+            "chapter": 1,
+            "index": 24
+          },
+          {
+            "word": "agenda",
+            "chapter": 2,
+            "index": 1
+          },
+          {
+            "word": "aggravate",
+            "chapter": 2,
+            "index": 2
+          },
+          {
+            "word": "agonize",
+            "chapter": 2,
+            "index": 3
+          },
+          {
+            "word": "allergic",
+            "chapter": 2,
+            "index": 7
+          },
+          {
+            "word": "analytical",
+            "chapter": 2,
+            "index": 9
+          },
+          {
+            "word": "ankle",
+            "chapter": 2,
+            "index": 11
+          },
+          {
+            "word": "apathy",
+            "chapter": 2,
+            "index": 16
+          },
+          {
+            "word": "apologize",
+            "chapter": 2,
+            "index": 17
+          }
+        ],
+        "missingCount": 7
+      }
+    },
+    {
+      "name": "cet6freq",
+      "file": "src\\dictionaries\\cet6freq.json",
+      "totalWords": 1500,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 808,
+        "complianceRate": "46.1%",
+        "suspicious": [
+          {
+            "word": "abandonment",
+            "chapter": 1,
+            "index": 1
+          },
+          {
+            "word": "abnormally",
+            "chapter": 1,
+            "index": 2
+          },
+          {
+            "word": "absolutely",
+            "chapter": 1,
+            "index": 3
+          },
+          {
+            "word": "accountant",
+            "chapter": 1,
+            "index": 8
+          },
+          {
+            "word": "accrue",
+            "chapter": 1,
+            "index": 9
+          },
+          {
+            "word": "accustom",
+            "chapter": 1,
+            "index": 12
+          },
+          {
+            "word": "achieve",
+            "chapter": 1,
+            "index": 13
+          },
+          {
+            "word": "acutely",
+            "chapter": 1,
+            "index": 16
+          },
+          {
+            "word": "address",
+            "chapter": 1,
+            "index": 18
+          },
+          {
+            "word": "adventure",
+            "chapter": 1,
+            "index": 21
+          },
+          {
+            "word": "adventurer",
+            "chapter": 1,
+            "index": 22
+          },
+          {
+            "word": "adversely",
+            "chapter": 1,
+            "index": 24
+          },
+          {
+            "word": "agenda",
+            "chapter": 2,
+            "index": 1
+          },
+          {
+            "word": "aggravate",
+            "chapter": 2,
+            "index": 2
+          },
+          {
+            "word": "agonize",
+            "chapter": 2,
+            "index": 3
+          },
+          {
+            "word": "allergic",
+            "chapter": 2,
+            "index": 7
+          },
+          {
+            "word": "analytical",
+            "chapter": 2,
+            "index": 9
+          },
+          {
+            "word": "ankle",
+            "chapter": 2,
+            "index": 11
+          },
+          {
+            "word": "apathy",
+            "chapter": 2,
+            "index": 16
+          },
+          {
+            "word": "apologize",
+            "chapter": 2,
+            "index": 17
+          }
+        ],
+        "missingCount": 1527
+      }
+    },
+    {
+      "name": "gaokao",
+      "file": "src\\dictionaries\\gaokao.json",
+      "totalWords": 3664,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 383,
+        "complianceRate": "89.5%",
+        "suspicious": [
+          {
+            "word": "rewrite",
+            "chapter": 1,
+            "index": 9
+          },
+          {
+            "word": "fourteen",
+            "chapter": 1,
+            "index": 10
+          },
+          {
+            "word": "bake",
+            "chapter": 1,
+            "index": 14
+          },
+          {
+            "word": "happily",
+            "chapter": 1,
+            "index": 16
+          },
+          {
+            "word": "hey",
+            "chapter": 1,
+            "index": 21
+          },
+          {
+            "word": "headteacher",
+            "chapter": 2,
+            "index": 13
+          },
+          {
+            "word": "player",
+            "chapter": 2,
+            "index": 18
+          },
+          {
+            "word": "hive",
+            "chapter": 2,
+            "index": 21
+          },
+          {
+            "word": "usually",
+            "chapter": 2,
+            "index": 25
+          },
+          {
+            "word": "hawk",
+            "chapter": 3,
+            "index": 3
+          },
+          {
+            "word": "bedclothes",
+            "chapter": 3,
+            "index": 7
+          },
+          {
+            "word": "ten",
+            "chapter": 3,
+            "index": 18
+          },
+          {
+            "word": "leading",
+            "chapter": 3,
+            "index": 21
+          },
+          {
+            "word": "Italian",
+            "chapter": 4,
+            "index": 16
+          },
+          {
+            "word": "bookstore",
+            "chapter": 5,
+            "index": 3
+          },
+          {
+            "word": "shuttle",
+            "chapter": 5,
+            "index": 16
+          },
+          {
+            "word": "viewer",
+            "chapter": 5,
+            "index": 21
+          },
+          {
+            "word": "stomachache",
+            "chapter": 6,
+            "index": 9
+          },
+          {
+            "word": "comrade",
+            "chapter": 6,
+            "index": 16
+          },
+          {
+            "word": "attentively",
+            "chapter": 6,
+            "index": 22
+          }
+        ],
+        "missingCount": 164
+      }
+    },
+    {
+      "name": "ielts",
+      "file": "src\\dictionaries\\ielts.json",
+      "totalWords": 3427,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "status": "skipped",
+        "reason": "无标准词汇表"
+      }
+    },
+    {
+      "name": "junior",
+      "file": "src\\dictionaries\\junior.json",
+      "totalWords": 1418,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 199,
+        "complianceRate": "86.0%",
+        "suspicious": [
+          {
+            "word": "marriage",
+            "chapter": 1,
+            "index": 5
+          },
+          {
+            "word": "bag",
+            "chapter": 1,
+            "index": 10
+          },
+          {
+            "word": "cancel",
+            "chapter": 1,
+            "index": 12
+          },
+          {
+            "word": "grandparent",
+            "chapter": 1,
+            "index": 14
+          },
+          {
+            "word": "giraffe",
+            "chapter": 2,
+            "index": 2
+          },
+          {
+            "word": "picture",
+            "chapter": 2,
+            "index": 3
+          },
+          {
+            "word": "advise",
+            "chapter": 3,
+            "index": 1
+          },
+          {
+            "word": "brave",
+            "chapter": 4,
+            "index": 5
+          },
+          {
+            "word": "steam",
+            "chapter": 4,
+            "index": 11
+          },
+          {
+            "word": "prove",
+            "chapter": 4,
+            "index": 21
+          },
+          {
+            "word": "sometimes",
+            "chapter": 5,
+            "index": 3
+          },
+          {
+            "word": "standard",
+            "chapter": 5,
+            "index": 5
+          },
+          {
+            "word": "snowy",
+            "chapter": 5,
+            "index": 6
+          },
+          {
+            "word": "drum",
+            "chapter": 5,
+            "index": 8
+          },
+          {
+            "word": "officer",
+            "chapter": 5,
+            "index": 10
+          },
+          {
+            "word": "rope",
+            "chapter": 5,
+            "index": 15
+          },
+          {
+            "word": "cheat",
+            "chapter": 5,
+            "index": 25
+          },
+          {
+            "word": "driver",
+            "chapter": 6,
+            "index": 1
+          },
+          {
+            "word": "height",
+            "chapter": 6,
+            "index": 5
+          },
+          {
+            "word": "retell",
+            "chapter": 6,
+            "index": 6
+          }
+        ],
+        "missingCount": 692
+      }
+    },
+    {
+      "name": "postgraduate",
+      "file": "src\\dictionaries\\postgraduate.json",
+      "totalWords": 4533,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 86,
+        "complianceRate": "98.1%",
+        "suspicious": [
+          {
+            "word": "variety",
+            "chapter": 7,
+            "index": 5
+          },
+          {
+            "word": "visit",
+            "chapter": 9,
+            "index": 10
+          },
+          {
+            "word": "usual",
+            "chapter": 11,
+            "index": 2
+          },
+          {
+            "word": "upset",
+            "chapter": 20,
+            "index": 9
+          },
+          {
+            "word": "vary",
+            "chapter": 23,
+            "index": 5
+          },
+          {
+            "word": "version",
+            "chapter": 29,
+            "index": 12
+          },
+          {
+            "word": "vast",
+            "chapter": 29,
+            "index": 25
+          },
+          {
+            "word": "venture",
+            "chapter": 32,
+            "index": 11
+          },
+          {
+            "word": "variation",
+            "chapter": 33,
+            "index": 24
+          },
+          {
+            "word": "variable",
+            "chapter": 35,
+            "index": 24
+          },
+          {
+            "word": "upright",
+            "chapter": 38,
+            "index": 1
+          },
+          {
+            "word": "valuable",
+            "chapter": 39,
+            "index": 18
+          },
+          {
+            "word": "brook",
+            "chapter": 40,
+            "index": 12
+          },
+          {
+            "word": "verbal",
+            "chapter": 40,
+            "index": 25
+          },
+          {
+            "word": "vanish",
+            "chapter": 41,
+            "index": 15
+          },
+          {
+            "word": "violence",
+            "chapter": 43,
+            "index": 3
+          },
+          {
+            "word": "vague",
+            "chapter": 43,
+            "index": 14
+          },
+          {
+            "word": "victim",
+            "chapter": 46,
+            "index": 7
+          },
+          {
+            "word": "vessel",
+            "chapter": 47,
+            "index": 8
+          },
+          {
+            "word": "vice",
+            "chapter": 49,
+            "index": 21
+          }
+        ],
+        "missingCount": 945
+      }
+    },
+    {
+      "name": "programmer",
+      "file": "src\\dictionaries\\programmer.json",
+      "totalWords": 1665,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "status": "skipped",
+        "reason": "无标准词汇表"
+      }
+    },
+    {
+      "name": "sat",
+      "file": "src\\dictionaries\\sat.json",
+      "totalWords": 4423,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "status": "skipped",
+        "reason": "无标准词汇表"
+      }
+    },
+    {
+      "name": "senior",
+      "file": "src\\dictionaries\\senior.json",
+      "totalWords": 3664,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 812,
+        "complianceRate": "77.8%",
+        "suspicious": [
+          {
+            "word": "beddings",
+            "chapter": 1,
+            "index": 1
+          },
+          {
+            "word": "warmth",
+            "chapter": 1,
+            "index": 7
+          },
+          {
+            "word": "rewrite",
+            "chapter": 1,
+            "index": 9
+          },
+          {
+            "word": "hey",
+            "chapter": 1,
+            "index": 21
+          },
+          {
+            "word": "framework",
+            "chapter": 2,
+            "index": 2
+          },
+          {
+            "word": "DVD",
+            "chapter": 2,
+            "index": 5
+          },
+          {
+            "word": "foresee",
+            "chapter": 2,
+            "index": 10
+          },
+          {
+            "word": "headteacher",
+            "chapter": 2,
+            "index": 13
+          },
+          {
+            "word": "player",
+            "chapter": 2,
+            "index": 18
+          },
+          {
+            "word": "hive",
+            "chapter": 2,
+            "index": 21
+          },
+          {
+            "word": "usually",
+            "chapter": 2,
+            "index": 25
+          },
+          {
+            "word": "bedclothes",
+            "chapter": 3,
+            "index": 7
+          },
+          {
+            "word": "humour",
+            "chapter": 3,
+            "index": 10
+          },
+          {
+            "word": "pay",
+            "chapter": 3,
+            "index": 19
+          },
+          {
+            "word": "leading",
+            "chapter": 3,
+            "index": 21
+          },
+          {
+            "word": "Asia",
+            "chapter": 3,
+            "index": 22
+          },
+          {
+            "word": "available",
+            "chapter": 4,
+            "index": 8
+          },
+          {
+            "word": "anything",
+            "chapter": 4,
+            "index": 14
+          },
+          {
+            "word": "hardship",
+            "chapter": 5,
+            "index": 4
+          },
+          {
+            "word": "Europe",
+            "chapter": 5,
+            "index": 10
+          }
+        ],
+        "missingCount": 2833
+      }
+    },
+    {
+      "name": "tem4",
+      "file": "src\\dictionaries\\tem4.json",
+      "totalWords": 4025,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 108,
+        "complianceRate": "97.3%",
+        "suspicious": [
+          {
+            "word": "violently",
+            "chapter": 1,
+            "index": 16
+          },
+          {
+            "word": "miserly",
+            "chapter": 9,
+            "index": 5
+          },
+          {
+            "word": "hospitalize",
+            "chapter": 11,
+            "index": 22
+          },
+          {
+            "word": "absorbed",
+            "chapter": 14,
+            "index": 17
+          },
+          {
+            "word": "narrowly",
+            "chapter": 14,
+            "index": 23
+          },
+          {
+            "word": "excessively",
+            "chapter": 15,
+            "index": 13
+          },
+          {
+            "word": "climax",
+            "chapter": 18,
+            "index": 4
+          },
+          {
+            "word": "confidently",
+            "chapter": 18,
+            "index": 6
+          },
+          {
+            "word": "hippo",
+            "chapter": 18,
+            "index": 19
+          },
+          {
+            "word": "seminar",
+            "chapter": 20,
+            "index": 10
+          },
+          {
+            "word": "subsequently",
+            "chapter": 22,
+            "index": 15
+          },
+          {
+            "word": "suggestion",
+            "chapter": 23,
+            "index": 24
+          },
+          {
+            "word": "suited",
+            "chapter": 24,
+            "index": 7
+          },
+          {
+            "word": "skilled",
+            "chapter": 24,
+            "index": 22
+          },
+          {
+            "word": "pursue",
+            "chapter": 25,
+            "index": 1
+          },
+          {
+            "word": "concerned",
+            "chapter": 29,
+            "index": 24
+          },
+          {
+            "word": "uncontrollable",
+            "chapter": 30,
+            "index": 6
+          },
+          {
+            "word": "soy",
+            "chapter": 33,
+            "index": 18
+          },
+          {
+            "word": "characterize",
+            "chapter": 33,
+            "index": 24
+          },
+          {
+            "word": "harmless",
+            "chapter": 34,
+            "index": 23
+          }
+        ],
+        "missingCount": 8614
+      }
+    },
+    {
+      "name": "tem8",
+      "file": "src\\dictionaries\\tem8.json",
+      "totalWords": 12197,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 154,
+        "complianceRate": "98.7%",
+        "suspicious": [
+          {
+            "word": "mileometer",
+            "chapter": 10,
+            "index": 22
+          },
+          {
+            "word": "pursue",
+            "chapter": 11,
+            "index": 20
+          },
+          {
+            "word": "barometer",
+            "chapter": 13,
+            "index": 20
+          },
+          {
+            "word": "byproduct",
+            "chapter": 14,
+            "index": 15
+          },
+          {
+            "word": "microbiology",
+            "chapter": 18,
+            "index": 15
+          },
+          {
+            "word": "upward",
+            "chapter": 22,
+            "index": 3
+          },
+          {
+            "word": "grounding",
+            "chapter": 25,
+            "index": 2
+          },
+          {
+            "word": "impregnable",
+            "chapter": 25,
+            "index": 14
+          },
+          {
+            "word": "intriguing",
+            "chapter": 28,
+            "index": 8
+          },
+          {
+            "word": "England",
+            "chapter": 28,
+            "index": 16
+          },
+          {
+            "word": "afterward",
+            "chapter": 30,
+            "index": 12
+          },
+          {
+            "word": "hardboard",
+            "chapter": 35,
+            "index": 15
+          },
+          {
+            "word": "keyboard",
+            "chapter": 36,
+            "index": 4
+          },
+          {
+            "word": "rush",
+            "chapter": 44,
+            "index": 3
+          },
+          {
+            "word": "individualism",
+            "chapter": 46,
+            "index": 24
+          },
+          {
+            "word": "haversack",
+            "chapter": 48,
+            "index": 9
+          },
+          {
+            "word": "chloroplast",
+            "chapter": 50,
+            "index": 18
+          },
+          {
+            "word": "hippo",
+            "chapter": 60,
+            "index": 15
+          },
+          {
+            "word": "humorous",
+            "chapter": 68,
+            "index": 1
+          },
+          {
+            "word": "subsidize",
+            "chapter": 70,
+            "index": 8
+          }
+        ],
+        "missingCount": 488
+      }
+    },
+    {
+      "name": "toefl",
+      "file": "src\\dictionaries\\toefl.json",
+      "totalWords": 9208,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 6185,
+        "complianceRate": "32.8%",
+        "suspicious": [
+          {
+            "word": "back",
+            "chapter": 1,
+            "index": 1
+          },
+          {
+            "word": "skill",
+            "chapter": 1,
+            "index": 3
+          },
+          {
+            "word": "public",
+            "chapter": 1,
+            "index": 4
+          },
+          {
+            "word": "go",
+            "chapter": 1,
+            "index": 5
+          },
+          {
+            "word": "fish",
+            "chapter": 1,
+            "index": 6
+          },
+          {
+            "word": "set",
+            "chapter": 1,
+            "index": 7
+          },
+          {
+            "word": "once",
+            "chapter": 1,
+            "index": 8
+          },
+          {
+            "word": "table",
+            "chapter": 1,
+            "index": 9
+          },
+          {
+            "word": "demand",
+            "chapter": 1,
+            "index": 10
+          },
+          {
+            "word": "day",
+            "chapter": 1,
+            "index": 11
+          },
+          {
+            "word": "south",
+            "chapter": 1,
+            "index": 12
+          },
+          {
+            "word": "almost",
+            "chapter": 1,
+            "index": 13
+          },
+          {
+            "word": "local",
+            "chapter": 1,
+            "index": 14
+          },
+          {
+            "word": "open",
+            "chapter": 1,
+            "index": 15
+          },
+          {
+            "word": "purpose",
+            "chapter": 1,
+            "index": 17
+          },
+          {
+            "word": "reach",
+            "chapter": 1,
+            "index": 18
+          },
+          {
+            "word": "late",
+            "chapter": 1,
+            "index": 20
+          },
+          {
+            "word": "sometime",
+            "chapter": 1,
+            "index": 21
+          },
+          {
+            "word": "able",
+            "chapter": 1,
+            "index": 23
+          },
+          {
+            "word": "allow",
+            "chapter": 1,
+            "index": 24
+          }
+        ],
+        "missingCount": 1487
+      }
+    },
+    {
+      "name": "zhongkao",
+      "file": "src\\dictionaries\\zhongkao.json",
+      "totalWords": 1418,
+      "errors": [],
+      "errorCount": 0,
+      "duplicates": [],
+      "duplicateCount": 0,
+      "levelCheck": {
+        "suspiciousCount": 199,
+        "complianceRate": "86.0%",
+        "suspicious": [
+          {
+            "word": "marriage",
+            "chapter": 1,
+            "index": 5
+          },
+          {
+            "word": "bag",
+            "chapter": 1,
+            "index": 10
+          },
+          {
+            "word": "cancel",
+            "chapter": 1,
+            "index": 12
+          },
+          {
+            "word": "grandparent",
+            "chapter": 1,
+            "index": 14
+          },
+          {
+            "word": "giraffe",
+            "chapter": 2,
+            "index": 2
+          },
+          {
+            "word": "picture",
+            "chapter": 2,
+            "index": 3
+          },
+          {
+            "word": "advise",
+            "chapter": 3,
+            "index": 1
+          },
+          {
+            "word": "brave",
+            "chapter": 4,
+            "index": 5
+          },
+          {
+            "word": "steam",
+            "chapter": 4,
+            "index": 11
+          },
+          {
+            "word": "prove",
+            "chapter": 4,
+            "index": 21
+          },
+          {
+            "word": "sometimes",
+            "chapter": 5,
+            "index": 3
+          },
+          {
+            "word": "standard",
+            "chapter": 5,
+            "index": 5
+          },
+          {
+            "word": "snowy",
+            "chapter": 5,
+            "index": 6
+          },
+          {
+            "word": "drum",
+            "chapter": 5,
+            "index": 8
+          },
+          {
+            "word": "officer",
+            "chapter": 5,
+            "index": 10
+          },
+          {
+            "word": "rope",
+            "chapter": 5,
+            "index": 15
+          },
+          {
+            "word": "cheat",
+            "chapter": 5,
+            "index": 25
+          },
+          {
+            "word": "driver",
+            "chapter": 6,
+            "index": 1
+          },
+          {
+            "word": "height",
+            "chapter": 6,
+            "index": 5
+          },
+          {
+            "word": "retell",
+            "chapter": 6,
+            "index": 6
+          }
+        ],
+        "missingCount": 692
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "programmer",
+  "name": "程序员常用词",
+  "description": "编程工作中高频出现的英文词汇",
+  "category": "编程",
+  "totalChapters": 1,
+  "chapters": [
+    {
+      "id": 1,
+      "name": "基础术语",
+      "words": [
+        { "word": "function", "phonetic": "/ˈfʌŋkʃn/", "translation": "函数" },
+        { "word": "variable", "phonetic": "/ˈveəriəbl/", "translation": "变量" },
+        { "word": "constant", "phonetic": "/ˈkɒnstənt/", "translation": "常量" },
+        { "word": "parameter", "phonetic": "/pəˈræmɪtər/", "translation": "参数" },
+        { "word": "return", "phonetic": "/rɪˈtɜːrn/", "translation": "返回" }
+      ]
+    }
+  ]
+}

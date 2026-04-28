@@ -1,0 +1,290 @@
+import { useRef, useState, useEffect } from 'react'
+
+let sharedAudioCtx = null
+let audioUnlocked = false
+
+function getAudioContext() {
+  if (!sharedAudioCtx) {
+    sharedAudioCtx = new (window.AudioContext || window.webkitAudioContext)()
+  }
+  return sharedAudioCtx
+}
+
+function useTyping(words) {
+  const stateRef = useRef({
+    currentIndex: 0,
+    userInput: '',
+    isError: false,
+    isFinished: false,
+    soundEnabled: true,
+    words: [],
+    stats: {
+      startTime: null,
+      elapsed: 0,
+      keyCount: 0,
+      correctCount: 0,
+      attempts: 0,
+    }
+  })
+  const [renderTick, setRenderTick] = useState(0)
+  const forceRender = () => setRenderTick(t => t + 1)
+
+  const [started, setStarted] = useState(false)
+  const startedRef = useRef(false)
+  useEffect(() => { startedRef.current = started }, [started])
+
+  // words 同步
+  useEffect(() => {
+    stateRef.current.words = words
+    forceRender()
+  }, [words])
+
+  // 计时器
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const s = stateRef.current
+      if (s.stats.startTime && !s.isFinished) {
+        s.stats.elapsed = Math.floor((Date.now() - s.stats.startTime) / 1000)
+        forceRender()
+      }
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const unlockAudio = async () => {
+    if (audioUnlocked) return
+    try {
+      const ctx = getAudioContext()
+      if (ctx.state === 'suspended') {
+        await ctx.resume()
+      }
+      const buffer = ctx.createBuffer(1, 1, 22050)
+      const source = ctx.createBufferSource()
+      source.buffer = buffer
+      source.connect(ctx.destination)
+      source.start(0)
+    } catch (e) {}
+    audioUnlocked = true
+  }
+
+  const playSound = (type) => {
+    if (!startedRef.current || !stateRef.current.soundEnabled) return
+    try {
+      const ctx = getAudioContext()
+      const oscillator = ctx.createOscillator()
+      const gainNode = ctx.createGain()
+      oscillator.connect(gainNode)
+      gainNode.connect(ctx.destination)
+
+      if (type === 'correct') {
+        oscillator.type = 'square'
+        oscillator.frequency.setValueAtTime(1500, ctx.currentTime)
+        gainNode.gain.setValueAtTime(0.15, ctx.currentTime)
+        gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.08)
+        oscillator.start(ctx.currentTime)
+        oscillator.stop(ctx.currentTime + 0.08)
+      } else if (type === 'error') {
+        oscillator.type = 'sawtooth'
+        oscillator.frequency.setValueAtTime(200, ctx.currentTime)
+        gainNode.gain.setValueAtTime(0.2, ctx.currentTime)
+        gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.2)
+        oscillator.start(ctx.currentTime)
+        oscillator.stop(ctx.currentTime + 0.2)
+      } else if (type === 'submit') {
+        oscillator.type = 'sine'
+        oscillator.frequency.setValueAtTime(600, ctx.currentTime)
+        oscillator.frequency.exponentialRampToValueAtTime(1200, ctx.currentTime + 0.1)
+        gainNode.gain.setValueAtTime(0.15, ctx.currentTime)
+        gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.1)
+        oscillator.start(ctx.currentTime)
+        oscillator.stop(ctx.currentTime + 0.1)
+      }
+    } catch (e) {}
+  }
+
+  const speak = (word) => {
+    if (!window.speechSynthesis || !stateRef.current.soundEnabled) return
+    window.speechSynthesis.cancel()
+
+    const utter = new SpeechSynthesisUtterance(word)
+    utter.lang = 'en-US'
+    utter.rate = 0.9
+
+    const doSpeak = (voiceList) => {
+      const enVoice = voiceList.find(v => v.lang.startsWith('en')) || voiceList[0]
+      if (enVoice) utter.voice = enVoice
+      window.speechSynthesis.speak(utter)
+    }
+
+    const voices = window.speechSynthesis.getVoices()
+    if (voices.length > 0) {
+      doSpeak(voices)
+      return
+    }
+
+    // voices 为空，等待加载
+    let spoken = false
+    const handler = () => {
+      if (spoken) return
+      spoken = true
+      const loadedVoices = window.speechSynthesis.getVoices()
+      doSpeak(loadedVoices)
+    }
+    window.speechSynthesis.onvoiceschanged = handler
+
+    // 兜底：100ms 后若事件未触发也强制尝试
+    setTimeout(() => {
+      if (spoken) return
+      spoken = true
+      const loadedVoices = window.speechSynthesis.getVoices()
+      if (loadedVoices.length > 0) {
+        doSpeak(loadedVoices)
+      }
+    }, 100)
+  }
+
+  // 统一的启动函数
+  const start = async () => {
+    if (startedRef.current) return
+    await unlockAudio()
+    setStarted(true)
+    const firstWord = stateRef.current.words?.[0]?.word
+    if (firstWord) speak(firstWord)
+  }
+
+  // 键盘监听（空依赖 []，只绑定一次）
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      // 如果还没开始，统一调用 start()
+      if (!startedRef.current) {
+        start()
+      }
+
+      const state = stateRef.current
+      if (state.isFinished) return
+      if (['INPUT', 'TEXTAREA'].includes(event.target.tagName)) return
+      if (event.key === ' ' || event.key === 'Spacebar') {
+        event.preventDefault()
+      }
+
+      const words = state.words
+      const currentWord = words?.[state.currentIndex]?.word
+      if (!currentWord) return
+
+      // Backspace
+      if (event.key === 'Backspace') {
+        if (state.userInput.length > 0) {
+          state.userInput = state.userInput.slice(0, -1)
+          forceRender()
+        }
+        return
+      }
+
+      // 空格/回车提交
+      if (event.key.length !== 1 || !/[a-z]/i.test(event.key)) {
+        if ((event.key === ' ' || event.key === 'Enter') && state.userInput.length === currentWord.length) {
+          if (state.currentIndex + 1 < words.length) {
+            state.currentIndex += 1
+            state.userInput = ''
+            state.stats.correctCount += 1
+            playSound('submit')
+            // 朗读新单词
+            const nextWord = words[state.currentIndex]?.word
+            if (nextWord) speak(nextWord)
+          } else {
+            state.isFinished = true
+            state.stats.correctCount += 1
+            playSound('submit')
+          }
+          forceRender()
+        }
+        return
+      }
+
+      // 开始计时
+      if (!state.stats.startTime) {
+        state.stats.startTime = Date.now()
+      }
+
+      state.stats.keyCount += 1
+      if (state.userInput === '') {
+        state.stats.attempts += 1
+      }
+
+      const expectedChar = currentWord[state.userInput.length]
+      if (event.key.toLowerCase() === expectedChar.toLowerCase()) {
+        state.userInput += event.key
+        playSound('correct')
+      } else {
+        state.userInput = ''
+        state.isError = true
+        state.stats.attempts += 1
+        playSound('error')
+        setTimeout(() => {
+          stateRef.current.isError = false
+          forceRender()
+        }, 400)
+      }
+      forceRender()
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
+  // 计算属性
+  const s = stateRef.current
+  const accuracy = s.stats.attempts > 0
+    ? Math.round((s.stats.correctCount / s.stats.attempts) * 1000) / 10
+    : 0
+  const wpm = s.stats.elapsed > 0
+    ? Math.round((s.stats.correctCount / s.stats.elapsed) * 3600) / 10
+    : 0
+
+  // 重置
+  const handleRestart = () => {
+    stateRef.current = {
+      currentIndex: 0,
+      userInput: '',
+      isError: false,
+      isFinished: false,
+      soundEnabled: s.soundEnabled,
+      words: s.words,
+      stats: {
+        startTime: null,
+        elapsed: 0,
+        keyCount: 0,
+        correctCount: 0,
+        attempts: 0,
+      }
+    }
+    setStarted(true)
+    forceRender()
+    const firstWord = stateRef.current.words?.[0]?.word
+    if (firstWord) speak(firstWord)
+  }
+
+  const toggleSound = () => {
+    stateRef.current.soundEnabled = !stateRef.current.soundEnabled
+    forceRender()
+  }
+
+  return {
+    currentIndex: s.currentIndex,
+    userInput: s.userInput,
+    isError: s.isError,
+    isFinished: s.isFinished,
+    soundEnabled: s.soundEnabled,
+    stats: { ...s.stats, accuracy, wpm },
+    currentWord: s.words?.[s.currentIndex],
+    toggleSound,
+    handleRestart,
+    speak,
+    start,
+    started,
+    setStarted,
+  }
+}
+
+export default useTyping
+export { useTyping }

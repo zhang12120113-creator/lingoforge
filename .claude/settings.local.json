@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp src/data/cet4.json src/data/cet4.json.backup)",
+      "Bash(cp src/data/programmer.json src/data/programmer.json.backup)",
+      "Bash(cp src/data/index.js src/data/index.js.backup)",
+      "Bash(cp src/App.jsx src/App.jsx.backup)",
+      "Bash(cp src/pages/Home.jsx src/pages/Home.jsx.backup)",
+      "Bash(npm run *)",
+      "Bash(npx vite *)"
+    ]
+  }
+}

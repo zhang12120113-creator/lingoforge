@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-04-27T16:11:00.285Z",
+  "files": [
+    {
+      "file": "src\\dictionaries\\cet4.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\cet4freq.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\cet6.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\cet6freq.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\gaokao.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\ielts.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\junior.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\postgraduate.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\programmer.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\sat.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\senior.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\tem4.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\tem8.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\toefl.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    },
+    {
+      "file": "src\\dictionaries\\zhongkao.json",
+      "sentencesRemoved": 0,
+      "status": "success"
+    }
+  ]
+}

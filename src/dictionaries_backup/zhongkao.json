@@ -1,0 +1,16 @@
+{
+  "id": "zhongkao",
+  "name": "中考英语核心词汇",
+  "category": "初中英语",
+  "description": "中考英语高频核心词汇",
+  "chapters": [
+    {
+      "id": "zhongkao-01",
+      "name": "Chapter 1",
+      "words": [
+        { "name": "ability", "trans": ["能力", "才能"], "usphone": "əˈbɪləti", "ukphone": "əˈbɪləti" },
+        { "name": "accept", "trans": ["接受", "认可"], "usphone": "əkˈsept", "ukphone": "əkˈsept" }
+      ]
+    }
+  ]
+}

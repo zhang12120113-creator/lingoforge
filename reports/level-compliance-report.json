@@ -1,0 +1,881 @@
+{
+  "timestamp": "2026-04-27T16:11:02.269Z",
+  "summary": {
+    "checked": 12,
+    "skipped": 3,
+    "totalSuspicious": 11757,
+    "totalMissing": 21578
+  },
+  "files": [
+    {
+      "file": "src\\dictionaries\\cet4.json",
+      "dictName": "cet4",
+      "status": "checked",
+      "total": 4543,
+      "suspiciousCount": 648,
+      "suspicious": [
+        {
+          "word": "abruptly",
+          "index": 1
+        },
+        {
+          "word": "accessible",
+          "index": 6
+        },
+        {
+          "word": "acknowledge",
+          "index": 12
+        },
+        {
+          "word": "addiction",
+          "index": 16
+        },
+        {
+          "word": "administrative",
+          "index": 21
+        },
+        {
+          "word": "admiration",
+          "index": 23
+        },
+        {
+          "word": "advancement",
+          "index": 28
+        },
+        {
+          "word": "advisory",
+          "index": 30
+        },
+        {
+          "word": "advocate",
+          "index": 31
+        },
+        {
+          "word": "advocator",
+          "index": 32
+        },
+        {
+          "word": "affectionate",
+          "index": 33
+        },
+        {
+          "word": "affirmation",
+          "index": 34
+        },
+        {
+          "word": "affirm",
+          "index": 35
+        },
+        {
+          "word": "album",
+          "index": 39
+        },
+        {
+          "word": "alert",
+          "index": 41
+        }
+      ],
+      "missingCount": 669,
+      "coverage": "85.3%"
+    },
+    {
+      "file": "src\\dictionaries\\cet4freq.json",
+      "dictName": "cet4freq",
+      "status": "checked",
+      "total": 1500,
+      "suspiciousCount": 396,
+      "suspicious": [
+        {
+          "word": "abruptly",
+          "index": 1
+        },
+        {
+          "word": "accessible",
+          "index": 6
+        },
+        {
+          "word": "acknowledge",
+          "index": 12
+        },
+        {
+          "word": "addiction",
+          "index": 16
+        },
+        {
+          "word": "administrative",
+          "index": 21
+        },
+        {
+          "word": "admiration",
+          "index": 23
+        },
+        {
+          "word": "advancement",
+          "index": 28
+        },
+        {
+          "word": "advisory",
+          "index": 30
+        },
+        {
+          "word": "advocate",
+          "index": 31
+        },
+        {
+          "word": "advocator",
+          "index": 32
+        },
+        {
+          "word": "affectionate",
+          "index": 33
+        },
+        {
+          "word": "affirmation",
+          "index": 34
+        },
+        {
+          "word": "affirm",
+          "index": 35
+        },
+        {
+          "word": "album",
+          "index": 39
+        },
+        {
+          "word": "alert",
+          "index": 41
+        }
+      ],
+      "missingCount": 3460,
+      "coverage": "24.2%"
+    },
+    {
+      "file": "src\\dictionaries\\cet6.json",
+      "dictName": "cet6",
+      "status": "checked",
+      "total": 3991,
+      "suspiciousCount": 1779,
+      "suspicious": [
+        {
+          "word": "abandonment",
+          "index": 1
+        },
+        {
+          "word": "abnormally",
+          "index": 2
+        },
+        {
+          "word": "absolutely",
+          "index": 3
+        },
+        {
+          "word": "accountant",
+          "index": 8
+        },
+        {
+          "word": "accrue",
+          "index": 9
+        },
+        {
+          "word": "accustom",
+          "index": 12
+        },
+        {
+          "word": "achieve",
+          "index": 13
+        },
+        {
+          "word": "acutely",
+          "index": 16
+        },
+        {
+          "word": "address",
+          "index": 18
+        },
+        {
+          "word": "adventure",
+          "index": 21
+        },
+        {
+          "word": "adventurer",
+          "index": 22
+        },
+        {
+          "word": "adversely",
+          "index": 24
+        },
+        {
+          "word": "agenda",
+          "index": 26
+        },
+        {
+          "word": "aggravate",
+          "index": 27
+        },
+        {
+          "word": "agonize",
+          "index": 28
+        }
+      ],
+      "missingCount": 7,
+      "coverage": "99.7%"
+    },
+    {
+      "file": "src\\dictionaries\\cet6freq.json",
+      "dictName": "cet6freq",
+      "status": "checked",
+      "total": 1500,
+      "suspiciousCount": 808,
+      "suspicious": [
+        {
+          "word": "abandonment",
+          "index": 1
+        },
+        {
+          "word": "abnormally",
+          "index": 2
+        },
+        {
+          "word": "absolutely",
+          "index": 3
+        },
+        {
+          "word": "accountant",
+          "index": 8
+        },
+        {
+          "word": "accrue",
+          "index": 9
+        },
+        {
+          "word": "accustom",
+          "index": 12
+        },
+        {
+          "word": "achieve",
+          "index": 13
+        },
+        {
+          "word": "acutely",
+          "index": 16
+        },
+        {
+          "word": "address",
+          "index": 18
+        },
+        {
+          "word": "adventure",
+          "index": 21
+        },
+        {
+          "word": "adventurer",
+          "index": 22
+        },
+        {
+          "word": "adversely",
+          "index": 24
+        },
+        {
+          "word": "agenda",
+          "index": 26
+        },
+        {
+          "word": "aggravate",
+          "index": 27
+        },
+        {
+          "word": "agonize",
+          "index": 28
+        }
+      ],
+      "missingCount": 1527,
+      "coverage": "31.2%"
+    },
+    {
+      "file": "src\\dictionaries\\gaokao.json",
+      "dictName": "gaokao",
+      "status": "checked",
+      "total": 3664,
+      "suspiciousCount": 383,
+      "suspicious": [
+        {
+          "word": "rewrite",
+          "index": 9
+        },
+        {
+          "word": "fourteen",
+          "index": 10
+        },
+        {
+          "word": "bake",
+          "index": 14
+        },
+        {
+          "word": "happily",
+          "index": 16
+        },
+        {
+          "word": "hey",
+          "index": 21
+        },
+        {
+          "word": "headteacher",
+          "index": 38
+        },
+        {
+          "word": "player",
+          "index": 43
+        },
+        {
+          "word": "hive",
+          "index": 46
+        },
+        {
+          "word": "usually",
+          "index": 50
+        },
+        {
+          "word": "hawk",
+          "index": 53
+        },
+        {
+          "word": "bedclothes",
+          "index": 57
+        },
+        {
+          "word": "ten",
+          "index": 68
+        },
+        {
+          "word": "leading",
+          "index": 71
+        },
+        {
+          "word": "Italian",
+          "index": 91
+        },
+        {
+          "word": "bookstore",
+          "index": 103
+        }
+      ],
+      "missingCount": 164,
+      "coverage": "95.2%"
+    },
+    {
+      "file": "src\\dictionaries\\ielts.json",
+      "dictName": "ielts",
+      "status": "skipped",
+      "reason": "缺少标准词汇表"
+    },
+    {
+      "file": "src\\dictionaries\\junior.json",
+      "dictName": "junior",
+      "status": "checked",
+      "total": 1418,
+      "suspiciousCount": 199,
+      "suspicious": [
+        {
+          "word": "marriage",
+          "index": 5
+        },
+        {
+          "word": "bag",
+          "index": 10
+        },
+        {
+          "word": "cancel",
+          "index": 12
+        },
+        {
+          "word": "grandparent",
+          "index": 14
+        },
+        {
+          "word": "giraffe",
+          "index": 27
+        },
+        {
+          "word": "picture",
+          "index": 28
+        },
+        {
+          "word": "advise",
+          "index": 51
+        },
+        {
+          "word": "brave",
+          "index": 80
+        },
+        {
+          "word": "steam",
+          "index": 86
+        },
+        {
+          "word": "prove",
+          "index": 96
+        },
+        {
+          "word": "sometimes",
+          "index": 103
+        },
+        {
+          "word": "standard",
+          "index": 105
+        },
+        {
+          "word": "snowy",
+          "index": 106
+        },
+        {
+          "word": "drum",
+          "index": 108
+        },
+        {
+          "word": "officer",
+          "index": 110
+        }
+      ],
+      "missingCount": 692,
+      "coverage": "63.8%"
+    },
+    {
+      "file": "src\\dictionaries\\postgraduate.json",
+      "dictName": "postgraduate",
+      "status": "checked",
+      "total": 4533,
+      "suspiciousCount": 86,
+      "suspicious": [
+        {
+          "word": "variety",
+          "index": 155
+        },
+        {
+          "word": "visit",
+          "index": 210
+        },
+        {
+          "word": "usual",
+          "index": 252
+        },
+        {
+          "word": "upset",
+          "index": 484
+        },
+        {
+          "word": "vary",
+          "index": 555
+        },
+        {
+          "word": "version",
+          "index": 712
+        },
+        {
+          "word": "vast",
+          "index": 725
+        },
+        {
+          "word": "venture",
+          "index": 786
+        },
+        {
+          "word": "variation",
+          "index": 824
+        },
+        {
+          "word": "variable",
+          "index": 874
+        },
+        {
+          "word": "upright",
+          "index": 926
+        },
+        {
+          "word": "valuable",
+          "index": 968
+        },
+        {
+          "word": "brook",
+          "index": 987
+        },
+        {
+          "word": "verbal",
+          "index": 1000
+        },
+        {
+          "word": "vanish",
+          "index": 1015
+        }
+      ],
+      "missingCount": 945,
+      "coverage": "82.5%"
+    },
+    {
+      "file": "src\\dictionaries\\programmer.json",
+      "dictName": "programmer",
+      "status": "skipped",
+      "reason": "缺少标准词汇表"
+    },
+    {
+      "file": "src\\dictionaries\\sat.json",
+      "dictName": "sat",
+      "status": "skipped",
+      "reason": "缺少标准词汇表"
+    },
+    {
+      "file": "src\\dictionaries\\senior.json",
+      "dictName": "senior",
+      "status": "checked",
+      "total": 3664,
+      "suspiciousCount": 812,
+      "suspicious": [
+        {
+          "word": "beddings",
+          "index": 1
+        },
+        {
+          "word": "warmth",
+          "index": 7
+        },
+        {
+          "word": "rewrite",
+          "index": 9
+        },
+        {
+          "word": "hey",
+          "index": 21
+        },
+        {
+          "word": "framework",
+          "index": 27
+        },
+        {
+          "word": "DVD",
+          "index": 30
+        },
+        {
+          "word": "foresee",
+          "index": 35
+        },
+        {
+          "word": "headteacher",
+          "index": 38
+        },
+        {
+          "word": "player",
+          "index": 43
+        },
+        {
+          "word": "hive",
+          "index": 46
+        },
+        {
+          "word": "usually",
+          "index": 50
+        },
+        {
+          "word": "bedclothes",
+          "index": 57
+        },
+        {
+          "word": "humour",
+          "index": 60
+        },
+        {
+          "word": "pay",
+          "index": 69
+        },
+        {
+          "word": "leading",
+          "index": 71
+        }
+      ],
+      "missingCount": 2833,
+      "coverage": "50.2%"
+    },
+    {
+      "file": "src\\dictionaries\\tem4.json",
+      "dictName": "tem4",
+      "status": "checked",
+      "total": 4025,
+      "suspiciousCount": 108,
+      "suspicious": [
+        {
+          "word": "violently",
+          "index": 16
+        },
+        {
+          "word": "miserly",
+          "index": 205
+        },
+        {
+          "word": "hospitalize",
+          "index": 272
+        },
+        {
+          "word": "absorbed",
+          "index": 342
+        },
+        {
+          "word": "narrowly",
+          "index": 348
+        },
+        {
+          "word": "excessively",
+          "index": 363
+        },
+        {
+          "word": "climax",
+          "index": 429
+        },
+        {
+          "word": "confidently",
+          "index": 431
+        },
+        {
+          "word": "hippo",
+          "index": 444
+        },
+        {
+          "word": "seminar",
+          "index": 485
+        },
+        {
+          "word": "subsequently",
+          "index": 540
+        },
+        {
+          "word": "suggestion",
+          "index": 574
+        },
+        {
+          "word": "suited",
+          "index": 582
+        },
+        {
+          "word": "skilled",
+          "index": 597
+        },
+        {
+          "word": "pursue",
+          "index": 601
+        }
+      ],
+      "missingCount": 8614,
+      "coverage": "31.3%"
+    },
+    {
+      "file": "src\\dictionaries\\tem8.json",
+      "dictName": "tem8",
+      "status": "checked",
+      "total": 12197,
+      "suspiciousCount": 154,
+      "suspicious": [
+        {
+          "word": "mileometer",
+          "index": 247
+        },
+        {
+          "word": "pursue",
+          "index": 270
+        },
+        {
+          "word": "barometer",
+          "index": 320
+        },
+        {
+          "word": "byproduct",
+          "index": 340
+        },
+        {
+          "word": "microbiology",
+          "index": 440
+        },
+        {
+          "word": "upward",
+          "index": 528
+        },
+        {
+          "word": "grounding",
+          "index": 602
+        },
+        {
+          "word": "impregnable",
+          "index": 614
+        },
+        {
+          "word": "intriguing",
+          "index": 683
+        },
+        {
+          "word": "England",
+          "index": 691
+        },
+        {
+          "word": "afterward",
+          "index": 737
+        },
+        {
+          "word": "hardboard",
+          "index": 865
+        },
+        {
+          "word": "keyboard",
+          "index": 879
+        },
+        {
+          "word": "rush",
+          "index": 1078
+        },
+        {
+          "word": "individualism",
+          "index": 1149
+        }
+      ],
+      "missingCount": 488,
+      "coverage": "96.1%"
+    },
+    {
+      "file": "src\\dictionaries\\toefl.json",
+      "dictName": "toefl",
+      "status": "checked",
+      "total": 9208,
+      "suspiciousCount": 6185,
+      "suspicious": [
+        {
+          "word": "back",
+          "index": 1
+        },
+        {
+          "word": "skill",
+          "index": 3
+        },
+        {
+          "word": "public",
+          "index": 4
+        },
+        {
+          "word": "go",
+          "index": 5
+        },
+        {
+          "word": "fish",
+          "index": 6
+        },
+        {
+          "word": "set",
+          "index": 7
+        },
+        {
+          "word": "once",
+          "index": 8
+        },
+        {
+          "word": "table",
+          "index": 9
+        },
+        {
+          "word": "demand",
+          "index": 10
+        },
+        {
+          "word": "day",
+          "index": 11
+        },
+        {
+          "word": "south",
+          "index": 12
+        },
+        {
+          "word": "almost",
+          "index": 13
+        },
+        {
+          "word": "local",
+          "index": 14
+        },
+        {
+          "word": "open",
+          "index": 15
+        },
+        {
+          "word": "purpose",
+          "index": 17
+        }
+      ],
+      "missingCount": 1487,
+      "coverage": "67.0%"
+    },
+    {
+      "file": "src\\dictionaries\\zhongkao.json",
+      "dictName": "zhongkao",
+      "status": "checked",
+      "total": 1418,
+      "suspiciousCount": 199,
+      "suspicious": [
+        {
+          "word": "marriage",
+          "index": 5
+        },
+        {
+          "word": "bag",
+          "index": 10
+        },
+        {
+          "word": "cancel",
+          "index": 12
+        },
+        {
+          "word": "grandparent",
+          "index": 14
+        },
+        {
+          "word": "giraffe",
+          "index": 27
+        },
+        {
+          "word": "picture",
+          "index": 28
+        },
+        {
+          "word": "advise",
+          "index": 51
+        },
+        {
+          "word": "brave",
+          "index": 80
+        },
+        {
+          "word": "steam",
+          "index": 86
+        },
+        {
+          "word": "prove",
+          "index": 96
+        },
+        {
+          "word": "sometimes",
+          "index": 103
+        },
+        {
+          "word": "standard",
+          "index": 105
+        },
+        {
+          "word": "snowy",
+          "index": 106
+        },
+        {
+          "word": "drum",
+          "index": 108
+        },
+        {
+          "word": "officer",
+          "index": 110
+        }
+      ],
+      "missingCount": 692,
+      "coverage": "63.8%"
+    }
+  ]
+}
