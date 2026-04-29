@@ -5,7 +5,7 @@ function Layout() {
     <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors">
       <nav className="h-16 bg-white dark:bg-black border-b border-gray-200 dark:border-gray-800 flex items-center justify-between px-6">
         <Link to="/" className="text-xl font-bold text-indigo-600 dark:text-white">
-          TypingWord
+          LingoForge
         </Link>
         <Link
           to="/"

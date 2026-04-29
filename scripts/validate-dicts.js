@@ -195,7 +195,7 @@ function checkCompliance(config, words) {
 // ==================== 主流程 ====================
 async function main() {
   console.log('============================================================');
-  console.log('           TypingWord 词库验证 & 查重工具 v1.0               ');
+  console.log('           LingoForge 词库验证 & 查重工具 v1.0               ');
   console.log('============================================================\n');
 
   const allDicts = {};
@@ -329,7 +329,7 @@ async function main() {
   // 保存文本摘要
   const txtPath = path.join(__dirname, '../dict-validation-summary.txt');
   const lines = [
-    'TypingWord 词库验证报告',
+    'LingoForge 词库验证报告',
     '======================',
     `时间: ${report.timestamp}`,
     '',

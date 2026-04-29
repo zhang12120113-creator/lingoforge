@@ -123,8 +123,10 @@ export default function Typing() {
 
       {/* 单词显示 */}
       <div className="mb-12 text-center pt-16">
-        {currentWord?.usphone && showPhonetic && (
-          <div className="text-gray-400 dark:text-gray-500 text-lg mb-3 font-mono">/{currentWord.usphone}/</div>
+        {showPhonetic && (currentWord?.usphone || currentWord?.us || currentWord?.ukphone || currentWord?.uk) && (
+          <div className="text-gray-400 dark:text-gray-500 text-lg mb-3 font-mono">
+            /{currentWord.usphone || currentWord.us || currentWord.ukphone || currentWord.uk}/
+          </div>
         )}
 
         <div className={`text-6xl md:text-7xl font-mono tracking-widest flex gap-1 justify-center ${isWrong ? 'animate-shake' : ''}`}>

@@ -11,7 +11,22 @@
       "Bash(node -e ' *)",
       "Bash(grep -E '\"$')",
       "Bash(grep -E '^[a-z]+$')",
-      "Bash(grep -E 'r$')"
+      "Bash(grep -E 'r$')",
+      "Bash(node scripts/check-phonetics-trans.js)",
+      "Bash(node scripts/fix-phonetics-trans.js)",
+      "Bash(curl -s \"https://api.dictionaryapi.dev/api/v2/entries/en/hello\")",
+      "Bash(node scripts/fill-missing-phones.js)",
+      "Bash(node -e \"const c=JSON.parse\\(require\\('fs'\\).readFileSync\\('.phonetics-cache.json','utf-8'\\)\\); console.log\\('缓存单词数:', Object.keys\\(c\\).length\\); const empty=Object.entries\\(c\\).filter\\(\\([k,v]\\)=>!v.uk&&!v.us\\).length; console.log\\('空结果:', empty\\);\")",
+      "Bash(curl -s \"https://api.dictionaryapi.dev/api/v2/entries/en/at\")",
+      "Bash(curl -s \"https://api.dictionaryapi.dev/api/v2/entries/en/chinese\")",
+      "Bash(curl -s \"https://dict.youdao.com/jsonapi?q=at\")",
+      "Bash(node -e \"let d='';process.stdin.on\\('data',c=>d+=c\\);process.stdin.on\\('end',\\(\\)=>{try{const j=JSON.parse\\(d\\);const p=j?.ec?.word?.[0];console.log\\(JSON.stringify\\({uk:p?.ukphone,us:p?.usphone}\\)\\);}catch\\(e\\){console.log\\('error'\\);}}\\);\")",
+      "Bash(curl -s \"https://dict.youdao.com/jsonapi?q=chinese\")",
+      "Bash(curl -s \"https://dict.youdao.com/jsonapi?q=Friday\")",
+      "Bash(node scripts/fill-missing-phones-youdao.js)",
+      "Bash(node -e \"const fs=require\\('fs'\\);const r=JSON.parse\\(fs.readFileSync\\('reports/phonetics-trans-check-report.json','utf-8'\\)\\);console.log\\('=== 剩余音标问题清单 ==='\\);for\\(const d of r.dictionaries\\){if\\(d.phoneIssueCount===0&&d.transIssueCount===0\\)continue;console.log\\('\\\\n'+d.name+' \\('+d.file+'\\):'\\);for\\(const p of d.phoneIssues\\){const i=p.issues.map\\(x=>x.desc\\).join\\('; '\\);console.log\\('  ['+p.word+'] uk=\\\\\"'+p.uk+'\\\\\" us=\\\\\"'+p.us+'\\\\\" -> '+i\\);}}\")",
+      "Bash(node -e \"const c = require\\('./.youdao-phonetics-cache.json'\\); const entries = Object.entries\\(c\\).filter\\(\\([w,d]\\) => d.ukphone || d.usphone\\); console.log\\('有音标缓存:', entries.length\\); console.log\\('无音标缓存:', Object.keys\\(c\\).length - entries.length\\);\")",
+      "Bash(node scripts/fill-missing-phones-smart.js)"
     ]
   }
 }

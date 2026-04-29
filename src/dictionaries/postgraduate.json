@@ -1749,7 +1749,7 @@
         },
         {
           "name": "expert",
-          "usphone": "'ɛkspɝt; (for adj., also) ɛksˈpɝt ; ɪkˈspɝt",
+          "usphone": "'ɛkspɝt; (for adj., also) ɛksˈpɝt; ɪkˈspɝt",
           "ukphone": "'ekspɜːt",
           "trans": [
             "熟练的；内行的；老练的",
@@ -2297,7 +2297,7 @@
         },
         {
           "name": "expose",
-          "usphone": "ɪk'spoz；ek-",
+          "usphone": "ɪk'spoz; ek-",
           "ukphone": "ɪk'spəʊz; ek-",
           "trans": [
             "揭露，揭发；使曝光；显示"
@@ -2630,8 +2630,8 @@
         },
         {
           "name": "advocate",
-          "usphone": "ˈædvəkeɪt；-et",
-          "ukphone": "'ædvəkeɪt；-ət",
+          "usphone": "ˈædvəkeɪt; -et",
+          "ukphone": "'ædvəkeɪt; -ət",
           "trans": [
             "提倡，主张，拥护",
             "提倡者；支持者；律师"
@@ -3962,7 +3962,7 @@
         },
         {
           "name": "low",
-          "usphone": "",
+          "usphone": "ləʊ",
           "ukphone": "ləʊ",
           "trans": [
             "低的，浅的；卑贱的；粗俗的；消沉的",
@@ -5546,7 +5546,7 @@
         },
         {
           "name": "fulfill",
-          "usphone": "",
+          "usphone": "fəˈfɪl",
           "ukphone": "ful'fil",
           "trans": [
             "履行；实现；满足；使结束（等于fulfil）"
@@ -5957,7 +5957,7 @@
         },
         {
           "name": "bush",
-          "usphone": "",
+          "usphone": "bʊʃ",
           "ukphone": "bʊʃ",
           "trans": [
             "灌木；矮树丛",
@@ -6093,7 +6093,7 @@
         {
           "name": "elite",
           "usphone": "ɪˈliːt",
-          "ukphone": "[eɪˈliːt]",
+          "ukphone": "eɪˈliːt",
           "trans": [
             "精英；精华；中坚分子"
           ]
@@ -6327,7 +6327,7 @@
         },
         {
           "name": "lie",
-          "usphone": "",
+          "usphone": "laɪ̯",
           "ukphone": "laɪ",
           "trans": [
             "躺；说谎；位于；展现",
@@ -6607,7 +6607,7 @@
         },
         {
           "name": "length",
-          "usphone": "[leŋθ]",
+          "usphone": "leŋθ",
           "ukphone": "leŋθ",
           "trans": [
             "长度，长；时间的长短；（语）音长"
@@ -8974,7 +8974,7 @@
         },
         {
           "name": "kit",
-          "usphone": "",
+          "usphone": "kɪt",
           "ukphone": "kɪt",
           "trans": [
             "工具箱；成套工具",
@@ -9358,7 +9358,7 @@
         },
         {
           "name": "paint",
-          "usphone": "",
+          "usphone": "peɪnt",
           "ukphone": "peɪnt",
           "trans": [
             "油漆；绘画；装饰；涂色于；描绘；（用语言，文字等）描写；擦脂粉等",
@@ -10111,8 +10111,8 @@
         },
         {
           "name": "resume",
-          "usphone": "",
-          "ukphone": "rɪˈzjuːm; ˈrɛzjʊmeɪ",
+          "usphone": "ɹəˈzjuːm",
+          "ukphone": "ɹɪˈzjuːm",
           "trans": [
             "摘要；[管理] 履历，简历",
             "重新开始，继续；恢复，重新占用"
@@ -14542,7 +14542,7 @@
         },
         {
           "name": "punch",
-          "usphone": "",
+          "usphone": "pʌntʃ",
           "ukphone": "pʌn(t)ʃ",
           "trans": [
             "冲压机；打洞器；钻孔机",
@@ -14619,7 +14619,7 @@
         },
         {
           "name": "eve",
-          "usphone": "",
+          "usphone": "iːv",
           "ukphone": "iːv",
           "trans": [
             "夏娃； 前夕；傍晚；重大事件关头"
@@ -16142,7 +16142,7 @@
         },
         {
           "name": "christmas",
-          "usphone": "",
+          "usphone": "ˈkrɪsməs",
           "ukphone": "ˈkrɪsməs",
           "trans": [
             "圣诞节；圣诞节期间"
@@ -16276,8 +16276,8 @@
         },
         {
           "name": "invalid",
-          "usphone": "ˈɪnvəlɪd；ɪnˈvælɪd",
-          "ukphone": "ˈɪnvəlɪd；ɪnˈvælɪd",
+          "usphone": "ˈɪnvəlɪd; ɪnˈvælɪd",
+          "ukphone": "ˈɪnvəlɪd; ɪnˈvælɪd",
           "trans": [
             "无效的；有病的；残废的",
             "病人；残废者",
@@ -16624,7 +16624,7 @@
         },
         {
           "name": "jeans",
-          "usphone": "",
+          "usphone": "dʒiːnz",
           "ukphone": "dʒiːnz",
           "trans": [
             "牛仔裤；工装裤"
@@ -17153,7 +17153,7 @@
         },
         {
           "name": "envelope",
-          "usphone": "",
+          "usphone": "ˈɑn.vəˌloʊp",
           "ukphone": "'envələʊp; 'ɒn-",
           "trans": [
             "信封，封皮；包膜；[天] 包层；包迹"
@@ -18316,7 +18316,7 @@
         },
         {
           "name": "sake",
-          "usphone": "[sek]",
+          "usphone": "sek",
           "ukphone": "seɪk",
           "trans": [
             "目的；利益；理由；日本米酒"
@@ -18861,7 +18861,7 @@
         },
         {
           "name": "virtual",
-          "usphone": "[ˈvɜ:rtʃuəl]",
+          "usphone": "ˈvɜ:rtʃuəl",
           "ukphone": "ˈvɜ:tʃuəl",
           "trans": [
             "[计] 虚拟的；实质上的，事实上的（但未在名义上或正式获承认）"
@@ -21498,7 +21498,7 @@
         {
           "name": "catholic",
           "usphone": "kæθəlɪk",
-          "ukphone": "",
+          "ukphone": "ˈkaθ(ə)lɪk",
           "trans": [
             "天主教的；宽宏大量的",
             "天主教徒；罗马天主教"
@@ -24834,7 +24834,7 @@
         },
         {
           "name": "goodby",
-          "usphone": "",
+          "usphone": "ˌɡʊdˈbaɪ",
           "ukphone": "ˌɡʊdˈbaɪ",
           "trans": [
             "再见（等于goodbye）",
@@ -24962,7 +24962,7 @@
         {
           "name": "friday",
           "usphone": "ˈfraɪde; (occas.,) ˈfraɪdi",
-          "ukphone": "",
+          "ukphone": "ˈfraɪdeɪ",
           "trans": [
             "星期五；忠仆"
           ]
@@ -25044,7 +25044,7 @@
         },
         {
           "name": "hay",
-          "usphone": "",
+          "usphone": "heɪ",
           "ukphone": "heɪ",
           "trans": [
             "干草",
@@ -25852,7 +25852,7 @@
         },
         {
           "name": "subordinate",
-          "usphone": "səˈbɔːdɪnɪt (for n. &adj.) ; səˈbɔːdɪˌnet (for v.)",
+          "usphone": "səˈbɔːdɪnɪt (for n. &adj.); səˈbɔːdɪˌnet (for v.)",
           "ukphone": "sə'bɔːdɪnət",
           "trans": [
             "下属，下级；部属，属下",
@@ -26176,7 +26176,7 @@
         },
         {
           "name": "bull",
-          "usphone": "",
+          "usphone": "ˈbʊl",
           "ukphone": "bʊl",
           "trans": [
             "公牛；看好股市者；粗壮如牛的人；胡说八道；印玺",
@@ -26685,7 +26685,7 @@
         },
         {
           "name": "mercury",
-          "usphone": "",
+          "usphone": "ˈməː.kjʊ.ɹi",
           "ukphone": "'mɜːkjəri",
           "trans": [
             "[化]汞，水银"
@@ -26870,7 +26870,7 @@
         },
         {
           "name": "guy",
-          "usphone": "",
+          "usphone": "ɡaɪ",
           "ukphone": "gaɪ",
           "trans": [
             "男人，家伙",
@@ -28128,8 +28128,8 @@
         },
         {
           "name": "export",
-          "usphone": "ˈekspɔːrt；ɪkˈ-",
-          "ukphone": "ˈekspɔːt；ɪkˈ-",
+          "usphone": "ˈekspɔːrt; ɪkˈ-",
+          "ukphone": "ˈekspɔːt; ɪkˈ-",
           "trans": [
             "输出，出口；出口商品",
             "输出物资"
@@ -28231,7 +28231,7 @@
         {
           "name": "button",
           "usphone": "'bʌtn",
-          "ukphone": "[ˈbʌtn]",
+          "ukphone": "ˈbʌtn",
           "trans": [
             "按钮；纽扣",
             "扣住；扣紧；在…上装纽扣"
@@ -28810,7 +28810,7 @@
         },
         {
           "name": "insulate",
-          "usphone": "ˈɪnsəˌleɪt ; ˈɪnsjʊˌleɪt",
+          "usphone": "ˈɪnsəˌleɪt; ˈɪnsjʊˌleɪt",
           "ukphone": "'ɪnsjʊleɪt",
           "trans": [
             "隔离，使孤立；使绝缘，使隔热"
@@ -31502,7 +31502,7 @@
         },
         {
           "name": "chase",
-          "usphone": "",
+          "usphone": "tʃeɪs",
           "ukphone": "tʃeɪs",
           "trans": [
             "追逐；追捕；试图赢得；雕镂",
@@ -32313,7 +32313,7 @@
         },
         {
           "name": "courage",
-          "usphone": " 'kɝrɪdʒ",
+          "usphone": "'kɝrɪdʒ",
           "ukphone": "'kʌrɪdʒ",
           "trans": [
             "勇气；胆量"
@@ -33697,7 +33697,7 @@
         },
         {
           "name": "earnest",
-          "usphone": "",
+          "usphone": "ˈɜːnɪst",
           "ukphone": "'ɜːnɪst",
           "trans": [
             "认真的，热心的；重要的",
@@ -33858,7 +33858,7 @@
         {
           "name": "marxist",
           "usphone": "'mɑrksɪst",
-          "ukphone": "",
+          "ukphone": "ˈmɑːksɪst",
           "trans": [
             "马克思主义者",
             "马克思主义的"
@@ -34298,7 +34298,7 @@
         {
           "name": "pamphlet",
           "usphone": "ˈpæmflɪt",
-          "ukphone": "",
+          "ukphone": "ˈpæmf.lɪt",
           "trans": [
             "小册子"
           ]
@@ -34405,7 +34405,7 @@
         },
         {
           "name": "christ",
-          "usphone": "",
+          "usphone": "kraɪst",
           "ukphone": "kraɪst",
           "trans": [
             "基督；救世主",
@@ -35199,7 +35199,7 @@
         },
         {
           "name": "incorporate",
-          "usphone": "",
+          "usphone": "ɪŋˈkɔː(ɹ).pəɹ.eɪt",
           "ukphone": "ɪn'kɔːpəreɪt",
           "trans": [
             "包含，吸收；体现；把……合并",
@@ -35397,7 +35397,7 @@
       "words": [
         {
           "name": "bath",
-          "usphone": "",
+          "usphone": "bɐːθ",
           "ukphone": "bɑːθ",
           "trans": [
             "沐浴；浴室；浴盆",
@@ -39835,7 +39835,7 @@
         {
           "name": "overwhelming",
           "usphone": ",ovɚ'wɛlmɪŋ",
-          "ukphone": "",
+          "ukphone": "ˌəʊvəˈwɛlmɪŋ",
           "trans": [
             "压倒性的；势不可挡的",
             "压倒；淹没（overwhelm的ing形式）；制服"

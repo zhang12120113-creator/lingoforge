@@ -344,7 +344,7 @@ function validateLevel(filePath, standardWords) {
 // ==================== 主流程 ====================
 async function main() {
   console.log('============================================================');
-  console.log('     TypingWord 词库全面质量检查工具                        ');
+  console.log('     LingoForge 词库全面质量检查工具                        ');
   console.log('============================================================\n');
 
   if (!fs.existsSync(path.dirname(REPORT_PATH))) {

@@ -638,8 +638,8 @@
         },
         {
           "name": "Asia",
-          "usphone": "ˈeʒə;ˈeʃə",
-          "ukphone": "ˈeɪʒə;ˈeɪʃə",
+          "usphone": "ˈeʒə; ˈeʃə",
+          "ukphone": "ˈeɪʒə; ˈeɪʃə",
           "trans": [
             "亚洲"
           ]
@@ -1454,7 +1454,7 @@
         },
         {
           "name": "lie",
-          "usphone": "",
+          "usphone": "laɪ̯",
           "ukphone": "laɪ",
           "trans": [
             "躺；说谎；位于；展现",
@@ -1481,7 +1481,7 @@
         },
         {
           "name": "foggy",
-          "usphone": "ˈfɔːɡi;ˈfɑːɡi",
+          "usphone": "ˈfɔːɡi; ˈfɑːɡi",
           "ukphone": "'fɒgɪ",
           "trans": [
             "有雾的；模糊的，朦胧的"
@@ -1500,7 +1500,7 @@
         },
         {
           "name": "main",
-          "usphone": "",
+          "usphone": "meɪn",
           "ukphone": "meɪn",
           "trans": [
             "主要部分，要点；体力；总管道",
@@ -1855,8 +1855,8 @@
         },
         {
           "name": "to",
-          "usphone": "tə;tu;tuː",
-          "ukphone": "tə;tu;tuː",
+          "usphone": "tə; tu; tuː",
+          "ukphone": "tə; tu; tuː",
           "trans": [
             "向前；（门等）关上",
             "到；向；（表示时间、方向）朝…方向",
@@ -2336,7 +2336,7 @@
         {
           "name": "catholic",
           "usphone": "kæθəlɪk",
-          "ukphone": "",
+          "ukphone": "ˈkaθ(ə)lɪk",
           "trans": [
             "天主教的；宽宏大量的",
             "天主教徒；罗马天主教"
@@ -3838,7 +3838,7 @@
       "words": [
         {
           "name": "envelope",
-          "usphone": "",
+          "usphone": "ˈɑn.vəˌloʊp",
           "ukphone": "'envələʊp; 'ɒn-",
           "trans": [
             "信封，封皮；包膜；[天] 包层；包迹"
@@ -3883,7 +3883,7 @@
         },
         {
           "name": "paint",
-          "usphone": "",
+          "usphone": "peɪnt",
           "ukphone": "peɪnt",
           "trans": [
             "油漆；绘画；装饰；涂色于；描绘；（用语言，文字等）描写；擦脂粉等",
@@ -4203,7 +4203,7 @@
         {
           "name": "founding",
           "usphone": "'faʊndɪŋ",
-          "ukphone": "",
+          "ukphone": "ˈfaʊndɪŋ",
           "trans": [
             "创办的；发起的",
             "[机] 铸造；建造；以…为基础（found的ing形式）",
@@ -4701,7 +4701,7 @@
         },
         {
           "name": "Pacific",
-          "usphone": "",
+          "usphone": "pəˈsɪfɪk",
           "ukphone": "pə'sɪfɪk",
           "trans": [
             "太平洋的",
@@ -6105,7 +6105,7 @@
         },
         {
           "name": "I",
-          "usphone": "",
+          "usphone": "aɪ",
           "ukphone": "aɪ",
           "trans": [
             "我",
@@ -7428,8 +7428,8 @@
         },
         {
           "name": "redirect",
-          "usphone": "[ˌridɪˈrɛkt,-daɪ-]",
-          "ukphone": "[ˌri:dəˈrekt]",
+          "usphone": "ˌridɪˈrɛkt,-daɪ-",
+          "ukphone": "ˌri:dəˈrekt",
           "trans": [
             "使改方向；重新寄送",
             "再直接的",
@@ -7522,7 +7522,7 @@
         },
         {
           "name": "Chinese",
-          "usphone": "",
+          "usphone": "ˌtʃaɪˈniːz",
           "ukphone": ",tʃai'ni:z",
           "trans": [
             "中文，汉语；中国人",
@@ -7659,7 +7659,7 @@
           "trans": [
             "分，分钟；片刻，一会儿；备忘录，笔记；会议记录",
             "将…记录下来",
-            "微小的，详细的 [maɪˈnjuːt; US -ˈnuːt; maɪˋnut]"
+            "微小的，详细的"
           ]
         },
         {
@@ -8770,7 +8770,7 @@
         {
           "name": "battleground",
           "usphone": "'bætlɡraund",
-          "ukphone": "",
+          "ukphone": "ˈbætəlˌɡɹaʊnd",
           "trans": [
             "战场"
           ]
@@ -8969,7 +8969,7 @@
         },
         {
           "name": "bush",
-          "usphone": "",
+          "usphone": "bʊʃ",
           "ukphone": "bʊʃ",
           "trans": [
             "灌木；矮树丛",
@@ -9196,7 +9196,7 @@
         },
         {
           "name": "jeans",
-          "usphone": "",
+          "usphone": "dʒiːnz",
           "ukphone": "dʒiːnz",
           "trans": [
             "牛仔裤；工装裤"
@@ -9522,7 +9522,7 @@
         {
           "name": "button",
           "usphone": "'bʌtn",
-          "ukphone": "[ˈbʌtn]",
+          "ukphone": "ˈbʌtn",
           "trans": [
             "按钮；纽扣",
             "扣住；扣紧；在…上装纽扣"
@@ -9531,7 +9531,7 @@
         {
           "name": "salesgirl",
           "usphone": "'selzɡɝl",
-          "ukphone": "",
+          "ukphone": "ˈseɪlzɡɜːl",
           "trans": [
             "女售货员，女店员"
           ]
@@ -10092,7 +10092,7 @@
         {
           "name": "deliberately",
           "usphone": "dɪ'lɪbərətli",
-          "ukphone": "",
+          "ukphone": "dəˈlɪb(ə)ɹətli",
           "trans": [
             "故意地；谨慎地；慎重地"
           ]
@@ -10204,8 +10204,8 @@
         },
         {
           "name": "live",
-          "usphone": "laɪv；lɪv",
-          "ukphone": "laɪv；lɪv",
+          "usphone": "laɪv; lɪv",
+          "ukphone": "laɪv; lɪv",
           "trans": [
             "活的；生动的；实况转播的；精力充沛的",
             "经历；度过",
@@ -10490,8 +10490,8 @@
         },
         {
           "name": "Dr",
-          "usphone": "ˈdɑːktər;  draɪv",
-          "ukphone": "",
+          "usphone": "ˈdɑːktər; draɪv",
+          "ukphone": "ˈdɑːktər; draɪv",
           "trans": [
             "速度三角形定位法（dead reckoning）；数据记录器（Data Recorder）"
           ]
@@ -10730,7 +10730,7 @@
         },
         {
           "name": "length",
-          "usphone": "[leŋθ]",
+          "usphone": "leŋθ",
           "ukphone": "leŋθ",
           "trans": [
             "长度，长；时间的长短；（语）音长"
@@ -12545,7 +12545,7 @@
         {
           "name": "chairwoman",
           "usphone": "'tʃεə,wumən",
-          "ukphone": "",
+          "ukphone": "ˈtʃeəwʊmən",
           "trans": [
             "女主席；女议长"
           ]
@@ -13335,7 +13335,7 @@
         {
           "name": "darkness",
           "usphone": "'dɑrknəs",
-          "ukphone": "",
+          "ukphone": "ˈdɑːknəs",
           "trans": [
             "黑暗；模糊；无知；阴郁"
           ]
@@ -13421,7 +13421,7 @@
         {
           "name": "birdcage",
           "usphone": "'bɝdkedʒ",
-          "ukphone": "",
+          "ukphone": "ˈbɜːdkeɪdʒ",
           "trans": [
             "鸟笼；鸟笼状物；信号灯；宿舍"
           ]
@@ -13946,7 +13946,7 @@
         {
           "name": "Shanghai",
           "usphone": ",ʃæŋ'haɪ",
-          "ukphone": "",
+          "ukphone": "ˌʃæŋˈhaɪ",
           "trans": [
             "上海（中国东部港市）"
           ]
@@ -14117,7 +14117,7 @@
         {
           "name": "AIDS",
           "usphone": "edz",
-          "ukphone": "",
+          "ukphone": "eɪdz",
           "trans": [
             "获得性免疫缺乏综合征；爱滋病（Acquired Immune Deficiency Syndrome）"
           ]
@@ -14221,7 +14221,7 @@
         {
           "name": "Greece",
           "usphone": "ɡriːs",
-          "ukphone": "",
+          "ukphone": "ɡriːs",
           "trans": [
             "希腊（欧洲南部国家）"
           ]
@@ -15368,8 +15368,8 @@
         },
         {
           "name": "page",
-          "usphone": "",
-          "ukphone": "peɪdʒ",
+          "usphone": "peɪd͡ʒ",
+          "ukphone": "peɪd͡ʒ",
           "trans": [
             "页；记录；大事件，时期；男侍者",
             "给…标页码"
@@ -15567,7 +15567,7 @@
         },
         {
           "name": "unfit",
-          "usphone": "",
+          "usphone": "ʌnˈfɪt",
           "ukphone": "ʌn'fɪt",
           "trans": [
             "不适宜的；不合格的；不健康的",
@@ -15863,7 +15863,7 @@
         },
         {
           "name": "media",
-          "usphone": "",
+          "usphone": "ˈmiːdɪə",
           "ukphone": "'miːdɪə",
           "trans": [
             "媒体；媒质（medium的复数）；血管中层；浊塞音；中脉"
@@ -16173,7 +16173,7 @@
         },
         {
           "name": "expose",
-          "usphone": "ɪk'spoz；ek-",
+          "usphone": "ɪk'spoz; ek-",
           "ukphone": "ɪk'spəʊz; ek-",
           "trans": [
             "揭露，揭发；使曝光；显示"
@@ -17006,7 +17006,7 @@
         },
         {
           "name": "China",
-          "usphone": "",
+          "usphone": "tʃʌɪnə",
           "ukphone": "tʃaɪnə",
           "trans": [
             "中国",
@@ -17332,7 +17332,7 @@
         },
         {
           "name": "key",
-          "usphone": "",
+          "usphone": "ki",
           "ukphone": "kiː",
           "trans": [
             "（打字机等的）键；关键；钥匙",
@@ -17501,7 +17501,7 @@
         },
         {
           "name": "Christmas",
-          "usphone": "",
+          "usphone": "ˈkrɪsməs",
           "ukphone": "ˈkrɪsməs",
           "trans": [
             "圣诞节；圣诞节期间"
@@ -17667,8 +17667,8 @@
         },
         {
           "name": "job",
-          "usphone": "",
-          "ukphone": "dʒɒb",
+          "usphone": "d͡ʒɑb",
+          "ukphone": "d͡ʒɒb",
           "trans": [
             "工作；职业",
             "承包；代客买卖"
@@ -17798,7 +17798,7 @@
         },
         {
           "name": "at",
-          "usphone": "",
+          "usphone": "æt; ət",
           "ukphone": "æt; ət",
           "trans": [
             "在（表示存在或出现的地点、场所、位置、空间）；以（某种价格、速度等）；向；达；因为；朝；忙于",
@@ -17891,7 +17891,7 @@
         {
           "name": "drier",
           "usphone": "'draɪɚ",
-          "ukphone": "",
+          "ukphone": "ˈdɹaɪə",
           "trans": [
             "干燥机；干燥剂；吹风机"
           ]
@@ -18080,7 +18080,7 @@
         {
           "name": "skillfully",
           "usphone": "'skɪlfəli",
-          "ukphone": "",
+          "ukphone": "ˈskɪlfʊli",
           "trans": [
             "巧妙地；精巧地"
           ]
@@ -18794,7 +18794,7 @@
         },
         {
           "name": "courage",
-          "usphone": " 'kɝrɪdʒ",
+          "usphone": "'kɝrɪdʒ",
           "ukphone": "'kʌrɪdʒ",
           "trans": [
             "勇气；胆量"
@@ -19462,8 +19462,8 @@
         },
         {
           "name": "advocate",
-          "usphone": "ˈædvəkeɪt；-et",
-          "ukphone": "'ædvəkeɪt；-ət",
+          "usphone": "ˈædvəkeɪt; -et",
+          "ukphone": "'ædvəkeɪt; -ət",
           "trans": [
             "提倡，主张，拥护",
             "提倡者；支持者；律师"
@@ -19581,7 +19581,7 @@
         {
           "name": "irrigation",
           "usphone": "ˌɪrɪˈɡeʃn",
-          "ukphone": "",
+          "ukphone": "ˌɪɹəˈɡeɪʃən",
           "trans": [
             "灌溉；[临床] 冲洗；冲洗法"
           ]
@@ -19694,7 +19694,7 @@
         },
         {
           "name": "Egyptian",
-          "usphone": "",
+          "usphone": "iˈdʒɪpʃn",
           "ukphone": "ɪ'dʒɪpʃ(ə)n",
           "trans": [
             "埃及的；埃及人的",
@@ -19759,7 +19759,7 @@
         },
         {
           "name": "Friday",
-          "usphone": "",
+          "usphone": "ˈfraɪdeɪ",
           "ukphone": "'fraɪdeɪ; (occas.,) ˈfraɪdi",
           "trans": [
             "星期五"
@@ -19915,7 +19915,7 @@
         {
           "name": "ballpoint",
           "usphone": "'bɔlpɔɪnt",
-          "ukphone": "",
+          "ukphone": "ˈbɔːlpɔɪnt",
           "trans": [
             "圆珠笔"
           ]
@@ -20073,7 +20073,7 @@
         },
         {
           "name": "low",
-          "usphone": "",
+          "usphone": "ləʊ",
           "ukphone": "ləʊ",
           "trans": [
             "低的，浅的；卑贱的；粗俗的；消沉的",
@@ -20311,7 +20311,7 @@
         },
         {
           "name": "German",
-          "usphone": "",
+          "usphone": "ˈd͡ʒɜː.mən",
           "ukphone": "'dʒɜːmən",
           "trans": [
             "德国的；德语的，德国人的",
@@ -20884,7 +20884,7 @@
         {
           "name": "Buddhist",
           "usphone": "'budist",
-          "ukphone": "",
+          "ukphone": "ˈbʊdɪst",
           "trans": [
             "佛教徒",
             "佛教的"
@@ -22555,7 +22555,7 @@
       "words": [
         {
           "name": "expert",
-          "usphone": "'ɛkspɝt; (for adj., also) ɛksˈpɝt ; ɪkˈspɝt",
+          "usphone": "'ɛkspɝt; (for adj., also) ɛksˈpɝt; ɪkˈspɝt",
           "ukphone": "'ekspɜːt",
           "trans": [
             "熟练的；内行的；老练的",
@@ -22565,7 +22565,7 @@
         },
         {
           "name": "bath",
-          "usphone": "",
+          "usphone": "bɐːθ",
           "ukphone": "bɑːθ",
           "trans": [
             "沐浴；浴室；浴盆",
@@ -23045,8 +23045,8 @@
         },
         {
           "name": "export",
-          "usphone": "ˈekspɔːrt；ɪkˈ-",
-          "ukphone": "ˈekspɔːt；ɪkˈ-",
+          "usphone": "ˈekspɔːrt; ɪkˈ-",
+          "ukphone": "ˈekspɔːt; ɪkˈ-",
           "trans": [
             "输出，出口；出口商品",
             "输出物资"
@@ -24496,7 +24496,7 @@
         {
           "name": "Australian",
           "usphone": "ɑ'strelɪən",
-          "ukphone": "",
+          "ukphone": "ɒˈstreɪliən",
           "trans": [
             "澳大利亚的，澳大利亚人的",
             "澳大利亚人"
@@ -25707,7 +25707,7 @@
         },
         {
           "name": "recognise",
-          "usphone": "",
+          "usphone": "ˈɹɛkənaɪz",
           "ukphone": "'rekəɡnaɪz",
           "trans": [
             "认出；承认，认可；识别"
@@ -26667,8 +26667,8 @@
         },
         {
           "name": "mark",
-          "usphone": "",
-          "ukphone": "mɑːk",
+          "usphone": "mɑɹk",
+          "ukphone": "mɑɹk",
           "trans": [
             "标志；马克；符号；痕迹；分数",
             "作记号"
@@ -26781,7 +26781,7 @@
         },
         {
           "name": "hay",
-          "usphone": "",
+          "usphone": "heɪ",
           "ukphone": "heɪ",
           "trans": [
             "干草",
@@ -31137,8 +31137,8 @@
         },
         {
           "name": "tell",
-          "usphone": "",
-          "ukphone": "tel",
+          "usphone": "tɛl",
+          "ukphone": "tɛl",
           "trans": [
             "告诉，说；辨别；吩咐；断定",
             "(Tell)人名；(英、德、瑞典)特尔；(罗、意)泰尔；(阿拉伯)塔勒"
@@ -32088,7 +32088,7 @@
         {
           "name": "oilfield",
           "usphone": "'ɔɪlfild",
-          "ukphone": "",
+          "ukphone": "ˈɔɪlfiːld",
           "trans": [
             "油田"
           ]
@@ -32456,7 +32456,7 @@
         },
         {
           "name": "French",
-          "usphone": "",
+          "usphone": "fɹɛnt͡ʃ",
           "ukphone": "fren(t)ʃ",
           "trans": [
             "法国的；法语的；法国人的",

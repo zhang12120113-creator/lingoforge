@@ -399,7 +399,7 @@
         },
         {
           "name": "at",
-          "usphone": "",
+          "usphone": "æt; ət",
           "ukphone": "æt; ət",
           "trans": [
             "在（表示存在或出现的地点、场所、位置、空间）；以（某种价格、速度等）；向；达；因为；朝；忙于",
@@ -715,7 +715,7 @@
         },
         {
           "name": "paint",
-          "usphone": "",
+          "usphone": "peɪnt",
           "ukphone": "peɪnt",
           "trans": [
             "油漆；绘画；装饰；涂色于；描绘；（用语言，文字等）描写；擦脂粉等",
@@ -1338,8 +1338,8 @@
         },
         {
           "name": "live",
-          "usphone": "laɪv；lɪv",
-          "ukphone": "laɪv；lɪv",
+          "usphone": "laɪv; lɪv",
+          "ukphone": "laɪv; lɪv",
           "trans": [
             "活的；生动的；实况转播的；精力充沛的",
             "经历；度过",
@@ -1881,7 +1881,7 @@
         },
         {
           "name": "Friday",
-          "usphone": "",
+          "usphone": "ˈfraɪdeɪ",
           "ukphone": "'fraɪdeɪ; (occas.,) ˈfraɪdi",
           "trans": [
             "星期五"
@@ -2234,7 +2234,7 @@
         },
         {
           "name": "lie",
-          "usphone": "",
+          "usphone": "laɪ̯",
           "ukphone": "laɪ",
           "trans": [
             "躺；说谎；位于；展现",
@@ -2424,7 +2424,7 @@
         },
         {
           "name": "key",
-          "usphone": "",
+          "usphone": "ki",
           "ukphone": "kiː",
           "trans": [
             "（打字机等的）键；关键；钥匙",
@@ -2478,7 +2478,7 @@
         },
         {
           "name": "Chinese",
-          "usphone": "",
+          "usphone": "ˌtʃaɪˈniːz",
           "ukphone": ",tʃai'ni:z",
           "trans": [
             "中文，汉语；中国人",
@@ -3732,7 +3732,7 @@
         },
         {
           "name": "low",
-          "usphone": "",
+          "usphone": "ləʊ",
           "ukphone": "ləʊ",
           "trans": [
             "低的，浅的；卑贱的；粗俗的；消沉的",
@@ -4179,7 +4179,7 @@
         },
         {
           "name": "main",
-          "usphone": "",
+          "usphone": "meɪn",
           "ukphone": "meɪn",
           "trans": [
             "主要部分，要点；体力；总管道",
@@ -6426,8 +6426,8 @@
         },
         {
           "name": "page",
-          "usphone": "",
-          "ukphone": "peɪdʒ",
+          "usphone": "peɪd͡ʒ",
+          "ukphone": "peɪd͡ʒ",
           "trans": [
             "页；记录；大事件，时期；男侍者",
             "给…标页码"
@@ -6654,7 +6654,7 @@
         },
         {
           "name": "jeans",
-          "usphone": "",
+          "usphone": "dʒiːnz",
           "ukphone": "dʒiːnz",
           "trans": [
             "牛仔裤；工装裤"
@@ -7418,7 +7418,7 @@
         },
         {
           "name": "Christmas",
-          "usphone": "",
+          "usphone": "ˈkrɪsməs",
           "ukphone": "ˈkrɪsməs",
           "trans": [
             "圣诞节；圣诞节期间"
@@ -8761,8 +8761,8 @@
         },
         {
           "name": "job",
-          "usphone": "",
-          "ukphone": "dʒɒb",
+          "usphone": "d͡ʒɑb",
+          "ukphone": "d͡ʒɒb",
           "trans": [
             "工作；职业",
             "承包；代客买卖"
@@ -9942,7 +9942,7 @@
         },
         {
           "name": "courage",
-          "usphone": " 'kɝrɪdʒ",
+          "usphone": "'kɝrɪdʒ",
           "ukphone": "'kʌrɪdʒ",
           "trans": [
             "勇气；胆量"
@@ -10142,8 +10142,8 @@
         },
         {
           "name": "to",
-          "usphone": "tə;tu;tuː",
-          "ukphone": "tə;tu;tuː",
+          "usphone": "tə; tu; tuː",
+          "ukphone": "tə; tu; tuː",
           "trans": [
             "向前；（门等）关上",
             "到；向；（表示时间、方向）朝…方向",
@@ -10465,7 +10465,7 @@
           "trans": [
             "分，分钟；片刻，一会儿；备忘录，笔记；会议记录",
             "将…记录下来",
-            "微小的，详细的 [maɪˈnjuːt; US -ˈnuːt; maɪˋnut]"
+            "微小的，详细的"
           ]
         },
         {
@@ -10938,7 +10938,7 @@
         },
         {
           "name": "China",
-          "usphone": "",
+          "usphone": "tʃʌɪnə",
           "ukphone": "tʃaɪnə",
           "trans": [
             "中国",
@@ -11489,7 +11489,7 @@
         },
         {
           "name": "I",
-          "usphone": "",
+          "usphone": "aɪ",
           "ukphone": "aɪ",
           "trans": [
             "我",
@@ -11815,8 +11815,8 @@
         },
         {
           "name": "mark",
-          "usphone": "",
-          "ukphone": "mɑːk",
+          "usphone": "mɑɹk",
+          "ukphone": "mɑɹk",
           "trans": [
             "标志；马克；符号；痕迹；分数",
             "作记号"
@@ -12400,8 +12400,8 @@
         },
         {
           "name": "Asia",
-          "usphone": "ˈeʒə;ˈeʃə",
-          "ukphone": "ˈeɪʒə;ˈeɪʃə",
+          "usphone": "ˈeʒə; ˈeʃə",
+          "ukphone": "ˈeɪʒə; ˈeɪʃə",
           "trans": [
             "亚洲"
           ]
@@ -12908,7 +12908,7 @@
         {
           "name": "Australian",
           "usphone": "ɑ'strelɪən",
-          "ukphone": "",
+          "ukphone": "ɒˈstreɪliən",
           "trans": [
             "澳大利亚的，澳大利亚人的",
             "澳大利亚人"

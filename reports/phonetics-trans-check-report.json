@@ -1,0 +1,146 @@
+{
+  "timestamp": "2026-04-29T02:39:30.918Z",
+  "summary": {
+    "totalWords": 61176,
+    "totalMissingPhones": 0,
+    "totalPhoneFormatIssues": 0,
+    "totalTransIssues": 0
+  },
+  "dictionaries": [
+    {
+      "name": "初中英语词汇",
+      "file": "junior.json",
+      "words": 1418,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "中考英语核心词汇",
+      "file": "zhongkao.json",
+      "words": 1418,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "高中英语词汇",
+      "file": "senior.json",
+      "words": 3664,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "高考英语核心词汇",
+      "file": "gaokao.json",
+      "words": 3664,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "英语4级",
+      "file": "cet4.json",
+      "words": 4543,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "英语4级高频",
+      "file": "cet4freq.json",
+      "words": 1500,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "英语6级",
+      "file": "cet6.json",
+      "words": 3991,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "英语6级高频",
+      "file": "cet6freq.json",
+      "words": 1500,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "英语专四",
+      "file": "tem4.json",
+      "words": 4025,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "英语专八",
+      "file": "tem8.json",
+      "words": 12197,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "雅思词汇",
+      "file": "ielts.json",
+      "words": 3427,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "托福词汇",
+      "file": "toefl.json",
+      "words": 9208,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "SAT 词汇",
+      "file": "sat.json",
+      "words": 4423,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "考研词汇",
+      "file": "postgraduate.json",
+      "words": 4533,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    },
+    {
+      "name": "程序员常见词汇",
+      "file": "programmer.json",
+      "words": 1665,
+      "phoneIssueCount": 0,
+      "transIssueCount": 0,
+      "phoneIssues": [],
+      "transIssues": []
+    }
+  ]
+}

@@ -534,7 +534,7 @@
         },
         {
           "name": "Pacific",
-          "usphone": "",
+          "usphone": "pəˈsɪfɪk",
           "ukphone": "pə'sɪfɪk",
           "trans": [
             "太平洋"
@@ -1294,7 +1294,7 @@
         },
         {
           "name": "low",
-          "usphone": "",
+          "usphone": "ləʊ",
           "ukphone": "ləʊ",
           "trans": [
             "低(的),低下(的)"
@@ -2552,8 +2552,8 @@
         },
         {
           "name": "mark",
-          "usphone": "",
-          "ukphone": "mɑːk",
+          "usphone": "mɑɹk",
+          "ukphone": "mɑɹk",
           "trans": [
             "痕迹,记号",
             "做标记"
@@ -2878,7 +2878,7 @@
         },
         {
           "name": "lie",
-          "usphone": "",
+          "usphone": "laɪ̯",
           "ukphone": "laɪ",
           "trans": [
             "躺,说谎"
@@ -3291,7 +3291,7 @@
         },
         {
           "name": "expose",
-          "usphone": "ɪk'spoz；ek-",
+          "usphone": "ɪk'spoz; ek-",
           "ukphone": "ɪk'spəʊz; ek-",
           "trans": [
             "暴露,显露"
@@ -3629,7 +3629,7 @@
         {
           "name": "groundwater",
           "usphone": "'graʊnd'wɔtɚ",
-          "ukphone": "",
+          "ukphone": "ˈɡraʊndwɔːtə(r)",
           "trans": [
             "地下水"
           ]
@@ -4228,7 +4228,7 @@
         {
           "name": "irrigation",
           "usphone": "ˌɪrɪˈɡeʃn",
-          "ukphone": "",
+          "ukphone": "ˌɪɹəˈɡeɪʃən",
           "trans": [
             "灌溉"
           ]
@@ -4252,7 +4252,7 @@
         },
         {
           "name": "egyptian",
-          "usphone": "",
+          "usphone": "iˈdʒɪpʃn",
           "ukphone": "ɪ'dʒɪpʃ(ə)n",
           "trans": [
             "埃及人(的)"
@@ -5087,7 +5087,7 @@
         {
           "name": "Mediterranean",
           "usphone": ",mɛdətə'renɪən",
-          "ukphone": "",
+          "ukphone": "ˌmedɪtəˈreɪniən",
           "trans": [
             "地中海"
           ]
@@ -5416,8 +5416,8 @@
         },
         {
           "name": "Asia",
-          "usphone": "ˈeʒə;ˈeʃə",
-          "ukphone": "ˈeɪʒə;ˈeɪʃə",
+          "usphone": "ˈeʒə; ˈeʃə",
+          "ukphone": "ˈeɪʒə; ˈeɪʃə",
           "trans": [
             "亚洲"
           ]
@@ -5612,8 +5612,8 @@
         },
         {
           "name": "tell",
-          "usphone": "",
-          "ukphone": "tel",
+          "usphone": "tɛl",
+          "ukphone": "tɛl",
           "trans": [
             "告诉,讲述"
           ]
@@ -6096,7 +6096,7 @@
         },
         {
           "name": "length",
-          "usphone": "[leŋθ]",
+          "usphone": "leŋθ",
           "ukphone": "leŋθ",
           "trans": [
             "长度"
@@ -6339,7 +6339,7 @@
         },
         {
           "name": "Chinese",
-          "usphone": "",
+          "usphone": "ˌtʃaɪˈniːz",
           "ukphone": ",tʃai'ni:z",
           "trans": [
             "中国人(的)"
@@ -7446,8 +7446,8 @@
         },
         {
           "name": "job",
-          "usphone": "",
-          "ukphone": "dʒɒb",
+          "usphone": "d͡ʒɑb",
+          "ukphone": "d͡ʒɒb",
           "trans": [
             "工作,职业"
           ]
@@ -7738,7 +7738,7 @@
         },
         {
           "name": "Maya",
-          "usphone": "",
+          "usphone": "ˈmaɪə; ˈmeɪə",
           "ukphone": "'mɑːjə",
           "trans": [
             "玛雅人,玛雅语"
@@ -7945,7 +7945,7 @@
         },
         {
           "name": "Florida",
-          "usphone": "",
+          "usphone": "ˈflɔːrɪdə; ˈflɑːrədə",
           "ukphone": "'flɔridə",
           "trans": [
             "佛罗里达(美国州名)"
@@ -8716,7 +8716,7 @@
         },
         {
           "name": "key",
-          "usphone": "",
+          "usphone": "ki",
           "ukphone": "kiː",
           "trans": [
             "关键,钥匙"
@@ -8818,7 +8818,7 @@
         },
         {
           "name": "French",
-          "usphone": "",
+          "usphone": "fɹɛnt͡ʃ",
           "ukphone": "fren(t)ʃ",
           "trans": [
             "法国(人)(的)"
@@ -9083,8 +9083,8 @@
         },
         {
           "name": "export",
-          "usphone": "ˈekspɔːrt；ɪkˈ-",
-          "ukphone": "ˈekspɔːt；ɪkˈ-",
+          "usphone": "ˈekspɔːrt; ɪkˈ-",
+          "ukphone": "ˈekspɔːt; ɪkˈ-",
           "trans": [
             "输出,出口"
           ]
@@ -9163,7 +9163,7 @@
         {
           "name": "Australian",
           "usphone": "ɑ'strelɪən",
-          "ukphone": "",
+          "ukphone": "ɒˈstreɪliən",
           "trans": [
             "澳大利亚(的)"
           ]
@@ -9467,7 +9467,7 @@
         {
           "name": "elite",
           "usphone": "ɪˈliːt",
-          "ukphone": "[eɪˈliːt]",
+          "ukphone": "eɪˈliːt",
           "trans": [
             "精英,精华"
           ]
@@ -9827,7 +9827,7 @@
         },
         {
           "name": "China",
-          "usphone": "",
+          "usphone": "tʃʌɪnə",
           "ukphone": "tʃaɪnə",
           "trans": [
             "中国,瓷器"
@@ -10075,7 +10075,7 @@
         {
           "name": "glaciation",
           "usphone": "'glesɪ'eʃən",
-          "ukphone": "",
+          "ukphone": "ˌɡleɪsiˈeɪʃn",
           "trans": [
             "冻结成冰,冰河作用"
           ]
@@ -10147,7 +10147,7 @@
         },
         {
           "name": "France",
-          "usphone": "",
+          "usphone": "fræns",
           "ukphone": "frɑːns",
           "trans": [
             "法国,法兰西"
@@ -10564,7 +10564,7 @@
         },
         {
           "name": "mill",
-          "usphone": "",
+          "usphone": "mɪl",
           "ukphone": "mɪl",
           "trans": [
             "碾磨,搅拌"
@@ -11000,7 +11000,7 @@
         {
           "name": "sumerian",
           "usphone": "sjʊˈmiərɪən",
-          "ukphone": "",
+          "ukphone": "sjʊˈmiərɪən",
           "trans": [
             "闪族人[语]"
           ]
@@ -11056,7 +11056,7 @@
         {
           "name": "dweller",
           "usphone": "'dwɛlɚ",
-          "ukphone": "",
+          "ukphone": "dwɛləɹ",
           "trans": [
             "居住者,居民"
           ]
@@ -11071,7 +11071,7 @@
         },
         {
           "name": "elsewhere",
-          "usphone": "",
+          "usphone": "ˌɛlsˈʍɛːə",
           "ukphone": "els'weə; 'elsweə",
           "trans": [
             "在别处"
@@ -11857,7 +11857,7 @@
         },
         {
           "name": "gar",
-          "usphone": "",
+          "usphone": "ɡɑː",
           "ukphone": "gɑː",
           "trans": [
             "雀鳝属鱼, 雀鳝"
@@ -12101,7 +12101,7 @@
         {
           "name": "Greece",
           "usphone": "ɡriːs",
-          "ukphone": "",
+          "ukphone": "ɡriːs",
           "trans": [
             "希腊"
           ]
@@ -13546,7 +13546,7 @@
         },
         {
           "name": "Texas",
-          "usphone": "",
+          "usphone": "ˈteksəs",
           "ukphone": "'teksəs",
           "trans": [
             "德克萨斯州(美国州名)"
@@ -14026,7 +14026,7 @@
         },
         {
           "name": "German",
-          "usphone": "",
+          "usphone": "ˈd͡ʒɜː.mən",
           "ukphone": "'dʒɜːmən",
           "trans": [
             "德国人",
@@ -14662,7 +14662,7 @@
         },
         {
           "name": "incorporate",
-          "usphone": "",
+          "usphone": "ɪŋˈkɔː(ɹ).pəɹ.eɪt",
           "ukphone": "ɪn'kɔːpəreɪt",
           "trans": [
             "合并,组成公司"
@@ -14702,7 +14702,7 @@
         },
         {
           "name": "automatically",
-          "usphone": "",
+          "usphone": "ˈɔːtəʊˌmæt.ɪk(.ə)li",
           "ukphone": "ɔːtə'mætɪklɪ",
           "trans": [
             "自动地,机械地"
@@ -15887,7 +15887,7 @@
         {
           "name": "seafloor",
           "usphone": "'si,flor",
-          "ukphone": "",
+          "ukphone": "ˈsiːflɔː",
           "trans": [
             "海底"
           ]
@@ -16119,7 +16119,7 @@
         },
         {
           "name": "expert",
-          "usphone": "'ɛkspɝt; (for adj., also) ɛksˈpɝt ; ɪkˈspɝt",
+          "usphone": "'ɛkspɝt; (for adj., also) ɛksˈpɝt; ɪkˈspɝt",
           "ukphone": "'ekspɜːt",
           "trans": [
             "专家, 行家"
@@ -16557,8 +16557,8 @@
         },
         {
           "name": "page",
-          "usphone": "",
-          "ukphone": "peɪdʒ",
+          "usphone": "peɪd͡ʒ",
+          "ukphone": "peɪd͡ʒ",
           "trans": [
             "页,记录"
           ]
@@ -16789,7 +16789,7 @@
         },
         {
           "name": "ruminant",
-          "usphone": "",
+          "usphone": "ˈruːmɪnənt",
           "ukphone": "'ruːmɪnənt",
           "trans": [
             "反刍动物(的), 沉思的"
@@ -16845,7 +16845,7 @@
         },
         {
           "name": "nitinol",
-          "usphone": "",
+          "usphone": "ˈnɪtɪnɑːl",
           "ukphone": "ˈnɪtɪnɒl",
           "trans": [
             "[冶]镍钛诺(镍和钛的非磁性合金)"
@@ -16895,7 +16895,7 @@
         {
           "name": "potentially",
           "usphone": "pə'tɛnʃəli",
-          "ukphone": "",
+          "ukphone": "pəˈtɛnʃ(ə)li",
           "trans": [
             "潜在地"
           ]
@@ -17045,7 +17045,7 @@
         },
         {
           "name": "media",
-          "usphone": "",
+          "usphone": "ˈmiːdɪə",
           "ukphone": "'miːdɪə",
           "trans": [
             "媒体"
@@ -17142,7 +17142,7 @@
         },
         {
           "name": "tellurium",
-          "usphone": "",
+          "usphone": "tɪˈljʊəɹiəm",
           "ukphone": "te'ljʊərɪəm",
           "trans": [
             "碲"
@@ -17151,7 +17151,7 @@
         {
           "name": "hopewell",
           "usphone": "ˈhopwəl",
-          "ukphone": "",
+          "ukphone": "ˈhopwəl",
           "trans": [
             "霍普韦尔"
           ]
@@ -17572,7 +17572,7 @@
         {
           "name": "proterozoic",
           "usphone": "ˌprotərəˈzoɪk",
-          "ukphone": "",
+          "ukphone": "ˌprotərəˈzoɪk",
           "trans": [
             "原生代(的)"
           ]
@@ -18265,7 +18265,7 @@
         {
           "name": "storytelling",
           "usphone": "'storɪ,tɛlɪŋ",
-          "ukphone": "",
+          "ukphone": "ˈstɔːritelɪŋ",
           "trans": [
             "说书, 讲故事"
           ]
@@ -19080,7 +19080,7 @@
         {
           "name": "canoes",
           "usphone": "kəˈnuːz",
-          "ukphone": "",
+          "ukphone": "kəˈnuːz",
           "trans": [
             "独木舟"
           ]
@@ -19509,7 +19509,7 @@
         {
           "name": "darkness",
           "usphone": "'dɑrknəs",
-          "ukphone": "",
+          "ukphone": "ˈdɑːknəs",
           "trans": [
             "黑暗,漆黑"
           ]
@@ -19961,8 +19961,8 @@
         },
         {
           "name": "advocate",
-          "usphone": "ˈædvəkeɪt；-et",
-          "ukphone": "'ædvəkeɪt；-ət",
+          "usphone": "ˈædvəkeɪt; -et",
+          "ukphone": "'ædvəkeɪt; -ət",
           "trans": [
             "提倡,鼓吹"
           ]
@@ -20289,7 +20289,7 @@
         {
           "name": "orleans",
           "usphone": "ˈɔːrlənz",
-          "ukphone": "",
+          "ukphone": "ˈɔːlənz",
           "trans": [
             "奥尔良[法国]"
           ]
@@ -20359,7 +20359,7 @@
         {
           "name": "peepshow",
           "usphone": "'pi:pʃəu",
-          "ukphone": "",
+          "ukphone": "ˈpiːpˌʃəʊ",
           "trans": [
             "西洋镜"
           ]
@@ -20820,7 +20820,7 @@
         },
         {
           "name": "Euphrates",
-          "usphone": "",
+          "usphone": "juːˈfreɪtiːz",
           "ukphone": "ju:'freiti:z",
           "trans": [
             "幼发拉底河"
@@ -20900,7 +20900,7 @@
         },
         {
           "name": "frontality",
-          "usphone": "",
+          "usphone": "frɑːnˈtɑːlɪtɪ",
           "ukphone": "frɒnˈtɒlɪtɪ",
           "trans": [
             "正面描绘"
@@ -20908,7 +20908,7 @@
         },
         {
           "name": "Tasmania",
-          "usphone": "",
+          "usphone": "tæzˈmenjə",
           "ukphone": "tæz'meiniə; -njə",
           "trans": [
             "塔斯马尼亚岛, 塔斯马尼亚州(澳大利亚州名)"
@@ -21026,7 +21026,7 @@
         },
         {
           "name": "buck",
-          "usphone": "",
+          "usphone": "bʌk",
           "ukphone": "bʌk",
           "trans": [
             "(一)美元；雄鹿(兔)"
@@ -21234,7 +21234,7 @@
         },
         {
           "name": "insulate",
-          "usphone": "ˈɪnsəˌleɪt ; ˈɪnsjʊˌleɪt",
+          "usphone": "ˈɪnsəˌleɪt; ˈɪnsjʊˌleɪt",
           "ukphone": "'ɪnsjʊleɪt",
           "trans": [
             "使绝缘, 隔离"
@@ -21357,7 +21357,7 @@
         },
         {
           "name": "don",
-          "usphone": "",
+          "usphone": "dɒn",
           "ukphone": "dɒn",
           "trans": [
             "先生,阁下"
@@ -21763,7 +21763,7 @@
         },
         {
           "name": "fulfill",
-          "usphone": "",
+          "usphone": "fəˈfɪl",
           "ukphone": "ful'fil",
           "trans": [
             "履行,实现"
@@ -22248,7 +22248,7 @@
         {
           "name": "seabed",
           "usphone": "'sibɛd",
-          "ukphone": "",
+          "ukphone": "ˈsiːbed",
           "trans": [
             "海底, 海床"
           ]
@@ -22943,7 +22943,7 @@
         {
           "name": "craftspeople",
           "usphone": "'kræfts,pipl",
-          "ukphone": "",
+          "ukphone": "ˈkrɑːftsˌpiːpl",
           "trans": [
             "工匠; 手艺人"
           ]
@@ -24093,7 +24093,7 @@
         {
           "name": "appalachian",
           "usphone": ",æpə'leitʃjən",
-          "ukphone": "",
+          "ukphone": "ˌæpəˈleɪtʃɪən",
           "trans": [
             "阿帕拉契山脉的"
           ]
@@ -24246,7 +24246,7 @@
         {
           "name": "pollinator",
           "usphone": "'pɑlɪnetɚ",
-          "ukphone": "",
+          "ukphone": "ˈpɒlɪneɪtə(r)",
           "trans": [
             "授花粉器"
           ]
@@ -25733,7 +25733,7 @@
         },
         {
           "name": "lithospheric",
-          "usphone": "",
+          "usphone": "ˌlɪθəˈsferɪk",
           "ukphone": "ˌlɪθəˈsferɪk",
           "trans": [
             "岩石圈的; 陆界的"
@@ -26145,7 +26145,7 @@
         },
         {
           "name": "hardy",
-          "usphone": "",
+          "usphone": "ˈhɑːdi",
           "ukphone": "'hɑːdɪ",
           "trans": [
             "能吃苦耐劳的，坚强的"
@@ -26321,7 +26321,7 @@
         },
         {
           "name": "mutoscope",
-          "usphone": "",
+          "usphone": "ˈmjuːtoʊˌskoʊp",
           "ukphone": "ˈmjuːtəʊˌskəʊp",
           "trans": [
             "(早期的)电影放映机"
@@ -26916,7 +26916,7 @@
         },
         {
           "name": "tethys",
-          "usphone": "",
+          "usphone": "ˈtiːθɪs",
           "ukphone": "'ti:θis",
           "trans": [
             "古地中海,  特提斯海"
@@ -27019,7 +27019,7 @@
         {
           "name": "pamphlet",
           "usphone": "ˈpæmflɪt",
-          "ukphone": "",
+          "ukphone": "ˈpæmf.lɪt",
           "trans": [
             "小册子"
           ]
@@ -27264,7 +27264,7 @@
         },
         {
           "name": "reheat",
-          "usphone": "",
+          "usphone": "ˌriːˈhiːt",
           "ukphone": "riː'hiːt",
           "trans": [
             "再热"
@@ -27695,7 +27695,7 @@
         {
           "name": "preschooler",
           "usphone": ",pri'skʊlɚ",
-          "ukphone": "",
+          "ukphone": "ˈpriːˈskuːlə",
           "trans": [
             "(美)学龄前儿童"
           ]
@@ -27813,7 +27813,7 @@
         {
           "name": "phytoremediation",
           "usphone": ",faɪtorɪ,midi'eʃən",
-          "ukphone": "",
+          "ukphone": ",faɪtorɪ,midi'eʃən",
           "trans": [
             "植物除污, 植物治理法"
           ]
@@ -28321,7 +28321,7 @@
         },
         {
           "name": "cajun",
-          "usphone": "",
+          "usphone": "ˈkeɪdʒ(ə)n",
           "ukphone": "'keidʒən",
           "trans": [
             "移居美国路易斯安纳州的法人后裔"
@@ -28370,7 +28370,7 @@
         {
           "name": "geologically",
           "usphone": ",dʒiə'lɔdʒikəli",
-          "ukphone": "",
+          "ukphone": "ˌdʒiːəˈlɒdʒɪkli",
           "trans": [
             "地质学上"
           ]
@@ -28488,7 +28488,7 @@
         {
           "name": "dy",
           "usphone": "daɪ",
-          "ukphone": "",
+          "ukphone": "daɪ",
           "trans": [
             "[化]镝(=dysprosium)"
           ]
@@ -28528,7 +28528,7 @@
         {
           "name": "agriculturalist",
           "usphone": ",æɡrɪ'kʌltʃərəlɪst",
-          "ukphone": "",
+          "ukphone": "ˌæɡrɪˈkʌltʃərəlɪst",
           "trans": [
             "农学家"
           ]
@@ -28677,7 +28677,7 @@
         },
         {
           "name": "bush",
-          "usphone": "",
+          "usphone": "bʊʃ",
           "ukphone": "bʊʃ",
           "trans": [
             "矮树丛"
@@ -28718,7 +28718,7 @@
         {
           "name": "rainforest",
           "usphone": "'ren'fɔrɪst",
-          "ukphone": "",
+          "ukphone": "ˈreɪnfɒrɪst",
           "trans": [
             "雨林"
           ]
@@ -29403,7 +29403,7 @@
         {
           "name": "satiric",
           "usphone": "sə'tɪrɪk",
-          "ukphone": "",
+          "ukphone": "səˈtɪrɪk",
           "trans": [
             "讽刺的,挖苦的"
           ]
@@ -29617,7 +29617,7 @@
         },
         {
           "name": "cod",
-          "usphone": "",
+          "usphone": "kɒd",
           "ukphone": "kɒd",
           "trans": [
             "货到付款 (Cash on Delivery) n鳕鱼"
@@ -30115,7 +30115,7 @@
         },
         {
           "name": "fingerboard",
-          "usphone": "",
+          "usphone": "ˈfɪŋɡərbɔːrd",
           "ukphone": "'fɪŋgəbɔːd",
           "trans": [
             "键盘"
@@ -30131,7 +30131,7 @@
         },
         {
           "name": "buildup",
-          "usphone": "",
+          "usphone": "ˈbɪlˌdʌp",
           "ukphone": "'bɪldʌp",
           "trans": [
             "集结, 增长"
@@ -30307,7 +30307,7 @@
         {
           "name": "detractor",
           "usphone": "dɪ'træktɚ",
-          "ukphone": "",
+          "ukphone": "dɪˈtræktə(r)",
           "trans": [
             "诽谤者"
           ]
@@ -31428,7 +31428,7 @@
         {
           "name": "stimulation",
           "usphone": "ˌstɪmjʊ'leʃn",
-          "ukphone": "",
+          "ukphone": "ˌstɪmjuˈleɪʃ(ə)n",
           "trans": [
             "激励,刺激"
           ]
@@ -31683,7 +31683,7 @@
         {
           "name": "detectable",
           "usphone": "dɪ'tɛktəbl",
-          "ukphone": "",
+          "ukphone": "dɪˈtɛktəbəɫ",
           "trans": [
             "可发现的,可察觉的"
           ]
@@ -31721,7 +31721,7 @@
         {
           "name": "printmaking",
           "usphone": "'prɪnt,mekɪŋ",
-          "ukphone": "",
+          "ukphone": "ˈprɪntmeɪkɪŋ",
           "trans": [
             "版画复制(术)"
           ]
@@ -32348,14 +32348,14 @@
         {
           "name": "fahrenheit",
           "usphone": "'færən'haɪt",
-          "ukphone": "",
+          "ukphone": "ˈfærənhaɪt",
           "trans": [
             "华氏温度计"
           ]
         },
         {
           "name": "lys",
-          "usphone": "",
+          "usphone": "liːs",
           "ukphone": "liːs",
           "trans": [
             "[化]赖氨酸"
@@ -32483,7 +32483,7 @@
         },
         {
           "name": "permian",
-          "usphone": "",
+          "usphone": "ˈpɜːrmiən",
           "ukphone": "'pə:miən",
           "trans": [
             "[地]二叠纪(的)"
@@ -32578,7 +32578,7 @@
         {
           "name": "aggressiveness",
           "usphone": "ə'grɛsɪvnɪs",
-          "ukphone": "",
+          "ukphone": "əˈɡresɪvnəs",
           "trans": [
             "进取精神, 侵犯"
           ]
@@ -32799,7 +32799,7 @@
         },
         {
           "name": "sinkhole",
-          "usphone": "",
+          "usphone": "ˈsɪŋkhoʊl",
           "ukphone": "'sɪŋkhəʊl",
           "trans": [
             "污水池"
@@ -32998,7 +32998,7 @@
         },
         {
           "name": "recrystallize",
-          "usphone": "",
+          "usphone": "riːˈkrɪst(ə)laɪz",
           "ukphone": "riːˈkrɪst(ə)laɪz",
           "trans": [
             "( 使) 再结晶"
@@ -33126,7 +33126,7 @@
         },
         {
           "name": "valse",
-          "usphone": "",
+          "usphone": "vɑːls",
           "ukphone": "vɑːls",
           "trans": [
             "轻轻地走",
@@ -33144,7 +33144,7 @@
         {
           "name": "discoverer",
           "usphone": "dis'kʌvərə",
-          "ukphone": "",
+          "ukphone": "dɪˈskʌvərə(r)",
           "trans": [
             "发现者"
           ]
@@ -33262,7 +33262,7 @@
         },
         {
           "name": "decode",
-          "usphone": "",
+          "usphone": "diːˈkəʊd",
           "ukphone": "ˌdi:ˈkəʊd",
           "trans": [
             "解码, 译解"
@@ -33709,7 +33709,7 @@
         {
           "name": "substantiated",
           "usphone": "səbˈstænʃieɪtɪd",
-          "ukphone": "",
+          "ukphone": "səbˈstænʃieɪtɪd",
           "trans": [
             "证实, 实体化"
           ]
@@ -34353,7 +34353,7 @@
         {
           "name": "aerodynamic",
           "usphone": ",ɛrodaɪ'næmɪk",
-          "ukphone": "",
+          "ukphone": "ˌeərəʊdaɪˈnæmɪk",
           "trans": [
             "空气动力学的"
           ]
@@ -34431,7 +34431,7 @@
         {
           "name": "deliberately",
           "usphone": "dɪ'lɪbərətli",
-          "ukphone": "",
+          "ukphone": "dəˈlɪb(ə)ɹətli",
           "trans": [
             "故意地"
           ]
@@ -34566,7 +34566,7 @@
         },
         {
           "name": "freshly",
-          "usphone": "",
+          "usphone": "ˈfɹɛʃli",
           "ukphone": "'freʃlɪ",
           "trans": [
             "新近，刚才"
@@ -34988,7 +34988,7 @@
         {
           "name": "sculptural",
           "usphone": "'skʌlptʃərəl",
-          "ukphone": "",
+          "ukphone": "ˈskʌlptʃərəl",
           "trans": [
             "雕刻的"
           ]
@@ -35454,7 +35454,7 @@
         },
         {
           "name": "ethology",
-          "usphone": "",
+          "usphone": "iːˈθɒlədʒi",
           "ukphone": "iː'θɒlədʒɪ",
           "trans": [
             "动物行动学, 人种学"
@@ -35567,7 +35567,7 @@
         {
           "name": "interrelationship",
           "usphone": ",ɪntərɪ'leʃnʃɪp",
-          "ukphone": "",
+          "ukphone": "ˌɪntərɪˈleɪʃ(ə)nʃɪp",
           "trans": [
             "相互关系"
           ]
@@ -35700,7 +35700,7 @@
         },
         {
           "name": "bath",
-          "usphone": "",
+          "usphone": "bɐːθ",
           "ukphone": "bɑːθ",
           "trans": [
             "沐浴, 浴室"
@@ -35908,7 +35908,7 @@
         {
           "name": "gatherer",
           "usphone": "'ɡæðərɚ",
-          "ukphone": "",
+          "ukphone": "ˈɡæðərə(r)",
           "trans": [
             "收集者, 收集器"
           ]
@@ -35923,7 +35923,7 @@
         },
         {
           "name": "electrically",
-          "usphone": "",
+          "usphone": "ɪˈlektrɪkli",
           "ukphone": "ɪ'lektrɪkəlɪ",
           "trans": [
             "用电力;有关电地"
@@ -36313,7 +36313,7 @@
         {
           "name": "shipbuilding",
           "usphone": "'ʃɪp,bɪldɪŋ",
-          "ukphone": "",
+          "ukphone": "ˈʃɪpbɪldɪŋ",
           "trans": [
             "造船"
           ]
@@ -36370,7 +36370,7 @@
         {
           "name": "reelection",
           "usphone": ",riə'lɛkʃən",
-          "ukphone": "",
+          "ukphone": ",riə'lɛkʃən",
           "trans": [
             "再选, 改选"
           ]
@@ -36670,7 +36670,7 @@
         {
           "name": "Inuit",
           "usphone": "'injuit",
-          "ukphone": "",
+          "ukphone": "ˈɪnjuɪt; ˈɪnuɪt",
           "trans": [
             "因纽特人,  因纽特语"
           ]
@@ -36931,7 +36931,7 @@
         },
         {
           "name": "mesquite",
-          "usphone": "",
+          "usphone": "mɛsˈkiːt",
           "ukphone": "'meskiːt; me'skiːt",
           "trans": [
             "豆科灌木"
@@ -36996,7 +36996,7 @@
         {
           "name": "Virginian",
           "usphone": "vərˈdʒɪniən",
-          "ukphone": "",
+          "ukphone": "vərˈdʒɪniən",
           "trans": [
             "弗吉尼亚州的人"
           ]
@@ -37425,7 +37425,7 @@
         },
         {
           "name": "Indus",
-          "usphone": "",
+          "usphone": "ˈɪndəs",
           "ukphone": "'indəs",
           "trans": [
             "印度河（印度西北部的河流）"
@@ -37519,7 +37519,7 @@
         },
         {
           "name": "archaeocyte",
-          "usphone": "",
+          "usphone": "ɑːˈkiːəsɪt",
           "ukphone": "ɑːˈkiːəsɪt",
           "trans": [
             "原始(生殖)细胞"
@@ -37767,7 +37767,7 @@
         {
           "name": "compositional",
           "usphone": ",kɑmpə'zɪʃənl",
-          "ukphone": "",
+          "ukphone": "ˌkɒmpəˈzɪʃnəl",
           "trans": [
             "合成的,组成的"
           ]
@@ -38511,7 +38511,7 @@
         {
           "name": "immeasurably",
           "usphone": "ɪ'mɛʒərəbli",
-          "ukphone": "",
+          "ukphone": "ɪˈmeʒərəbli",
           "trans": [
             "无法计量地, 无限地"
           ]
@@ -38620,7 +38620,7 @@
         },
         {
           "name": "flashbulb",
-          "usphone": "",
+          "usphone": "ˈflæʃbʌlb",
           "ukphone": "'flæʃbʌlb",
           "trans": [
             "[摄]闪光灯泡"
@@ -38754,7 +38754,7 @@
         },
         {
           "name": "rumen",
-          "usphone": "",
+          "usphone": "ˈɹu.mən",
           "ukphone": "'ruːmen",
           "trans": [
             "瘤胃(反刍动物的第一胃)"
@@ -39385,7 +39385,7 @@
         },
         {
           "name": "dropstone",
-          "usphone": "",
+          "usphone": "ˈdrɑːpstoʊn",
           "ukphone": "ˈdrɒpstəʊn",
           "trans": [
             "滴石"
@@ -40158,8 +40158,8 @@
         },
         {
           "name": "resume",
-          "usphone": "",
-          "ukphone": "rɪˈzjuːm; ˈrɛzjʊmeɪ",
+          "usphone": "ɹəˈzjuːm",
+          "ukphone": "ɹɪˈzjuːm",
           "trans": [
             "(中断后)继续 n摘要；简历"
           ]
@@ -40649,7 +40649,7 @@
         {
           "name": "onrushing",
           "usphone": "'ɑn,rʌʃɪŋ",
-          "ukphone": "",
+          "ukphone": "ˈɒnˌrʌʃɪŋ",
           "trans": [
             "猛冲的"
           ]
@@ -40815,7 +40815,7 @@
         {
           "name": "collaborative",
           "usphone": "kə'læbəretɪv",
-          "ukphone": "",
+          "ukphone": "kəˈlæbərətɪv",
           "trans": [
             "合作的, 协作的"
           ]
@@ -41013,7 +41013,7 @@
       "words": [
         {
           "name": "durability",
-          "usphone": "",
+          "usphone": "ˌdʊrəˈbɪləti",
           "ukphone": "ˌdjʊərə'bɪlətɪ",
           "trans": [
             "经久, 耐久力"
@@ -41300,7 +41300,7 @@
         },
         {
           "name": "knap",
-          "usphone": "",
+          "usphone": "næp",
           "ukphone": "næp",
           "trans": [
             "敲击"
@@ -41523,7 +41523,7 @@
         },
         {
           "name": "drake",
-          "usphone": "",
+          "usphone": "dɹeɪk",
           "ukphone": "dreɪk",
           "trans": [
             "公鸭, 蜉蝣类"
@@ -41633,7 +41633,7 @@
       "words": [
         {
           "name": "uncompetitive",
-          "usphone": "",
+          "usphone": "ˌʌnkəmˈpetətɪv",
           "ukphone": "ʌnkəm'petɪtɪv",
           "trans": [
             "非竞争性的"
@@ -41641,7 +41641,7 @@
         },
         {
           "name": "tenfold",
-          "usphone": "",
+          "usphone": "ˈtenfoʊld",
           "ukphone": "'tenfəʊld",
           "trans": [
             "十倍的 ad成十倍"
@@ -41666,7 +41666,7 @@
         {
           "name": "desiccation",
           "usphone": ",dɛsɪ'keʃən",
-          "ukphone": "",
+          "ukphone": "ˌdɛsɪˈkeɪʃən",
           "trans": [
             "干燥"
           ]
@@ -41921,7 +41921,7 @@
         {
           "name": "holocene",
           "usphone": "'hɔləsi:n",
-          "ukphone": "",
+          "ukphone": "'hɔləsi:n",
           "trans": [
             "[地]全新世(的)"
           ]
@@ -41944,7 +41944,7 @@
         },
         {
           "name": "tang",
-          "usphone": "",
+          "usphone": "tæŋ",
           "ukphone": "tæŋ",
           "trans": [
             "有浓味 n特殊气味"
@@ -42087,7 +42087,7 @@
         {
           "name": "utterly",
           "usphone": "'ʌtɚli",
-          "ukphone": "'ʌtəlɪ ",
+          "ukphone": "'ʌtəlɪ",
           "trans": [
             "完全地,绝对地"
           ]
@@ -42206,7 +42206,7 @@
         },
         {
           "name": "metalwork",
-          "usphone": "",
+          "usphone": "ˈmetlwɜːrk",
           "ukphone": "'met(ə)lwɜːk",
           "trans": [
             "金属制品"
@@ -42850,7 +42850,7 @@
         {
           "name": "distinguishable",
           "usphone": "dɪ'stɪŋgwɪʃəbl",
-          "ukphone": "",
+          "ukphone": "dɪsˈtɪŋ.ɡwɪ.ʃə.bl̩",
           "trans": [
             "可区别的, 可辨别的"
           ]
@@ -43079,7 +43079,7 @@
         {
           "name": "imitator",
           "usphone": "'ɪmɪtetɚ",
-          "ukphone": "",
+          "ukphone": "ˈɪmɪteɪtə(r)",
           "trans": [
             "模仿者"
           ]
@@ -43406,7 +43406,7 @@
         {
           "name": "skillfully",
           "usphone": "'skɪlfəli",
-          "ukphone": "",
+          "ukphone": "ˈskɪlfʊli",
           "trans": [
             "巧妙地,技术好地"
           ]
@@ -44089,7 +44089,7 @@
         },
         {
           "name": "tempera",
-          "usphone": "",
+          "usphone": "ˈtɛmpəɹə",
           "ukphone": "'temp(ə)rə",
           "trans": [
             "蛋彩画"
@@ -44247,7 +44247,7 @@
         },
         {
           "name": "sake",
-          "usphone": "[sek]",
+          "usphone": "sek",
           "ukphone": "seɪk",
           "trans": [
             "缘故，理由"
@@ -44516,7 +44516,7 @@
         {
           "name": "hydroponic",
           "usphone": ",haɪdrə'pɑnɪk",
-          "ukphone": "",
+          "ukphone": "hʌɪdɹəˈpɒnɪk",
           "trans": [
             "溶液培养的"
           ]
@@ -44635,7 +44635,7 @@
         },
         {
           "name": "nebular",
-          "usphone": "",
+          "usphone": "ˈnebjʊlər",
           "ukphone": "ˈnebjʊlə(r)",
           "trans": [
             "[天]星云的"
@@ -44764,7 +44764,7 @@
         },
         {
           "name": "lesley",
-          "usphone": "",
+          "usphone": "ˈlesli",
           "ukphone": "ˈlesli",
           "trans": [
             "莱斯利（女子名）"
@@ -44813,7 +44813,7 @@
         },
         {
           "name": "ID",
-          "usphone": "",
+          "usphone": "ɪd",
           "ukphone": "ɪd",
           "trans": [
             "身份 (identification, identity)",
@@ -44936,7 +44936,7 @@
       "words": [
         {
           "name": "theropod",
-          "usphone": "",
+          "usphone": "ˈθɪrəˌpɑːd",
           "ukphone": "'θɪərə(ʊ)pɒd",
           "trans": [
             "兽性的，野兽般的"
@@ -45107,7 +45107,7 @@
         },
         {
           "name": "tenon",
-          "usphone": "",
+          "usphone": "ˈtenən",
           "ukphone": "'tenən",
           "trans": [
             "[木工]榫",
@@ -45410,7 +45410,7 @@
         {
           "name": "founding",
           "usphone": "'faʊndɪŋ",
-          "ukphone": "",
+          "ukphone": "ˈfaʊndɪŋ",
           "trans": [
             "创办的",
             "资金"
@@ -45493,7 +45493,7 @@
         },
         {
           "name": "mercury",
-          "usphone": "",
+          "usphone": "ˈməː.kjʊ.ɹi",
           "ukphone": "'mɜːkjəri",
           "trans": [
             "水银, 汞"
@@ -45571,7 +45571,7 @@
       "words": [
         {
           "name": "unincorporated",
-          "usphone": "",
+          "usphone": "ˌʌnɪnˈkɔːrpəˌreɪtɪd",
           "ukphone": ",ʌnɪn'kɔːpəreɪtɪd",
           "trans": [
             "未联合的,未合并的"
@@ -45726,7 +45726,7 @@
         },
         {
           "name": "hay",
-          "usphone": "",
+          "usphone": "heɪ",
           "ukphone": "heɪ",
           "trans": [
             "干草"
@@ -45734,7 +45734,7 @@
         },
         {
           "name": "hale",
-          "usphone": "",
+          "usphone": "heɪl",
           "ukphone": "heɪl",
           "trans": [
             "强壮的",
@@ -46231,7 +46231,7 @@
         {
           "name": "rooftop",
           "usphone": "'rʊf'tɑp",
-          "ukphone": "",
+          "ukphone": "ˈruːftɒp",
           "trans": [
             "屋顶",
             "屋顶上的"
@@ -46297,7 +46297,7 @@
         {
           "name": "militaristic",
           "usphone": ",mɪlɪtə'rɪstɪk",
-          "ukphone": "",
+          "ukphone": "ˌmɪlɪtəˈrɪstɪk",
           "trans": [
             "军国主义的"
           ]
@@ -46404,7 +46404,7 @@
         },
         {
           "name": "nonagricultural",
-          "usphone": "",
+          "usphone": "ˌnɑːnæɡrɪˈkʌltʃərəl",
           "ukphone": "ˌnɒnæɡrɪˈkʌltʃərəl",
           "trans": [
             "非农业的"
@@ -46629,7 +46629,7 @@
         {
           "name": "unplanned",
           "usphone": ",ʌn'plænd",
-          "ukphone": "",
+          "ukphone": "ˌʌnˈplænd",
           "trans": [
             "意外的,在计划外的"
           ]
@@ -47064,7 +47064,7 @@
         {
           "name": "erectus",
           "usphone": "ɪˈrektəs",
-          "ukphone": "",
+          "ukphone": "ɪˈrektəs",
           "trans": [
             "[拉丁语]直立的"
           ]
@@ -47137,7 +47137,7 @@
         {
           "name": "button",
           "usphone": "'bʌtn",
-          "ukphone": "[ˈbʌtn]",
+          "ukphone": "ˈbʌtn",
           "trans": [
             "钮扣",
             "扣住,扣紧"
@@ -47453,7 +47453,7 @@
         {
           "name": "somerset",
           "usphone": "ˈsʌməset",
-          "ukphone": "",
+          "ukphone": "ˈsʌməset",
           "trans": [
             "翻筋斗",
             "翻筋斗"
@@ -47726,7 +47726,7 @@
         {
           "name": "flowerbed",
           "usphone": "'fləuəbed",
-          "ukphone": "",
+          "ukphone": "ˈfləʊəbed",
           "trans": [
             "花床,花圃"
           ]
@@ -48305,7 +48305,7 @@
         },
         {
           "name": "bull",
-          "usphone": "",
+          "usphone": "ˈbʊl",
           "ukphone": "bʊl",
           "trans": [
             "[动]公牛, 粗壮如牛的人"
@@ -48601,7 +48601,7 @@
         {
           "name": "greenish",
           "usphone": "'ɡrinɪʃ",
-          "ukphone": "",
+          "ukphone": "ˈɡɹiːnɪʃ",
           "trans": [
             "呈绿色的"
           ]
@@ -48714,7 +48714,7 @@
         },
         {
           "name": "figural",
-          "usphone": "",
+          "usphone": "ˈfɪɡ(j)ʊɹəl",
           "ukphone": "'fɪgjʊr(ə)l",
           "trans": [
             "借喻的,比喻的"
@@ -49257,7 +49257,7 @@
         },
         {
           "name": "glasswork",
-          "usphone": "",
+          "usphone": "ˈɡlæswɜːrk",
           "ukphone": "'glæs,wərk",
           "trans": [
             "玻璃制品",
@@ -49411,7 +49411,7 @@
         {
           "name": "unusable",
           "usphone": ",ʌn'juzəbl",
-          "ukphone": "",
+          "ukphone": "ˌʌnˈjuːzəbl",
           "trans": [
             "不能用的,与众不同的"
           ]
@@ -49451,7 +49451,7 @@
         },
         {
           "name": "beetle",
-          "usphone": "",
+          "usphone": "ˈbiɾəɫ",
           "ukphone": "'biːt(ə)l",
           "trans": [
             "甲虫"
@@ -49459,7 +49459,7 @@
         },
         {
           "name": "glycoprotein",
-          "usphone": "",
+          "usphone": "ˌɡlaɪkoʊˈproʊˌtiːn",
           "ukphone": ",glaɪkə(ʊ)'prəʊtiːn",
           "trans": [
             "[化]糖蛋白类, 醣蛋白"
@@ -49614,7 +49614,7 @@
         },
         {
           "name": "polyphony",
-          "usphone": "",
+          "usphone": "pəˈlɪfəni",
           "ukphone": "pə'lɪf(ə)nɪ",
           "trans": [
             "复调音乐, 多音"
@@ -49721,7 +49721,7 @@
         },
         {
           "name": "nonself",
-          "usphone": "",
+          "usphone": "ˌnɑːnˈself",
           "ukphone": "ˌnɒnˈself",
           "trans": [
             "(有机体的)异物"
@@ -49836,7 +49836,7 @@
         },
         {
           "name": "narcosis",
-          "usphone": "",
+          "usphone": "nɑːˈkəʊ.sɪs",
           "ukphone": "nɑː'kəʊsɪs",
           "trans": [
             "昏迷状态, 麻醉"
@@ -50022,14 +50022,14 @@
         {
           "name": "oystercatcher",
           "usphone": "'ɔɪstɚkætʃɚ",
-          "ukphone": "",
+          "ukphone": "ˈɔɪstə.ˌkætʃə",
           "trans": [
             "〈动〉蛎鹬"
           ]
         },
         {
           "name": "shorebird",
-          "usphone": "",
+          "usphone": "ˈʃɔːbɜːd",
           "ukphone": "ˈʃɔːbɜːd",
           "trans": [
             "岸禽类鸟,沙禽"
@@ -50095,7 +50095,7 @@
         },
         {
           "name": "Katherine",
-          "usphone": "",
+          "usphone": "'kæθərin",
           "ukphone": "'kæθərin",
           "trans": [
             "凯瑟琳（女子名）"
@@ -50261,7 +50261,7 @@
         },
         {
           "name": "filmmaker",
-          "usphone": "",
+          "usphone": "ˈfɪlmˌmeɪkər",
           "ukphone": "'fɪlm,meɪkə",
           "trans": [
             "电影摄制者"
@@ -50465,7 +50465,7 @@
         },
         {
           "name": "nonthreatening",
-          "usphone": "",
+          "usphone": "ˌnɑːnˈθret(ə)nɪŋ",
           "ukphone": "ˌnɒnˈθret(ə)nɪŋ",
           "trans": [
             "非胁迫的"
@@ -51248,7 +51248,7 @@
         {
           "name": "expertly",
           "usphone": "'ɛkspɚtli",
-          "ukphone": "",
+          "ukphone": "ˈekspɜːtli",
           "trans": [
             "熟练地"
           ]
@@ -51264,7 +51264,7 @@
         {
           "name": "sandbar",
           "usphone": "'sændbɑr",
-          "ukphone": "",
+          "ukphone": "ˈsændbɑː(r)",
           "trans": [
             "沙洲"
           ]
@@ -51335,7 +51335,7 @@
         },
         {
           "name": "homeotherm",
-          "usphone": "",
+          "usphone": "ˈhəʊmi.əʊˌθɜːm",
           "ukphone": "ˈhɒmɪə(ʊ)ˌθɜːm",
           "trans": [
             "<主美>恒温动物"
@@ -51463,7 +51463,7 @@
         },
         {
           "name": "rennin",
-          "usphone": "",
+          "usphone": "ˈɹɛ.nɪn",
           "ukphone": "'renɪn",
           "trans": [
             "高血压蛋白原酶"
@@ -51536,7 +51536,7 @@
         {
           "name": "unfairly",
           "usphone": "ʌn'fɛəli",
-          "ukphone": "",
+          "ukphone": "ˌʌnˈfeəli",
           "trans": [
             "不公平地,不正当地"
           ]
@@ -51807,7 +51807,7 @@
         },
         {
           "name": "falconer",
-          "usphone": "",
+          "usphone": "ˈfɒl.kən.ə(ɹ)",
           "ukphone": "'fɔː(l)k(ə)nə; 'fɒlk(ə)nə",
           "trans": [
             "以鹰狩猎者,养鹰者"
@@ -51857,7 +51857,7 @@
         {
           "name": "unquestionably",
           "usphone": "ʌn'kwɛstʃənəbli",
-          "ukphone": "",
+          "ukphone": "ʌnˈkwestʃənəbli",
           "trans": [
             "无可非议地,确凿地"
           ]
@@ -52028,7 +52028,7 @@
         },
         {
           "name": "taproot",
-          "usphone": "",
+          "usphone": "ˈtæpˌɹuːt",
           "ukphone": "'tæpruːt",
           "trans": [
             "[植]主根, 直根"
@@ -52257,14 +52257,14 @@
         {
           "name": "suspender",
           "usphone": "sə'spɛndɚ",
-          "ukphone": "",
+          "ukphone": "səˈspɛndə",
           "trans": [
             "吊裤带, 悬挂物, 吊杆, 袜吊"
           ]
         },
         {
           "name": "buckle",
-          "usphone": "",
+          "usphone": "ˈbʌk(ə)l",
           "ukphone": "'bʌk(ə)l",
           "trans": [
             "带扣 v扣住, 变弯曲"
@@ -52289,7 +52289,7 @@
         {
           "name": "bandanna",
           "usphone": "bæn'dænə",
-          "ukphone": "",
+          "ukphone": "bænˈdænə",
           "trans": [
             "大手帕"
           ]
@@ -52401,7 +52401,7 @@
         {
           "name": "facelift",
           "usphone": "'feslɪft",
-          "ukphone": "",
+          "ukphone": "ˈfeɪsˌlɪft",
           "trans": [
             "整容手术（除去面部皱纹）"
           ]
@@ -52424,7 +52424,7 @@
         },
         {
           "name": "atlas",
-          "usphone": "",
+          "usphone": "ˈætləs",
           "ukphone": "'ætləs",
           "trans": [
             "地图, 地图集"
@@ -52589,7 +52589,7 @@
         },
         {
           "name": "punch",
-          "usphone": "",
+          "usphone": "pʌntʃ",
           "ukphone": "pʌn(t)ʃ",
           "trans": [
             "冲孔, 打孔"
@@ -52737,7 +52737,7 @@
         {
           "name": "Austrian",
           "usphone": "'ɔstriən",
-          "ukphone": "",
+          "ukphone": "ˈɒstriən",
           "trans": [
             "奥地利人",
             "奥地利的, 奥地利人的"
@@ -52753,7 +52753,7 @@
         },
         {
           "name": "periodization",
-          "usphone": "",
+          "usphone": "ˌpɪriədaɪˈzeɪʃən",
           "ukphone": "ˌpɪərɪədaɪˈzeɪʃən",
           "trans": [
             "(历史等的)时期(或时代)划分"
@@ -52873,7 +52873,7 @@
         },
         {
           "name": "dishabituate",
-          "usphone": "",
+          "usphone": "ˌdɪshəˈbɪtʃʊˌeɪt",
           "ukphone": ",dɪshə'bɪtjʊeɪt",
           "trans": [
             "使戒除(或放弃)习惯,使不习惯"
@@ -53024,7 +53024,7 @@
         },
         {
           "name": "telescopic",
-          "usphone": "",
+          "usphone": "tɛlɪˈskɒpɪk",
           "ukphone": "telɪ'skɒpɪk",
           "trans": [
             "望远镜的,[眼科] 远视的"
@@ -53041,7 +53041,7 @@
         {
           "name": "geophysical",
           "usphone": ",dʒio'fɪzɪkl",
-          "ukphone": "",
+          "ukphone": "ˌdʒiː.əʊˈfɪz.ɪk.əl",
           "trans": [
             "地球物理学的"
           ]
@@ -53214,7 +53214,7 @@
         },
         {
           "name": "Galilean",
-          "usphone": "",
+          "usphone": "ˌɡæləˈliən",
           "ukphone": ",gæli'li(:)ən",
           "trans": [
             "伽利略的, 加利利的（位于巴基斯坦北部）"
@@ -53239,7 +53239,7 @@
         {
           "name": "caucasian",
           "usphone": "kɔˈkeʒən",
-          "ukphone": "",
+          "ukphone": "kɔːˈkeɪʒn",
           "trans": [
             "高加索人",
             "高加索的, 白种人的"
@@ -53431,7 +53431,7 @@
         },
         {
           "name": "expressiveness",
-          "usphone": "",
+          "usphone": "ɪkˈspresɪvnəs",
           "ukphone": "ik'spresivnis",
           "trans": [
             "表现, 表示"
@@ -53472,7 +53472,7 @@
         {
           "name": "celebratory",
           "usphone": "'sɛləbrətɔri",
-          "ukphone": "",
+          "ukphone": "ˈsɛləbɹəˌtɔːɹi",
           "trans": [
             "快乐的"
           ]
@@ -53503,7 +53503,7 @@
         },
         {
           "name": "secretin",
-          "usphone": "",
+          "usphone": "sɪˈkritn",
           "ukphone": "sɪ'kriːtɪn",
           "trans": [
             "分泌素"
@@ -54302,7 +54302,7 @@
         },
         {
           "name": "intaglio",
-          "usphone": "",
+          "usphone": "ɪnˈtælɪəʊ",
           "ukphone": "ɪn'tælɪəʊ; -'tɑːl-",
           "trans": [
             "凹雕, 阴雕vt凹雕"
@@ -54358,7 +54358,7 @@
         },
         {
           "name": "aphid",
-          "usphone": "",
+          "usphone": "ˈeɪ.fɪd",
           "ukphone": "'eɪfɪd",
           "trans": [
             "[动]蚜虫"
@@ -54525,7 +54525,7 @@
         },
         {
           "name": "outskirt",
-          "usphone": "'aʊt,skɝt ",
+          "usphone": "'aʊt,skɝt",
           "ukphone": "'aʊtskɜːt",
           "trans": [
             "外边, 郊区"
@@ -54598,7 +54598,7 @@
         {
           "name": "uranus",
           "usphone": "ˈjʊrənəs; jʊˈrenəs",
-          "ukphone": "ˈjʊərənəs;jʊˈreɪnəs",
+          "ukphone": "ˈjʊərənəs; jʊˈreɪnəs",
           "trans": [
             "天王星"
           ]
@@ -54652,7 +54652,7 @@
         {
           "name": "disaffection",
           "usphone": ",dɪsə'fɛkʃən",
-          "ukphone": "",
+          "ukphone": "dɪsəˈfɛkʃən",
           "trans": [
             "不满"
           ]
@@ -54708,7 +54708,7 @@
         {
           "name": "condenses",
           "usphone": "kənˈdensɪz",
-          "ukphone": "",
+          "ukphone": "kənˈdensɪz",
           "trans": [
             "浓缩,  压缩"
           ]
@@ -54740,7 +54740,7 @@
         {
           "name": "governmental",
           "usphone": ",ɡʌvɚn'mɛntl",
-          "ukphone": "",
+          "ukphone": "ˌɡʌvnˈmentl",
           "trans": [
             "政府的"
           ]
@@ -54970,7 +54970,7 @@
         {
           "name": "peacefully",
           "usphone": "pisfəli",
-          "ukphone": "",
+          "ukphone": "ˈpiːsfəli",
           "trans": [
             "平静地,  和平地"
           ]
@@ -55127,7 +55127,7 @@
         },
         {
           "name": "miocene",
-          "usphone": "",
+          "usphone": "ˈmaɪəˌsiːn",
           "ukphone": "'maiəusi:n",
           "trans": [
             "中新世的, 中新统的"
@@ -55459,7 +55459,7 @@
         },
         {
           "name": "overconfident",
-          "usphone": "",
+          "usphone": "ˌəʊvə(ɹ)ˈkɒnfɪdənt",
           "ukphone": "əʊvə'kɒnfɪd(ə)nt",
           "trans": [
             "自负的, 过于自信的"
@@ -55468,7 +55468,7 @@
         {
           "name": "expansionist",
           "usphone": "ɪk'spænʃənɪst",
-          "ukphone": "",
+          "ukphone": "ɪkˈspænʃənɪst",
           "trans": [
             "扩张主义(的)"
           ]
@@ -55603,7 +55603,7 @@
         },
         {
           "name": "envelope",
-          "usphone": "",
+          "usphone": "ˈɑn.vəˌloʊp",
           "ukphone": "'envələʊp; 'ɒn-",
           "trans": [
             "信封, 封套"
@@ -55697,7 +55697,7 @@
         },
         {
           "name": "zagros",
-          "usphone": "",
+          "usphone": "ˈzæɡrɑːs",
           "ukphone": "ˈzæɡrɒs",
           "trans": [
             "扎格罗斯山脉[伊朗西南部]"
@@ -55801,7 +55801,7 @@
         },
         {
           "name": "Haiti",
-          "usphone": "",
+          "usphone": "ˈheɪti",
           "ukphone": "'heiti",
           "trans": [
             "海地"
@@ -56048,7 +56048,7 @@
         {
           "name": "oceanographic",
           "usphone": ",əuʃiənəu'ɡræfik",
-          "ukphone": "",
+          "ukphone": "əʊʃɪənəʊˈɡræfɪk",
           "trans": [
             "海洋学的"
           ]
@@ -56553,7 +56553,7 @@
         },
         {
           "name": "geochemical",
-          "usphone": "",
+          "usphone": "ˌdʒiːəˈkemɪkəl",
           "ukphone": "ˌdʒiːəˈkemɪkəl",
           "trans": [
             "地球化学的"
@@ -56775,7 +56775,7 @@
         },
         {
           "name": "marvelously",
-          "usphone": "",
+          "usphone": "ˈmɑːvələsli",
           "ukphone": "ˈmɑːvələsli",
           "trans": [
             "奇迹般地,奇异地"
@@ -57149,7 +57149,7 @@
         {
           "name": "converse",
           "usphone": "kən'vəʳs",
-          "ukphone": "kən'vɜːs；ˈkɒn-",
+          "ukphone": "kən'vɜːs; ˈkɒn-",
           "trans": [
             "交谈 n反面说法 a相反的"
           ]
@@ -57418,7 +57418,7 @@
         },
         {
           "name": "virtual",
-          "usphone": "[ˈvɜ:rtʃuəl]",
+          "usphone": "ˈvɜ:rtʃuəl",
           "ukphone": "ˈvɜ:tʃuəl",
           "trans": [
             "实质的, 虚拟的"
@@ -57798,7 +57798,7 @@
         },
         {
           "name": "hue",
-          "usphone": "",
+          "usphone": "hjʉː",
           "ukphone": "hjuː",
           "trans": [
             "色彩，色调"
@@ -57895,7 +57895,7 @@
         {
           "name": "interviewer",
           "usphone": "'ɪntɚvjuɚ",
-          "ukphone": "",
+          "ukphone": "ˈɪntəvjuːə",
           "trans": [
             "会见者"
           ]
@@ -58155,7 +58155,7 @@
         {
           "name": "perceivable",
           "usphone": "pərˈsivəbl",
-          "ukphone": "",
+          "ukphone": "pərˈsivəbl",
           "trans": [
             "可知觉的"
           ]
@@ -58377,7 +58377,7 @@
         {
           "name": "unproven",
           "usphone": "ʌn'prʊvən",
-          "ukphone": "",
+          "ukphone": "ˌʌnˈpruːv(ə)n",
           "trans": [
             "未经证明的, 未经检验的"
           ]
@@ -58448,7 +58448,7 @@
         },
         {
           "name": "chase",
-          "usphone": "",
+          "usphone": "tʃeɪs",
           "ukphone": "tʃeɪs",
           "trans": [
             "追赶, 追逐"
@@ -58655,7 +58655,7 @@
         {
           "name": "suitably",
           "usphone": "'sutəbli",
-          "ukphone": "",
+          "ukphone": "ˈsuːtəbli; ˈsjuːtəbli",
           "trans": [
             "合适地, 适宜地"
           ]
@@ -58979,7 +58979,7 @@
         {
           "name": "nonnative",
           "usphone": "ˌnɑːnˈneɪtɪv",
-          "ukphone": "",
+          "ukphone": "nɒnˈneɪtɪv",
           "trans": [
             "非本地的,  非本地人"
           ]
@@ -59019,7 +59019,7 @@
         },
         {
           "name": "Utopian",
-          "usphone": "",
+          "usphone": "juˈtoʊpi.ən",
           "ukphone": "juː'təupiən",
           "trans": [
             "乌托邦式的，梦想的"
@@ -59663,7 +59663,7 @@
         },
         {
           "name": "reunion",
-          "usphone": "",
+          "usphone": "ˌriːˈjuːniən",
           "ukphone": "riː'juːnjən; -ɪən",
           "trans": [
             "团圆, 重聚"
@@ -59688,7 +59688,7 @@
         {
           "name": "supermodel",
           "usphone": "'supɚmɑdl",
-          "ukphone": "",
+          "ukphone": "ˈsuːpəmɒdl; ˈsjuːpəmɒdl",
           "trans": [
             "超级名模"
           ]
@@ -60305,7 +60305,7 @@
         },
         {
           "name": "permineralization",
-          "usphone": "",
+          "usphone": "pɜːˌmɪnərəlaɪˈzeɪʃən",
           "ukphone": "pɜːˌmɪnərəlaɪˈzeɪʃən",
           "trans": [
             "完全矿化"
@@ -60369,7 +60369,7 @@
         },
         {
           "name": "einkorn",
-          "usphone": "",
+          "usphone": "ˈaɪnˌkɔːrn",
           "ukphone": "'aɪnkɔːn",
           "trans": [
             "单粒小麦"
@@ -60423,7 +60423,7 @@
         },
         {
           "name": "glassware",
-          "usphone": "",
+          "usphone": "ˈɡlæswer",
           "ukphone": "'glɑːsweə",
           "trans": [
             "玻璃器具类"
@@ -60464,7 +60464,7 @@
         {
           "name": "nationalistic",
           "usphone": ",næʃnə'lɪstɪk",
-          "ukphone": "",
+          "ukphone": "ˌnæʃnəˈlɪstɪk",
           "trans": [
             "国家主义的"
           ]
@@ -60536,7 +60536,7 @@
         {
           "name": "swiftness",
           "usphone": "'swiftnis",
-          "ukphone": "",
+          "ukphone": "ˈswɪftnɪs",
           "trans": [
             "迅速，敏捷"
           ]
@@ -60552,7 +60552,7 @@
         {
           "name": "seabird",
           "usphone": "'sibɝd",
-          "ukphone": "",
+          "ukphone": "ˈsiːbɜː(ɹ)d",
           "trans": [
             "海鸟(如海鸥)"
           ]
@@ -60915,7 +60915,7 @@
         },
         {
           "name": "multivolume",
-          "usphone": "",
+          "usphone": "ˌmʌltɪˈvɑːljuːm",
           "ukphone": "ˌmʌltɪˈvɒljuːm",
           "trans": [
             "多卷的"
@@ -60980,7 +60980,7 @@
         {
           "name": "modernist",
           "usphone": "'mɑdɚnɪst",
-          "ukphone": "",
+          "ukphone": "ˈmɒdənɪst",
           "trans": [
             "现代主义者, 现代人"
           ]
@@ -61026,7 +61026,7 @@
         {
           "name": "regionalist",
           "usphone": "ˈridʒənlɪst",
-          "ukphone": "",
+          "ukphone": "ˈridʒənlɪst",
           "trans": [
             "地方主义者, 地方主义作家"
           ]
@@ -61122,7 +61122,7 @@
         {
           "name": "stronghold",
           "usphone": "'strɔŋhold",
-          "ukphone": "",
+          "ukphone": "ˈstɹɒŋhəʊld",
           "trans": [
             "要塞, 据点"
           ]
@@ -61257,7 +61257,7 @@
         {
           "name": "openly",
           "usphone": "'opənli",
-          "ukphone": "",
+          "ukphone": "ˈoʊpənli",
           "trans": [
             "不隐瞒地, 公然地"
           ]
@@ -61447,7 +61447,7 @@
         {
           "name": "attacker",
           "usphone": "ə'tækɚ",
-          "ukphone": "",
+          "ukphone": "əˈtækɚ",
           "trans": [
             "攻击者"
           ]
@@ -61834,7 +61834,7 @@
       "words": [
         {
           "name": "mote",
-          "usphone": "",
+          "usphone": "moʊt",
           "ukphone": "məʊt",
           "trans": [
             "尘埃, 微粒"
@@ -61915,7 +61915,7 @@
         {
           "name": "religiously",
           "usphone": "rɪ'lɪdʒəsli",
-          "ukphone": "",
+          "ukphone": "rɪˈlɪdʒəsli",
           "trans": [
             "虔诚地, 笃信地"
           ]
@@ -62105,7 +62105,7 @@
         },
         {
           "name": "fiord",
-          "usphone": "",
+          "usphone": "fjɔːrd",
           "ukphone": "fjɔːd",
           "trans": [
             "(尤指挪威的)海湾, 峡湾"
@@ -62234,7 +62234,7 @@
         {
           "name": "supplementation",
           "usphone": ",sʌpləmən'teʃən",
-          "ukphone": "",
+          "ukphone": "ˌsʌplɪmenˈteɪʃn",
           "trans": [
             "增补,补充"
           ]
@@ -62501,7 +62501,7 @@
         },
         {
           "name": "hohokam",
-          "usphone": "",
+          "usphone": "ˈhoʊhoʊkɑːm",
           "ukphone": "ˈhəʊhəʊkɑːm",
           "trans": [
             "霍霍坎文化的"
@@ -62961,7 +62961,7 @@
         },
         {
           "name": "lethargic",
-          "usphone": "",
+          "usphone": "ləˈθɑɹdʒɪk",
           "ukphone": "lɪ'θɑːdʒɪk",
           "trans": [
             "昏睡的"
@@ -63143,7 +63143,7 @@
         },
         {
           "name": "bureaucratization",
-          "usphone": "",
+          "usphone": "bjʊˌrɑːkrətəˈzeɪʃən",
           "ukphone": "bjʊəˌrɒkrətaɪˈzeɪʃən",
           "trans": [
             "官化"
@@ -63216,7 +63216,7 @@
         {
           "name": "distantly",
           "usphone": "'distəntli",
-          "ukphone": "",
+          "ukphone": "ˈdɪstəntli",
           "trans": [
             "疏远的, 遥远的"
           ]
@@ -63413,7 +63413,7 @@
         },
         {
           "name": "foment",
-          "usphone": "",
+          "usphone": "fəʊˈmɛnt",
           "ukphone": "fə(ʊ)'ment",
           "trans": [
             "[医]热敷"
@@ -63770,7 +63770,7 @@
         {
           "name": "uncontrollably",
           "usphone": ",ʌnkən'trəuləbli",
-          "ukphone": "",
+          "ukphone": "ˌʌnkənˈtrəʊləbli",
           "trans": [
             "无法管束的, 控制不住的"
           ]
@@ -64278,7 +64278,7 @@
         },
         {
           "name": "overburden",
-          "usphone": "",
+          "usphone": "ˌoʊvərˈbɜːrdn",
           "ukphone": "əʊvə'bɜːd(ə)n",
           "trans": [
             "装载过多, 负担过多"
@@ -64428,7 +64428,7 @@
         },
         {
           "name": "shoeshine",
-          "usphone": "",
+          "usphone": "ˈʃuːʃaɪn",
           "ukphone": "'ʃuːʃaɪn",
           "trans": [
             "鞋油, 擦皮鞋"
@@ -64611,7 +64611,7 @@
         {
           "name": "refiner",
           "usphone": "rɪ'faɪnɚ",
-          "ukphone": "",
+          "ukphone": "rɪˈfaɪnə(r)",
           "trans": [
             "精炼者, 精炼机"
           ]
@@ -65016,7 +65016,7 @@
         },
         {
           "name": "indiscernible",
-          "usphone": "",
+          "usphone": "ˌɪndɪˈsɜːrnəb(ə)l",
           "ukphone": ",ɪndɪ'sɜːnɪb(ə)l",
           "trans": [
             "看不清的"
@@ -65064,7 +65064,7 @@
         },
         {
           "name": "tapir",
-          "usphone": "",
+          "usphone": "ˈteɪpər",
           "ukphone": "'teɪpə; -ɪə",
           "trans": [
             "[动]貘"
@@ -65199,7 +65199,7 @@
         {
           "name": "pickaxe",
           "usphone": "'pɪkæks",
-          "ukphone": "",
+          "ukphone": "ˈpɪkˌæks",
           "trans": [
             "鹤嘴锄, 手镐"
           ]
@@ -65230,7 +65230,7 @@
         },
         {
           "name": "miasmic",
-          "usphone": "",
+          "usphone": "mɪˈæzmɪk; maɪˈæzmɪk",
           "ukphone": "mɪˈæzmɪk; maɪˈæzmɪk",
           "trans": [
             "毒气的, 瘴气的"
@@ -65246,7 +65246,7 @@
         },
         {
           "name": "holm",
-          "usphone": "",
+          "usphone": "həʊm",
           "ukphone": "həʊm",
           "trans": [
             "(河，湖中的)小岛"
@@ -65651,7 +65651,7 @@
         {
           "name": "midwestern",
           "usphone": "ˌmɪd'wɛstən",
-          "ukphone": "",
+          "ukphone": "ˌmɪdˈwestən",
           "trans": [
             "美国中西部的"
           ]
@@ -66055,7 +66055,7 @@
         },
         {
           "name": "gentlemanly",
-          "usphone": "",
+          "usphone": "ˈdʒentlmənli",
           "ukphone": "'dʒent(ə)lmənlɪ",
           "trans": [
             "绅士派头的"
@@ -66088,7 +66088,7 @@
         {
           "name": "fresher",
           "usphone": "'frɛʃɚ",
-          "ukphone": "",
+          "ukphone": "ˈfɹɛʃə",
           "trans": [
             "大学一年级新生, 新鲜人"
           ]
@@ -66222,7 +66222,7 @@
         {
           "name": "Calvinist",
           "usphone": "'kælvinist",
-          "ukphone": "",
+          "ukphone": "ˈkælvɪnɪst",
           "trans": [
             "加尔文教徒(见Calvin)"
           ]
@@ -66578,7 +66578,7 @@
       "words": [
         {
           "name": "folkloric",
-          "usphone": "",
+          "usphone": "foʊkˈlɔːrɪk",
           "ukphone": "fəʊkˈlɔːrɪk",
           "trans": [
             "民间传说的, 民俗的"
@@ -67001,7 +67001,7 @@
         },
         {
           "name": "clayware",
-          "usphone": "",
+          "usphone": "ˈkleɪwer",
           "ukphone": "ˈkleɪweə(r)",
           "trans": [
             "黏土制品"
@@ -67288,7 +67288,7 @@
         {
           "name": "featureless",
           "usphone": "'fitʃɚləs",
-          "ukphone": "",
+          "ukphone": "ˈfiːtʃələs",
           "trans": [
             "无特色的, 平凡的"
           ]
@@ -67413,7 +67413,7 @@
         },
         {
           "name": "hairlike",
-          "usphone": "",
+          "usphone": "ˈherlaɪk",
           "ukphone": "ˈheəlaɪk",
           "trans": [
             "毛一般的, 细微的"
@@ -67628,7 +67628,7 @@
         },
         {
           "name": "moralism",
-          "usphone": "",
+          "usphone": "ˈmɒɹəlɪzm",
           "ukphone": "'mɒr(ə)lɪz(ə)m",
           "trans": [
             "道德主义, 说教"
@@ -67660,7 +67660,7 @@
         },
         {
           "name": "flowerpot",
-          "usphone": "",
+          "usphone": "ˈflaʊəˌpɒt",
           "ukphone": "'flaʊəpɒt",
           "trans": [
             "花盆, 花钵"
@@ -67789,7 +67789,7 @@
         {
           "name": "softness",
           "usphone": "'sɔftnɪs",
-          "ukphone": "",
+          "ukphone": "ˈsɑftnəs",
           "trans": [
             "柔和, 温柔"
           ]
@@ -67805,7 +67805,7 @@
         {
           "name": "behaviorist",
           "usphone": "bɪˈheɪvjərɪst",
-          "ukphone": "",
+          "ukphone": "bɪˈheɪvjərɪst",
           "trans": [
             "行为主义者, 行为科学家"
           ]
@@ -67898,7 +67898,7 @@
         },
         {
           "name": "kit",
-          "usphone": "",
+          "usphone": "kɪt",
           "ukphone": "kɪt",
           "trans": [
             "成套工具, 用具包"
@@ -67931,7 +67931,7 @@
         {
           "name": "germination",
           "usphone": ",dʒɝmə'neʃən",
-          "ukphone": "",
+          "ukphone": "ˌdʒɜːmɪˈneɪʃn",
           "trans": [
             "萌芽, 发生"
           ]
@@ -67979,7 +67979,7 @@
         {
           "name": "lithographic",
           "usphone": ",lɪθə'græfɪk",
-          "ukphone": "",
+          "ukphone": "ˌlɪθəˈɡræfɪk",
           "trans": [
             "石版印刷的, 石版的"
           ]
@@ -68153,7 +68153,7 @@
         {
           "name": "smoothness",
           "usphone": "'smʊðnɪs",
-          "ukphone": "",
+          "ukphone": "ˈsmuːðnəs",
           "trans": [
             "平坦， 光滑"
           ]
@@ -68591,7 +68591,7 @@
         {
           "name": "mouldy",
           "usphone": "'moldi",
-          "ukphone": "",
+          "ukphone": "ˈmoʊldi",
           "trans": [
             "发霉的, 腐朽的, 旧式的"
           ]
@@ -68892,7 +68892,7 @@
         },
         {
           "name": "courage",
-          "usphone": " 'kɝrɪdʒ",
+          "usphone": "'kɝrɪdʒ",
           "ukphone": "'kʌrɪdʒ",
           "trans": [
             "勇气, 精神"
@@ -69083,7 +69083,7 @@
         {
           "name": "Lowa",
           "usphone": "'ləuwə",
-          "ukphone": "",
+          "ukphone": "'ləuwə",
           "trans": [
             "爱荷华州(美国中西部的一州)"
           ]
@@ -69091,7 +69091,7 @@
         {
           "name": "pella",
           "usphone": "ˈpelə",
-          "ukphone": "",
+          "ukphone": "ˈpelə",
           "trans": [
             "斗篷"
           ]
@@ -69441,7 +69441,7 @@
         {
           "name": "outpouring",
           "usphone": "'aʊtpɔrɪŋ",
-          "ukphone": "",
+          "ukphone": "ˈaʊtpɔːrɪŋ",
           "trans": [
             "倾泄, 流出, 流露"
           ]
@@ -69606,7 +69606,7 @@
         },
         {
           "name": "implementation",
-          "usphone": "",
+          "usphone": "ˌɪmplɪmenˈteɪʃ(ə)n",
           "ukphone": "ɪmplɪmen'teɪʃ(ə)n",
           "trans": [
             "执行"
@@ -69662,7 +69662,7 @@
         },
         {
           "name": "libelous",
-          "usphone": "",
+          "usphone": "ˈlaɪ.bəl.əs",
           "ukphone": "'laibələs",
           "trans": [
             "诽谤的,损害名誉的"
@@ -69844,7 +69844,7 @@
         },
         {
           "name": "retrain",
-          "usphone": "",
+          "usphone": "ˌriːˈtreɪn",
           "ukphone": "ˌri:ˈtreɪn",
           "trans": [
             "重新教育, 再教育"
@@ -69852,7 +69852,7 @@
         },
         {
           "name": "irrationally",
-          "usphone": "",
+          "usphone": "ɪˈræʃnəli",
           "ukphone": "ɪ'ræʃnəlɪ",
           "trans": [
             "无理性地,不合理地"
@@ -69899,7 +69899,7 @@
         {
           "name": "racetrack",
           "usphone": "'restræk",
-          "ukphone": "",
+          "ukphone": "ˈɹeɪsˌtɹæk",
           "trans": [
             "(主要用于赛马, 赛狗的)跑道"
           ]
@@ -69930,7 +69930,7 @@
         },
         {
           "name": "struggler",
-          "usphone": "",
+          "usphone": "ˈstrʌɡlər",
           "ukphone": "ˈstrʌɡlə(r)",
           "trans": [
             "奋斗者,斗争者"
@@ -69987,7 +69987,7 @@
         {
           "name": "childless",
           "usphone": "'tʃaɪldləs",
-          "ukphone": "",
+          "ukphone": "ˈtʃaɪldləs",
           "trans": [
             "无儿女的"
           ]
@@ -70738,7 +70738,7 @@
         },
         {
           "name": "phenomenal",
-          "usphone": "",
+          "usphone": "fəˈnɑːmɪn(ə)l",
           "ukphone": "fɪ'nɒmɪn(ə)l",
           "trans": [
             "现象的,显著的"
@@ -70968,7 +70968,7 @@
         },
         {
           "name": "prohibitively",
-          "usphone": "",
+          "usphone": "proʊˈhɪbətɪvli",
           "ukphone": "prəʊˈhɪbɪtɪvlɪ",
           "trans": [
             "禁止地,过分地"
@@ -72103,7 +72103,7 @@
         {
           "name": "importer",
           "usphone": "ɪm'pɔrtɚ",
-          "ukphone": "",
+          "ukphone": "ɪmˈpɔːtə(r)",
           "trans": [
             "输入者, 进口商"
           ]
@@ -72354,7 +72354,7 @@
         },
         {
           "name": "spheroidal",
-          "usphone": "",
+          "usphone": "sfɪˈrɔɪdl",
           "ukphone": "sfɪə'rɒɪdəl",
           "trans": [
             "球状的"
@@ -72395,7 +72395,7 @@
         {
           "name": "signer",
           "usphone": "'saɪnɚ",
-          "ukphone": "",
+          "ukphone": "ˈsaɪnə(r)",
           "trans": [
             "签名人, (用手势) 示意者"
           ]
@@ -72649,7 +72649,7 @@
         {
           "name": "wonderfully",
           "usphone": "'wʌndɚfəli",
-          "ukphone": "",
+          "ukphone": "wʌn.də(ɹ).fli",
           "trans": [
             "令人惊讶地；奇妙地"
           ]
@@ -73631,7 +73631,7 @@
         },
         {
           "name": "electroencephalogram",
-          "usphone": "",
+          "usphone": "ɪˌlektroʊɪnˈsefələɡræm",
           "ukphone": "ɪ,lektrəʊɪn'sef(ə)ləgræm; -'kef-",
           "trans": [
             "[医]脑电图"
@@ -73727,7 +73727,7 @@
         },
         {
           "name": "Thames",
-          "usphone": "",
+          "usphone": "temz",
           "ukphone": "temz",
           "trans": [
             "泰晤士河(流经牛津,伦敦等)"
@@ -74241,7 +74241,7 @@
         {
           "name": "achingly",
           "usphone": "'ekɪŋli",
-          "ukphone": "",
+          "ukphone": "ˈeɪkɪŋli",
           "trans": [
             "极其,非常痛地"
           ]
@@ -74548,7 +74548,7 @@
         },
         {
           "name": "forestall",
-          "usphone": "",
+          "usphone": "fɔːrˈstɔːl",
           "ukphone": "fɔː'stɔːl",
           "trans": [
             "之前, 先(用先发制人的方法)预防, 阻止"
@@ -74810,7 +74810,7 @@
         {
           "name": "regimentation",
           "usphone": ",redʒimen'teiʃən",
-          "ukphone": "",
+          "ukphone": "ˌredʒɪmenˈteɪʃn",
           "trans": [
             "管辖,严格控制"
           ]
@@ -75162,7 +75162,7 @@
         },
         {
           "name": "unfertilized",
-          "usphone": "",
+          "usphone": "ˌʌnˈfɜːrtəlaɪzd",
           "ukphone": "ʌn'fɜːtɪlaɪzd",
           "trans": [
             "未施肥的,  未受精的"
@@ -75171,7 +75171,7 @@
         {
           "name": "untreated",
           "usphone": ",ʌn'tritɪd",
-          "ukphone": "",
+          "ukphone": "ˌʌnˈtriːtɪd",
           "trans": [
             "未经处理的, 未经治疗的"
           ]
@@ -75306,7 +75306,7 @@
         },
         {
           "name": "unreachable",
-          "usphone": "",
+          "usphone": "ʌnˈriːtʃəb(ə)l",
           "ukphone": "ʌnˈriːtʃəb(ə)l",
           "trans": [
             "不能到达的,  不能得到的"
@@ -75323,7 +75323,7 @@
         {
           "name": "slowness",
           "usphone": "'slonɪs",
-          "ukphone": "",
+          "ukphone": "ˈsləʊnəs",
           "trans": [
             "缓慢, 迟钝"
           ]
@@ -75444,7 +75444,7 @@
         },
         {
           "name": "urchin",
-          "usphone": "",
+          "usphone": "ˈɜːtʃən",
           "ukphone": "'ɜːtʃɪn",
           "trans": [
             "顽童, [动物]刺猥, [动物]海胆"
@@ -75734,7 +75734,7 @@
         {
           "name": "collarless",
           "usphone": "'kɔləlis",
-          "ukphone": "",
+          "ukphone": "ˈkɒlələs",
           "trans": [
             "无领的,无马轭(或颈圈)的"
           ]
@@ -75757,7 +75757,7 @@
         },
         {
           "name": "narrower",
-          "usphone": "",
+          "usphone": "ˈnæroʊər",
           "ukphone": "ˈnærəʊə(r)",
           "trans": [
             "有限的, 精密的",
@@ -75935,7 +75935,7 @@
         },
         {
           "name": "ectothermic",
-          "usphone": "",
+          "usphone": "ˌektəˈθɜːmɪk",
           "ukphone": "ˌektəˈθɜːmɪk",
           "trans": [
             "变温动物"
@@ -75951,7 +75951,7 @@
         },
         {
           "name": "locomote",
-          "usphone": "",
+          "usphone": "ləʊkəˈməʊt",
           "ukphone": "ˈləʊkəˌməʊt",
           "trans": [
             "移动, 行动"
@@ -76119,7 +76119,7 @@
         },
         {
           "name": "gibe",
-          "usphone": "",
+          "usphone": "dʒaɪb",
           "ukphone": "dʒaib",
           "trans": [
             "嘲笑,讥笑",
@@ -76211,7 +76211,7 @@
         {
           "name": "Cuban",
           "usphone": "'kju:bən",
-          "ukphone": "",
+          "ukphone": "ˈkjuːbən",
           "trans": [
             "古巴人",
             "古巴(人)的"
@@ -76228,7 +76228,7 @@
         },
         {
           "name": "tavernkeeper",
-          "usphone": "",
+          "usphone": "ˈtævənˌkiːpə",
           "ukphone": "ˈtævənˌkiːpə",
           "trans": [
             "小餐馆老板"
@@ -76540,7 +76540,7 @@
         },
         {
           "name": "uncrumple",
-          "usphone": "",
+          "usphone": "ʌnˈkrʌmp(ə)l",
           "ukphone": "ʌnˈkrʌmp(ə)l",
           "trans": [
             "去掉…的皱纹,使回复到平整状态"

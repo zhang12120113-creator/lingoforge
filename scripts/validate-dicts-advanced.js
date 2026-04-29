@@ -229,7 +229,7 @@ function checkFrequency(dictName, words) {
 // ==================== 主流程 ====================
 function main() {
   console.log('============================================================');
-  console.log('     TypingWord 词库查重 + 合规性检查工具 v2.0              ');
+  console.log('     LingoForge 词库查重 + 合规性检查工具 v2.0              ');
   console.log('============================================================\n');
 
   const allDicts = {};

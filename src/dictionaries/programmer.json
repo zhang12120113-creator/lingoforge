@@ -79,7 +79,7 @@
           "trans": [
             "n.键，关键字，关键码"
           ],
-          "ukphone": "",
+          "ukphone": "kiː",
           "usphone": "ki"
         },
         {
@@ -373,8 +373,8 @@
           "trans": [
             "n.标记；vt.加标记"
           ],
-          "ukphone": "",
-          "usphone": "mɑrk"
+          "ukphone": "mɑɹk",
+          "usphone": "mɑɹk"
         },
         {
           "name": "also",
@@ -483,7 +483,7 @@
           "trans": [
             "a.精选的"
           ],
-          "ukphone": "",
+          "ukphone": "sɪˈlɛktɪd",
           "usphone": "sɪ'lektɪd"
         },
         {
@@ -547,7 +547,7 @@
           "trans": [
             "a.相关的"
           ],
-          "ukphone": "",
+          "ukphone": "ɹɪˈleɪtɪd",
           "usphone": "rɪˈletɪd"
         },
         {
@@ -729,7 +729,7 @@
           "trans": [
             "n.按钮"
           ],
-          "ukphone": "[ˈbʌtn]",
+          "ukphone": "ˈbʌtn",
           "usphone": "ˈbʌtn"
         },
         {
@@ -880,7 +880,7 @@
             "v.&,n.期望"
           ],
           "ukphone": "dɪ'zaɪə",
-          "usphone": " dɪˈzaɪr"
+          "usphone": "dɪˈzaɪr"
         },
         {
           "name": "position",
@@ -1015,7 +1015,7 @@
           "trans": [
             "n.文件名"
           ],
-          "ukphone": "",
+          "ukphone": "ˈfaɪlneɪm",
           "usphone": "ˈfaɪlˌnem"
         },
         {
@@ -1166,7 +1166,7 @@
             "n.语句，陈述，命题"
           ],
           "ukphone": "'steɪtm(ə)nt",
-          "usphone": " ˈstetmənt"
+          "usphone": "ˈstetmənt"
         },
         {
           "name": "shift",
@@ -1197,7 +1197,7 @@
           "trans": [
             "n.宏，宏功能，宏指令"
           ],
-          "ukphone": "",
+          "ukphone": "ˈmæk.ɹəʊ",
           "usphone": "ˈmækroʊ"
         },
         {
@@ -1205,8 +1205,8 @@
           "trans": [
             "n.页面，页，版面"
           ],
-          "ukphone": "",
-          "usphone": "pedʒ"
+          "ukphone": "peɪd͡ʒ",
+          "usphone": "peɪd͡ʒ"
         },
         {
           "name": "quit",
@@ -1323,8 +1323,8 @@
           "trans": [
             "a.主要的"
           ],
-          "ukphone": "",
-          "usphone": "men"
+          "ukphone": "meɪn",
+          "usphone": "meɪn"
         },
         {
           "name": "definition",
@@ -1419,7 +1419,7 @@
           "trans": [
             "a.退回的"
           ],
-          "ukphone": "",
+          "ukphone": "ɹɪˈtəːnd",
           "usphone": "rɪ'tɜnd"
         },
         {
@@ -1562,7 +1562,7 @@
             "n.空格键，空间"
           ],
           "ukphone": "speɪs",
-          "usphone": " spes"
+          "usphone": "spes"
         },
         {
           "name": "editor",
@@ -1759,7 +1759,7 @@
           "trans": [
             "n.&,v.触发器；系紧"
           ],
-          "ukphone": "",
+          "ukphone": "ˈtɒɡ.əl",
           "usphone": "ˈtɑgl"
         },
         {
@@ -1998,7 +1998,7 @@
             "n.节，段，区域"
           ],
           "ukphone": "'sekʃn",
-          "usphone": " ˈsɛkʃən"
+          "usphone": "ˈsɛkʃən"
         },
         {
           "name": "follow",
@@ -2051,7 +2051,7 @@
         {
           "name": "document",
           "trans": [
-            "n.文献，资料，文件,,'dɔk,jumənt,,'dɔkjument]"
+            "n.文献，资料，文件"
           ],
           "ukphone": "'dɒkjʊm(ə)nt",
           "usphone": "ˈdɑkjumənt"
@@ -2113,7 +2113,7 @@
         {
           "name": "entire",
           "trans": [
-            "a.&,n.完全的；总体,,in',taiə]"
+            "a.&,n.完全的；总体"
           ],
           "ukphone": "ɪn'taɪə; en-",
           "usphone": "ɛnˈtaɪr"
@@ -2147,7 +2147,7 @@
           "trans": [
             "v.&,n.回流，逆流"
           ],
-          "ukphone": "",
+          "ukphone": "ˈriːfləʊ",
           "usphone": "ˈrifloʊ"
         },
         {
@@ -2251,7 +2251,7 @@
           "trans": [
             "n.软磁盘，软盘片,,（词典没有）"
           ],
-          "ukphone": "",
+          "ukphone": "dɪsˈkɛt",
           "usphone": "dɪˈskɛt"
         },
         {
@@ -2353,7 +2353,7 @@
           "trans": [
             "n.定界符，分界符"
           ],
-          "ukphone": "",
+          "ukphone": "dɪˈlɪmɪtə(r)",
           "usphone": "dɪ'lɪmɪtə"
         },
         {
@@ -2385,7 +2385,7 @@
           "trans": [
             "v.读，读阅"
           ],
-          "ukphone": "ri:d;red",
+          "ukphone": "ri:d; red",
           "usphone": "rid"
         },
         {
@@ -2423,7 +2423,7 @@
         {
           "name": "however",
           "trans": [
-            "conj.然而，可是(hao,wai,wo)"
+            "conj.然而，可是"
           ],
           "ukphone": "haʊ'evə",
           "usphone": "haʊˈevɚ"
@@ -2431,7 +2431,7 @@
         {
           "name": "extend",
           "trans": [
-            "v.扩充(ei,ke,si,ten,de)"
+            "v.扩充"
           ],
           "ukphone": "ɪk'stend",
           "usphone": "ɪkˈstɛnd"
@@ -2439,7 +2439,7 @@
         {
           "name": "look",
           "trans": [
-            "v.看，查看(,lu,ke,)"
+            "v.看，查看"
           ],
           "ukphone": "lʊk",
           "usphone": "lʊk"
@@ -2447,15 +2447,15 @@
         {
           "name": "starting",
           "trans": [
-            "a.起始的(si,chua,tin)"
+            "a.起始的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈstɑːtɪŋ",
           "usphone": "'stɑtɪŋ"
         },
         {
           "name": "now",
           "trans": [
-            "ad.&,n.此刻，现在(nao)"
+            "ad.&,n.此刻，现在"
           ],
           "ukphone": "naʊ",
           "usphone": "naʊ"
@@ -2463,7 +2463,7 @@
         {
           "name": "original",
           "trans": [
-            "n.&,a.原文；原(初)始(ou,vi,zhi,nou)"
+            "n.&,a.原文；原(初)始"
           ],
           "ukphone": "ə'rɪdʒɪn(ə)l; ɒ-",
           "usphone": "əˈrɪdʒənəl"
@@ -2471,7 +2471,7 @@
         {
           "name": "correspond",
           "trans": [
-            "vi.通信(联系)(ke,rui,si,ban,te)"
+            "vi.通信(联系)"
           ],
           "ukphone": "ˌkɔːrə'spɑːnd",
           "usphone": "ˌkɔrəˈspɑnd"
@@ -2485,7 +2485,7 @@
         {
           "name": "property",
           "trans": [
-            "n.性(质)，特征(pe,rua,po,ti,)"
+            "n.性(质)，特征"
           ],
           "ukphone": "'prɑːpərti",
           "usphone": "ˈprɑpərti"
@@ -2493,7 +2493,7 @@
         {
           "name": "several",
           "trans": [
-            "a.&,n.若干个，几个(sai,fe,rou)"
+            "a.&,n.若干个，几个"
           ],
           "ukphone": "ˈsevrəl",
           "usphone": "ˈsɛvərəl,ˈsɛvrəl"
@@ -2501,7 +2501,7 @@
         {
           "name": "learn",
           "trans": [
-            "v.学习，训练(,lan,en)"
+            "v.学习，训练"
           ],
           "ukphone": "lɜːn",
           "usphone": "lɜrn"
@@ -2509,7 +2509,7 @@
         {
           "name": "cause",
           "trans": [
-            "n.原因，理由(kao,si)"
+            "n.原因，理由"
           ],
           "ukphone": "kɔːz",
           "usphone": "kɔz"
@@ -2517,7 +2517,7 @@
         {
           "name": "bracket",
           "trans": [
-            "n.(方)括号，等级(bo,ruai,ke,te)"
+            "n.(方)括号，等级"
           ],
           "ukphone": "'brækɪt",
           "usphone": "ˈbrækɪt"
@@ -2525,7 +2525,7 @@
         {
           "name": "omit",
           "trans": [
-            "vt.省略，删去，遗漏(ao,mai,te)"
+            "vt.省略，删去，遗漏"
           ],
           "ukphone": "ə'mɪt",
           "usphone": "oˈmɪt"
@@ -2533,7 +2533,7 @@
         {
           "name": "running",
           "trans": [
-            "a.运行着的，游动的(ruo,ning)"
+            "a.运行着的，游动的"
           ],
           "ukphone": "'rʌnɪŋ",
           "usphone": "ˈrʌnɪŋ"
@@ -2541,7 +2541,7 @@
         {
           "name": "edge",
           "trans": [
-            "n.棱，边，边缘，界限(ai,chi)"
+            "n.棱，边，边缘，界限"
           ],
           "ukphone": "edʒ",
           "usphone": "ɛdʒ"
@@ -2549,7 +2549,7 @@
         {
           "name": "form",
           "trans": [
-            "n.格式，表格，方式(fao,mu)"
+            "n.格式，表格，方式"
           ],
           "ukphone": "fɔːm",
           "usphone": "fɔrm"
@@ -2557,7 +2557,7 @@
         {
           "name": "instruction",
           "trans": [
-            "n.指令，指导(,in,ke,s,i,chua,ke,sheng)"
+            "n.指令，指导"
           ],
           "ukphone": "ɪn'strʌkʃn",
           "usphone": "ɪnˈstrʌkʃən"
@@ -2565,7 +2565,7 @@
         {
           "name": "below",
           "trans": [
-            "a.&,prep.下列的；低于(bo,lou)"
+            "a.&,prep.下列的；低于"
           ],
           "ukphone": "bɪ'ləʊ",
           "usphone": "bɪˈloʊ"
@@ -2573,7 +2573,7 @@
         {
           "name": "standard",
           "trans": [
-            "n.标准(si,tan,de,rui,de)"
+            "n.标准"
           ],
           "ukphone": "'stændəd",
           "usphone": "ˈstændərd"
@@ -2581,7 +2581,7 @@
         {
           "name": "occurrence",
           "trans": [
-            "n.出现，发生(e,ke,run,si)"
+            "n.出现，发生"
           ],
           "ukphone": "ə'kʌr(ə)ns",
           "usphone": "əˈkɜrəns"
@@ -2589,7 +2589,7 @@
         {
           "name": "lock",
           "trans": [
-            "n.&,v.锁，封闭；自动跟踪(lao,ke)"
+            "n.&,v.锁，封闭；自动跟踪"
           ],
           "ukphone": "lɒk",
           "usphone": "lɑk"
@@ -2597,7 +2597,7 @@
         {
           "name": "append",
           "trans": [
-            "vt.附加，增补(e,pen,de)"
+            "vt.附加，增补"
           ],
           "ukphone": "ə'pend",
           "usphone": "əˈpɛnd"
@@ -2605,7 +2605,7 @@
         {
           "name": "destination",
           "trans": [
-            "n.目的地，接收站(da,s,i,te,ne,i,sheng)"
+            "n.目的地，接收站"
           ],
           "ukphone": "ˌdestɪ'neɪʃn",
           "usphone": "ˌdɛstəˈneʃən"
@@ -2613,7 +2613,7 @@
         {
           "name": "password",
           "trans": [
-            "n.口令，保密字(pa,si,wo,de)"
+            "n.口令，保密字"
           ],
           "ukphone": "'pɑːswɜːd",
           "usphone": "ˈpæswɜrd"
@@ -2621,7 +2621,7 @@
         {
           "name": "point",
           "trans": [
-            "n.点，小数点，句号(po,in,te)"
+            "n.点，小数点，句号"
           ],
           "ukphone": "pɒɪnt",
           "usphone": "pɔɪnt"
@@ -2629,7 +2629,7 @@
         {
           "name": "variety",
           "trans": [
-            "n.变化，种类，品种(v,rua,i,t,i)"
+            "n.变化，种类，品种"
           ],
           "ukphone": "və'raɪətɪ",
           "usphone": "vəˈraɪɪti"
@@ -2637,7 +2637,7 @@
         {
           "name": "many",
           "trans": [
-            "a.&,n.许多，多数(ma,i,ni)"
+            "a.&,n.许多，多数"
           ],
           "ukphone": "'menɪ",
           "usphone": "ˈmɛni"
@@ -2645,7 +2645,7 @@
         {
           "name": "buffer",
           "trans": [
-            "n.缓冲器(ba,fe)"
+            "n.缓冲器"
           ],
           "ukphone": "'bʌfə",
           "usphone": "ˈbʌfɚ"
@@ -2653,7 +2653,7 @@
         {
           "name": "useful",
           "trans": [
-            "a.有用的(you,s,i,fou)"
+            "a.有用的"
           ],
           "ukphone": "'juːsfʊl; -f(ə)l",
           "usphone": "ˈjusfəl"
@@ -2661,7 +2661,7 @@
         {
           "name": "object",
           "trans": [
-            "n.对象，目标，物体(a,zhuai,ke,te)"
+            "n.对象，目标，物体"
           ],
           "ukphone": "'ɔbdʒikt",
           "usphone": "ˈɑbdʒekt"
@@ -2669,7 +2669,7 @@
         {
           "name": "again",
           "trans": [
-            "ad.再，又，重新，也(e,i,gen)"
+            "ad.再，又，重新，也"
           ],
           "ukphone": "ə'gen; ə'geɪn",
           "usphone": "əˈɡɛn"
@@ -2677,9 +2677,9 @@
         {
           "name": "operating",
           "trans": [
-            "a.操作的，控制的(a,pe,rui,tin)"
+            "a.操作的，控制的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈɒpəɹeɪtɪŋ",
           "usphone": "ˈɑpəˌretɪŋ"
         }
       ]
@@ -2691,7 +2691,7 @@
         {
           "name": "carry",
           "trans": [
-            "v.进位，带,(kai,rui)"
+            "v.进位，带,"
           ],
           "ukphone": "'kærɪ",
           "usphone": "ˈkæri"
@@ -2699,7 +2699,7 @@
         {
           "name": "update",
           "trans": [
-            "v.更新，修改，校正(a,pe,dei,te)"
+            "v.更新，修改，校正"
           ],
           "ukphone": "ʌp'deɪt",
           "usphone": "ʌpˈdet"
@@ -2707,7 +2707,7 @@
         {
           "name": "moving",
           "trans": [
-            "n.&,a.活动的，自动的(mu,wei,ying)"
+            "n.&,a.活动的，自动的"
           ],
           "ukphone": "'muːvɪŋ",
           "usphone": "ˈmuvɪŋ"
@@ -2715,15 +2715,15 @@
         {
           "name": "coprocessor",
           "trans": [
-            "n.协同处理器(kou,pa,sei,se)"
+            "n.协同处理器"
           ],
-          "ukphone": "",
+          "ukphone": "ˌkəʊˈprəʊsesə(r)",
           "usphone": "'koʊˌproʊsesə"
         },
         {
           "name": "overlay",
           "trans": [
-            "v.覆盖，重叠(ou,wei,chi)"
+            "v.覆盖，重叠"
           ],
           "ukphone": "ˌouvər'leɪ",
           "usphone": "ˌoʊvərˈleɪ"
@@ -2731,7 +2731,7 @@
         {
           "name": "practice",
           "trans": [
-            "n.实习，实践(pe,rua,ke,te,si)"
+            "n.实习，实践"
           ],
           "ukphone": "'præktɪs",
           "usphone": "ˈpræktɪs"
@@ -2739,7 +2739,7 @@
         {
           "name": "navigation",
           "trans": [
-            "n.导航(na,we,i,ge,i,sheng)"
+            "n.导航"
           ],
           "ukphone": "nævɪ'geɪʃ(ə)n",
           "usphone": "ˌnævɪˈɡeʃən"
@@ -2747,7 +2747,7 @@
         {
           "name": "automatically",
           "trans": [
-            "ad.自动地，机械(ao,de,ma,ti,ke)"
+            "ad.自动地，机械"
           ],
           "ukphone": "ɔːtə'mætɪklɪ",
           "usphone": "ˌɔtəˈmætɪklɪ"
@@ -2755,7 +2755,7 @@
         {
           "name": "total",
           "trans": [
-            "n.&,v.总数；总计(to,lou)"
+            "n.&,v.总数；总计"
           ],
           "ukphone": "'təʊt(ə)l",
           "usphone": "ˈtoʊtl"
@@ -2763,7 +2763,7 @@
         {
           "name": "previous",
           "trans": [
-            "a.早先的，上述的(po,rui,wei,e,si)"
+            "a.早先的，上述的"
           ],
           "ukphone": "'priːviəs",
           "usphone": "ˈpriviəs"
@@ -2771,7 +2771,7 @@
         {
           "name": "software",
           "trans": [
-            "n.软件(sao,fu,wei,er)"
+            "n.软件"
           ],
           "ukphone": "'sɒf(t)weə",
           "usphone": "ˈsɔftwer"
@@ -2779,7 +2779,7 @@
         {
           "name": "shortcut",
           "trans": [
-            "n.近路，捷径(shou,ka,i,te,)"
+            "n.近路，捷径"
           ],
           "ukphone": "'ʃɔːtkʌt",
           "usphone": "ˈʃɔrtˌkʌt"
@@ -2787,7 +2787,7 @@
         {
           "name": "long",
           "trans": [
-            "a.长的，远的(,lang)"
+            "a.长的，远的"
           ],
           "ukphone": "lɒŋ",
           "usphone": "lɔŋ"
@@ -2795,7 +2795,7 @@
         {
           "name": "unique",
           "trans": [
-            "a.唯一的，独特的(you,ni,ke)"
+            "a.唯一的，独特的"
           ],
           "ukphone": "ju'niːk",
           "usphone": "juˈnik"
@@ -2803,7 +2803,7 @@
         {
           "name": "part",
           "trans": [
-            "n.部分，零件(pa,te)"
+            "n.部分，零件"
           ],
           "ukphone": "pɑːt",
           "usphone": "pɑrt"
@@ -2811,9 +2811,9 @@
         {
           "name": "updated",
           "trans": [
-            "a.适时的，更新的(ao,p,dei,te,de)"
+            "a.适时的，更新的"
           ],
-          "ukphone": "",
+          "ukphone": "ʌpˈdeɪtɪd",
           "usphone": "ʌp'deɪtɪd"
         },
         {
@@ -2899,7 +2899,7 @@
           "trans": [
             "n.关键字(词)"
           ],
-          "ukphone": "",
+          "ukphone": "ˈkiːwɜːd",
           "usphone": "ˈkiwɜrd"
         },
         {
@@ -2931,7 +2931,7 @@
           "trans": [
             "a.指定的，赋值的"
           ],
-          "ukphone": "",
+          "ukphone": "əˈsaɪnd",
           "usphone": "ə'saɪnd"
         },
         {
@@ -2961,7 +2961,7 @@
         {
           "name": "computer",
           "trans": [
-            "n.计算机,(ka,mu,pui,te)"
+            "n.计算机,"
           ],
           "ukphone": "kəm'pjuːtə",
           "usphone": "kəmˈpjutɚ"
@@ -2969,7 +2969,7 @@
         {
           "name": "complete",
           "trans": [
-            "v.&,a.完成；完整的,,(ka,mu,pe,li,te)"
+            "v.&,a.完成；完整的,,"
           ],
           "ukphone": "kəm'pliːt",
           "usphone": "kəmˈplit"
@@ -2977,7 +2977,7 @@
         {
           "name": "past",
           "trans": [
-            "a.过去的，结束的,,(pa,sit,e)"
+            "a.过去的，结束的,,"
           ],
           "ukphone": "pɑːst",
           "usphone": "pæst"
@@ -2985,7 +2985,7 @@
         {
           "name": "match",
           "trans": [
-            "v.比较，匹配，符合,(ma,c,hi)"
+            "v.比较，匹配，符合,"
           ],
           "ukphone": "mætʃ",
           "usphone": "mætʃ"
@@ -2993,7 +2993,7 @@
         {
           "name": "recover",
           "trans": [
-            "v.恢复，回收,,(rui,ka,wan)"
+            "v.恢复，回收,,"
           ],
           "ukphone": "rɪ'kʌvər",
           "usphone": "rɪ'kʌvər"
@@ -3001,7 +3001,7 @@
         {
           "name": "always",
           "trans": [
-            "ad.总是，一直，始终,,(ao,we,i,s,i)"
+            "ad.总是，一直，始终,,"
           ],
           "ukphone": "ˈɔ:lweɪz",
           "usphone": "ˈɔlwez,-wɪz,-wiz"
@@ -3009,7 +3009,7 @@
         {
           "name": "require",
           "trans": [
-            "v.需要，要求,,(r,ui,k,ua,i,er,)"
+            "v.需要，要求,,"
           ],
           "ukphone": "rɪ'kwaɪə",
           "usphone": "rɪˈkwaɪr"
@@ -3017,7 +3017,7 @@
         {
           "name": "opening",
           "trans": [
-            "n.打开，断路，孔,(ou,po,ning)"
+            "n.打开，断路，孔,"
           ],
           "ukphone": "'əʊp(ə)nɪŋ",
           "usphone": "ˈoʊpnɪŋ"
@@ -3025,7 +3025,7 @@
         {
           "name": "network",
           "trans": [
-            "n.&,vt.网络；联网,(nai,te,wo,de)"
+            "n.&,vt.网络；联网,"
           ],
           "ukphone": "'netwɜːk",
           "usphone": "ˈnetwɜrk"
@@ -3033,7 +3033,7 @@
         {
           "name": "sign",
           "trans": [
-            "n.符号，信号，记号,,(sa,i,n)"
+            "n.符号，信号，记号,,"
           ],
           "ukphone": "saɪn",
           "usphone": "saɪn"
@@ -3041,7 +3041,7 @@
         {
           "name": "release",
           "trans": [
-            "vt.&,n.释放，核发，版,,(r,ui,li,s,i)"
+            "vt.&,n.释放，核发，版,,"
           ],
           "ukphone": "rɪ'liːs",
           "usphone": "rɪ'lis"
@@ -3049,7 +3049,7 @@
         {
           "name": "three",
           "trans": [
-            "a.&,n.三(的),,(s,i,r,ui)"
+            "a.&,n.三(的),,"
           ],
           "ukphone": "θriː",
           "usphone": "θri"
@@ -3057,7 +3057,7 @@
         {
           "name": "recall",
           "trans": [
-            "vt.撤消，复活，检索(rui,kao,l)"
+            "vt.撤消，复活，检索"
           ],
           "ukphone": "rɪ'kɔːl",
           "usphone": "rɪˈkɔl"
@@ -3065,15 +3065,15 @@
         {
           "name": "deletion",
           "trans": [
-            "n.删去(部分)，删除,(di,li,sheng)"
+            "n.删去(部分)，删除,"
           ],
-          "ukphone": "",
+          "ukphone": "dɪˈliːʃən",
           "usphone": "dɪˈliʃən"
         },
         {
           "name": "fixed",
           "trans": [
-            "a.固定的，不变的,,(,fe,i,ke,si,de)"
+            "a.固定的，不变的,,"
           ],
           "ukphone": "fɪkst",
           "usphone": "fɪkst"
@@ -3081,7 +3081,7 @@
         {
           "name": "amount",
           "trans": [
-            "vt.&,n.总计；合计,,(a,ma,i,ou,te)"
+            "vt.&,n.总计；合计,,"
           ],
           "ukphone": "ə'maʊnt",
           "usphone": "əˈmaʊnt"
@@ -3089,7 +3089,7 @@
         {
           "name": "alias",
           "trans": [
-            "n.别名，代号，标记,,(e,i,li,e,s,i)"
+            "n.别名，代号，标记,,"
           ],
           "ukphone": "'eiliæs",
           "usphone": "ˈeliəs, ˈeljəs"
@@ -3103,7 +3103,7 @@
         {
           "name": "quote",
           "trans": [
-            "n.&,v.引号；加引号,(k,ua,i,wu,te)"
+            "n.&,v.引号；加引号,"
           ],
           "ukphone": "kwout",
           "usphone": "kwoʊt"
@@ -3111,7 +3111,7 @@
         {
           "name": "correct",
           "trans": [
-            "a.&,vt.正确的；改正,,(ke,ruai,ke,te)"
+            "a.&,vt.正确的；改正,,"
           ],
           "ukphone": "kə'rekt",
           "usphone": "kəˈrɛkt"
@@ -3119,7 +3119,7 @@
         {
           "name": "else",
           "trans": [
-            "ad.&,conj.否则，此外,(,a,i,o,u,s,i)"
+            "ad.&,conj.否则，此外,"
           ],
           "ukphone": "els",
           "usphone": "ɛls"
@@ -3127,7 +3127,7 @@
         {
           "name": "maximum",
           "trans": [
-            "n.&,a.最大(的)，最高(mai,ke,sei,men)"
+            "n.&,a.最大(的)，最高"
           ],
           "ukphone": "'mæksɪməm",
           "usphone": "ˈmæksəməm"
@@ -3135,7 +3135,7 @@
         {
           "name": "under",
           "trans": [
-            "prep.在…下面(之下),(ang,de)"
+            "prep.在…下面(之下),"
           ],
           "ukphone": "'ʌndə",
           "usphone": "ˈʌndɚ"
@@ -3151,15 +3151,15 @@
         {
           "name": "switching",
           "trans": [
-            "n.开关，转接，交换,(si,wei,te,chen)"
+            "n.开关，转接，交换,"
           ],
-          "ukphone": "",
+          "ukphone": "swɪtʃɪŋ",
           "usphone": "swɪtʃɪŋ"
         },
         {
           "name": "element",
           "trans": [
-            "n.元件，元素，码元,,(ai,l,men,te)"
+            "n.元件，元素，码元,,"
           ],
           "ukphone": "'elɪmənt",
           "usphone": "ˈɛləmənt"
@@ -3167,7 +3167,7 @@
         {
           "name": "modification",
           "trans": [
-            "n.改变，修改,,(mao,di,fi,kei,sheng)"
+            "n.改变，修改,,"
           ],
           "ukphone": ",mɒdɪfɪ'keɪʃ(ə)n",
           "usphone": "ˌmɑdɪfɪˈkeɪʃn"
@@ -3177,7 +3177,7 @@
           "trans": [
             "a.修改的，变更的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈmɒdɪfaɪd",
           "usphone": "'mɒdəˌfaɪd"
         },
         {
@@ -3193,7 +3193,7 @@
           "trans": [
             "n.大写字母"
           ],
-          "ukphone": "",
+          "ukphone": "ˈʌpəˌkeɪs",
           "usphone": "'ʌpəˌkeɪs"
         },
         {
@@ -3233,7 +3233,7 @@
           "trans": [
             "n.下档，小写体"
           ],
-          "ukphone": "",
+          "ukphone": "ˈləʊ.ə(ɹ)ˌkeɪs",
           "usphone": "'loʊrˌkeɪs"
         },
         {
@@ -3263,7 +3263,7 @@
         {
           "name": "why",
           "trans": [
-            "ad.为什么,(wai)"
+            "ad.为什么,"
           ],
           "ukphone": "waɪ",
           "usphone": "hwaɪ, waɪ"
@@ -3271,7 +3271,7 @@
         {
           "name": "temporary",
           "trans": [
-            "a.暂时的，临时的,,(tai,me,pe,rui)"
+            "a.暂时的，临时的,,"
           ],
           "ukphone": "'tempəreri",
           "usphone": "ˈtempəreri"
@@ -3279,7 +3279,7 @@
         {
           "name": "put",
           "trans": [
-            "v.存放(记录)，放置,,(pa,te)"
+            "v.存放(记录)，放置,,"
           ],
           "ukphone": "pʊt",
           "usphone": "pʊt"
@@ -3287,7 +3287,7 @@
         {
           "name": "instead",
           "trans": [
-            "ad.(来)代替，当作,(in,si,tai,de)"
+            "ad.(来)代替，当作,"
           ],
           "ukphone": "ɪn'sted",
           "usphone": "ɪnˈstɛd"
@@ -3295,7 +3295,7 @@
         {
           "name": "encounter",
           "trans": [
-            "v.&,n.遇到，碰到,(,in,k,a,i,wen,te)"
+            "v.&,n.遇到，碰到,"
           ],
           "ukphone": "ɪn'kauntər",
           "usphone": "ɛnˈkaʊntɚ"
@@ -3309,7 +3309,7 @@
         {
           "name": "across",
           "trans": [
-            "prep.交叉，越过,,(e,ke,rua,si)"
+            "prep.交叉，越过,,"
           ],
           "ukphone": "ə'krɒs",
           "usphone": "əˈkrɔs"
@@ -3319,7 +3319,7 @@
           "trans": [
             "n.匹配，调整"
           ],
-          "ukphone": "",
+          "ukphone": "ˈmætʃɪŋ",
           "usphone": "ˈmætʃɪŋ"
         },
         {
@@ -3327,7 +3327,7 @@
           "trans": [
             "n.通配符"
           ],
-          "ukphone": "",
+          "ukphone": "'waɪldkɑd",
           "usphone": "'waɪldkɑd"
         },
         {
@@ -3517,7 +3517,7 @@
           "trans": [
             "n.讲，说，教，计算"
           ],
-          "ukphone": "",
+          "ukphone": "tɛl",
           "usphone": "tɛl"
         },
         {
@@ -3597,7 +3597,7 @@
           "trans": [
             "n.呼叫，调用，调入"
           ],
-          "ukphone": "",
+          "ukphone": "ˈkɔːlɪŋ",
           "usphone": "ˈkɔlɪŋ"
         },
         {
@@ -3645,7 +3645,7 @@
           "trans": [
             "n.连接程序"
           ],
-          "ukphone": "",
+          "ukphone": "ˈlɪŋkə",
           "usphone": "'lɪŋkə"
         },
         {
@@ -3819,13 +3819,13 @@
           "trans": [
             "a.交替的，备用的"
           ],
-          "ukphone": "ˈɔ:ltəneɪt;(for adj.)ɔ:lˈtɜ:nət",
+          "ukphone": "ˈɔ:ltəneɪt; (for adj.)ɔ:lˈtɜ:nət",
           "usphone": "ˈɔltərnət"
         },
         {
           "name": "collapse",
           "trans": [
-            "v.崩溃，破裂,(ke,la,p,s)"
+            "v.崩溃，破裂,"
           ],
           "ukphone": "kə'læps",
           "usphone": "kəˈlæps"
@@ -3833,7 +3833,7 @@
         {
           "name": "corner",
           "trans": [
-            "n.角，角落，转换,,(ka,one)"
+            "n.角，角落，转换,,"
           ],
           "ukphone": "'kɔːnə",
           "usphone": "ˈkɔrnə(r)"
@@ -3841,15 +3841,15 @@
         {
           "name": "present",
           "trans": [
-            "a.&,v.现行的；提供,,(p,rua,i,zen,t)"
+            "a.&,v.现行的；提供,,"
           ],
-          "ukphone": "prɪˈzent;(for n.)ˈpreznt",
+          "ukphone": "prɪˈzent; (for n.)ˈpreznt",
           "usphone": "ˈprɛznt"
         },
         {
           "name": "interpreter",
           "trans": [
-            "n.解释程序，翻译机,(in,te,p,te)"
+            "n.解释程序，翻译机,"
           ],
           "ukphone": "in'təːpritə(r)",
           "usphone": "ɪnˈtɜrprɪtə(r)"
@@ -3857,7 +3857,7 @@
         {
           "name": "advance",
           "trans": [
-            "v.&,n.进步，提高；进展,(e,de,wai,en,s)"
+            "v.&,n.进步，提高；进展,"
           ],
           "ukphone": "əd'væns",
           "usphone": "ədˈvæns"
@@ -3865,7 +3865,7 @@
         {
           "name": "forward",
           "trans": [
-            "a.正向的,(fao,wei,de,)"
+            "a.正向的,"
           ],
           "ukphone": "'fɔːwəd",
           "usphone": "ˈfɔrwərd"
@@ -3873,7 +3873,7 @@
         {
           "name": "fast",
           "trans": [
-            "a.&,ad.快速的,,(fa,s,t)"
+            "a.&,ad.快速的,,"
           ],
           "ukphone": "fɑːst",
           "usphone": "fæst"
@@ -3881,7 +3881,7 @@
         {
           "name": "special",
           "trans": [
-            "a.专用的，特殊的,,(si,bai,shou)"
+            "a.专用的，特殊的,,"
           ],
           "ukphone": "'speʃ(ə)l",
           "usphone": "ˈspɛʃəl"
@@ -3889,7 +3889,7 @@
         {
           "name": "slash",
           "trans": [
-            "n.斜线,(,s,i,la,i,s,hi)"
+            "n.斜线,"
           ],
           "ukphone": "slæʃ",
           "usphone": "slæʃ"
@@ -3897,7 +3897,7 @@
         {
           "name": "utility",
           "trans": [
-            "n.&,a.实用程序；实用性,(,yo,u,t,i,li,t,i)"
+            "n.&,a.实用程序；实用性,"
           ],
           "ukphone": "juː'tɪləti",
           "usphone": "juˈtɪləti"
@@ -3905,7 +3905,7 @@
         {
           "name": "regardless",
           "trans": [
-            "a.不注意的，不考虑的,(rui,ga,de,li,s)"
+            "a.不注意的，不考虑的,"
           ],
           "ukphone": "rɪ'gɑːrdləs",
           "usphone": "rɪˈgɑrdləs"
@@ -3913,7 +3913,7 @@
         {
           "name": "disable",
           "trans": [
-            "vt.禁止，停用,(de,i,s,i,e,i,bo,u)"
+            "vt.禁止，停用,"
           ],
           "ukphone": "dɪs'eɪb(ə)l",
           "usphone": "dɪsˈebəl"
@@ -3927,7 +3927,7 @@
         {
           "name": "compatible",
           "trans": [
-            "a.可兼容的，可共存的(kang,m,pa,tei,bao)"
+            "a.可兼容的，可共存的"
           ],
           "ukphone": "kəm'pætəbl",
           "usphone": "kəmˈpætəbəl"
@@ -3935,7 +3935,7 @@
         {
           "name": "depend",
           "trans": [
-            "vi.随…而定，取决于,,(dei,pan,de)"
+            "vi.随…而定，取决于,,"
           ],
           "ukphone": "dɪ'pend",
           "usphone": "dɪˈpɛnd"
@@ -3943,7 +3943,7 @@
         {
           "name": "empty",
           "trans": [
-            "a.空，零，未占用,,(e,m,p,t,i)"
+            "a.空，零，未占用,,"
           ],
           "ukphone": "ˈemptɪ",
           "usphone": "ˈɛmpti"
@@ -3951,7 +3951,7 @@
         {
           "name": "alphabetical",
           "trans": [
-            "a.字母(表)的，abc的(ai,er,fe,ba,ti,kou)"
+            "a.字母(表)的，abc的"
           ],
           "ukphone": "ælfə'betɪk(ə)l",
           "usphone": "ˌælfəˈbɛtɪkəl"
@@ -3959,7 +3959,7 @@
         {
           "name": "branch",
           "trans": [
-            "n.分支，支线；v.转换,,(bo,ran,chi)"
+            "n.分支，支线；v.转换,,"
           ],
           "ukphone": "brɑːn(t)ʃ",
           "usphone": "bræntʃ"
@@ -3967,15 +3967,15 @@
         {
           "name": "resume",
           "trans": [
-            "v.重(新)开(始),,(re,s,you,mu)"
+            "v.重(新)开(始),,"
           ],
-          "ukphone": "",
-          "usphone": "rɪ'zjum"
+          "ukphone": "ɹɪˈzjuːm",
+          "usphone": "ɹəˈzjuːm"
         },
         {
           "name": "multiple",
           "trans": [
-            "a.多次的，复杂的,(mo,u,t,i,po,u)"
+            "a.多次的，复杂的,"
           ],
           "ukphone": "'mʌltɪpl",
           "usphone": "ˈmʌltəpəl"
@@ -3983,7 +3983,7 @@
         {
           "name": "monitor",
           "trans": [
-            "n.监视器，监督程序,(mao,nit,e)"
+            "n.监视器，监督程序,"
           ],
           "ukphone": "'mɒnɪtə",
           "usphone": "ˈmɑnɪtə(r)"
@@ -3991,7 +3991,7 @@
         {
           "name": "configuration",
           "trans": [
-            "n.配置,(kang,fe,i,ge,rua,i,sheng)"
+            "n.配置,"
           ],
           "ukphone": "kənˌfɪgjə'reɪʃn",
           "usphone": "kənˌfɪgjəˈreɪʃn"
@@ -3999,7 +3999,7 @@
         {
           "name": "replacement",
           "trans": [
-            "n.替换，置换，更新,(rui,p,e,li,s,i,me,n,te,)"
+            "n.替换，置换，更新,"
           ],
           "ukphone": "rɪ'pleɪsm(ə)nt",
           "usphone": "rɪˈplesmənt"
@@ -4007,7 +4007,7 @@
         {
           "name": "required",
           "trans": [
-            "a.需要的,(rui,kuai,er,de)"
+            "a.需要的,"
           ],
           "ukphone": "ri'kwaiəd",
           "usphone": "rɪ'kwaɪəd"
@@ -4015,15 +4015,15 @@
         {
           "name": "macros",
           "trans": [
-            "n.宏命令(指令),(mai,ke,lou,si)"
+            "n.宏命令(指令),"
           ],
-          "ukphone": "",
+          "ukphone": "'mækrɒs",
           "usphone": "'mækrɒs"
         },
         {
           "name": "table",
           "trans": [
-            "n.表,(tei,bao)"
+            "n.表,"
           ],
           "ukphone": "'teɪb(ə)l",
           "usphone": "ˈtebəl"
@@ -4031,7 +4031,7 @@
         {
           "name": "loss",
           "trans": [
-            "n.损耗，损失,(lao,s)"
+            "n.损耗，损失,"
           ],
           "ukphone": "lɒs",
           "usphone": "lɔs"
@@ -4089,7 +4089,7 @@
           "trans": [
             "a.浮动的，浮点的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈfləʊtɪŋ",
           "usphone": "ˈfloʊtɪŋ"
         },
         {
@@ -4279,7 +4279,7 @@
           "trans": [
             "than,大于"
           ],
-          "ukphone": "",
+          "ukphone": "ˈɡɹeɪ.tə(ɹ)",
           "usphone": "ɡreɪtə"
         },
         {
@@ -4373,7 +4373,7 @@
           "trans": [
             "a.扩展的，扩充的"
           ],
-          "ukphone": "",
+          "ukphone": "ɪkˈspændɪŋ",
           "usphone": "ɪk'spændɪŋ"
         },
         {
@@ -4381,7 +4381,7 @@
           "trans": [
             "line,a.联机的"
           ],
-          "ukphone": "",
+          "ukphone": "ɒn",
           "usphone": "'ən"
         },
         {
@@ -4389,7 +4389,7 @@
           "trans": [
             "v.(按序)排列，排序"
           ],
-          "ukphone": "",
+          "ukphone": "ˌriːˈɔːdə(r)",
           "usphone": "ˌriˈɔrdə(r)"
         },
         {
@@ -4397,7 +4397,7 @@
           "trans": [
             "a.直接的"
           ],
-          "ukphone": "dɪˈrekt ; daɪ-",
+          "ukphone": "dɪˈrekt; daɪ-",
           "usphone": "dɪˈrɛkt, daɪ-"
         },
         {
@@ -4443,7 +4443,7 @@
         {
           "name": "side",
           "trans": [
-            "n.(旁)边，面，侧(面),,(sai,de)"
+            "n.(旁)边，面，侧(面),,"
           ],
           "ukphone": "saɪd",
           "usphone": "saɪd"
@@ -4451,7 +4451,7 @@
         {
           "name": "push",
           "trans": [
-            "v.推，按，压，进(栈),(pus,hi,)"
+            "v.推，按，压，进(栈),"
           ],
           "ukphone": "pʊʃ",
           "usphone": "pʊʃ"
@@ -4459,7 +4459,7 @@
         {
           "name": "programming",
           "trans": [
-            "n.程序设计，编程序,(pe,rou,ge,ruai,ming)"
+            "n.程序设计，编程序,"
           ],
           "ukphone": "'prəugræmiŋ",
           "usphone": "ˈproʊgræmɪŋ"
@@ -4467,7 +4467,7 @@
         {
           "name": "upper",
           "trans": [
-            "a.上的，上部的,,(a,pe)"
+            "a.上的，上部的,,"
           ],
           "ukphone": "'ʌpə",
           "usphone": "ˈʌpɚ"
@@ -4475,7 +4475,7 @@
         {
           "name": "row",
           "trans": [
-            "n.行,,(ruai,o)"
+            "n.行,,"
           ],
           "ukphone": "rəʊ",
           "usphone": "roʊ"
@@ -4483,15 +4483,15 @@
         {
           "name": "pressed",
           "trans": [
-            "a.加压的，压缩的,,(pe,r,ua,i,s,i,d,)"
+            "a.加压的，压缩的,,"
           ],
-          "ukphone": "",
+          "ukphone": "pɹɛst",
           "usphone": "prɛst"
         },
         {
           "name": "temporarily",
           "trans": [
-            "ad.暂时,,(,tan,p,ruo,le,i)"
+            "ad.暂时,,"
           ],
           "ukphone": "'temp(ə)r(ər)ɪlɪ",
           "usphone": "tempəˈrerɪlɪ"
@@ -4499,7 +4499,7 @@
         {
           "name": "day",
           "trans": [
-            "n.日，天，白天，时代,(de,i)"
+            "n.日，天，白天，时代,"
           ],
           "ukphone": "deɪ",
           "usphone": "de"
@@ -4507,7 +4507,7 @@
         {
           "name": "repaint",
           "trans": [
-            "vt.重画,,(rui,pen,te)"
+            "vt.重画,,"
           ],
           "ukphone": "rɪ'peɪnt",
           "usphone": "ri'peɪnt"
@@ -4515,7 +4515,7 @@
         {
           "name": "redefine",
           "trans": [
-            "vt.重新规定(定义),,(rui,di,fan,en)"
+            "vt.重新规定(定义),,"
           ],
           "ukphone": "riːdɪ'faɪn",
           "usphone": "ˌriːdɪˈfaɪn"
@@ -4523,7 +4523,7 @@
         {
           "name": "relation",
           "trans": [
-            "n.关系，关系式,(,r,ui,le,i,s,he,n)"
+            "n.关系，关系式,"
           ],
           "ukphone": "rɪ'leɪʃ(ə)n",
           "usphone": "rɪˈleɪʃn"
@@ -4531,7 +4531,7 @@
         {
           "name": "dimension",
           "trans": [
-            "n.尺寸，维，因次,,(di,man,shen)"
+            "n.尺寸，维，因次,,"
           ],
           "ukphone": "dɪ'menʃn",
           "usphone": "dɪˈmɛnʃən, daɪ-"
@@ -4545,7 +4545,7 @@
         {
           "name": "boundary",
           "trans": [
-            "n.边界，界限，约束,,(bai,en,de,rui)"
+            "n.边界，界限，约束,,"
           ],
           "ukphone": "'baundri",
           "usphone": "ˈbaʊndəri, -dri"
@@ -4553,7 +4553,7 @@
         {
           "name": "zoom",
           "trans": [
-            "v.变焦距,,(,zu,mu)"
+            "v.变焦距,,"
           ],
           "ukphone": "zuːm",
           "usphone": "zum"
@@ -4561,15 +4561,15 @@
         {
           "name": "initialize",
           "trans": [
-            "v.初始化,,(in,ne,she,lai,zi)"
+            "v.初始化,,"
           ],
-          "ukphone": "",
+          "ukphone": "ɪˈnɪʃəlaɪz",
           "usphone": "ɪˈnɪʃəˌlaɪz"
         },
         {
           "name": "personal",
           "trans": [
-            "a.个人的，自身的,(pa,s,i,nou)"
+            "a.个人的，自身的,"
           ],
           "ukphone": "'pɜːs(ə)n(ə)l",
           "usphone": "ˈpɜrsənl"
@@ -4585,7 +4585,7 @@
         {
           "name": "true",
           "trans": [
-            "a.&,n.真，实，选中,(chu)"
+            "a.&,n.真，实，选中,"
           ],
           "ukphone": "truː",
           "usphone": "tru"
@@ -4593,7 +4593,7 @@
         {
           "name": "wish",
           "trans": [
-            "v.&,n.祝愿，希望,,(we,i,s,hi)"
+            "v.&,n.祝愿，希望,,"
           ],
           "ukphone": "wɪʃ",
           "usphone": "wɪʃ"
@@ -4601,7 +4601,7 @@
         {
           "name": "font",
           "trans": [
-            "n.铅字，字形,,(,fang,te)"
+            "n.铅字，字形,,"
           ],
           "ukphone": "fɒnt",
           "usphone": "fɑnt"
@@ -4609,7 +4609,7 @@
         {
           "name": "know",
           "trans": [
-            "v.知道，了解，认识,,(na,i,o)"
+            "v.知道，了解，认识,,"
           ],
           "ukphone": "nəʊ",
           "usphone": "noʊ"
@@ -4617,7 +4617,7 @@
         {
           "name": "convert",
           "trans": [
-            "v.转换，变换,,(kang,wo,te)"
+            "v.转换，变换,,"
           ],
           "ukphone": "kən'vɜːrt",
           "usphone": "kənˈvɜrt"
@@ -4625,7 +4625,7 @@
         {
           "name": "global",
           "trans": [
-            "n.全局，全程，全局符,(ge,lou,bou)"
+            "n.全局，全程，全局符,"
           ],
           "ukphone": "'gləʊb(ə)l",
           "usphone": "ˈgloʊbl"
@@ -4633,7 +4633,7 @@
         {
           "name": "still",
           "trans": [
-            "a.&,n.&,v.静止的；静；平静,,(,s,i,de,i,o,u)"
+            "a.&,n.&,v.静止的；静；平静,,"
           ],
           "ukphone": "stɪl",
           "usphone": "stɪl"
@@ -4641,7 +4641,7 @@
         {
           "name": "installation",
           "trans": [
-            "n.安装，装配,,(,in,sit,e,lei,shen)"
+            "n.安装，装配,,"
           ],
           "ukphone": "ɪnstə'leɪʃ(ə)n",
           "usphone": "ˌɪnstəˈleʃən"
@@ -4649,7 +4649,7 @@
         {
           "name": "invoke",
           "trans": [
-            "vt.调用，请求,,(in,wou,te)"
+            "vt.调用，请求,,"
           ],
           "ukphone": "ɪn'vəʊk",
           "usphone": "ɪnˈvoʊk"
@@ -4657,7 +4657,7 @@
         {
           "name": "interactive",
           "trans": [
-            "a.交互式，交互的,,(in,te,a,k,ti,wu)"
+            "a.交互式，交互的,,"
           ],
           "ukphone": "ˌɪntər'æktɪv",
           "usphone": "ˌɪntɚˈæktɪv"
@@ -4665,15 +4665,15 @@
         {
           "name": "described",
           "trans": [
-            "a.被看到的，被发现的,,(di,si,chuai,bo,te)"
+            "a.被看到的，被发现的,,"
           ],
-          "ukphone": "",
+          "ukphone": "dɪˈskraɪbd",
           "usphone": "dɪsk'raɪbd"
         },
         {
           "name": "century",
           "trans": [
-            "n.世纪,,(san,te,rui)"
+            "n.世纪,,"
           ],
           "ukphone": "ˈsentʃərɪ",
           "usphone": "ˈsɛntʃəri"
@@ -4681,7 +4681,7 @@
         {
           "name": "literal",
           "trans": [
-            "a.文字的,,(li,te,rou)"
+            "a.文字的,,"
           ],
           "ukphone": "'litərəl",
           "usphone": "ˈlɪtərəl"
@@ -4689,7 +4689,7 @@
         {
           "name": "rather",
           "trans": [
-            "ad.宁可，有点,,(tua,ze)"
+            "ad.宁可，有点,,"
           ],
           "ukphone": "'rɑːðə",
           "usphone": "ˈræðər"
@@ -4697,7 +4697,7 @@
         {
           "name": "exclusive",
           "trans": [
-            "a.排斥，排它性,(ei,ke,xi,ke,lou,sei,wu)"
+            "a.排斥，排它性,"
           ],
           "ukphone": "ɪk'skluːsɪv",
           "usphone": "ɪkˈsklusɪv"
@@ -4705,7 +4705,7 @@
         {
           "name": "marker",
           "trans": [
-            "n.记号，标记，标志,,(ma,ke,)"
+            "n.记号，标记，标志,,"
           ],
           "ukphone": "'mɑːkə",
           "usphone": "ˈmɑrkə(r)"
@@ -4713,7 +4713,7 @@
         {
           "name": "wait",
           "trans": [
-            "v.等待,(we,i,t,e)"
+            "v.等待,"
           ],
           "ukphone": "weɪt",
           "usphone": "wet"
@@ -4721,15 +4721,15 @@
         {
           "name": "appropriate",
           "trans": [
-            "a.适当的，合适的,,(,e,po,rou,pui,te)"
+            "a.适当的，合适的,,"
           ],
-          "ukphone": "əˈprəʊprɪət;(for v.)əˈprəʊprɪeɪt",
+          "ukphone": "əˈprəʊprɪət; (for v.)əˈprəʊprɪeɪt",
           "usphone": "əˈproʊpriət"
         },
         {
           "name": "fit",
           "trans": [
-            "v.&,n.适合，装配；非特,,(fi,te)"
+            "v.&,n.适合，装配；非特,,"
           ],
           "ukphone": "fɪt",
           "usphone": "fɪt"
@@ -4737,7 +4737,7 @@
         {
           "name": "adapter",
           "trans": [
-            "n.适配器，转换器,,(e,dap,o,te)"
+            "n.适配器，转换器,,"
           ],
           "ukphone": "ə'dæptə",
           "usphone": "əˈdæptɚ"
@@ -4751,7 +4751,7 @@
         {
           "name": "filter",
           "trans": [
-            "n.滤波器，滤光材料,,(,fi,out,e)"
+            "n.滤波器，滤光材料,,"
           ],
           "ukphone": "'fɪltər",
           "usphone": "ˈfɪltɚ"
@@ -4759,7 +4759,7 @@
         {
           "name": "break",
           "trans": [
-            "v.断开，撕开，中断,,(bo,rui,ke)"
+            "v.断开，撕开，中断,,"
           ],
           "ukphone": "breɪk",
           "usphone": "brek"
@@ -4767,7 +4767,7 @@
         {
           "name": "backward",
           "trans": [
-            "ad.向后，逆，倒,,(ba,ke,wo,de)"
+            "ad.向后，逆，倒,,"
           ],
           "ukphone": "'bækwəd",
           "usphone": "ˈbækwərd"
@@ -4775,15 +4775,15 @@
         {
           "name": "searching",
           "trans": [
-            "n.搜索,(se,te,shen)"
+            "n.搜索,"
           ],
-          "ukphone": "",
+          "ukphone": "ˈsɜːtʃɪŋ",
           "usphone": "ˈsɜrtʃɪŋ"
         },
         {
           "name": "receive",
           "trans": [
-            "v.接收,,(r,i,s,i,v)"
+            "v.接收,,"
           ],
           "ukphone": "rɪ'siːv",
           "usphone": "rɪˈsiv"
@@ -4791,7 +4791,7 @@
         {
           "name": "dual",
           "trans": [
-            "a.对偶的，双的,(du,ou)"
+            "a.对偶的，双的,"
           ],
           "ukphone": "'duːəl",
           "usphone": "ˈduəl"
@@ -4801,13 +4801,13 @@
           "trans": [
             "vt.再试，复算,rui,chuai)"
           ],
-          "ukphone": "",
+          "ukphone": "riˈtɹaɪ",
           "usphone": "ˌri'traɪ"
         },
         {
           "name": "normally",
           "trans": [
-            "ad.正常地，通常,,(nou,me,li)"
+            "ad.正常地，通常,,"
           ],
           "ukphone": "'nɔːrməli",
           "usphone": "ˈnɔrməli"
@@ -4815,7 +4815,7 @@
         {
           "name": "exactly",
           "trans": [
-            "ad.正好，完全，精确地,,(in,ge,zai,k,t,li)"
+            "ad.正好，完全，精确地,,"
           ],
           "ukphone": "ɪg'zæk(t)lɪ",
           "usphone": "ɪɡˈzæktli"
@@ -4823,7 +4823,7 @@
         {
           "name": "immediately",
           "trans": [
-            "ad.直接地,,(in,mi,di,si)"
+            "ad.直接地,,"
           ],
           "ukphone": "ɪ'miːdɪətlɪ",
           "usphone": "ɪˈmidiɪtli"
@@ -4831,15 +4831,15 @@
         {
           "name": "separated",
           "trans": [
-            "a.分开的,(sai,po,rui,t,d)"
+            "a.分开的,"
           ],
-          "ukphone": "",
+          "ukphone": "ˈsɛpəɹeɪtɪd",
           "usphone": "'sepəreɪtɪd"
         },
         {
           "name": "high",
           "trans": [
-            "a.高,,(ha,i)"
+            "a.高,,"
           ],
           "ukphone": "haɪ",
           "usphone": "haɪ"
@@ -4847,7 +4847,7 @@
         {
           "name": "equivalent",
           "trans": [
-            "a.相等的，等效的,,(e,i,kui,wu,en,t,)"
+            "a.相等的，等效的,,"
           ],
           "ukphone": "ɪ'kwɪvələnt",
           "usphone": "ɪˈkwɪvələnt"
@@ -4855,7 +4855,7 @@
         {
           "name": "light",
           "trans": [
-            "n.&,a.光(波，源)；轻的,,(,la,i,t,e)"
+            "n.&,a.光(波，源)；轻的,,"
           ],
           "ukphone": "laɪt",
           "usphone": "laɪt"
@@ -4863,7 +4863,7 @@
         {
           "name": "zero",
           "trans": [
-            "n.零，零位，零点,,(,ze,i,ro,u)"
+            "n.零，零位，零点,,"
           ],
           "ukphone": "'zɪərəʊ",
           "usphone": "ˈzɪroʊ"
@@ -4871,7 +4871,7 @@
         {
           "name": "storage",
           "trans": [
-            "n.存储，存储器,,(s,tao,run,zhi)"
+            "n.存储，存储器,,"
           ],
           "ukphone": "'stɔːrɪdʒ",
           "usphone": "ˈstɔrɪdʒ, ˈstor-"
@@ -4879,7 +4879,7 @@
         {
           "name": "width",
           "trans": [
-            "n.宽度,,(we,i,zi)"
+            "n.宽度,,"
           ],
           "ukphone": "wɪtθ; wɪdθ",
           "usphone": "wɪdθ, wɪθ, wɪtθ"
@@ -4887,7 +4887,7 @@
         {
           "name": "language",
           "trans": [
-            "n.语言,,(lan,ge,wei,chi)"
+            "n.语言,,"
           ],
           "ukphone": "'læŋgwɪdʒ",
           "usphone": "ˈlæŋɡwɪdʒ"
@@ -4895,7 +4895,7 @@
         {
           "name": "startup",
           "trans": [
-            "n.启动,(si,tar,ta,p)"
+            "n.启动,"
           ],
           "ukphone": "stɑ:tʌp",
           "usphone": "'stɑt'ʌp"
@@ -4903,7 +4903,7 @@
         {
           "name": "much",
           "trans": [
-            "a.&,n.很多，许多，大量,(ma,c,hi)"
+            "a.&,n.很多，许多，大量,"
           ],
           "ukphone": "mʌtʃ",
           "usphone": "mʌtʃ"
@@ -4911,7 +4911,7 @@
         {
           "name": "per",
           "trans": [
-            "prep.每，按,,(per)"
+            "prep.每，按,,"
           ],
           "ukphone": "pɜː",
           "usphone": "pɚ"
@@ -4919,7 +4919,7 @@
         {
           "name": "over",
           "trans": [
-            "prep.在…上方,,(,ou,wo)"
+            "prep.在…上方,,"
           ],
           "ukphone": "'əʊvə",
           "usphone": "ˈoʊvə(r)"
@@ -4927,7 +4927,7 @@
         {
           "name": "mirror",
           "trans": [
-            "n.&,v.镜，反射，反映,,(mi,re)"
+            "n.&,v.镜，反射，反映,,"
           ],
           "ukphone": "'mɪrə",
           "usphone": "ˈmɪrɚ"
@@ -4935,7 +4935,7 @@
         {
           "name": "request",
           "trans": [
-            "n.&,vt.请求,,(r,i,k,ua,i,s,i,t,e)"
+            "n.&,vt.请求,,"
           ],
           "ukphone": "rɪ'kwest",
           "usphone": "rɪˈkwɛst"
@@ -4943,9 +4943,9 @@
         {
           "name": "keypad",
           "trans": [
-            "n.小键盘,,(ki,pai,de)"
+            "n.小键盘,,"
           ],
-          "ukphone": "",
+          "ukphone": "ˈkiːpæd",
           "usphone": "ˈkiˌpæd"
         }
       ]
@@ -4957,7 +4957,7 @@
         {
           "name": "keep",
           "trans": [
-            "v.保持，保存,(ke,p)"
+            "v.保持，保存,"
           ],
           "ukphone": "kiːp",
           "usphone": "kip"
@@ -4965,7 +4965,7 @@
         {
           "name": "resident",
           "trans": [
-            "a.驻留的,,(rei,zi,den,t)"
+            "a.驻留的,,"
           ],
           "ukphone": "'rezɪdənt",
           "usphone": "ˈrɛzɪdənt, -ˌdɛnt"
@@ -4973,7 +4973,7 @@
         {
           "name": "learning",
           "trans": [
-            "n.学问，知识,,(lei,ning)"
+            "n.学问，知识,,"
           ],
           "ukphone": "'lɜːnɪŋ",
           "usphone": "ˈlɜrnɪŋ"
@@ -4981,7 +4981,7 @@
         {
           "name": "talk",
           "trans": [
-            "v.通话，谈话,(tao,ke)"
+            "v.通话，谈话,"
           ],
           "ukphone": "tɔːk",
           "usphone": "tɔk"
@@ -4989,7 +4989,7 @@
         {
           "name": "summary",
           "trans": [
-            "n.摘要，汇总，提要,,(se,me,rui)"
+            "n.摘要，汇总，提要,,"
           ],
           "ukphone": "'sʌməri",
           "usphone": "ˈsʌməri"
@@ -4997,7 +4997,7 @@
         {
           "name": "well",
           "trans": [
-            "n.&,a.井；好，良好,,(wa,i,ou)"
+            "n.&,a.井；好，良好,,"
           ],
           "ukphone": "wel",
           "usphone": "wɛl"
@@ -5005,7 +5005,7 @@
         {
           "name": "link",
           "trans": [
-            "n.&,v.链接；连接，联络,(lin,k)"
+            "n.&,v.链接；连接，联络,"
           ],
           "ukphone": "lɪŋk",
           "usphone": "lɪŋk"
@@ -5013,7 +5013,7 @@
         {
           "name": "according",
           "trans": [
-            "to,a.按照，根据,,(ao,kui,ding)"
+            "to,a.按照，根据,,"
           ],
           "ukphone": "ə'kɔːdɪŋ",
           "usphone": "ə'kɔdɪŋ"
@@ -5021,7 +5021,7 @@
         {
           "name": "identify",
           "trans": [
-            "v.识别，辨认,(ai,dai,nei,fai)"
+            "v.识别，辨认,"
           ],
           "ukphone": "aɪ'dentɪfaɪ",
           "usphone": "aɪˈdɛntəˌfaɪ"
@@ -5029,15 +5029,15 @@
         {
           "name": "designated",
           "trans": [
-            "a.指定的，特指的,,(da,si,nei,te,d)"
+            "a.指定的，特指的,,"
           ],
-          "ukphone": "",
+          "ukphone": "ˈdezɪɡneɪtɪd",
           "usphone": "'dezɪɡneɪtɪd"
         },
         {
           "name": "pertain",
           "trans": [
-            "vi.附属，属于，关于,,(p,tin)"
+            "vi.附属，属于，关于,,"
           ],
           "ukphone": "pər 'teɪn",
           "usphone": "pərˈteɪn"
@@ -5045,7 +5045,7 @@
         {
           "name": "expansion",
           "trans": [
-            "n.展开，展开式,,(ei,k,si,pan,sheng)"
+            "n.展开，展开式,,"
           ],
           "ukphone": "ɪk'spænʃn",
           "usphone": "ɪkˈspænʃən"
@@ -5053,7 +5053,7 @@
         {
           "name": "incompatible",
           "trans": [
-            "a.不兼容的,(in,ca,mu,pai,tei,bou)"
+            "a.不兼容的,"
           ],
           "ukphone": "ˌɪnkəm'pætəbl",
           "usphone": "ˌɪnkəmˈpætəbəl"
@@ -5061,15 +5061,15 @@
         {
           "name": "blinking",
           "trans": [
-            "n.闪烁,,(bo,lin,kin)"
+            "n.闪烁,,"
           ],
-          "ukphone": "",
+          "ukphone": "ˈblɪŋkɪŋ",
           "usphone": "'blɪŋkɪŋ"
         },
         {
           "name": "month",
           "trans": [
-            "n.月份,,(ma,n,pu)"
+            "n.月份,,"
           ],
           "ukphone": "mʌnθ",
           "usphone": "mʌnθ"
@@ -5077,7 +5077,7 @@
         {
           "name": "precede",
           "trans": [
-            "v.先于,,(pe,ci,de)"
+            "v.先于,,"
           ],
           "ukphone": "prɪ'siːd",
           "usphone": "prɪˈsid"
@@ -5085,7 +5085,7 @@
         {
           "name": "readily",
           "trans": [
-            "ad.容易地，不勉强,,(ruai,de,li)"
+            "ad.容易地，不勉强,,"
           ],
           "ukphone": "'redɪli",
           "usphone": "ˈrɛdəli, ˈrɛdli"
@@ -5093,15 +5093,15 @@
         {
           "name": "transportable",
           "trans": [
-            "a.可移动的,,(chuan,s,ip,e,dei,bao)"
+            "a.可移动的,,"
           ],
-          "ukphone": "",
+          "ukphone": "tɹænˈspɔː(ɹ)təb(ə)l",
           "usphone": "trænˈspɔrtəbl"
         },
         {
           "name": "appropriately",
           "trans": [
-            "ad.适当地,,(a,p,rou,pe,te,li)"
+            "ad.适当地,,"
           ],
           "ukphone": "əˈprəʊpriətli",
           "usphone": "ə'proʊprɪrtlɪ"
@@ -5109,7 +5109,7 @@
         {
           "name": "routine",
           "trans": [
-            "n.程序，例行程序,,(rui,tin)"
+            "n.程序，例行程序,,"
           ],
           "ukphone": "ruː'tiːn",
           "usphone": "ruˈtin"
@@ -5117,7 +5117,7 @@
         {
           "name": "ready",
           "trans": [
-            "a.就绪，准备好的,,(ruai,dei)"
+            "a.就绪，准备好的,,"
           ],
           "ukphone": "'redɪ",
           "usphone": "ˈrɛdi"
@@ -5125,7 +5125,7 @@
         {
           "name": "listing",
           "trans": [
-            "n.列表，编目,,(li,si,tin)"
+            "n.列表，编目,,"
           ],
           "ukphone": "'listiŋ",
           "usphone": "ˈlɪstɪŋ"
@@ -5133,7 +5133,7 @@
         {
           "name": "newly",
           "trans": [
-            "ad.新近，重新,,(nui,li)"
+            "ad.新近，重新,,"
           ],
           "ukphone": "'njuːlɪ",
           "usphone": "ˈnuli"
@@ -5141,7 +5141,7 @@
         {
           "name": "year",
           "trans": [
-            "n.(一)年，年度，年龄,,(ye)"
+            "n.(一)年，年度，年龄,,"
           ],
           "ukphone": "jɪə; jɜː",
           "usphone": "jɪr"
@@ -5149,7 +5149,7 @@
         {
           "name": "contact",
           "trans": [
-            "n.接触，触点,,(kang,tai,ke,t)"
+            "n.接触，触点,,"
           ],
           "ukphone": "'kɒntækt",
           "usphone": "ˈkɑntækt"
@@ -5163,7 +5163,7 @@
         {
           "name": "session",
           "trans": [
-            "n.对话，通话,,(se,sheng)"
+            "n.对话，通话,,"
           ],
           "ukphone": "'seʃn",
           "usphone": "ˈsɛʃən"
@@ -5171,7 +5171,7 @@
         {
           "name": "own",
           "trans": [
-            "a.&,v.自己的；拥有,,(ou,en)"
+            "a.&,v.自己的；拥有,,"
           ],
           "ukphone": "əʊn",
           "usphone": "oʊn"
@@ -5179,15 +5179,15 @@
         {
           "name": "redraw",
           "trans": [
-            "vt.再拉,,(rui,di,ao)"
+            "vt.再拉,,"
           ],
-          "ukphone": "",
+          "ukphone": "ˌriːˈdrɔː",
           "usphone": "ˌriːˈdrɔː"
         },
         {
           "name": "here",
           "trans": [
-            "ad.在这里,(he,i,er)"
+            "ad.在这里,"
           ],
           "ukphone": "hɪə",
           "usphone": "hɪr"
@@ -5195,7 +5195,7 @@
         {
           "name": "manual",
           "trans": [
-            "a.手工的，手动的,,(man,nui,ou)"
+            "a.手工的，手动的,,"
           ],
           "ukphone": "'mænjuəl",
           "usphone": "ˈmænjuəl"
@@ -5203,7 +5203,7 @@
         {
           "name": "particular",
           "trans": [
-            "a.特定的，特别的,,(pe,tei,ke,le)"
+            "a.特定的，特别的,,"
           ],
           "ukphone": "pər'tɪkjələr",
           "usphone": "pərˈtɪkjələ(r)"
@@ -5211,7 +5211,7 @@
         {
           "name": "rectangle",
           "trans": [
-            "n.矩形,,(rui,ke,ten,gou)"
+            "n.矩形,,"
           ],
           "ukphone": "'rektæŋgl",
           "usphone": "ˈrɛkˌtæŋɡəl"
@@ -5219,7 +5219,7 @@
         {
           "name": "additive",
           "trans": [
-            "a.&,n.相加的；附加物,,(ai,de,te,wu)"
+            "a.&,n.相加的；附加物,,"
           ],
           "ukphone": "'ædətɪv",
           "usphone": "ˈædɪtɪv"
@@ -5227,7 +5227,7 @@
         {
           "name": "similar",
           "trans": [
-            "a.相似的,(si,mi,le)"
+            "a.相似的,"
           ],
           "ukphone": "'sɪmɪlə",
           "usphone": "ˈsɪməlɚ"
@@ -5235,7 +5235,7 @@
         {
           "name": "assembly",
           "trans": [
-            "n.汇编，安装，装配,,(e,san,bo,li)"
+            "n.汇编，安装，装配,,"
           ],
           "ukphone": "ə'sembli",
           "usphone": "əˈsɛmbli"
@@ -5243,7 +5243,7 @@
         {
           "name": "copyright",
           "trans": [
-            "n.版权,,(kao,p,i,r,ua,i,te)"
+            "n.版权,,"
           ],
           "ukphone": "'kɒpɪraɪt",
           "usphone": "ˈkɑpiraɪt"
@@ -5251,7 +5251,7 @@
         {
           "name": "description",
           "trans": [
-            "n.描述,,(dei,si,ke,pe,sheng)"
+            "n.描述,,"
           ],
           "ukphone": "dɪ'skrɪpʃ(ə)n",
           "usphone": "dɪˈskrɪpʃən"
@@ -5259,7 +5259,7 @@
         {
           "name": "retrieve",
           "trans": [
-            "v.检索,,(e,chui,wu)"
+            "v.检索,,"
           ],
           "ukphone": "rɪ'triːv",
           "usphone": "rɪˈtriv"
@@ -5267,7 +5267,7 @@
         {
           "name": "mistake",
           "trans": [
-            "n.错误,,(mi,si,tei,ke)"
+            "n.错误,,"
           ],
           "ukphone": "mɪ'steɪk",
           "usphone": "mɪˈstek"
@@ -5275,15 +5275,15 @@
         {
           "name": "produce",
           "trans": [
-            "v.生产，制造,,(po,dui,si)"
+            "v.生产，制造,,"
           ],
-          "ukphone": "prəˈdju:s;(for n.)ˈprɒdju:s",
+          "ukphone": "prəˈdju:s; (for n.)ˈprɒdju:s",
           "usphone": "prəˈdus"
         },
         {
           "name": "ram",
           "trans": [
-            "随机存取存储器,,(ruai,en)"
+            "随机存取存储器,,"
           ],
           "ukphone": "ræm",
           "usphone": "ræm"
@@ -5291,7 +5291,7 @@
         {
           "name": "exception",
           "trans": [
-            "n.例外，异常，异议,(ei,kesai,po,sheng)"
+            "n.例外，异常，异议,"
           ],
           "ukphone": "ɪk'sepʃn",
           "usphone": "ɪkˈsɛpʃən"
@@ -5299,7 +5299,7 @@
         {
           "name": "digit",
           "trans": [
-            "n.数字，位数，位,,(di,zhi,te)"
+            "n.数字，位数，位,,"
           ],
           "ukphone": "'didʒit",
           "usphone": "ˈdɪdʒɪt"
@@ -5307,7 +5307,7 @@
         {
           "name": "reverse",
           "trans": [
-            "v.&,a.反向的，逆,,(ri,we,s)"
+            "v.&,a.反向的，逆,,"
           ],
           "ukphone": "rɪ'vɜːrs",
           "usphone": "rɪˈvɜrs"
@@ -5315,7 +5315,7 @@
         {
           "name": "minimum",
           "trans": [
-            "n.&,a.最小(的)，最低,,(mi,ni,men)"
+            "n.&,a.最小(的)，最低,,"
           ],
           "ukphone": "'mɪnɪməm",
           "usphone": "ˈmɪnəməm"
@@ -5323,7 +5323,7 @@
         {
           "name": "enough",
           "trans": [
-            "a.&,ad.足够的，充足的,,(,in,na,fu)"
+            "a.&,ad.足够的，充足的,,"
           ],
           "ukphone": "ɪ'nʌf",
           "usphone": "ɪˈnʌf"
@@ -5331,7 +5331,7 @@
         {
           "name": "although",
           "trans": [
-            "conj.虽然，即使,,(ao,wai,ou)"
+            "conj.虽然，即使,,"
           ],
           "ukphone": "ɔːl'ðəʊ; ɒl-",
           "usphone": "ɔlˈðo"
@@ -5339,15 +5339,15 @@
         {
           "name": "re",
           "trans": [
-            "index,v.&,n.变换(改变)符号,,(ruan,di,ke,s,i)"
+            "index,v.&,n.变换(改变)符号,,"
           ],
-          "ukphone": "",
+          "ukphone": "ɹeɪ",
           "usphone": "reɪ"
         },
         {
           "name": "third",
           "trans": [
-            "a.&,n.第三，三分之一,(ou,de,)"
+            "a.&,n.第三，三分之一,"
           ],
           "ukphone": "θɜːd",
           "usphone": "θɜrd"
@@ -5355,7 +5355,7 @@
         {
           "name": "red",
           "trans": [
-            "a.&,n.红色(的),(ruai,de)"
+            "a.&,n.红色(的),"
           ],
           "ukphone": "red",
           "usphone": "rɛd"
@@ -5369,7 +5369,7 @@
         {
           "name": "along",
           "trans": [
-            "prep.&,ad.沿着,,(e,lang)"
+            "prep.&,ad.沿着,,"
           ],
           "ukphone": "ə'lɒŋ",
           "usphone": "əˈlɔŋ"
@@ -5377,7 +5377,7 @@
         {
           "name": "test",
           "trans": [
-            "n.&,v.测试,(tei,si,t)"
+            "n.&,v.测试,"
           ],
           "ukphone": "test",
           "usphone": "test"
@@ -5385,7 +5385,7 @@
         {
           "name": "small",
           "trans": [
-            "a.小的，小型的,,(si,mao,ou)"
+            "a.小的，小型的,,"
           ],
           "ukphone": "smɔːl",
           "usphone": "smɔl"
@@ -5393,7 +5393,7 @@
         {
           "name": "feed",
           "trans": [
-            "v.馈给，(打印机)进纸,,(,fi,d,e)"
+            "v.馈给，(打印机)进纸,,"
           ],
           "ukphone": "fiːd",
           "usphone": "fid"
@@ -5401,7 +5401,7 @@
         {
           "name": "company",
           "trans": [
-            "n.&,v.公司；交际，交往(kan,po,ni)"
+            "n.&,v.公司；交际，交往"
           ],
           "ukphone": "'kʌmp(ə)nɪ",
           "usphone": "ˈkʌmpəni"
@@ -5409,7 +5409,7 @@
         {
           "name": "movie",
           "trans": [
-            "n.影片，电影(院),(mu,wi)"
+            "n.影片，电影(院),"
           ],
           "ukphone": "'muːvɪ",
           "usphone": "ˈmuvi"
@@ -5417,7 +5417,7 @@
         {
           "name": "compile",
           "trans": [
-            "vt.编译,,(ca,m,pai,ou)"
+            "vt.编译,,"
           ],
           "ukphone": "kəm'paɪl",
           "usphone": "kəmˈpaɪl"
@@ -5425,7 +5425,7 @@
         {
           "name": "frequently",
           "trans": [
-            "ad.常常，频繁地,(fei,kuai,te,li)"
+            "ad.常常，频繁地,"
           ],
           "ukphone": "'friːkw(ə)ntlɪ",
           "usphone": "ˈfrikwəntlɪ"
@@ -5433,9 +5433,9 @@
         {
           "name": "undefined",
           "trans": [
-            "a.未定义的,,(an,de,fai,en,de)"
+            "a.未定义的,,"
           ],
-          "ukphone": "",
+          "ukphone": "ˌʌndɪˈfaɪnd",
           "usphone": "ˌʌndɪˈfaɪnd"
         },
         {
@@ -5449,7 +5449,7 @@
         {
           "name": "tick",
           "trans": [
-            "v；n.滴答(响)；勾号(√),,(t,i,k,e)"
+            "v；n.滴答(响)；勾号(√),,"
           ],
           "ukphone": "tɪk",
           "usphone": "tɪk"
@@ -5465,7 +5465,7 @@
         {
           "name": "intense",
           "trans": [
-            "a.强烈的，高度的,,(in,ten,si)"
+            "a.强烈的，高度的,,"
           ],
           "ukphone": "ɪn'tens",
           "usphone": "ɪnˈtɛns"
@@ -5473,7 +5473,7 @@
         {
           "name": "documentation",
           "trans": [
-            "n.文件编制，文本(dao,kei,men,tei,sheng)"
+            "n.文件编制，文本"
           ],
           "ukphone": "ˌdɑːkjumen'teɪʃn",
           "usphone": "ˌdɑkjumenˈteɪʃn"
@@ -5481,7 +5481,7 @@
         {
           "name": "asterisk",
           "trans": [
-            "n.星号(*),,(a,si,te,s,k)"
+            "n.星号(*),,"
           ],
           "ukphone": "'æstərɪsk",
           "usphone": "ˈæstəˌrɪsk"
@@ -5489,7 +5489,7 @@
         {
           "name": "easily",
           "trans": [
-            "ad.容易地，轻易地,,(y,zi,li)"
+            "ad.容易地，轻易地,,"
           ],
           "ukphone": "'iːzɪlɪ",
           "usphone": "ˈizəli"
@@ -5497,7 +5497,7 @@
         {
           "name": "become",
           "trans": [
-            "v.成为，变成，适宜,,(bi,ka,mu)"
+            "v.成为，变成，适宜,,"
           ],
           "ukphone": "bɪ'kʌm",
           "usphone": "bɪˈkʌm"
@@ -5505,7 +5505,7 @@
         {
           "name": "address",
           "trans": [
-            "vt.&,n.寻址；地址,(e,de,zhuai,si)"
+            "vt.&,n.寻址；地址,"
           ],
           "ukphone": "ə'dres",
           "usphone": "ˈædres"
@@ -5513,7 +5513,7 @@
         {
           "name": "interface",
           "trans": [
-            "n.接口,,(,in,te,fe,i,s,i)"
+            "n.接口,,"
           ],
           "ukphone": "'ɪntərfeɪs",
           "usphone": "ˈɪntərfeɪs"
@@ -5521,7 +5521,7 @@
         {
           "name": "pause",
           "trans": [
-            "vi.暂停,(pao,zi)"
+            "vi.暂停,"
           ],
           "ukphone": "pɔːz",
           "usphone": "pɔz"
@@ -5529,7 +5529,7 @@
         {
           "name": "repeat",
           "trans": [
-            "v.重复,,(ri,pi,te)"
+            "v.重复,,"
           ],
           "ukphone": "rɪ'piːt",
           "usphone": "rɪˈpit"
@@ -5537,23 +5537,23 @@
         {
           "name": "restart",
           "trans": [
-            "v.重新启动，再启动,,(rui,sit,a,te)"
+            "v.重新启动，再启动,,"
           ],
-          "ukphone": "",
+          "ukphone": "ˈɹiːˌstɑɹt",
           "usphone": "ˌriˈstɑrt"
         },
         {
           "name": "assumed",
           "trans": [
-            "a.假定的,,(e,sing,m,d)"
+            "a.假定的,,"
           ],
-          "ukphone": "",
+          "ukphone": "əˈsjuːmd",
           "usphone": "əˈsumd"
         },
         {
           "name": "speed",
           "trans": [
-            "n.速度,,(s,i,p,i,d)"
+            "n.速度,,"
           ],
           "ukphone": "spiːd",
           "usphone": "spid"
@@ -5561,7 +5561,7 @@
         {
           "name": "entry",
           "trans": [
-            "n.输入，项(目)，入口,(en,chui)"
+            "n.输入，项(目)，入口,"
           ],
           "ukphone": "ˈentrɪ",
           "usphone": "ˈɛntri"
@@ -5575,7 +5575,7 @@
         {
           "name": "combine",
           "trans": [
-            "v.组合，联合,,(ca,m,bai,n)"
+            "v.组合，联合,,"
           ],
           "ukphone": "kəm'baɪn",
           "usphone": "kəmˈbaɪn"
@@ -5583,7 +5583,7 @@
         {
           "name": "organize",
           "trans": [
-            "v.组织，创办，成立,,(o,ge,na,i,zi)"
+            "v.组织，创办，成立,,"
           ],
           "ukphone": "ˈɔ:gənaɪz",
           "usphone": "ˈɔrgənaɪz"
@@ -5591,7 +5591,7 @@
         {
           "name": "finished",
           "trans": [
-            "a.完成的,,(,fi,ni,s,hi,t,)"
+            "a.完成的,,"
           ],
           "ukphone": "'fɪnɪʃt",
           "usphone": "ˈfɪnɪʃt"
@@ -5599,15 +5599,15 @@
         {
           "name": "mixed",
           "trans": [
-            "a.混合的,,(mi,k,s,t)"
+            "a.混合的,,"
           ],
-          "ukphone": "",
+          "ukphone": "mɪkst",
           "usphone": "mɪkst"
         },
         {
           "name": "permit",
           "trans": [
-            "v.许可，容许,(po,mi,t)"
+            "v.许可，容许,"
           ],
           "ukphone": "pə'mɪt",
           "usphone": "pərˈmɪt"
@@ -5615,15 +5615,15 @@
         {
           "name": "formatting",
           "trans": [
-            "n.格式化,,(fao,mei,tin)"
+            "n.格式化,,"
           ],
-          "ukphone": "",
+          "ukphone": "ˈfɔɹmætiŋ",
           "usphone": "'fɔmætɪŋ"
         },
         {
           "name": "root",
           "trans": [
-            "n.根,(ru,te)"
+            "n.根,"
           ],
           "ukphone": "ruːt",
           "usphone": "rut, rʊt"
@@ -5631,7 +5631,7 @@
         {
           "name": "symbol",
           "trans": [
-            "n.符号，记号,,(sen,bou)"
+            "n.符号，记号,,"
           ],
           "ukphone": "'sɪmb(ə)l",
           "usphone": "ˈsɪmbəl"
@@ -5639,7 +5639,7 @@
         {
           "name": "binary",
           "trans": [
-            "n.&,a.二进制；双态的,,(ba,be,rui)"
+            "n.&,a.二进制；双态的,,"
           ],
           "ukphone": "'baɪnəri",
           "usphone": "ˈbaɪnəri"
@@ -5647,7 +5647,7 @@
         {
           "name": "whenever",
           "trans": [
-            "ad.&,conj.随时,,(wen,na,we)"
+            "ad.&,conj.随时,,"
           ],
           "ukphone": "wen'evə",
           "usphone": "hwɛnˈɛvɚ"
@@ -5655,7 +5655,7 @@
         {
           "name": "reach",
           "trans": [
-            "v.&,n.范围，达到范围,,(rui,chi)"
+            "v.&,n.范围，达到范围,,"
           ],
           "ukphone": "riːtʃ",
           "usphone": "ritʃ"
@@ -5663,7 +5663,7 @@
         {
           "name": "caution",
           "trans": [
-            "n.&,v.警告，注意,,(kao,sheng)"
+            "n.&,v.警告，注意,,"
           ],
           "ukphone": "'kɔːʃ(ə)n",
           "usphone": "ˈkɔʃən"
@@ -5671,9 +5671,9 @@
         {
           "name": "subtotal",
           "trans": [
-            "n.&,v.小计，求部分和,,(sa,bo,tei,lou)"
+            "n.&,v.小计，求部分和,,"
           ],
-          "ukphone": "",
+          "ukphone": "ˈsʌbtəʊtl",
           "usphone": "ˈsʌbtoʊtl"
         },
         {
@@ -5697,7 +5697,7 @@
           "trans": [
             "a.联合的，相联的"
           ],
-          "ukphone": "",
+          "ukphone": "əˈsəʊsieɪtɪd",
           "usphone": "əˈsoʊʃieɪtɪd"
         },
         {
@@ -5729,7 +5729,7 @@
           "trans": [
             "a.十六进制的"
           ],
-          "ukphone": "",
+          "ukphone": "ˌhɛksəˈdɛsɪməl",
           "usphone": "ˌhɛksəˈdɛsəməl"
         },
         {
@@ -5887,7 +5887,7 @@
           "trans": [
             "ad.水平地"
           ],
-          "ukphone": "",
+          "ukphone": "ˌhɒrɪˈzɒntəli",
           "usphone": "ˌhɑrɪˈzɑntəlɪ"
         },
         {
@@ -5895,7 +5895,7 @@
           "trans": [
             "v.退格，回退"
           ],
-          "ukphone": "",
+          "ukphone": "ˈbækˌspeɪs",
           "usphone": "'bækspeɪs"
         },
         {
@@ -5935,7 +5935,7 @@
           "trans": [
             "a.有格式的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈfɔːmætɪd",
           "usphone": "fɔrmæt"
         },
         {
@@ -5975,7 +5975,7 @@
           "trans": [
             "v.重定格式"
           ],
-          "ukphone": "",
+          "ukphone": "ˌriːˈfɔːmæt",
           "usphone": "riˈfɔrmæt"
         }
       ]
@@ -6005,7 +6005,7 @@
           "trans": [
             "a.受控制的，受操纵的"
           ],
-          "ukphone": "",
+          "ukphone": "kənˈtɹəʊld",
           "usphone": "kənˈtroʊld"
         },
         {
@@ -6037,7 +6037,7 @@
           "trans": [
             "n.&,a.结尾；尾随的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈtreɪlɪŋ",
           "usphone": "'treɪlɪŋ"
         },
         {
@@ -6101,7 +6101,7 @@
           "trans": [
             "a.&,n.成形"
           ],
-          "ukphone": "",
+          "ukphone": "fɔːmd",
           "usphone": "'fɔmd"
         },
         {
@@ -6157,7 +6157,7 @@
           "trans": [
             "a.开路的，断开的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈəʊpənd",
           "usphone": "'oʊpənd"
         },
         {
@@ -6283,7 +6283,7 @@
           "trans": [
             "a.适用的，外加的"
           ],
-          "ukphone": "",
+          "ukphone": "əˈplaɪd",
           "usphone": "əˈplaɪd"
         },
         {
@@ -6355,7 +6355,7 @@
           "trans": [
             "n.分区(裂)"
           ],
-          "ukphone": "",
+          "ukphone": "ˈsplɪtɪŋ",
           "usphone": "ˈsplɪtɪŋ"
         },
         {
@@ -6417,7 +6417,7 @@
           "trans": [
             "a.无效的"
           ],
-          "ukphone": "ˈɪnvəlɪd；ɪnˈvælɪd",
+          "ukphone": "ˈɪnvəlɪd; ɪnˈvælɪd",
           "usphone": "ˈɪnvəlɪd"
         },
         {
@@ -6425,7 +6425,7 @@
           "trans": [
             "n.编译程序(器)"
           ],
-          "ukphone": "",
+          "ukphone": "kəmˈpaɪlə",
           "usphone": "kəmˈpaɪlɚ"
         },
         {
@@ -6481,7 +6481,7 @@
           "trans": [
             "a.异步的，非同步的"
           ],
-          "ukphone": "",
+          "ukphone": "eɪˈsɪŋkɹənəs",
           "usphone": "e'sɪŋkrənəs"
         },
         {
@@ -6585,7 +6585,7 @@
           "trans": [
             "a.转换的，变换的"
           ],
-          "ukphone": "",
+          "ukphone": "kənˈvɜːtɪd",
           "usphone": "kən'vɜtɪd"
         },
         {
@@ -6623,7 +6623,7 @@
           "trans": [
             "n.装入，加载，存放"
           ],
-          "ukphone": "",
+          "ukphone": "ˈləʊ.dɪŋ",
           "usphone": "ˈloʊdɪŋ"
         },
         {
@@ -6735,7 +6735,7 @@
           "trans": [
             "控制处理部件"
           ],
-          "ukphone": "",
+          "ukphone": "ˌsiː piː ˈjuː",
           "usphone": "ˌsipi'ju"
         },
         {
@@ -6759,7 +6759,7 @@
           "trans": [
             "vt.释放，去活化"
           ],
-          "ukphone": "",
+          "ukphone": "ˌdiːˈæktɪveɪt",
           "usphone": "diˈæktəˌvet"
         },
         {
@@ -7115,7 +7115,7 @@
           "trans": [
             "a.&,n.六角形的"
           ],
-          "ukphone": "",
+          "ukphone": "hɛks",
           "usphone": "heks"
         },
         {
@@ -7193,9 +7193,9 @@
         {
           "name": "kilobyte",
           "trans": [
-            "n.千字节(kb)"
+            "n.千字节"
           ],
-          "ukphone": "",
+          "ukphone": "ˈkɪləbaɪt",
           "usphone": "ˈkɪləˌbaɪt"
         },
         {
@@ -7225,7 +7225,7 @@
           "trans": [
             "n.定位，查找"
           ],
-          "ukphone": "",
+          "ukphone": "ləʊˈkeɪtɪŋ",
           "usphone": "loʊ'kəɪtɪŋ"
         },
         {
@@ -7409,7 +7409,7 @@
           "trans": [
             "a.被接收的，公认的"
           ],
-          "ukphone": "",
+          "ukphone": "ɹɪˈsiːvd",
           "usphone": "rɪˈsivd"
         },
         {
@@ -7535,7 +7535,7 @@
           "trans": [
             "a.可替换的"
           ],
-          "ukphone": "",
+          "ukphone": "rɪˈpleɪsəbl",
           "usphone": "rɪˈpleɪsəbl"
         },
         {
@@ -7559,7 +7559,7 @@
           "trans": [
             "vt.使成形"
           ],
-          "ukphone": "",
+          "ukphone": "kənˈfɪɡə(ɹ)",
           "usphone": "kənˈfɪgjər"
         },
         {
@@ -7607,7 +7607,7 @@
           "trans": [
             "a.承认的，申报的"
           ],
-          "ukphone": "",
+          "ukphone": "dɪˈklɛəd",
           "usphone": "dɪˈklerd"
         },
         {
@@ -7623,7 +7623,7 @@
           "trans": [
             "ad.用图表表示"
           ],
-          "ukphone": "",
+          "ukphone": "ˈɡræfɪkli",
           "usphone": "ˈɡræfɪklɪ"
         }
       ]
@@ -7653,7 +7653,7 @@
           "trans": [
             "a.对准的，均衡的"
           ],
-          "ukphone": "",
+          "ukphone": "əˈlaɪnd",
           "usphone": "ə'laɪnd"
         },
         {
@@ -7717,7 +7717,7 @@
           "trans": [
             "vt.重读"
           ],
-          "ukphone": "",
+          "ukphone": "ɹiːˈɹiːd",
           "usphone": "ri'rid"
         },
         {
@@ -7725,7 +7725,7 @@
           "trans": [
             "v.重写"
           ],
-          "ukphone": "",
+          "ukphone": "ˌəʊvəˈraɪt",
           "usphone": "ˌoʊvərˈraɪt"
         },
         {
@@ -7765,7 +7765,7 @@
           "trans": [
             "a.容许的"
           ],
-          "ukphone": "",
+          "ukphone": "əˈlaʊd",
           "usphone": "ə'laʊd"
         },
         {
@@ -7813,7 +7813,7 @@
           "trans": [
             "n.快速返回"
           ],
-          "ukphone": "",
+          "ukphone": "ˈfɑːstˌbæk",
           "usphone": "'fɑstbæk"
         },
         {
@@ -7851,7 +7851,7 @@
           "trans": [
             "a.最高的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈhaɪ.ɪst",
           "usphone": "haɪɪst"
         },
         {
@@ -7963,7 +7963,7 @@
           "trans": [
             "vi.&,n.经过"
           ],
-          "ukphone": "",
+          "ukphone": "ɪ'læpst",
           "usphone": "ɪ'læpst"
         },
         {
@@ -8003,7 +8003,7 @@
           "trans": [
             "a.&,n.单音的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈmɒnəʊ",
           "usphone": "ˈmɑnoʊ"
         },
         {
@@ -8050,7 +8050,7 @@
             "prep.贯穿，整，遍"
           ],
           "ukphone": "θruː'aʊt",
-          "usphone": " θruˈaʊt"
+          "usphone": "θruˈaʊt"
         },
         {
           "name": "via",
@@ -8129,7 +8129,7 @@
           "trans": [
             "n.处理程序"
           ],
-          "ukphone": "",
+          "ukphone": "ˈhæn.dlə",
           "usphone": "ˈhændlɚ"
         },
         {
@@ -8161,7 +8161,7 @@
           "trans": [
             "n.开窗口"
           ],
-          "ukphone": "",
+          "ukphone": "ˈwɪndəʊɪŋ",
           "usphone": "'wɪndoʊɪŋ"
         },
         {
@@ -8573,7 +8573,7 @@
           "trans": [
             "n.(文件的)整理汇集"
           ],
-          "ukphone": "",
+          "ukphone": "faɪ.lɪŋ",
           "usphone": "ˈfaɪlɪŋ"
         },
         {
@@ -8581,7 +8581,7 @@
           "trans": [
             "ad.相等，恒等"
           ],
-          "ukphone": "",
+          "ukphone": "aɪˈdentɪkli",
           "usphone": "aɪ'dentɪklɪ"
         },
         {
@@ -8637,7 +8637,7 @@
           "trans": [
             "ad.永久地，持久地"
           ],
-          "ukphone": "",
+          "ukphone": "ˈpɜːmənəntli",
           "usphone": "ˈpəmənəntlɪ"
         },
         {
@@ -8645,7 +8645,7 @@
           "trans": [
             "n.加速装置，加速剂"
           ],
-          "ukphone": "",
+          "ukphone": "æk.ˈsɛl.ə.ˌɹeɪ.tɚ",
           "usphone": "ækˈsɛləˌretɚ"
         },
         {
@@ -8699,7 +8699,7 @@
           "trans": [
             "n.首部，标题，报头"
           ],
-          "ukphone": "",
+          "ukphone": "ˈhɛdə",
           "usphone": "ˈhɛdɚ"
         },
         {
@@ -8779,7 +8779,7 @@
           "trans": [
             "a.递归的，循环的"
           ],
-          "ukphone": "",
+          "ukphone": "rɪˈkɜːsɪv",
           "usphone": "rɪˈkɜrsɪv"
         },
         {
@@ -8929,7 +8929,7 @@
           "trans": [
             "a.额定的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈɹeɪtɪd",
           "usphone": "'reɪtɪd"
         },
         {
@@ -9001,7 +9001,7 @@
           "trans": [
             "a.区分的，辩别的"
           ],
-          "ukphone": "",
+          "ukphone": "ˌdaɪəˈkrɪtɪkl",
           "usphone": "ˌdaɪə'krɪtɪkl"
         },
         {
@@ -9096,7 +9096,7 @@
             "v.&,n.(再)检查"
           ],
           "ukphone": "rɪ'vjuː",
-          "usphone": " rɪˈvju"
+          "usphone": "rɪˈvju"
         },
         {
           "name": "whatever",
@@ -9151,7 +9151,7 @@
           "trans": [
             "a.&,n.微的，百万分之一"
           ],
-          "ukphone": "",
+          "ukphone": "ˈmaɪ.kɹoʊ",
           "usphone": "ˈmaɪkroʊ"
         },
         {
@@ -9215,7 +9215,7 @@
           "trans": [
             "a.发声的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈsaʊndɪŋ",
           "usphone": "ˈsaʊndɪŋ"
         },
         {
@@ -9293,7 +9293,7 @@
           "trans": [
             "n.处理，操纵"
           ],
-          "ukphone": "",
+          "ukphone": "ˈhændlɪŋ",
           "usphone": "ˈhændlɪŋ"
         },
         {
@@ -9515,7 +9515,7 @@
           "trans": [
             "n.(电路参数)限制处理"
           ],
-          "ukphone": "",
+          "ukphone": "ˈlɪmɪtɪŋ",
           "usphone": "ˈlɪmɪtɪŋ"
         },
         {
@@ -9676,7 +9676,7 @@
             "v.考虑，认为，设想"
           ],
           "ukphone": "kən'sɪdə",
-          "usphone": "kənˈsɪdər "
+          "usphone": "kənˈsɪdər"
         },
         {
           "name": "detect",
@@ -9761,7 +9761,7 @@
           "trans": [
             "a.强制的，压力的"
           ],
-          "ukphone": "",
+          "ukphone": "fɔːst",
           "usphone": "fɔrst"
         },
         {
@@ -9975,7 +9975,7 @@
           "trans": [
             "ad.顺序地"
           ],
-          "ukphone": "",
+          "ukphone": "sɪˈkwenʃəli",
           "usphone": "sɪ'kwenʃəlɪ"
         },
         {
@@ -9991,7 +9991,7 @@
           "trans": [
             "n.运行时间"
           ],
-          "ukphone": "",
+          "ukphone": "ˈrʌntaɪm",
           "usphone": "rʌn'taɪm"
         },
         {
@@ -10039,8 +10039,8 @@
           "trans": [
             "a.低的，浅的，弱的"
           ],
-          "ukphone": "",
-          "usphone": "loʊ"
+          "ukphone": "ləʊ",
+          "usphone": "ləʊ"
         },
         {
           "name": "sheet",
@@ -10141,7 +10141,7 @@
           "trans": [
             "n.子程序"
           ],
-          "ukphone": "",
+          "ukphone": "ˈsʌbruːtiːn",
           "usphone": "ˈsʌbruˌtin"
         },
         {
@@ -10149,7 +10149,7 @@
           "trans": [
             "a.加括号的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈbrækɪtɪd",
           "usphone": "'brækətɪd"
         },
         {
@@ -10157,7 +10157,7 @@
           "trans": [
             "ad.用手，手动地"
           ],
-          "ukphone": "",
+          "ukphone": "ˈmænjuəli",
           "usphone": "ˈmænjʊəlɪ"
         },
         {
@@ -10173,7 +10173,7 @@
           "trans": [
             "n.自动变址(数)"
           ],
-          "ukphone": "",
+          "ukphone": "ˌɔːtəʊˈɪndeks",
           "usphone": "ɔ'tɔɪndeks"
         },
         {
@@ -10197,7 +10197,7 @@
           "trans": [
             "n.显示，表现"
           ],
-          "ukphone": "",
+          "ukphone": "ˈʃəʊɪŋ",
           "usphone": "ˈʃoʊɪŋ"
         },
         {
@@ -10253,7 +10253,7 @@
           "trans": [
             "n.兆，百万"
           ],
-          "ukphone": "",
+          "ukphone": "ˈmɛɡə",
           "usphone": "'meɡə"
         },
         {
@@ -10339,7 +10339,7 @@
           "trans": [
             "a.容许的，承认的"
           ],
-          "ukphone": "",
+          "ukphone": "əˈlaʊəbl",
           "usphone": "əˈlaʊəbl"
         },
         {
@@ -10347,7 +10347,7 @@
           "trans": [
             "n.限制，边界"
           ],
-          "ukphone": "",
+          "ukphone": "lɪmɪ'teɪʃnz",
           "usphone": "lɪmɪ'teɪʃnz"
         },
         {
@@ -10395,7 +10395,7 @@
           "trans": [
             "a.结果的，合成的"
           ],
-          "ukphone": "",
+          "ukphone": "ɹɪˈzʌltɪŋ",
           "usphone": "rɪ'zʌltɪŋ"
         },
         {
@@ -10427,7 +10427,7 @@
           "trans": [
             "n.配合动作性"
           ],
-          "ukphone": "",
+          "ukphone": "ɪnˌtɜːprɪˈtəbɪlɪti",
           "usphone": "ɪntɜprɪ'təbɪlɪtɪ"
         },
         {
@@ -10451,7 +10451,7 @@
           "trans": [
             "n.变址，标引，加下标"
           ],
-          "ukphone": "",
+          "ukphone": "ˈɪndeksɪŋ",
           "usphone": "'ɪndeksɪŋ"
         },
         {
@@ -10593,7 +10593,7 @@
           "trans": [
             "a.最低的，最小的"
           ],
-          "ukphone": "",
+          "ukphone": "ləʊɪst",
           "usphone": "'loʊɪst"
         },
         {
@@ -10617,7 +10617,7 @@
           "trans": [
             "a.大写的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈkæpɪtəlaɪzd",
           "usphone": "'kæpɪtəlɑɪzd"
         },
         {
@@ -10681,7 +10681,7 @@
           "trans": [
             "a.键控的"
           ],
-          "ukphone": "",
+          "ukphone": "kiːd",
           "usphone": "kid"
         },
         {
@@ -10689,7 +10689,7 @@
           "trans": [
             "n.过打印"
           ],
-          "ukphone": "",
+          "ukphone": "əʊvəˈstɹʌɪk",
           "usphone": "oʊvə'straɪk"
         },
         {
@@ -10713,7 +10713,7 @@
           "trans": [
             "n.二进制反码"
           ],
-          "ukphone": "",
+          "ukphone": "wʌnz",
           "usphone": "'wʌnz"
         }
       ]
@@ -10791,7 +10791,7 @@
           "trans": [
             "n.&,a.限制(的),,"
           ],
-          "ukphone": "",
+          "ukphone": "rɪs'trɪktɪŋ",
           "usphone": "rɪs'trɪktɪŋ"
         },
         {
@@ -10855,7 +10855,7 @@
           "trans": [
             "a.&,n.时髦的"
           ],
-          "ukphone": "",
+          "ukphone": "mɒd",
           "usphone": "mɑd"
         },
         {
@@ -10919,7 +10919,7 @@
           "trans": [
             "n.印出"
           ],
-          "ukphone": "",
+          "ukphone": "ˈprɪntaʊt",
           "usphone": "ˈprɪntˌaʊt"
         }
       ]
@@ -10949,7 +10949,7 @@
           "trans": [
             "a.&,n.英国的；英国人"
           ],
-          "ukphone": "",
+          "ukphone": "ˈbrɪtɪʃ",
           "usphone": "ˈbrɪtɪʃ"
         },
         {
@@ -11013,7 +11013,7 @@
           "trans": [
             "n.停止，制动(状态)"
           ],
-          "ukphone": "",
+          "ukphone": "ˈstɒpɪŋ",
           "usphone": "'stɒpɪŋ"
         },
         {
@@ -11051,9 +11051,9 @@
         {
           "name": "ampersand",
           "trans": [
-            "n.&号(and)"
+            "n.&号"
           ],
-          "ukphone": "",
+          "ukphone": "ˈæm.pə(ɹ).sænd",
           "usphone": "ˈæmpərsænd"
         },
         {
@@ -11211,7 +11211,7 @@
           "trans": [
             "n.兰德勒舞曲"
           ],
-          "ukphone": "",
+          "ukphone": "ˈlændlə(r)",
           "usphone": "'lændlər"
         },
         {
@@ -11307,7 +11307,7 @@
           "trans": [
             "a.未完成的"
           ],
-          "ukphone": "",
+          "ukphone": "ʌnˈdʌn",
           "usphone": "ʌnˈdʌn"
         },
         {
@@ -11315,7 +11315,7 @@
           "trans": [
             "v.未移动，不移档"
           ],
-          "ukphone": "",
+          "ukphone": "ʌnˈʃɪft",
           "usphone": "ʌn'ʃɪft"
         },
         {
@@ -11584,7 +11584,7 @@
             "ad.广泛，很远"
           ],
           "ukphone": "'waɪdlɪ",
-          "usphone": " ˈwaɪdlɪ"
+          "usphone": "ˈwaɪdlɪ"
         },
         {
           "name": "comma",
@@ -11615,7 +11615,7 @@
           "trans": [
             "a.不变的"
           ],
-          "ukphone": "",
+          "ukphone": "ʌnˈtʃeɪndʒd",
           "usphone": "ʌnˈtʃeɪndʒd"
         },
         {
@@ -11647,7 +11647,7 @@
           "trans": [
             "a.不熟练的，外行的"
           ],
-          "ukphone": "",
+          "ukphone": "ɪnəkˈspɪəɹi.ənst",
           "usphone": "ˌɪnɪkˈspɪriənst"
         },
         {
@@ -11655,7 +11655,7 @@
           "trans": [
             "a.不相关的，非交互的"
           ],
-          "ukphone": "",
+          "ukphone": "'nɒnɪntə'æktɪv",
           "usphone": "'nɒnɪntə'æktɪv"
         },
         {
@@ -11663,7 +11663,7 @@
           "trans": [
             "a.不需要的，多余的"
           ],
-          "ukphone": "",
+          "ukphone": "ʌnˈwɒntɪd",
           "usphone": "ˌʌnˈwɑntɪd"
         },
         {
@@ -11679,7 +11679,7 @@
           "trans": [
             "a.没有标记的"
           ],
-          "ukphone": "",
+          "ukphone": "ˌʌnˈmɑːkt",
           "usphone": "ʌnˈmɑrkt"
         },
         {
@@ -11703,7 +11703,7 @@
           "trans": [
             "ad.极，非常，昂贵地"
           ],
-          "ukphone": "",
+          "ukphone": "ˈdɪəli",
           "usphone": "ˈdɪrli"
         },
         {
@@ -11727,7 +11727,7 @@
           "trans": [
             "n.布局"
           ],
-          "ukphone": "",
+          "ukphone": "ˈpleɪsmənt",
           "usphone": "ˈpleɪsmənt"
         },
         {
@@ -11797,7 +11797,7 @@
           "trans": [
             "a.附加的"
           ],
-          "ukphone": "",
+          "ukphone": "əˈtætʃt",
           "usphone": "əˈtætʃt"
         },
         {
@@ -11885,7 +11885,7 @@
           "trans": [
             "ad.可能地，大概地"
           ],
-          "ukphone": "",
+          "ukphone": "pəˈtɛnʃ(ə)li",
           "usphone": "pəˈtɛnʃəlɪ"
         },
         {
@@ -11901,7 +11901,7 @@
           "trans": [
             "a.美国的"
           ],
-          "ukphone": "",
+          "ukphone": "əˈmerɪkən",
           "usphone": "əˈmerɪkən"
         },
         {
@@ -11941,7 +11941,7 @@
           "trans": [
             "ad.连续不断地"
           ],
-          "ukphone": "",
+          "ukphone": "kənˈtɪnjuəsli",
           "usphone": "kənˈtɪnjʊəslɪ"
         },
         {
@@ -11972,7 +11972,7 @@
             "n.事件，偶然发生的事"
           ],
           "ukphone": "'hæp(ə)nɪŋ",
-          "usphone": " ˈhæpənɪŋ"
+          "usphone": "ˈhæpənɪŋ"
         },
         {
           "name": "transaction",
@@ -12083,7 +12083,7 @@
           "trans": [
             "a.等待的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈweɪ̯ɾɪŋ",
           "usphone": "ˈwetɪŋ"
         },
         {
@@ -12131,7 +12131,7 @@
           "trans": [
             "a.可编程的"
           ],
-          "ukphone": "",
+          "ukphone": "pɹəʊˈɡɹæməbəl",
           "usphone": "ˈproʊgræməbl"
         },
         {
@@ -12147,7 +12147,7 @@
           "trans": [
             "a.可恢复的，可回收的"
           ],
-          "ukphone": "",
+          "ukphone": "rɪˈkʌvərəbl",
           "usphone": "rɪˈkʌvərəbl"
         },
         {
@@ -12177,7 +12177,7 @@
           "trans": [
             "a.可印刷的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈprɪntəbl",
           "usphone": "ˈprɪntəbəl"
         },
         {
@@ -12185,7 +12185,7 @@
           "trans": [
             "a.可执行的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈɛksɪkjuːtəbl",
           "usphone": "ɪgˈzekjətəbl"
         },
         {
@@ -12217,7 +12217,7 @@
           "trans": [
             "vt.使用，花费"
           ],
-          "ukphone": "",
+          "ukphone": "emˈplɔɪi",
           "usphone": "ɪm'plɔɪi"
         },
         {
@@ -12257,7 +12257,7 @@
           "trans": [
             "a.彼此协作的"
           ],
-          "ukphone": "",
+          "ukphone": "ɪnˈtɜːprətəbl",
           "usphone": "ɪn'tɜprɪtəbl"
         },
         {
@@ -12273,7 +12273,7 @@
           "trans": [
             "n.八十"
           ],
-          "ukphone": "",
+          "ukphone": "ˈfɔːskɔː",
           "usphone": "'foʊr'skoʊr"
         },
         {
@@ -12353,7 +12353,7 @@
           "trans": [
             "a.合适的，相称的"
           ],
-          "ukphone": "",
+          "ukphone": "bɪˈkʊmɪŋɡ",
           "usphone": "bɪˈkʌmɪŋ"
         },
         {
@@ -12415,7 +12415,7 @@
           "trans": [
             "a.有标号的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈleɪb(ə)ld",
           "usphone": "'leɪbld"
         },
         {
@@ -12503,7 +12503,7 @@
           "trans": [
             "n.,接收(收妥)，承认"
           ],
-          "ukphone": "",
+          "ukphone": "əkˈnɒl.ɪd͡ʒ.mənt",
           "usphone": "ækˈnɑlɪdʒmənt"
         },
         {
@@ -12581,7 +12581,7 @@
           "trans": [
             "vi.再现，重现"
           ],
-          "ukphone": "",
+          "ukphone": "riə'pɪrz",
           "usphone": "riə'pɪrz"
         },
         {
@@ -12589,7 +12589,7 @@
           "trans": [
             "vt.再装入"
           ],
-          "ukphone": "",
+          "ukphone": "ˌriːˈləʊd",
           "usphone": "ˌriˈloʊd"
         },
         {
@@ -12613,7 +12613,7 @@
           "trans": [
             "n.终止，终结，收信"
           ],
-          "ukphone": "",
+          "ukphone": "ˈtɜːmɪneɪtɪŋ",
           "usphone": "'tɜmɪneɪtɪŋ"
         },
         {
@@ -12637,7 +12637,7 @@
           "trans": [
             "n.分隔符"
           ],
-          "ukphone": "",
+          "ukphone": "ˈsepəreɪtə(r)",
           "usphone": "ˈsɛpəˌretɚ"
         },
         {
@@ -12661,7 +12661,7 @@
           "trans": [
             "n.分类，分组，成群"
           ],
-          "ukphone": "",
+          "ukphone": "ˈɡɹəʊɪŋ",
           "usphone": "ˈgroʊɪŋ"
         },
         {
@@ -12787,7 +12787,7 @@
           "trans": [
             "a.关闭的，闭迹"
           ],
-          "ukphone": "",
+          "ukphone": "kləʊzd",
           "usphone": "kloʊzd"
         },
         {
@@ -12803,7 +12803,7 @@
           "trans": [
             "n.重复，循环"
           ],
-          "ukphone": "",
+          "ukphone": "ɹɪˈpiːtɪŋ",
           "usphone": "rɪ'pitɪŋ"
         },
         {
@@ -12859,7 +12859,7 @@
           "trans": [
             "a.假定的，推测的"
           ],
-          "ukphone": "",
+          "ukphone": "spoʊst",
           "usphone": "səˈpoʊzd"
         },
         {
@@ -12875,7 +12875,7 @@
           "trans": [
             "n.掩蔽，屏蔽"
           ],
-          "ukphone": "",
+          "ukphone": "ˈmɑːskɪŋ",
           "usphone": "'mɑskɪŋ"
         },
         {
@@ -12923,7 +12923,7 @@
           "trans": [
             "n.总控钥匙"
           ],
-          "ukphone": "",
+          "ukphone": "ˈtɜːnkiː",
           "usphone": "ˈtɜrnki"
         },
         {
@@ -12931,7 +12931,7 @@
           "trans": [
             "a.受限制的，受约束的"
           ],
-          "ukphone": "",
+          "ukphone": "ɹɪˈstɹɪktɪd",
           "usphone": "rɪˈstrɪktɪd"
         },
         {
@@ -12947,7 +12947,7 @@
           "trans": [
             "a.无缝的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈsiːmləs",
           "usphone": "ˈsimlɪs"
         },
         {
@@ -12963,7 +12963,7 @@
           "trans": [
             "a.无符号的"
           ],
-          "ukphone": "",
+          "ukphone": "ˌʌnˈsaɪnd",
           "usphone": "ʌn'saɪnd"
         },
         {
@@ -12971,7 +12971,7 @@
           "trans": [
             "a.无格式的"
           ],
-          "ukphone": "",
+          "ukphone": "ʌnˈfɔːmætɪd",
           "usphone": "ʌn'fɔˌmætɪd"
         },
         {
@@ -12979,7 +12979,7 @@
           "trans": [
             "a.无用的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈjuːs.ləs",
           "usphone": "ˈjuslɪs"
         }
       ]
@@ -12993,7 +12993,7 @@
           "trans": [
             "n.限制(幅)器"
           ],
-          "ukphone": "",
+          "ukphone": "ˈlɪmɪtə(r)",
           "usphone": "'lɪmətə"
         },
         {
@@ -13041,7 +13041,7 @@
           "trans": [
             "n.多重处理，多道处理"
           ],
-          "ukphone": "",
+          "ukphone": "ˈmʌltiˌpɹɒsɛsɪŋ",
           "usphone": "'mʌltɪˌproʊsesɪŋ"
         },
         {
@@ -13137,7 +13137,7 @@
           "trans": [
             "a.变化的，可变的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈvɛəɹiɪŋ",
           "usphone": "'veərɪŋ"
         },
         {
@@ -13207,7 +13207,7 @@
           "trans": [
             "a.规定的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈsteɪtɪd",
           "usphone": "'steɪtɪd"
         },
         {
@@ -13255,7 +13255,7 @@
           "trans": [
             "n.&,a.借给，出租；借出的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈlendɪŋ",
           "usphone": "ˈlɛndɪŋ"
         },
         {
@@ -13271,7 +13271,7 @@
           "trans": [
             "n.情况，环境，细节"
           ],
-          "ukphone": "",
+          "ukphone": "ˈsɜːkəmst(ə)nsɪz",
           "usphone": "'sɜkəmstənsɪz"
         },
         {
@@ -13525,7 +13525,7 @@
           "trans": [
             "n.主题，源"
           ],
-          "ukphone": "ˈsʌbdʒɪkt;(for adj.)ˈsʌbdʒɪkt;(for v.)səbˈdʒekt",
+          "ukphone": "ˈsʌbdʒɪkt; (for adj.)ˈsʌbdʒɪkt; (for v.)səbˈdʒekt",
           "usphone": "ˈsʌbdʒekt"
         },
         {
@@ -13533,8 +13533,8 @@
           "trans": [
             "n.作业"
           ],
-          "ukphone": "",
-          "usphone": "dʒɑb"
+          "ukphone": "d͡ʒɒb",
+          "usphone": "d͡ʒɑb"
         },
         {
           "name": "differentiate",
@@ -13565,7 +13565,7 @@
           "trans": [
             "n.锁定，加锁"
           ],
-          "ukphone": "",
+          "ukphone": "ˈlɒkɪŋ",
           "usphone": "'lɒkɪŋ"
         },
         {
@@ -13651,7 +13651,7 @@
           "trans": [
             "a.迭代的"
           ],
-          "ukphone": "",
+          "ukphone": "ˈɪtəɹətɪv",
           "usphone": "'ɪtəˌreɪtɪv"
         },
         {
@@ -13691,7 +13691,7 @@
           "trans": [
             "a.过度的，非常的"
           ],
-          "ukphone": "",
+          "ukphone": "ɪkˈsi:dɪd",
           "usphone": "ɪk'sidɪd"
         },
         {
@@ -13715,7 +13715,7 @@
           "trans": [
             "n.二进位组合码"
           ],
-          "ukphone": "",
+          "ukphone": "ˈkɒmbəʊ",
           "usphone": "ˈkɑmboʊ"
         },
         {

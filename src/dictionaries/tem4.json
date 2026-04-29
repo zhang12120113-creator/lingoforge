@@ -277,7 +277,7 @@
         {
           "name": "flagstaff",
           "usphone": "'flæɡstæf",
-          "ukphone": "",
+          "ukphone": "ˈflæɡstɑːf",
           "trans": [
             "旗杆"
           ]
@@ -293,7 +293,7 @@
         },
         {
           "name": "mercury",
-          "usphone": "",
+          "usphone": "ˈməː.kjʊ.ɹi",
           "ukphone": "'mɜːkjəri",
           "trans": [
             "[化]汞，水银"
@@ -1380,7 +1380,7 @@
         },
         {
           "name": "freebie",
-          "usphone": "",
+          "usphone": "ˈfɹiːbi",
           "ukphone": "'friːbɪ",
           "trans": [
             "免费的东西；免费赠品（尤指戏院赠券）"
@@ -1790,8 +1790,8 @@
         },
         {
           "name": "page",
-          "usphone": "",
-          "ukphone": "peɪdʒ",
+          "usphone": "peɪd͡ʒ",
+          "ukphone": "peɪd͡ʒ",
           "trans": [
             "页；记录；大事件，时期；男侍者",
             "给…标页码"
@@ -1987,8 +1987,8 @@
         },
         {
           "name": "invalid",
-          "usphone": "ˈɪnvəlɪd；ɪnˈvælɪd",
-          "ukphone": "ˈɪnvəlɪd；ɪnˈvælɪd",
+          "usphone": "ˈɪnvəlɪd; ɪnˈvælɪd",
+          "ukphone": "ˈɪnvəlɪd; ɪnˈvælɪd",
           "trans": [
             "无效的；有病的；残废的",
             "病人；残废者",
@@ -2290,7 +2290,7 @@
         {
           "name": "pamphlet",
           "usphone": "ˈpæmflɪt",
-          "ukphone": "",
+          "ukphone": "ˈpæmf.lɪt",
           "trans": [
             "小册子"
           ]
@@ -2643,7 +2643,7 @@
         },
         {
           "name": "kit",
-          "usphone": "",
+          "usphone": "kɪt",
           "ukphone": "kɪt",
           "trans": [
             "工具箱；成套工具",
@@ -3994,7 +3994,7 @@
         },
         {
           "name": "hood",
-          "usphone": "",
+          "usphone": "hɪ̈d",
           "ukphone": "hʊd",
           "trans": [
             "头巾；覆盖；兜帽",
@@ -4234,7 +4234,7 @@
         {
           "name": "belongings",
           "usphone": "bə'lɔŋɪŋz",
-          "ukphone": "",
+          "ukphone": "bɪˈlɒŋɪŋz",
           "trans": [
             "[经] 财产，所有物；亲戚"
           ]
@@ -4282,7 +4282,7 @@
         },
         {
           "name": "thereabouts",
-          "usphone": "",
+          "usphone": "ˌðerəˈbaʊts",
           "ukphone": "'ðeərəbaʊts; -'baʊts",
           "trans": [
             "大约；在那附近（等于thereabout）"
@@ -4359,7 +4359,7 @@
         },
         {
           "name": "geopolitics",
-          "usphone": "",
+          "usphone": "ˌdʒiːoʊˈpɑːlətɪks",
           "ukphone": ",dʒɪ（ː）əʊ'pɒlɪtɪks",
           "trans": [
             "地缘政治学；地理政治论"
@@ -5410,8 +5410,8 @@
         },
         {
           "name": "export",
-          "usphone": "ˈekspɔːrt；ɪkˈ-",
-          "ukphone": "ˈekspɔːt；ɪkˈ-",
+          "usphone": "ˈekspɔːrt; ɪkˈ-",
+          "ukphone": "ˈekspɔːt; ɪkˈ-",
           "trans": [
             "输出，出口；出口商品",
             "输出物资"
@@ -5960,7 +5960,7 @@
         {
           "name": "converse",
           "usphone": "kən'vəʳs",
-          "ukphone": "kən'vɜːs；ˈkɒn-",
+          "ukphone": "kən'vɜːs; ˈkɒn-",
           "trans": [
             "相反的，逆向的；颠倒的",
             "交谈，谈话；认识",
@@ -8922,7 +8922,7 @@
         },
         {
           "name": "antic",
-          "usphone": "",
+          "usphone": "ˈæn.tɪk",
           "ukphone": "'æntɪk",
           "trans": [
             "古怪的；滑稽可笑的",
@@ -9171,7 +9171,7 @@
         {
           "name": "millimetre",
           "usphone": "'mili,mi:tə",
-          "ukphone": "",
+          "ukphone": "ˈmɪlimiːtə(r)",
           "trans": [
             "毫米；公厘"
           ]
@@ -9179,7 +9179,7 @@
         {
           "name": "interviewer",
           "usphone": "'ɪntɚvjuɚ",
-          "ukphone": "",
+          "ukphone": "ˈɪntəvjuːə",
           "trans": [
             "采访者；会见者；面谈者；进行面试者"
           ]
@@ -10413,7 +10413,7 @@
         {
           "name": "Catholic",
           "usphone": "kæθəlɪk",
-          "ukphone": "",
+          "ukphone": "ˈkaθ(ə)lɪk",
           "trans": [
             "天主教的；宽宏大量的",
             "天主教徒；罗马天主教"
@@ -10978,7 +10978,7 @@
         },
         {
           "name": "hull",
-          "usphone": "",
+          "usphone": "hʌl",
           "ukphone": "hʌl",
           "trans": [
             "船体；（果实的）外壳",
@@ -11557,7 +11557,7 @@
         },
         {
           "name": "earnest",
-          "usphone": "",
+          "usphone": "ˈɜːnɪst",
           "ukphone": "'ɜːnɪst",
           "trans": [
             "认真的，热心的；重要的",
@@ -11574,7 +11574,7 @@
         },
         {
           "name": "mackintosh",
-          "usphone": "",
+          "usphone": "ˈmækɪntɒʃ",
           "ukphone": "'mækɪntɒʃ",
           "trans": [
             "橡皮布防水衣；橡皮布"
@@ -11742,8 +11742,8 @@
         },
         {
           "name": "mark",
-          "usphone": "",
-          "ukphone": "mɑːk",
+          "usphone": "mɑɹk",
+          "ukphone": "mɑɹk",
           "trans": [
             "标志；马克；符号；痕迹；分数",
             "作记号"
@@ -12002,7 +12002,7 @@
         },
         {
           "name": "flypast",
-          "usphone": "",
+          "usphone": "'flaɪpɑːst",
           "ukphone": "'flaɪpɑːst",
           "trans": [
             "空中分列"
@@ -12019,7 +12019,7 @@
         },
         {
           "name": "buck",
-          "usphone": "",
+          "usphone": "bʌk",
           "ukphone": "bʌk",
           "trans": [
             "（美）钱，元；雄鹿；纨绔子弟；年轻的印第安人或黑人"
@@ -12036,7 +12036,7 @@
         },
         {
           "name": "springlock",
-          "usphone": "",
+          "usphone": "ˈsprɪŋlɑːk",
           "ukphone": "ˈsprɪŋlɒk",
           "trans": [
             "弹簧锁"
@@ -12348,7 +12348,7 @@
         },
         {
           "name": "media",
-          "usphone": "",
+          "usphone": "ˈmiːdɪə",
           "ukphone": "'miːdɪə",
           "trans": [
             "媒体；媒质（medium的复数）；血管中层；浊塞音；中脉"
@@ -13507,7 +13507,7 @@
         },
         {
           "name": "elsewhere",
-          "usphone": "",
+          "usphone": "ˌɛlsˈʍɛːə",
           "ukphone": "els'weə; 'elsweə",
           "trans": [
             "在别处；到别处"
@@ -14432,7 +14432,7 @@
         },
         {
           "name": "sanguinary",
-          "usphone": "",
+          "usphone": "ˈsæŋɡwɪneɹi",
           "ukphone": "'sængwɪn(ə)rɪ",
           "trans": [
             "血腥的；流血的；残暴的"
@@ -14888,7 +14888,7 @@
         {
           "name": "assuredly",
           "usphone": "ə'ʃʊrədli",
-          "ukphone": "",
+          "ukphone": "əˈʃɔːɹɪdli",
           "trans": [
             "确实地；确信地"
           ]
@@ -15623,7 +15623,7 @@
       "words": [
         {
           "name": "mill",
-          "usphone": "",
+          "usphone": "mɪl",
           "ukphone": "mɪl",
           "trans": [
             "乱转；被碾磨",
@@ -15824,7 +15824,7 @@
         },
         {
           "name": "beetle",
-          "usphone": "",
+          "usphone": "ˈbiɾəɫ",
           "ukphone": "'biːt(ə)l",
           "trans": [
             "急忙来回；突出",
@@ -15833,7 +15833,7 @@
         },
         {
           "name": "sake",
-          "usphone": "[sek]",
+          "usphone": "sek",
           "ukphone": "seɪk",
           "trans": [
             "目的；利益；理由；日本米酒"
@@ -16052,7 +16052,7 @@
         },
         {
           "name": "eve",
-          "usphone": "",
+          "usphone": "iːv",
           "ukphone": "iːv",
           "trans": [
             "夏娃； 前夕；傍晚；重大事件关头"
@@ -16499,7 +16499,7 @@
         {
           "name": "misguided",
           "usphone": ",mɪs'ɡaɪdɪd",
-          "ukphone": "",
+          "ukphone": "ˌmɪsˈɡaɪdɪd",
           "trans": [
             "被误导的",
             "使入歧途（misguide的过去分词）"
@@ -18235,7 +18235,7 @@
         },
         {
           "name": "chase",
-          "usphone": "",
+          "usphone": "tʃeɪs",
           "ukphone": "tʃeɪs",
           "trans": [
             "追逐；追捕；试图赢得；雕镂",
@@ -18279,7 +18279,7 @@
         {
           "name": "consumed",
           "usphone": "kən'sʊmd",
-          "ukphone": "",
+          "ukphone": "kənˈsjuːmd",
           "trans": [
             "充满的；对…着迷的",
             "消耗（consume的过去式和过去分词）"
@@ -18515,7 +18515,7 @@
         {
           "name": "prostitution",
           "usphone": "'prɑstə'tʊʃən",
-          "ukphone": ",prɒstɪ'tʃuːʃn ; ,prɒstɪ'tjuːʃn",
+          "ukphone": ",prɒstɪ'tʃuːʃn; ,prɒstɪ'tjuːʃn",
           "trans": [
             "卖淫；滥用；出卖灵魂"
           ]
@@ -18921,7 +18921,7 @@
         {
           "name": "rower",
           "usphone": "'roɚ",
-          "ukphone": "",
+          "ukphone": "ˈɹəʊ.ə(ɹ)",
           "trans": [
             "桨手"
           ]
@@ -19149,7 +19149,7 @@
         },
         {
           "name": "cod",
-          "usphone": "",
+          "usphone": "kɒd",
           "ukphone": "kɒd",
           "trans": [
             "[鱼] 鳕鱼；愚弄；哄骗",
@@ -19301,7 +19301,7 @@
         {
           "name": "Mediterranean",
           "usphone": ",mɛdətə'renɪən",
-          "ukphone": "",
+          "ukphone": "ˌmedɪtəˈreɪniən",
           "trans": [
             "地中海",
             "地中海的"
@@ -19603,7 +19603,7 @@
         {
           "name": "shoplift",
           "usphone": "'ʃɑplɪft",
-          "ukphone": "",
+          "ukphone": "ˈʃɒplɪft",
           "trans": [
             "从商店中偷商品"
           ]
@@ -20186,7 +20186,7 @@
         {
           "name": "kilobyte",
           "usphone": "'kɪləbaɪt",
-          "ukphone": "",
+          "ukphone": "ˈkɪləbaɪt",
           "trans": [
             "[计] 千字节，1024字节"
           ]
@@ -21047,7 +21047,7 @@
           "trans": [
             "分，分钟；片刻，一会儿；备忘录，笔记；会议记录",
             "将…记录下来",
-            "微小的，详细的 [maɪˈnjuːt; US -ˈnuːt; maɪˋnut]"
+            "微小的，详细的"
           ]
         },
         {
@@ -21342,8 +21342,8 @@
         },
         {
           "name": "advocate",
-          "usphone": "ˈædvəkeɪt；-et",
-          "ukphone": "'ædvəkeɪt；-ət",
+          "usphone": "ˈædvəkeɪt; -et",
+          "ukphone": "'ædvəkeɪt; -ət",
           "trans": [
             "提倡，主张，拥护",
             "提倡者；支持者；律师"
@@ -21828,7 +21828,7 @@
         {
           "name": "rehouse",
           "usphone": ",ri'haʊz",
-          "ukphone": "",
+          "ukphone": "ˌriːˈhaʊz",
           "trans": [
             "供以新住宅；使移住新居"
           ]
@@ -22161,7 +22161,7 @@
         },
         {
           "name": "atlas",
-          "usphone": "",
+          "usphone": "ˈætləs",
           "ukphone": "'ætləs",
           "trans": [
             "地图集；寰椎"
@@ -22592,14 +22592,14 @@
         {
           "name": "ladybird",
           "usphone": "'ledɪbɝd",
-          "ukphone": "",
+          "ukphone": "ˈleɪ.di.bəːd",
           "trans": [
             "瓢虫"
           ]
         },
         {
           "name": "biographic",
-          "usphone": "",
+          "usphone": "ˌbaɪoʊˈɡræfɪk",
           "ukphone": "ˌbaɪəʊˈɡræfɪk",
           "trans": [
             "传记的；传记体的"
@@ -22937,7 +22937,7 @@
         {
           "name": "sanatorium",
           "usphone": ",sænə'tɔrɪəm",
-          "ukphone": "",
+          "ukphone": "ˌsænəˈtɔːriəm",
           "trans": [
             "疗养院；休养地"
           ]
@@ -24053,7 +24053,7 @@
         {
           "name": "disfavour",
           "usphone": "dɪs'fevɚ",
-          "ukphone": "",
+          "ukphone": "dɪsˈfeɪvə(ɹ)",
           "trans": [
             "不赞成；冷待",
             "不赞成；不喜欢"
@@ -25336,7 +25336,7 @@
         {
           "name": "lioness",
           "usphone": "'laɪənɛs",
-          "ukphone": "",
+          "ukphone": "ˈlaɪənes",
           "trans": [
             "母狮子；雌狮"
           ]
@@ -25964,8 +25964,8 @@
         },
         {
           "name": "tell",
-          "usphone": "",
-          "ukphone": "tel",
+          "usphone": "tɛl",
+          "ukphone": "tɛl",
           "trans": [
             "告诉，说；辨别；吩咐；断定",
             "(Tell)人名；(英、德、瑞典)特尔；(罗、意)泰尔；(阿拉伯)塔勒"
@@ -26033,8 +26033,8 @@
         },
         {
           "name": "resume",
-          "usphone": "",
-          "ukphone": "rɪˈzjuːm; ˈrɛzjʊmeɪ",
+          "usphone": "ɹəˈzjuːm",
+          "ukphone": "ɹɪˈzjuːm",
           "trans": [
             "摘要；[管理] 履历，简历",
             "重新开始，继续；恢复，重新占用"
@@ -26186,7 +26186,7 @@
         {
           "name": "leftovers",
           "usphone": "ˈleftˌoʊvərz",
-          "ukphone": "",
+          "ukphone": "ˈleftˌəʊvərz",
           "trans": [
             "遗留；剩余物；吃剩的食物（leftover的复数形式）"
           ]
@@ -26346,7 +26346,7 @@
         {
           "name": "redevelopment",
           "usphone": ",ridɪ'vɛləpmənt",
-          "ukphone": "",
+          "ukphone": "ˌriːdɪˈveləpmənt",
           "trans": [
             "再开发；重点恢复"
           ]
@@ -26488,7 +26488,7 @@
         {
           "name": "funfair",
           "usphone": "'fʌnfɛr",
-          "ukphone": "",
+          "ukphone": "ˈfʌnfeə(r)",
           "trans": [
             "游乐场；游艺集市"
           ]
@@ -27159,7 +27159,7 @@
         },
         {
           "name": "flowerpot",
-          "usphone": "",
+          "usphone": "ˈflaʊəˌpɒt",
           "ukphone": "'flaʊəpɒt",
           "trans": [
             "花盆；花钵"
@@ -27342,7 +27342,7 @@
         },
         {
           "name": "moor",
-          "usphone": "",
+          "usphone": "moː",
           "ukphone": "mɔː; mʊə",
           "trans": [
             "系住；使停泊",
@@ -27466,7 +27466,7 @@
         },
         {
           "name": "punch",
-          "usphone": "",
+          "usphone": "pʌntʃ",
           "ukphone": "pʌn(t)ʃ",
           "trans": [
             "冲压机；打洞器；钻孔机",
@@ -29152,7 +29152,7 @@
         },
         {
           "name": "Christ",
-          "usphone": "",
+          "usphone": "kraɪst",
           "ukphone": "kraɪst",
           "trans": [
             "基督；救世主",
@@ -30507,7 +30507,7 @@
         },
         {
           "name": "don",
-          "usphone": "",
+          "usphone": "dɒn",
           "ukphone": "dɒn",
           "trans": [
             "先生，阁下；指导教师，大学教师",
@@ -31148,8 +31148,8 @@
         },
         {
           "name": "muslim",
-          "usphone": "ˈmʊzlɪm;ˈmʌzlɪm;ˈmʊzləm;ˈmʌzləm",
-          "ukphone": "ˈmʊzlɪm;ˈmʌzlɪm;ˈmʊzləm;ˈmʌzləm",
+          "usphone": "ˈmʊzlɪm; ˈmʌzlɪm; ˈmʊzləm; ˈmʌzləm",
+          "ukphone": "ˈmʊzlɪm; ˈmʌzlɪm; ˈmʊzləm; ˈmʌzləm",
           "trans": [
             "穆斯林；穆罕默德信徒",
             "伊斯兰教的"
@@ -31191,7 +31191,7 @@
         {
           "name": "flowerbed",
           "usphone": "'fləuəbed",
-          "ukphone": "",
+          "ukphone": "ˈfləʊəbed",
           "trans": [
             "花圃；花床"
           ]
@@ -31259,7 +31259,7 @@
         {
           "name": "crosscheck",
           "usphone": "ˌkrɔːsˈtʃek",
-          "ukphone": "",
+          "ukphone": "ˌkrɔːsˈtʃek",
           "trans": [
             "多方面求证，反复查对",
             "交叉核对，反复核对"
@@ -33136,7 +33136,7 @@
         {
           "name": "distil",
           "usphone": "dis'til",
-          "ukphone": "",
+          "ukphone": "dɪˈstɪɫ",
           "trans": [
             "蒸馏；提炼；渗出"
           ]
@@ -34652,7 +34652,7 @@
         },
         {
           "name": "buckle",
-          "usphone": "",
+          "usphone": "ˈbʌk(ə)l",
           "ukphone": "'bʌk(ə)l",
           "trans": [
             "扣住；变弯曲",
@@ -35147,7 +35147,7 @@
         },
         {
           "name": "flautist",
-          "usphone": "",
+          "usphone": "ˈflɔːtɪstˌˈflaʊtɪst",
           "ukphone": "'flɔːtɪst",
           "trans": [
             "横笛吹奏者（等于flutist）"

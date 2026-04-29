@@ -1,0 +1,1642 @@
+{
+  "at": {
+    "ukphone": "æt; ət",
+    "usphone": "æt; ət"
+  },
+  "Friday": {
+    "ukphone": "ˈfraɪdeɪ",
+    "usphone": "ˈfraɪdeɪ"
+  },
+  "Chinese": {
+    "ukphone": "ˌtʃaɪˈniːz",
+    "usphone": "ˌtʃaɪˈniːz"
+  },
+  "jeans": {
+    "ukphone": "dʒiːnz",
+    "usphone": "dʒiːnz"
+  },
+  "Christmas": {
+    "ukphone": "ˈkrɪsməs",
+    "usphone": "ˈkrɪsməs"
+  },
+  "I": {
+    "ukphone": "aɪ",
+    "usphone": "aɪ"
+  },
+  "Australian": {
+    "ukphone": "ɒˈstreɪliən",
+    "usphone": "ɔːˈstreɪliən"
+  },
+  "salesgirl": {
+    "ukphone": "ˈseɪlzɡɜːl",
+    "usphone": "ˈseɪlzɡɜːrl"
+  },
+  "Dr": {
+    "ukphone": "",
+    "usphone": "ˈdɑːktər;  draɪv"
+  },
+  "chairwoman": {
+    "ukphone": "ˈtʃeəwʊmən",
+    "usphone": "ˈtʃerwʊmən"
+  },
+  "birdcage": {
+    "ukphone": "ˈbɜːdkeɪdʒ",
+    "usphone": "ˈbɜːrdkeɪdʒ"
+  },
+  "Greece": {
+    "ukphone": "ɡriːs",
+    "usphone": "ɡriːs"
+  },
+  "skillfully": {
+    "ukphone": "ˈskɪlfʊli",
+    "usphone": "ˈskɪlfəlɪ"
+  },
+  "Egyptian": {
+    "ukphone": "iˈdʒɪpʃn",
+    "usphone": "iˈdʒɪpʃn"
+  },
+  "ballpoint": {
+    "ukphone": "ˈbɔːlpɔɪnt",
+    "usphone": "ˈbɔːlpɔɪnt"
+  },
+  "Buddhist": {
+    "ukphone": "ˈbʊdɪst",
+    "usphone": "ˈbuːdɪst"
+  },
+  "oilfield": {
+    "ukphone": "ˈɔɪlfiːld",
+    "usphone": "ˈɔɪlfiːld"
+  },
+  "advocator": {
+    "ukphone": "ˈædvəkeɪtə(r)",
+    "usphone": "ˈædvəˌkeɪtə"
+  },
+  "expressiveness": {
+    "ukphone": "ɪkˈspresɪvnəs",
+    "usphone": "ɪkˈspresɪvnəs"
+  },
+  "groundlessly": {
+    "ukphone": "ˈɡraʊndləsli",
+    "usphone": "ˈɡraʊndləsli"
+  },
+  "impermanency": {
+    "ukphone": "ɪmˈpɜːmənənsi",
+    "usphone": ""
+  },
+  "irrationally": {
+    "ukphone": "ɪˈræʃnəli",
+    "usphone": "ɪˈræʃnəli"
+  },
+  "miscalculation": {
+    "ukphone": "ˌmɪskælkjuˈleɪʃn",
+    "usphone": "ˌmɪskælkjuˈleɪʃn"
+  },
+  "repave": {
+    "ukphone": "riːˈpeɪv",
+    "usphone": "riˈpev"
+  },
+  "restock": {
+    "ukphone": "ˌriːˈstɒk",
+    "usphone": "ˌriːˈstɑːk"
+  },
+  "unaffordable": {
+    "ukphone": "ˌʌnəˈfɔːdəbl",
+    "usphone": "ˌʌnəˈfɔːrdəbl"
+  },
+  "durability": {
+    "ukphone": "ˌdjʊərəˈbɪləti",
+    "usphone": "ˌdʊrəˈbɪləti"
+  },
+  "prohibitively": {
+    "ukphone": "prəˈhɪbətɪvli",
+    "usphone": "proʊˈhɪbətɪvli"
+  },
+  "retrain": {
+    "ukphone": "ˌriːˈtreɪn",
+    "usphone": "ˌriːˈtreɪn"
+  },
+  "puzzling": {
+    "ukphone": "ˈpʌzlɪŋ",
+    "usphone": "ˈpʌzlɪŋ"
+  },
+  "reframe": {
+    "ukphone": "riːˈfreɪm",
+    "usphone": "rɪˈfreɪm"
+  },
+  "racially": {
+    "ukphone": "ˈreɪʃəli",
+    "usphone": "ˈreɪʃəli"
+  },
+  "implementation": {
+    "ukphone": "ˌɪmplɪmenˈteɪʃ(ə)n",
+    "usphone": "ˌɪmplɪmenˈteɪʃ(ə)n"
+  },
+  "France": {
+    "ukphone": "frɑːns",
+    "usphone": "fræns"
+  },
+  "Marxist": {
+    "ukphone": "ˈmɑːksɪst",
+    "usphone": "ˈmɑːrksɪst"
+  },
+  "Mediterranean": {
+    "ukphone": "ˌmedɪtəˈreɪniən",
+    "usphone": "ˌmedɪtəˈreɪniən"
+  },
+  "millimetre": {
+    "ukphone": "ˈmɪlimiːtə(r)",
+    "usphone": "ˈmɪlimiːtər"
+  },
+  "systematical": {
+    "ukphone": "ˌsɪstəˈmætɪk(ə)l",
+    "usphone": "ˌsɪstəˈmætɪk(ə)l"
+  },
+  "Christ": {
+    "ukphone": "kraɪst",
+    "usphone": "kraɪst"
+  },
+  "heterogeneity": {
+    "ukphone": "ˌhetərədʒəˈniːəti",
+    "usphone": "ˌhetərədʒəˈniːəti"
+  },
+  "world-wide": {
+    "ukphone": "ˈwɜ:ldwaɪd",
+    "usphone": "ˌwɜːrld ˈwaɪd"
+  },
+  "overexcited": {
+    "ukphone": "ˌəʊvərɪkˈsaɪtɪd",
+    "usphone": "ˌoʊvərɪkˈsaɪtɪd"
+  },
+  "reunion": {
+    "ukphone": "ˌriːˈjuːniən",
+    "usphone": "ˌriːˈjuːniən"
+  },
+  "underfunded": {
+    "ukphone": "ˌʌndəˈfʌndɪd",
+    "usphone": "ˌʌndərˈfʌndɪd"
+  },
+  "immersive": {
+    "ukphone": "ɪˈmɜːsɪv",
+    "usphone": "ɪˈmɜːrsɪv"
+  },
+  "proximately": {
+    "ukphone": "",
+    "usphone": ""
+  },
+  "shipbuilding": {
+    "ukphone": "ˈʃɪpbɪldɪŋ",
+    "usphone": "ˈʃɪpbɪldɪŋ"
+  },
+  "adjustable": {
+    "ukphone": "əˈdʒʌstəb(ə)l",
+    "usphone": "əˈdʒʌstəb(ə)l"
+  },
+  "air-conditioning": {
+    "ukphone": "ˈeə kəndɪʃənɪŋ",
+    "usphone": "ˈer kəndɪʃənɪŋ"
+  },
+  "belongings": {
+    "ukphone": "bɪˈlɒŋɪŋz",
+    "usphone": "bɪˈlɔːŋɪŋz"
+  },
+  "thereabouts": {
+    "ukphone": "ˌðeərəˈbaʊts",
+    "usphone": "ˌðerəˈbaʊts"
+  },
+  "geopolitics": {
+    "ukphone": "ˌdʒiːəʊˈpɒlətɪks",
+    "usphone": "ˌdʒiːoʊˈpɑːlətɪks"
+  },
+  "flypast": {
+    "ukphone": "ˈflaɪpɑːst",
+    "usphone": ""
+  },
+  "springlock": {
+    "ukphone": "ˈsprɪŋlɒk",
+    "usphone": ""
+  },
+  "misguided": {
+    "ukphone": "ˌmɪsˈɡaɪdɪd",
+    "usphone": "ˌmɪsˈɡaɪdɪd"
+  },
+  "consumed": {
+    "ukphone": "kənˈsjuːmd",
+    "usphone": "kənˈsʊmd"
+  },
+  "shoplift": {
+    "ukphone": "ˈʃɒplɪft",
+    "usphone": "ˈʃɑːplɪft"
+  },
+  "kilobyte": {
+    "ukphone": "ˈkɪləbaɪt",
+    "usphone": "ˈkɪləbaɪt"
+  },
+  "rehouse": {
+    "ukphone": "ˌriːˈhaʊz",
+    "usphone": "ˌriːˈhaʊz"
+  },
+  "biographic": {
+    "ukphone": "ˌbaɪəʊˈɡræfɪk",
+    "usphone": ""
+  },
+  "sanatorium": {
+    "ukphone": "ˌsænəˈtɔːriəm",
+    "usphone": "ˌsænəˈtɔːriəm"
+  },
+  "lioness": {
+    "ukphone": "ˈlaɪənes",
+    "usphone": "ˈlaɪənes"
+  },
+  "leftovers": {
+    "ukphone": "",
+    "usphone": "ˈleftˌoʊvərz"
+  },
+  "redevelopment": {
+    "ukphone": "ˌriːdɪˈveləpmənt",
+    "usphone": "ˌriːdɪˈveləpmənt"
+  },
+  "funfair": {
+    "ukphone": "ˈfʌnfeə(r)",
+    "usphone": "ˈfʌnfer"
+  },
+  "flowerbed": {
+    "ukphone": "ˈfləʊəbed",
+    "usphone": ""
+  },
+  "crosscheck": {
+    "ukphone": "",
+    "usphone": "ˌkrɔːsˈtʃek"
+  },
+  "flautist": {
+    "ukphone": "ˈflɔːtɪst",
+    "usphone": "ˈflɔːtɪstˌˈflaʊtɪst"
+  },
+  "knowhow": {
+    "ukphone": "ˈnəʊhaʊ",
+    "usphone": ""
+  },
+  "backbiting": {
+    "ukphone": "ˈbækbaɪtɪŋ",
+    "usphone": "ˈbækbaɪtɪŋ"
+  },
+  "foreknowledge": {
+    "ukphone": "fɔːˈnɒlɪdʒ",
+    "usphone": "fɔːrˈnɑːlɪdʒ"
+  },
+  "heartbreaking": {
+    "ukphone": "ˈhɑːtbreɪkɪŋ",
+    "usphone": "ˈhɑːrtbreɪkɪŋ"
+  },
+  "forecourt": {
+    "ukphone": "ˈfɔːkɔːt",
+    "usphone": "ˈfɔːrkɔːrt"
+  },
+  "stimulation": {
+    "ukphone": "ˌstɪmjuˈleɪʃ(ə)n",
+    "usphone": "ˌstɪmjuˈleɪʃ(ə)n"
+  },
+  "credentials": {
+    "ukphone": "krəˈdenʃ(ə)lz",
+    "usphone": "krəˈdenʃ(ə)lz"
+  },
+  "surrealist": {
+    "ukphone": "səˈriːəlɪst",
+    "usphone": "səˈriːəlɪst"
+  },
+  "transcendentalism": {
+    "ukphone": "trænsenˈdent(ə)lɪz(ə)mˌ; ˌtrɑːn-",
+    "usphone": "ˌtrænsenˈdentlˌɪzəm"
+  },
+  "anchorwoman": {
+    "ukphone": "ˈæŋkəwʊmən",
+    "usphone": "ˈæŋkərwʊmən"
+  },
+  "hairspray": {
+    "ukphone": "ˈheəspreɪ",
+    "usphone": "ˈherspreɪ"
+  },
+  "colourful": {
+    "ukphone": "ˈkʌləf(ə)l",
+    "usphone": "ˈkʌlərf(ə)l"
+  },
+  "straitlaced": {
+    "ukphone": "ˈstreɪtˈleɪst",
+    "usphone": ""
+  },
+  "fantasise": {
+    "ukphone": "ˈfæntəsaɪz",
+    "usphone": ""
+  },
+  "misapprehension": {
+    "ukphone": "ˌmɪsæprɪˈhenʃn",
+    "usphone": "ˌmɪsæprɪˈhenʃ(ə)n"
+  },
+  "footloose": {
+    "ukphone": "ˈfʊtluːs",
+    "usphone": "ˈfʊtluːs"
+  },
+  "idolise": {
+    "ukphone": "ˈaɪdəlaɪz",
+    "usphone": ""
+  },
+  "mesmerise": {
+    "ukphone": "ˈmezməraɪz",
+    "usphone": ""
+  },
+  "sulphurous": {
+    "ukphone": "ˈsʌlfərəs",
+    "usphone": "ˈsʌlfərəs"
+  },
+  "ceremonious": {
+    "ukphone": "ˌserəˈməʊniəs",
+    "usphone": "ˌserəˈmoʊniəs"
+  },
+  "tantalise": {
+    "ukphone": "ˈtæntəlaɪz",
+    "usphone": ""
+  },
+  "Dacron": {
+    "ukphone": "",
+    "usphone": "ˈdeɪkrɑːn"
+  },
+  "sizeable": {
+    "ukphone": "ˈsaɪzəb(ə)l",
+    "usphone": "ˈsaɪzəb(ə)l"
+  },
+  "volitional": {
+    "ukphone": "",
+    "usphone": "vəˈlɪʃənəl"
+  },
+  "hangings": {
+    "ukphone": "",
+    "usphone": "ˈhæŋɪŋ"
+  },
+  "joystick": {
+    "ukphone": "ˈdʒɔɪstɪk",
+    "usphone": "ˈdʒɔɪstɪk"
+  },
+  "housebreaker": {
+    "ukphone": "ˈhaʊsbreɪkə(r)",
+    "usphone": "ˈhaʊsbreɪkər"
+  },
+  "psychotherapist": {
+    "ukphone": "ˌsaɪkəʊˈθerəpɪst",
+    "usphone": "ˌsaɪkoʊˈθerəpɪst"
+  },
+  "dustcart": {
+    "ukphone": "ˈdʌstkɑːt",
+    "usphone": "ˈdʌstkɑːrt"
+  },
+  "hydroelectricity": {
+    "ukphone": "ˌhaɪdrəʊɪˌlekˈtrɪsəti",
+    "usphone": "ˌhaɪdroʊɪˌlekˈtrɪsəti"
+  },
+  "itemise": {
+    "ukphone": "ˈaɪtəmaɪz",
+    "usphone": ""
+  },
+  "legalise": {
+    "ukphone": "ˈliːɡəlaɪz",
+    "usphone": ""
+  },
+  "economise": {
+    "ukphone": "ɪˈkɒnəmaɪz",
+    "usphone": ""
+  },
+  "forestall": {
+    "ukphone": "fɔːˈstɔːl",
+    "usphone": "fɔːrˈstɔːl"
+  },
+  "tattooist": {
+    "ukphone": "təˈtuːɪst",
+    "usphone": "tæˈtuːɪst"
+  },
+  "sheikh": {
+    "ukphone": "ʃeɪk; ʃiːk",
+    "usphone": "ʃeɪkˌʃiːk"
+  },
+  "environmentalism": {
+    "ukphone": "ɪnˌvaɪrənˈmentəlɪzəm",
+    "usphone": "ɪnˌvaɪrənˈmentəlɪzəm"
+  },
+  "hindquarters": {
+    "ukphone": "ˌhaɪndˈkwɔːtəz",
+    "usphone": "ˈhaɪndkwɔːrtərz"
+  },
+  "serrated": {
+    "ukphone": "səˈreɪtɪd",
+    "usphone": "səˈreɪtɪd"
+  },
+  "neutralise": {
+    "ukphone": "ˈnjuːtrəlaɪz",
+    "usphone": ""
+  },
+  "adventurist": {
+    "ukphone": "ədˈventʃərɪst",
+    "usphone": "ədˈventʃərɪst"
+  },
+  "armoury": {
+    "ukphone": "ˈɑːməri",
+    "usphone": "ˈɑːrməri"
+  },
+  "handbrake": {
+    "ukphone": "ˈhændbreɪk",
+    "usphone": "ˈhændbreɪk"
+  },
+  "hankie": {
+    "ukphone": "ˈhæŋki",
+    "usphone": "ˈhæŋki"
+  },
+  "eightieth": {
+    "ukphone": "ˈeɪtiəθ",
+    "usphone": "ˈeɪtiəθ"
+  },
+  "tannic": {
+    "ukphone": "ˈtænɪk",
+    "usphone": "ˈtænɪk"
+  },
+  "emir": {
+    "ukphone": "eˈmɪə(r); ˈeɪmɪə(r)",
+    "usphone": "eˈmɪrˌeɪˈmɪr"
+  },
+  "foretaste": {
+    "ukphone": "ˈfɔːteɪst",
+    "usphone": "ˈfɔːrteɪst"
+  },
+  "hale": {
+    "ukphone": "heɪl",
+    "usphone": "heɪl"
+  },
+  "hotline": {
+    "ukphone": "ˈhɒtlaɪn",
+    "usphone": "ˈhɑːtlaɪn"
+  },
+  "firebrick": {
+    "ukphone": "ˈfaɪəbrɪk",
+    "usphone": "ˈfaɪərbrɪk"
+  },
+  "dietician": {
+    "ukphone": "",
+    "usphone": "ˌdaɪəˈtɪʃn"
+  },
+  "headphones": {
+    "ukphone": "ˈhedfəʊnz",
+    "usphone": "ˈhedfoʊnz"
+  },
+  "materialise": {
+    "ukphone": "məˈtɪərɪəlaɪz",
+    "usphone": ""
+  },
+  "importer": {
+    "ukphone": "ɪmˈpɔːtə(r)",
+    "usphone": "ɪmˈpɔːrtər"
+  },
+  "hallo": {
+    "ukphone": "həˈləʊ",
+    "usphone": ""
+  },
+  "redraw": {
+    "ukphone": "ˌriːˈdrɔː",
+    "usphone": "ˌriːˈdrɔː"
+  },
+  "ingratiating": {
+    "ukphone": "ɪnˈɡreɪʃieɪtɪŋ",
+    "usphone": "ɪnˈɡreɪʃieɪtɪŋ"
+  },
+  "dishonourable": {
+    "ukphone": "dɪsˈɒnərəbl",
+    "usphone": "dɪsˈɑːnərəbl"
+  },
+  "Nazism": {
+    "ukphone": "ˈnɑːtsɪzəm",
+    "usphone": "ˈnɑːtsɪzəm"
+  },
+  "fixer": {
+    "ukphone": "ˈfɪksə(r)",
+    "usphone": "ˈfɪksər"
+  },
+  "systematise": {
+    "ukphone": "ˈsɪstəmətaɪz",
+    "usphone": ""
+  },
+  "firedamp": {
+    "ukphone": "ˈfaɪədæmp",
+    "usphone": "ˈfaɪərˌdæmp"
+  },
+  "rainforest": {
+    "ukphone": "ˈreɪnfɒrɪst",
+    "usphone": "ˈreɪnfɔːrɪst"
+  },
+  "rounders": {
+    "ukphone": "ˈraʊndəz",
+    "usphone": "ˈraʊndərz"
+  },
+  "hotly": {
+    "ukphone": "ˈhɒtli",
+    "usphone": "ˈhɑːtli"
+  },
+  "hieroglyphics": {
+    "ukphone": "ˌhaɪərəˈɡlɪfɪks",
+    "usphone": "ˌhaɪərəˈɡlɪfɪks"
+  },
+  "formalise": {
+    "ukphone": "ˈfɔːməlaɪz",
+    "usphone": ""
+  },
+  "rancour": {
+    "ukphone": "ˈræŋkə(r)",
+    "usphone": "ˈræŋkər"
+  },
+  "phenomenal": {
+    "ukphone": "fəˈnɒmɪn(ə)l",
+    "usphone": "fəˈnɑːmɪn(ə)l"
+  },
+  "malformed": {
+    "ukphone": "ˌmælˈfɔːmd",
+    "usphone": "ˌmælˈfɔːrmd"
+  },
+  "airhostess": {
+    "ukphone": "eəhəʊstəs; eəhəʊˈstes",
+    "usphone": ""
+  },
+  "hobgoblin": {
+    "ukphone": "hɒbˈɡɒblɪn; ˈhɒbɡɒblɪn",
+    "usphone": "ˈhɑːbɡɑːblɪn"
+  },
+  "existentialist": {
+    "ukphone": "ˌeɡzɪˈstenʃəlɪst",
+    "usphone": "ˌeɡzɪˈstenʃəlɪst"
+  },
+  "hotplate": {
+    "ukphone": "ˈhɒtpleɪt",
+    "usphone": "ˈhɑːtpleɪt"
+  },
+  "congressman": {
+    "ukphone": "ˈkɒŋɡrəsmən",
+    "usphone": "ˈkɑːŋɡrəsmən"
+  },
+  "hereabouts": {
+    "ukphone": "ˌhɪərəˈbaʊts",
+    "usphone": "ˌhɪrəˈbaʊts"
+  },
+  "feebleminded": {
+    "ukphone": "ˈfiːblˈmaɪndɪd",
+    "usphone": "ˈfiblˌmaɪndɪd"
+  },
+  "rearmament": {
+    "ukphone": "riˈɑːməmənt",
+    "usphone": "riˈɑːrməmənt"
+  },
+  "enthral": {
+    "ukphone": "ɪnˈθrɔːl",
+    "usphone": "ɪnˈθrɔːl"
+  },
+  "rotational": {
+    "ukphone": "rəʊˈteɪʃən(ə)l",
+    "usphone": "roʊˈteɪʃən(ə)l"
+  },
+  "devastating": {
+    "ukphone": "ˈdevəsteɪtɪŋ",
+    "usphone": "ˈdevəsteɪtɪŋ"
+  },
+  "fahrenheit": {
+    "ukphone": "ˈfærənhaɪt",
+    "usphone": "ˈfærənhaɪt"
+  },
+  "groundwater": {
+    "ukphone": "ˈɡraʊndwɔːtə(r)",
+    "usphone": "ˈɡraʊndwɔːtər"
+  },
+  "egyptian": {
+    "ukphone": "iˈdʒɪpʃn",
+    "usphone": "iˈdʒɪpʃn"
+  },
+  "Maya": {
+    "ukphone": "ˈmeɪə",
+    "usphone": "ˈmaɪə; ˈmeɪə"
+  },
+  "Florida": {
+    "ukphone": "ˈflɒrɪdə",
+    "usphone": "ˈflɔːrɪdə; ˈflɑːrədə"
+  },
+  "glaciation": {
+    "ukphone": "ˌɡleɪsiˈeɪʃn",
+    "usphone": "ˌɡleɪʃiˈeɪʃn"
+  },
+  "sumerian": {
+    "ukphone": "",
+    "usphone": "sjʊˈmiərɪən"
+  },
+  "Texas": {
+    "ukphone": "ˈteksəs",
+    "usphone": "ˈteksəs"
+  },
+  "seafloor": {
+    "ukphone": "ˈsiːflɔː",
+    "usphone": "ˈsiːflɔː r"
+  },
+  "ruminant": {
+    "ukphone": "ˈruːmɪnənt",
+    "usphone": "ˈruːmɪnənt"
+  },
+  "nitinol": {
+    "ukphone": "ˈnɪtɪnɒl",
+    "usphone": ""
+  },
+  "hopewell": {
+    "ukphone": "",
+    "usphone": "ˈhopwəl"
+  },
+  "proterozoic": {
+    "ukphone": "",
+    "usphone": "ˌprotərəˈzoɪk"
+  },
+  "storytelling": {
+    "ukphone": "ˈstɔːritelɪŋ",
+    "usphone": "ˈstɔːritelɪŋ"
+  },
+  "orleans": {
+    "ukphone": "",
+    "usphone": "ˈɔːrlənz"
+  },
+  "peepshow": {
+    "ukphone": "ˈpiːpˌʃəʊ",
+    "usphone": ""
+  },
+  "Euphrates": {
+    "ukphone": "juːˈfreɪtiːz",
+    "usphone": "juːˈfreɪtiːz"
+  },
+  "frontality": {
+    "ukphone": "frɒnˈtɒlɪtɪ",
+    "usphone": ""
+  },
+  "Tasmania": {
+    "ukphone": "tæzˈmeɪniə",
+    "usphone": "tæzˈmenjə"
+  },
+  "seabed": {
+    "ukphone": "ˈsiːbed",
+    "usphone": "ˈsiːbed"
+  },
+  "craftspeople": {
+    "ukphone": "ˈkrɑːftsˌpiːpl",
+    "usphone": "ˈkræftsˌpipl"
+  },
+  "appalachian": {
+    "ukphone": "ˌæpəˈleɪtʃɪən",
+    "usphone": ""
+  },
+  "pollinator": {
+    "ukphone": "ˈpɒlɪneɪtə(r)",
+    "usphone": "ˈpɑːləˌneɪtər"
+  },
+  "lithospheric": {
+    "ukphone": "ˌlɪθəˈsferɪk",
+    "usphone": ""
+  },
+  "mutoscope": {
+    "ukphone": "ˈmjuːtəʊˌskəʊp",
+    "usphone": ""
+  },
+  "tethys": {
+    "ukphone": "",
+    "usphone": "ˈtiːθɪs"
+  },
+  "reheat": {
+    "ukphone": "ˌriːˈhiːt",
+    "usphone": "ˌriːˈhiːt"
+  },
+  "preschooler": {
+    "ukphone": "ˈpriːˈskuːlə",
+    "usphone": "ˌpriˈskʊlər"
+  },
+  "phytoremediation": {
+    "ukphone": "",
+    "usphone": "ˌfaɪtərɪˌmiːdiˈeɪʃən"
+  },
+  "cajun": {
+    "ukphone": "ˈkeɪdʒ(ə)n",
+    "usphone": "ˈkeɪdʒ(ə)n"
+  },
+  "geologically": {
+    "ukphone": "ˌdʒiːəˈlɒdʒɪkli",
+    "usphone": "ˌdʒiːəˈlɑːdʒɪkli"
+  },
+  "dy": {
+    "ukphone": "",
+    "usphone": "daɪ"
+  },
+  "agriculturalist": {
+    "ukphone": "ˌæɡrɪˈkʌltʃərəlɪst",
+    "usphone": "ˌæɡrɪˈkʌltʃərəlɪst"
+  },
+  "satiric": {
+    "ukphone": "səˈtɪrɪk",
+    "usphone": "səˈtɪrɪk"
+  },
+  "fingerboard": {
+    "ukphone": "ˈfɪŋɡəbɔːd",
+    "usphone": "ˈfɪŋɡərbɔːrd"
+  },
+  "buildup": {
+    "ukphone": "ˈbɪldʌp",
+    "usphone": "ˈbɪlˌdʌp"
+  },
+  "detractor": {
+    "ukphone": "dɪˈtræktə(r)",
+    "usphone": "dɪˈtræktər"
+  },
+  "printmaking": {
+    "ukphone": "ˈprɪntmeɪkɪŋ",
+    "usphone": "ˈprɪntˌmeɪkɪŋ"
+  },
+  "lys": {
+    "ukphone": "liːs",
+    "usphone": ""
+  },
+  "permian": {
+    "ukphone": "ˈpɜːmɪən",
+    "usphone": "ˈpɜːrmiən"
+  },
+  "aggressiveness": {
+    "ukphone": "əˈɡresɪvnəs",
+    "usphone": "əˈɡresɪvnəs"
+  },
+  "sinkhole": {
+    "ukphone": "ˈsɪŋkhəʊl",
+    "usphone": "ˈsɪŋkhoʊl"
+  },
+  "recrystallize": {
+    "ukphone": "riːˈkrɪst(ə)laɪz",
+    "usphone": ""
+  },
+  "valse": {
+    "ukphone": "vɑːls",
+    "usphone": ""
+  },
+  "discoverer": {
+    "ukphone": "dɪˈskʌvərə(r)",
+    "usphone": "dɪˈskʌvərər"
+  },
+  "substantiated": {
+    "ukphone": "",
+    "usphone": "səbˈstænʃieɪtɪd"
+  },
+  "aerodynamic": {
+    "ukphone": "ˌeərəʊdaɪˈnæmɪk",
+    "usphone": "ˌeroʊdaɪˈnæmɪk"
+  },
+  "sculptural": {
+    "ukphone": "ˈskʌlptʃərəl",
+    "usphone": "ˈskʌlptʃərəl"
+  },
+  "interrelationship": {
+    "ukphone": "ˌɪntərɪˈleɪʃ(ə)nʃɪp",
+    "usphone": "ˌɪntərɪˈleɪʃ(ə)nʃɪp"
+  },
+  "gatherer": {
+    "ukphone": "ˈɡæðərə(r)",
+    "usphone": "ˈɡæðərər"
+  },
+  "electrically": {
+    "ukphone": "ɪˈlektrɪkli",
+    "usphone": "ɪˈlektrɪkli"
+  },
+  "reelection": {
+    "ukphone": "",
+    "usphone": "ˌriəˈlekʃən"
+  },
+  "Inuit": {
+    "ukphone": "ˈɪnjuɪt; ˈɪnuɪt",
+    "usphone": "ˈɪnjuɪtˌˈɪnuɪt"
+  },
+  "Virginian": {
+    "ukphone": "",
+    "usphone": "vərˈdʒɪniən"
+  },
+  "Indus": {
+    "ukphone": "ˈɪndəs",
+    "usphone": "ˈɪndəs"
+  },
+  "archaeocyte": {
+    "ukphone": "ɑːˈkiːəsɪt",
+    "usphone": ""
+  },
+  "compositional": {
+    "ukphone": "ˌkɒmpəˈzɪʃnəl",
+    "usphone": "ˌkɒmpəˈzɪʃənəl"
+  },
+  "immeasurably": {
+    "ukphone": "ɪˈmeʒərəbli",
+    "usphone": "ɪˈmeʒərəbli"
+  },
+  "dropstone": {
+    "ukphone": "ˈdrɒpstəʊn",
+    "usphone": ""
+  },
+  "onrushing": {
+    "ukphone": "ˈɒnˌrʌʃɪŋ",
+    "usphone": "ˈɑːnˌrʌʃɪŋ"
+  },
+  "collaborative": {
+    "ukphone": "kəˈlæbərətɪv",
+    "usphone": "kəˈlæbəreɪtɪv"
+  },
+  "uncompetitive": {
+    "ukphone": "ˌʌnkəmˈpetətɪv",
+    "usphone": "ˌʌnkəmˈpetətɪv"
+  },
+  "tenfold": {
+    "ukphone": "ˈtenfəʊld",
+    "usphone": "ˈtenfoʊld"
+  },
+  "holocene": {
+    "ukphone": "",
+    "usphone": ""
+  },
+  "metalwork": {
+    "ukphone": "ˈmetlwɜːk",
+    "usphone": "ˈmetlwɜːrk"
+  },
+  "imitator": {
+    "ukphone": "ˈɪmɪteɪtə(r)",
+    "usphone": "ˈɪmɪteɪtər"
+  },
+  "nebular": {
+    "ukphone": "ˈnebjʊlə(r)",
+    "usphone": ""
+  },
+  "lesley": {
+    "ukphone": "ˈlesli",
+    "usphone": ""
+  },
+  "theropod": {
+    "ukphone": "ˈθɪərəˌpɒd",
+    "usphone": "ˈθɪrəˌpɑːd"
+  },
+  "tenon": {
+    "ukphone": "ˈtenən",
+    "usphone": "ˈtenən"
+  },
+  "unincorporated": {
+    "ukphone": "ˌʌnɪnˈkɔːpəreɪtɪd",
+    "usphone": "ˌʌnɪnˈkɔːrpəˌreɪtɪd"
+  },
+  "rooftop": {
+    "ukphone": "ˈruːftɒp",
+    "usphone": "ˈruːftɑːp"
+  },
+  "militaristic": {
+    "ukphone": "ˌmɪlɪtəˈrɪstɪk",
+    "usphone": "ˌmɪlɪtəˈrɪstɪk"
+  },
+  "nonagricultural": {
+    "ukphone": "ˌnɒnæɡrɪˈkʌltʃərəl",
+    "usphone": ""
+  },
+  "unplanned": {
+    "ukphone": "ˌʌnˈplænd",
+    "usphone": "ˌʌnˈplænd"
+  },
+  "erectus": {
+    "ukphone": "",
+    "usphone": "ɪˈrektəs"
+  },
+  "somerset": {
+    "ukphone": "",
+    "usphone": "ˈsʌməset"
+  },
+  "glasswork": {
+    "ukphone": "ˈɡlɑːsˌwɜːk",
+    "usphone": "ˈɡlæswɜːrk"
+  },
+  "unusable": {
+    "ukphone": "ˌʌnˈjuːzəbl",
+    "usphone": "ˌʌnˈjuːzəbl"
+  },
+  "glycoprotein": {
+    "ukphone": "ˌglaɪkə(ʊ)ˈprəʊtiːn",
+    "usphone": "ˌɡlaɪkoʊˈproʊˌtiːn"
+  },
+  "nonself": {
+    "ukphone": "ˌnɒnˈself",
+    "usphone": ""
+  },
+  "shorebird": {
+    "ukphone": "ˈʃɔːbɜːd",
+    "usphone": ""
+  },
+  "Katherine": {
+    "ukphone": "ˈkæθərɪn",
+    "usphone": ""
+  },
+  "filmmaker": {
+    "ukphone": "ˈfɪlmˌmeɪkə(r)",
+    "usphone": "ˈfɪlmˌmeɪkər"
+  },
+  "nonthreatening": {
+    "ukphone": "ˌnɒnˈθret(ə)nɪŋ",
+    "usphone": ""
+  },
+  "expertly": {
+    "ukphone": "ˈekspɜːtli",
+    "usphone": "ˈekspɜːrtli"
+  },
+  "sandbar": {
+    "ukphone": "ˈsændbɑː(r)",
+    "usphone": "ˈsændbɑːr"
+  },
+  "unfairly": {
+    "ukphone": "ˌʌnˈfeəli",
+    "usphone": "ˌʌnˈferli"
+  },
+  "unquestionably": {
+    "ukphone": "ʌnˈkwestʃənəbli",
+    "usphone": "ʌnˈkwestʃənəbli"
+  },
+  "bandanna": {
+    "ukphone": "bænˈdænə",
+    "usphone": "bænˈdænə"
+  },
+  "Austrian": {
+    "ukphone": "ˈɒstriən",
+    "usphone": "ˈɔːstriən"
+  },
+  "periodization": {
+    "ukphone": "ˌpɪərɪədaɪˈzeɪʃən",
+    "usphone": ""
+  },
+  "dishabituate": {
+    "ukphone": "ˌdɪshəˈbɪtʃʊeɪt",
+    "usphone": "ˌdɪshəˈbɪtʃʊˌeɪt"
+  },
+  "Galilean": {
+    "ukphone": "",
+    "usphone": "ˌɡæləˈliən"
+  },
+  "caucasian": {
+    "ukphone": "kɔːˈkeɪʒn",
+    "usphone": "kɔːˈkeɪʒn"
+  },
+  "secretin": {
+    "ukphone": "sɪˈkriːtɪn",
+    "usphone": "sɪˈkritn"
+  },
+  "condenses": {
+    "ukphone": "",
+    "usphone": "kənˈdensɪz"
+  },
+  "governmental": {
+    "ukphone": "ˌɡʌvnˈmentl",
+    "usphone": "ˌɡʌvərnˈmentl"
+  },
+  "miocene": {
+    "ukphone": "ˈmaɪəsiːn",
+    "usphone": "ˈmaɪəˌsiːn"
+  },
+  "expansionist": {
+    "ukphone": "ɪkˈspænʃənɪst",
+    "usphone": "ɪkˈspænʃənɪst"
+  },
+  "zagros": {
+    "ukphone": "ˈzæɡrɒs",
+    "usphone": ""
+  },
+  "Haiti": {
+    "ukphone": "ˈheɪti",
+    "usphone": "ˈheɪti"
+  },
+  "oceanographic": {
+    "ukphone": "əʊʃɪənəʊˈɡræfɪk",
+    "usphone": ""
+  },
+  "geochemical": {
+    "ukphone": "ˌdʒiːəˈkemɪkəl",
+    "usphone": ""
+  },
+  "marvelously": {
+    "ukphone": "ˈmɑːvələsli",
+    "usphone": ""
+  },
+  "perceivable": {
+    "ukphone": "",
+    "usphone": "pərˈsivəbl"
+  },
+  "unproven": {
+    "ukphone": "ˌʌnˈpruːv(ə)n",
+    "usphone": "ˌʌnˈpruːvn"
+  },
+  "suitably": {
+    "ukphone": "ˈsuːtəbli; ˈsjuːtəbli",
+    "usphone": "ˈsuːtəbli"
+  },
+  "supermodel": {
+    "ukphone": "ˈsuːpəmɒdl; ˈsjuːpəmɒdl",
+    "usphone": "ˈsuːpərmɑːdl"
+  },
+  "permineralization": {
+    "ukphone": "pɜːˌmɪnərəlaɪˈzeɪʃən",
+    "usphone": ""
+  },
+  "einkorn": {
+    "ukphone": "ˈaɪnˌkɔːn",
+    "usphone": "ˈaɪnˌkɔːrn"
+  },
+  "glassware": {
+    "ukphone": "ˈɡlɑːsweə(r)",
+    "usphone": "ˈɡlæswer"
+  },
+  "nationalistic": {
+    "ukphone": "ˌnæʃnəˈlɪstɪk",
+    "usphone": "ˌnæʃnəˈlɪstɪk"
+  },
+  "multivolume": {
+    "ukphone": "ˌmʌltɪˈvɒljuːm",
+    "usphone": ""
+  },
+  "modernist": {
+    "ukphone": "ˈmɒdənɪst",
+    "usphone": "ˈmɑːdərnɪst"
+  },
+  "regionalist": {
+    "ukphone": "",
+    "usphone": "ˈridʒənlɪst"
+  },
+  "religiously": {
+    "ukphone": "rɪˈlɪdʒəsli",
+    "usphone": "rɪˈlɪdʒəsli"
+  },
+  "fiord": {
+    "ukphone": "fjɔːd",
+    "usphone": "fjɔːrd"
+  },
+  "supplementation": {
+    "ukphone": "ˌsʌplɪmenˈteɪʃn",
+    "usphone": "ˌsʌplɪmenˈteɪʃn"
+  },
+  "hohokam": {
+    "ukphone": "ˈhəʊhəʊkɑːm",
+    "usphone": ""
+  },
+  "bureaucratization": {
+    "ukphone": "bjʊəˌrɒkrətaɪˈzeɪʃən",
+    "usphone": ""
+  },
+  "distantly": {
+    "ukphone": "ˈdɪstəntli",
+    "usphone": "ˈdɪstəntli"
+  },
+  "uncontrollably": {
+    "ukphone": "ˌʌnkənˈtrəʊləbli",
+    "usphone": "ˌʌnkənˈtroʊləbli"
+  },
+  "overburden": {
+    "ukphone": "ˌəʊvəˈbɜːdn",
+    "usphone": "ˌoʊvərˈbɜːrdn"
+  },
+  "shoeshine": {
+    "ukphone": "ˈʃuːʃaɪn",
+    "usphone": "ˈʃuːʃaɪn"
+  },
+  "refiner": {
+    "ukphone": "rɪˈfaɪnə(r)",
+    "usphone": "rɪˈfaɪnər"
+  },
+  "indiscernible": {
+    "ukphone": "ˌɪndɪˈsɜːnəb(ə)l",
+    "usphone": "ˌɪndɪˈsɜːrnəb(ə)l"
+  },
+  "tapir": {
+    "ukphone": "ˈteɪpə(r)",
+    "usphone": "ˈteɪpər"
+  },
+  "miasmic": {
+    "ukphone": "mɪˈæzmɪk; maɪˈæzmɪk",
+    "usphone": ""
+  },
+  "midwestern": {
+    "ukphone": "ˌmɪdˈwestən",
+    "usphone": "ˌmɪdˈwestərn"
+  },
+  "gentlemanly": {
+    "ukphone": "ˈdʒentlmənli",
+    "usphone": "ˈdʒentlmənli"
+  },
+  "Calvinist": {
+    "ukphone": "ˈkælvɪnɪst",
+    "usphone": "ˈkælvɪnɪst"
+  },
+  "folkloric": {
+    "ukphone": "fəʊkˈlɔːrɪk",
+    "usphone": ""
+  },
+  "clayware": {
+    "ukphone": "ˈkleɪweə(r)",
+    "usphone": ""
+  },
+  "featureless": {
+    "ukphone": "ˈfiːtʃələs",
+    "usphone": "ˈfiːtʃərləs"
+  },
+  "hairlike": {
+    "ukphone": "ˈheəlaɪk",
+    "usphone": ""
+  },
+  "behaviorist": {
+    "ukphone": "",
+    "usphone": "bɪˈheɪvjərɪst"
+  },
+  "germination": {
+    "ukphone": "ˌdʒɜːmɪˈneɪʃn",
+    "usphone": "ˌdʒɜːrmɪˈneɪʃ(ə)n"
+  },
+  "lithographic": {
+    "ukphone": "ˌlɪθəˈɡræfɪk",
+    "usphone": "ˌlɪθəˈɡræfɪk"
+  },
+  "smoothness": {
+    "ukphone": "ˈsmuːðnəs",
+    "usphone": "ˈsmuːðnəs"
+  },
+  "Lowa": {
+    "ukphone": "",
+    "usphone": ""
+  },
+  "pella": {
+    "ukphone": "",
+    "usphone": "ˈpelə"
+  },
+  "outpouring": {
+    "ukphone": "ˈaʊtpɔːrɪŋ",
+    "usphone": "ˈaʊtpɔːrɪŋ"
+  },
+  "struggler": {
+    "ukphone": "ˈstrʌɡlə(r)",
+    "usphone": ""
+  },
+  "childless": {
+    "ukphone": "ˈtʃaɪldləs",
+    "usphone": "ˈtʃaɪldləs"
+  },
+  "spheroidal": {
+    "ukphone": "sfɪəˈrɔɪdəl",
+    "usphone": "sfɪˈrɔɪdl"
+  },
+  "signer": {
+    "ukphone": "ˈsaɪnə(r)",
+    "usphone": "ˈsaɪnər"
+  },
+  "electroencephalogram": {
+    "ukphone": "ɪˌlektrəʊɪnˈsefələɡræm; ɪˌlektrəʊɪnˈkefələɡræm",
+    "usphone": "ɪˌlektroʊɪnˈsefələɡræm"
+  },
+  "Thames": {
+    "ukphone": "temz",
+    "usphone": "temz"
+  },
+  "achingly": {
+    "ukphone": "ˈeɪkɪŋli",
+    "usphone": "ˈeɪkɪŋli"
+  },
+  "regimentation": {
+    "ukphone": "ˌredʒɪmenˈteɪʃn",
+    "usphone": "ˌredʒɪmenˈteɪʃn"
+  },
+  "unfertilized": {
+    "ukphone": "ʌnˈfɜːtɪˌlaɪzd",
+    "usphone": "ˌʌnˈfɜːrtəlaɪzd"
+  },
+  "untreated": {
+    "ukphone": "ˌʌnˈtriːtɪd",
+    "usphone": "ˌʌnˈtriːtɪd"
+  },
+  "unreachable": {
+    "ukphone": "ʌnˈriːtʃəb(ə)l",
+    "usphone": ""
+  },
+  "slowness": {
+    "ukphone": "ˈsləʊnəs",
+    "usphone": "ˈsloʊnəs"
+  },
+  "collarless": {
+    "ukphone": "ˈkɒlələs",
+    "usphone": "ˈkɑːlərləs"
+  },
+  "narrower": {
+    "ukphone": "ˈnærəʊə(r)",
+    "usphone": ""
+  },
+  "ectothermic": {
+    "ukphone": "ˌektəˈθɜːmɪk",
+    "usphone": ""
+  },
+  "gibe": {
+    "ukphone": "dʒaɪb",
+    "usphone": "dʒaɪb"
+  },
+  "Cuban": {
+    "ukphone": "ˈkjuːbən",
+    "usphone": "ˈkjuːbən"
+  },
+  "tavernkeeper": {
+    "ukphone": "ˈtævənˌkiːpə",
+    "usphone": ""
+  },
+  "uncrumple": {
+    "ukphone": "ʌnˈkrʌmp(ə)l",
+    "usphone": ""
+  },
+  "adulatory": {
+    "ukphone": "ˌædjuˈleɪtəri",
+    "usphone": "ˈædʒələtɔːri"
+  },
+  "effulgence": {
+    "ukphone": "ɪˈfʌldʒəns",
+    "usphone": "ɪˈfʌldʒəns"
+  },
+  "impalpable": {
+    "ukphone": "ɪmˈpælpəb(ə)l",
+    "usphone": "ɪmˈpælpəb(ə)l"
+  },
+  "dishevel": {
+    "ukphone": "dɪˈʃev(ə)l",
+    "usphone": "dɪˈʃev(ə)l"
+  },
+  "kleptomaniac": {
+    "ukphone": "ˌkleptəˈmeɪniæk",
+    "usphone": "ˌkleptəˈmeɪniæk"
+  },
+  "percipient": {
+    "ukphone": "pəˈsɪpiənt",
+    "usphone": "pərˈsɪpiənt"
+  },
+  "prepossess": {
+    "ukphone": "ˌpriːpəˈzes",
+    "usphone": "ˌpriːpəˈzes"
+  },
+  "edify": {
+    "ukphone": "ˈedɪfaɪ",
+    "usphone": "ˈedɪfaɪ"
+  },
+  "interposition": {
+    "ukphone": "ˌɪntəpəˈzɪʃən",
+    "usphone": "ˌɪntərpəˈzɪʃən"
+  },
+  "protuberate": {
+    "ukphone": "prəˈtjuːbəˌreɪt",
+    "usphone": "proʊˈtuːbərˌeɪt"
+  },
+  "ratification": {
+    "ukphone": "ˌrætɪfɪˈkeɪʃ(ə)n",
+    "usphone": "ˌrætɪfɪˈkeɪʃ(ə)n"
+  },
+  "undersize": {
+    "ukphone": "ˌʌndəˈsaɪz",
+    "usphone": "ˈʌndərˌsaɪz"
+  },
+  "prankster": {
+    "ukphone": "ˈpræŋkstə(r)",
+    "usphone": "ˈpræŋkstər"
+  },
+  "antemundane": {
+    "ukphone": "ˌæntɪmʌnˈdeɪn",
+    "usphone": "ˌæntɪmʌnˈdeɪn"
+  },
+  "valorous": {
+    "ukphone": "ˈvælərəs",
+    "usphone": "ˈvælərəs"
+  },
+  "electrification": {
+    "ukphone": "ɪˌlektrɪfɪˈkeɪʃ(ə)n",
+    "usphone": "ɪˌlektrɪfɪˈkeɪʃ(ə)n"
+  },
+  "preponderate": {
+    "ukphone": "prɪˈpɒndəreɪt",
+    "usphone": "prɪˈpɑːndəreɪt"
+  },
+  "christmas": {
+    "ukphone": "ˈkrɪsməs",
+    "usphone": "ˈkrɪsməs"
+  },
+  "goodby": {
+    "ukphone": "ˌɡʊdˈbaɪ",
+    "usphone": ""
+  },
+  "friday": {
+    "ukphone": "ˈfraɪdeɪ",
+    "usphone": "ˈfraɪdeɪ"
+  },
+  "marxist": {
+    "ukphone": "ˈmɑːksɪst",
+    "usphone": "ˈmɑːrksɪst"
+  },
+  "christ": {
+    "ukphone": "kraɪst",
+    "usphone": "kraɪst"
+  },
+  "reflow": {
+    "ukphone": "ˈriːfləʊ",
+    "usphone": "ˈriːfloʊ"
+  },
+  "delimiter": {
+    "ukphone": "dɪˈlɪmɪtə(r)",
+    "usphone": "dɪˈlɪmɪtər"
+  },
+  "coprocessor": {
+    "ukphone": "ˌkəʊˈprəʊsesə(r)",
+    "usphone": "ˈkoʊˌprɑːsesər"
+  },
+  "updated": {
+    "ukphone": "ʌpˈdeɪtɪd",
+    "usphone": "ˌʌpˈdeɪtɪd"
+  },
+  "keyword": {
+    "ukphone": "ˈkiːwɜːd",
+    "usphone": "ˈkiːwɜːrd"
+  },
+  "uppercase": {
+    "ukphone": "ˈʌpəˌkeɪs",
+    "usphone": "ˌʌpərˈkeɪs"
+  },
+  "wildcard": {
+    "ukphone": "",
+    "usphone": "ˈwaɪldˌkɑːrd"
+  },
+  "macros": {
+    "ukphone": "",
+    "usphone": ""
+  },
+  "expanding": {
+    "ukphone": "ɪkˈspændɪŋ",
+    "usphone": "ɪkˈspændɪŋ"
+  },
+  "on-": {
+    "ukphone": "ɒn",
+    "usphone": ""
+  },
+  "reorder": {
+    "ukphone": "ˌriːˈɔːdə(r)",
+    "usphone": "ˌriːˈɔːrdər"
+  },
+  "initialize": {
+    "ukphone": "ɪˈnɪʃəlaɪz",
+    "usphone": "ɪˈnɪʃəlaɪz"
+  },
+  "described": {
+    "ukphone": "dɪˈskraɪbd",
+    "usphone": "dɪˈskraɪbd"
+  },
+  "designated": {
+    "ukphone": "ˈdezɪɡneɪtɪd",
+    "usphone": "ˈdezɪɡneɪtɪd"
+  },
+  "blinking": {
+    "ukphone": "ˈblɪŋkɪŋ",
+    "usphone": "ˈblɪŋkɪŋ"
+  },
+  "undefined": {
+    "ukphone": "ˌʌndɪˈfaɪnd",
+    "usphone": "ˌʌndɪˈfaɪnd"
+  },
+  "assumed": {
+    "ukphone": "əˈsjuːmd",
+    "usphone": "əˈsuːmd"
+  },
+  "subtotal": {
+    "ukphone": "ˈsʌbtəʊtl",
+    "usphone": "ˈsʌbtoʊtl"
+  },
+  "horizontally": {
+    "ukphone": "ˌhɒrɪˈzɒntəli",
+    "usphone": "ˌhɔːrɪˈzɑːntəli"
+  },
+  "formatted": {
+    "ukphone": "ˈfɔːmætɪd",
+    "usphone": ""
+  },
+  "reformat": {
+    "ukphone": "ˌriːˈfɔːmæt",
+    "usphone": "ˌriːˈfɔːrmæt"
+  },
+  "trailing": {
+    "ukphone": "ˈtreɪlɪŋ",
+    "usphone": "ˈtreɪlɪŋ"
+  },
+  "splitting": {
+    "ukphone": "ˈsplɪtɪŋ",
+    "usphone": "ˈsplɪtɪŋ"
+  },
+  "cpu": {
+    "ukphone": "ˌsiː piː ˈjuː",
+    "usphone": "ˌsiː piː ˈjuː"
+  },
+  "locating": {
+    "ukphone": "ləʊˈkeɪtɪŋ",
+    "usphone": "loʊˈkeɪtɪŋ"
+  },
+  "replaceable": {
+    "ukphone": "rɪˈpleɪsəbl",
+    "usphone": "rɪˈpleɪsəbl"
+  },
+  "graphically": {
+    "ukphone": "ˈɡræfɪkli",
+    "usphone": "ˈɡræfɪkli"
+  },
+  "overwrite": {
+    "ukphone": "ˌəʊvəˈraɪt",
+    "usphone": "ˌoʊvərˈraɪt"
+  },
+  "fastback": {
+    "ukphone": "ˈfɑːstˌbæk",
+    "usphone": "ˈfæstbæk"
+  },
+  "elapsed": {
+    "ukphone": "",
+    "usphone": "ɪˈlæpst"
+  },
+  "windowing": {
+    "ukphone": "ˈwɪndəʊɪŋ",
+    "usphone": "ˈwɪndoʊɪŋ"
+  },
+  "identically": {
+    "ukphone": "aɪˈdentɪkli",
+    "usphone": "aɪˈdentɪkli"
+  },
+  "recursive": {
+    "ukphone": "rɪˈkɜːsɪv",
+    "usphone": "rɪˈkɜːrsɪv"
+  },
+  "diacritical": {
+    "ukphone": "ˌdaɪəˈkrɪtɪkl",
+    "usphone": "ˌdaɪəˈkrɪtɪkl"
+  },
+  "limiting": {
+    "ukphone": "ˈlɪmɪtɪŋ",
+    "usphone": "ˈlɪmɪtɪŋ"
+  },
+  "sequentially": {
+    "ukphone": "sɪˈkwenʃəli",
+    "usphone": "sɪˈkwenʃəli"
+  },
+  "runtime": {
+    "ukphone": "ˈrʌntaɪm",
+    "usphone": "ˈrʌntaɪm"
+  },
+  "subroutine": {
+    "ukphone": "ˈsʌbruːtiːn",
+    "usphone": "ˈsʌbruːtiːn"
+  },
+  "bracketed": {
+    "ukphone": "ˈbrækɪtɪd",
+    "usphone": "ˈbrækɪtɪd"
+  },
+  "manually": {
+    "ukphone": "ˈmænjuəli",
+    "usphone": "ˈmænjuəli"
+  },
+  "autoindex": {
+    "ukphone": "ˌɔːtəʊˈɪndeks",
+    "usphone": ""
+  },
+  "showing": {
+    "ukphone": "ˈʃəʊɪŋ",
+    "usphone": "ˈʃoʊɪŋ"
+  },
+  "allowable": {
+    "ukphone": "əˈlaʊəbl",
+    "usphone": "əˈlaʊəbl"
+  },
+  "limitations": {
+    "ukphone": "",
+    "usphone": "ˌlɪmɪˈteɪʃnz"
+  },
+  "interpretability": {
+    "ukphone": "ɪnˌtɜːprɪˈtəbɪlɪti",
+    "usphone": ""
+  },
+  "indexing": {
+    "ukphone": "ˈɪndeksɪŋ",
+    "usphone": "ˈɪndeksɪŋ"
+  },
+  "lowest": {
+    "ukphone": "ləʊɪst",
+    "usphone": "ˈloʊɪst"
+  },
+  "capitalized": {
+    "ukphone": "ˈkæpɪtəlaɪzd",
+    "usphone": "ˈkæpɪtəlaɪzd"
+  },
+  "restricting": {
+    "ukphone": "",
+    "usphone": "rɪˈstrɪktɪŋ"
+  },
+  "printout": {
+    "ukphone": "ˈprɪntaʊt",
+    "usphone": "ˈprɪntaʊt"
+  },
+  "british": {
+    "ukphone": "ˈbrɪtɪʃ",
+    "usphone": "ˈbrɪtɪʃ"
+  },
+  "landler": {
+    "ukphone": "ˈlændlə(r)",
+    "usphone": "ˈlændlər"
+  },
+  "unshift": {
+    "ukphone": "ʌnˈʃɪft",
+    "usphone": "ʌnˈʃɪft"
+  },
+  "unchanged": {
+    "ukphone": "ʌnˈtʃeɪndʒd",
+    "usphone": "ʌnˈtʃeɪndʒd"
+  },
+  "noninteractive": {
+    "ukphone": "",
+    "usphone": ""
+  },
+  "unmarked": {
+    "ukphone": "ˌʌnˈmɑːkt",
+    "usphone": "ˌʌnˈmɑːrkt"
+  },
+  "american": {
+    "ukphone": "əˈmerɪkən",
+    "usphone": "əˈmerɪkən"
+  },
+  "recoverable": {
+    "ukphone": "rɪˈkʌvərəbl",
+    "usphone": "rɪˈkʌvərəbl"
+  },
+  "printable": {
+    "ukphone": "ˈprɪntəbl",
+    "usphone": "ˈprɪntəbl"
+  },
+  "employe": {
+    "ukphone": "emˈplɔɪi",
+    "usphone": "emˈplɔɪi"
+  },
+  "interpretable": {
+    "ukphone": "ɪnˈtɜːprətəbl",
+    "usphone": "ɪnˈtɜːrprətəbl"
+  },
+  "labeled": {
+    "ukphone": "ˈleɪb(ə)ld",
+    "usphone": "ˈleɪb(ə)ld"
+  },
+  "reappears": {
+    "ukphone": "",
+    "usphone": ""
+  },
+  "reload": {
+    "ukphone": "ˌriːˈləʊd",
+    "usphone": "ˌriːˈloʊd"
+  },
+  "terminating": {
+    "ukphone": "ˈtɜːmɪneɪtɪŋ",
+    "usphone": "ˈtɜːrməˌnet"
+  },
+  "separator": {
+    "ukphone": "ˈsepəreɪtə(r)",
+    "usphone": "ˈsepəreɪtər"
+  },
+  "masking": {
+    "ukphone": "ˈmɑːskɪŋ",
+    "usphone": "ˈmæskɪŋ"
+  },
+  "turnkey": {
+    "ukphone": "ˈtɜːnkiː",
+    "usphone": "ˈtɜːrnkiː"
+  },
+  "seamless": {
+    "ukphone": "ˈsiːmləs",
+    "usphone": "ˈsiːmləs"
+  },
+  "unsigned": {
+    "ukphone": "ˌʌnˈsaɪnd",
+    "usphone": "ˌʌnˈsaɪnd"
+  },
+  "unformatted": {
+    "ukphone": "ʌnˈfɔːmætɪd",
+    "usphone": "ʌnˈfɔːrmætɪd"
+  },
+  "limiter": {
+    "ukphone": "ˈlɪmɪtə(r)",
+    "usphone": "lɪmətər"
+  },
+  "lending": {
+    "ukphone": "ˈlendɪŋ",
+    "usphone": "ˈlendɪŋ"
+  },
+  "locking": {
+    "ukphone": "ˈlɒkɪŋ",
+    "usphone": "ˈlɑːkɪŋ"
+  },
+  "exceeded": {
+    "ukphone": "ɪkˈsi:dɪd",
+    "usphone": "ɪkˈsiːdɪd"
+  },
+  "combo": {
+    "ukphone": "ˈkɒmbəʊ",
+    "usphone": "ˈkɑːmboʊ"
+  }
+}
