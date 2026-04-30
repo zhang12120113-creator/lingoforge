@@ -16,11 +16,16 @@ const loaders = {
   programmer: () => import('../dictionaries/programmer.json'),
 }
 
+const cache = new Map()
+
 export async function loadDictionary(id) {
+  if (cache.has(id)) return cache.get(id)
   const loader = loaders[id]
   if (!loader) return null
   const mod = await loader()
-  return mod.default ?? mod
+  const data = mod.default ?? mod
+  cache.set(id, data)
+  return data
 }
 
 export async function loadChapter(dictId, chapterId) {

@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
+import { unlockAudio } from '../utils/audioContext.js';
 import { loadDictionary } from '../utils/loadDictionary.js';
 import useTyping from '../hooks/useTyping.js';
 import { useUserConfig } from '../hooks/useUserConfig.js';
@@ -15,9 +16,8 @@ export default function Typing() {
   const [chapters, setChapters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [audioCtx, setAudioCtx] = useState(null);
-  const [isAudioReady, setIsAudioReady] = useState(false);
   const [showWrongBook, setShowWrongBook] = useState(false);
+  const inputRef = useRef(null);
 
   const { config, toggleConfig, updateConfig, darkMode, toggleDarkMode } = useUserConfig();
 
@@ -32,27 +32,15 @@ export default function Typing() {
     }).catch(() => { setError('加载失败'); setLoading(false); });
   }, [dictId, chapterId]);
 
-  const { currentWord, currentInput, wordIndex, stats, isFinished, handleInput, reset, isWrong } = useTyping(words, audioCtx, config.soundEnabled, config.wordRepeatCount);
+  const { currentWord, currentInput, wordIndex, stats, isFinished, handleInput, reset, isWrong } = useTyping(words, config.soundEnabled, config.wordRepeatCount);
 
+  // 点击页面任意位置重新聚焦输入框，防止失焦后无法打字
   useEffect(() => {
-    if (isFinished || words.length === 0 || !isAudioReady) return;
-    const onKey = (e) => {
-      if (e.key === ' ') e.preventDefault();
-      if (e.key === 'Backspace') { e.preventDefault(); handleInput('Backspace'); return; }
-      if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); handleInput(e.key); }
-    };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [isFinished, words.length, handleInput, isAudioReady]);
-
-  const unlockAudio = async () => {
-    try {
-      const ctx = new (window.AudioContext || window.webkitAudioContext)();
-      await ctx.resume();
-      setAudioCtx(ctx);
-      setIsAudioReady(true);
-    } catch (e) { setIsAudioReady(true); }
-  };
+    if (isFinished || words.length === 0) return;
+    const onDocClick = () => inputRef.current?.focus();
+    document.addEventListener('click', onDocClick);
+    return () => document.removeEventListener('click', onDocClick);
+  }, [isFinished, words.length]);
 
   const handleRestart = useCallback(() => reset(), [reset]);
   const handleGoHome = useCallback(() => navigate('/'), [navigate]);
@@ -61,17 +49,25 @@ export default function Typing() {
   const showTranslation = config.showTranslation && !config.dictationMode;
 
   if (loading) return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black flex items-center justify-center">
-      <div className="animate-spin w-10 h-10 border-4 border-indigo-600 border-t-transparent rounded-full" />
+    <div className="min-h-screen bg-gray-50 dark:bg-[#0a0a0f] flex items-center justify-center transition-colors duration-500">
+      <div className="text-center">
+        <div className="animate-spin w-12 h-12 border-4 border-indigo-600 dark:border-indigo-500 border-t-transparent rounded-full mx-auto mb-4" />
+        <p className="text-gray-500 dark:text-gray-400 text-sm">正在加载章节...</p>
+      </div>
     </div>
   );
 
   if (error) return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black flex items-center justify-center">
-      <div className="text-center">
-        <p className="text-red-500 mb-4">{error}</p>
-        <button onClick={() => navigate(`/dict/${dictId}`)} className="px-4 py-2 bg-indigo-600 text-white rounded-lg mr-2">返回章节</button>
-        <button onClick={() => navigate('/')} className="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-lg">返回首页</button>
+    <div className="min-h-screen bg-gray-50 dark:bg-[#0a0a0f] flex items-center justify-center transition-colors duration-500">
+      <div className="text-center bg-white dark:bg-[#13131f] rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-800 mx-4">
+        <div className="w-16 h-16 bg-red-50 dark:bg-red-900/20 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <p className="text-red-500 dark:text-red-400 mb-6 font-medium">{error}</p>
+        <button onClick={() => navigate(`/dict/${dictId}`)} className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-medium transition shadow-lg shadow-indigo-500/20 mr-3">返回章节</button>
+        <button onClick={() => navigate('/')} className="px-5 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-xl font-medium transition">返回首页</button>
       </div>
     </div>
   );
@@ -79,33 +75,37 @@ export default function Typing() {
   if (words.length === 0) return null;
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black flex flex-col items-center justify-center p-6 relative transition-colors">
-      {!isAudioReady && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50" onClick={unlockAudio}>
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-sm w-full mx-4 text-center shadow-2xl">
-            <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold mb-2 dark:text-white">准备开始</h3>
-            <p className="text-gray-500 dark:text-gray-400 mb-6">点击任意位置启用音频和语音朗读</p>
-            <button onClick={unlockAudio} className="w-full py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700">开始练习</button>
-          </div>
-        </div>
-      )}
+    <div className="min-h-screen bg-gray-50 dark:bg-[#0a0a0f] flex flex-col items-center justify-center p-6 relative transition-colors duration-500">
+      {/* 隐藏输入框：自动聚焦并捕获键盘事件，支持移动端虚拟键盘 */}
+      <input
+        ref={inputRef}
+        autoFocus
+        className="absolute opacity-0 top-0 left-0 h-px w-px"
+        onKeyDown={(e) => {
+          // 懒解锁音频，处理直接通过 URL 进入练习页的情况
+          unlockAudio();
+          if (e.key === ' ') e.preventDefault();
+          if (e.key === 'Backspace') { e.preventDefault(); handleInput('Backspace'); return; }
+          if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); handleInput(e.key); }
+        }}
+      />
 
       {/* 顶部栏 */}
       <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-40">
-        <button onClick={() => navigate(`/dict/${dictId}`)} className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white flex items-center gap-2 text-sm transition-colors">
+        <button onClick={() => navigate(`/dict/${dictId}`)} className="text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 flex items-center gap-2 text-sm transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/60">
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
           返回章节
         </button>
 
-        <div className="text-sm text-gray-400 dark:text-gray-500">
-          第 {wordIndex + 1} / {words.length} 词
+        <div className="flex flex-col items-center">
+          <div className="text-sm font-semibold text-gray-900 dark:text-white">
+            第 {wordIndex + 1} / {words.length} 词
+          </div>
+          <div className="w-32 h-1 bg-gray-200 dark:bg-gray-800 rounded-full mt-1.5 overflow-hidden">
+            <div className="h-full bg-indigo-500 dark:bg-indigo-400 rounded-full transition-all duration-300" style={{ width: `${((wordIndex + 1) / words.length) * 100}%` }} />
+          </div>
         </div>
 
         <TypingToolbar
@@ -124,21 +124,21 @@ export default function Typing() {
       {/* 单词显示 */}
       <div className="mb-12 text-center pt-16">
         {showPhonetic && (currentWord?.usphone || currentWord?.us || currentWord?.ukphone || currentWord?.uk) && (
-          <div className="text-gray-400 dark:text-gray-500 text-lg mb-3 font-mono">
+          <div className="text-gray-400 dark:text-gray-500 text-lg mb-4 font-mono tracking-wide">
             /{currentWord.usphone || currentWord.us || currentWord.ukphone || currentWord.uk}/
           </div>
         )}
 
-        <div className={`text-6xl md:text-7xl font-mono tracking-widest flex gap-1 justify-center ${isWrong ? 'animate-shake' : ''}`}>
+        <div key={wordIndex} className={`text-6xl md:text-8xl font-mono tracking-[0.15em] flex gap-1 justify-center select-none ${isWrong ? 'animate-shake' : ''}`}>
           {currentWord?.name.split('').map((char, i) => (
-            <span key={i} className={i < currentInput.length ? (currentInput[i] === char ? 'text-indigo-600 dark:text-indigo-400' : 'text-red-500') : 'text-gray-300 dark:text-gray-600'}>
+            <span key={i} className={`${i < currentInput.length ? (currentInput[i] === char ? 'text-indigo-600 dark:text-indigo-400' : 'text-red-500') : 'text-gray-300 dark:text-gray-600'}`}>
               {char}
             </span>
           ))}
         </div>
 
         {currentWord?.trans && showTranslation && (
-          <div className="text-xl text-gray-600 dark:text-gray-400 mt-6">
+          <div className="text-xl text-gray-500 dark:text-gray-400 mt-8 leading-relaxed max-w-lg mx-auto">
             {Array.isArray(currentWord.trans) ? currentWord.trans.join('；') : currentWord.trans}
           </div>
         )}

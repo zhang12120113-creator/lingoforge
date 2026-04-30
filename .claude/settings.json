@@ -26,7 +26,9 @@
       "Bash(node scripts/fill-missing-phones-youdao.js)",
       "Bash(node -e \"const fs=require\\('fs'\\);const r=JSON.parse\\(fs.readFileSync\\('reports/phonetics-trans-check-report.json','utf-8'\\)\\);console.log\\('=== 剩余音标问题清单 ==='\\);for\\(const d of r.dictionaries\\){if\\(d.phoneIssueCount===0&&d.transIssueCount===0\\)continue;console.log\\('\\\\n'+d.name+' \\('+d.file+'\\):'\\);for\\(const p of d.phoneIssues\\){const i=p.issues.map\\(x=>x.desc\\).join\\('; '\\);console.log\\('  ['+p.word+'] uk=\\\\\"'+p.uk+'\\\\\" us=\\\\\"'+p.us+'\\\\\" -> '+i\\);}}\")",
       "Bash(node -e \"const c = require\\('./.youdao-phonetics-cache.json'\\); const entries = Object.entries\\(c\\).filter\\(\\([w,d]\\) => d.ukphone || d.usphone\\); console.log\\('有音标缓存:', entries.length\\); console.log\\('无音标缓存:', Object.keys\\(c\\).length - entries.length\\);\")",
-      "Bash(node scripts/fill-missing-phones-smart.js)"
+      "Bash(node scripts/fill-missing-phones-smart.js)",
+      "Read(//c/Users/warri/.claude/plans/**)",
+      "Bash(awk '{print $5, $9}')"
     ]
   }
 }

@@ -17,25 +17,38 @@ export default function WrongBookModal({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" onClick={onClose}>
-      <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 max-w-lg w-full mx-4 shadow-2xl max-h-[80vh] flex flex-col" onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 animate-[fadeIn_0.2s_ease-out]" onClick={onClose}>
+      <div className="bg-white dark:bg-[#13131f] rounded-3xl p-6 max-w-lg w-full mx-4 shadow-2xl shadow-black/20 dark:shadow-black/40 border border-gray-200/60 dark:border-gray-800/60 max-h-[80vh] flex flex-col animate-[slideUp_0.3s_ease-out]" onClick={e => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold dark:text-white">📕 错题本</h2>
-          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-red-50 dark:bg-red-900/20 rounded-lg flex items-center justify-center">
+              <svg className="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+            </div>
+            <h2 className="text-lg font-bold dark:text-white">错题本</h2>
+            <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 px-2 py-0.5 rounded-full">{wrongWords.length}</span>
+          </div>
+          <button onClick={onClose} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
         </div>
         {wrongWords.length === 0 ? (
-          <div className="text-center py-8 text-gray-400">暂无错题</div>
+          <div className="text-center py-12 text-gray-400 dark:text-gray-500">
+            <div className="w-16 h-16 bg-gray-50 dark:bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg className="w-8 h-8 text-gray-300 dark:text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            暂无错题
+          </div>
         ) : (
-          <div className="overflow-y-auto flex-1 space-y-2">
+          <div className="overflow-y-auto flex-1 space-y-2 pr-1">
             {wrongWords.map(word => (
-              <div key={word.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                <div>
-                  <div className="font-medium dark:text-white">{word.name}</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">{word.trans?.join('；')}</div>
+              <div key={word.name} className="flex items-center justify-between p-3.5 bg-gray-50 dark:bg-gray-900/60 rounded-xl border border-gray-100 dark:border-gray-800/40 hover:border-gray-200 dark:hover:border-gray-700 transition-colors group">
+                <div className="min-w-0 flex-1">
+                  <div className="font-semibold text-gray-900 dark:text-white text-sm">{word.name}</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 mt-0.5 truncate">{word.trans?.join('；')}</div>
                 </div>
-                <button onClick={() => removeWord(word.name)} className="text-red-500 hover:text-red-700 text-sm">删除</button>
+                <button onClick={() => removeWord(word.name)} className="ml-3 text-gray-400 hover:text-red-500 transition-colors p-1.5 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 shrink-0">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                </button>
               </div>
             ))}
           </div>

@@ -1,23 +1,34 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { getAudioContext } from '../utils/audioContext.js';
 
 // ========== 音频合成（机械键盘模拟）==========
 
-function playKeySound(audioCtx) {
+// 预生成白噪声 buffer，避免每次按键都重新分配内存
+function createNoiseBuffer(ctx) {
+  if (!ctx) return null;
+  const bufferSize = ctx.sampleRate * 0.008; // 8ms
+  const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+  const data = buffer.getChannelData(0);
+  for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+  return buffer;
+}
+
+function playKeySound(noiseBufferRef) {
+  const audioCtx = getAudioContext();
   if (!audioCtx) return;
+  if (!noiseBufferRef.current) {
+    noiseBufferRef.current = createNoiseBuffer(audioCtx);
+  }
+  const noiseBuffer = noiseBufferRef.current;
+  if (!noiseBuffer) return;
   try {
     const ctx = audioCtx;
     const now = ctx.currentTime;
 
-    // 1. 白噪声 burst（模拟按键撞击的"咔"声）
-    const bufferSize = ctx.sampleRate * 0.008; // 8ms 极短
-    const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
-    const data = buffer.getChannelData(0);
-    for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
-
+    // 1. 白噪声 burst（复用预生成的 buffer）
     const noise = ctx.createBufferSource();
-    noise.buffer = buffer;
+    noise.buffer = noiseBuffer;
 
-    // 高通滤波：只保留高频"咔嗒"质感
     const filter = ctx.createBiquadFilter();
     filter.type = 'highpass';
     filter.frequency.value = 4000;
@@ -32,7 +43,7 @@ function playKeySound(audioCtx) {
     noise.start(now);
     noise.stop(now + 0.008);
 
-    // 2. 短促高频 tone（清脆的主体音）
+    // 2. 短促高频 tone
     const osc = ctx.createOscillator();
     osc.type = 'triangle';
     osc.frequency.value = 1000;
@@ -46,14 +57,14 @@ function playKeySound(audioCtx) {
   } catch (e) {}
 }
 
-function playSound(type, audioCtx) {
+function playSound(type) {
+  const audioCtx = getAudioContext();
   if (!audioCtx) return;
   try {
     const ctx = audioCtx;
     const now = ctx.currentTime;
 
     if (type === 'correct') {
-      // 清脆双音调（大三度和弦，更有成就感）
       const osc1 = ctx.createOscillator();
       osc1.type = 'sine';
       osc1.frequency.value = 1200;
@@ -67,7 +78,7 @@ function playSound(type, audioCtx) {
 
       const osc2 = ctx.createOscillator();
       osc2.type = 'sine';
-      osc2.frequency.value = 1500; // 大三度
+      osc2.frequency.value = 1500;
       const g2 = ctx.createGain();
       g2.gain.setValueAtTime(0.2, now);
       g2.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
@@ -77,7 +88,6 @@ function playSound(type, audioCtx) {
       osc2.stop(now + 0.12);
 
     } else if (type === 'wrong') {
-      // 低沉嗡嗡声（sawtooth 更刺耳）
       const osc = ctx.createOscillator();
       osc.type = 'sawtooth';
       osc.frequency.value = 180;
@@ -90,7 +100,6 @@ function playSound(type, audioCtx) {
       osc.stop(now + 0.18);
 
     } else if (type === 'finish') {
-      // 欢快三音调上升
       const osc = ctx.createOscillator();
       osc.type = 'sine';
       const gain = ctx.createGain();
@@ -107,7 +116,7 @@ function playSound(type, audioCtx) {
   } catch (e) {}
 }
 
-export default function useTyping(words, audioCtx, soundEnabled, wordRepeatCount = 1) {
+export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
   const [wordIndex, setWordIndex] = useState(0);
   const [currentInput, setCurrentInput] = useState('');
   const [isWrong, setIsWrong] = useState(false);
@@ -121,15 +130,27 @@ export default function useTyping(words, audioCtx, soundEnabled, wordRepeatCount
   const wordsRef = useRef(words);
   wordsRef.current = words;
 
+  // 白噪声 buffer，首次播放时懒创建
+  const noiseBufferRef = useRef(null);
+
+  // 跟踪语音合成状态，避免空 cancel()
+  const speakingRef = useRef(false);
+
   const speakWord = useCallback((word) => {
     if (!soundEnabled || !word) return;
     try {
       if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
+        if (speakingRef.current) {
+          window.speechSynthesis.cancel();
+        }
         const utter = new SpeechSynthesisUtterance(word);
         utter.lang = 'en-US';
         utter.rate = 0.9;
-        window.speechSynthesis.speak(utter);
+        utter.onstart = () => { speakingRef.current = true; };
+        utter.onend = () => { speakingRef.current = false; };
+        utter.onerror = () => { speakingRef.current = false; };
+        // 异步投递到事件循环，避免阻塞主线程
+        requestAnimationFrame(() => window.speechSynthesis.speak(utter));
       }
     } catch (e) {}
   }, [soundEnabled]);
@@ -161,7 +182,10 @@ export default function useTyping(words, audioCtx, soundEnabled, wordRepeatCount
     if (startTime && !isFinished) {
       timerRef.current = setInterval(() => {
         const elapsed = Math.floor((Date.now() - startTime) / 1000);
-        setStats(prev => ({ ...prev, time: elapsed, wpm: elapsed > 0 ? Math.round((correctCountRef.current / elapsed) * 60) : 0 }));
+        setStats(prev => {
+          if (prev.time === elapsed) return prev;
+          return { ...prev, time: elapsed, wpm: elapsed > 0 ? Math.round((correctCountRef.current / elapsed) * 60) : 0 };
+        });
       }, 1000);
     }
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
@@ -174,8 +198,7 @@ export default function useTyping(words, audioCtx, soundEnabled, wordRepeatCount
     if (!startTime) setStartTime(Date.now());
     if (key === 'Backspace') { setCurrentInput(prev => prev.slice(0, -1)); setIsWrong(false); return; }
 
-    // 每次按键
-    if (soundEnabled) playKeySound(audioCtx);
+    if (soundEnabled) playKeySound(noiseBufferRef);
 
     const target = currentWord.name;
     const nextInput = currentInput + key;
@@ -185,13 +208,13 @@ export default function useTyping(words, audioCtx, soundEnabled, wordRepeatCount
       setCurrentInput(nextInput);
       setIsWrong(false);
       if (nextInput === target) {
-        if (soundEnabled) playSound('correct', audioCtx);
+        if (soundEnabled) playSound('correct');
         correctCountRef.current += target.length;
         const completedTimes = repeatCountRef.current + 1;
         const shouldAdvance = wordRepeatCount !== 0 && completedTimes >= wordRepeatCount;
         if (shouldAdvance) {
           if (wordIndex >= words.length - 1) {
-            if (soundEnabled) playSound('finish', audioCtx);
+            if (soundEnabled) playSound('finish');
             setIsFinished(true);
             const elapsed = Math.floor((Date.now() - startTime) / 1000) || 1;
             setStats({ time: elapsed, inputCount: inputCountRef.current, correctCount: correctCountRef.current,
@@ -210,12 +233,12 @@ export default function useTyping(words, audioCtx, soundEnabled, wordRepeatCount
         }
       }
     } else {
-      if (soundEnabled) playSound('wrong', audioCtx);
+      if (soundEnabled) playSound('wrong');
       setCurrentInput(nextInput);
       setIsWrong(true);
       setTimeout(() => { setCurrentInput(''); setIsWrong(false); }, 300);
     }
-  }, [currentWord, currentInput, wordIndex, words, isFinished, startTime, speakWord, audioCtx]);
+  }, [currentWord, currentInput, wordIndex, words, isFinished, startTime, speakWord, soundEnabled]);
 
   const reset = useCallback(() => {
     setWordIndex(0); setCurrentInput(''); setIsWrong(false); setIsFinished(false); setStartTime(null);
