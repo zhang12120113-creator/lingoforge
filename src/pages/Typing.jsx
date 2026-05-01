@@ -187,7 +187,7 @@ export default function Typing() {
         <button
           onClick={() => setIsWordListOpen(v => !v)}
           className={`
-            fixed left-2 md:left-4 top-[45%] md:top-1/2 -translate-y-1/2 z-40 p-3 rounded-full shadow-lg
+            fixed left-2 md:left-4 top-[55%] md:top-1/2 -translate-y-1/2 z-40 p-3 rounded-full shadow-lg
             transition-all duration-300 backdrop-blur-sm
             ${isWordListOpen
               ? 'opacity-0 pointer-events-none -translate-x-4'
@@ -200,7 +200,7 @@ export default function Typing() {
         </button>
 
         {/* 顶部栏 */}
-        <div className="shrink-0 flex items-center justify-between px-3 md:px-6 py-2 md:py-4 z-40">
+        <div className="h-12 md:h-14 shrink-0 flex items-center justify-between px-3 md:px-4 z-40">
           <button onClick={() => navigate(`/dict/${dictId}`)} className="text-content-tertiary dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark flex items-center gap-2 text-sm transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.04]">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -241,10 +241,10 @@ export default function Typing() {
         />
 
         {/* 单词显示 */}
-        <div className="flex-1 flex flex-col items-center justify-start pt-4 md:pt-0 md:justify-center overflow-y-auto">
-          <div className="text-center px-4">
+        <div className="flex-1 flex flex-col items-center justify-center px-4 min-h-0 overflow-y-auto">
+          <div className="flex flex-col items-center gap-5 md:gap-10 text-center">
             {showPhonetic && (currentWord?.usphone || currentWord?.us || currentWord?.ukphone || currentWord?.uk) && (
-              <div className="text-content-tertiary dark:text-gray-500 text-base md:text-lg mb-2 md:mb-4 font-mono tracking-wide shrink-0">
+              <div className="text-content-tertiary dark:text-gray-500 text-2xl md:text-5xl mb-2 md:mb-4 font-mono tracking-wide shrink-0">
                 /{currentWord.usphone || currentWord.us || currentWord.ukphone || currentWord.uk}/
               </div>
             )}
@@ -254,7 +254,7 @@ export default function Typing() {
             </div>
 
             {currentWord?.trans && showTranslation && (
-              <div className="text-sm md:text-xl text-content-tertiary dark:text-gray-400 mt-4 md:mt-8 leading-relaxed md:leading-normal max-w-lg mx-auto">
+              <div className="text-sm md:text-2xl text-content-tertiary dark:text-gray-400 leading-relaxed md:leading-normal max-w-full md:max-w-2xl shrink-0">
                 {Array.isArray(currentWord.trans) ? currentWord.trans.join('；') : currentWord.trans}
               </div>
             )}
