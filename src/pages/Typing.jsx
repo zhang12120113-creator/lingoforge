@@ -135,7 +135,7 @@ export default function Typing() {
   if (words.length === 0) return null;
 
   return (
-    <div className="h-[calc(100dvh-3rem)] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in">
+    <div className="h-[calc(100dvh-3rem)] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden">
       {/* 左侧可折叠单词列表 */}
       <div className={`
         transition-all duration-300 ease-in-out shrink-0 self-stretch
@@ -200,7 +200,7 @@ export default function Typing() {
         </button>
 
         {/* 顶部栏 */}
-        <div className="h-12 md:h-14 shrink-0 flex items-center justify-between px-3 md:px-4 z-40">
+        <div className="min-h-12 md:h-14 shrink-0 flex items-center justify-between px-3 md:px-4 z-40">
           <button onClick={() => navigate(`/dict/${dictId}`)} className="text-content-tertiary dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark flex items-center gap-2 text-sm transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.04]">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -241,10 +241,10 @@ export default function Typing() {
         />
 
         {/* 单词显示 */}
-        <div className="flex-1 flex flex-col items-center justify-center px-4 min-h-0 overflow-y-auto">
-          <div className="flex flex-col items-center gap-5 md:gap-10 text-center">
+        <div className="flex-1 flex flex-col items-center justify-center px-4 min-h-0 overflow-hidden">
+          <div className="flex flex-col items-center gap-2 md:gap-10 text-center">
             {showPhonetic && (currentWord?.usphone || currentWord?.us || currentWord?.ukphone || currentWord?.uk) && (
-              <div className="text-content-tertiary dark:text-gray-500 text-2xl md:text-5xl mb-2 md:mb-4 font-mono tracking-wide shrink-0">
+              <div className="text-content-tertiary dark:text-gray-500 text-xl md:text-5xl mb-1 md:mb-4 font-mono tracking-wide shrink-0">
                 /{currentWord.usphone || currentWord.us || currentWord.ukphone || currentWord.uk}/
               </div>
             )}
