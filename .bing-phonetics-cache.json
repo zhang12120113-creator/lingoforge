@@ -1,0 +1,572 @@
+{
+  "MasterCard": {
+    "word": "MasterCard",
+    "uk": "",
+    "us": ""
+  },
+  "chiche": {
+    "word": "chiche",
+    "uk": "",
+    "us": ""
+  },
+  "relinguish": {
+    "word": "relinguish",
+    "uk": "",
+    "us": ""
+  },
+  "groa": {
+    "word": "groa",
+    "uk": "",
+    "us": ""
+  },
+  "accommodations": {
+    "word": "accommodations",
+    "uk": "əˌkɒməˈdeɪʃ(ə)nz",
+    "us": "əˌkɑməˈdeɪʃ(ə)nz"
+  },
+  "accountants": {
+    "word": "accountants",
+    "uk": "ə'kaʊntənt",
+    "us": "əˈkaʊntənt"
+  },
+  "advantages": {
+    "word": "advantages",
+    "uk": "",
+    "us": ""
+  },
+  "advertisements": {
+    "word": "advertisements",
+    "uk": "ədˈvɜː(r)tɪsmənt",
+    "us": "ˌædvərˈtaɪzmənt"
+  },
+  "assignments": {
+    "word": "assignments",
+    "uk": "ə'saɪnmənt",
+    "us": "əˈsaɪnmənt"
+  },
+  "back": {
+    "word": "back",
+    "uk": "bæk",
+    "us": "bæk"
+  },
+  "bands": {
+    "word": "bands",
+    "uk": "bænd",
+    "us": "bænd"
+  },
+  "bicycles": {
+    "word": "bicycles",
+    "uk": "'baɪsɪk(ə)l",
+    "us": "ˈbaɪsɪk(ə)l"
+  },
+  "booklist": {
+    "word": "booklist",
+    "uk": "",
+    "us": ""
+  },
+  "brochures": {
+    "word": "brochures",
+    "uk": "ˈbrəʊʃə(r)",
+    "us": "broʊˈʃʊr"
+  },
+  "caves": {
+    "word": "caves",
+    "uk": "keɪv",
+    "us": "keɪv"
+  },
+  "certificates": {
+    "word": "certificates",
+    "uk": "sə(r)ˈtɪfɪkət",
+    "us": "sərˈtɪfɪkət"
+  },
+  "charges": {
+    "word": "charges",
+    "uk": "tʃɑː(r)dʒ",
+    "us": "tʃɑrdʒ"
+  },
+  "co-operative": {
+    "word": "co-operative",
+    "uk": "",
+    "us": ""
+  },
+  "colleges": {
+    "word": "colleges",
+    "uk": "ˈkɒlɪdʒ",
+    "us": "ˈkɑlɪdʒ"
+  },
+  "contacts": {
+    "word": "contacts",
+    "uk": "ˈkɒntækt",
+    "us": "ˈkɑnˌtækt"
+  },
+  "contaminants": {
+    "word": "contaminants",
+    "uk": "kən'tæmɪnənt",
+    "us": "kənˈtæmɪnənt"
+  },
+  "decorations": {
+    "word": "decorations",
+    "uk": ".dekə'reɪʃ(ə)n",
+    "us": "ˌdekəˈreɪʃ(ə)n"
+  },
+  "diplomas": {
+    "word": "diplomas",
+    "uk": "dɪˈpləʊmə",
+    "us": "dɪˈploʊmə"
+  },
+  "disputes": {
+    "word": "disputes",
+    "uk": "dɪˈspjuːt",
+    "us": "dɪˈspjut"
+  },
+  "doctors": {
+    "word": "doctors",
+    "uk": "ˈdɒktə(r)",
+    "us": "ˈdɑktər"
+  },
+  "donations": {
+    "word": "donations",
+    "uk": "dəʊˈneɪʃ(ə)n",
+    "us": "doʊˈneɪʃ(ə)n"
+  },
+  "doors": {
+    "word": "doors",
+    "uk": "dɔː(r)",
+    "us": "dɔr"
+  },
+  "emergencies": {
+    "word": "emergencies",
+    "uk": "ɪˈmɜː(r)dʒ(ə)nsi",
+    "us": "ɪˈmɜrdʒənsi"
+  },
+  "energies": {
+    "word": "energies",
+    "uk": "ˈenə(r)dʒi",
+    "us": "ˈenərdʒi"
+  },
+  "engineers": {
+    "word": "engineers",
+    "uk": "ˌendʒɪˈnɪə(r)",
+    "us": "ˌendʒɪˈnɪr"
+  },
+  "examples": {
+    "word": "examples",
+    "uk": "ɪɡˈzɑːmp(ə)l",
+    "us": "ɪɡˈzæmp(ə)l"
+  },
+  "exams": {
+    "word": "exams",
+    "uk": "ɪɡ'zæm",
+    "us": "ɪɡˈzæm"
+  },
+  "falcons": {
+    "word": "falcons",
+    "uk": "ˈfɔːlkən",
+    "us": "ˈfælkən"
+  },
+  "farmers": {
+    "word": "farmers",
+    "uk": "ˈfɑː(r)mə(r)",
+    "us": "ˈfɑrmər"
+  },
+  "farms": {
+    "word": "farms",
+    "uk": "fɑː(r)m",
+    "us": "fɑrm"
+  },
+  "flourishment": {
+    "word": "flourishment",
+    "uk": "",
+    "us": ""
+  },
+  "fossils": {
+    "word": "fossils",
+    "uk": "ˈfɒs(ə)l",
+    "us": "ˈfɑs(ə)l"
+  },
+  "fund-raising": {
+    "word": "fund-raising",
+    "uk": "",
+    "us": ""
+  },
+  "households": {
+    "word": "households",
+    "uk": "ˈhaʊsˌhəʊld",
+    "us": "ˈhaʊsˌhoʊld"
+  },
+  "humans": {
+    "word": "humans",
+    "uk": "ˈhjuːmən",
+    "us": "ˈhjumən"
+  },
+  "ideas": {
+    "word": "ideas",
+    "uk": "aɪˈdɪə",
+    "us": "aɪˈdiə"
+  },
+  "identities": {
+    "word": "identities",
+    "uk": "aɪˈdentɪti",
+    "us": "aɪˈdentəti"
+  },
+  "inquiries": {
+    "word": "inquiries",
+    "uk": "ɪnˈkwaɪəri",
+    "us": "ˈɪŋkwəri"
+  },
+  "institutes": {
+    "word": "institutes",
+    "uk": "ˈɪnstɪˌtjuːt",
+    "us": "ˈɪnstɪˌtut"
+  },
+  "interviews": {
+    "word": "interviews",
+    "uk": "ˈɪntə(r)ˌvjuː",
+    "us": "ˈɪntərˌvju"
+  },
+  "investigators": {
+    "word": "investigators",
+    "uk": "ɪnˈvestɪˌɡeɪtə(r)",
+    "us": "ɪnˈvestɪˌɡeɪtər"
+  },
+  "keywords": {
+    "word": "keywords",
+    "uk": "ˈkiːˌwɜː(r)d",
+    "us": "ˈkiˌwɜrd"
+  },
+  "libraries": {
+    "word": "libraries",
+    "uk": "ˈlaɪbrəri",
+    "us": "ˈlaɪˌbreri"
+  },
+  "majors": {
+    "word": "majors",
+    "uk": "ˈmeɪdʒə(r)",
+    "us": "ˈmeɪdʒər"
+  },
+  "marks": {
+    "word": "marks",
+    "uk": "mɑː(r)k",
+    "us": "mɑrk"
+  },
+  "nationalities": {
+    "word": "nationalities",
+    "uk": ".næʃə'næləti",
+    "us": "ˌnæʃəˈnæləti"
+  },
+  "non-drinker": {
+    "word": "non-drinker",
+    "uk": "",
+    "us": ""
+  },
+  "occupants": {
+    "word": "occupants",
+    "uk": "ˈɒkjʊpənt",
+    "us": "ˈɑkjəpənt"
+  },
+  "open-book": {
+    "word": "open-book",
+    "uk": "",
+    "us": ""
+  },
+  "passengers": {
+    "word": "passengers",
+    "uk": "ˈpæsɪndʒə(r)",
+    "us": "ˈpæsɪndʒər"
+  },
+  "peasants": {
+    "word": "peasants",
+    "uk": "ˈpez(ə)nt",
+    "us": "ˈpez(ə)nt"
+  },
+  "pets": {
+    "word": "pets",
+    "uk": "pet",
+    "us": "pet"
+  },
+  "photocopies": {
+    "word": "photocopies",
+    "uk": "ˈfəʊtəˌkɒpi",
+    "us": "ˈfoʊtoʊˌkɑpi"
+  },
+  "photographs": {
+    "word": "photographs",
+    "uk": "ˈfəʊtəˌɡrɑːf",
+    "us": "ˈfoʊtəˌɡræf"
+  },
+  "planners": {
+    "word": "planners",
+    "uk": "ˈplænə(r)",
+    "us": "ˈplænər"
+  },
+  "positions": {
+    "word": "positions",
+    "uk": "pə'zɪʃ(ə)n",
+    "us": "pəˈzɪʃ(ə)n"
+  },
+  "precautions": {
+    "word": "precautions",
+    "uk": "prɪˈkɔːʃ(ə)n",
+    "us": "prɪˈkɔʃ(ə)n"
+  },
+  "problems": {
+    "word": "problems",
+    "uk": "ˈprɒbləm",
+    "us": "ˈprɑbləm"
+  },
+  "professions": {
+    "word": "professions",
+    "uk": "prə'feʃ(ə)nz",
+    "us": "prəˈfeʃ(ə)n"
+  },
+  "profits": {
+    "word": "profits",
+    "uk": "ˈprɒfɪt",
+    "us": "ˈprɑfɪt"
+  },
+  "readers": {
+    "word": "readers",
+    "uk": "ˈriːdə(r)",
+    "us": "ˈridər"
+  },
+  "referees": {
+    "word": "referees",
+    "uk": "ˌrefəˈriː",
+    "us": "ˌrefəˈriː"
+  },
+  "respondents": {
+    "word": "respondents",
+    "uk": "rɪˈspɒndənt",
+    "us": "rɪˈspɑndənt"
+  },
+  "retails": {
+    "word": "retails",
+    "uk": "ˈriːteɪl",
+    "us": "ˈriteɪl"
+  },
+  "rocks": {
+    "word": "rocks",
+    "uk": "rɒk",
+    "us": "rɑk"
+  },
+  "spanish": {
+    "word": "spanish",
+    "uk": "'spænɪʃ",
+    "us": "ˈspænɪʃ"
+  },
+  "spoons": {
+    "word": "spoons",
+    "uk": "spuːn",
+    "us": "spun"
+  },
+  "starting": {
+    "word": "starting",
+    "uk": "",
+    "us": ""
+  },
+  "stations": {
+    "word": "stations",
+    "uk": "'steɪʃ(ə)n",
+    "us": "ˈsteɪʃ(ə)n"
+  },
+  "stores": {
+    "word": "stores",
+    "uk": "stɔː(r)",
+    "us": "stɔr"
+  },
+  "subtitles": {
+    "word": "subtitles",
+    "uk": "'sʌb.taɪt(ə)l",
+    "us": "ˈsʌbˌtaɪt(ə)l"
+  },
+  "suggestions": {
+    "word": "suggestions",
+    "uk": "səˈdʒestʃ(ə)n",
+    "us": "səɡˈdʒestʃ(ə)n"
+  },
+  "tables": {
+    "word": "tables",
+    "uk": "'teɪb(ə)l",
+    "us": "ˈteɪb(ə)l"
+  },
+  "temples": {
+    "word": "temples",
+    "uk": "'templz",
+    "us": "ˈtemp(ə)l"
+  },
+  "topics": {
+    "word": "topics",
+    "uk": "ˈtɒpɪk",
+    "us": "ˈtɑpɪk"
+  },
+  "tours": {
+    "word": "tours",
+    "uk": "",
+    "us": ""
+  },
+  "travelers": {
+    "word": "travelers",
+    "uk": "ˈtræv(ə)lə",
+    "us": "ˈtræv(ə)lər"
+  },
+  "tributes": {
+    "word": "tributes",
+    "uk": "ˈtrɪbjuːt",
+    "us": "ˈtrɪbjut"
+  },
+  "universities": {
+    "word": "universities",
+    "uk": "ˌjuːnɪˈvɜː(r)səti",
+    "us": "ˌjunɪˈvɜrsəti"
+  },
+  "utensils": {
+    "word": "utensils",
+    "uk": "juːˈtens(ə)l",
+    "us": "juˈtens(ə)l"
+  },
+  "videos": {
+    "word": "videos",
+    "uk": "ˈvɪdiəʊ",
+    "us": "ˈvɪdioʊ"
+  },
+  "visas": {
+    "word": "visas",
+    "uk": "ˈviːzə",
+    "us": "ˈvizə"
+  },
+  "volunteers": {
+    "word": "volunteers",
+    "uk": "ˌvɒlənˈtɪə(r)",
+    "us": "ˌvɑlənˈtɪr"
+  },
+  "water-proof": {
+    "word": "water-proof",
+    "uk": "",
+    "us": ""
+  },
+  "workshops": {
+    "word": "workshops",
+    "uk": "ˈwɜː(r)kˌʃɒp",
+    "us": "ˈwɜrkˌʃɑp"
+  },
+  "Miss.": {
+    "word": "Miss.",
+    "uk": "mɪs",
+    "us": "mɪs"
+  },
+  "night-club": {
+    "word": "night-club",
+    "uk": "",
+    "us": ""
+  },
+  "organiser": {
+    "word": "organiser",
+    "uk": "",
+    "us": ""
+  },
+  "P.E.": {
+    "word": "P.E.",
+    "uk": "ˌpiː ˈiː",
+    "us": "ˌpi ˈi"
+  },
+  "pencil-box": {
+    "word": "pencil-box",
+    "uk": "",
+    "us": ""
+  },
+  "see-saw": {
+    "word": "see-saw",
+    "uk": "",
+    "us": ""
+  },
+  "softdrink": {
+    "word": "softdrink",
+    "uk": "",
+    "us": ""
+  },
+  "Tibetan": {
+    "word": "Tibetan",
+    "uk": "tɪ'betn",
+    "us": "tiˈbɛtən"
+  },
+  "trolley-bus": {
+    "word": "trolley-bus",
+    "uk": "",
+    "us": ""
+  },
+  "trooping": {
+    "word": "trooping",
+    "uk": "truːp",
+    "us": "trup"
+  },
+  "twenty-one": {
+    "word": "twenty-one",
+    "uk": "",
+    "us": ""
+  },
+  "U.N.": {
+    "word": "U.N.",
+    "uk": "",
+    "us": ""
+  },
+  "barometre": {
+    "word": "barometre",
+    "uk": "",
+    "us": ""
+  },
+  "heartstring": {
+    "word": "heartstring",
+    "uk": "'hɑːtstrɪŋ",
+    "us": ""
+  },
+  "knowhow": {
+    "word": "knowhow",
+    "uk": "'nəʊhaʊ",
+    "us": ""
+  },
+  "uneasiness": {
+    "word": "uneasiness",
+    "uk": "",
+    "us": ""
+  },
+  "seals": {
+    "word": "seals",
+    "uk": "",
+    "us": ""
+  },
+  "dacron": {
+    "word": "dacron",
+    "uk": "ˈdækrɒn",
+    "us": "ˈdeɪˌkrɑn"
+  },
+  "horseracing": {
+    "word": "horseracing",
+    "uk": "ˈhɔːsˌreɪsɪŋ",
+    "us": "ˈhɔrsˌreɪsɪŋ"
+  },
+  "volitional": {
+    "word": "volitional",
+    "uk": "və'lɪʃ(ə)nəl",
+    "us": "və'lɪʃ(ə)nəl"
+  },
+  "hangings": {
+    "word": "hangings",
+    "uk": "'hæŋɪŋ",
+    "us": "ˈhæŋɪŋ"
+  },
+  "dietician": {
+    "word": "dietician",
+    "uk": ".daɪə'tɪʃ(ə)n",
+    "us": "ˌdaɪəˈtɪʃ(ə)n"
+  },
+  "extremities": {
+    "word": "extremities",
+    "uk": "ɪk'streməti",
+    "us": "ɪkˈstreməti"
+  },
+  "proximately": {
+    "word": "proximately",
+    "uk": "",
+    "us": ""
+  }
+}

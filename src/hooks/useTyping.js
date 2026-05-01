@@ -127,6 +127,7 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
   const inputCountRef = useRef(0);
   const correctCountRef = useRef(0);
   const repeatCountRef = useRef(0);
+  const currentInputRef = useRef('');
   const wordsRef = useRef(words);
   wordsRef.current = words;
 
@@ -138,27 +139,15 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
 
   const speakWord = useCallback((word) => {
     if (!soundEnabled || !word) return;
-    try {
-      if ('speechSynthesis' in window) {
-        if (speakingRef.current) {
-          window.speechSynthesis.cancel();
-        }
-        const utter = new SpeechSynthesisUtterance(word);
-        utter.lang = 'en-US';
-        utter.rate = 0.9;
-        utter.onstart = () => { speakingRef.current = true; };
-        utter.onend = () => { speakingRef.current = false; };
-        utter.onerror = () => { speakingRef.current = false; };
-        // 异步投递到事件循环，避免阻塞主线程
-        requestAnimationFrame(() => window.speechSynthesis.speak(utter));
-      }
-    } catch (e) {}
+    const audio = new Audio(`https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(word)}&type=2`);
+    audio.play().catch(() => {});
   }, [soundEnabled]);
 
   // words 变化时重置状态
   useEffect(() => {
     setWordIndex(0);
     setCurrentInput('');
+    currentInputRef.current = '';
     setIsWrong(false);
     setIsFinished(false);
     setStartTime(null);
@@ -196,15 +185,24 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
   const handleInput = useCallback((key) => {
     if (isFinished || !currentWord) return;
     if (!startTime) setStartTime(Date.now());
-    if (key === 'Backspace') { setCurrentInput(prev => prev.slice(0, -1)); setIsWrong(false); return; }
+    if (key === 'Backspace') {
+      setCurrentInput(prev => {
+        const next = prev.slice(0, -1);
+        currentInputRef.current = next;
+        return next;
+      });
+      setIsWrong(false);
+      return;
+    }
 
     if (soundEnabled) playKeySound(noiseBufferRef);
 
     const target = currentWord.name;
-    const nextInput = currentInput + key;
+    const nextInput = currentInputRef.current + key;
     inputCountRef.current += 1;
 
     if (target.startsWith(nextInput)) {
+      currentInputRef.current = nextInput;
       setCurrentInput(nextInput);
       setIsWrong(false);
       if (nextInput === target) {
@@ -222,26 +220,42 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
               accuracy: inputCountRef.current > 0 ? Math.round((correctCountRef.current / inputCountRef.current) * 100) / 100 : 0 });
           } else {
             setWordIndex(prev => prev + 1);
+            currentInputRef.current = '';
             setCurrentInput('');
             repeatCountRef.current = 0;
             setTimeout(() => speakWord(wordsRef.current[wordIndex + 1]?.name), 100);
           }
         } else {
           repeatCountRef.current = completedTimes;
+          currentInputRef.current = '';
           setCurrentInput('');
           setTimeout(() => speakWord(currentWord?.name), 100);
         }
       }
     } else {
       if (soundEnabled) playSound('wrong');
+      currentInputRef.current = nextInput;
       setCurrentInput(nextInput);
       setIsWrong(true);
-      setTimeout(() => { setCurrentInput(''); setIsWrong(false); }, 300);
+      setTimeout(() => { currentInputRef.current = ''; setCurrentInput(''); setIsWrong(false); }, 300);
     }
-  }, [currentWord, currentInput, wordIndex, words, isFinished, startTime, speakWord, soundEnabled]);
+  }, [currentWord, wordIndex, words, isFinished, startTime, speakWord, soundEnabled, wordRepeatCount]);
+
+  const jumpTo = useCallback((index) => {
+    if (index < 0 || index >= wordsRef.current.length) return;
+    setWordIndex(index);
+    currentInputRef.current = '';
+    setCurrentInput('');
+    setIsWrong(false);
+    setIsFinished(false);
+    repeatCountRef.current = 0;
+    if (soundEnabled) {
+      setTimeout(() => speakWord(wordsRef.current[index]?.name), 100);
+    }
+  }, [soundEnabled, speakWord]);
 
   const reset = useCallback(() => {
-    setWordIndex(0); setCurrentInput(''); setIsWrong(false); setIsFinished(false); setStartTime(null);
+    setWordIndex(0); currentInputRef.current = ''; setCurrentInput(''); setIsWrong(false); setIsFinished(false); setStartTime(null);
     setStats({ time: 0, inputCount: 0, correctCount: 0, wpm: 0, accuracy: 0 });
     inputCountRef.current = 0; correctCountRef.current = 0; repeatCountRef.current = 0;
     if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
@@ -250,5 +264,5 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
     }
   }, [soundEnabled, speakWord]);
 
-  return { currentWord, currentInput, wordIndex, stats, isFinished, isWrong, handleInput, reset };
+  return { currentWord, currentInput, wordIndex, stats, isFinished, isWrong, handleInput, jumpTo, reset };
 }

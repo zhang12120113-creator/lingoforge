@@ -1,0 +1,134 @@
+词库全面质量检查报告
+生成时间: 2026/5/1 09:35:15
+总词库数: 15
+总单词数: 68343
+总问题数: 234
+总重复数: 0
+
+--- 初中英语词汇 (junior.json) ---
+  实际单词: 1418 | 官方标准: 2000 | 中考大纲约1800-2000词
+  API验证: 200词 | 找到193 | 未找到7
+  API未找到: Russia, Friday, Monday, Canada, Asian, our, Thursday
+
+--- 中考英语核心词汇 (zhongkao.json) ---
+  实际单词: 800 | 官方标准: N/A | 高频核心，无统一标准
+  API验证: 200词 | 找到198 | 未找到2
+  API未找到: Asia, India
+
+--- 高中英语词汇 (senior.json) ---
+  实际单词: 4027 | 官方标准: 3500 | 高考旧版大纲3500词
+  完整性问题 (93):
+    - [according to] 英式音标为空
+    - [the Antarctic] 英式音标为空
+    - [the Arctic] 英式音标为空
+    - [bad worse worst] 英式音标为空
+    - [bend bent bent] 英式音标为空
+    - [bite bit bitten] 英式音标为空
+    - [blow blew blown] 英式音标为空
+    - [the British] 英式音标为空
+    - [the butterfly] 英式+美式音标均为空
+    - [a garbage can] 英式音标为空
+    ... 还有 83 个
+  API验证: 198词 | 找到109 | 未找到89
+  API未找到: according to, the Antarctic, the Arctic, bad worse worst, bend bent bent, bite bit bitten, blow blew blown, the British, the butterfly, a garbage can, a can opener, come came come, could modal, dig dug dug, draw drew drawn, eat ate eaten, feed fed fed, feel felt felt, fly flew flown, foot feet ...
+
+--- 高考英语核心词汇 (gaokao.json) ---
+  实际单词: 689 | 官方标准: N/A | 高频核心，无统一标准
+  API验证: 200词 | 找到200 | 未找到0
+
+--- 英语4级 (cet4.json) ---
+  实际单词: 4543 | 官方标准: 4500 | CET-4大纲约4000-4500词
+  API验证: 200词 | 找到199 | 未找到1
+  API未找到: accustom
+
+--- 英语4级高频 (cet4freq.json) ---
+  实际单词: 1500 | 官方标准: N/A | 高频 subset
+  API验证: 200词 | 找到197 | 未找到3
+  API未找到: groundlessly, accustom, Asia
+
+--- 英语6级 (cet6.json) ---
+  实际单词: 6661 | 官方标准: 5500 | CET-6大纲约5500词
+  API验证: 200词 | 找到200 | 未找到0
+
+--- 英语6级高频 (cet6freq.json) ---
+  实际单词: 1500 | 官方标准: N/A | 高频 subset
+  完整性问题 (1):
+    - [proximately] 美式音标为空
+  API验证: 200词 | 找到199 | 未找到1
+  API未找到: proximately
+
+--- 英语专四 (tem4.json) ---
+  实际单词: 6307 | 官方标准: 6500 | TEM-4约6000-7000词
+  完整性问题 (11):
+    - [barometre] 英式+美式音标均为空
+    - [heartstring] 英式音标为空
+    - [knowhow] 美式音标为空
+    - [uneasiness] 英式音标为空
+    - [seals] 英式音标为空
+    - [dacron] 英式音标为空
+    - [horseracing] 英式+美式音标均为空
+    - [volitional] 英式音标为空
+    - [hangings] 英式音标为空
+    - [dietician] 英式音标为空
+    ... 还有 1 个
+  API验证: 200词 | 找到197 | 未找到3
+  API未找到: barometre, medicaid, ventricular
+
+--- 英语专八 (tem8.json) ---
+  实际单词: 12197 | 官方标准: 12000 | TEM-8约10000-13000词
+  API验证: 200词 | 找到198 | 未找到2
+  API未找到: Tuesday, Asian
+
+--- 雅思词汇 (ielts.json) ---
+  实际单词: 6554 | 官方标准: 7000 | 雅思核心约6000-8000词
+  完整性问题 (104):
+    - [in addition to] 英式音标为空
+    - [tick off] 英式+美式音标均为空
+    - [for instance] 英式+美式音标均为空
+    - [MasterCard] 美式音标为空
+    - [for the sake of] 英式+美式音标均为空
+    - [at least] 英式音标为空
+    - [in addition] 英式音标为空
+    - [and so forth] 英式+美式音标均为空
+    - [notice board] 英式+美式音标均为空
+    - [bump into] 英式音标为空
+    ... 还有 94 个
+  格式问题 (21):
+    - [elaborate] 释义中疑似混入了音标
+    - [degenerate] 释义中疑似混入了音标
+    - [approximate] 释义中疑似混入了音标
+    - [intimate] 释义中疑似混入了音标
+    - [underestimate] 释义中疑似混入了音标
+    - [upset] 释义中疑似混入了音标
+    - [delegate] 释义中疑似混入了音标
+    - [concern] 释义第3项为空或仅标点
+    - [digest] 释义中疑似混入了音标
+    - [fit] 释义第3项为空或仅标点
+    ... 还有 11 个
+  API验证: 197词 | 找到182 | 未找到15
+  API未找到: in addition to, MasterCard, for the sake of, at least, and so forth, notice board, roll film, chiche, relinguish, groa, booklist, flourishment, fund-raising, open-book, water-proof
+
+--- 托福词汇 (toefl.json) ---
+  实际单词: 10361 | 官方标准: 9000 | 托福约8000-10000词
+  API验证: 200词 | 找到186 | 未找到14
+  API未找到: Sweden, Erie, seafloor, Oregon, pangaea, Ontario, foresightedness, pointillist, pluto, everest, cloudlike, loudness, Cincinnati, Indonesia
+
+--- SAT词汇 (sat.json) ---
+  实际单词: 4423 | 官方标准: 12000 | SAT约10000-15000词
+  API验证: 200词 | 找到198 | 未找到2
+  API未找到: salvageable, antemeridian
+
+--- 考研词汇 (postgraduate.json) ---
+  实际单词: 5698 | 官方标准: 5500 | 考研大纲约5500词
+  完整性问题 (4):
+    - [back] 英式音标为空
+    - [according to] 英式+美式音标均为空
+    - [ought to] 英式音标为空
+    - [owing to] 英式+美式音标均为空
+  API验证: 200词 | 找到195 | 未找到5
+  API未找到: according to, ought to, dose, tropic, suicide
+
+--- 程序员常见词汇 (programmer.json) ---
+  实际单词: 1665 | 官方标准: N/A | 无官方标准
+  API验证: 200词 | 找到198 | 未找到2
+  API未找到: cpu, interpretability

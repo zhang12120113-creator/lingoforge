@@ -1,0 +1,4728 @@
+{
+  "duplicates": [],
+  "missingPhonetic": [],
+  "phraseWithPhonetic": [],
+  "simplifiedPhonetic": [
+    {
+      "dict": "英语4级",
+      "file": "cet4.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "bless",
+          "type": "ukphone",
+          "value": "bles"
+        },
+        {
+          "word": "debt",
+          "type": "ukphone",
+          "value": "det"
+        },
+        {
+          "word": "spread",
+          "type": "ukphone",
+          "value": "spred"
+        },
+        {
+          "word": "stress",
+          "type": "ukphone",
+          "value": "stres"
+        },
+        {
+          "word": "tent",
+          "type": "ukphone",
+          "value": "tent"
+        },
+        {
+          "word": "melt",
+          "type": "ukphone",
+          "value": "melt"
+        },
+        {
+          "word": "bed",
+          "type": "ukphone",
+          "value": "bed"
+        },
+        {
+          "word": "bell",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "belt",
+          "type": "ukphone",
+          "value": "belt"
+        },
+        {
+          "word": "bend",
+          "type": "ukphone",
+          "value": "bend"
+        },
+        {
+          "word": "best",
+          "type": "ukphone",
+          "value": "best"
+        },
+        {
+          "word": "bet",
+          "type": "ukphone",
+          "value": "bet"
+        },
+        {
+          "word": "blend",
+          "type": "ukphone",
+          "value": "blend"
+        },
+        {
+          "word": "bread",
+          "type": "ukphone",
+          "value": "bred"
+        },
+        {
+          "word": "breast",
+          "type": "ukphone",
+          "value": "brest"
+        },
+        {
+          "word": "cell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "cent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "dead",
+          "type": "ukphone",
+          "value": "ded"
+        },
+        {
+          "word": "deaf",
+          "type": "ukphone",
+          "value": "def"
+        },
+        {
+          "word": "deck",
+          "type": "ukphone",
+          "value": "dek"
+        },
+        {
+          "word": "dense",
+          "type": "ukphone",
+          "value": "dens"
+        },
+        {
+          "word": "desk",
+          "type": "ukphone",
+          "value": "desk"
+        },
+        {
+          "word": "dread",
+          "type": "ukphone",
+          "value": "dred"
+        },
+        {
+          "word": "dress",
+          "type": "ukphone",
+          "value": "dres"
+        },
+        {
+          "word": "else",
+          "type": "ukphone",
+          "value": "els"
+        },
+        {
+          "word": "end",
+          "type": "ukphone",
+          "value": "end"
+        },
+        {
+          "word": "fence",
+          "type": "ukphone",
+          "value": "fens"
+        },
+        {
+          "word": "friend",
+          "type": "ukphone",
+          "value": "frend"
+        },
+        {
+          "word": "head",
+          "type": "ukphone",
+          "value": "hed"
+        },
+        {
+          "word": "hell",
+          "type": "ukphone",
+          "value": "hel"
+        },
+        {
+          "word": "help",
+          "type": "ukphone",
+          "value": "help"
+        },
+        {
+          "word": "hen",
+          "type": "ukphone",
+          "value": "hen"
+        },
+        {
+          "word": "hence",
+          "type": "ukphone",
+          "value": "hens"
+        },
+        {
+          "word": "left",
+          "type": "ukphone",
+          "value": "left"
+        },
+        {
+          "word": "lend",
+          "type": "ukphone",
+          "value": "lend"
+        },
+        {
+          "word": "lens",
+          "type": "ukphone",
+          "value": "lenz"
+        },
+        {
+          "word": "less",
+          "type": "ukphone",
+          "value": "les"
+        },
+        {
+          "word": "lest",
+          "type": "ukphone",
+          "value": "lest"
+        },
+        {
+          "word": "let",
+          "type": "ukphone",
+          "value": "let"
+        },
+        {
+          "word": "mend",
+          "type": "ukphone",
+          "value": "mend"
+        },
+        {
+          "word": "mess",
+          "type": "ukphone",
+          "value": "mes"
+        },
+        {
+          "word": "neck",
+          "type": "ukphone",
+          "value": "nek"
+        },
+        {
+          "word": "nest",
+          "type": "ukphone",
+          "value": "nest"
+        },
+        {
+          "word": "net",
+          "type": "ukphone",
+          "value": "net"
+        },
+        {
+          "word": "next",
+          "type": "ukphone",
+          "value": "nekst"
+        },
+        {
+          "word": "pen",
+          "type": "ukphone",
+          "value": "pen"
+        },
+        {
+          "word": "pet",
+          "type": "ukphone",
+          "value": "pet"
+        },
+        {
+          "word": "press",
+          "type": "ukphone",
+          "value": "pres"
+        },
+        {
+          "word": "realm",
+          "type": "ukphone",
+          "value": "relm"
+        },
+        {
+          "word": "red",
+          "type": "ukphone",
+          "value": "red"
+        },
+        {
+          "word": "rent",
+          "type": "ukphone",
+          "value": "rent"
+        },
+        {
+          "word": "stem",
+          "type": "ukphone",
+          "value": "stem"
+        },
+        {
+          "word": "swell",
+          "type": "ukphone",
+          "value": "swel"
+        },
+        {
+          "word": "tend",
+          "type": "ukphone",
+          "value": "tend"
+        },
+        {
+          "word": "tense",
+          "type": "ukphone",
+          "value": "tens"
+        },
+        {
+          "word": "trend",
+          "type": "ukphone",
+          "value": "trend"
+        },
+        {
+          "word": "weld",
+          "type": "ukphone",
+          "value": "weld"
+        },
+        {
+          "word": "wreck",
+          "type": "ukphone",
+          "value": "rek"
+        }
+      ]
+    },
+    {
+      "dict": "英语4级高频",
+      "file": "cet4freq.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "bless",
+          "type": "ukphone",
+          "value": "bles"
+        },
+        {
+          "word": "debt",
+          "type": "ukphone",
+          "value": "det"
+        },
+        {
+          "word": "spread",
+          "type": "ukphone",
+          "value": "spred"
+        },
+        {
+          "word": "stress",
+          "type": "ukphone",
+          "value": "stres"
+        },
+        {
+          "word": "tent",
+          "type": "ukphone",
+          "value": "tent"
+        },
+        {
+          "word": "melt",
+          "type": "ukphone",
+          "value": "melt"
+        },
+        {
+          "word": "bed",
+          "type": "ukphone",
+          "value": "bed"
+        },
+        {
+          "word": "bell",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "belt",
+          "type": "ukphone",
+          "value": "belt"
+        },
+        {
+          "word": "bend",
+          "type": "ukphone",
+          "value": "bend"
+        },
+        {
+          "word": "best",
+          "type": "ukphone",
+          "value": "best"
+        },
+        {
+          "word": "bet",
+          "type": "ukphone",
+          "value": "bet"
+        },
+        {
+          "word": "blend",
+          "type": "ukphone",
+          "value": "blend"
+        }
+      ]
+    },
+    {
+      "dict": "英语6级",
+      "file": "cet6.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "bless",
+          "type": "ukphone",
+          "value": "bles"
+        },
+        {
+          "word": "debt",
+          "type": "ukphone",
+          "value": "det"
+        },
+        {
+          "word": "spread",
+          "type": "ukphone",
+          "value": "spred"
+        },
+        {
+          "word": "stress",
+          "type": "ukphone",
+          "value": "stres"
+        },
+        {
+          "word": "tent",
+          "type": "ukphone",
+          "value": "tent"
+        },
+        {
+          "word": "melt",
+          "type": "ukphone",
+          "value": "melt"
+        },
+        {
+          "word": "bed",
+          "type": "ukphone",
+          "value": "bed"
+        },
+        {
+          "word": "bell",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "belt",
+          "type": "ukphone",
+          "value": "belt"
+        },
+        {
+          "word": "bend",
+          "type": "ukphone",
+          "value": "bend"
+        },
+        {
+          "word": "best",
+          "type": "ukphone",
+          "value": "best"
+        },
+        {
+          "word": "bet",
+          "type": "ukphone",
+          "value": "bet"
+        },
+        {
+          "word": "blend",
+          "type": "ukphone",
+          "value": "blend"
+        },
+        {
+          "word": "bread",
+          "type": "ukphone",
+          "value": "bred"
+        },
+        {
+          "word": "breast",
+          "type": "ukphone",
+          "value": "brest"
+        },
+        {
+          "word": "cell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "cent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "dead",
+          "type": "ukphone",
+          "value": "ded"
+        },
+        {
+          "word": "deaf",
+          "type": "ukphone",
+          "value": "def"
+        },
+        {
+          "word": "deck",
+          "type": "ukphone",
+          "value": "dek"
+        },
+        {
+          "word": "dense",
+          "type": "ukphone",
+          "value": "dens"
+        },
+        {
+          "word": "desk",
+          "type": "ukphone",
+          "value": "desk"
+        },
+        {
+          "word": "dread",
+          "type": "ukphone",
+          "value": "dred"
+        },
+        {
+          "word": "dress",
+          "type": "ukphone",
+          "value": "dres"
+        },
+        {
+          "word": "else",
+          "type": "ukphone",
+          "value": "els"
+        },
+        {
+          "word": "end",
+          "type": "ukphone",
+          "value": "end"
+        },
+        {
+          "word": "fence",
+          "type": "ukphone",
+          "value": "fens"
+        },
+        {
+          "word": "friend",
+          "type": "ukphone",
+          "value": "frend"
+        },
+        {
+          "word": "head",
+          "type": "ukphone",
+          "value": "hed"
+        },
+        {
+          "word": "hell",
+          "type": "ukphone",
+          "value": "hel"
+        },
+        {
+          "word": "help",
+          "type": "ukphone",
+          "value": "help"
+        },
+        {
+          "word": "hen",
+          "type": "ukphone",
+          "value": "hen"
+        },
+        {
+          "word": "hence",
+          "type": "ukphone",
+          "value": "hens"
+        },
+        {
+          "word": "left",
+          "type": "ukphone",
+          "value": "left"
+        },
+        {
+          "word": "lend",
+          "type": "ukphone",
+          "value": "lend"
+        },
+        {
+          "word": "lens",
+          "type": "ukphone",
+          "value": "lenz"
+        },
+        {
+          "word": "less",
+          "type": "ukphone",
+          "value": "les"
+        },
+        {
+          "word": "lest",
+          "type": "ukphone",
+          "value": "lest"
+        },
+        {
+          "word": "let",
+          "type": "ukphone",
+          "value": "let"
+        },
+        {
+          "word": "mend",
+          "type": "ukphone",
+          "value": "mend"
+        },
+        {
+          "word": "mess",
+          "type": "ukphone",
+          "value": "mes"
+        },
+        {
+          "word": "neck",
+          "type": "ukphone",
+          "value": "nek"
+        },
+        {
+          "word": "nest",
+          "type": "ukphone",
+          "value": "nest"
+        },
+        {
+          "word": "net",
+          "type": "ukphone",
+          "value": "net"
+        },
+        {
+          "word": "next",
+          "type": "ukphone",
+          "value": "nekst"
+        },
+        {
+          "word": "pen",
+          "type": "ukphone",
+          "value": "pen"
+        },
+        {
+          "word": "pet",
+          "type": "ukphone",
+          "value": "pet"
+        },
+        {
+          "word": "press",
+          "type": "ukphone",
+          "value": "pres"
+        },
+        {
+          "word": "realm",
+          "type": "ukphone",
+          "value": "relm"
+        },
+        {
+          "word": "red",
+          "type": "ukphone",
+          "value": "red"
+        },
+        {
+          "word": "rent",
+          "type": "ukphone",
+          "value": "rent"
+        },
+        {
+          "word": "stem",
+          "type": "ukphone",
+          "value": "stem"
+        },
+        {
+          "word": "swell",
+          "type": "ukphone",
+          "value": "swel"
+        },
+        {
+          "word": "tend",
+          "type": "ukphone",
+          "value": "tend"
+        },
+        {
+          "word": "tense",
+          "type": "ukphone",
+          "value": "tens"
+        },
+        {
+          "word": "trend",
+          "type": "ukphone",
+          "value": "trend"
+        },
+        {
+          "word": "weld",
+          "type": "ukphone",
+          "value": "weld"
+        },
+        {
+          "word": "wreck",
+          "type": "ukphone",
+          "value": "rek"
+        },
+        {
+          "word": "scent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "quest",
+          "type": "ukphone",
+          "value": "kwest"
+        },
+        {
+          "word": "web",
+          "type": "ukphone",
+          "value": "web"
+        },
+        {
+          "word": "ware",
+          "type": "usphone",
+          "value": "wer"
+        },
+        {
+          "word": "fell",
+          "type": "ukphone",
+          "value": "fel"
+        },
+        {
+          "word": "dwell",
+          "type": "ukphone",
+          "value": "dwel"
+        },
+        {
+          "word": "set",
+          "type": "ukphone",
+          "value": "set"
+        },
+        {
+          "word": "pest",
+          "type": "ukphone",
+          "value": "pest"
+        },
+        {
+          "word": "tread",
+          "type": "ukphone",
+          "value": "tred"
+        },
+        {
+          "word": "fret",
+          "type": "ukphone",
+          "value": "fret"
+        },
+        {
+          "word": "peck",
+          "type": "ukphone",
+          "value": "pek"
+        },
+        {
+          "word": "yell",
+          "type": "ukphone",
+          "value": "jel"
+        },
+        {
+          "word": "vent",
+          "type": "ukphone",
+          "value": "vent"
+        }
+      ]
+    },
+    {
+      "dict": "英语6级高频",
+      "file": "cet6freq.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "lest",
+          "type": "ukphone",
+          "value": "lest"
+        },
+        {
+          "word": "melt",
+          "type": "ukphone",
+          "value": "melt"
+        },
+        {
+          "word": "realm",
+          "type": "ukphone",
+          "value": "relm"
+        },
+        {
+          "word": "scent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "spread",
+          "type": "ukphone",
+          "value": "spred"
+        },
+        {
+          "word": "stress",
+          "type": "ukphone",
+          "value": "stres"
+        },
+        {
+          "word": "trend",
+          "type": "ukphone",
+          "value": "trend"
+        },
+        {
+          "word": "nest",
+          "type": "ukphone",
+          "value": "nest"
+        },
+        {
+          "word": "net",
+          "type": "ukphone",
+          "value": "net"
+        },
+        {
+          "word": "head",
+          "type": "ukphone",
+          "value": "hed"
+        },
+        {
+          "word": "press",
+          "type": "ukphone",
+          "value": "pres"
+        },
+        {
+          "word": "quest",
+          "type": "ukphone",
+          "value": "kwest"
+        }
+      ]
+    },
+    {
+      "dict": "雅思词汇",
+      "file": "ielts.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "wreck",
+          "type": "ukphone",
+          "value": "rek"
+        },
+        {
+          "word": "dwell",
+          "type": "ukphone",
+          "value": "dwel"
+        },
+        {
+          "word": "vex",
+          "type": "ukphone",
+          "value": "veks"
+        },
+        {
+          "word": "fret",
+          "type": "ukphone",
+          "value": "fret"
+        },
+        {
+          "word": "let",
+          "type": "ukphone",
+          "value": "let"
+        },
+        {
+          "word": "quest",
+          "type": "ukphone",
+          "value": "kwest"
+        },
+        {
+          "word": "weld",
+          "type": "ukphone",
+          "value": "weld"
+        },
+        {
+          "word": "lens",
+          "type": "ukphone",
+          "value": "lenz"
+        },
+        {
+          "word": "vent",
+          "type": "ukphone",
+          "value": "vent"
+        },
+        {
+          "word": "stress",
+          "type": "ukphone",
+          "value": "stres"
+        },
+        {
+          "word": "zest",
+          "type": "ukphone",
+          "value": "zest"
+        },
+        {
+          "word": "hell",
+          "type": "ukphone",
+          "value": "hel"
+        },
+        {
+          "word": "trek",
+          "type": "ukphone",
+          "value": "trek"
+        },
+        {
+          "word": "deft",
+          "type": "usphone",
+          "value": "deft"
+        },
+        {
+          "word": "deft",
+          "type": "ukphone",
+          "value": "deft"
+        },
+        {
+          "word": "set",
+          "type": "ukphone",
+          "value": "set"
+        },
+        {
+          "word": "hence",
+          "type": "ukphone",
+          "value": "hens"
+        },
+        {
+          "word": "realm",
+          "type": "ukphone",
+          "value": "relm"
+        },
+        {
+          "word": "deck",
+          "type": "ukphone",
+          "value": "dek"
+        },
+        {
+          "word": "fend",
+          "type": "usphone",
+          "value": "fend"
+        },
+        {
+          "word": "fend",
+          "type": "ukphone",
+          "value": "fend"
+        },
+        {
+          "word": "swell",
+          "type": "ukphone",
+          "value": "swel"
+        },
+        {
+          "word": "stem",
+          "type": "ukphone",
+          "value": "stem"
+        },
+        {
+          "word": "dread",
+          "type": "ukphone",
+          "value": "dred"
+        },
+        {
+          "word": "dense",
+          "type": "ukphone",
+          "value": "dens"
+        },
+        {
+          "word": "web",
+          "type": "ukphone",
+          "value": "web"
+        },
+        {
+          "word": "mess",
+          "type": "ukphone",
+          "value": "mes"
+        },
+        {
+          "word": "end",
+          "type": "ukphone",
+          "value": "end"
+        },
+        {
+          "word": "trend",
+          "type": "ukphone",
+          "value": "trend"
+        },
+        {
+          "word": "scent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "deaf",
+          "type": "ukphone",
+          "value": "def"
+        },
+        {
+          "word": "smell",
+          "type": "ukphone",
+          "value": "smel"
+        },
+        {
+          "word": "tend",
+          "type": "ukphone",
+          "value": "tend"
+        },
+        {
+          "word": "blend",
+          "type": "ukphone",
+          "value": "blend"
+        },
+        {
+          "word": "vet",
+          "type": "ukphone",
+          "value": "vet"
+        },
+        {
+          "word": "cell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "tempt",
+          "type": "ukphone",
+          "value": "tempt"
+        },
+        {
+          "word": "pest",
+          "type": "ukphone",
+          "value": "pest"
+        },
+        {
+          "word": "melt",
+          "type": "ukphone",
+          "value": "melt"
+        },
+        {
+          "word": "belt",
+          "type": "ukphone",
+          "value": "belt"
+        },
+        {
+          "word": "bent",
+          "type": "ukphone",
+          "value": "bent"
+        },
+        {
+          "word": "rent",
+          "type": "ukphone",
+          "value": "rent"
+        },
+        {
+          "word": "bet",
+          "type": "ukphone",
+          "value": "bet"
+        },
+        {
+          "word": "debt",
+          "type": "ukphone",
+          "value": "det"
+        },
+        {
+          "word": "tense",
+          "type": "ukphone",
+          "value": "tens"
+        },
+        {
+          "word": "beds",
+          "type": "usphone",
+          "value": "bedz"
+        },
+        {
+          "word": "beds",
+          "type": "ukphone",
+          "value": "bedz"
+        },
+        {
+          "word": "belts",
+          "type": "usphone",
+          "value": "belts"
+        },
+        {
+          "word": "belts",
+          "type": "ukphone",
+          "value": "belts"
+        },
+        {
+          "word": "bend",
+          "type": "usphone",
+          "value": "bend"
+        },
+        {
+          "word": "bend",
+          "type": "ukphone",
+          "value": "bend"
+        },
+        {
+          "word": "best",
+          "type": "usphone",
+          "value": "best"
+        },
+        {
+          "word": "best",
+          "type": "ukphone",
+          "value": "best"
+        },
+        {
+          "word": "bless",
+          "type": "usphone",
+          "value": "bles"
+        },
+        {
+          "word": "bless",
+          "type": "ukphone",
+          "value": "bles"
+        },
+        {
+          "word": "desk",
+          "type": "usphone",
+          "value": "desk"
+        },
+        {
+          "word": "desk",
+          "type": "ukphone",
+          "value": "desk"
+        },
+        {
+          "word": "dress",
+          "type": "usphone",
+          "value": "dres"
+        },
+        {
+          "word": "dress",
+          "type": "ukphone",
+          "value": "dres"
+        },
+        {
+          "word": "guests",
+          "type": "ukphone",
+          "value": "gests"
+        },
+        {
+          "word": "hens",
+          "type": "usphone",
+          "value": "henz"
+        },
+        {
+          "word": "hens",
+          "type": "ukphone",
+          "value": "henz"
+        },
+        {
+          "word": "kelp",
+          "type": "usphone",
+          "value": "kelp"
+        },
+        {
+          "word": "kelp",
+          "type": "ukphone",
+          "value": "kelp"
+        },
+        {
+          "word": "kids",
+          "type": "ukphone",
+          "value": "kidz"
+        },
+        {
+          "word": "neck",
+          "type": "usphone",
+          "value": "nek"
+        },
+        {
+          "word": "neck",
+          "type": "ukphone",
+          "value": "nek"
+        },
+        {
+          "word": "nets",
+          "type": "usphone",
+          "value": "nets"
+        },
+        {
+          "word": "nets",
+          "type": "ukphone",
+          "value": "nets"
+        },
+        {
+          "word": "pence",
+          "type": "usphone",
+          "value": "pens"
+        },
+        {
+          "word": "pence",
+          "type": "ukphone",
+          "value": "pens"
+        },
+        {
+          "word": "pet",
+          "type": "usphone",
+          "value": "pet"
+        },
+        {
+          "word": "pet",
+          "type": "ukphone",
+          "value": "pet"
+        },
+        {
+          "word": "pets",
+          "type": "usphone",
+          "value": "pets"
+        },
+        {
+          "word": "pets",
+          "type": "ukphone",
+          "value": "pets"
+        },
+        {
+          "word": "sense",
+          "type": "usphone",
+          "value": "sens"
+        },
+        {
+          "word": "sense",
+          "type": "ukphone",
+          "value": "sens"
+        },
+        {
+          "word": "sex",
+          "type": "usphone",
+          "value": "seks"
+        },
+        {
+          "word": "sex",
+          "type": "ukphone",
+          "value": "seks"
+        },
+        {
+          "word": "stairs",
+          "type": "usphone",
+          "value": "sterz"
+        },
+        {
+          "word": "steps",
+          "type": "usphone",
+          "value": "steps"
+        },
+        {
+          "word": "steps",
+          "type": "ukphone",
+          "value": "steps"
+        },
+        {
+          "word": "test",
+          "type": "usphone",
+          "value": "test"
+        },
+        {
+          "word": "test",
+          "type": "ukphone",
+          "value": "test"
+        },
+        {
+          "word": "text",
+          "type": "usphone",
+          "value": "tekst"
+        },
+        {
+          "word": "text",
+          "type": "ukphone",
+          "value": "tekst"
+        },
+        {
+          "word": "trends",
+          "type": "usphone",
+          "value": "trendz"
+        },
+        {
+          "word": "trends",
+          "type": "ukphone",
+          "value": "trendz"
+        },
+        {
+          "word": "west",
+          "type": "usphone",
+          "value": "west"
+        },
+        {
+          "word": "west",
+          "type": "ukphone",
+          "value": "west"
+        },
+        {
+          "word": "yen",
+          "type": "usphone",
+          "value": "jen"
+        },
+        {
+          "word": "yen",
+          "type": "ukphone",
+          "value": "jen"
+        }
+      ]
+    },
+    {
+      "dict": "初中英语词汇",
+      "file": "junior.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "ten",
+          "type": "ukphone",
+          "value": "ten"
+        },
+        {
+          "word": "wet",
+          "type": "ukphone",
+          "value": "wet"
+        },
+        {
+          "word": "end",
+          "type": "ukphone",
+          "value": "end"
+        },
+        {
+          "word": "step",
+          "type": "ukphone",
+          "value": "step"
+        },
+        {
+          "word": "cent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "friend",
+          "type": "ukphone",
+          "value": "frend"
+        },
+        {
+          "word": "pen",
+          "type": "ukphone",
+          "value": "pen"
+        },
+        {
+          "word": "yet",
+          "type": "ukphone",
+          "value": "jet"
+        },
+        {
+          "word": "left",
+          "type": "ukphone",
+          "value": "left"
+        },
+        {
+          "word": "dead",
+          "type": "ukphone",
+          "value": "ded"
+        },
+        {
+          "word": "tent",
+          "type": "ukphone",
+          "value": "tent"
+        },
+        {
+          "word": "help",
+          "type": "ukphone",
+          "value": "help"
+        },
+        {
+          "word": "test",
+          "type": "ukphone",
+          "value": "test"
+        },
+        {
+          "word": "west",
+          "type": "ukphone",
+          "value": "west"
+        },
+        {
+          "word": "deaf",
+          "type": "ukphone",
+          "value": "def"
+        },
+        {
+          "word": "text",
+          "type": "ukphone",
+          "value": "tekst"
+        },
+        {
+          "word": "dress",
+          "type": "ukphone",
+          "value": "dres"
+        },
+        {
+          "word": "next",
+          "type": "ukphone",
+          "value": "nekst"
+        },
+        {
+          "word": "twelve",
+          "type": "ukphone",
+          "value": "twelv"
+        },
+        {
+          "word": "head",
+          "type": "ukphone",
+          "value": "hed"
+        },
+        {
+          "word": "rest",
+          "type": "ukphone",
+          "value": "rest"
+        },
+        {
+          "word": "neck",
+          "type": "ukphone",
+          "value": "nek"
+        },
+        {
+          "word": "bell",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "hen",
+          "type": "ukphone",
+          "value": "hen"
+        },
+        {
+          "word": "bread",
+          "type": "ukphone",
+          "value": "bred"
+        },
+        {
+          "word": "sense",
+          "type": "ukphone",
+          "value": "sens"
+        },
+        {
+          "word": "pet",
+          "type": "ukphone",
+          "value": "pet"
+        },
+        {
+          "word": "bed",
+          "type": "ukphone",
+          "value": "bed"
+        },
+        {
+          "word": "red",
+          "type": "ukphone",
+          "value": "red"
+        },
+        {
+          "word": "yes",
+          "type": "ukphone",
+          "value": "jes"
+        },
+        {
+          "word": "mend",
+          "type": "ukphone",
+          "value": "mend"
+        },
+        {
+          "word": "else",
+          "type": "ukphone",
+          "value": "els"
+        }
+      ]
+    },
+    {
+      "dict": "考研词汇",
+      "file": "postgraduate.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "stress",
+          "type": "ukphone",
+          "value": "stres"
+        },
+        {
+          "word": "smell",
+          "type": "ukphone",
+          "value": "smel"
+        },
+        {
+          "word": "spread",
+          "type": "ukphone",
+          "value": "spred"
+        },
+        {
+          "word": "sense",
+          "type": "ukphone",
+          "value": "sens"
+        },
+        {
+          "word": "spend",
+          "type": "ukphone",
+          "value": "spend"
+        },
+        {
+          "word": "trend",
+          "type": "ukphone",
+          "value": "trend"
+        },
+        {
+          "word": "sell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "step",
+          "type": "ukphone",
+          "value": "step"
+        },
+        {
+          "word": "rest",
+          "type": "ukphone",
+          "value": "rest"
+        },
+        {
+          "word": "sex",
+          "type": "ukphone",
+          "value": "seks"
+        },
+        {
+          "word": "bet",
+          "type": "ukphone",
+          "value": "bet"
+        },
+        {
+          "word": "west",
+          "type": "ukphone",
+          "value": "west"
+        },
+        {
+          "word": "debt",
+          "type": "ukphone",
+          "value": "det"
+        },
+        {
+          "word": "quest",
+          "type": "ukphone",
+          "value": "kwest"
+        },
+        {
+          "word": "cell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "fell",
+          "type": "ukphone",
+          "value": "fel"
+        },
+        {
+          "word": "stem",
+          "type": "ukphone",
+          "value": "stem"
+        },
+        {
+          "word": "dead",
+          "type": "ukphone",
+          "value": "ded"
+        },
+        {
+          "word": "belt",
+          "type": "ukphone",
+          "value": "belt"
+        },
+        {
+          "word": "spell",
+          "type": "ukphone",
+          "value": "spel"
+        },
+        {
+          "word": "cent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "breast",
+          "type": "ukphone",
+          "value": "brest"
+        },
+        {
+          "word": "dress",
+          "type": "ukphone",
+          "value": "dres"
+        },
+        {
+          "word": "tense",
+          "type": "ukphone",
+          "value": "tens"
+        },
+        {
+          "word": "nest",
+          "type": "ukphone",
+          "value": "nest"
+        },
+        {
+          "word": "red",
+          "type": "ukphone",
+          "value": "red"
+        },
+        {
+          "word": "rent",
+          "type": "ukphone",
+          "value": "rent"
+        },
+        {
+          "word": "pen",
+          "type": "ukphone",
+          "value": "pen"
+        },
+        {
+          "word": "pet",
+          "type": "ukphone",
+          "value": "pet"
+        },
+        {
+          "word": "dwell",
+          "type": "ukphone",
+          "value": "dwel"
+        },
+        {
+          "word": "scent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "mend",
+          "type": "ukphone",
+          "value": "mend"
+        },
+        {
+          "word": "hell",
+          "type": "ukphone",
+          "value": "hel"
+        },
+        {
+          "word": "mess",
+          "type": "ukphone",
+          "value": "mes"
+        },
+        {
+          "word": "blend",
+          "type": "ukphone",
+          "value": "blend"
+        },
+        {
+          "word": "hen",
+          "type": "ukphone",
+          "value": "hen"
+        },
+        {
+          "word": "bless",
+          "type": "ukphone",
+          "value": "bles"
+        },
+        {
+          "word": "bend",
+          "type": "ukphone",
+          "value": "bend"
+        },
+        {
+          "word": "bell",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "deck",
+          "type": "ukphone",
+          "value": "dek"
+        },
+        {
+          "word": "wreck",
+          "type": "ukphone",
+          "value": "rek"
+        },
+        {
+          "word": "deaf",
+          "type": "ukphone",
+          "value": "def"
+        },
+        {
+          "word": "lend",
+          "type": "ukphone",
+          "value": "lend"
+        },
+        {
+          "word": "realm",
+          "type": "ukphone",
+          "value": "relm"
+        },
+        {
+          "word": "dense",
+          "type": "ukphone",
+          "value": "dens"
+        },
+        {
+          "word": "vest",
+          "type": "usphone",
+          "value": "vest"
+        },
+        {
+          "word": "vest",
+          "type": "ukphone",
+          "value": "vest"
+        },
+        {
+          "word": "yell",
+          "type": "usphone",
+          "value": "jel"
+        },
+        {
+          "word": "wet",
+          "type": "ukphone",
+          "value": "wet"
+        },
+        {
+          "word": "neck",
+          "type": "ukphone",
+          "value": "nek"
+        },
+        {
+          "word": "bread",
+          "type": "ukphone",
+          "value": "bred"
+        },
+        {
+          "word": "weld",
+          "type": "ukphone",
+          "value": "weld"
+        },
+        {
+          "word": "sweat",
+          "type": "ukphone",
+          "value": "swet"
+        },
+        {
+          "word": "swell",
+          "type": "ukphone",
+          "value": "swel"
+        },
+        {
+          "word": "ebb",
+          "type": "ukphone",
+          "value": "eb"
+        },
+        {
+          "word": "dread",
+          "type": "ukphone",
+          "value": "dred"
+        },
+        {
+          "word": "fence",
+          "type": "ukphone",
+          "value": "fens"
+        },
+        {
+          "word": "pest",
+          "type": "ukphone",
+          "value": "pest"
+        },
+        {
+          "word": "well",
+          "type": "usphone",
+          "value": "wel"
+        },
+        {
+          "word": "well",
+          "type": "ukphone",
+          "value": "wel"
+        },
+        {
+          "word": "when",
+          "type": "usphone",
+          "value": "wen"
+        },
+        {
+          "word": "when",
+          "type": "ukphone",
+          "value": "wen"
+        },
+        {
+          "word": "help",
+          "type": "usphone",
+          "value": "help"
+        },
+        {
+          "word": "help",
+          "type": "ukphone",
+          "value": "help"
+        },
+        {
+          "word": "end",
+          "type": "usphone",
+          "value": "end"
+        },
+        {
+          "word": "end",
+          "type": "ukphone",
+          "value": "end"
+        },
+        {
+          "word": "less",
+          "type": "usphone",
+          "value": "les"
+        },
+        {
+          "word": "less",
+          "type": "ukphone",
+          "value": "les"
+        },
+        {
+          "word": "text",
+          "type": "usphone",
+          "value": "tekst"
+        },
+        {
+          "word": "text",
+          "type": "ukphone",
+          "value": "tekst"
+        },
+        {
+          "word": "tell",
+          "type": "usphone",
+          "value": "tel"
+        },
+        {
+          "word": "tell",
+          "type": "ukphone",
+          "value": "tel"
+        },
+        {
+          "word": "set",
+          "type": "usphone",
+          "value": "set"
+        },
+        {
+          "word": "set",
+          "type": "ukphone",
+          "value": "set"
+        },
+        {
+          "word": "test",
+          "type": "usphone",
+          "value": "test"
+        },
+        {
+          "word": "test",
+          "type": "ukphone",
+          "value": "test"
+        },
+        {
+          "word": "friend",
+          "type": "usphone",
+          "value": "frend"
+        },
+        {
+          "word": "friend",
+          "type": "ukphone",
+          "value": "frend"
+        },
+        {
+          "word": "yet",
+          "type": "usphone",
+          "value": "jet"
+        },
+        {
+          "word": "yet",
+          "type": "ukphone",
+          "value": "jet"
+        },
+        {
+          "word": "ten",
+          "type": "usphone",
+          "value": "ten"
+        },
+        {
+          "word": "ten",
+          "type": "ukphone",
+          "value": "ten"
+        },
+        {
+          "word": "self",
+          "type": "usphone",
+          "value": "self"
+        },
+        {
+          "word": "self",
+          "type": "ukphone",
+          "value": "self"
+        },
+        {
+          "word": "tend",
+          "type": "usphone",
+          "value": "tend"
+        },
+        {
+          "word": "tend",
+          "type": "ukphone",
+          "value": "tend"
+        },
+        {
+          "word": "next",
+          "type": "usphone",
+          "value": "nekst"
+        },
+        {
+          "word": "next",
+          "type": "ukphone",
+          "value": "nekst"
+        },
+        {
+          "word": "send",
+          "type": "usphone",
+          "value": "send"
+        },
+        {
+          "word": "send",
+          "type": "ukphone",
+          "value": "send"
+        },
+        {
+          "word": "head",
+          "type": "usphone",
+          "value": "hed"
+        },
+        {
+          "word": "head",
+          "type": "ukphone",
+          "value": "hed"
+        },
+        {
+          "word": "let",
+          "type": "usphone",
+          "value": "let"
+        },
+        {
+          "word": "let",
+          "type": "ukphone",
+          "value": "let"
+        },
+        {
+          "word": "else",
+          "type": "usphone",
+          "value": "els"
+        },
+        {
+          "word": "else",
+          "type": "ukphone",
+          "value": "els"
+        },
+        {
+          "word": "web",
+          "type": "usphone",
+          "value": "web"
+        },
+        {
+          "word": "web",
+          "type": "ukphone",
+          "value": "web"
+        },
+        {
+          "word": "press",
+          "type": "usphone",
+          "value": "pres"
+        },
+        {
+          "word": "press",
+          "type": "ukphone",
+          "value": "pres"
+        },
+        {
+          "word": "yes",
+          "type": "usphone",
+          "value": "jes"
+        },
+        {
+          "word": "yes",
+          "type": "ukphone",
+          "value": "jes"
+        },
+        {
+          "word": "net",
+          "type": "usphone",
+          "value": "net"
+        },
+        {
+          "word": "net",
+          "type": "ukphone",
+          "value": "net"
+        },
+        {
+          "word": "bed",
+          "type": "usphone",
+          "value": "bed"
+        },
+        {
+          "word": "bed",
+          "type": "ukphone",
+          "value": "bed"
+        },
+        {
+          "word": "desk",
+          "type": "usphone",
+          "value": "desk"
+        },
+        {
+          "word": "desk",
+          "type": "ukphone",
+          "value": "desk"
+        },
+        {
+          "word": "melt",
+          "type": "usphone",
+          "value": "melt"
+        },
+        {
+          "word": "melt",
+          "type": "ukphone",
+          "value": "melt"
+        },
+        {
+          "word": "hence",
+          "type": "usphone",
+          "value": "hens"
+        },
+        {
+          "word": "hence",
+          "type": "ukphone",
+          "value": "hens"
+        },
+        {
+          "word": "twelve",
+          "type": "usphone",
+          "value": "twelv"
+        },
+        {
+          "word": "twelve",
+          "type": "ukphone",
+          "value": "twelv"
+        },
+        {
+          "word": "lest",
+          "type": "usphone",
+          "value": "lest"
+        },
+        {
+          "word": "lest",
+          "type": "ukphone",
+          "value": "lest"
+        },
+        {
+          "word": "tent",
+          "type": "usphone",
+          "value": "tent"
+        },
+        {
+          "word": "tent",
+          "type": "ukphone",
+          "value": "tent"
+        },
+        {
+          "word": "lens",
+          "type": "usphone",
+          "value": "lenz"
+        },
+        {
+          "word": "lens",
+          "type": "ukphone",
+          "value": "lenz"
+        },
+        {
+          "word": "best",
+          "type": "usphone",
+          "value": "best"
+        },
+        {
+          "word": "best",
+          "type": "ukphone",
+          "value": "best"
+        },
+        {
+          "word": "left",
+          "type": "usphone",
+          "value": "left"
+        },
+        {
+          "word": "left",
+          "type": "ukphone",
+          "value": "left"
+        }
+      ]
+    },
+    {
+      "dict": "程序员常见词汇",
+      "file": "programmer.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "set",
+          "type": "ukphone",
+          "value": "set"
+        },
+        {
+          "word": "press",
+          "type": "ukphone",
+          "value": "pres"
+        },
+        {
+          "word": "text",
+          "type": "ukphone",
+          "value": "tekst"
+        },
+        {
+          "word": "help",
+          "type": "ukphone",
+          "value": "help"
+        },
+        {
+          "word": "left",
+          "type": "ukphone",
+          "value": "left"
+        },
+        {
+          "word": "next",
+          "type": "ukphone",
+          "value": "nekst"
+        },
+        {
+          "word": "end",
+          "type": "ukphone",
+          "value": "end"
+        },
+        {
+          "word": "else",
+          "type": "ukphone",
+          "value": "els"
+        },
+        {
+          "word": "square",
+          "type": "usphone",
+          "value": "skwer"
+        },
+        {
+          "word": "send",
+          "type": "ukphone",
+          "value": "send"
+        },
+        {
+          "word": "step",
+          "type": "ukphone",
+          "value": "step"
+        },
+        {
+          "word": "less",
+          "type": "ukphone",
+          "value": "les"
+        },
+        {
+          "word": "well",
+          "type": "ukphone",
+          "value": "wel"
+        },
+        {
+          "word": "red",
+          "type": "ukphone",
+          "value": "red"
+        },
+        {
+          "word": "test",
+          "type": "usphone",
+          "value": "test"
+        },
+        {
+          "word": "test",
+          "type": "ukphone",
+          "value": "test"
+        },
+        {
+          "word": "nest",
+          "type": "ukphone",
+          "value": "nest"
+        },
+        {
+          "word": "let",
+          "type": "ukphone",
+          "value": "let"
+        },
+        {
+          "word": "rent",
+          "type": "ukphone",
+          "value": "rent"
+        },
+        {
+          "word": "hex",
+          "type": "usphone",
+          "value": "heks"
+        },
+        {
+          "word": "rest",
+          "type": "usphone",
+          "value": "rest"
+        },
+        {
+          "word": "rest",
+          "type": "ukphone",
+          "value": "rest"
+        },
+        {
+          "word": "bell",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "spell",
+          "type": "ukphone",
+          "value": "spel"
+        },
+        {
+          "word": "pair",
+          "type": "usphone",
+          "value": "per"
+        },
+        {
+          "word": "care",
+          "type": "usphone",
+          "value": "ker"
+        },
+        {
+          "word": "spread",
+          "type": "ukphone",
+          "value": "spred"
+        },
+        {
+          "word": "yet",
+          "type": "ukphone",
+          "value": "jet"
+        },
+        {
+          "word": "ware",
+          "type": "usphone",
+          "value": "wer"
+        },
+        {
+          "word": "desk",
+          "type": "ukphone",
+          "value": "desk"
+        }
+      ]
+    },
+    {
+      "dict": "SAT 词汇",
+      "file": "sat.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "wrest",
+          "type": "ukphone",
+          "value": "rest"
+        },
+        {
+          "word": "zest",
+          "type": "ukphone",
+          "value": "zest"
+        },
+        {
+          "word": "ken",
+          "type": "ukphone",
+          "value": "ken"
+        },
+        {
+          "word": "set",
+          "type": "ukphone",
+          "value": "set"
+        },
+        {
+          "word": "reck",
+          "type": "usphone",
+          "value": "rek"
+        },
+        {
+          "word": "reck",
+          "type": "ukphone",
+          "value": "rek"
+        },
+        {
+          "word": "beck",
+          "type": "ukphone",
+          "value": "bek"
+        },
+        {
+          "word": "lens",
+          "type": "ukphone",
+          "value": "lenz"
+        },
+        {
+          "word": "realm",
+          "type": "ukphone",
+          "value": "relm"
+        },
+        {
+          "word": "deft",
+          "type": "usphone",
+          "value": "deft"
+        },
+        {
+          "word": "deft",
+          "type": "ukphone",
+          "value": "deft"
+        },
+        {
+          "word": "tense",
+          "type": "ukphone",
+          "value": "tens"
+        },
+        {
+          "word": "belle",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "vex",
+          "type": "ukphone",
+          "value": "veks"
+        },
+        {
+          "word": "crest",
+          "type": "ukphone",
+          "value": "krest"
+        },
+        {
+          "word": "ebb",
+          "type": "ukphone",
+          "value": "eb"
+        },
+        {
+          "word": "whet",
+          "type": "ukphone",
+          "value": "wet"
+        },
+        {
+          "word": "cell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "smelt",
+          "type": "ukphone",
+          "value": "smelt"
+        }
+      ]
+    },
+    {
+      "dict": "高中英语词汇",
+      "file": "senior.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "bed",
+          "type": "usphone",
+          "value": "bed"
+        },
+        {
+          "word": "bed",
+          "type": "ukphone",
+          "value": "bed"
+        },
+        {
+          "word": "bell",
+          "type": "usphone",
+          "value": "bel"
+        },
+        {
+          "word": "bell",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "belt",
+          "type": "usphone",
+          "value": "belt"
+        },
+        {
+          "word": "belt",
+          "type": "ukphone",
+          "value": "belt"
+        },
+        {
+          "word": "bent",
+          "type": "usphone",
+          "value": "bent"
+        },
+        {
+          "word": "bent",
+          "type": "ukphone",
+          "value": "bent"
+        },
+        {
+          "word": "best",
+          "type": "usphone",
+          "value": "best"
+        },
+        {
+          "word": "best",
+          "type": "ukphone",
+          "value": "best"
+        },
+        {
+          "word": "bless",
+          "type": "usphone",
+          "value": "bles"
+        },
+        {
+          "word": "bless",
+          "type": "ukphone",
+          "value": "bles"
+        },
+        {
+          "word": "bread",
+          "type": "usphone",
+          "value": "bred"
+        },
+        {
+          "word": "bread",
+          "type": "ukphone",
+          "value": "bred"
+        },
+        {
+          "word": "breast",
+          "type": "usphone",
+          "value": "brest"
+        },
+        {
+          "word": "breast",
+          "type": "ukphone",
+          "value": "brest"
+        },
+        {
+          "word": "cell",
+          "type": "usphone",
+          "value": "sel"
+        },
+        {
+          "word": "cell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "cent",
+          "type": "usphone",
+          "value": "sent"
+        },
+        {
+          "word": "cent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "dead",
+          "type": "usphone",
+          "value": "ded"
+        },
+        {
+          "word": "dead",
+          "type": "ukphone",
+          "value": "ded"
+        },
+        {
+          "word": "deaf",
+          "type": "usphone",
+          "value": "def"
+        },
+        {
+          "word": "deaf",
+          "type": "ukphone",
+          "value": "def"
+        },
+        {
+          "word": "debt",
+          "type": "usphone",
+          "value": "det"
+        },
+        {
+          "word": "debt",
+          "type": "ukphone",
+          "value": "det"
+        },
+        {
+          "word": "desk",
+          "type": "usphone",
+          "value": "desk"
+        },
+        {
+          "word": "desk",
+          "type": "ukphone",
+          "value": "desk"
+        },
+        {
+          "word": "dress",
+          "type": "usphone",
+          "value": "dres"
+        },
+        {
+          "word": "dress",
+          "type": "ukphone",
+          "value": "dres"
+        },
+        {
+          "word": "else",
+          "type": "usphone",
+          "value": "els"
+        },
+        {
+          "word": "else",
+          "type": "ukphone",
+          "value": "els"
+        },
+        {
+          "word": "end",
+          "type": "usphone",
+          "value": "end"
+        },
+        {
+          "word": "end",
+          "type": "ukphone",
+          "value": "end"
+        },
+        {
+          "word": "fence",
+          "type": "usphone",
+          "value": "fens"
+        },
+        {
+          "word": "fence",
+          "type": "ukphone",
+          "value": "fens"
+        },
+        {
+          "word": "friend",
+          "type": "usphone",
+          "value": "frend"
+        },
+        {
+          "word": "friend",
+          "type": "ukphone",
+          "value": "frend"
+        },
+        {
+          "word": "head",
+          "type": "usphone",
+          "value": "hed"
+        },
+        {
+          "word": "head",
+          "type": "ukphone",
+          "value": "hed"
+        },
+        {
+          "word": "help",
+          "type": "usphone",
+          "value": "help"
+        },
+        {
+          "word": "help",
+          "type": "ukphone",
+          "value": "help"
+        },
+        {
+          "word": "hen",
+          "type": "usphone",
+          "value": "hen"
+        },
+        {
+          "word": "hen",
+          "type": "ukphone",
+          "value": "hen"
+        },
+        {
+          "word": "left",
+          "type": "usphone",
+          "value": "left"
+        },
+        {
+          "word": "left",
+          "type": "ukphone",
+          "value": "left"
+        },
+        {
+          "word": "less",
+          "type": "usphone",
+          "value": "les"
+        },
+        {
+          "word": "less",
+          "type": "ukphone",
+          "value": "les"
+        },
+        {
+          "word": "let",
+          "type": "usphone",
+          "value": "let"
+        },
+        {
+          "word": "let",
+          "type": "ukphone",
+          "value": "let"
+        },
+        {
+          "word": "mend",
+          "type": "usphone",
+          "value": "mend"
+        },
+        {
+          "word": "mend",
+          "type": "ukphone",
+          "value": "mend"
+        },
+        {
+          "word": "mess",
+          "type": "usphone",
+          "value": "mes"
+        },
+        {
+          "word": "mess",
+          "type": "ukphone",
+          "value": "mes"
+        },
+        {
+          "word": "neck",
+          "type": "usphone",
+          "value": "nek"
+        },
+        {
+          "word": "neck",
+          "type": "ukphone",
+          "value": "nek"
+        },
+        {
+          "word": "nest",
+          "type": "usphone",
+          "value": "nest"
+        },
+        {
+          "word": "nest",
+          "type": "ukphone",
+          "value": "nest"
+        },
+        {
+          "word": "net",
+          "type": "usphone",
+          "value": "net"
+        },
+        {
+          "word": "net",
+          "type": "ukphone",
+          "value": "net"
+        },
+        {
+          "word": "next",
+          "type": "usphone",
+          "value": "nekst"
+        },
+        {
+          "word": "next",
+          "type": "ukphone",
+          "value": "nekst"
+        },
+        {
+          "word": "pen",
+          "type": "usphone",
+          "value": "pen"
+        },
+        {
+          "word": "pen",
+          "type": "ukphone",
+          "value": "pen"
+        },
+        {
+          "word": "pest",
+          "type": "usphone",
+          "value": "pest"
+        },
+        {
+          "word": "pest",
+          "type": "ukphone",
+          "value": "pest"
+        },
+        {
+          "word": "pet",
+          "type": "usphone",
+          "value": "pet"
+        },
+        {
+          "word": "pet",
+          "type": "ukphone",
+          "value": "pet"
+        },
+        {
+          "word": "press",
+          "type": "ukphone",
+          "value": "pres"
+        },
+        {
+          "word": "red",
+          "type": "usphone",
+          "value": "red"
+        },
+        {
+          "word": "red",
+          "type": "ukphone",
+          "value": "red"
+        },
+        {
+          "word": "rent",
+          "type": "usphone",
+          "value": "rent"
+        },
+        {
+          "word": "rent",
+          "type": "ukphone",
+          "value": "rent"
+        },
+        {
+          "word": "rest",
+          "type": "usphone",
+          "value": "rest"
+        },
+        {
+          "word": "rest",
+          "type": "ukphone",
+          "value": "rest"
+        },
+        {
+          "word": "self",
+          "type": "usphone",
+          "value": "self"
+        },
+        {
+          "word": "self",
+          "type": "ukphone",
+          "value": "self"
+        },
+        {
+          "word": "sense",
+          "type": "usphone",
+          "value": "sens"
+        },
+        {
+          "word": "sense",
+          "type": "ukphone",
+          "value": "sens"
+        },
+        {
+          "word": "sex",
+          "type": "usphone",
+          "value": "seks"
+        },
+        {
+          "word": "sex",
+          "type": "ukphone",
+          "value": "seks"
+        },
+        {
+          "word": "smell",
+          "type": "usphone",
+          "value": "smel"
+        },
+        {
+          "word": "smell",
+          "type": "ukphone",
+          "value": "smel"
+        },
+        {
+          "word": "spell",
+          "type": "ukphone",
+          "value": "spel"
+        },
+        {
+          "word": "spread",
+          "type": "usphone",
+          "value": "spred"
+        },
+        {
+          "word": "spread",
+          "type": "ukphone",
+          "value": "spred"
+        },
+        {
+          "word": "step",
+          "type": "usphone",
+          "value": "step"
+        },
+        {
+          "word": "step",
+          "type": "ukphone",
+          "value": "step"
+        },
+        {
+          "word": "stress",
+          "type": "usphone",
+          "value": "stres"
+        },
+        {
+          "word": "stress",
+          "type": "ukphone",
+          "value": "stres"
+        },
+        {
+          "word": "sweat",
+          "type": "usphone",
+          "value": "swet"
+        },
+        {
+          "word": "sweat",
+          "type": "ukphone",
+          "value": "swet"
+        },
+        {
+          "word": "tend",
+          "type": "usphone",
+          "value": "tend"
+        },
+        {
+          "word": "tend",
+          "type": "ukphone",
+          "value": "tend"
+        },
+        {
+          "word": "ten",
+          "type": "usphone",
+          "value": "ten"
+        },
+        {
+          "word": "ten",
+          "type": "ukphone",
+          "value": "ten"
+        },
+        {
+          "word": "tense",
+          "type": "usphone",
+          "value": "tens"
+        },
+        {
+          "word": "tense",
+          "type": "ukphone",
+          "value": "tens"
+        },
+        {
+          "word": "tent",
+          "type": "usphone",
+          "value": "tent"
+        },
+        {
+          "word": "tent",
+          "type": "ukphone",
+          "value": "tent"
+        },
+        {
+          "word": "test",
+          "type": "usphone",
+          "value": "test"
+        },
+        {
+          "word": "test",
+          "type": "ukphone",
+          "value": "test"
+        },
+        {
+          "word": "text",
+          "type": "usphone",
+          "value": "tekst"
+        },
+        {
+          "word": "text",
+          "type": "ukphone",
+          "value": "tekst"
+        },
+        {
+          "word": "trend",
+          "type": "usphone",
+          "value": "trend"
+        },
+        {
+          "word": "trend",
+          "type": "ukphone",
+          "value": "trend"
+        },
+        {
+          "word": "twelve",
+          "type": "usphone",
+          "value": "twelv"
+        },
+        {
+          "word": "twelve",
+          "type": "ukphone",
+          "value": "twelv"
+        },
+        {
+          "word": "vest",
+          "type": "usphone",
+          "value": "vest"
+        },
+        {
+          "word": "vest",
+          "type": "ukphone",
+          "value": "vest"
+        },
+        {
+          "word": "web",
+          "type": "usphone",
+          "value": "web"
+        },
+        {
+          "word": "web",
+          "type": "ukphone",
+          "value": "web"
+        },
+        {
+          "word": "well",
+          "type": "usphone",
+          "value": "wel"
+        },
+        {
+          "word": "well",
+          "type": "ukphone",
+          "value": "wel"
+        },
+        {
+          "word": "west",
+          "type": "usphone",
+          "value": "west"
+        },
+        {
+          "word": "west",
+          "type": "ukphone",
+          "value": "west"
+        },
+        {
+          "word": "wet",
+          "type": "usphone",
+          "value": "wet"
+        },
+        {
+          "word": "wet",
+          "type": "ukphone",
+          "value": "wet"
+        },
+        {
+          "word": "when",
+          "type": "usphone",
+          "value": "wen"
+        },
+        {
+          "word": "when",
+          "type": "ukphone",
+          "value": "wen"
+        },
+        {
+          "word": "yell",
+          "type": "usphone",
+          "value": "jel"
+        },
+        {
+          "word": "yell",
+          "type": "ukphone",
+          "value": "jel"
+        },
+        {
+          "word": "yes",
+          "type": "usphone",
+          "value": "jes"
+        },
+        {
+          "word": "yes",
+          "type": "ukphone",
+          "value": "jes"
+        },
+        {
+          "word": "yet",
+          "type": "usphone",
+          "value": "jet"
+        },
+        {
+          "word": "yet",
+          "type": "ukphone",
+          "value": "jet"
+        }
+      ]
+    },
+    {
+      "dict": "英语专四",
+      "file": "tem4.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "crest",
+          "type": "ukphone",
+          "value": "krest"
+        },
+        {
+          "word": "rest",
+          "type": "ukphone",
+          "value": "rest"
+        },
+        {
+          "word": "hem",
+          "type": "ukphone",
+          "value": "hem"
+        },
+        {
+          "word": "wet",
+          "type": "ukphone",
+          "value": "wet"
+        },
+        {
+          "word": "vet",
+          "type": "ukphone",
+          "value": "vet"
+        },
+        {
+          "word": "rep",
+          "type": "ukphone",
+          "value": "rep"
+        },
+        {
+          "word": "ebb",
+          "type": "ukphone",
+          "value": "eb"
+        },
+        {
+          "word": "speck",
+          "type": "ukphone",
+          "value": "spek"
+        },
+        {
+          "word": "step",
+          "type": "ukphone",
+          "value": "step"
+        },
+        {
+          "word": "elm",
+          "type": "ukphone",
+          "value": "elm"
+        },
+        {
+          "word": "den",
+          "type": "ukphone",
+          "value": "den"
+        },
+        {
+          "word": "twelve",
+          "type": "ukphone",
+          "value": "twelv"
+        },
+        {
+          "word": "send",
+          "type": "ukphone",
+          "value": "send"
+        },
+        {
+          "word": "trek",
+          "type": "ukphone",
+          "value": "trek"
+        },
+        {
+          "word": "sense",
+          "type": "ukphone",
+          "value": "sens"
+        },
+        {
+          "word": "ten",
+          "type": "ukphone",
+          "value": "ten"
+        },
+        {
+          "word": "well",
+          "type": "ukphone",
+          "value": "wel"
+        },
+        {
+          "word": "sweat",
+          "type": "ukphone",
+          "value": "swet"
+        },
+        {
+          "word": "felt",
+          "type": "ukphone",
+          "value": "felt"
+        },
+        {
+          "word": "heck",
+          "type": "ukphone",
+          "value": "hek"
+        },
+        {
+          "word": "spend",
+          "type": "ukphone",
+          "value": "spend"
+        },
+        {
+          "word": "vex",
+          "type": "ukphone",
+          "value": "veks"
+        },
+        {
+          "word": "delve",
+          "type": "ukphone",
+          "value": "delv"
+        },
+        {
+          "word": "hemp",
+          "type": "ukphone",
+          "value": "hemp"
+        },
+        {
+          "word": "flex",
+          "type": "ukphone",
+          "value": "fleks"
+        },
+        {
+          "word": "smell",
+          "type": "ukphone",
+          "value": "smel"
+        },
+        {
+          "word": "yes",
+          "type": "ukphone",
+          "value": "jes"
+        },
+        {
+          "word": "fend",
+          "type": "usphone",
+          "value": "fend"
+        },
+        {
+          "word": "fend",
+          "type": "ukphone",
+          "value": "fend"
+        },
+        {
+          "word": "fleck",
+          "type": "ukphone",
+          "value": "flek"
+        },
+        {
+          "word": "fen",
+          "type": "ukphone",
+          "value": "fen"
+        },
+        {
+          "word": "cleanse",
+          "type": "ukphone",
+          "value": "klenz"
+        },
+        {
+          "word": "vest",
+          "type": "usphone",
+          "value": "vest"
+        },
+        {
+          "word": "vest",
+          "type": "ukphone",
+          "value": "vest"
+        },
+        {
+          "word": "sex",
+          "type": "ukphone",
+          "value": "seks"
+        },
+        {
+          "word": "wed",
+          "type": "ukphone",
+          "value": "wed"
+        },
+        {
+          "word": "sell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "yet",
+          "type": "ukphone",
+          "value": "jet"
+        },
+        {
+          "word": "sect",
+          "type": "ukphone",
+          "value": "sekt"
+        },
+        {
+          "word": "test",
+          "type": "ukphone",
+          "value": "test"
+        },
+        {
+          "word": "text",
+          "type": "ukphone",
+          "value": "tekst"
+        },
+        {
+          "word": "wrest",
+          "type": "ukphone",
+          "value": "rest"
+        },
+        {
+          "word": "elf",
+          "type": "ukphone",
+          "value": "elf"
+        },
+        {
+          "word": "west",
+          "type": "ukphone",
+          "value": "west"
+        },
+        {
+          "word": "self",
+          "type": "ukphone",
+          "value": "self"
+        },
+        {
+          "word": "rend",
+          "type": "ukphone",
+          "value": "rend"
+        },
+        {
+          "word": "spell",
+          "type": "ukphone",
+          "value": "spel"
+        },
+        {
+          "word": "quell",
+          "type": "ukphone",
+          "value": "kwel"
+        },
+        {
+          "word": "helm",
+          "type": "ukphone",
+          "value": "helm"
+        },
+        {
+          "word": "meant",
+          "type": "ukphone",
+          "value": "ment"
+        },
+        {
+          "word": "deft",
+          "type": "usphone",
+          "value": "deft"
+        },
+        {
+          "word": "deft",
+          "type": "ukphone",
+          "value": "deft"
+        },
+        {
+          "word": "zest",
+          "type": "ukphone",
+          "value": "zest"
+        },
+        {
+          "word": "dent",
+          "type": "ukphone",
+          "value": "dent"
+        }
+      ]
+    },
+    {
+      "dict": "英语专八",
+      "file": "tem8.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "pen",
+          "type": "ukphone",
+          "value": "pen"
+        },
+        {
+          "word": "twelve",
+          "type": "ukphone",
+          "value": "twelv"
+        },
+        {
+          "word": "send",
+          "type": "ukphone",
+          "value": "send"
+        },
+        {
+          "word": "trek",
+          "type": "ukphone",
+          "value": "trek"
+        },
+        {
+          "word": "sense",
+          "type": "ukphone",
+          "value": "sens"
+        },
+        {
+          "word": "vent",
+          "type": "ukphone",
+          "value": "vent"
+        },
+        {
+          "word": "dread",
+          "type": "ukphone",
+          "value": "dred"
+        },
+        {
+          "word": "head",
+          "type": "ukphone",
+          "value": "hed"
+        },
+        {
+          "word": "ten",
+          "type": "ukphone",
+          "value": "ten"
+        },
+        {
+          "word": "best",
+          "type": "ukphone",
+          "value": "best"
+        },
+        {
+          "word": "cent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "well",
+          "type": "ukphone",
+          "value": "wel"
+        },
+        {
+          "word": "stem",
+          "type": "ukphone",
+          "value": "stem"
+        },
+        {
+          "word": "speck",
+          "type": "ukphone",
+          "value": "spek"
+        },
+        {
+          "word": "bless",
+          "type": "ukphone",
+          "value": "bles"
+        },
+        {
+          "word": "tend",
+          "type": "ukphone",
+          "value": "tend"
+        },
+        {
+          "word": "deck",
+          "type": "ukphone",
+          "value": "dek"
+        },
+        {
+          "word": "sweat",
+          "type": "ukphone",
+          "value": "swet"
+        },
+        {
+          "word": "rent",
+          "type": "ukphone",
+          "value": "rent"
+        },
+        {
+          "word": "felt",
+          "type": "ukphone",
+          "value": "felt"
+        },
+        {
+          "word": "else",
+          "type": "ukphone",
+          "value": "els"
+        },
+        {
+          "word": "heck",
+          "type": "ukphone",
+          "value": "hek"
+        },
+        {
+          "word": "wet",
+          "type": "ukphone",
+          "value": "wet"
+        },
+        {
+          "word": "net",
+          "type": "ukphone",
+          "value": "net"
+        },
+        {
+          "word": "web",
+          "type": "ukphone",
+          "value": "web"
+        },
+        {
+          "word": "yell",
+          "type": "usphone",
+          "value": "jel"
+        },
+        {
+          "word": "red",
+          "type": "ukphone",
+          "value": "red"
+        },
+        {
+          "word": "spend",
+          "type": "ukphone",
+          "value": "spend"
+        },
+        {
+          "word": "bet",
+          "type": "ukphone",
+          "value": "bet"
+        },
+        {
+          "word": "vex",
+          "type": "ukphone",
+          "value": "veks"
+        },
+        {
+          "word": "delve",
+          "type": "ukphone",
+          "value": "delv"
+        },
+        {
+          "word": "hell",
+          "type": "ukphone",
+          "value": "hel"
+        },
+        {
+          "word": "hemp",
+          "type": "ukphone",
+          "value": "hemp"
+        },
+        {
+          "word": "end",
+          "type": "ukphone",
+          "value": "end"
+        },
+        {
+          "word": "friend",
+          "type": "ukphone",
+          "value": "frend"
+        },
+        {
+          "word": "trend",
+          "type": "ukphone",
+          "value": "trend"
+        },
+        {
+          "word": "vet",
+          "type": "ukphone",
+          "value": "vet"
+        },
+        {
+          "word": "ebb",
+          "type": "ukphone",
+          "value": "eb"
+        },
+        {
+          "word": "dead",
+          "type": "ukphone",
+          "value": "ded"
+        },
+        {
+          "word": "flex",
+          "type": "ukphone",
+          "value": "fleks"
+        },
+        {
+          "word": "bed",
+          "type": "ukphone",
+          "value": "bed"
+        },
+        {
+          "word": "smell",
+          "type": "ukphone",
+          "value": "smel"
+        },
+        {
+          "word": "weld",
+          "type": "ukphone",
+          "value": "weld"
+        },
+        {
+          "word": "yes",
+          "type": "ukphone",
+          "value": "jes"
+        },
+        {
+          "word": "peck",
+          "type": "ukphone",
+          "value": "pek"
+        },
+        {
+          "word": "fend",
+          "type": "usphone",
+          "value": "fend"
+        },
+        {
+          "word": "fend",
+          "type": "ukphone",
+          "value": "fend"
+        },
+        {
+          "word": "less",
+          "type": "ukphone",
+          "value": "les"
+        },
+        {
+          "word": "fleck",
+          "type": "ukphone",
+          "value": "flek"
+        },
+        {
+          "word": "lest",
+          "type": "ukphone",
+          "value": "lest"
+        },
+        {
+          "word": "deaf",
+          "type": "ukphone",
+          "value": "def"
+        },
+        {
+          "word": "bell",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "pest",
+          "type": "ukphone",
+          "value": "pest"
+        },
+        {
+          "word": "blend",
+          "type": "ukphone",
+          "value": "blend"
+        },
+        {
+          "word": "belt",
+          "type": "ukphone",
+          "value": "belt"
+        },
+        {
+          "word": "elm",
+          "type": "ukphone",
+          "value": "elm"
+        },
+        {
+          "word": "tense",
+          "type": "ukphone",
+          "value": "tens"
+        },
+        {
+          "word": "press",
+          "type": "ukphone",
+          "value": "pres"
+        },
+        {
+          "word": "fen",
+          "type": "ukphone",
+          "value": "fen"
+        },
+        {
+          "word": "cleanse",
+          "type": "ukphone",
+          "value": "klenz"
+        },
+        {
+          "word": "breast",
+          "type": "ukphone",
+          "value": "brest"
+        },
+        {
+          "word": "vest",
+          "type": "usphone",
+          "value": "vest"
+        },
+        {
+          "word": "vest",
+          "type": "ukphone",
+          "value": "vest"
+        },
+        {
+          "word": "sex",
+          "type": "ukphone",
+          "value": "seks"
+        },
+        {
+          "word": "stress",
+          "type": "ukphone",
+          "value": "stres"
+        },
+        {
+          "word": "lens",
+          "type": "ukphone",
+          "value": "lenz"
+        },
+        {
+          "word": "mend",
+          "type": "ukphone",
+          "value": "mend"
+        },
+        {
+          "word": "fell",
+          "type": "ukphone",
+          "value": "fel"
+        },
+        {
+          "word": "wed",
+          "type": "ukphone",
+          "value": "wed"
+        },
+        {
+          "word": "fret",
+          "type": "ukphone",
+          "value": "fret"
+        },
+        {
+          "word": "tent",
+          "type": "ukphone",
+          "value": "tent"
+        },
+        {
+          "word": "left",
+          "type": "ukphone",
+          "value": "left"
+        },
+        {
+          "word": "nest",
+          "type": "ukphone",
+          "value": "nest"
+        },
+        {
+          "word": "sell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "yet",
+          "type": "ukphone",
+          "value": "jet"
+        },
+        {
+          "word": "sect",
+          "type": "ukphone",
+          "value": "sekt"
+        },
+        {
+          "word": "test",
+          "type": "ukphone",
+          "value": "test"
+        },
+        {
+          "word": "help",
+          "type": "ukphone",
+          "value": "help"
+        },
+        {
+          "word": "let",
+          "type": "ukphone",
+          "value": "let"
+        },
+        {
+          "word": "dwell",
+          "type": "ukphone",
+          "value": "dwel"
+        },
+        {
+          "word": "text",
+          "type": "ukphone",
+          "value": "tekst"
+        },
+        {
+          "word": "bread",
+          "type": "ukphone",
+          "value": "bred"
+        },
+        {
+          "word": "mess",
+          "type": "ukphone",
+          "value": "mes"
+        },
+        {
+          "word": "wrest",
+          "type": "ukphone",
+          "value": "rest"
+        },
+        {
+          "word": "debt",
+          "type": "ukphone",
+          "value": "det"
+        },
+        {
+          "word": "quest",
+          "type": "ukphone",
+          "value": "kwest"
+        },
+        {
+          "word": "pet",
+          "type": "ukphone",
+          "value": "pet"
+        },
+        {
+          "word": "tread",
+          "type": "ukphone",
+          "value": "tred"
+        },
+        {
+          "word": "wreck",
+          "type": "ukphone",
+          "value": "rek"
+        },
+        {
+          "word": "realm",
+          "type": "ukphone",
+          "value": "relm"
+        },
+        {
+          "word": "cell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "elf",
+          "type": "ukphone",
+          "value": "elf"
+        },
+        {
+          "word": "west",
+          "type": "ukphone",
+          "value": "west"
+        },
+        {
+          "word": "crest",
+          "type": "ukphone",
+          "value": "krest"
+        },
+        {
+          "word": "hen",
+          "type": "ukphone",
+          "value": "hen"
+        },
+        {
+          "word": "self",
+          "type": "ukphone",
+          "value": "self"
+        },
+        {
+          "word": "den",
+          "type": "ukphone",
+          "value": "den"
+        },
+        {
+          "word": "rend",
+          "type": "ukphone",
+          "value": "rend"
+        },
+        {
+          "word": "spell",
+          "type": "ukphone",
+          "value": "spel"
+        },
+        {
+          "word": "dense",
+          "type": "ukphone",
+          "value": "dens"
+        },
+        {
+          "word": "bend",
+          "type": "ukphone",
+          "value": "bend"
+        },
+        {
+          "word": "hence",
+          "type": "ukphone",
+          "value": "hens"
+        },
+        {
+          "word": "fence",
+          "type": "ukphone",
+          "value": "fens"
+        },
+        {
+          "word": "rep",
+          "type": "ukphone",
+          "value": "rep"
+        },
+        {
+          "word": "step",
+          "type": "ukphone",
+          "value": "step"
+        },
+        {
+          "word": "dress",
+          "type": "ukphone",
+          "value": "dres"
+        },
+        {
+          "word": "swell",
+          "type": "ukphone",
+          "value": "swel"
+        },
+        {
+          "word": "neck",
+          "type": "ukphone",
+          "value": "nek"
+        },
+        {
+          "word": "rest",
+          "type": "ukphone",
+          "value": "rest"
+        },
+        {
+          "word": "quell",
+          "type": "ukphone",
+          "value": "kwel"
+        },
+        {
+          "word": "helm",
+          "type": "ukphone",
+          "value": "helm"
+        },
+        {
+          "word": "meant",
+          "type": "ukphone",
+          "value": "ment"
+        },
+        {
+          "word": "next",
+          "type": "ukphone",
+          "value": "nekst"
+        },
+        {
+          "word": "deft",
+          "type": "usphone",
+          "value": "deft"
+        },
+        {
+          "word": "deft",
+          "type": "ukphone",
+          "value": "deft"
+        },
+        {
+          "word": "scent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "set",
+          "type": "ukphone",
+          "value": "set"
+        },
+        {
+          "word": "lend",
+          "type": "ukphone",
+          "value": "lend"
+        },
+        {
+          "word": "zest",
+          "type": "ukphone",
+          "value": "zest"
+        },
+        {
+          "word": "dent",
+          "type": "ukphone",
+          "value": "dent"
+        },
+        {
+          "word": "hem",
+          "type": "ukphone",
+          "value": "hem"
+        },
+        {
+          "word": "spread",
+          "type": "ukphone",
+          "value": "spred"
+        }
+      ]
+    },
+    {
+      "dict": "托福词汇",
+      "file": "toefl.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "set",
+          "type": "ukphone",
+          "value": "set"
+        },
+        {
+          "word": "left",
+          "type": "ukphone",
+          "value": "left"
+        },
+        {
+          "word": "west",
+          "type": "ukphone",
+          "value": "west"
+        },
+        {
+          "word": "melt",
+          "type": "ukphone",
+          "value": "melt"
+        },
+        {
+          "word": "tend",
+          "type": "ukphone",
+          "value": "tend"
+        },
+        {
+          "word": "yet",
+          "type": "ukphone",
+          "value": "jet"
+        },
+        {
+          "word": "test",
+          "type": "ukphone",
+          "value": "test"
+        },
+        {
+          "word": "sense",
+          "type": "ukphone",
+          "value": "sens"
+        },
+        {
+          "word": "cell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "sell",
+          "type": "ukphone",
+          "value": "sel"
+        },
+        {
+          "word": "spread",
+          "type": "ukphone",
+          "value": "spred"
+        },
+        {
+          "word": "step",
+          "type": "ukphone",
+          "value": "step"
+        },
+        {
+          "word": "next",
+          "type": "ukphone",
+          "value": "nekst"
+        },
+        {
+          "word": "red",
+          "type": "ukphone",
+          "value": "red"
+        },
+        {
+          "word": "head",
+          "type": "ukphone",
+          "value": "hed"
+        },
+        {
+          "word": "dense",
+          "type": "ukphone",
+          "value": "dens"
+        },
+        {
+          "word": "ten",
+          "type": "ukphone",
+          "value": "ten"
+        },
+        {
+          "word": "stem",
+          "type": "ukphone",
+          "value": "stem"
+        },
+        {
+          "word": "rest",
+          "type": "ukphone",
+          "value": "rest"
+        },
+        {
+          "word": "spend",
+          "type": "ukphone",
+          "value": "spend"
+        },
+        {
+          "word": "bed",
+          "type": "ukphone",
+          "value": "bed"
+        },
+        {
+          "word": "wet",
+          "type": "ukphone",
+          "value": "wet"
+        },
+        {
+          "word": "press",
+          "type": "ukphone",
+          "value": "pres"
+        },
+        {
+          "word": "ware",
+          "type": "usphone",
+          "value": "wer"
+        },
+        {
+          "word": "send",
+          "type": "ukphone",
+          "value": "send"
+        },
+        {
+          "word": "stress",
+          "type": "ukphone",
+          "value": "stres"
+        },
+        {
+          "word": "dead",
+          "type": "ukphone",
+          "value": "ded"
+        },
+        {
+          "word": "trend",
+          "type": "ukphone",
+          "value": "trend"
+        },
+        {
+          "word": "lens",
+          "type": "ukphone",
+          "value": "lenz"
+        },
+        {
+          "word": "hence",
+          "type": "ukphone",
+          "value": "hens"
+        },
+        {
+          "word": "rent",
+          "type": "ukphone",
+          "value": "rent"
+        },
+        {
+          "word": "vent",
+          "type": "ukphone",
+          "value": "vent"
+        },
+        {
+          "word": "self",
+          "type": "ukphone",
+          "value": "self"
+        },
+        {
+          "word": "text",
+          "type": "ukphone",
+          "value": "tekst"
+        },
+        {
+          "word": "friend",
+          "type": "ukphone",
+          "value": "frend"
+        },
+        {
+          "word": "cent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "bell",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "lend",
+          "type": "ukphone",
+          "value": "lend"
+        },
+        {
+          "word": "realm",
+          "type": "ukphone",
+          "value": "relm"
+        },
+        {
+          "word": "else",
+          "type": "ukphone",
+          "value": "els"
+        },
+        {
+          "word": "smell",
+          "type": "ukphone",
+          "value": "smel"
+        },
+        {
+          "word": "debt",
+          "type": "ukphone",
+          "value": "det"
+        },
+        {
+          "word": "twelve",
+          "type": "ukphone",
+          "value": "twelv"
+        },
+        {
+          "word": "bend",
+          "type": "ukphone",
+          "value": "bend"
+        },
+        {
+          "word": "steppe",
+          "type": "ukphone",
+          "value": "step"
+        },
+        {
+          "word": "dwell",
+          "type": "ukphone",
+          "value": "dwel"
+        },
+        {
+          "word": "sect",
+          "type": "ukphone",
+          "value": "sekt"
+        },
+        {
+          "word": "scent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "web",
+          "type": "ukphone",
+          "value": "web"
+        },
+        {
+          "word": "wed",
+          "type": "ukphone",
+          "value": "wed"
+        },
+        {
+          "word": "deaf",
+          "type": "ukphone",
+          "value": "def"
+        },
+        {
+          "word": "let",
+          "type": "ukphone",
+          "value": "let"
+        },
+        {
+          "word": "fence",
+          "type": "ukphone",
+          "value": "fens"
+        },
+        {
+          "word": "bread",
+          "type": "ukphone",
+          "value": "bred"
+        },
+        {
+          "word": "elk",
+          "type": "ukphone",
+          "value": "elk"
+        },
+        {
+          "word": "belt",
+          "type": "ukphone",
+          "value": "belt"
+        },
+        {
+          "word": "pet",
+          "type": "ukphone",
+          "value": "pet"
+        },
+        {
+          "word": "bent",
+          "type": "ukphone",
+          "value": "bent"
+        },
+        {
+          "word": "blend",
+          "type": "ukphone",
+          "value": "blend"
+        },
+        {
+          "word": "dress",
+          "type": "ukphone",
+          "value": "dres"
+        },
+        {
+          "word": "rend",
+          "type": "ukphone",
+          "value": "rend"
+        },
+        {
+          "word": "pest",
+          "type": "ukphone",
+          "value": "pest"
+        },
+        {
+          "word": "neck",
+          "type": "ukphone",
+          "value": "nek"
+        },
+        {
+          "word": "net",
+          "type": "ukphone",
+          "value": "net"
+        },
+        {
+          "word": "sweat",
+          "type": "ukphone",
+          "value": "swet"
+        },
+        {
+          "word": "quincy",
+          "type": "usphone",
+          "value": "'kwinsi"
+        },
+        {
+          "word": "quincy",
+          "type": "ukphone",
+          "value": "'kwinsi"
+        },
+        {
+          "word": "sex",
+          "type": "ukphone",
+          "value": "seks"
+        },
+        {
+          "word": "spell",
+          "type": "ukphone",
+          "value": "spel"
+        },
+        {
+          "word": "smelt",
+          "type": "ukphone",
+          "value": "smelt"
+        },
+        {
+          "word": "pen",
+          "type": "ukphone",
+          "value": "pen"
+        },
+        {
+          "word": "delft",
+          "type": "usphone",
+          "value": "delft"
+        },
+        {
+          "word": "delft",
+          "type": "ukphone",
+          "value": "delft"
+        },
+        {
+          "word": "vest",
+          "type": "usphone",
+          "value": "vest"
+        },
+        {
+          "word": "vest",
+          "type": "ukphone",
+          "value": "vest"
+        },
+        {
+          "word": "tent",
+          "type": "ukphone",
+          "value": "tent"
+        },
+        {
+          "word": "quest",
+          "type": "ukphone",
+          "value": "kwest"
+        },
+        {
+          "word": "weft",
+          "type": "ukphone",
+          "value": "weft"
+        },
+        {
+          "word": "deft",
+          "type": "usphone",
+          "value": "deft"
+        },
+        {
+          "word": "deft",
+          "type": "ukphone",
+          "value": "deft"
+        },
+        {
+          "word": "wren",
+          "type": "ukphone",
+          "value": "ren"
+        },
+        {
+          "word": "fen",
+          "type": "ukphone",
+          "value": "fen"
+        },
+        {
+          "word": "tressed",
+          "type": "usphone",
+          "value": "trest"
+        },
+        {
+          "word": "tressed",
+          "type": "ukphone",
+          "value": "trest"
+        },
+        {
+          "word": "fend",
+          "type": "usphone",
+          "value": "fend"
+        },
+        {
+          "word": "fend",
+          "type": "ukphone",
+          "value": "fend"
+        },
+        {
+          "word": "whence",
+          "type": "ukphone",
+          "value": "wens"
+        },
+        {
+          "word": "wreck",
+          "type": "ukphone",
+          "value": "rek"
+        },
+        {
+          "word": "deck",
+          "type": "ukphone",
+          "value": "dek"
+        },
+        {
+          "word": "weld",
+          "type": "ukphone",
+          "value": "weld"
+        },
+        {
+          "word": "peck",
+          "type": "ukphone",
+          "value": "pek"
+        },
+        {
+          "word": "welt",
+          "type": "ukphone",
+          "value": "welt"
+        },
+        {
+          "word": "breast",
+          "type": "ukphone",
+          "value": "brest"
+        },
+        {
+          "word": "swell",
+          "type": "ukphone",
+          "value": "swel"
+        },
+        {
+          "word": "speck",
+          "type": "ukphone",
+          "value": "spek"
+        },
+        {
+          "word": "sled",
+          "type": "ukphone",
+          "value": "sled"
+        },
+        {
+          "word": "stele",
+          "type": "usphone",
+          "value": "stil"
+        },
+        {
+          "word": "belle",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "yelp",
+          "type": "ukphone",
+          "value": "jelp"
+        },
+        {
+          "word": "crest",
+          "type": "ukphone",
+          "value": "krest"
+        },
+        {
+          "word": "pelt",
+          "type": "ukphone",
+          "value": "pelt"
+        },
+        {
+          "word": "tread",
+          "type": "ukphone",
+          "value": "tred"
+        },
+        {
+          "word": "bet",
+          "type": "ukphone",
+          "value": "bet"
+        },
+        {
+          "word": "hem",
+          "type": "ukphone",
+          "value": "hem"
+        },
+        {
+          "word": "Thames",
+          "type": "usphone",
+          "value": "temz"
+        },
+        {
+          "word": "Thames",
+          "type": "ukphone",
+          "value": "temz"
+        },
+        {
+          "word": "ted",
+          "type": "ukphone",
+          "value": "ted"
+        },
+        {
+          "word": "dread",
+          "type": "ukphone",
+          "value": "dred"
+        },
+        {
+          "word": "mess",
+          "type": "ukphone",
+          "value": "mes"
+        },
+        {
+          "word": "bless",
+          "type": "ukphone",
+          "value": "bles"
+        },
+        {
+          "word": "elm",
+          "type": "ukphone",
+          "value": "elm"
+        },
+        {
+          "word": "nest",
+          "type": "ukphone",
+          "value": "nest"
+        },
+        {
+          "word": "hemp",
+          "type": "ukphone",
+          "value": "hemp"
+        },
+        {
+          "word": "trek",
+          "type": "ukphone",
+          "value": "trek"
+        },
+        {
+          "word": "dent",
+          "type": "ukphone",
+          "value": "dent"
+        },
+        {
+          "word": "quell",
+          "type": "ukphone",
+          "value": "kwel"
+        },
+        {
+          "word": "zest",
+          "type": "ukphone",
+          "value": "zest"
+        }
+      ]
+    },
+    {
+      "dict": "中考英语核心词汇",
+      "file": "zhongkao.json",
+      "simplifiedPhonetic": [
+        {
+          "word": "bed",
+          "type": "ukphone",
+          "value": "bed"
+        },
+        {
+          "word": "end",
+          "type": "ukphone",
+          "value": "end"
+        },
+        {
+          "word": "hen",
+          "type": "ukphone",
+          "value": "hen"
+        },
+        {
+          "word": "pen",
+          "type": "ukphone",
+          "value": "pen"
+        },
+        {
+          "word": "pet",
+          "type": "ukphone",
+          "value": "pet"
+        },
+        {
+          "word": "red",
+          "type": "ukphone",
+          "value": "red"
+        },
+        {
+          "word": "ten",
+          "type": "ukphone",
+          "value": "ten"
+        },
+        {
+          "word": "wet",
+          "type": "ukphone",
+          "value": "wet"
+        },
+        {
+          "word": "yes",
+          "type": "ukphone",
+          "value": "jes"
+        },
+        {
+          "word": "yet",
+          "type": "ukphone",
+          "value": "jet"
+        },
+        {
+          "word": "bell",
+          "type": "ukphone",
+          "value": "bel"
+        },
+        {
+          "word": "cent",
+          "type": "ukphone",
+          "value": "sent"
+        },
+        {
+          "word": "dead",
+          "type": "ukphone",
+          "value": "ded"
+        },
+        {
+          "word": "deaf",
+          "type": "ukphone",
+          "value": "def"
+        },
+        {
+          "word": "else",
+          "type": "ukphone",
+          "value": "els"
+        },
+        {
+          "word": "head",
+          "type": "ukphone",
+          "value": "hed"
+        },
+        {
+          "word": "help",
+          "type": "ukphone",
+          "value": "help"
+        },
+        {
+          "word": "left",
+          "type": "ukphone",
+          "value": "left"
+        },
+        {
+          "word": "mend",
+          "type": "ukphone",
+          "value": "mend"
+        },
+        {
+          "word": "neck",
+          "type": "ukphone",
+          "value": "nek"
+        },
+        {
+          "word": "next",
+          "type": "ukphone",
+          "value": "nekst"
+        },
+        {
+          "word": "rest",
+          "type": "ukphone",
+          "value": "rest"
+        },
+        {
+          "word": "step",
+          "type": "ukphone",
+          "value": "step"
+        },
+        {
+          "word": "tent",
+          "type": "ukphone",
+          "value": "tent"
+        },
+        {
+          "word": "test",
+          "type": "ukphone",
+          "value": "test"
+        },
+        {
+          "word": "text",
+          "type": "ukphone",
+          "value": "tekst"
+        },
+        {
+          "word": "west",
+          "type": "ukphone",
+          "value": "west"
+        },
+        {
+          "word": "bread",
+          "type": "ukphone",
+          "value": "bred"
+        },
+        {
+          "word": "dress",
+          "type": "ukphone",
+          "value": "dres"
+        },
+        {
+          "word": "sense",
+          "type": "ukphone",
+          "value": "sens"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "英语4级": {
+      "file": "cet4.json",
+      "totalWords": 4543,
+      "phraseCount": 5,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 58
+    },
+    "英语4级高频": {
+      "file": "cet4freq.json",
+      "totalWords": 1500,
+      "phraseCount": 0,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 13
+    },
+    "英语6级": {
+      "file": "cet6.json",
+      "totalWords": 6661,
+      "phraseCount": 6,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 71
+    },
+    "英语6级高频": {
+      "file": "cet6freq.json",
+      "totalWords": 1500,
+      "phraseCount": 0,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 12
+    },
+    "高考英语核心词汇": {
+      "file": "gaokao.json",
+      "totalWords": 689,
+      "phraseCount": 1,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 0
+    },
+    "雅思词汇": {
+      "file": "ielts.json",
+      "totalWords": 6554,
+      "phraseCount": 58,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 92
+    },
+    "初中英语词汇": {
+      "file": "junior.json",
+      "totalWords": 1418,
+      "phraseCount": 0,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 32
+    },
+    "考研词汇": {
+      "file": "postgraduate.json",
+      "totalWords": 5698,
+      "phraseCount": 10,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 124
+    },
+    "程序员常见词汇": {
+      "file": "programmer.json",
+      "totalWords": 1665,
+      "phraseCount": 1,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 30
+    },
+    "SAT 词汇": {
+      "file": "sat.json",
+      "totalWords": 4423,
+      "phraseCount": 0,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 19
+    },
+    "高中英语词汇": {
+      "file": "senior.json",
+      "totalWords": 4027,
+      "phraseCount": 167,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 126
+    },
+    "英语专四": {
+      "file": "tem4.json",
+      "totalWords": 6307,
+      "phraseCount": 0,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 54
+    },
+    "英语专八": {
+      "file": "tem8.json",
+      "totalWords": 12197,
+      "phraseCount": 0,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 122
+    },
+    "托福词汇": {
+      "file": "toefl.json",
+      "totalWords": 10361,
+      "phraseCount": 9,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 117
+    },
+    "中考英语核心词汇": {
+      "file": "zhongkao.json",
+      "totalWords": 800,
+      "phraseCount": 0,
+      "duplicates": 0,
+      "missingPhonetic": 0,
+      "phraseWithPhonetic": 0,
+      "simplifiedPhonetic": 30
+    }
+  }
+}

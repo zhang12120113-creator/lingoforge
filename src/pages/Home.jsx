@@ -67,40 +67,33 @@ function Home() {
   }
 
   const tagColors = {
-    'bg-green-400': { text: 'text-green-600 dark:text-green-400', bg: 'bg-green-50 dark:bg-green-900/20', top: 'bg-green-400' },
-    'bg-emerald-500': { text: 'text-emerald-600 dark:text-emerald-400', bg: 'bg-emerald-50 dark:bg-emerald-900/20', top: 'bg-emerald-500' },
-    'bg-teal-500': { text: 'text-teal-600 dark:text-teal-400', bg: 'bg-teal-50 dark:bg-teal-900/20', top: 'bg-teal-500' },
-    'bg-cyan-500': { text: 'text-cyan-600 dark:text-cyan-400', bg: 'bg-cyan-50 dark:bg-cyan-900/20', top: 'bg-cyan-500' },
-    'bg-blue-500': { text: 'text-blue-600 dark:text-blue-400', bg: 'bg-blue-50 dark:bg-blue-900/20', top: 'bg-blue-500' },
-    'bg-indigo-400': { text: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-900/20', top: 'bg-indigo-400' },
-    'bg-indigo-500': { text: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-900/20', top: 'bg-indigo-500' },
-    'bg-violet-500': { text: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-900/20', top: 'bg-violet-500' },
-    'bg-purple-500': { text: 'text-purple-600 dark:text-purple-400', bg: 'bg-purple-50 dark:bg-purple-900/20', top: 'bg-purple-500' },
-    'bg-fuchsia-500': { text: 'text-fuchsia-600 dark:text-fuchsia-400', bg: 'bg-fuchsia-50 dark:bg-fuchsia-900/20', top: 'bg-fuchsia-500' },
-    'bg-pink-500': { text: 'text-pink-600 dark:text-pink-400', bg: 'bg-pink-50 dark:bg-pink-900/20', top: 'bg-pink-500' },
-    'bg-rose-500': { text: 'text-rose-600 dark:text-rose-400', bg: 'bg-rose-50 dark:bg-rose-900/20', top: 'bg-rose-500' },
-    'bg-orange-500': { text: 'text-orange-600 dark:text-orange-400', bg: 'bg-orange-50 dark:bg-orange-900/20', top: 'bg-orange-500' },
-    'bg-blue-600': { text: 'text-blue-600 dark:text-blue-400', bg: 'bg-blue-50 dark:bg-blue-900/20', top: 'bg-blue-600' },
-    'bg-yellow-500': { text: 'text-yellow-600 dark:text-yellow-400', bg: 'bg-yellow-50 dark:bg-yellow-900/20', top: 'bg-yellow-500' },
+    'warm-coral': { text: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-500/10', top: 'bg-indigo-500' },
+    'warm-amber': { text: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-500/10', top: 'bg-violet-500' },
+    'warm-rose': { text: 'text-slate-600 dark:text-slate-400', bg: 'bg-slate-50 dark:bg-slate-500/10', top: 'bg-slate-500' },
+    'warm-sage': { text: 'text-emerald-600 dark:text-emerald-400', bg: 'bg-emerald-50 dark:bg-emerald-500/10', top: 'bg-emerald-500' },
+    'warm-sky': { text: 'text-sky-600 dark:text-sky-400', bg: 'bg-sky-50 dark:bg-sky-500/10', top: 'bg-sky-500' },
+    'warm-violet': { text: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-500/10', top: 'bg-violet-500' },
+    'warm-slate': { text: 'text-stone-600 dark:text-stone-400', bg: 'bg-stone-50 dark:bg-stone-500/10', top: 'bg-stone-500' },
+    'warm-teal': { text: 'text-teal-600 dark:text-teal-400', bg: 'bg-teal-50 dark:bg-teal-500/10', top: 'bg-teal-500' },
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-[#0a0a0f] p-6 transition-colors duration-500">
+    <div className="min-h-screen bg-background dark:bg-transparent p-6 transition-colors duration-500">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mt-16 mb-14">
           <div className="flex items-start justify-between">
             <div className="text-left">
-              <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight">
+              <h1 className="text-display gradient-text mb-4 tracking-tight text-glow-primary animate-pulse-soft">
                 选择词库开始练习
               </h1>
-              <p className="text-gray-500 dark:text-gray-400 text-base max-w-md">
+              <p className="text-content-tertiary text-body max-w-md">
                 从丰富的词库中选择，开启你的单词记忆之旅
               </p>
             </div>
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-[#13131f] border border-gray-200 dark:border-gray-800 rounded-xl text-sm font-medium text-gray-700 dark:text-gray-300 hover:border-indigo-300 dark:hover:border-indigo-700 transition-colors cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 glass-card rounded-button text-sm font-medium text-content-secondary dark:text-gray-300 hover:border-primary/40 dark:hover:border-primary/40 transition-colors cursor-pointer"
               >
                 <span>{selectedCategory === '全部' ? '全部分类' : selectedCategory}</span>
                 <svg
@@ -113,10 +106,10 @@ function Home() {
                 </svg>
               </button>
               {dropdownOpen && (
-                <div className="absolute right-0 mt-2 w-40 bg-white dark:bg-[#13131f] border border-gray-200 dark:border-gray-800 rounded-xl shadow-lg z-20 overflow-hidden">
+                <div className="dropdown-menu">
                   <button
                     onClick={() => { setSelectedCategory('全部'); setDropdownOpen(false) }}
-                    className={`w-full text-left px-4 py-2.5 text-sm transition-colors cursor-pointer ${selectedCategory === '全部' ? 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50'}`}
+                    className={`dropdown-item ${selectedCategory === '全部' ? 'dropdown-item-active' : 'dropdown-item-inactive'}`}
                   >
                     全部分类
                   </button>
@@ -124,7 +117,7 @@ function Home() {
                     <button
                       key={cat}
                       onClick={() => { setSelectedCategory(cat); setDropdownOpen(false) }}
-                      className={`w-full text-left px-4 py-2.5 text-sm transition-colors cursor-pointer ${selectedCategory === cat ? 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50'}`}
+                      className={`dropdown-item ${selectedCategory === cat ? 'dropdown-item-active' : 'dropdown-item-inactive'}`}
                     >
                       {cat}
                     </button>
@@ -136,7 +129,7 @@ function Home() {
 
           <div className="max-w-xl mx-auto mt-8">
             <div className="relative">
-              <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-content-tertiary dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
               <input
@@ -144,12 +137,12 @@ function Home() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="搜索词库名称、描述..."
-                className="w-full pl-12 pr-4 py-3 bg-white dark:bg-[#13131f] border border-gray-200 dark:border-gray-800 rounded-xl text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-indigo-400 dark:focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 dark:focus:ring-indigo-900/30 transition-all"
+                className="input-field input-glow"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-content-tertiary dark:text-gray-500 hover:text-content-secondary dark:hover:text-gray-300 transition-colors"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -160,29 +153,30 @@ function Home() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filteredDictionaries.map((dict) => {
-            const colors = tagColors[dict.color] || tagColors['bg-indigo-500'];
+          {filteredDictionaries.map((dict, index) => {
+            const colors = tagColors[dict.color] || tagColors['warm-coral'];
             return (
               <div
                 key={dict.id}
                 onClick={() => navigate(`/dict/${dict.id}`)}
-                className="group bg-white dark:bg-[#13131f] rounded-2xl p-6 cursor-pointer border border-gray-200/60 dark:border-gray-800/60 hover:border-indigo-300 dark:hover:border-indigo-700/50 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10 dark:hover:shadow-indigo-500/5 hover:-translate-y-1 relative overflow-hidden"
+                className="group card card-hover p-6 cursor-pointer relative overflow-hidden animate-card-enter glow-border-subtle"
+                style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className={`absolute top-0 left-0 w-full h-1 ${colors.top} opacity-80`} />
                 <div className="flex items-start justify-between mb-3">
-                  <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">{dict.name}</h2>
-                  <div className="text-gray-300 dark:text-gray-600 group-hover:text-indigo-400 transition-colors">
+                  <h2 className="text-title text-content dark:text-gray-100 group-hover:text-primary transition-colors">{dict.name}</h2>
+                  <div className="text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">
                     {categoryIcons[dict.category] || (
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
                     )}
                   </div>
                 </div>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">{dict.description}</p>
+                <p className="text-body text-content-tertiary dark:text-gray-400 mb-4 leading-relaxed">{dict.description}</p>
                 <div className="flex items-center justify-between">
                   <span className={`${colors.bg} ${colors.text} px-2.5 py-1 rounded-lg text-xs font-medium`}>
                     {dict.category}
                   </span>
-                  <span className="text-xs text-gray-400 dark:text-gray-500 font-medium">
+                  <span className="text-xs text-content-tertiary dark:text-gray-500 font-medium">
                     {dict.totalChapters} 章 · {dict.totalWords} 词
                   </span>
                 </div>

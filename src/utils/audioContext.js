@@ -12,8 +12,8 @@ export async function unlockAudio() {
   unlockPromise = (async () => {
     try {
       const ctx = new (window.AudioContext || window.webkitAudioContext)();
-      await ctx.resume();
       audioCtx = ctx;
+      await ctx.resume();
       return ctx;
     } catch (e) {
       return null;

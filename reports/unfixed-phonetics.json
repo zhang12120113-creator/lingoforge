@@ -1,0 +1,20 @@
+[
+  {
+    "file": "toefl.json",
+    "word": "quincy",
+    "field": "usphone",
+    "oldValue": "'kwinsi"
+  },
+  {
+    "file": "toefl.json",
+    "word": "quincy",
+    "field": "ukphone",
+    "oldValue": "'kwinsi"
+  },
+  {
+    "file": "toefl.json",
+    "word": "tressed",
+    "field": "usphone",
+    "oldValue": "trest"
+  }
+]

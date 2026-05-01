@@ -2,8 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #6366f1;
+  --color-primary-soft: rgba(99, 102, 241, 0.12);
+  --color-primary-dark: #818cf8;
+  --color-accent: #8b5cf6;
+  --color-accent-soft: rgba(139, 92, 246, 0.12);
+  --color-background: #f8fafc;
+  --color-background-dark: #04040a;
+  --color-surface: #ffffff;
+  --color-surface-dark: #0f0f18;
+  --color-content: #0f172a;
+  --color-content-secondary: #475569;
+  --color-content-tertiary: #94a3b8;
+}
+
 .dark {
   color-scheme: dark;
+  --color-primary: #818cf8;
+  --color-primary-soft: rgba(99, 102, 241, 0.15);
+  --color-primary-dark: #818cf8;
+  --color-accent: #c4b5fd;
+  --color-accent-soft: rgba(196, 181, 253, 0.15);
+  --color-background: #04040a;
+  --color-background-dark: #04040a;
+  --color-surface: #0f0f18;
+  --color-surface-dark: #0f0f18;
+  --color-content: #e2e8f0;
+  --color-content-secondary: #94a3b8;
+  --color-content-tertiary: #64748b;
 }
 
 @keyframes shake {
@@ -46,18 +73,33 @@
   animation: pulse-soft 2s ease-in-out infinite;
 }
 
-/* Custom scrollbar for dark mode */
-.dark ::-webkit-scrollbar {
+/* Starfield ambient glow */
+@keyframes nebula-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+  33% { transform: translate(2%, -1%) scale(1.02); opacity: 0.6; }
+  66% { transform: translate(-1%, 1%) scale(0.98); opacity: 0.4; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
   width: 6px;
 }
 
-.dark ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.15);
   border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.25);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
@@ -70,5 +112,211 @@
 }
 
 .dark ::selection {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(129, 140, 248, 0.3);
 }
+
+/* Component layer */
+@layer components {
+  .card {
+    @apply bg-surface rounded-card border border-gray-200/60 backdrop-blur-sm;
+  }
+  .dark .card {
+    background: rgba(19, 19, 31, 0.7);
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-card-light dark:hover:shadow-card-dark-hover hover:-translate-y-0.5;
+  }
+
+  .btn-primary {
+    @apply py-3 px-6 bg-primary text-white rounded-button font-semibold hover:opacity-90 transition;
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.25);
+  }
+    .dark .btn-primary {
+    box-shadow: 0 10px 15px -3px rgba(129, 140, 248, 0.25);
+  }
+
+  .btn-secondary {
+    @apply py-3 px-6 bg-gray-100 dark:bg-white/[0.06] text-content-secondary dark:text-gray-300 rounded-button font-semibold hover:bg-gray-200 dark:hover:bg-white/[0.1] transition;
+  }
+
+  .input-field {
+    @apply w-full pl-12 pr-4 py-3 bg-surface border border-gray-200 rounded-button text-sm text-content placeholder-gray-400 focus:outline-none transition-all;
+  }
+  .input-field:focus {
+    border-color: rgba(99, 102, 241, 0.6);
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) rgba(99, 102, 241, 0.1);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+  .dark .input-field {
+    background: rgba(19, 19, 31, 0.8);
+    border-color: rgba(255, 255, 255, 0.06);
+    color: #f3f4f6;
+  }
+  .dark .input-field::placeholder {
+    color: #6b7280;
+  }
+  .dark .input-field:focus {
+    border-color: rgba(129, 140, 248, 0.5);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) rgba(129, 140, 248, 0.2);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 animate-[fadeIn_0.2s_ease-out];
+  }
+
+  .modal-content {
+    @apply bg-surface rounded-modal p-8 max-w-md w-full mx-4 shadow-modal-light border border-gray-200/60 animate-[slideUp_0.3s_ease-out] backdrop-blur-xl;
+  }
+  .dark .modal-content {
+    background: rgba(19, 19, 31, 0.9);
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.40), 0 4px 16px rgba(0, 0, 0, 0.20);
+  }
+
+  .dropdown-menu {
+    @apply absolute right-0 mt-2 w-40 bg-surface border border-gray-200 rounded-button shadow-lg z-50 overflow-hidden backdrop-blur-xl;
+  }
+  .dark .dropdown-menu {
+    background: rgba(26, 26, 46, 0.95);
+    border-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  }
+
+  .dropdown-item {
+    @apply w-full text-left px-4 py-2.5 text-sm transition-colors cursor-pointer;
+  }
+
+  .dropdown-item-active {
+    @apply bg-primary-soft text-primary;
+  }
+
+  .dropdown-item-inactive {
+    @apply text-content-secondary dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/[0.04];
+  }
+
+  .stat-box {
+    @apply text-center p-4 bg-gray-50 dark:bg-white/[0.03] rounded-2xl border border-gray-100 dark:border-white/[0.06];
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06), 0 1px 4px rgba(15, 23, 42, 0.04);
+  }
+
+  .dark .glass-card {
+    background: rgba(19, 19, 31, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: none;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+}
+
+/* Dark mode glow utilities */
+.dark .glow-text-primary {
+  text-shadow: 0 0 20px rgba(129, 140, 248, 0.4), 0 0 40px rgba(99, 102, 241, 0.2);
+}
+
+.dark .glow-border-primary {
+  border-color: rgba(129, 140, 248, 0.3);
+  box-shadow: 0 0 15px rgba(129, 140, 248, 0.1), inset 0 0 15px rgba(129, 140, 248, 0.03);
+}
+
+/* 左侧单词列表自定义滚动条 */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(148, 163, 184, 0.5);
+}
+
+/* New animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 1; filter: brightness(1); }
+  50% { opacity: 0.85; filter: brightness(1.15); }
+}
+
+@keyframes cardEnter {
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.animate-card-enter {
+  animation: cardEnter 0.45s ease-out forwards;
+  opacity: 0;
+}
+
+/* Glow utilities */
+.glow-border-subtle {
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glow-border-subtle:hover {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.1), 0 0 40px rgba(99, 102, 241, 0.05);
+  border-color: rgba(99, 102, 241, 0.25);
+}
+
+.dark .glow-border-subtle:hover {
+  box-shadow: 0 0 20px rgba(129, 140, 248, 0.12), 0 0 40px rgba(129, 140, 248, 0.06);
+  border-color: rgba(129, 140, 248, 0.2);
+}
+
+.text-glow-primary {
+  transition: text-shadow 0.3s ease;
+}
+.dark .text-glow-primary {
+  text-shadow: 0 0 30px rgba(129, 140, 248, 0.35), 0 0 60px rgba(99, 102, 241, 0.15);
+}
+
+.card-glow {
+  transition: all 0.3s ease;
+}
+.dark .card-glow {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+.dark .card-glow:hover {
+  border-color: rgba(129, 140, 248, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 20px rgba(129, 140, 248, 0.08);
+}
+
+/* Enhanced nav glow in dark mode */
+.dark .nav-glow {
+  box-shadow: 0 1px 0 rgba(129, 140, 248, 0.06), 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Input focus glow */
+.input-glow:focus {
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1), 0 0 15px rgba(99, 102, 241, 0.08);
+}
+.dark .input-glow:focus {
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.12), 0 0 15px rgba(129, 140, 248, 0.08);
+}
+
