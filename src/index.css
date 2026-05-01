@@ -363,3 +363,15 @@
   user-select: none;
 }
 
+/* dvh 支持 */
+@supports (height: 100dvh) {
+  .min-h-dscreen {
+    min-height: 100dvh;
+  }
+}
+
+/* 允许中间内容区惯性滚动（当释义超长时） */
+.overflow-y-auto {
+  -webkit-overflow-scrolling: touch;
+}
+

@@ -26,7 +26,7 @@ function StatsPanel({ stats }) {
   ];
 
   return (
-    <div className="shrink-0 bg-white/90 dark:bg-[#13131f]/90 border-t border-gray-200/60 dark:border-white/[0.04] py-3 sm:py-4 px-4 sm:px-6 z-30">
+    <div className="shrink-0 bg-white/90 dark:bg-[#13131f]/90 border-t border-gray-200/60 dark:border-white/[0.04] pt-3 sm:pt-4 pb-[calc(0.75rem+env(safe-area-inset-bottom))] sm:pb-[calc(1rem+env(safe-area-inset-bottom))] px-4 sm:px-6 z-30">
       <div className="max-w-2xl mx-auto flex justify-around text-center flex-wrap gap-y-2">
         {items.map((item) => (
           <div key={item.label} className="flex flex-col items-center min-w-[60px] sm:min-w-[80px]">
