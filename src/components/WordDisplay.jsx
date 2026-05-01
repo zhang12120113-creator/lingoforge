@@ -1,8 +1,13 @@
-import React, { memo, useMemo, useRef } from 'react';
+import React, { memo, useMemo, useRef, useEffect } from 'react';
 
 const WordDisplay = memo(function WordDisplay({ word, currentInput, isWrong }) {
   const chars = useMemo(() => word?.name?.split('') || [], [word?.name]);
   const prevLenRef = useRef(0);
+
+  // 单词切换时重置 prevLenRef，避免上一个单词的输入长度污染新单词
+  useEffect(() => {
+    prevLenRef.current = 0;
+  }, [word?.name]);
 
   // 追踪输入长度变化，用于正确字符 pop 动画
   const newCorrectIndex = currentInput.length > prevLenRef.current ? currentInput.length - 1 : -1;
@@ -27,7 +32,7 @@ const WordDisplay = memo(function WordDisplay({ word, currentInput, isWrong }) {
 
         return (
           <span
-            key={i}
+            key={`${word?.name}-${i}`}
             className={`${className} ${shouldPop ? 'animate-char-pop' : ''} transition-colors duration-75 inline-block`}
           >
             {char}

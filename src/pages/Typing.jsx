@@ -250,7 +250,7 @@ export default function Typing() {
             )}
 
             <div className="shrink-0">
-              <WordDisplay word={currentWord} currentInput={currentInput} isWrong={isWrong} />
+              <WordDisplay key={wordIndex} word={currentWord} currentInput={currentInput} isWrong={isWrong} />
             </div>
 
             {currentWord?.trans && showTranslation && (
