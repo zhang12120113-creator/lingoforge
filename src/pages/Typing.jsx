@@ -215,7 +215,7 @@ export default function Typing() {
           spellCheck="false"
           className="absolute inset-0 w-full h-full"
           style={{
-            zIndex: 50,
+            zIndex: 30,
             opacity: 0.01,
             color: 'transparent',
             caretColor: 'transparent',
