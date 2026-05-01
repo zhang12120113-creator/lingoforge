@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const REPEAT_OPTIONS = [
@@ -9,7 +9,7 @@ const REPEAT_OPTIONS = [
   { value: 0, label: '无限' },
 ];
 
-export default function TypingToolbar({ dictId, currentChapterId, chapters, config, toggleConfig, updateConfig, darkMode, toggleDarkMode, onOpenWrongBook }) {
+const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, chapters, config, toggleConfig, updateConfig, darkMode, toggleDarkMode, onOpenWrongBook }) {
   const navigate = useNavigate();
   const [showChapterMenu, setShowChapterMenu] = useState(false);
   const [showRepeatMenu, setShowRepeatMenu] = useState(false);
@@ -81,4 +81,6 @@ export default function TypingToolbar({ dictId, currentChapterId, chapters, conf
       </button>
     </div>
   );
-}
+});
+
+export default TypingToolbar;

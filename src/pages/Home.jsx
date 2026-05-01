@@ -1,6 +1,7 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { dictionaryMeta, categories } from '../dictionaries/meta.js'
+import { loadDictionary } from '../utils/loadDictionary.js'
 
 function Home() {
   const navigate = useNavigate()
@@ -78,7 +79,7 @@ function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background dark:bg-transparent p-6 transition-colors duration-500">
+    <div className="min-h-screen bg-background dark:bg-transparent p-6 transition-colors duration-500 animate-page-fade-in">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mt-16 mb-14">
           <div className="flex items-start justify-between">
@@ -159,7 +160,13 @@ function Home() {
               <div
                 key={dict.id}
                 onClick={() => navigate(`/dict/${dict.id}`)}
-                className="group card card-hover p-6 cursor-pointer relative overflow-hidden animate-card-enter glow-border-subtle"
+                onMouseEnter={() => {
+                  // 预加载词库数据
+                  loadDictionary(dict.id).catch(() => {});
+                  // 预加载章节选择页 chunk
+                  import('./ChapterSelect');
+                }}
+                className="group card card-hover p-6 cursor-pointer relative overflow-hidden animate-card-enter glow-border-subtle active:scale-[0.98] transition-transform duration-150"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className={`absolute top-0 left-0 w-full h-1 ${colors.top} opacity-80`} />

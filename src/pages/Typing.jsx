@@ -11,6 +11,7 @@ import TypingToolbar from '../components/TypingToolbar.jsx';
 import WrongBookModal from '../components/WrongBookModal.jsx';
 import WordListPanel from '../components/WordListPanel.jsx';
 import NextWordPreview from '../components/NextWordPreview.jsx';
+import WordDisplay from '../components/WordDisplay.jsx';
 
 export default function Typing() {
   const { dictId, chapterId } = useParams();
@@ -41,7 +42,9 @@ export default function Typing() {
   const { currentWord, currentInput, wordIndex, stats, isFinished, handleInput, jumpTo, reset, isWrong } = useTyping(words, config.soundEnabled, config.wordRepeatCount);
 
   // 始终保持 ref 指向最新的 handleInput
-  handleInputRef.current = handleInput;
+  useEffect(() => {
+    handleInputRef.current = handleInput;
+  }, [handleInput]);
 
   // 点击/触摸页面任意位置重新聚焦输入框，防止失焦后无法打字
   useEffect(() => {
@@ -187,7 +190,7 @@ export default function Typing() {
   if (words.length === 0) return null;
 
   return (
-    <div className="h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500">
+    <div className="h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in">
       {/* 左侧可折叠单词列表 */}
       <div className={`
         transition-all duration-300 ease-in-out shrink-0 self-stretch
@@ -263,7 +266,7 @@ export default function Typing() {
             </div>
             <div className="w-40 h-1.5 bg-gray-200 dark:bg-white/[0.08] rounded-full mt-2 overflow-hidden">
               <div
-                className="h-full bg-primary dark:bg-primary-dark rounded-full transition-all duration-300 shadow-[0_0_6px_rgba(99,102,241,0.45)] dark:shadow-[0_0_8px_rgba(129,140,248,0.5)]"
+                className="h-full bg-primary dark:bg-primary-dark rounded-full shadow-[0_0_6px_rgba(99,102,241,0.45)] dark:shadow-[0_0_8px_rgba(129,140,248,0.5)]"
                 style={{ width: `${((wordIndex + 1) / words.length) * 100}%` }}
               />
             </div>
@@ -298,13 +301,7 @@ export default function Typing() {
               </div>
             )}
 
-            <div key={wordIndex} className={`text-5xl sm:text-6xl md:text-8xl font-mono tracking-[0.15em] flex gap-1 justify-center select-none ${isWrong ? 'animate-shake' : ''}`}>
-              {currentWord?.name.split('').map((char, i) => (
-                <span key={i} className={`${i < currentInput.length ? (currentInput[i] === char ? 'text-primary dark:text-primary-dark dark:drop-shadow-[0_0_8px_rgba(99,102,241,0.6)]' : 'text-violet-500 dark:text-violet-400 dark:drop-shadow-[0_0_6px_rgba(139,92,246,0.4)]') : 'text-gray-300 dark:text-gray-600'}`}>
-                  {char}
-                </span>
-              ))}
-            </div>
+            <WordDisplay word={currentWord} currentInput={currentInput} isWrong={isWrong} />
 
             {currentWord?.trans && showTranslation && (
               <div className="text-xl text-content-tertiary dark:text-gray-400 mt-8 leading-relaxed max-w-lg mx-auto">

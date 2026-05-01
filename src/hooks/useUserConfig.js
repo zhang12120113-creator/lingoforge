@@ -32,7 +32,6 @@ export function useUserConfig() {
       root.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
-    console.log('darkMode changed:', darkMode);
   }, [darkMode]);
 
   const updateConfig = (key, value) => {

@@ -185,11 +185,16 @@
       "Bash(node -e \"const fs=require\\('fs'\\); const d=JSON.parse\\(fs.readFileSync\\('src/dictionaries/senior.json','utf-8'\\)\\); for\\(const ch of d.chapters\\){ for\\(const w of ch.words\\){ if\\(w.name==='abortion'\\) console.log\\(JSON.stringify\\(w,null,2\\)\\); }}\")",
       "Bash(node -e \"const c=JSON.parse\\(require\\('fs'\\).readFileSync\\('.youdao-phonetics-cache.json','utf-8'\\)\\); console.log\\('Cache entries:', Object.keys\\(c\\).length\\);\")",
       "Bash(node scripts/fix-dictionary-issues.cjs)",
-      "Bash(node -e \"const r=JSON.parse\\(require\\('fs'\\).readFileSync\\('reports/validation-report.json','utf-8'\\)\\); console.log\\(JSON.stringify\\(Object.keys\\(r\\),null,2\\)\\); for\\(const [k,v] of Object.entries\\(r\\)\\) { if\\(v.errors?.length\\) { console.log\\('---',k,'errors:',v.errors.length,'---'\\); console.log\\(JSON.stringify\\(v.errors.slice\\(0,5\\),null,2\\)\\); } }\")"
+      "Bash(node -e \"const r=JSON.parse\\(require\\('fs'\\).readFileSync\\('reports/validation-report.json','utf-8'\\)\\); console.log\\(JSON.stringify\\(Object.keys\\(r\\),null,2\\)\\); for\\(const [k,v] of Object.entries\\(r\\)\\) { if\\(v.errors?.length\\) { console.log\\('---',k,'errors:',v.errors.length,'---'\\); console.log\\(JSON.stringify\\(v.errors.slice\\(0,5\\),null,2\\)\\); } }\")",
+      "Bash(git -C \"c:/Users/warri/typing-word\" log --oneline -5)",
+      "Bash(git -C \"c:/Users/warri/typing-word\" status)",
+      "Bash(git -C \"c:/Users/warri/typing-word\" diff --stat)",
+      "Bash(git -C \"c:/Users/warri/typing-word\" diff .claude/settings.json)"
     ],
     "additionalDirectories": [
       "c:\\Users\\warri\\.claude\\plans",
-      "C:\\Users\\warri\\typing-word\\scripts\\dict-data"
+      "C:\\Users\\warri\\typing-word\\scripts\\dict-data",
+      "C:\\Users\\warri\\.claude\\plans"
     ]
   }
 }

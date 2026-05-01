@@ -47,7 +47,7 @@ const WordListItem = memo(function WordListItem({ word, idx, currentIndex, onPla
   );
 });
 
-export default function WordListPanel({ words, currentIndex, onPlaySound, onJumpTo, onClose }) {
+const WordListPanel = memo(function WordListPanel({ words, currentIndex, onPlaySound, onJumpTo, onClose }) {
   const activeRef = useRef(null);
 
   useEffect(() => {
@@ -90,4 +90,6 @@ export default function WordListPanel({ words, currentIndex, onPlaySound, onJump
       </div>
     </div>
   );
-}
+});
+
+export default WordListPanel;

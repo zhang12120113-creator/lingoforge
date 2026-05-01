@@ -137,6 +137,9 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
   // 跟踪语音合成状态，避免空 cancel()
   const speakingRef = useRef(false);
 
+  // 收集 setTimeout 引用，组件卸载时统一清理
+  const timeoutsRef = useRef([]);
+
   const speakWord = useCallback((word) => {
     if (!soundEnabled || !word) return;
     const audio = new Audio(`https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(word)}&type=2`);
@@ -156,6 +159,10 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
     correctCountRef.current = 0;
     repeatCountRef.current = 0;
     if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
+    return () => {
+      timeoutsRef.current.forEach(clearTimeout);
+      timeoutsRef.current = [];
+    };
   }, [words]);
 
   // soundEnabled 为 true 时朗读首词
@@ -223,13 +230,15 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
             currentInputRef.current = '';
             setCurrentInput('');
             repeatCountRef.current = 0;
-            setTimeout(() => speakWord(wordsRef.current[wordIndex + 1]?.name), 100);
+            const t = setTimeout(() => speakWord(wordsRef.current[wordIndex + 1]?.name), 100);
+            timeoutsRef.current.push(t);
           }
         } else {
           repeatCountRef.current = completedTimes;
           currentInputRef.current = '';
           setCurrentInput('');
-          setTimeout(() => speakWord(currentWord?.name), 100);
+          const t = setTimeout(() => speakWord(currentWord?.name), 100);
+          timeoutsRef.current.push(t);
         }
       }
     } else {
@@ -250,7 +259,8 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
     setIsFinished(false);
     repeatCountRef.current = 0;
     if (soundEnabled) {
-      setTimeout(() => speakWord(wordsRef.current[index]?.name), 100);
+      const t = setTimeout(() => speakWord(wordsRef.current[index]?.name), 100);
+      timeoutsRef.current.push(t);
     }
   }, [soundEnabled, speakWord]);
 
@@ -260,7 +270,8 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
     inputCountRef.current = 0; correctCountRef.current = 0; repeatCountRef.current = 0;
     if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
     if (soundEnabled && wordsRef.current.length > 0) {
-      setTimeout(() => speakWord(wordsRef.current[0]?.name), 100);
+      const t = setTimeout(() => speakWord(wordsRef.current[0]?.name), 100);
+      timeoutsRef.current.push(t);
     }
   }, [soundEnabled, speakWord]);
 
