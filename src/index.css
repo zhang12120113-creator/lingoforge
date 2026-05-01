@@ -352,3 +352,14 @@
   }
 }
 
+/* 防止 iOS 双击缩放 */
+#typing-container {
+  touch-action: manipulation;
+}
+
+/* 移动端隐藏 input 不要出现系统选中样式 */
+#typing-container input {
+  -webkit-user-select: none;
+  user-select: none;
+}
+

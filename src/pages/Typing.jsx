@@ -12,6 +12,7 @@ import WrongBookModal from '../components/WrongBookModal.jsx';
 import WordListPanel from '../components/WordListPanel.jsx';
 import NextWordPreview from '../components/NextWordPreview.jsx';
 import WordDisplay from '../components/WordDisplay.jsx';
+import useIsMobile from '../hooks/useIsMobile.js';
 
 export default function Typing() {
   const { dictId, chapterId } = useParams();
@@ -22,9 +23,10 @@ export default function Typing() {
   const [error, setError] = useState(null);
   const [showWrongBook, setShowWrongBook] = useState(false);
   const [isWordListOpen, setIsWordListOpen] = useState(false);
-  const inputRef = useRef(null);
-  const inputHandledRef = useRef(false);
+  const mobileInputRef = useRef(null);
   const handleInputRef = useRef(null);
+
+  const isMobile = useIsMobile();
 
   const { config, toggleConfig, updateConfig, darkMode, toggleDarkMode } = useUserConfig();
 
@@ -46,96 +48,48 @@ export default function Typing() {
     handleInputRef.current = handleInput;
   }, [handleInput]);
 
-  // 点击/触摸页面任意位置重新聚焦输入框，防止失焦后无法打字
+  // 移动端：点击/触摸页面任意位置重新聚焦输入框，防止失焦后无法打字
   useEffect(() => {
-    if (isFinished || words.length === 0) return;
-    const focusInput = () => inputRef.current?.focus();
+    if (!isMobile || isFinished || words.length === 0) return;
+    const focusInput = () => mobileInputRef.current?.focus();
     document.addEventListener('click', focusInput);
     document.addEventListener('touchstart', focusInput, { passive: true });
     return () => {
       document.removeEventListener('click', focusInput);
       document.removeEventListener('touchstart', focusInput);
     };
-  }, [isFinished, words.length]);
+  }, [isMobile, isFinished, words.length]);
 
-  // 绑定原生 beforeinput / input / composition 事件，绕过 React 合成事件在移动端的兼容问题
+  // 桌面端：window 级别 keydown 监听，无需隐藏 input
   useEffect(() => {
-    const input = inputRef.current;
-    if (!input) return;
-
-    let composing = false;
-
-    const onCompositionStart = () => { composing = true; };
-    const onCompositionEnd = (e) => {
-      composing = false;
-      const data = e.data;
-      input.value = '';
-      if (data) {
-        unlockAudio();
-        for (const char of data) {
-          if (char.length === 1) handleInputRef.current?.(char);
-        }
-      }
-    };
-
-    const onBeforeInput = (e) => {
-      if (composing || e.isComposing) return;
-      if (inputHandledRef.current) {
-        inputHandledRef.current = false;
-        e.preventDefault();
-        return;
-      }
+    if (isMobile) return;
+    const onKeyDown = (e) => {
+      if (isFinished) return;
+      if (e.isComposing) return;
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
       unlockAudio();
-      if (e.inputType === 'deleteContentBackward') {
-        e.preventDefault();
-        inputHandledRef.current = true;
-        handleInputRef.current?.('Backspace');
-        return;
-      }
-      if (e.data) {
-        e.preventDefault();
-        inputHandledRef.current = true;
-        for (const char of e.data) {
-          if (char.length === 1) {
-            handleInputRef.current?.(char);
-          }
-        }
-      }
+      if (e.key === ' ') e.preventDefault();
+      if (e.key === 'Backspace') { e.preventDefault(); handleInputRef.current?.('Backspace'); return; }
+      if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); handleInputRef.current?.(e.key); }
     };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [isMobile, isFinished]);
 
-    const onInput = () => {
-      if (inputHandledRef.current) {
-        inputHandledRef.current = false;
-        input.value = '';
-        return;
-      }
-      if (composing) {
-        // 合成中不处理中间态，等 compositionend
-        input.value = '';
-        return;
-      }
-      const value = input.value;
-      input.value = '';
-      if (!value) return;
-      unlockAudio();
-      for (const char of value) {
-        if (char.length === 1) {
-          handleInputRef.current?.(char);
-        }
-      }
-    };
-
-    input.addEventListener('beforeinput', onBeforeInput);
-    input.addEventListener('input', onInput);
-    input.addEventListener('compositionstart', onCompositionStart);
-    input.addEventListener('compositionend', onCompositionEnd);
-    return () => {
-      input.removeEventListener('beforeinput', onBeforeInput);
-      input.removeEventListener('input', onInput);
-      input.removeEventListener('compositionstart', onCompositionStart);
-      input.removeEventListener('compositionend', onCompositionEnd);
-    };
-  }, []);
+  // 移动端输入处理
+  const handleMobileInput = useCallback((e) => {
+    if (isFinished) return;
+    const value = e.target.value;
+    if (!value) return;
+    const char = value.slice(-1);
+    if (char === '\n') {
+      e.target.value = '';
+      return;
+    }
+    unlockAudio();
+    handleInputRef.current?.(char);
+    e.target.value = '';
+  }, [isFinished]);
 
   const handleRestart = useCallback(() => reset(), [reset]);
   const handleGoHome = useCallback(() => navigate('/'), [navigate]);
@@ -143,22 +97,13 @@ export default function Typing() {
   const handleJumpToWord = useCallback((index) => {
     jumpTo(index);
     setIsWordListOpen(false);
-    inputRef.current?.focus();
-  }, [jumpTo]);
+    if (isMobile) mobileInputRef.current?.focus();
+  }, [jumpTo, isMobile]);
 
   const handlePlaySound = useCallback((word) => {
     const audio = new Audio(`https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(word)}&type=2`);
     audio.play().catch(() => {});
   }, []);
-
-  const handleKeyDown = useCallback((e) => {
-    inputHandledRef.current = false;
-    if (e.isComposing) return;
-    unlockAudio();
-    if (e.key === ' ') e.preventDefault();
-    if (e.key === 'Backspace') { e.preventDefault(); inputHandledRef.current = true; handleInput('Backspace'); return; }
-    if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); inputHandledRef.current = true; handleInput(e.key); }
-  }, [handleInput]);
 
   const showPhonetic = useMemo(() => config.showPhonetic && !config.dictationMode && !currentWord?.name?.includes(' '), [config.showPhonetic, config.dictationMode, currentWord?.name]);
   const showTranslation = useMemo(() => config.showTranslation && !config.dictationMode, [config.showTranslation, config.dictationMode]);
@@ -206,34 +151,37 @@ export default function Typing() {
       </div>
 
       {/* 右侧主练习区 */}
-      <div className="flex-1 flex flex-col min-w-0 relative">
-        {/* 隐藏输入框：全屏覆盖，使用原生事件监听绕过 React 合成事件在移动端的兼容问题 */}
-        <input
-          ref={inputRef}
-          type="text"
-          autoFocus
-          inputMode="text"
-          autoCapitalize="off"
-          autoCorrect="off"
-          spellCheck="false"
-          className="absolute inset-0 w-full h-full"
-          style={{
-            zIndex: 30,
-            opacity: 0.01,
-            color: 'transparent',
-            caretColor: 'transparent',
-            background: 'transparent',
-            border: 'none',
-            outline: 'none',
-            padding: 0,
-            margin: 0,
-            touchAction: 'none',
-            WebkitTapHighlightColor: 'transparent',
-          }}
-          onKeyDown={handleKeyDown}
-          onBlur={() => setTimeout(() => inputRef.current?.focus(), 100)}
-          enterKeyHint="done"
-        />
+      <div className="flex-1 flex flex-col min-w-0 relative" id="typing-container">
+        {/* 移动端专用：绝对定位的透明输入框 */}
+        {isMobile && (
+          <input
+            ref={mobileInputRef}
+            type="text"
+            autoFocus
+            inputMode="text"
+            autoComplete="off"
+            autoCapitalize="none"
+            autoCorrect="off"
+            spellCheck="false"
+            onInput={handleMobileInput}
+            className="absolute inset-0 w-full h-full"
+            style={{
+              zIndex: 30,
+              opacity: 0,
+              color: 'transparent',
+              caretColor: 'transparent',
+              background: 'transparent',
+              border: 'none',
+              outline: 'none',
+              padding: 0,
+              margin: 0,
+              fontSize: '16px',
+              WebkitTapHighlightColor: 'transparent',
+            }}
+            onBlur={() => setTimeout(() => mobileInputRef.current?.focus(), 100)}
+            enterKeyHint="done"
+          />
+        )}
 
         {/* 左侧中部展开列表按钮 */}
         <button
