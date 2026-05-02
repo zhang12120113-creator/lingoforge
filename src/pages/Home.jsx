@@ -2,6 +2,9 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { dictionaryMeta, categories } from '../dictionaries/meta.js'
 import { loadDictionary } from '../utils/loadDictionary.js'
+import Hero from '../components/Hero'
+import Features from '../components/Features'
+import Footer from '../components/Footer'
 
 function Home() {
   const navigate = useNavigate()
@@ -67,6 +70,18 @@ function Home() {
     ),
   }
 
+  const getCategoryColor = (title) => {
+    const t = title.toLowerCase()
+    if (t.includes('初中') || t.includes('中考')) return 'bg-green-500'
+    if (t.includes('高中') || t.includes('高考')) return 'bg-blue-500'
+    if (t.includes('四级') || t.includes('六级')) return 'bg-orange-500'
+    if (t.includes('专四') || t.includes('专八')) return 'bg-red-500'
+    if (t.includes('雅思') || t.includes('托福') || t.includes('sat')) return 'bg-purple-500'
+    if (t.includes('考研')) return 'bg-indigo-500'
+    if (t.includes('程序员')) return 'bg-slate-500'
+    return 'bg-indigo-500'
+  }
+
   const tagColors = {
     'warm-coral': { text: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-500/10', top: 'bg-indigo-500' },
     'warm-amber': { text: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-500/10', top: 'bg-violet-500' },
@@ -79,7 +94,10 @@ function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background dark:bg-transparent p-6 transition-colors duration-500 animate-page-fade-in">
+    <>
+      <Hero />
+      <Features />
+      <div className="min-h-screen bg-background dark:bg-transparent p-6 transition-colors duration-500 animate-page-fade-in">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mt-16 mb-14">
           <div className="flex items-start justify-between">
@@ -153,7 +171,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div id="wordbooks" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredDictionaries.map((dict, index) => {
             const colors = tagColors[dict.color] || tagColors['warm-coral'];
             return (
@@ -169,7 +187,7 @@ function Home() {
                 className="group card card-hover p-6 cursor-pointer relative overflow-hidden animate-card-enter glow-border-subtle active:scale-[0.98] transition-transform duration-150"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                <div className={`absolute top-0 left-0 w-full h-1 ${colors.top} opacity-80`} />
+                <div className={`absolute top-0 left-0 w-full h-1 ${getCategoryColor(dict.name)} opacity-80`} />
                 <div className="flex items-start justify-between mb-3">
                   <h2 className="text-title text-content dark:text-gray-100 group-hover:text-primary transition-colors">{dict.name}</h2>
                   <div className="text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">
@@ -192,7 +210,9 @@ function Home() {
           })}
         </div>
       </div>
-    </div>
+      </div>
+      <Footer />
+    </>
   )
 }
 
