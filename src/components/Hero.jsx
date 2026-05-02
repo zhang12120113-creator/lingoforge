@@ -36,7 +36,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl md:text-2xl text-slate-300 mb-2 font-light">
-          打字背单词，一举两得
+          输入 → 理解 → 训练 → 应用 → 反馈
         </p>
 
         <p className="text-sm md:text-base text-slate-400 mb-8 max-w-lg mx-auto">
@@ -48,7 +48,7 @@ export default function Hero() {
             onClick={scrollToWordbooks}
             className="px-8 py-3 bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 text-white font-medium rounded-lg transition-all duration-200 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:-translate-y-0.5"
           >
-            立即开始
+            立即开始训练
           </button>
         </div>
       </div>

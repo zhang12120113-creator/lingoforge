@@ -1,7 +1,9 @@
 {
-  "name": "typing-word",
+  "name": "lingoforge",
   "private": true,
   "version": "0.0.0",
+  "description": "英语学习闭环平台 — 输入→理解→训练→应用→反馈",
+  "author": "小月",
   "type": "module",
   "scripts": {
     "dev": "vite",
