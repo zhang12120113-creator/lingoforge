@@ -6,8 +6,11 @@ function NextWordPreview({ prevWord, nextWord, showTranslation }) {
   const hasNext = !!nextWord;
   if (!hasPrev && !hasNext) return null;
 
-  const formatTrans = (trans) =>
-    Array.isArray(trans) ? trans.join('；') : trans;
+  const formatTrans = (trans) => {
+    const text = Array.isArray(trans) ? trans[0] : trans;
+    if (!text) return '';
+    return text.split(/[；;]/)[0];
+  };
 
   return (
     <div className="absolute top-24 left-0 right-0 px-8 hidden lg:flex justify-between items-start z-10">
