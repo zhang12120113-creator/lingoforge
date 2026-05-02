@@ -189,7 +189,11 @@
       "Bash(git -C \"c:/Users/warri/typing-word\" log --oneline -5)",
       "Bash(git -C \"c:/Users/warri/typing-word\" status)",
       "Bash(git -C \"c:/Users/warri/typing-word\" diff --stat)",
-      "Bash(git -C \"c:/Users/warri/typing-word\" diff .claude/settings.json)"
+      "Bash(git -C \"c:/Users/warri/typing-word\" diff .claude/settings.json)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git reset *)",
+      "Bash(git push *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\warri\\.claude\\plans",

@@ -13,7 +13,9 @@ export default function Hero() {
   const scrollToWordbooks = () => {
     const element = document.getElementById('wordbooks');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const offset = 80;
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   };
 

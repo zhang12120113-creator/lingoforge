@@ -99,7 +99,7 @@ function Home() {
       <div className="hidden md:block"><Features /></div>
       <div className="min-h-screen bg-background dark:bg-transparent p-6 transition-colors duration-500 animate-page-fade-in">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="mt-16 mb-14">
+        <div id="wordbooks" className="mt-16 mb-14">
           <div className="flex items-start justify-between">
             <div className="text-left">
               <h1 className="text-display gradient-text mb-4 tracking-tight text-glow-primary animate-pulse-soft">
@@ -171,7 +171,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div id="wordbooks" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredDictionaries.map((dict, index) => {
             const colors = tagColors[dict.color] || tagColors['warm-coral'];
             return (

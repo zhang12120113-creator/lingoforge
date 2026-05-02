@@ -5,6 +5,15 @@ const features = [
   { icon: '🌙', title: '深色护眼', desc: '夜间学习不刺眼' },
 ];
 
+function scrollToWordbooks() {
+  const element = document.getElementById('wordbooks');
+  if (element) {
+    const offset = 80;
+    const top = element.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }
+}
+
 export default function Features() {
   return (
     <section className="w-full py-16 px-4 bg-slate-50 dark:bg-slate-950 transition-colors">
@@ -13,7 +22,8 @@ export default function Features() {
           {features.map((f, i) => (
             <div
               key={i}
-              className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              onClick={scrollToWordbooks}
+              className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div className="text-3xl mb-3">{f.icon}</div>
               <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
