@@ -95,8 +95,8 @@ function Home() {
 
   return (
     <>
-      <Hero />
-      <Features />
+      <div className="hidden md:block"><Hero /></div>
+      <div className="hidden md:block"><Features /></div>
       <div className="min-h-screen bg-background dark:bg-transparent p-6 transition-colors duration-500 animate-page-fade-in">
       <div className="max-w-6xl mx-auto px-6">
         <div className="mt-16 mb-14">
