@@ -43,4 +43,4 @@ npm run dev
 
 ## 📄 License
 
-MIT © warri
+MIT © 小月
