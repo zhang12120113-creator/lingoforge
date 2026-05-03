@@ -289,5 +289,5 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
     }
   }, [soundEnabled, speakWord]);
 
-  return { currentWord, currentInput, wordIndex, stats, isFinished, isWrong, handleInput, jumpTo, reset };
+  return { currentWord, currentInput, wordIndex, stats, isFinished, isWrong, handleInput, jumpTo, reset, startTime };
 }

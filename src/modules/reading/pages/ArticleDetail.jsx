@@ -6,6 +6,7 @@ import {
   getArticleById,
 } from '../data/mockArticles'
 import { useReadingStore } from '../hooks/useReadingStore'
+import useStudyTracker from '../hooks/useStudyTracker'
 
 const DIFFICULTY_DOT = {
   '初级': 'bg-emerald-500',
@@ -32,6 +33,8 @@ export default function ArticleDetail() {
   const contentRef = useRef(null)
   const persistTimer = useRef(null)
   const [progress, setProgress] = useState(() => store.getProgress(id))
+
+  useStudyTracker(article ? id : null)
 
   useEffect(() => {
     if (!article) return

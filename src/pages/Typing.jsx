@@ -7,6 +7,7 @@ import { getErrorBook, getErrorBookCount, removeFromErrorBook } from '../utils/e
 import { getMeta } from '../dictionaries/meta.js';
 import useTyping from '../hooks/useTyping.js';
 import { useUserConfig } from '../hooks/useUserConfig.js';
+import { useReadingStore } from '../modules/reading/hooks/useReadingStore.js';
 import StatsPanel from '../components/StatsPanel.jsx';
 import ResultModal from '../components/ResultModal.jsx';
 import TypingToolbar from '../components/TypingToolbar.jsx';
@@ -62,7 +63,10 @@ export default function Typing() {
 
   const dictName = useMemo(() => getMeta(dictId)?.name || dictId, [dictId]);
 
-  const { currentWord, currentInput, wordIndex, stats, isFinished, handleInput, jumpTo, reset, isWrong } = useTyping(words, config.soundEnabled, config.wordRepeatCount, isErrorBookMode, dictName);
+  const { currentWord, currentInput, wordIndex, stats, isFinished, handleInput, jumpTo, reset, isWrong, startTime } = useTyping(words, config.soundEnabled, config.wordRepeatCount, isErrorBookMode, dictName);
+  const studyStore = useReadingStore();
+  const typingAccumulatedRef = useRef(0);
+  const lastFlushRef = useRef(0);
 
   const remainingErrorCount = useMemo(() => {
     if (!isErrorBookMode) return 0;
@@ -82,6 +86,39 @@ export default function Typing() {
   useEffect(() => {
     handleInputRef.current = handleInput;
   }, [handleInput]);
+
+  // 记录单词打字学习时间
+  useEffect(() => {
+    if (!startTime || isFinished) {
+      if (typingAccumulatedRef.current > lastFlushRef.current) {
+        const delta = typingAccumulatedRef.current - lastFlushRef.current
+        studyStore.addTypingSeconds(delta)
+        lastFlushRef.current = typingAccumulatedRef.current
+      }
+      return
+    }
+
+    const interval = setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000)
+      typingAccumulatedRef.current = elapsed
+      const delta = elapsed - lastFlushRef.current
+      if (delta >= 30) {
+        studyStore.addTypingSeconds(delta)
+        lastFlushRef.current = elapsed
+      }
+    }, 1000)
+
+    return () => {
+      clearInterval(interval)
+      const elapsed = Math.floor((Date.now() - startTime) / 1000)
+      typingAccumulatedRef.current = elapsed
+      const delta = elapsed - lastFlushRef.current
+      if (delta > 0) {
+        studyStore.addTypingSeconds(delta)
+        lastFlushRef.current = elapsed
+      }
+    }
+  }, [startTime, isFinished, studyStore])
 
   // 移动端：点击/触摸页面任意位置重新聚焦输入框，防止失焦后无法打字
   useEffect(() => {

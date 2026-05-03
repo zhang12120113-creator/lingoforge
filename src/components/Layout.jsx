@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import StarryBackground from './StarryBackground'
 import BottomNav from './BottomNav'
+import Toolbar from './Toolbar'
 
 function Layout() {
   const location = useLocation()
@@ -18,14 +19,17 @@ function Layout() {
           </svg>
           LingoForge
         </Link>
-        {!isHome && (
-          <Link
-            to="/word"
-            className="text-sm text-content-tertiary dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.05]"
-          >
-            返回首页
-          </Link>
-        )}
+        <div className="flex items-center gap-2 md:gap-3">
+          {!isHome && (
+            <Link
+              to="/word"
+              className="text-sm text-content-tertiary dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.05]"
+            >
+              返回首页
+            </Link>
+          )}
+          <Toolbar />
+        </div>
       </nav>
       <div className={`relative ${showBottomNav ? 'pb-14' : ''}`}>
         <Outlet />

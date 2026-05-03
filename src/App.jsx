@@ -7,6 +7,7 @@ import PageLoading from './components/PageLoading'
 const Home = lazy(() => import('./pages/Home'))
 const ChapterSelect = lazy(() => import('./pages/ChapterSelect'))
 const Typing = lazy(() => import('./pages/Typing'))
+const Stats = lazy(() => import('./pages/Stats'))
 const ReadingModule = lazy(() => import('./modules/reading'))
 const ListeningPlaceholder = lazy(() => import('./modules/listening/ListeningPlaceholder'))
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/read/*" element={<ReadingModule />} />
             <Route path="/reading" element={<Navigate to="/read" replace />} />
             <Route path="/listening" element={<ListeningPlaceholder />} />
+            <Route path="/stats" element={<Stats />} />
             <Route path="/dict/:dictId" element={<ChapterSelect />} />
             <Route path="/typing/:dictId/:chapterId" element={<Typing />} />
           </Route>

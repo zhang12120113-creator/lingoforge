@@ -6,6 +6,17 @@ const defaultState = {
   readProgress: {},
   lastReadAt: {},
   bookmarks: [],
+  dailyReadingSeconds: {},
+  dailyTypingSeconds: {},
+  dailyListeningSeconds: {},
+}
+
+function todayKey() {
+  const d = new Date()
+  const y = d.getFullYear()
+  const m = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${y}-${m}-${day}`
 }
 
 function loadFromStorage() {
@@ -18,6 +29,9 @@ function loadFromStorage() {
       readProgress: parsed.readProgress && typeof parsed.readProgress === 'object' ? parsed.readProgress : {},
       lastReadAt: parsed.lastReadAt && typeof parsed.lastReadAt === 'object' ? parsed.lastReadAt : {},
       bookmarks: Array.isArray(parsed.bookmarks) ? parsed.bookmarks : [],
+      dailyReadingSeconds: parsed.dailyReadingSeconds && typeof parsed.dailyReadingSeconds === 'object' ? parsed.dailyReadingSeconds : {},
+      dailyTypingSeconds: parsed.dailyTypingSeconds && typeof parsed.dailyTypingSeconds === 'object' ? parsed.dailyTypingSeconds : {},
+      dailyListeningSeconds: parsed.dailyListeningSeconds && typeof parsed.dailyListeningSeconds === 'object' ? parsed.dailyListeningSeconds : {},
     }
   } catch {
     return { ...defaultState }
@@ -53,6 +67,9 @@ export function useReadingStore() {
     readProgress: cache.readProgress,
     lastReadAt: cache.lastReadAt,
     bookmarks: cache.bookmarks,
+    dailyReadingSeconds: cache.dailyReadingSeconds,
+    dailyTypingSeconds: cache.dailyTypingSeconds,
+    dailyListeningSeconds: cache.dailyListeningSeconds,
     getProgress(id) {
       return cache.readProgress[id] || 0
     },
@@ -88,6 +105,63 @@ export function useReadingStore() {
       else next.splice(idx, 1)
       cache = { ...cache, bookmarks: next }
       persist()
+    },
+    addReadingSeconds(seconds) {
+      const sec = Math.floor(seconds)
+      if (!Number.isFinite(sec) || sec < 1) return
+      const key = todayKey()
+      const prev = cache.dailyReadingSeconds[key] || 0
+      cache = {
+        ...cache,
+        dailyReadingSeconds: { ...cache.dailyReadingSeconds, [key]: prev + sec },
+      }
+      persist()
+    },
+    getDailySeconds(dateKey) {
+      return cache.dailyReadingSeconds[dateKey] || 0
+    },
+    getDailyTypingSeconds(dateKey) {
+      return cache.dailyTypingSeconds[dateKey] || 0
+    },
+    getDailyListeningSeconds(dateKey) {
+      return cache.dailyListeningSeconds[dateKey] || 0
+    },
+    getTotalReadingSeconds() {
+      return Object.values(cache.dailyReadingSeconds).reduce((sum, n) => sum + (n || 0), 0)
+    },
+    getTotalTypingSeconds() {
+      return Object.values(cache.dailyTypingSeconds).reduce((sum, n) => sum + (n || 0), 0)
+    },
+    getTotalListeningSeconds() {
+      return Object.values(cache.dailyListeningSeconds).reduce((sum, n) => sum + (n || 0), 0)
+    },
+    getTotalStudySeconds() {
+      return this.getTotalReadingSeconds() + this.getTotalTypingSeconds() + this.getTotalListeningSeconds()
+    },
+    addTypingSeconds(seconds) {
+      const sec = Math.floor(seconds)
+      if (!Number.isFinite(sec) || sec < 1) return
+      const key = todayKey()
+      const prev = cache.dailyTypingSeconds[key] || 0
+      cache = {
+        ...cache,
+        dailyTypingSeconds: { ...cache.dailyTypingSeconds, [key]: prev + sec },
+      }
+      persist()
+    },
+    addListeningSeconds(seconds) {
+      const sec = Math.floor(seconds)
+      if (!Number.isFinite(sec) || sec < 1) return
+      const key = todayKey()
+      const prev = cache.dailyListeningSeconds[key] || 0
+      cache = {
+        ...cache,
+        dailyListeningSeconds: { ...cache.dailyListeningSeconds, [key]: prev + sec },
+      }
+      persist()
+    },
+    getCompletedArticleCount() {
+      return Object.values(cache.readProgress).filter((p) => p >= 100).length
     },
   }
 }
