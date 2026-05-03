@@ -1,4 +1,5 @@
-import { NavLink } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { BookOpen } from 'lucide-react'
 
 const items = [
   {
@@ -11,13 +12,9 @@ const items = [
     ),
   },
   {
-    to: '/reading',
+    to: '/read',
     label: '阅读',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
+    icon: <BookOpen className="w-5 h-5" />,
   },
   {
     to: '/listening',
@@ -31,24 +28,30 @@ const items = [
 ]
 
 export default function BottomNav() {
+  const location = useLocation()
+
+  const isActive = (path) => {
+    if (location.pathname === path) return true
+    if (path !== '/' && location.pathname.startsWith(path + '/')) return true
+    return false
+  }
+
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 glass-card border-t border-gray-200/80 dark:border-white/[0.06] backdrop-blur-md">
       <div className="max-w-4xl mx-auto flex justify-around items-center h-14">
         {items.map((item) => (
-          <NavLink
+          <Link
             key={item.to}
             to={item.to}
-            className={({ isActive }) =>
-              `flex flex-col items-center justify-center gap-0.5 flex-1 h-full transition-colors ${
-                isActive
-                  ? 'text-primary dark:text-primary-dark'
-                  : 'text-content-tertiary dark:text-gray-400 hover:text-content-secondary dark:hover:text-gray-300'
-              }`
-            }
+            className={`flex flex-col items-center justify-center gap-0.5 flex-1 h-full transition-colors ${
+              isActive(item.to)
+                ? 'text-primary dark:text-primary-dark'
+                : 'text-content-tertiary dark:text-gray-400 hover:text-content-secondary dark:hover:text-gray-300'
+            }`}
           >
             {item.icon}
             <span className="text-xs font-medium">{item.label}</span>
-          </NavLink>
+          </Link>
         ))}
       </div>
     </nav>
