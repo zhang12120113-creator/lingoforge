@@ -27,9 +27,11 @@ export default function Typing() {
   const [showWrongBook, setShowWrongBook] = useState(false);
   const [isWordListOpen, setIsWordListOpen] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
-  const mobileInputRef = useRef(null);
+  const hiddenInputRef = useRef(null);
   const handleInputRef = useRef(null);
   const hasJumpedRef = useRef(false);
+  const [inputValue, setInputValue] = useState('');
+  const inputValueRef = useRef('');
 
   const isMobile = useIsMobile();
   const isErrorBookMode = dictId === 'error-book';
@@ -84,7 +86,7 @@ export default function Typing() {
   // 移动端：点击/触摸页面任意位置重新聚焦输入框，防止失焦后无法打字
   useEffect(() => {
     if (!isMobile || isFinished || words.length === 0) return;
-    const focusInput = () => mobileInputRef.current?.focus();
+    const focusInput = () => hiddenInputRef.current?.focus();
     document.addEventListener('click', focusInput);
     document.addEventListener('touchstart', focusInput, { passive: true });
     return () => {
@@ -93,36 +95,67 @@ export default function Typing() {
     };
   }, [isMobile, isFinished, words.length]);
 
-  // 桌面端：window 级别 keydown 监听，无需隐藏 input
+  // 页面加载/章节切换后自动聚焦隐藏输入框并清空残留
+  useEffect(() => {
+    if (words.length > 0 && hiddenInputRef.current) {
+      setTimeout(() => {
+        hiddenInputRef.current?.focus();
+        inputValueRef.current = '';
+        setInputValue('');
+      }, 300);
+    }
+  }, [words]);
+
+  // 核心输入处理函数，供 keydown 和 input 代理层双轨复用
+  const handleCharacterInput = useCallback((char) => {
+    if (isFinished) return;
+    unlockAudio();
+    handleInputRef.current?.(char);
+  }, [isFinished]);
+
+  const handleBackspace = useCallback(() => {
+    if (isFinished) return;
+    unlockAudio();
+    handleInputRef.current?.('Backspace');
+  }, [isFinished]);
+
+  // 桌面端：window 级别 keydown 监听，保持原有逻辑不变
   useEffect(() => {
     if (isMobile) return;
     const onKeyDown = (e) => {
       if (isFinished) return;
       if (e.isComposing) return;
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-      unlockAudio();
       if (e.key === ' ') e.preventDefault();
-      if (e.key === 'Backspace') { e.preventDefault(); handleInputRef.current?.('Backspace'); return; }
-      if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); handleInputRef.current?.(e.key); }
+      if (e.key === 'Backspace') { e.preventDefault(); handleBackspace(); return; }
+      if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); handleCharacterInput(e.key); }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [isMobile, isFinished]);
+  }, [isMobile, isFinished, handleBackspace, handleCharacterInput]);
 
-  // 移动端输入处理
-  const handleMobileInput = useCallback((e) => {
+  // 移动端输入处理：通过隐藏 input 代理键盘输入
+  const handleInputChange = useCallback((e) => {
     if (isFinished) return;
-    const value = e.target.value;
-    if (!value) return;
-    const char = value.slice(-1);
-    if (char === '\n') {
-      e.target.value = '';
-      return;
+    const newVal = e.target.value;
+    const oldVal = inputValueRef.current;
+
+    if (newVal.length > oldVal.length) {
+      const char = newVal.slice(oldVal.length);
+      handleCharacterInput(char);
+    } else if (newVal.length < oldVal.length) {
+      handleBackspace();
     }
-    unlockAudio();
-    handleInputRef.current?.(char);
-    e.target.value = '';
-  }, [isFinished]);
+
+    inputValueRef.current = newVal;
+    setInputValue(newVal);
+  }, [isFinished, handleCharacterInput, handleBackspace]);
+
+  const handleInputBlur = useCallback(() => {
+    setTimeout(() => {
+      hiddenInputRef.current?.focus();
+    }, 100);
+  }, []);
 
   const handleRestart = useCallback(() => {
     reset();
@@ -147,7 +180,7 @@ export default function Typing() {
   const handleJumpToWord = useCallback((index) => {
     jumpTo(index);
     setIsWordListOpen(false);
-    if (isMobile) mobileInputRef.current?.focus();
+    if (isMobile) hiddenInputRef.current?.focus();
   }, [jumpTo, isMobile]);
 
   const handlePlaySound = useCallback((word) => {
@@ -225,38 +258,11 @@ export default function Typing() {
       </div>
 
       {/* 右侧主练习区 */}
-      <div className="flex-1 flex flex-col min-w-0 relative" id="typing-container">
-        {/* 移动端专用：绝对定位的透明输入框 */}
-        {isMobile && (
-          <input
-            ref={mobileInputRef}
-            type="text"
-            autoFocus
-            inputMode="text"
-            autoComplete="off"
-            autoCapitalize="none"
-            autoCorrect="off"
-            spellCheck="false"
-            onInput={handleMobileInput}
-            className="absolute inset-0 w-full h-full"
-            style={{
-              zIndex: 30,
-              opacity: 0,
-              color: 'transparent',
-              caretColor: 'transparent',
-              background: 'transparent',
-              border: 'none',
-              outline: 'none',
-              padding: 0,
-              margin: 0,
-              fontSize: '16px',
-              WebkitTapHighlightColor: 'transparent',
-            }}
-            onBlur={() => setTimeout(() => mobileInputRef.current?.focus(), 100)}
-            enterKeyHint="done"
-          />
-        )}
-
+      <div
+        className="flex-1 flex flex-col min-w-0 relative"
+        id="typing-container"
+        onClick={() => hiddenInputRef.current?.focus()}
+      >
         {/* 左侧中部展开列表按钮 */}
         <button
           onClick={() => setIsWordListOpen(v => !v)}
@@ -317,7 +323,27 @@ export default function Typing() {
         />
 
         {/* 单词显示 */}
-        <div className="flex-1 flex flex-col items-center justify-center px-4 min-h-0 overflow-hidden">
+        <div className="flex-1 flex flex-col items-center justify-center px-4 min-h-0 overflow-hidden relative">
+          {/* 移动端：覆盖单词区域的透明输入框 */}
+          {isMobile && (
+            <input
+              ref={hiddenInputRef}
+              type="text"
+              autoFocus
+              value={inputValue}
+              onChange={handleInputChange}
+              onBlur={handleInputBlur}
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck="false"
+              className="absolute inset-0 w-full h-full opacity-0 cursor-text z-50"
+              style={{
+                fontSize: '16px',
+                caretColor: 'transparent',
+              }}
+            />
+          )}
           <div className="flex flex-col items-center gap-2 md:gap-10 text-center">
             {showPhonetic && (currentWord?.usphone || currentWord?.us || currentWord?.ukphone || currentWord?.uk) && (
               <div className="text-content-tertiary dark:text-gray-500 text-xl md:text-5xl mb-1 md:mb-4 font-mono tracking-wide shrink-0">
