@@ -193,7 +193,17 @@
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(git reset *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git fetch *)",
+      "Bash(git remote *)",
+      "Bash(git config *)",
+      "Bash(gh api *)",
+      "Bash(curl -s https://api.github.com/repos/zhang12120113-creator/lingoforge/commits)",
+      "Bash(python3 -c \"import sys,json; [print\\(c['sha'][:7], c['commit']['message']\\) for c in json.load\\(sys.stdin\\)]\")",
+      "Bash(node -e \"const data=require\\('fs'\\).readFileSync\\(0,'utf8'\\); const commits=JSON.parse\\(data\\); commits.forEach\\(c=>console.log\\(c.sha.slice\\(0,7\\), c.commit.message.split\\('\\\\n'\\)[0]\\)\\);\")",
+      "Bash(git show-ref *)",
+      "Bash(curl -s https://api.github.com/repos/zhang12120113-creator/lingoforge/commits?per_page=5)",
+      "WebFetch(domain:www.lingoforge.fun)"
     ],
     "additionalDirectories": [
       "c:\\Users\\warri\\.claude\\plans",
