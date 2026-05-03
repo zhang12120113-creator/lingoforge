@@ -23,6 +23,10 @@ export default function ChapterSelect() {
     }).catch(err => { setError('加载失败'); setLoading(false); });
   }, [dictId]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [dictId]);
+
   // 首次用户点击时静默解锁音频，为后续打字页做准备
   useEffect(() => {
     const onFirstClick = () => {

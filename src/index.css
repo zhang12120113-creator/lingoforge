@@ -375,3 +375,133 @@
   -webkit-overflow-scrolling: touch;
 }
 
+/* ============================================== */
+/*  Theme: Gray (data-theme="gray", dark class on) */
+/*  与 star 共用 dark 类作为兜底；通过 CSS 变量将   */
+/*  深蓝黑替换为更中性的灰，并去掉星空覆层（在     */
+/*  StarryBackground.jsx 中已处理 return null）。   */
+/* ============================================== */
+[data-theme="gray"] {
+  --color-background: #111827;       /* gray-900 */
+  --color-background-dark: #111827;
+  --color-surface: #1F2937;          /* gray-800 */
+  --color-surface-dark: #1F2937;
+  --color-content: #f3f4f6;          /* gray-100 */
+  --color-content-secondary: #d1d5db;/* gray-300 */
+  --color-content-tertiary: #9ca3af; /* gray-400 */
+}
+
+[data-theme="gray"] .glass-card {
+  background: rgba(31, 41, 55, 0.78);     /* gray-800 / .78 */
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="gray"] .card {
+  background: rgba(31, 41, 55, 0.85);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="gray"] .dropdown-menu {
+  background: rgba(31, 41, 55, 0.96);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="gray"] .modal-content {
+  background: rgba(31, 41, 55, 0.95);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================== */
+/*  Theme: Warm (data-theme="warm", no dark class) */
+/*  纸感温润：暖米背景 + 柔白卡片 + 棕色强调。     */
+/*  通过 CSS 变量驱动 bg-background / text-content  */
+/*  等 token；同时覆盖最常见的硬编码 Tailwind 色。  */
+/* ============================================== */
+[data-theme="warm"] {
+  --color-primary: #8B5E3C;
+  --color-primary-soft: rgba(139, 94, 60, 0.12);
+  --color-primary-dark: #8B5E3C;
+  --color-accent: #B8704C;
+  --color-accent-soft: rgba(184, 112, 76, 0.12);
+  --color-background: #F5F0EB;
+  --color-background-dark: #EFE8DF;
+  --color-surface: #FFFBF7;
+  --color-surface-dark: #FFFBF7;
+  --color-content: #2C2C2C;
+  --color-content-secondary: #5A5A5A;
+  --color-content-tertiary: #8a7a6b;
+}
+
+/* Warm: 硬编码背景色覆盖 */
+[data-theme="warm"] .bg-white { background-color: #FFFBF7; }
+[data-theme="warm"] .bg-gray-50,
+[data-theme="warm"] .bg-slate-50 { background-color: #EFE8DF; }
+[data-theme="warm"] .bg-gray-100,
+[data-theme="warm"] .bg-slate-100 { background-color: #E5DCD0; }
+[data-theme="warm"] .bg-gray-200,
+[data-theme="warm"] .bg-slate-200 { background-color: #D6CABA; }
+
+/* Warm: 边框 */
+[data-theme="warm"] .border-gray-100,
+[data-theme="warm"] .border-slate-100 { border-color: #ECE3D6; }
+[data-theme="warm"] .border-gray-200,
+[data-theme="warm"] .border-slate-200 { border-color: #E5E0DB; }
+[data-theme="warm"] .border-gray-300,
+[data-theme="warm"] .border-slate-300 { border-color: #C9BEAF; }
+
+/* Warm: 文字色 */
+[data-theme="warm"] .text-gray-900,
+[data-theme="warm"] .text-slate-900 { color: #2C2C2C; }
+[data-theme="warm"] .text-gray-800,
+[data-theme="warm"] .text-slate-800 { color: #3a3a3a; }
+[data-theme="warm"] .text-gray-700,
+[data-theme="warm"] .text-slate-700 { color: #4a4a4a; }
+[data-theme="warm"] .text-gray-600,
+[data-theme="warm"] .text-slate-600 { color: #5a5a5a; }
+[data-theme="warm"] .text-gray-500,
+[data-theme="warm"] .text-slate-500 { color: #6B6B6B; }
+[data-theme="warm"] .text-gray-400,
+[data-theme="warm"] .text-slate-400 { color: #8a7a6b; }
+[data-theme="warm"] .text-gray-300,
+[data-theme="warm"] .text-slate-300 { color: #a89a8a; }
+
+/* Warm: 玻璃质感卡片 */
+[data-theme="warm"] .glass-card {
+  background: rgba(255, 251, 247, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(229, 224, 219, 0.85);
+  box-shadow: 0 4px 24px rgba(120, 90, 60, 0.06), 0 1px 4px rgba(120, 90, 60, 0.04);
+}
+
+[data-theme="warm"] .card {
+  background: #FFFBF7;
+  border-color: rgba(139, 94, 60, 0.1);
+}
+
+[data-theme="warm"] .dropdown-menu {
+  background: #FFFBF7;
+  border-color: #E5E0DB;
+  box-shadow: 0 10px 30px rgba(120, 90, 60, 0.10);
+}
+
+[data-theme="warm"] .modal-content {
+  background: #FFFBF7;
+  border-color: #E5E0DB;
+  box-shadow: 0 24px 48px rgba(120, 90, 60, 0.16), 0 4px 16px rgba(120, 90, 60, 0.08);
+}
+
+/* Warm: 滚动条配色 */
+[data-theme="warm"] ::-webkit-scrollbar-thumb {
+  background: rgba(139, 94, 60, 0.22);
+}
+[data-theme="warm"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 94, 60, 0.38);
+}
+
+/* Warm: 选中文本 */
+[data-theme="warm"] ::selection {
+  background: rgba(139, 94, 60, 0.22);
+}
+

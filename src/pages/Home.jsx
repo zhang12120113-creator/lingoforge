@@ -1,7 +1,9 @@
-import { useState, useRef, useEffect, useCallback } from 'react'
+import { useState, useRef, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { dictionaryMeta, categories } from '../dictionaries/meta.js'
 import { loadDictionary } from '../utils/loadDictionary.js'
+import { buildWordIndex, searchWordIndex } from '../utils/wordIndex.js'
+import { useDebounce } from '../hooks/useDebounce.js'
 import Hero from '../components/Hero'
 import Features from '../components/Features'
 import Footer from '../components/Footer'
@@ -23,6 +25,66 @@ function Home() {
   }, [])
 
   const [searchQuery, setSearchQuery] = useState('')
+
+  // 单词搜索:跨词库
+  const [wordQuery, setWordQuery] = useState('')
+  const [wordResults, setWordResults] = useState([])
+  const [showWordResults, setShowWordResults] = useState(false)
+  const [dictionaries, setDictionaries] = useState([])
+  const wordSearchRef = useRef(null)
+  const debouncedWordQuery = useDebounce(wordQuery, 300)
+
+  // 浏览器空闲时再加载所有词库,避免阻塞首屏渲染
+  useEffect(() => {
+    let cancelled = false
+    const loadAll = async () => {
+      const loaded = await Promise.all(
+        dictionaryMeta.map((meta) => loadDictionary(meta.id).catch(() => null))
+      )
+      if (cancelled) return
+      setDictionaries(loaded.filter(Boolean))
+    }
+    const ric = typeof window !== 'undefined' && window.requestIdleCallback
+    let idleHandle, timeoutHandle
+    if (ric) {
+      idleHandle = window.requestIdleCallback(loadAll, { timeout: 2000 })
+    } else {
+      timeoutHandle = setTimeout(loadAll, 200)
+    }
+    return () => {
+      cancelled = true
+      if (idleHandle && window.cancelIdleCallback) window.cancelIdleCallback(idleHandle)
+      if (timeoutHandle) clearTimeout(timeoutHandle)
+    }
+  }, [])
+
+  const wordIndex = useMemo(() => buildWordIndex(dictionaries), [dictionaries])
+
+  useEffect(() => {
+    if (debouncedWordQuery.trim()) {
+      setWordResults(searchWordIndex(wordIndex, debouncedWordQuery, 10))
+      setShowWordResults(true)
+    } else {
+      setWordResults([])
+      setShowWordResults(false)
+    }
+  }, [debouncedWordQuery, wordIndex])
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (wordSearchRef.current && !wordSearchRef.current.contains(e.target)) {
+        setShowWordResults(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
+  const handleWordSelect = (item) => {
+    setWordQuery('')
+    setShowWordResults(false)
+    navigate(`/typing/${item.dictId}/${item.chapterId}?wordIndex=${item.wordIndex}`)
+  }
 
   const filteredDictionaries = dictionaryMeta.filter((d) => {
     const categoryMatch = selectedCategory === '全部' || d.category === selectedCategory
@@ -146,28 +208,95 @@ function Home() {
             </div>
           </div>
 
-          <div className="max-w-xl mx-auto mt-8">
-            <div className="relative">
-              <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-content-tertiary dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="搜索词库名称、描述..."
-                className="input-field input-glow"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-content-tertiary dark:text-gray-500 hover:text-content-secondary dark:hover:text-gray-300 transition-colors"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              )}
+          <div className="max-w-3xl mx-auto mt-8">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-4">
+              {/* 词库搜索（保留原有功能） */}
+              <div className="relative w-full md:flex-1">
+                <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-content-tertiary dark:text-gray-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="搜索词库名称、描述..."
+                  className="input-field input-glow"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-content-tertiary dark:text-gray-500 hover:text-content-secondary dark:hover:text-gray-300 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+
+              {/* 单词搜索（新增：跨词库全局搜索） */}
+              <div className="relative w-full md:flex-1" ref={wordSearchRef}>
+                <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-content-tertiary dark:text-gray-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+                <input
+                  type="text"
+                  value={wordQuery}
+                  onChange={(e) => setWordQuery(e.target.value)}
+                  onFocus={() => wordResults.length > 0 && setShowWordResults(true)}
+                  placeholder={dictionaries.length > 0 ? '搜索单词...' : '正在加载词库...'}
+                  className="input-field input-glow disabled:opacity-60"
+                  disabled={dictionaries.length === 0}
+                />
+                {wordQuery && (
+                  <button
+                    onClick={() => { setWordQuery(''); setShowWordResults(false); }}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-content-tertiary dark:text-gray-500 hover:text-content-secondary dark:hover:text-gray-300 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                )}
+
+                {/* 单词搜索结果下拉面板 */}
+                {showWordResults && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-surface border border-gray-200 dark:border-white/[0.06] rounded-button shadow-lg z-[60] overflow-y-auto backdrop-blur-xl max-h-[60vh] md:max-h-80">
+                    {wordResults.length > 0 ? (
+                      wordResults.map((item) => (
+                        <div
+                          key={`${item.dictId}-${item.chapterIndex}-${item.wordIndex}`}
+                          onClick={() => handleWordSelect(item)}
+                          className="px-4 py-3 cursor-pointer border-b last:border-0 border-gray-100 dark:border-white/[0.04] hover:bg-gray-50 dark:hover:bg-white/[0.04] transition-colors"
+                        >
+                          <div className="flex justify-between items-center gap-2">
+                            <span className="font-bold text-base text-content">
+                              {item.word}
+                            </span>
+                            <span className="text-xs text-content-tertiary font-mono shrink-0">
+                              {item.phonetic}
+                            </span>
+                          </div>
+                          <div className="text-sm mt-1 truncate text-content-secondary">
+                            {item.definition}
+                          </div>
+                          <div className="flex items-center gap-1 mt-1.5 text-xs text-primary">
+                            <span>{item.dictName}</span>
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                            <span>第 {item.chapterIndex + 1} 章</span>
+                          </div>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="p-4 text-center text-sm text-content-secondary">
+                        未找到匹配的单词
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { List } from 'lucide-react';
 import { unlockAudio } from '../utils/audioContext.js';
@@ -17,6 +17,7 @@ import useIsMobile from '../hooks/useIsMobile.js';
 export default function Typing() {
   const { dictId, chapterId } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [words, setWords] = useState([]);
   const [chapters, setChapters] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,13 +26,16 @@ export default function Typing() {
   const [isWordListOpen, setIsWordListOpen] = useState(false);
   const mobileInputRef = useRef(null);
   const handleInputRef = useRef(null);
+  const hasJumpedRef = useRef(false);
 
   const isMobile = useIsMobile();
 
-  const { config, toggleConfig, updateConfig, darkMode, toggleDarkMode } = useUserConfig();
+  const targetWordIndex = parseInt(searchParams.get('wordIndex')) || 0;
+
+  const { config, toggleConfig, updateConfig, theme, setTheme } = useUserConfig();
 
   useEffect(() => {
-    setLoading(true); setError(null);
+    setLoading(true); setError(null); hasJumpedRef.current = false;
     loadDictionary(dictId).then(dict => {
       setChapters(dict.chapters || []);
       const chapter = dict.chapters?.find(c => c.id === Number(chapterId));
@@ -42,6 +46,15 @@ export default function Typing() {
   }, [dictId, chapterId]);
 
   const { currentWord, currentInput, wordIndex, stats, isFinished, handleInput, jumpTo, reset, isWrong } = useTyping(words, config.soundEnabled, config.wordRepeatCount);
+
+  // 加载完成后，自动跳转到 URL 参数指定的单词
+  useEffect(() => {
+    if (!loading && words.length > 0 && targetWordIndex > 0 && !hasJumpedRef.current) {
+      const validIndex = Math.min(targetWordIndex, words.length - 1);
+      jumpTo(validIndex);
+      hasJumpedRef.current = true;
+    }
+  }, [loading, words, targetWordIndex, jumpTo]);
 
   // 始终保持 ref 指向最新的 handleInput
   useEffect(() => {
@@ -227,8 +240,8 @@ export default function Typing() {
             config={config}
             toggleConfig={toggleConfig}
             updateConfig={updateConfig}
-            darkMode={darkMode}
-            toggleDarkMode={toggleDarkMode}
+            theme={theme}
+            setTheme={setTheme}
             onOpenWrongBook={() => setShowWrongBook(true)}
           />
         </div>

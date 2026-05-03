@@ -8,6 +8,23 @@ const DEFAULT_CONFIG = {
   wordRepeatCount: 1,
 };
 
+const VALID_THEMES = ['light', 'gray', 'star', 'warm'];
+
+function loadInitialTheme() {
+  if (typeof window === 'undefined') return 'light';
+  try {
+    const saved = localStorage.getItem('lingoforge-theme');
+    if (saved && VALID_THEMES.includes(saved)) return saved;
+    // 旧版兼容：把以前的 theme=dark 迁移成 star，theme=light 保持 light
+    const legacy = localStorage.getItem('theme');
+    if (legacy === 'dark') return 'star';
+    if (legacy === 'light') return 'light';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'star' : 'light';
+  } catch {
+    return 'light';
+  }
+}
+
 export function useUserConfig() {
   const [config, setConfig] = useState(() => {
     try {
@@ -16,23 +33,23 @@ export function useUserConfig() {
     } catch { return DEFAULT_CONFIG; }
   });
 
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    const saved = localStorage.getItem('theme');
-    if (saved) return saved === 'dark';
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
-  });
+  const [theme, setThemeState] = useState(loadInitialTheme);
 
   useEffect(() => {
     const root = document.documentElement;
-    if (darkMode) {
+    if (theme === 'gray' || theme === 'star') {
       root.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
     } else {
       root.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
     }
-  }, [darkMode]);
+    root.setAttribute('data-theme', theme);
+    try { localStorage.setItem('lingoforge-theme', theme); } catch {}
+  }, [theme]);
+
+  const setTheme = useCallback((next) => {
+    if (!VALID_THEMES.includes(next)) return;
+    setThemeState(next);
+  }, []);
 
   const updateConfig = (key, value) => {
     setConfig(prev => {
@@ -44,9 +61,5 @@ export function useUserConfig() {
 
   const toggleConfig = (key) => updateConfig(key, !config[key]);
 
-  const toggleDarkMode = useCallback(() => {
-    setDarkMode(prev => !prev);
-  }, []);
-
-  return { config, darkMode, updateConfig, toggleConfig, toggleDarkMode };
+  return { config, theme, setTheme, updateConfig, toggleConfig };
 }

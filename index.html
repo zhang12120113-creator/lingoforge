@@ -21,6 +21,26 @@
     <meta name="twitter:title" content="LingoForge - 英语学习闭环平台" />
     <meta name="twitter:description" content="六层学习闭环：输入、规则、记忆、训练、应用、反馈" />
     <meta name="twitter:image" content="https://www.lingoforge.fun/logo.png" />
+    <script>
+      (function() {
+        var VALID_THEMES = ['light','gray','star','warm'];
+        var theme = 'light';
+        try {
+          var saved = localStorage.getItem('lingoforge-theme');
+          if (saved && VALID_THEMES.indexOf(saved) !== -1) {
+            theme = saved;
+          } else {
+            var legacy = localStorage.getItem('theme');
+            if (legacy === 'dark') theme = 'star';
+            else if (legacy === 'light') theme = 'light';
+            else if (window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'star';
+          }
+        } catch (e) {}
+        var root = document.documentElement;
+        root.setAttribute('data-theme', theme);
+        if (theme === 'gray' || theme === 'star') root.classList.add('dark');
+      })();
+    </script>
   </head>
   <body class="bg-background dark:bg-background-dark">
     <div id="root"></div>
