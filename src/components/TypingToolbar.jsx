@@ -1,7 +1,6 @@
 import { useState, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Trash2 } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
 
 const REPEAT_OPTIONS = [
   { value: 1, label: '1次' },
@@ -11,7 +10,7 @@ const REPEAT_OPTIONS = [
   { value: 0, label: '无限' },
 ];
 
-const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, chapters, config, toggleConfig, updateConfig, theme, setTheme, onOpenWrongBook, isErrorBookMode, onDeleteCurrentWord }) {
+const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, chapters, config, toggleConfig, updateConfig, onOpenWrongBook, isErrorBookMode, onDeleteCurrentWord }) {
   const navigate = useNavigate();
   const [showChapterMenu, setShowChapterMenu] = useState(false);
   const [showRepeatMenu, setShowRepeatMenu] = useState(false);
@@ -92,7 +91,6 @@ const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, ch
           </button>
         )}
 
-        <ThemeToggle theme={theme} setTheme={setTheme} />
       </div>
     </div>
   );

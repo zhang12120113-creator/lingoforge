@@ -1,28 +1,130 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ArrowLeft, Bookmark, Clock, FileText } from 'lucide-react'
-import {
-  estimateReadingMinutes,
-  getArticleById,
-} from '../data/mockArticles'
+import { ArrowLeft, Bookmark, ChevronDown, Clock, FileText, Pause, Play } from 'lucide-react'
+import { estimateReadingMinutes, getArticleById } from '../data/mockArticles'
 import { useReadingStore } from '../hooks/useReadingStore'
 import useStudyTracker from '../hooks/useStudyTracker'
 
 const DIFFICULTY_DOT = {
-  '初级': 'bg-emerald-500',
-  '中级': 'bg-amber-500',
-  '高级': 'bg-rose-500',
+  初级: 'bg-emerald-500',
+  中级: 'bg-amber-500',
+  高级: 'bg-rose-500',
 }
 
 const CATEGORY_TAG = {
-  '商业': 'bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300',
-  '生活': 'bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300',
-  '科技': 'bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-300',
-  '文化': 'bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300',
-  '社会': 'bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-300',
-  '历史': 'bg-stone-50 text-stone-600 dark:bg-stone-500/10 dark:text-stone-300',
-  '自然': 'bg-lime-50 text-lime-600 dark:bg-lime-500/10 dark:text-lime-300',
-  '考试': 'bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300',
+  商业: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300',
+  生活: 'bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300',
+  科技: 'bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-300',
+  文化: 'bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300',
+  社会: 'bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-300',
+  历史: 'bg-stone-50 text-stone-600 dark:bg-stone-500/10 dark:text-stone-300',
+  自然: 'bg-lime-50 text-lime-600 dark:bg-lime-500/10 dark:text-lime-300',
+  考试: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300',
+}
+
+function formatTime(seconds) {
+  const s = Math.max(0, Math.floor(seconds))
+  const m = Math.floor(s / 60)
+  const rem = s % 60
+  return `${m}:${rem.toString().padStart(2, '0')}`
+}
+
+function ParagraphBlock({ en, zh, index, audioState, onToggle, onSeek }) {
+  const [showTrans, setShowTrans] = useState(false)
+  const id = `para-${index}`
+  const isActive = audioState.currentIndex === index
+  const isPlaying = isActive && audioState.status === 'playing'
+
+  function handleSeek(e) {
+    if (!isActive) return
+    const rect = e.currentTarget.getBoundingClientRect()
+    const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width))
+    onSeek(index, en, ratio)
+  }
+
+  return (
+    <div
+      id={id}
+      className="group mb-4 rounded-2xl bg-[#e8e6e1] dark:bg-white/[0.05] p-5 md:p-6 transition-colors"
+    >
+      <div className="flex items-start gap-3.5">
+        {/* 播放按钮 */}
+        <button
+          className={`mt-1 shrink-0 w-8 h-8 rounded-full shadow-sm flex items-center justify-center transition-colors ${
+            isActive
+              ? 'bg-primary text-white'
+              : 'bg-white dark:bg-white/10 text-content-secondary dark:text-gray-400 hover:text-primary dark:hover:text-primary'
+          }`}
+          aria-label={isPlaying ? '暂停' : '朗读'}
+          onClick={() => onToggle(index, en)}
+        >
+          {isPlaying ? (
+            <Pause className="w-3.5 h-3.5 fill-current" />
+          ) : (
+            <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
+          )}
+        </button>
+
+        {/* 英文段落 */}
+        <div className="flex-1 min-w-0">
+          <p
+            className="text-[17px] md:text-lg leading-[1.85] text-content dark:text-gray-200 [&_strong]:font-semibold [&_strong]:text-content [&_strong]:dark:text-gray-100 [&_em]:italic [&_em]:text-content-secondary [&_em]:dark:text-gray-300"
+            dangerouslySetInnerHTML={{ __html: en }}
+          />
+        </div>
+      </div>
+
+      {/* 翻译切换 */}
+      <div className="mt-3 pl-11">
+        <button
+          onClick={() => setShowTrans((s) => !s)}
+          className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-medium text-content-tertiary dark:text-gray-500 hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
+        >
+          <ChevronDown
+            className={`w-3.5 h-3.5 transition-transform duration-200 ${showTrans ? 'rotate-180' : ''}`}
+          />
+          <span>{showTrans ? '隐藏翻译' : '显示翻译'}</span>
+        </button>
+      </div>
+
+      {/* 中文翻译（可折叠） */}
+      <div
+        className={`grid transition-[grid-template-rows] duration-300 ease-out ${showTrans ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+      >
+        <div className="overflow-hidden">
+          <div className="mt-3 pl-11 border-l-2 border-primary/30 dark:border-primary/40">
+            <p
+              className="text-[15px] md:text-base leading-[1.8] text-content-secondary dark:text-gray-400 pl-4 [&_strong]:font-semibold [&_strong]:text-content [&_strong]:dark:text-gray-200 [&_em]:not-italic [&_em]:text-content [&_em]:dark:text-gray-200"
+              dangerouslySetInnerHTML={{ __html: zh }}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* 朗读进度条 */}
+      {isActive && (
+        <div className="mt-4 pl-11">
+          <div className="flex items-center gap-2">
+            <span className="text-xs tabular-nums text-content-tertiary dark:text-gray-500 w-10 text-right">
+              {formatTime(audioState.elapsed)}
+            </span>
+            <div
+              className="flex-1 h-1 bg-gray-200 dark:bg-white/10 rounded-full overflow-hidden cursor-pointer"
+              onClick={handleSeek}
+            >
+              <div
+                className="h-full bg-primary rounded-full transition-[width] duration-100"
+                style={{ width: `${audioState.progress}%` }}
+              />
+            </div>
+            <span className="text-xs tabular-nums text-content-tertiary dark:text-gray-500 w-10">
+              {formatTime(audioState.duration)}
+            </span>
+          </div>
+        </div>
+      )}
+    </div>
+  )
 }
 
 export default function ArticleDetail() {
@@ -34,6 +136,19 @@ export default function ArticleDetail() {
   const persistTimer = useRef(null)
   const [progress, setProgress] = useState(() => store.getProgress(id))
 
+  // TTS 播放器状态
+  const [audioState, setAudioState] = useState({
+    currentIndex: null,
+    status: 'idle',
+    progress: 0,
+    elapsed: 0,
+    duration: 0,
+  })
+  const utteranceRef = useRef(null)
+  const timerRef = useRef(null)
+  const elapsedRef = useRef(0)
+  const currentUtteranceRef = useRef(null)
+
   useStudyTracker(article ? id : null)
 
   useEffect(() => {
@@ -41,7 +156,6 @@ export default function ArticleDetail() {
     const initial = store.getProgress(id)
     setProgress(initial)
     window.scrollTo({ top: 0 })
-    // Mark visited so the list page reflects the open
     if (!store.lastReadAt[id]) {
       store.setProgress(id, Math.max(initial, 1))
     }
@@ -58,7 +172,6 @@ export default function ArticleDetail() {
       const elTop = el.offsetTop
       const elHeight = el.offsetHeight
       const viewport = window.innerHeight || docEl.clientHeight || 0
-      // Progress = how far the bottom of the viewport has read into the article
       const readEnd = scrollTop + viewport
       const articleEnd = elTop + elHeight
       const articleStart = elTop
@@ -82,21 +195,168 @@ export default function ArticleDetail() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, article])
 
+  // 估算段落朗读时长（秒）
+  function estimateDuration(text) {
+    const cleanText = text.replace(/<[^>]+>/g, '')
+    const wordCount = cleanText.trim().split(/\s+/).filter(Boolean).length
+    return Math.max(1, Math.ceil(wordCount / 2.2))
+  }
+
+  function startProgressTimer(duration, initialElapsed = 0) {
+    if (timerRef.current) clearInterval(timerRef.current)
+    elapsedRef.current = initialElapsed
+    timerRef.current = setInterval(() => {
+      elapsedRef.current += 0.1
+      const progress = Math.min(100, (elapsedRef.current / duration) * 100)
+      setAudioState((prev) => ({ ...prev, elapsed: elapsedRef.current, progress }))
+    }, 100)
+  }
+
+  function stopProgressTimer() {
+    if (timerRef.current) {
+      clearInterval(timerRef.current)
+      timerRef.current = null
+    }
+  }
+
+  function resetAudioState() {
+    stopProgressTimer()
+    setAudioState({
+      currentIndex: null,
+      status: 'idle',
+      progress: 0,
+      elapsed: 0,
+      duration: 0,
+    })
+    elapsedRef.current = 0
+    currentUtteranceRef.current = null
+  }
+
+  function playParagraph(index, text, startRatio = 0) {
+    window.speechSynthesis.cancel()
+    const fullText = text.replace(/<[^>]+>/g, '')
+    const allWords = fullText.trim().split(/\s+/).filter(Boolean)
+
+    const targetWordIndex = Math.floor(startRatio * allWords.length)
+    const remainingWords = allWords.slice(targetWordIndex)
+    const cleanText = remainingWords.join(' ')
+
+    const fullDuration = estimateDuration(fullText)
+
+    if (cleanText.length === 0) {
+      resetAudioState()
+      return
+    }
+
+    const startElapsed = (targetWordIndex / allWords.length) * fullDuration
+    const startProgress = (targetWordIndex / allWords.length) * 100
+
+    const utterance = new SpeechSynthesisUtterance(cleanText)
+    utterance.lang = 'en-US'
+    utterance.rate = 0.9
+
+    const thisUtterance = utterance
+    currentUtteranceRef.current = thisUtterance
+
+    utterance.onstart = () => {
+      if (currentUtteranceRef.current !== thisUtterance) return
+      setAudioState({
+        currentIndex: index,
+        status: 'playing',
+        progress: startProgress,
+        elapsed: startElapsed,
+        duration: fullDuration,
+      })
+      elapsedRef.current = startElapsed
+      startProgressTimer(fullDuration, startElapsed)
+    }
+
+    utterance.onend = () => {
+      if (currentUtteranceRef.current !== thisUtterance) return
+      resetAudioState()
+    }
+
+    utterance.onboundary = (e) => {
+      if (currentUtteranceRef.current !== thisUtterance) return
+      if (e.name === 'word' || e.name === 'sentence') {
+        const relativeProgress = cleanText.length > 0 ? (e.charIndex / cleanText.length) : 0
+        const actualProgress = Math.min(100, startProgress + relativeProgress * (100 - startProgress))
+        elapsedRef.current = startElapsed + relativeProgress * (fullDuration - startElapsed)
+        setAudioState((prev) => ({
+          ...prev,
+          progress: actualProgress,
+          elapsed: elapsedRef.current,
+        }))
+      }
+    }
+
+    utteranceRef.current = utterance
+    window.speechSynthesis.speak(utterance)
+  }
+
+  function seekParagraph(index, text, ratio) {
+    if (audioState.currentIndex !== index) return
+    stopProgressTimer()
+    window.speechSynthesis.cancel()
+
+    // 立即更新 UI，消除 TTS 引擎启动带来的延迟感
+    const fullText = text.replace(/<[^>]+>/g, '')
+    const allWords = fullText.trim().split(/\s+/).filter(Boolean)
+    const targetWordIndex = Math.floor(ratio * allWords.length)
+    const fullDuration = estimateDuration(fullText)
+    const startElapsed = (targetWordIndex / allWords.length) * fullDuration
+    const startProgress = (targetWordIndex / allWords.length) * 100
+
+    setAudioState({
+      currentIndex: index,
+      status: 'playing',
+      progress: startProgress,
+      elapsed: startElapsed,
+      duration: fullDuration,
+    })
+    elapsedRef.current = startElapsed
+
+    playParagraph(index, text, ratio)
+  }
+
+  function toggleParagraph(index, text) {
+    if (audioState.currentIndex === index) {
+      if (audioState.status === 'playing') {
+        window.speechSynthesis.pause()
+        stopProgressTimer()
+        setAudioState((prev) => ({ ...prev, status: 'paused' }))
+      } else if (audioState.status === 'paused') {
+        window.speechSynthesis.resume()
+        startProgressTimer(audioState.duration)
+        setAudioState((prev) => ({ ...prev, status: 'playing' }))
+      }
+    } else {
+      playParagraph(index, text)
+    }
+  }
+
+  // 切换文章或卸载时停止语音
+  useEffect(() => {
+    return () => {
+      window.speechSynthesis.cancel()
+      stopProgressTimer()
+    }
+  }, [id])
+
   if (!article) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center">
         <p className="text-content-secondary dark:text-gray-300 mb-4">没有找到这篇文章</p>
-        <button
-          onClick={() => navigate('/read')}
-          className="btn-secondary"
-        >
+        <button onClick={() => navigate('/read')} className="btn-secondary">
           返回列表
         </button>
       </div>
     )
   }
 
-  const tagClass = CATEGORY_TAG[article.category] || 'bg-gray-100 text-gray-600 dark:bg-white/[0.06] dark:text-gray-300'
+  const tagClass =
+    CATEGORY_TAG[article.category] ||
+    'bg-gray-100 text-gray-600 dark:bg-white/[0.06] dark:text-gray-300'
   const dotClass = DIFFICULTY_DOT[article.difficulty] || 'bg-gray-400'
   const isBookmarked = store.isBookmarked(article.id)
   const readingMinutes = estimateReadingMinutes(article.wordCount)
@@ -127,19 +387,12 @@ export default function ArticleDetail() {
                 : 'text-content-tertiary dark:text-gray-400 hover:text-amber-500 hover:bg-amber-50/60 dark:hover:bg-amber-500/10'
             }`}
           >
-            <Bookmark
-              className="w-4 h-4"
-              fill={isBookmarked ? 'currentColor' : 'none'}
-              strokeWidth={2}
-            />
+            <Bookmark className="w-4 h-4" fill={isBookmarked ? 'currentColor' : 'none'} strokeWidth={2} />
           </button>
         </div>
         {/* 顶部进度条 */}
         <div className="h-0.5 w-full bg-gray-100 dark:bg-white/[0.05] overflow-hidden">
-          <div
-            className="h-full bg-primary transition-[width] duration-150"
-            style={{ width: `${progress}%` }}
-          />
+          <div className="h-full bg-primary transition-[width] duration-150" style={{ width: `${progress}%` }} />
         </div>
       </div>
 
@@ -180,11 +433,20 @@ export default function ArticleDetail() {
           </p>
         </div>
 
-        {/* 正文 */}
-        <div
-          className="text-[17px] md:text-lg leading-[1.85] text-content dark:text-gray-200 [&>p]:mb-5 [&>p:last-child]:mb-0 [&_strong]:font-semibold [&_strong]:text-content [&_strong]:dark:text-gray-100 [&_em]:italic [&_em]:text-content-secondary [&_em]:dark:text-gray-300"
-          dangerouslySetInnerHTML={{ __html: article.content }}
-        />
+        {/* 正文段落 */}
+        <div>
+          {article.paragraphs.map((para, i) => (
+            <ParagraphBlock
+              key={i}
+              index={i}
+              en={para.en}
+              zh={para.zh}
+              audioState={audioState}
+              onToggle={toggleParagraph}
+              onSeek={seekParagraph}
+            />
+          ))}
+        </div>
       </article>
 
       {/* 底部空间 */}
