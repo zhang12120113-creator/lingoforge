@@ -1,3 +1,5 @@
+import { getErrorBookCount, loadErrorBookAsDictionary } from '../utils/errorBook.js';
+
 const warmColors = [
   'warm-coral',
   'warm-amber',
@@ -29,4 +31,19 @@ export const dictionaryMeta = [
 
 export const categories = ['初中英语', '高中英语', '英语4级', '英语6级', '英语专四', '英语专八', '雅思', '托福', 'SAT', '考研', '程序员英语'];
 
-export const getMeta = (id) => dictionaryMeta.find((d) => d.id === id);
+export const getMeta = (id) => {
+  if (id === 'error-book') {
+    const dict = loadErrorBookAsDictionary();
+    const count = getErrorBookCount();
+    return {
+      id: 'error-book',
+      name: '错题本',
+      category: '我的',
+      description: '专属错题练习',
+      totalChapters: dict.chapters?.length || 0,
+      totalWords: count,
+      color: 'warm-rose',
+    };
+  }
+  return dictionaryMeta.find((d) => d.id === id);
+};

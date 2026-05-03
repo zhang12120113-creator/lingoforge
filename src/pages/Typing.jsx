@@ -3,6 +3,8 @@ import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { List } from 'lucide-react';
 import { unlockAudio } from '../utils/audioContext.js';
 import { loadDictionary } from '../utils/loadDictionary.js';
+import { getErrorBook, getErrorBookCount, removeFromErrorBook } from '../utils/errorBook.js';
+import { getMeta } from '../dictionaries/meta.js';
 import useTyping from '../hooks/useTyping.js';
 import { useUserConfig } from '../hooks/useUserConfig.js';
 import StatsPanel from '../components/StatsPanel.jsx';
@@ -24,11 +26,13 @@ export default function Typing() {
   const [error, setError] = useState(null);
   const [showWrongBook, setShowWrongBook] = useState(false);
   const [isWordListOpen, setIsWordListOpen] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
   const mobileInputRef = useRef(null);
   const handleInputRef = useRef(null);
   const hasJumpedRef = useRef(false);
 
   const isMobile = useIsMobile();
+  const isErrorBookMode = dictId === 'error-book';
 
   const targetWordIndex = parseInt(searchParams.get('wordIndex')) || 0;
 
@@ -37,15 +41,31 @@ export default function Typing() {
   useEffect(() => {
     setLoading(true); setError(null); hasJumpedRef.current = false;
     loadDictionary(dictId).then(dict => {
+      if (!dict) {
+        setError('加载失败'); setLoading(false); return;
+      }
       setChapters(dict.chapters || []);
       const chapter = dict.chapters?.find(c => c.id === Number(chapterId));
-      if (chapter?.words?.length > 0) setWords(chapter.words);
-      else setError('章节不存在或为空');
+      if (chapter?.words?.length > 0) {
+        setWords(chapter.words);
+      } else if (isErrorBookMode && (!dict.chapters || dict.chapters.length === 0)) {
+        setError('错题本暂无单词');
+        setWords([]);
+      } else {
+        setError('章节不存在或为空');
+      }
       setLoading(false);
     }).catch(() => { setError('加载失败'); setLoading(false); });
-  }, [dictId, chapterId]);
+  }, [dictId, chapterId, isErrorBookMode, reloadKey]);
 
-  const { currentWord, currentInput, wordIndex, stats, isFinished, handleInput, jumpTo, reset, isWrong } = useTyping(words, config.soundEnabled, config.wordRepeatCount);
+  const dictName = useMemo(() => getMeta(dictId)?.name || dictId, [dictId]);
+
+  const { currentWord, currentInput, wordIndex, stats, isFinished, handleInput, jumpTo, reset, isWrong } = useTyping(words, config.soundEnabled, config.wordRepeatCount, isErrorBookMode, dictName);
+
+  const remainingErrorCount = useMemo(() => {
+    if (!isErrorBookMode) return 0;
+    return getErrorBookCount();
+  }, [isErrorBookMode, isFinished, reloadKey]);
 
   // 加载完成后，自动跳转到 URL 参数指定的单词
   useEffect(() => {
@@ -104,8 +124,25 @@ export default function Typing() {
     e.target.value = '';
   }, [isFinished]);
 
-  const handleRestart = useCallback(() => reset(), [reset]);
-  const handleGoHome = useCallback(() => navigate('/'), [navigate]);
+  const handleRestart = useCallback(() => {
+    reset();
+  }, [reset]);
+  const handleGoHome = useCallback(() => navigate(isErrorBookMode ? '/dict/error-book' : '/'), [navigate, isErrorBookMode]);
+
+  const handleDeleteCurrentWord = useCallback(() => {
+    if (!currentWord || words.length === 0) return;
+    if (!window.confirm(`确定将 "${currentWord.name}" 从错题本移除吗？`)) return;
+    removeFromErrorBook(currentWord.name);
+    setWords(prev => prev.filter(w => w.name !== currentWord.name));
+    // words 变化后 useTyping 的 useEffect 会自动重置输入、计时器、统计等状态
+  }, [currentWord, words.length]);
+
+  const handleWordRemovedFromModal = useCallback((wordName) => {
+    setWords(prev => {
+      if (!prev.some(w => w.name === wordName)) return prev;
+      return prev.filter(w => w.name !== wordName);
+    });
+  }, []);
 
   const handleJumpToWord = useCallback((index) => {
     jumpTo(index);
@@ -125,7 +162,7 @@ export default function Typing() {
     <div className="h-[calc(100dvh-3rem)] md:h-[calc(100vh-4rem)] bg-background dark:bg-transparent flex items-center justify-center transition-colors duration-500">
       <div className="text-center">
         <div className="animate-spin w-12 h-12 border-4 border-primary dark:border-primary-dark border-t-transparent rounded-full mx-auto mb-4" />
-        <p className="text-content-tertiary dark:text-gray-400 text-sm">正在加载章节...</p>
+        <p className="text-content-tertiary dark:text-gray-400 text-sm">{isErrorBookMode ? '正在加载错题本...' : '正在加载章节...'}</p>
       </div>
     </div>
   );
@@ -139,13 +176,37 @@ export default function Typing() {
           </svg>
         </div>
         <p className="text-indigo-500 dark:text-violet-400 mb-6 font-medium">{error}</p>
-        <button onClick={() => navigate(`/dict/${dictId}`)} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20 mr-3">返回章节</button>
-        <button onClick={() => navigate('/')} className="px-5 py-2.5 bg-gray-100 dark:bg-white/[0.05] hover:bg-gray-200 dark:hover:bg-white/[0.08] text-content-secondary dark:text-gray-300 rounded-button font-medium transition">返回首页</button>
+        {isErrorBookMode ? (
+          <button onClick={() => navigate('/')} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20">返回首页</button>
+        ) : (
+          <>
+            <button onClick={() => navigate(`/dict/${dictId}`)} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20 mr-3">返回章节</button>
+            <button onClick={() => navigate('/')} className="px-5 py-2.5 bg-gray-100 dark:bg-white/[0.05] hover:bg-gray-200 dark:hover:bg-white/[0.08] text-content-secondary dark:text-gray-300 rounded-button font-medium transition">返回首页</button>
+          </>
+        )}
       </div>
     </div>
   );
 
-  if (words.length === 0) return null;
+  if (words.length === 0) {
+    if (isErrorBookMode) {
+      return (
+        <div className="h-[calc(100dvh-3rem)] md:h-[calc(100vh-4rem)] bg-background dark:bg-transparent flex items-center justify-center transition-colors duration-500">
+          <div className="text-center card p-8 shadow-lg dark:shadow-black/40 mx-4">
+            <div className="w-16 h-16 bg-green-50 dark:bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <p className="text-green-600 dark:text-green-400 mb-2 font-medium text-xl">错题本已清空</p>
+            <p className="text-content-tertiary dark:text-gray-400 mb-6">所有单词都已练熟，去挑战新词库吧！</p>
+            <button onClick={() => navigate('/')} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20">返回首页</button>
+          </div>
+        </div>
+      );
+    }
+    return null;
+  }
 
   return (
     <div className="h-[calc(100dvh-3rem)] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden">
@@ -214,16 +275,16 @@ export default function Typing() {
 
         {/* 顶部栏 */}
         <div className="min-h-12 md:h-14 shrink-0 flex items-center justify-between px-3 md:px-4 z-40">
-          <button onClick={() => navigate(`/dict/${dictId}`)} className="text-content-tertiary dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark flex items-center gap-2 text-sm transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.04]">
+          <button onClick={() => navigate(isErrorBookMode ? '/dict/error-book' : `/dict/${dictId}`)} className="text-content-tertiary dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark flex items-center gap-2 text-sm transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.04]">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            <span className="hidden sm:inline">返回章节</span>
+            <span className="hidden sm:inline">{isErrorBookMode ? '返回词库' : '返回章节'}</span>
           </button>
 
           <div className="flex flex-col items-center">
             <div className="text-base font-semibold text-content dark:text-white">
-              第 {wordIndex + 1} / {words.length} 词
+              {isErrorBookMode ? '错题本练习' : `第 ${wordIndex + 1} / ${words.length} 词`}
             </div>
             <div className="w-40 h-1.5 bg-gray-200 dark:bg-white/[0.08] rounded-full mt-2 overflow-hidden">
               <div
@@ -243,6 +304,8 @@ export default function Typing() {
             theme={theme}
             setTheme={setTheme}
             onOpenWrongBook={() => setShowWrongBook(true)}
+            isErrorBookMode={isErrorBookMode}
+            onDeleteCurrentWord={handleDeleteCurrentWord}
           />
         </div>
 
@@ -276,8 +339,8 @@ export default function Typing() {
 
         <StatsPanel stats={stats} />
 
-        {isFinished && <ResultModal stats={stats} onRestart={handleRestart} onGoHome={handleGoHome} />}
-        {showWrongBook && <WrongBookModal onClose={() => setShowWrongBook(false)} />}
+        {isFinished && <ResultModal stats={stats} onRestart={handleRestart} onGoHome={handleGoHome} isErrorBookMode={isErrorBookMode} remainingErrorCount={remainingErrorCount} />}
+        {showWrongBook && <WrongBookModal onClose={() => setShowWrongBook(false)} onWordRemoved={isErrorBookMode ? handleWordRemovedFromModal : undefined} />}
       </div>
     </div>
   );

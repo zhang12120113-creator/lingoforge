@@ -3,10 +3,12 @@ import { useNavigate } from 'react-router-dom'
 import { dictionaryMeta, categories } from '../dictionaries/meta.js'
 import { loadDictionary } from '../utils/loadDictionary.js'
 import { buildWordIndex, searchWordIndex } from '../utils/wordIndex.js'
+import { getErrorBookCount } from '../utils/errorBook.js'
 import { useDebounce } from '../hooks/useDebounce.js'
 import Hero from '../components/Hero'
 import Features from '../components/Features'
 import Footer from '../components/Footer'
+import ErrorBookCard from '../components/ErrorBookCard'
 
 function Home() {
   const navigate = useNavigate()
@@ -95,6 +97,9 @@ function Home() {
       d.category.toLowerCase().includes(query)
     return categoryMatch && searchMatch
   })
+
+  // 错题本数量（从 localStorage 读取，不依赖状态变化）
+  const errorBookCount = getErrorBookCount()
 
   const categoryIcons = {
     '初中英语': (
@@ -301,6 +306,11 @@ function Home() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* 错题本卡片（始终显示在最前面，空题时置灰禁用） */}
+          <ErrorBookCard
+            count={errorBookCount}
+            onClick={() => navigate('/dict/error-book')}
+          />
           {filteredDictionaries.map((dict, index) => {
             const colors = tagColors[dict.color] || tagColors['warm-coral'];
             return (
@@ -314,7 +324,7 @@ function Home() {
                   import('./ChapterSelect');
                 }}
                 className="group card card-hover p-6 cursor-pointer relative overflow-hidden animate-card-enter glow-border-subtle active:scale-[0.98] transition-transform duration-150"
-                style={{ animationDelay: `${index * 0.05}s` }}
+                style={{ animationDelay: `${(index + 1) * 0.05}s` }}
               >
                 <div className={`absolute top-0 left-0 w-full h-1 ${getCategoryColor(dict.name)} opacity-80`} />
                 <div className="flex items-start justify-between mb-3">

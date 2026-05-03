@@ -46,10 +46,30 @@ export function buildWordIndex(dictionaries) {
 export function searchWordIndex(index, query, limit = 10) {
   if (!query || query.trim().length === 0) return [];
   const q = query.toLowerCase().trim();
-  return index.filter((item) => {
-    const wordName = item.word?.trim().toLowerCase();
-    if (wordName === q) return true;
+
+  const matched = index.filter((item) => {
+    const wordName = item.word?.trim().toLowerCase() || '';
+    if (wordName.includes(q)) return true;
     const transList = item.definition?.split('；').map((t) => t.trim().toLowerCase()) || [];
-    return transList.some((t) => t === q);
-  }).slice(0, limit);
+    return transList.some((t) => t.includes(q));
+  });
+
+  const getPriority = (item) => {
+    const wordName = item.word?.trim().toLowerCase() || '';
+    if (wordName === q) return 0;             // 完全匹配
+    if (wordName.startsWith(q)) return 1;     // 前缀匹配
+    if (wordName.includes(q)) return 2;       // 子串匹配
+    return 3;                                 // 释义匹配
+  };
+
+  matched.sort((a, b) => {
+    const pa = getPriority(a);
+    const pb = getPriority(b);
+    if (pa !== pb) return pa - pb;
+    const nameA = a.word?.trim().toLowerCase() || '';
+    const nameB = b.word?.trim().toLowerCase() || '';
+    return nameA.length - nameB.length;
+  });
+
+  return matched.slice(0, limit);
 }

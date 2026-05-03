@@ -1,5 +1,6 @@
 import { useState, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Trash2 } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const REPEAT_OPTIONS = [
@@ -10,7 +11,7 @@ const REPEAT_OPTIONS = [
   { value: 0, label: '无限' },
 ];
 
-const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, chapters, config, toggleConfig, updateConfig, theme, setTheme, onOpenWrongBook }) {
+const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, chapters, config, toggleConfig, updateConfig, theme, setTheme, onOpenWrongBook, isErrorBookMode, onDeleteCurrentWord }) {
   const navigate = useNavigate();
   const [showChapterMenu, setShowChapterMenu] = useState(false);
   const [showRepeatMenu, setShowRepeatMenu] = useState(false);
@@ -49,15 +50,17 @@ const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, ch
           </div></>)}
         </div>
 
-        <div className="relative">
-          <button onClick={() => setShowChapterMenu(!showChapterMenu)} className={toolbarBtn} title="切换章节">
-            <svg className={iconCls} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
-            <span className="text-[11px] hidden sm:inline">章节</span>
-          </button>
-          {showChapterMenu && (<><div className="fixed inset-0 z-40" onClick={() => setShowChapterMenu(false)} /><div className="dropdown-menu w-48 max-h-64 overflow-y-auto">
-            {chapters.map((ch) => (<button key={ch.id} onClick={() => switchChapter(ch.id)} className={`dropdown-item ${ch.id === currentChapterId ? 'dropdown-item-active' : 'dropdown-item-inactive'}`}>{ch.name}</button>))}
-          </div></>)}
-        </div>
+        {!isErrorBookMode && (
+          <div className="relative">
+            <button onClick={() => setShowChapterMenu(!showChapterMenu)} className={toolbarBtn} title="切换章节">
+              <svg className={iconCls} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+              <span className="text-[11px] hidden sm:inline">章节</span>
+            </button>
+            {showChapterMenu && (<><div className="fixed inset-0 z-40" onClick={() => setShowChapterMenu(false)} /><div className="dropdown-menu w-48 max-h-64 overflow-y-auto">
+              {chapters.map((ch) => (<button key={ch.id} onClick={() => switchChapter(ch.id)} className={`dropdown-item ${ch.id === currentChapterId ? 'dropdown-item-active' : 'dropdown-item-inactive'}`}>{ch.name}</button>))}
+            </div></>)}
+          </div>
+        )}
 
         <button onClick={() => toggleConfig('soundEnabled')} className={`${toolbarBtn} ${!config.soundEnabled ? 'opacity-40' : ''}`} title={config.soundEnabled ? '关闭音效' : '开启音效'}>
           {config.soundEnabled ? (<svg className={iconCls} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /></svg>) : (<svg className={iconCls} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" /></svg>)}
@@ -81,6 +84,13 @@ const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, ch
           <svg className={iconCls} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
           <span className="text-[11px] hidden sm:inline">错题本</span>
         </button>
+
+        {isErrorBookMode && onDeleteCurrentWord && (
+          <button onClick={onDeleteCurrentWord} className={toolbarBtn} title="练熟了，移出错题本">
+            <Trash2 className={`${iconCls} text-red-500 hover:text-red-600`} />
+            <span className="text-[11px] hidden sm:inline text-red-500">移除</span>
+          </button>
+        )}
 
         <ThemeToggle theme={theme} setTheme={setTheme} />
       </div>

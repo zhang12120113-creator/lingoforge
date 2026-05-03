@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-function ResultModal({ stats, onRestart, onGoHome }) {
+function ResultModal({ stats, onRestart, onGoHome, isErrorBookMode, remainingErrorCount = 0 }) {
   const statItems = [
     {
       label: '用时',
@@ -50,8 +50,12 @@ function ResultModal({ stats, onRestart, onGoHome }) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h2 className="text-title text-content dark:text-white">章节完成！</h2>
-          <p className="text-sm text-content-tertiary dark:text-gray-400 mt-1">太棒了，继续加油</p>
+          <h2 className="text-title text-content dark:text-white">{isErrorBookMode ? '错题复习完成' : '章节完成！'}</h2>
+          <p className="text-sm text-content-tertiary dark:text-gray-400 mt-1">
+            {isErrorBookMode
+              ? (remainingErrorCount > 0 ? `还有 ${remainingErrorCount} 个错题待复习` : '本次错题已全部复习完毕')
+              : '太棒了，继续加油'}
+          </p>
         </div>
 
         <div className="grid grid-cols-2 gap-3 mb-8 mt-6">
@@ -67,8 +71,16 @@ function ResultModal({ stats, onRestart, onGoHome }) {
         </div>
 
         <div className="flex gap-3">
-          <button onClick={onRestart} className="btn-primary flex-1">再来一次</button>
-          {onGoHome && <button onClick={onGoHome} className="btn-secondary flex-1">返回首页</button>}
+          {(!isErrorBookMode || remainingErrorCount > 0) && (
+            <button onClick={onRestart} className="btn-primary flex-1">
+              {isErrorBookMode ? '继续错题练习' : '再来一次'}
+            </button>
+          )}
+          {onGoHome && (
+            <button onClick={onGoHome} className={`btn-secondary ${(!isErrorBookMode || remainingErrorCount > 0) ? 'flex-1' : 'w-full'}`}>
+              {isErrorBookMode ? '返回词库' : '返回首页'}
+            </button>
+          )}
         </div>
       </div>
     </div>

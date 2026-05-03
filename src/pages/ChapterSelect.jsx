@@ -1,7 +1,7 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect, useCallback } from 'react';
 import { loadDictionary } from '../utils/loadDictionary.js';
-import { dictionaryMeta } from '../dictionaries/meta.js';
+import { getMeta } from '../dictionaries/meta.js';
 import { unlockAudio } from '../utils/audioContext.js';
 import ChapterSkeleton from '../components/ChapterSkeleton.jsx';
 
@@ -11,7 +11,7 @@ export default function ChapterSelect() {
   const [dict, setDict] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const meta = dictionaryMeta.find(d => d.id === dictId);
+  const meta = getMeta(dictId);
 
   useEffect(() => {
     setLoading(true); setError(null);

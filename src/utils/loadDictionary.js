@@ -1,3 +1,5 @@
+import { loadErrorBookAsDictionary } from './errorBook.js';
+
 const loaders = {
   junior: () => import('../dictionaries/junior.json'),
   zhongkao: () => import('../dictionaries/zhongkao.json'),
@@ -14,17 +16,18 @@ const loaders = {
   sat: () => import('../dictionaries/sat.json'),
   postgraduate: () => import('../dictionaries/postgraduate.json'),
   programmer: () => import('../dictionaries/programmer.json'),
+  'error-book': () => Promise.resolve({ default: loadErrorBookAsDictionary() }),
 }
 
 const cache = new Map()
 
 export async function loadDictionary(id) {
-  if (cache.has(id)) return cache.get(id)
+  if (id !== 'error-book' && cache.has(id)) return cache.get(id)
   const loader = loaders[id]
   if (!loader) return null
   const mod = await loader()
   const data = mod.default ?? mod
-  cache.set(id, data)
+  if (id !== 'error-book') cache.set(id, data)
   return data
 }
 

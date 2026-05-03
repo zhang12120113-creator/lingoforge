@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { getAudioContext } from '../utils/audioContext.js';
+import { addToErrorBook, removeFromErrorBook } from '../utils/errorBook.js';
 
 // ========== 音频合成（机械键盘模拟）==========
 
@@ -116,7 +117,7 @@ function playSound(type) {
   } catch (e) {}
 }
 
-export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
+export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isErrorBookMode = false, dictName = '') {
   const [wordIndex, setWordIndex] = useState(0);
   const [currentInput, setCurrentInput] = useState('');
   const [isWrong, setIsWrong] = useState(false);
@@ -215,6 +216,9 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
       if (nextInput === target) {
         if (soundEnabled) playSound('correct');
         correctCountRef.current += target.length;
+        if (isErrorBookMode) {
+          removeFromErrorBook(currentWord.name);
+        }
         const completedTimes = repeatCountRef.current + 1;
         const shouldAdvance = wordRepeatCount !== 0 && completedTimes >= wordRepeatCount;
         if (shouldAdvance) {
@@ -246,9 +250,19 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1) {
       currentInputRef.current = nextInput;
       setCurrentInput(nextInput);
       setIsWrong(true);
+
+      if (!isErrorBookMode && currentWord) {
+        addToErrorBook({
+          word: currentWord.name,
+          trans: Array.isArray(currentWord.trans) ? currentWord.trans.join('; ') : currentWord.trans,
+          notation: currentWord.notation,
+          dictName,
+        });
+      }
+
       setTimeout(() => { currentInputRef.current = ''; setCurrentInput(''); setIsWrong(false); }, 300);
     }
-  }, [currentWord, wordIndex, words, isFinished, startTime, speakWord, soundEnabled, wordRepeatCount]);
+  }, [currentWord, wordIndex, words, isFinished, startTime, speakWord, soundEnabled, wordRepeatCount, isErrorBookMode, dictName]);
 
   const jumpTo = useCallback((index) => {
     if (index < 0 || index >= wordsRef.current.length) return;
