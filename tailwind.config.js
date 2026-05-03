@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         mono: ['"Fira Code"', '"JetBrains Mono"', 'monospace'],
+        serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       },
       colors: {
         primary: {
@@ -18,6 +19,10 @@ export default {
           DEFAULT: 'var(--color-accent)',
           soft: 'var(--color-accent-soft)',
         },
+        cream: '#f7f5f0',
+        sand: '#f0ebe3',
+        charcoal: '#1a1a1a',
+        stone: '#8a8a8a',
         background: {
           DEFAULT: 'var(--color-background)',
           dark: 'var(--color-background-dark)',
