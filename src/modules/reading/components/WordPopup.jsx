@@ -24,6 +24,8 @@ function parseTrans(trans) {
 export default function WordPopup({ wordData, rect, isSaved, onSave, onRemove, onClose }) {
   const popupRef = useRef(null)
   const [computedTop, setComputedTop] = useState(null)
+  // 捕获挂载时的 scrollY，用于把视口坐标转换为文档坐标，使弹窗跟随滚动
+  const scrollYAtMount = useRef(window.scrollY).current
 
   const handleClickOutside = useCallback(
     (e) => {
@@ -51,28 +53,29 @@ export default function WordPopup({ wordData, rect, isSaved, onSave, onRemove, o
   let left = rect.left + rect.width / 2 - popupWidth / 2
   left = Math.max(padding, Math.min(left, window.innerWidth - popupWidth - padding))
 
-  // Estimate height for initial render to avoid large jumps
+  // 优先显示在单词下方；下方空间不足时再放到上方
   const estimatedHeight = 170 + Math.max(1, parsed.length) * 28
-  let initialTop = rect.top - estimatedHeight - gap
-  if (initialTop < padding) {
-    initialTop = rect.bottom + gap
-  }
+  const overflowsBelow = rect.bottom + estimatedHeight + gap > window.innerHeight - padding
+  let initialTop = overflowsBelow
+    ? rect.top - estimatedHeight - gap
+    : rect.bottom + gap
+  // 转换为文档坐标，让弹窗在滚动时跟随单词
+  initialTop += scrollYAtMount
 
   useLayoutEffect(() => {
     const el = popupRef.current
     if (!el) return
     const h = el.offsetHeight
-    let t = rect.top - h - gap
-    if (t < padding) {
-      t = rect.bottom + gap
-    }
+    const overflows = rect.bottom + h + gap > window.innerHeight - padding
+    let t = overflows ? rect.top - h - gap : rect.bottom + gap
+    t += scrollYAtMount
     setComputedTop(t)
-  }, [rect])
+  }, [rect, scrollYAtMount])
 
   return (
     <div
       ref={popupRef}
-      className="fixed z-[100] bg-white dark:bg-[#1a1a24] rounded-2xl shadow-xl border border-gray-100 dark:border-white/[0.06] overflow-hidden"
+      className="absolute z-[100] bg-white dark:bg-[#1a1a24] rounded-2xl shadow-xl border border-gray-100 dark:border-white/[0.06] overflow-hidden"
       style={{ left, top: computedTop ?? initialTop, width: popupWidth }}
     >
       {/* Header */}

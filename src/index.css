@@ -216,14 +216,20 @@
     background-color: rgba(129, 140, 248, 0.35);
   }
 
-  /* 查词按钮上方的小箭头，指向被选中的单词 */
-  .lookup-toolbar-arrow {
-    width: 0;
-    height: 0;
-    margin: 0 auto;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid var(--color-primary);
+  .word-clickable {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    border-radius: 2px;
+    transition: background-color 0.15s ease, opacity 0.15s ease;
+  }
+  .word-clickable:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+    background-color: rgba(99, 102, 241, 0.15);
+  }
+  .dark .word-clickable:hover {
+    background-color: rgba(129, 140, 248, 0.2);
   }
 
   .stat-box {

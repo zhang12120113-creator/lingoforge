@@ -1,5 +1,5 @@
 import { loadErrorBookAsDictionary } from './errorBook.js';
-import { loadReadingWordBookAsDictionary } from './readingWordBook.js';
+import { loadReadingWordBookAsDictionary, enrichReadingWordBook } from './readingWordBook.js';
 
 const loaders = {
   junior: () => import('../dictionaries/junior.json'),
@@ -18,7 +18,10 @@ const loaders = {
   postgraduate: () => import('../dictionaries/postgraduate.json'),
   programmer: () => import('../dictionaries/programmer.json'),
   'error-book': () => Promise.resolve({ default: loadErrorBookAsDictionary() }),
-  'reading-word-book': () => Promise.resolve({ default: loadReadingWordBookAsDictionary() }),
+  'reading-word-book': async () => {
+    await enrichReadingWordBook();
+    return { default: loadReadingWordBookAsDictionary() };
+  },
 }
 
 const cache = new Map()

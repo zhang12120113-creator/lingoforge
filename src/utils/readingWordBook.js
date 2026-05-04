@@ -1,5 +1,84 @@
 const STORAGE_KEY = 'lingoforge_reading_words';
 
+let dictWordMap = null;
+
+async function buildDictWordMap() {
+  if (dictWordMap) return dictWordMap;
+  dictWordMap = new Map();
+  const dictIds = ['junior', 'zhongkao', 'senior', 'gaokao', 'cet4', 'cet4freq', 'cet6', 'cet6freq', 'tem4', 'tem8', 'ielts', 'toefl', 'sat', 'postgraduate', 'programmer'];
+  for (const id of dictIds) {
+    try {
+      const mod = await import(`../dictionaries/${id}.json`);
+      const dict = mod.default ?? mod;
+      dict.chapters?.forEach((ch) => {
+        ch.words?.forEach((w) => {
+          if (w?.name) {
+            dictWordMap.set(w.name.toLowerCase(), w);
+          }
+        });
+      });
+    } catch {
+      // ignore missing dictionaries
+    }
+  }
+  return dictWordMap;
+}
+
+function findWordInMap(wordName, map) {
+  const key = wordName.toLowerCase();
+  if (map.has(key)) return map.get(key);
+
+  // Simple stemming fallback for common inflections
+  const fallbacks = [];
+  if (key.endsWith('ies')) fallbacks.push(key.slice(0, -3) + 'y');
+  else if (key.endsWith('es')) fallbacks.push(key.slice(0, -2));
+  else if (key.endsWith('s')) fallbacks.push(key.slice(0, -1));
+
+  if (key.endsWith('ied')) fallbacks.push(key.slice(0, -3) + 'y');
+  else if (key.endsWith('ed')) fallbacks.push(key.slice(0, -2), key.slice(0, -1));
+
+  if (key.endsWith('ying')) fallbacks.push(key.slice(0, -3) + 'ie');
+  else if (key.endsWith('ing')) fallbacks.push(key.slice(0, -3), key.slice(0, -3) + 'e');
+
+  for (const fb of fallbacks) {
+    if (map.has(fb)) return map.get(fb);
+  }
+  return null;
+}
+
+export async function enrichReadingWordBook() {
+  const data = getReadingWordBook();
+  const words = data.words || [];
+  if (words.length === 0) return;
+
+  const map = await buildDictWordMap();
+  let changed = false;
+
+  const enriched = words.map((w) => {
+    const hasPhonetic = w.usphone || w.ukphone || w.us || w.uk;
+    const hasTrans = Array.isArray(w.trans) ? w.trans.length > 0 : w.trans;
+    if (hasPhonetic && hasTrans) return w;
+
+    const lookup = findWordInMap(w.name, map);
+    if (!lookup) return w;
+
+    changed = true;
+    return {
+      ...w,
+      usphone: w.usphone || lookup.usphone,
+      ukphone: w.ukphone || lookup.ukphone,
+      us: w.us || lookup.us,
+      uk: w.uk || lookup.uk,
+      trans: hasTrans ? w.trans : lookup.trans,
+      notation: w.notation || lookup.notation,
+    };
+  });
+
+  if (changed) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({ words: enriched }));
+  }
+}
+
 export function getReadingWordBook() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);

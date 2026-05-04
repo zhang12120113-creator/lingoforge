@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ArrowLeft, Bookmark, ChevronDown, Clock, FileText, Headphones, Pause, Play, Search } from 'lucide-react'
+import { ArrowLeft, Bookmark, ChevronDown, Clock, FileText, Headphones, Pause, Play } from 'lucide-react'
 import { estimateReadingMinutes, getArticleById } from '../data/mockArticles'
 import { useReadingStore } from '../hooks/useReadingStore'
 import useStudyTracker from '../hooks/useStudyTracker'
@@ -51,23 +51,86 @@ function getWordRect(target) {
     : null
 }
 
-function wrapWordsWithSpans(html) {
-  if (!html) return html
-  // 纯文本段落（不含标签）直接全局替换
-  if (!html.includes('<')) {
-    return html.replace(
-      /\b([a-zA-Z][a-zA-Z'-]*)\b/g,
-      '<span class="word-token" data-word="$1">$1</span>'
+const isValidWord = (str) => {
+  if (!str || typeof str !== 'string') return false
+  return /[a-zA-Z]/.test(str)
+}
+
+const cleanWordForLookup = (raw) => {
+  if (!raw) return ''
+  return raw.replace(/^[^a-zA-Z]+|[^a-zA-Z]+$/g, '').toLowerCase()
+}
+
+const renderParagraph = (text, paraIndex, onWordClick) => {
+  if (!text || typeof text !== 'string') {
+    console.warn(`[Reading] Paragraph ${paraIndex} is not string:`, text)
+    return <p className="article-paragraph" key={paraIndex}>{text}</p>
+  }
+
+  let decoded = text
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+
+  const elements = []
+  const regex = /[a-zA-Z]+(?:['-][a-zA-Z0-9]+)*/g
+  let match
+  let lastIndex = 0
+
+  while ((match = regex.exec(decoded)) !== null) {
+    const rawWord = match[0]
+    const index = match.index
+
+    if (index > lastIndex) {
+      elements.push(
+        <span key={`${paraIndex}-pre-${lastIndex}`} className="non-clickable">
+          {decoded.slice(lastIndex, index)}
+        </span>
+      )
+    }
+
+    const lookupWord = cleanWordForLookup(rawWord)
+
+    if (isValidWord(lookupWord)) {
+      elements.push(
+        <span
+          key={`${paraIndex}-word-${index}`}
+          className="word-clickable cursor-pointer hover:underline hover:opacity-80 transition-opacity select-none"
+          onClick={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            onWordClick(lookupWord, getWordRect(e.target), e.target)
+          }}
+          title={lookupWord}
+        >
+          {rawWord}
+        </span>
+      )
+    } else {
+      elements.push(
+        <span key={`${paraIndex}-txt-${index}`}>{rawWord}</span>
+      )
+    }
+
+    lastIndex = index + rawWord.length
+  }
+
+  if (lastIndex < decoded.length) {
+    elements.push(
+      <span key={`${paraIndex}-post-${lastIndex}`} className="non-clickable">
+        {decoded.slice(lastIndex)}
+      </span>
     )
   }
-  // 含标签的段落，只替换标签之间的文本
-  return html.replace(/(>)([^<]*)(<)/g, (match, prefix, text, suffix) => {
-    const wrapped = text.replace(
-      /\b([a-zA-Z][a-zA-Z'-]*)\b/g,
-      '<span class="word-token" data-word="$1">$1</span>'
-    )
-    return prefix + wrapped + suffix
-  })
+
+  return (
+    <p className="article-paragraph text-[17px] md:text-lg leading-[1.85] text-content dark:text-gray-200" key={paraIndex}>
+      {elements}
+    </p>
+  )
 }
 
 function ParagraphBlock({ en, zh, index, audioState, onToggle, onSeek, onWordClick }) {
@@ -81,14 +144,6 @@ function ParagraphBlock({ en, zh, index, audioState, onToggle, onSeek, onWordCli
     const rect = e.currentTarget.getBoundingClientRect()
     const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width))
     onSeek(index, en, ratio)
-  }
-
-  function handleParagraphClick(e) {
-    const token = e.target.closest('.word-token')
-    if (token && onWordClick) {
-      e.stopPropagation()
-      onWordClick(token.dataset.word, getWordRect(token), token)
-    }
   }
 
   return (
@@ -116,11 +171,7 @@ function ParagraphBlock({ en, zh, index, audioState, onToggle, onSeek, onWordCli
 
         {/* 英文段落 */}
         <div className="flex-1 min-w-0">
-          <p
-            className="text-[17px] md:text-lg leading-[1.85] text-content dark:text-gray-200 [&_strong]:font-semibold [&_strong]:text-content [&_strong]:dark:text-gray-100 [&_em]:italic [&_em]:text-content-secondary [&_em]:dark:text-gray-300"
-            dangerouslySetInnerHTML={{ __html: wrapWordsWithSpans(en) }}
-            onClick={handleParagraphClick}
-          />
+          {renderParagraph(en, index, onWordClick)}
         </div>
       </div>
 
@@ -143,10 +194,9 @@ function ParagraphBlock({ en, zh, index, audioState, onToggle, onSeek, onWordCli
       >
         <div className="overflow-hidden">
           <div className="mt-3 pl-11 border-l-2 border-primary/30 dark:border-primary/40">
-            <p
-              className="text-[15px] md:text-base leading-[1.8] text-content-secondary dark:text-gray-400 pl-4 [&_strong]:font-semibold [&_strong]:text-content [&_strong]:dark:text-gray-200 [&_em]:not-italic [&_em]:text-content [&_em]:dark:text-gray-200"
-              dangerouslySetInnerHTML={{ __html: zh }}
-            />
+            <p className="text-[15px] md:text-base leading-[1.8] text-content-secondary dark:text-gray-400 pl-4">
+              {zh}
+            </p>
           </div>
         </div>
       </div>
@@ -205,10 +255,8 @@ export default function ArticleDetail() {
 
   // Word lookup states
   const [wordMap, setWordMap] = useState(new Map())
-  const [toolbar, setToolbar] = useState(null)
   const [popup, setPopup] = useState(null)
   const activeTokenRef = useRef(null)
-  const toolbarRef = useRef(null)
 
   useStudyTracker(article ? id : null)
 
@@ -430,135 +478,32 @@ export default function ArticleDetail() {
     }
   }
 
-  // Listen for text selection to show lookup toolbar
-  useEffect(() => {
-    const handleMouseUp = (e) => {
-      // 点击在查词 toolbar 内部时不处理，避免点击"查词"按钮时 toolbar 被意外清除
-      if (toolbarRef.current && e.target instanceof Node && toolbarRef.current.contains(e.target)) {
-        return
-      }
-
-      const selection = window.getSelection()
-      if (!selection || selection.isCollapsed) {
-        // 单击时：如果点击的是 .word-token，让 click 事件来处理，避免状态竞争
-        let target = e.target
-        if (target && target.nodeType === Node.TEXT_NODE) target = target.parentElement
-        const token = target?.closest?.('.word-token')
-        if (token) return
-
-        // 点击在非单词区域，清除 toolbar
-        setToolbar((prev) => {
-          if (prev && !popup) {
-            if (activeTokenRef.current) {
-              activeTokenRef.current.classList.remove('word-token-active')
-              activeTokenRef.current = null
-            }
-          }
-          return null
-        })
-        return
-      }
-      const text = selection.toString().trim()
-      if (!/^[a-zA-Z][a-zA-Z'-]*$/.test(text)) {
-        setToolbar(null)
-        return
-      }
-      // 从选区起点向上遍历找到 .word-token 元素
-      const range = selection.getRangeAt(0)
-      let node = range.startContainer
-      if (node.nodeType === Node.TEXT_NODE) node = node.parentElement
-      let token = node
-      while (token && token !== document.body) {
-        if (token.classList?.contains('word-token')) break
-        token = token.parentElement
-      }
-      if (token === document.body) token = null
-
-      const rects = range.getClientRects()
-      const rect = rects && rects.length > 0 ? rects[0] : range.getBoundingClientRect()
-
-      // 如果选区在 .word-token 内部（拖拽选择单词），由 mouseup 直接处理
-      // 因为拖拽选择不会触发 click 事件
-      if (token) {
-        setToolbar({ word: text.toLowerCase(), rect })
-        setPopup(null)
-        return
-      }
-
-      setToolbar({ word: text, rect })
-      setPopup(null)
-    }
-
-    const handleScroll = () => {
-      setToolbar(null)
-      window.getSelection()?.removeAllRanges()
-    }
-
-    document.addEventListener('mouseup', handleMouseUp)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => {
-      document.removeEventListener('mouseup', handleMouseUp)
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [popup])
-
-  // Click outside to close toolbar
-  useEffect(() => {
-    if (!toolbar) return
-    const handleClickOutside = (e) => {
-      if (toolbarRef.current && !toolbarRef.current.contains(e.target)) {
-        setToolbar(null)
-        window.getSelection()?.removeAllRanges()
-        if (activeTokenRef.current) {
-          activeTokenRef.current.classList.remove('word-token-active')
-          activeTokenRef.current = null
-        }
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [toolbar])
-
-  // Word click handler — shows toolbar instead of popup directly
+  // 单词点击：直接弹出查词面板
   function handleWordClick(word, rect, tokenEl) {
+    console.log('[Reading] Word clicked:', word, tokenEl)
     if (!word) return
     const cleanWord = word.toLowerCase().trim().replace(/[^a-z'-]/g, '')
     if (!cleanWord) return
 
-    // Remove previous active highlight
     if (activeTokenRef.current) {
       activeTokenRef.current.classList.remove('word-token-active')
     }
-
-    // Highlight current token
     if (tokenEl) {
       tokenEl.classList.add('word-token-active')
       activeTokenRef.current = tokenEl
     }
 
-    setToolbar({ word: cleanWord, rect })
-    setPopup(null)
-    window.getSelection()?.removeAllRanges()
-  }
-
-  function handleToolbarLookup() {
-    if (!toolbar?.word) return
-    const lookupWord = toolbar.word.toLowerCase()
-    const wordData = wordMap.get(lookupWord)
-    if (wordData) {
-      setPopup({
-        wordData,
-        rect: toolbar.rect,
-        isSaved: isInReadingWordBook(wordData.name),
-      })
-    } else {
-      setPopup({
-        wordData: { name: toolbar.word, usphone: '', ukphone: '', trans: [] },
-        rect: toolbar.rect,
-        isSaved: isInReadingWordBook(toolbar.word),
-      })
+    const wordData = wordMap.get(cleanWord) || {
+      name: cleanWord,
+      usphone: '',
+      ukphone: '',
+      trans: [],
     }
-    setToolbar(null)
+    setPopup({
+      wordData,
+      rect,
+      isSaved: isInReadingWordBook(wordData.name),
+    })
   }
 
   function handleSaveWord() {
@@ -582,7 +527,6 @@ export default function ArticleDetail() {
       activeTokenRef.current = null
     }
     setPopup(null)
-    window.getSelection()?.removeAllRanges()
   }
 
   // 切换文章或卸载时停止语音
@@ -760,34 +704,6 @@ export default function ArticleDetail() {
 
       {/* 底部空间 */}
       <div className="h-20" />
-
-      {/* 查词按钮 — 紧贴选中单词下方 */}
-      {toolbar && (
-        <div
-          ref={toolbarRef}
-          className="fixed z-[90] animate-[fadeIn_0.15s_ease-out]"
-          style={{
-            left: Math.max(
-              40,
-              Math.min(
-                toolbar.rect.left + toolbar.rect.width / 2,
-                window.innerWidth - 40
-              )
-            ),
-            top: toolbar.rect.bottom + 2,
-            transform: 'translateX(-50%)',
-          }}
-        >
-          <div className="lookup-toolbar-arrow" aria-hidden="true" />
-          <button
-            onClick={handleToolbarLookup}
-            className="flex items-center gap-1 px-2.5 py-1.5 bg-primary text-white rounded-lg shadow-md hover:opacity-90 transition-all active:scale-95 text-xs font-medium"
-          >
-            <Search className="w-3 h-3" />
-            <span>查词</span>
-          </button>
-        </div>
-      )}
 
       {/* 单词弹窗 */}
       {popup && (
