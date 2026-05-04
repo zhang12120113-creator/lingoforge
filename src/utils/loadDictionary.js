@@ -1,4 +1,5 @@
 import { loadErrorBookAsDictionary } from './errorBook.js';
+import { loadReadingWordBookAsDictionary } from './readingWordBook.js';
 
 const loaders = {
   junior: () => import('../dictionaries/junior.json'),
@@ -17,17 +18,20 @@ const loaders = {
   postgraduate: () => import('../dictionaries/postgraduate.json'),
   programmer: () => import('../dictionaries/programmer.json'),
   'error-book': () => Promise.resolve({ default: loadErrorBookAsDictionary() }),
+  'reading-word-book': () => Promise.resolve({ default: loadReadingWordBookAsDictionary() }),
 }
 
 const cache = new Map()
 
+const noCacheIds = new Set(['error-book', 'reading-word-book'])
+
 export async function loadDictionary(id) {
-  if (id !== 'error-book' && cache.has(id)) return cache.get(id)
+  if (!noCacheIds.has(id) && cache.has(id)) return cache.get(id)
   const loader = loaders[id]
   if (!loader) return null
   const mod = await loader()
   const data = mod.default ?? mod
-  if (id !== 'error-book') cache.set(id, data)
+  if (!noCacheIds.has(id)) cache.set(id, data)
   return data
 }
 

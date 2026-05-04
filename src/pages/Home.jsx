@@ -4,6 +4,7 @@ import { dictionaryMeta, categories } from '../dictionaries/meta.js'
 import { loadDictionary } from '../utils/loadDictionary.js'
 import { buildWordIndex, searchWordIndex } from '../utils/wordIndex.js'
 import { getErrorBookCount } from '../utils/errorBook.js'
+import { getReadingWordBookCount } from '../utils/readingWordBook.js'
 import { useDebounce } from '../hooks/useDebounce.js'
 import Hero from '../components/Hero'
 import Features from '../components/Features'
@@ -27,6 +28,7 @@ function Home() {
   }, [])
 
   const [searchQuery, setSearchQuery] = useState('')
+  const readingWordCount = getReadingWordBookCount()
 
   // 单词搜索:跨词库
   const [wordQuery, setWordQuery] = useState('')
@@ -311,6 +313,36 @@ function Home() {
             count={errorBookCount}
             onClick={() => navigate('/dict/error-book')}
           />
+          {/* 阅读词本卡片 */}
+          <div
+            onClick={() => navigate('/dict/reading-word-book')}
+            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border-2 border-violet-200 bg-gradient-to-br from-violet-50 to-purple-50 p-6 cursor-pointer hover:shadow-lg hover:border-violet-300 dark:border-violet-900/40 dark:from-violet-950/30 dark:to-purple-950/20 dark:hover:border-violet-700/60 dark:hover:shadow-violet-900/20 animate-card-enter glow-border-subtle transition-all duration-150 active:scale-[0.98]"
+          >
+            <div className="absolute top-0 left-0 w-full h-1 bg-violet-500 opacity-80" />
+            <div className="flex items-start justify-between">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-100 text-violet-600 dark:bg-violet-500/15 dark:text-violet-400">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-violet-900 dark:text-violet-200">阅读词本</h3>
+                  <p className="text-sm text-violet-600/80 dark:text-violet-400/70">语境中积累词汇</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4">
+              <div className="inline-flex items-center rounded-lg bg-violet-100 px-2.5 py-1 text-xs font-medium text-violet-700 dark:bg-violet-500/15 dark:text-violet-300">
+                阅读学习
+              </div>
+              <p className="mt-2 text-sm text-violet-600/70 dark:text-violet-400/60">
+                {readingWordCount > 0
+                  ? `已积累 ${readingWordCount} 个词汇`
+                  : '精选文章，在阅读中自然掌握单词'}
+              </p>
+            </div>
+          </div>
           {filteredDictionaries.map((dict, index) => {
             const colors = tagColors[dict.color] || tagColors['warm-coral'];
             return (
@@ -324,7 +356,7 @@ function Home() {
                   import('./ChapterSelect');
                 }}
                 className="group card card-hover p-6 cursor-pointer relative overflow-hidden animate-card-enter glow-border-subtle active:scale-[0.98] transition-transform duration-150"
-                style={{ animationDelay: `${(index + 1) * 0.05}s` }}
+                style={{ animationDelay: `${(index + 2) * 0.05}s` }}
               >
                 <div className={`absolute top-0 left-0 w-full h-1 ${getCategoryColor(dict.name)} opacity-80`} />
                 <div className="flex items-start justify-between mb-3">

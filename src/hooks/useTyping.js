@@ -117,7 +117,7 @@ function playSound(type) {
   } catch (e) {}
 }
 
-export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isErrorBookMode = false, dictName = '') {
+export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isErrorBookMode = false, dictName = '', autoRemoveErrorWord = true) {
   const [wordIndex, setWordIndex] = useState(0);
   const [currentInput, setCurrentInput] = useState('');
   const [isWrong, setIsWrong] = useState(false);
@@ -129,6 +129,7 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
   const correctCountRef = useRef(0);
   const repeatCountRef = useRef(0);
   const currentInputRef = useRef('');
+  const hasWrongInCurrentWordRef = useRef(false);
   const wordsRef = useRef(words);
   wordsRef.current = words;
 
@@ -159,6 +160,7 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
     inputCountRef.current = 0;
     correctCountRef.current = 0;
     repeatCountRef.current = 0;
+    hasWrongInCurrentWordRef.current = false;
     if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
     return () => {
       timeoutsRef.current.forEach(clearTimeout);
@@ -216,7 +218,7 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
       if (nextInput === target) {
         if (soundEnabled) playSound('correct');
         correctCountRef.current += target.length;
-        if (isErrorBookMode) {
+        if (isErrorBookMode && autoRemoveErrorWord && !hasWrongInCurrentWordRef.current) {
           removeFromErrorBook(currentWord.name);
         }
         const completedTimes = repeatCountRef.current + 1;
@@ -234,6 +236,7 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
             currentInputRef.current = '';
             setCurrentInput('');
             repeatCountRef.current = 0;
+            hasWrongInCurrentWordRef.current = false;
             const t = setTimeout(() => speakWord(wordsRef.current[wordIndex + 1]?.name), 100);
             timeoutsRef.current.push(t);
           }
@@ -250,6 +253,7 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
       currentInputRef.current = nextInput;
       setCurrentInput(nextInput);
       setIsWrong(true);
+      hasWrongInCurrentWordRef.current = true;
 
       if (!isErrorBookMode && currentWord) {
         addToErrorBook({
@@ -262,7 +266,7 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
 
       setTimeout(() => { currentInputRef.current = ''; setCurrentInput(''); setIsWrong(false); }, 300);
     }
-  }, [currentWord, wordIndex, words, isFinished, startTime, speakWord, soundEnabled, wordRepeatCount, isErrorBookMode, dictName]);
+  }, [currentWord, wordIndex, words, isFinished, startTime, speakWord, soundEnabled, wordRepeatCount, isErrorBookMode, dictName, autoRemoveErrorWord]);
 
   const jumpTo = useCallback((index) => {
     if (index < 0 || index >= wordsRef.current.length) return;
@@ -272,6 +276,7 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
     setIsWrong(false);
     setIsFinished(false);
     repeatCountRef.current = 0;
+    hasWrongInCurrentWordRef.current = false;
     if (soundEnabled) {
       const t = setTimeout(() => speakWord(wordsRef.current[index]?.name), 100);
       timeoutsRef.current.push(t);
@@ -282,6 +287,7 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
     setWordIndex(0); currentInputRef.current = ''; setCurrentInput(''); setIsWrong(false); setIsFinished(false); setStartTime(null);
     setStats({ time: 0, inputCount: 0, correctCount: 0, wpm: 0, accuracy: 0 });
     inputCountRef.current = 0; correctCountRef.current = 0; repeatCountRef.current = 0;
+    hasWrongInCurrentWordRef.current = false;
     if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
     if (soundEnabled && wordsRef.current.length > 0) {
       const t = setTimeout(() => speakWord(wordsRef.current[0]?.name), 100);

@@ -1,4 +1,5 @@
 import { getErrorBookCount, loadErrorBookAsDictionary } from '../utils/errorBook.js';
+import { getReadingWordBookCount, loadReadingWordBookAsDictionary } from '../utils/readingWordBook.js';
 
 const warmColors = [
   'warm-coral',
@@ -43,6 +44,19 @@ export const getMeta = (id) => {
       totalChapters: dict.chapters?.length || 0,
       totalWords: count,
       color: 'warm-rose',
+    };
+  }
+  if (id === 'reading-word-book') {
+    const dict = loadReadingWordBookAsDictionary();
+    const count = getReadingWordBookCount();
+    return {
+      id: 'reading-word-book',
+      name: '阅读词本',
+      category: '我的',
+      description: '语境中积累的词汇',
+      totalChapters: dict.chapters?.length || 0,
+      totalWords: count,
+      color: 'warm-violet',
     };
   }
   return dictionaryMeta.find((d) => d.id === id);

@@ -6,6 +6,7 @@ const DEFAULT_CONFIG = {
   showPhonetic: true,
   dictationMode: false,
   wordRepeatCount: 1,
+  autoRemoveErrorWord: true,
 };
 
 const VALID_THEMES = ['light', 'gray', 'star', 'warm'];

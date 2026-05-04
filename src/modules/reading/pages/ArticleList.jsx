@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Bookmark, ChevronDown } from 'lucide-react'
+import { Bookmark, ChevronDown, BookOpen } from 'lucide-react'
 import { mockArticles, categoryOptions, difficultyOptions } from '../data/mockArticles'
 import { useReadingStore } from '../hooks/useReadingStore'
+import { getReadingWordBookCount } from '../../../utils/readingWordBook.js'
 import ArticleCard from '../components/ArticleCard'
 
 function Dropdown({ label, value, options, onChange }) {
@@ -57,6 +58,11 @@ export default function ArticleList() {
   const [categoryFilter, setCategoryFilter] = useState('全部')
   const [difficultyFilter, setDifficultyFilter] = useState('全部')
   const [bookmarkOnly, setBookmarkOnly] = useState(false)
+  const [readingWordCount, setReadingWordCount] = useState(0)
+
+  useEffect(() => {
+    setReadingWordCount(getReadingWordBookCount())
+  }, [])
 
   const filtered = useMemo(() => {
     return mockArticles.filter((a) => {
@@ -84,6 +90,18 @@ export default function ArticleList() {
 
             {/* 筛选栏 */}
             <div className="flex flex-wrap items-center gap-2 md:gap-3">
+              <button
+                onClick={() => navigate('/dict/reading-word-book')}
+                className="flex items-center gap-2 px-4 py-2 glass-card rounded-button text-sm font-medium text-content-secondary dark:text-gray-300 hover:border-primary/40 transition-colors cursor-pointer"
+              >
+                <BookOpen className="w-4 h-4" />
+                <span>阅读词本</span>
+                {readingWordCount > 0 && (
+                  <span className="ml-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-violet-100 dark:bg-violet-500/20 px-1.5 text-xs font-semibold text-violet-700 dark:text-violet-300">
+                    {readingWordCount}
+                  </span>
+                )}
+              </button>
               <Dropdown
                 label="全部类型"
                 value={categoryFilter}

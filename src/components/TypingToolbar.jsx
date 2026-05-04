@@ -1,6 +1,6 @@
 import { useState, memo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Trash2 } from 'lucide-react';
+import { Trash2, Zap } from 'lucide-react';
 
 const REPEAT_OPTIONS = [
   { value: 1, label: '1次' },
@@ -10,7 +10,7 @@ const REPEAT_OPTIONS = [
   { value: 0, label: '无限' },
 ];
 
-const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, chapters, config, toggleConfig, updateConfig, onOpenWrongBook, isErrorBookMode, onDeleteCurrentWord }) {
+const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, chapters, config, toggleConfig, updateConfig, onOpenWrongBook, isErrorBookMode, isReadingWordBookMode, onDeleteCurrentWord }) {
   const navigate = useNavigate();
   const [showChapterMenu, setShowChapterMenu] = useState(false);
   const [showRepeatMenu, setShowRepeatMenu] = useState(false);
@@ -29,6 +29,18 @@ const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, ch
     <div className="flex flex-col md:flex-row items-center gap-1 md:gap-1">
       {/* 第一行：核心功能 */}
       <div className="flex items-center gap-1 md:gap-1">
+        {/* 错题本：自动消除开关 */}
+        {isErrorBookMode && (
+          <button
+            onClick={() => toggleConfig('autoRemoveErrorWord')}
+            className={`${toolbarBtn} ${config.autoRemoveErrorWord ? activeBtn : 'opacity-40'}`}
+            title={config.autoRemoveErrorWord ? '自动消除：开启（一次打对自动移出错题本）' : '自动消除：关闭（仅手动移除）'}
+          >
+            <Zap className={iconCls} />
+            <span className="text-[11px] hidden sm:inline">自动消除</span>
+          </button>
+        )}
+
         {/* 单词循环次数 */}
         <div className="relative">
           <button onClick={() => setShowRepeatMenu(!showRepeatMenu)} className={toolbarBtn} title="单词循环次数">
@@ -49,7 +61,7 @@ const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, ch
           </div></>)}
         </div>
 
-        {!isErrorBookMode && (
+        {!isErrorBookMode && !isReadingWordBookMode && (
           <div className="relative">
             <button onClick={() => setShowChapterMenu(!showChapterMenu)} className={toolbarBtn} title="切换章节">
               <svg className={iconCls} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
@@ -84,8 +96,8 @@ const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, ch
           <span className="text-[11px] hidden sm:inline">错题本</span>
         </button>
 
-        {isErrorBookMode && onDeleteCurrentWord && (
-          <button onClick={onDeleteCurrentWord} className={toolbarBtn} title="练熟了，移出错题本">
+        {(isErrorBookMode || isReadingWordBookMode) && onDeleteCurrentWord && (
+          <button onClick={onDeleteCurrentWord} className={toolbarBtn} title={isErrorBookMode ? '练熟了，移出错题本' : '已掌握，移出阅读词本'}>
             <Trash2 className={`${iconCls} text-red-500 hover:text-red-600`} />
             <span className="text-[11px] hidden sm:inline text-red-500">移除</span>
           </button>

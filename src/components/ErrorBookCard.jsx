@@ -3,17 +3,14 @@ export default function ErrorBookCard({ count, onClick }) {
 
   return (
     <div
-      onClick={hasErrors ? onClick : undefined}
-      className={`
+      onClick={onClick}
+      className="
         group relative flex flex-col justify-between overflow-hidden
         rounded-2xl border-2 p-6
         animate-card-enter glow-border-subtle
         transition-all duration-150 active:scale-[0.98]
-        ${hasErrors
-          ? 'border-red-200 bg-gradient-to-br from-red-50 to-orange-50 cursor-pointer hover:shadow-lg hover:border-red-300 dark:border-red-900/40 dark:from-red-950/30 dark:to-orange-950/20 dark:hover:border-red-700/60 dark:hover:shadow-red-900/20'
-          : 'border-red-100 bg-gradient-to-br from-red-50/60 to-orange-50/60 cursor-not-allowed opacity-60 dark:border-red-900/20 dark:from-red-950/10 dark:to-orange-950/10'
-        }
-      `}
+        border-red-200 bg-gradient-to-br from-red-50 to-orange-50 cursor-pointer hover:shadow-lg hover:border-red-300 dark:border-red-900/40 dark:from-red-950/30 dark:to-orange-950/20 dark:hover:border-red-700/60 dark:hover:shadow-red-900/20
+      "
     >
       {/* 顶部红色条 */}
       <div className="absolute top-0 left-0 w-full h-1 bg-red-500 opacity-80" />
