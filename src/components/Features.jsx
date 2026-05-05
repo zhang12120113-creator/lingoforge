@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+
 const features = [
-  { icon: '⌨️', title: '打字记忆', desc: '手指动起来，单词记得牢' },
-  { icon: '📚', title: '精准词库', desc: '中高考到雅思托福全覆盖' },
-  { icon: '🎯', title: '科学分章', desc: '每章 25 词，碎片时间也能学' },
-  { icon: '🌙', title: '深色护眼', desc: '夜间学习不刺眼' },
+  { icon: '⌨️', title: '打字记忆', desc: '手指动起来，单词记得牢', path: '/word' },
+  { icon: '📖', title: '阅读听力', desc: '沉浸阅读，逐句精听', path: '/reading' },
+  { icon: '📺', title: '语料中心', desc: '视频语料，沉浸学习', path: '/listening' },
+  { icon: '🎯', title: '训练中心', desc: '专项训练，全面提升', path: '/training' },
 ];
 
 function scrollToWordbooks() {
@@ -15,6 +17,16 @@ function scrollToWordbooks() {
 }
 
 export default function Features() {
+  const navigate = useNavigate();
+
+  const handleClick = (feature) => {
+    if (feature.path === '/word') {
+      scrollToWordbooks();
+    } else {
+      navigate(feature.path);
+    }
+  };
+
   return (
     <section className="w-full py-16 px-4 bg-slate-50 dark:bg-slate-950 transition-colors">
       <div className="max-w-6xl mx-auto">
@@ -22,7 +34,7 @@ export default function Features() {
           {features.map((f, i) => (
             <div
               key={i}
-              onClick={scrollToWordbooks}
+              onClick={() => handleClick(f)}
               className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-700 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
               <div className="text-3xl mb-3">{f.icon}</div>

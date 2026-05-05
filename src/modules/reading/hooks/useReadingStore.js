@@ -9,6 +9,7 @@ const defaultState = {
   dailyReadingSeconds: {},
   dailyTypingSeconds: {},
   dailyListeningSeconds: {},
+  dailyTrainingSeconds: {},
 }
 
 function todayKey() {
@@ -32,6 +33,7 @@ function loadFromStorage() {
       dailyReadingSeconds: parsed.dailyReadingSeconds && typeof parsed.dailyReadingSeconds === 'object' ? parsed.dailyReadingSeconds : {},
       dailyTypingSeconds: parsed.dailyTypingSeconds && typeof parsed.dailyTypingSeconds === 'object' ? parsed.dailyTypingSeconds : {},
       dailyListeningSeconds: parsed.dailyListeningSeconds && typeof parsed.dailyListeningSeconds === 'object' ? parsed.dailyListeningSeconds : {},
+      dailyTrainingSeconds: parsed.dailyTrainingSeconds && typeof parsed.dailyTrainingSeconds === 'object' ? parsed.dailyTrainingSeconds : {},
     }
   } catch {
     return { ...defaultState }
@@ -39,6 +41,7 @@ function loadFromStorage() {
 }
 
 let cache = loadFromStorage()
+let bookmarksSet = new Set(cache.bookmarks)
 const listeners = new Set()
 
 function persist() {
@@ -70,6 +73,7 @@ export function useReadingStore() {
     dailyReadingSeconds: cache.dailyReadingSeconds,
     dailyTypingSeconds: cache.dailyTypingSeconds,
     dailyListeningSeconds: cache.dailyListeningSeconds,
+    dailyTrainingSeconds: cache.dailyTrainingSeconds,
     getProgress(id) {
       return cache.readProgress[id] || 0
     },
@@ -77,7 +81,7 @@ export function useReadingStore() {
       return cache.lastReadAt[id] || null
     },
     isBookmarked(id) {
-      return cache.bookmarks.includes(id)
+      return bookmarksSet.has(id)
     },
     setProgress(id, percent) {
       const clamped = Math.max(0, Math.min(100, Math.round(percent)))
@@ -99,11 +103,13 @@ export function useReadingStore() {
       persist()
     },
     toggleBookmark(id) {
-      const idx = cache.bookmarks.indexOf(id)
-      const next = [...cache.bookmarks]
-      if (idx === -1) next.push(id)
-      else next.splice(idx, 1)
-      cache = { ...cache, bookmarks: next }
+      if (bookmarksSet.has(id)) {
+        bookmarksSet.delete(id)
+        cache = { ...cache, bookmarks: cache.bookmarks.filter((x) => x !== id) }
+      } else {
+        bookmarksSet.add(id)
+        cache = { ...cache, bookmarks: [...cache.bookmarks, id] }
+      }
       persist()
     },
     addReadingSeconds(seconds) {
@@ -126,6 +132,9 @@ export function useReadingStore() {
     getDailyListeningSeconds(dateKey) {
       return cache.dailyListeningSeconds[dateKey] || 0
     },
+    getDailyTrainingSeconds(dateKey) {
+      return cache.dailyTrainingSeconds[dateKey] || 0
+    },
     getTotalReadingSeconds() {
       return Object.values(cache.dailyReadingSeconds).reduce((sum, n) => sum + (n || 0), 0)
     },
@@ -135,8 +144,16 @@ export function useReadingStore() {
     getTotalListeningSeconds() {
       return Object.values(cache.dailyListeningSeconds).reduce((sum, n) => sum + (n || 0), 0)
     },
+    getTotalTrainingSeconds() {
+      return Object.values(cache.dailyTrainingSeconds).reduce((sum, n) => sum + (n || 0), 0)
+    },
     getTotalStudySeconds() {
-      return this.getTotalReadingSeconds() + this.getTotalTypingSeconds() + this.getTotalListeningSeconds()
+      return (
+        Object.values(cache.dailyReadingSeconds).reduce((sum, n) => sum + (n || 0), 0) +
+        Object.values(cache.dailyTypingSeconds).reduce((sum, n) => sum + (n || 0), 0) +
+        Object.values(cache.dailyListeningSeconds).reduce((sum, n) => sum + (n || 0), 0) +
+        Object.values(cache.dailyTrainingSeconds).reduce((sum, n) => sum + (n || 0), 0)
+      )
     },
     addTypingSeconds(seconds) {
       const sec = Math.floor(seconds)
@@ -157,6 +174,17 @@ export function useReadingStore() {
       cache = {
         ...cache,
         dailyListeningSeconds: { ...cache.dailyListeningSeconds, [key]: prev + sec },
+      }
+      persist()
+    },
+    addTrainingSeconds(seconds) {
+      const sec = Math.floor(seconds)
+      if (!Number.isFinite(sec) || sec < 1) return
+      const key = todayKey()
+      const prev = cache.dailyTrainingSeconds[key] || 0
+      cache = {
+        ...cache,
+        dailyTrainingSeconds: { ...cache.dailyTrainingSeconds, [key]: prev + sec },
       }
       persist()
     },

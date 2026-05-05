@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { ArrowRight, Bookmark, Volume2 } from 'lucide-react'
 import { formatLastRead } from '../hooks/useReadingStore'
 
@@ -29,7 +30,7 @@ const LEVEL_LABEL = {
 
 const DEFAULT_TAG = 'bg-gray-100 text-gray-600 dark:bg-white/[0.06] dark:text-gray-300'
 
-export default function ArticleCard({
+function ArticleCard({
   article,
   readPercent = 0,
   lastReadAt,
@@ -45,7 +46,7 @@ export default function ArticleCard({
   return (
     <div
       onClick={onClick}
-      className="group card card-hover relative overflow-hidden cursor-pointer animate-card-enter glow-border-subtle active:scale-[0.98] transition-transform duration-150 flex flex-col h-full bg-white dark:bg-white/[0.03] rounded-xl shadow-sm"
+      className="group card card-hover relative overflow-hidden cursor-pointer glow-border-subtle active:scale-[0.98] transition-transform duration-150 flex flex-col h-full bg-white dark:bg-white/[0.03] rounded-xl shadow-sm"
     >
       {/* 收藏按钮 */}
       <button
@@ -141,3 +142,5 @@ export default function ArticleCard({
     </div>
   )
 }
+
+export default memo(ArticleCard)

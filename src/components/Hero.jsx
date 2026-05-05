@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">
+        <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-4">
           LingoForge
           <span
             className={`inline-block ml-1 w-[3px] h-[0.9em] bg-indigo-400 align-middle transition-opacity duration-100 ${
@@ -37,12 +37,8 @@ export default function Hero() {
           />
         </h1>
 
-        <p className="text-xl md:text-2xl text-slate-300 mb-2 font-light">
-          打字背单词，一举两得
-        </p>
-
-        <p className="text-sm md:text-base text-slate-400 mb-8 max-w-lg mx-auto">
-          15 大精准词库 · 科学分章记忆 · 沉浸式打字练习
+        <p className="text-2xl md:text-4xl text-slate-300 mb-8 font-light">
+          Nothing is impossible.
         </p>
 
         <div className="flex justify-center items-center">

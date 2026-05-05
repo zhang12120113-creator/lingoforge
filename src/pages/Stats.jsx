@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Clock, BookOpen, Calendar, Keyboard, Headphones } from 'lucide-react'
+import { Clock, BookOpen, Calendar, Keyboard, Headphones, Zap } from 'lucide-react'
 import { useReadingStore } from '../modules/reading/hooks/useReadingStore'
 
 const WEEKDAY_LABEL = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
@@ -102,7 +102,7 @@ export default function Stats() {
       const d = new Date(today)
       d.setDate(today.getDate() - (6 - i))
       const key = dayKey(d)
-      const seconds = store.getDailySeconds(key) + store.getDailyTypingSeconds(key) + store.getDailyListeningSeconds(key)
+      const seconds = store.getDailySeconds(key) + store.getDailyTypingSeconds(key) + store.getDailyListeningSeconds(key) + store.getDailyTrainingSeconds(key)
       return {
         key,
         label: WEEKDAY_LABEL[d.getDay()],
@@ -111,13 +111,13 @@ export default function Stats() {
       }
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [store.dailyReadingSeconds, store.dailyTypingSeconds, store.dailyListeningSeconds])
+  }, [store.dailyReadingSeconds, store.dailyTypingSeconds, store.dailyListeningSeconds, store.dailyTrainingSeconds])
 
-  const totalMinutes = Math.round(store.getTotalStudySeconds() / 60)
   const totalReadingMinutes = Math.round(store.getTotalReadingSeconds() / 60)
   const totalTypingMinutes = Math.round(store.getTotalTypingSeconds() / 60)
   const totalListeningMinutes = Math.round(store.getTotalListeningSeconds() / 60)
-  const completedCount = store.getCompletedArticleCount()
+  const totalTrainingMinutes = Math.round(store.getTotalTrainingSeconds() / 60)
+  const totalMinutes = totalReadingMinutes + totalTypingMinutes + totalListeningMinutes + totalTrainingMinutes
 
   return (
     <div className="min-h-screen animate-page-fade-in">
@@ -127,7 +127,7 @@ export default function Stats() {
           <p className="text-content-secondary dark:text-gray-400">让每一次进步都看得见。</p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-6 md:mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 mb-6 md:mb-8">
           <StatsCard
             label="累计学习"
             value={totalMinutes}
@@ -141,8 +141,9 @@ export default function Stats() {
             Icon={Keyboard}
           />
           <StatsCard
-            label="阅读文章"
-            value={completedCount}
+            label="阅读听力"
+            value={totalReadingMinutes}
+            unit="m"
             Icon={BookOpen}
           />
           <StatsCard
@@ -150,6 +151,12 @@ export default function Stats() {
             value={totalListeningMinutes}
             unit="m"
             Icon={Headphones}
+          />
+          <StatsCard
+            label="训练中心"
+            value={totalTrainingMinutes}
+            unit="m"
+            Icon={Zap}
           />
         </div>
 

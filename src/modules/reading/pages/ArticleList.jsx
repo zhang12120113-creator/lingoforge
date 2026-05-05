@@ -1,5 +1,14 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import {
+  useCallback,
+  useDeferredValue,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  forwardRef,
+} from 'react'
 import { useNavigate } from 'react-router-dom'
+import { VirtuosoGrid } from 'react-virtuoso'
 import { Bookmark, ChevronDown, BookOpen, Search, Volume2 } from 'lucide-react'
 import {
   mockArticles,
@@ -58,6 +67,23 @@ function Dropdown({ label, value, options, onChange, formatOption }) {
   )
 }
 
+// VirtuosoGrid 自定义 List/Item 组件，提供响应式网格布局
+const ListComponent = forwardRef(function ListComponent(props, ref) {
+  const { className: _omit, ...rest } = props
+  return (
+    <div
+      ref={ref}
+      {...rest}
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+    />
+  )
+})
+
+const ItemComponent = (props) => {
+  const { className: _omit, ...rest } = props
+  return <div {...rest} className="h-full" />
+}
+
 export default function ArticleList() {
   const navigate = useNavigate()
   const store = useReadingStore()
@@ -65,6 +91,7 @@ export default function ArticleList() {
   const [categoryFilter, setCategoryFilter] = useState('全部')
   const [yearFilter, setYearFilter] = useState('全部')
   const [searchQuery, setSearchQuery] = useState('')
+  const deferredQuery = useDeferredValue(searchQuery)
   const [bookmarkOnly, setBookmarkOnly] = useState(false)
   const [readingWordCount, setReadingWordCount] = useState(0)
   const scrollRestoredRef = useRef(false)
@@ -76,19 +103,32 @@ export default function ArticleList() {
     setReadingWordCount(getReadingWordBookCount())
     const savedScroll = sessionStorage.getItem('reading_list_scroll')
     if (savedScroll !== null) {
-      window.scrollTo({ top: parseInt(savedScroll, 10), behavior: 'instant' })
+      const top = parseInt(savedScroll, 10)
       sessionStorage.removeItem('reading_list_scroll')
+      // 等 VirtuosoGrid 完成首次渲染后再恢复滚动位置
+      setTimeout(() => {
+        window.scrollTo({ top, behavior: 'instant' })
+      }, 100)
     } else {
       window.scrollTo({ top: 0, behavior: 'instant' })
     }
   }, [])
 
+  // bookmarks 数组转 Set，加速 has 查找并避免每次 filter/render 都遍历数组
+  const bookmarkSet = useMemo(
+    () => new Set(store.bookmarks),
+    [store.bookmarks]
+  )
+
+  // 缓存 years.map(String)，避免每次渲染重建数组
+  const yearOptions = useMemo(() => years.map(String), [])
+
   const filtered = useMemo(() => {
-    const q = searchQuery.trim().toLowerCase()
+    const q = deferredQuery.trim().toLowerCase()
     return mockArticles.filter((a) => {
       if (categoryFilter !== '全部' && a.category !== categoryFilter) return false
       if (yearFilter !== '全部' && String(a.year) !== yearFilter) return false
-      if (bookmarkOnly && !store.bookmarks.includes(a.id)) return false
+      if (bookmarkOnly && !bookmarkSet.has(a.id)) return false
       if (q) {
         const hay = (
           (a.enTitle || a.title || '') +
@@ -101,7 +141,62 @@ export default function ArticleList() {
       }
       return true
     })
-  }, [categoryFilter, yearFilter, bookmarkOnly, searchQuery, store.bookmarks])
+  }, [categoryFilter, yearFilter, bookmarkOnly, deferredQuery, bookmarkSet])
+
+  // 稳定的事件回调
+  const handleArticleClick = useCallback(
+    (id) => {
+      sessionStorage.setItem('reading_list_scroll', String(window.scrollY))
+      navigate(`/reading/${id}`)
+    },
+    [navigate]
+  )
+
+  const handleToggleBookmark = useCallback(
+    (id) => {
+      store.toggleBookmark(id)
+    },
+    [store]
+  )
+
+  const handleCategoryChange = useCallback((value) => {
+    setCategoryFilter(value)
+  }, [])
+
+  const handleYearChange = useCallback((value) => {
+    setYearFilter(value)
+  }, [])
+
+  const handleBookmarkOnlyToggle = useCallback(() => {
+    setBookmarkOnly((v) => !v)
+  }, [])
+
+  const handleSearchChange = useCallback((e) => {
+    setSearchQuery(e.target.value)
+  }, [])
+
+  const handleNavigateWordBook = useCallback(() => {
+    navigate('/dict/reading-word-book')
+  }, [navigate])
+
+  const virtuosoComponents = useMemo(
+    () => ({ List: ListComponent, Item: ItemComponent }),
+    []
+  )
+
+  const itemContent = useCallback(
+    (index, article) => (
+      <ArticleCard
+        article={article}
+        readPercent={store.getProgress(article.id)}
+        lastReadAt={store.getLastReadAt(article.id)}
+        isBookmarked={bookmarkSet.has(article.id)}
+        onClick={() => handleArticleClick(article.id)}
+        onToggleBookmark={handleToggleBookmark}
+      />
+    ),
+    [store, bookmarkSet, handleArticleClick, handleToggleBookmark]
+  )
 
   return (
     <div className="min-h-screen bg-background dark:bg-transparent p-4 md:p-6 transition-colors duration-500 animate-page-fade-in">
@@ -138,7 +233,7 @@ export default function ArticleList() {
             {/* 筛选栏 */}
             <div className="flex flex-wrap items-center gap-2 md:gap-3">
               <button
-                onClick={() => navigate('/dict/reading-word-book')}
+                onClick={handleNavigateWordBook}
                 className="flex items-center gap-2 px-4 py-2 glass-card rounded-button text-sm font-medium text-content-secondary dark:text-gray-300 hover:border-primary/40 transition-colors cursor-pointer"
               >
                 <BookOpen className="w-4 h-4" />
@@ -153,16 +248,16 @@ export default function ArticleList() {
                 label="全部分类"
                 value={categoryFilter}
                 options={categories}
-                onChange={setCategoryFilter}
+                onChange={handleCategoryChange}
               />
               <Dropdown
                 label="全部年份"
                 value={yearFilter}
-                options={years.map(String)}
-                onChange={setYearFilter}
+                options={yearOptions}
+                onChange={handleYearChange}
               />
               <button
-                onClick={() => setBookmarkOnly((v) => !v)}
+                onClick={handleBookmarkOnlyToggle}
                 className={`flex items-center gap-2 px-4 py-2 rounded-button text-sm font-medium transition-colors cursor-pointer ${
                   bookmarkOnly
                     ? 'bg-primary text-white shadow-sm'
@@ -188,36 +283,23 @@ export default function ArticleList() {
             <input
               type="text"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={handleSearchChange}
               placeholder="搜索标题或描述..."
               className="w-full pl-10 pr-4 py-2.5 bg-surface border border-gray-200 dark:border-white/[0.08] rounded-button text-sm text-content placeholder-gray-400 focus:outline-none focus:border-primary/50 transition-all"
             />
           </div>
         </div>
 
-        {/* 卡片网格 */}
+        {/* 卡片网格 - 虚拟滚动 */}
         {filtered.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.map((article, index) => (
-              <div
-                key={article.id}
-                style={{ animationDelay: `${index * 0.05}s` }}
-                className="animate-card-enter h-full"
-              >
-                <ArticleCard
-                  article={article}
-                  readPercent={store.getProgress(article.id)}
-                  lastReadAt={store.getLastReadAt(article.id)}
-                  isBookmarked={store.isBookmarked(article.id)}
-                  onClick={() => {
-                    sessionStorage.setItem('reading_list_scroll', String(window.scrollY))
-                    navigate(`/reading/${article.id}`)
-                  }}
-                  onToggleBookmark={(id) => store.toggleBookmark(id)}
-                />
-              </div>
-            ))}
-          </div>
+          <VirtuosoGrid
+            useWindowScroll
+            data={filtered}
+            components={virtuosoComponents}
+            itemContent={itemContent}
+            overscan={400}
+            computeItemKey={(_, article) => article.id}
+          />
         ) : (
           <div className="glass-card rounded-card p-12 text-center">
             <p className="text-content-secondary dark:text-gray-300 mb-2">没有匹配的文章</p>

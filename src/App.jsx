@@ -10,6 +10,8 @@ const Typing = lazy(() => import('./pages/Typing'))
 const Stats = lazy(() => import('./pages/Stats'))
 const ReadingModule = lazy(() => import('./modules/reading'))
 const ListeningPlaceholder = lazy(() => import('./modules/listening/ListeningPlaceholder'))
+const TrainingCenter = lazy(() => import('./pages/TrainingCenter'))
+const PersonalCenter = lazy(() => import('./pages/PersonalCenter'))
 
 function App() {
   return (
@@ -32,6 +34,8 @@ function App() {
             <Route path="/read/*" element={<ReadingModule />} />
             <Route path="/reading/*" element={<ReadingModule />} />
             <Route path="/listening" element={<ListeningPlaceholder />} />
+            <Route path="/training" element={<TrainingCenter />} />
+            <Route path="/profile" element={<PersonalCenter />} />
             <Route path="/stats" element={<Stats />} />
             <Route path="/dict/:dictId" element={<ChapterSelect />} />
             <Route path="/typing/:dictId/:chapterId" element={<Typing />} />
