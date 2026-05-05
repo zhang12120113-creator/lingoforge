@@ -3,11 +3,92 @@ import { X, Volume2, Check, BookOpen } from 'lucide-react'
 
 function playWordTTS(word) {
   if (!word) return
-  window.speechSynthesis.cancel()
-  const utterance = new SpeechSynthesisUtterance(word)
-  utterance.lang = 'en-US'
-  utterance.rate = 0.9
-  window.speechSynthesis.speak(utterance)
+  const trimmed = String(word).trim()
+  if (!trimmed) return
+
+  try {
+    const audio = new Audio(
+      `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(trimmed)}&type=2`
+    )
+
+    let timeoutId = null
+    const cleanup = () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId)
+        timeoutId = null
+      }
+      audio.onplay = null
+      audio.onerror = null
+      audio.onstalled = null
+      audio.onabort = null
+      audio.oncanplaythrough = null
+    }
+
+    const onFail = () => {
+      cleanup()
+      fallbackSpeak(trimmed)
+    }
+
+    audio.onerror = onFail
+    audio.onstalled = onFail
+    audio.onabort = onFail
+
+    audio.onplay = cleanup
+    audio.oncanplaythrough = cleanup
+
+    timeoutId = setTimeout(() => {
+      cleanup()
+      audio.pause()
+      audio.src = ''
+      fallbackSpeak(trimmed)
+    }, 3000)
+
+    const result = audio.play()
+    if (result && typeof result.catch === 'function') {
+      result.catch(() => {
+        cleanup()
+        fallbackSpeak(trimmed)
+      })
+    }
+  } catch {
+    fallbackSpeak(trimmed)
+  }
+}
+
+function fallbackSpeak(text) {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
+
+  const doSpeak = () => {
+    try {
+      window.speechSynthesis.cancel()
+      const utterance = new SpeechSynthesisUtterance(text)
+      utterance.lang = 'en-US'
+      utterance.rate = 0.9
+
+      const voices = window.speechSynthesis.getVoices()
+      const enVoice = voices.find((v) => v.lang.startsWith('en'))
+      if (enVoice) utterance.voice = enVoice
+
+      utterance.onerror = () => {}
+      window.speechSynthesis.speak(utterance)
+    } catch {
+      // 静默失败
+    }
+  }
+
+  const voices = window.speechSynthesis.getVoices()
+  if (voices.length > 0) {
+    doSpeak()
+  } else {
+    window.speechSynthesis.onvoiceschanged = () => {
+      window.speechSynthesis.onvoiceschanged = null
+      doSpeak()
+    }
+    setTimeout(() => {
+      window.speechSynthesis.onvoiceschanged = null
+      doSpeak()
+    }, 1000)
+  }
 }
 
 function parseTrans(trans) {

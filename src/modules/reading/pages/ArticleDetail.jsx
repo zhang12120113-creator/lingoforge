@@ -56,6 +56,78 @@ const isValidWord = (str) => {
   return /[a-zA-Z]/.test(str)
 }
 
+// 按句子切分长文本，避免 Android Chrome ~200 字符 TTS 限制
+function splitIntoChunks(text, maxLen = 180) {
+  const sentences = text.split(/(?<=[.!?。！？]\s*)/)
+  const chunks = []
+  let current = ''
+  for (const s of sentences) {
+    if (!s) continue
+    if (current.length + s.length <= maxLen) {
+      current += s
+    } else {
+      if (current) chunks.push(current.trim())
+      current = s.length > maxLen ? s.slice(0, maxLen) : s
+    }
+  }
+  if (current) chunks.push(current.trim())
+  return chunks.length ? chunks : [text.slice(0, maxLen)]
+}
+
+function waitForVoices(timeout = 2000) {
+  return new Promise((resolve) => {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+      resolve([])
+      return
+    }
+    const synth = window.speechSynthesis
+    const initial = synth.getVoices()
+    if (initial && initial.length) {
+      resolve(initial)
+      return
+    }
+    let resolved = false
+    const finish = (v) => {
+      if (resolved) return
+      resolved = true
+      synth.removeEventListener('voiceschanged', onChanged)
+      clearInterval(poll)
+      clearTimeout(to)
+      resolve(v || synth.getVoices() || [])
+    }
+    const onChanged = () => {
+      const list = synth.getVoices()
+      if (list && list.length) finish(list)
+    }
+    synth.addEventListener('voiceschanged', onChanged)
+    const poll = setInterval(() => {
+      const list = synth.getVoices()
+      if (list && list.length) finish(list)
+    }, 100)
+    const to = setTimeout(() => finish(), timeout)
+  })
+}
+
+function selectEnglishVoice() {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return null
+  const voices = window.speechSynthesis.getVoices() || []
+  if (!voices.length) return null
+  return (
+    voices.find((v) => v.lang === 'en-US') ||
+    voices.find((v) => v.lang === 'en-GB') ||
+    voices.find((v) => /^en([-_]|$)/i.test(v.lang || '')) ||
+    null
+  )
+}
+
+function createEnglishUtterance(text, voice = null) {
+  const u = new SpeechSynthesisUtterance(text)
+  u.lang = 'en-US'
+  u.rate = 0.9
+  if (voice) u.voice = voice
+  return u
+}
+
 const cleanWordForLookup = (raw) => {
   if (!raw) return ''
   return raw.replace(/^[^a-zA-Z]+|[^a-zA-Z]+$/g, '').toLowerCase()
@@ -279,7 +351,9 @@ export default function ArticleDetail() {
   const utteranceRef = useRef(null)
   const timerRef = useRef(null)
   const elapsedRef = useRef(0)
-  const currentUtteranceRef = useRef(null)
+  // 移动端不支持 pause/resume，用队列索引实现伪暂停
+  const playbackStateRef = useRef({ chunks: [], currentIdx: 0, paragraphId: null })
+  const isSpeakingRef = useRef(false)
 
   // Word lookup states
   const [wordMap, setWordMap] = useState(new Map())
@@ -403,18 +477,26 @@ export default function ArticleDetail() {
       duration: 0,
     })
     elapsedRef.current = 0
-    currentUtteranceRef.current = null
+    isSpeakingRef.current = false
+    playbackStateRef.current = { chunks: [], currentIdx: 0, paragraphId: null }
   }
 
-  function playParagraph(index, text, startRatio = 0) {
-    window.speechSynthesis.cancel()
+  async function speakChunks(index, text, startRatio = 0) {
+    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
+    const voices = await waitForVoices()
+    const enVoice = selectEnglishVoice()
+    if (!enVoice) {
+      console.warn(
+        '[TTS] 未检测到英文语音引擎。可用语音:',
+        voices.map((v) => `${v.name}(${v.lang})`).join(', ') || '(无)',
+      )
+    }
+
     const fullText = text.replace(/<[^>]+>/g, '')
     const allWords = fullText.trim().split(/\s+/).filter(Boolean)
-
     const targetWordIndex = Math.floor(startRatio * allWords.length)
     const remainingWords = allWords.slice(targetWordIndex)
     const cleanText = remainingWords.join(' ')
-
     const fullDuration = estimateDuration(fullText)
 
     if (cleanText.length === 0) {
@@ -425,43 +507,75 @@ export default function ArticleDetail() {
     const startElapsed = (targetWordIndex / allWords.length) * fullDuration
     const startProgress = (targetWordIndex / allWords.length) * 100
 
-    const utterance = new SpeechSynthesisUtterance(cleanText)
-    utterance.lang = 'en-US'
-    utterance.rate = 0.9
+    const chunks = splitIntoChunks(cleanText, 180)
+    playbackStateRef.current = { chunks, currentIdx: 0, paragraphId: index }
 
-    const thisUtterance = utterance
-    currentUtteranceRef.current = thisUtterance
+    // 状态前置：某些移动浏览器 onstart 不触发，避免 UI 卡住
+    setAudioState({
+      currentIndex: index,
+      status: 'playing',
+      progress: startProgress,
+      elapsed: startElapsed,
+      duration: fullDuration,
+    })
+    elapsedRef.current = startElapsed
+    startProgressTimer(fullDuration, startElapsed)
 
-    utterance.onstart = () => {
-      if (currentUtteranceRef.current !== thisUtterance) return
-      setAudioState({
-        currentIndex: index,
-        status: 'playing',
-        progress: startProgress,
-        elapsed: startElapsed,
-        duration: fullDuration,
-      })
-      elapsedRef.current = startElapsed
-      startProgressTimer(fullDuration, startElapsed)
+    function speakNext() {
+      const { chunks: q, currentIdx: i, paragraphId: pid } = playbackStateRef.current
+      if (i >= q.length) {
+        isSpeakingRef.current = false
+        return
+      }
+      isSpeakingRef.current = true
+      const u = createEnglishUtterance(q[i], enVoice)
+
+      u.onstart = () => {
+        isSpeakingRef.current = true
+      }
+
+      u.onerror = (event) => {
+        console.error('[TTS] Utterance error:', event?.error || event?.type || event)
+        isSpeakingRef.current = false
+        stopProgressTimer()
+        setAudioState((prev) => ({ ...prev, status: 'idle' }))
+      }
+
+      u.onend = () => {
+        playbackStateRef.current.currentIdx += 1
+        if (playbackStateRef.current.currentIdx >= chunks.length) {
+          isSpeakingRef.current = false
+          resetAudioState()
+        } else {
+          speakNext()
+        }
+      }
+
+      utteranceRef.current = u
+      window.speechSynthesis.speak(u)
     }
 
-    utterance.onend = () => {
-      if (currentUtteranceRef.current !== thisUtterance) return
-      resetAudioState()
-    }
+    speakNext()
+  }
 
-    // 不监听 onboundary：boundary 触发频率与 timer 不同步会导致进度条抖动，
-    // 这里完全交给 timer 平滑推进，进度由 estimateDuration 估算。
-    utteranceRef.current = utterance
-    window.speechSynthesis.speak(utterance)
+  // 用 ref 同步最新 audioState，供 onend/onerror 闭包读取
+  const audioStateRef = useRef(audioState)
+  useEffect(() => {
+    audioStateRef.current = audioState
+  }, [audioState])
+
+  function playParagraph(index, text, startRatio = 0) {
+    window.speechSynthesis.cancel()
+    isSpeakingRef.current = false
+    setTimeout(() => speakChunks(index, text, startRatio), 60)
   }
 
   function seekParagraph(index, text, ratio) {
     if (audioState.currentIndex !== index) return
     stopProgressTimer()
     window.speechSynthesis.cancel()
+    isSpeakingRef.current = false
 
-    // 立即更新 UI，消除 TTS 引擎启动带来的延迟感
     const fullText = text.replace(/<[^>]+>/g, '')
     const allWords = fullText.trim().split(/\s+/).filter(Boolean)
     const targetWordIndex = Math.floor(ratio * allWords.length)
@@ -478,19 +592,59 @@ export default function ArticleDetail() {
     })
     elapsedRef.current = startElapsed
 
-    playParagraph(index, text, ratio)
+    setTimeout(() => speakChunks(index, text, ratio), 60)
   }
 
   function toggleParagraph(index, text) {
     if (audioState.currentIndex === index) {
       if (audioState.status === 'playing') {
-        window.speechSynthesis.pause()
+        // 移动端 iOS 不支持 pause/resume，改用 cancel + 记录索引
+        window.speechSynthesis.cancel()
         stopProgressTimer()
         setAudioState((prev) => ({ ...prev, status: 'paused' }))
       } else if (audioState.status === 'paused') {
-        window.speechSynthesis.resume()
-        startProgressTimer(audioState.duration, elapsedRef.current)
-        setAudioState((prev) => ({ ...prev, status: 'playing' }))
+        // 从当前 chunk 继续
+        const { chunks, currentIdx, paragraphId } = playbackStateRef.current
+        if (paragraphId === index && chunks.length && currentIdx < chunks.length) {
+          setAudioState((prev) => ({ ...prev, status: 'playing' }))
+          const fullText = text.replace(/<[^>]+>/g, '')
+          const fullDuration = estimateDuration(fullText)
+          startProgressTimer(fullDuration, elapsedRef.current)
+
+          function speakNext() {
+            const { chunks: q, currentIdx: i, paragraphId: pid } = playbackStateRef.current
+            if (i >= q.length) {
+              isSpeakingRef.current = false
+              return
+            }
+            isSpeakingRef.current = true
+            const u = createEnglishUtterance(q[i], enVoice)
+            u.onstart = () => {
+              isSpeakingRef.current = true
+            }
+            u.onerror = (event) => {
+              console.error('[TTS] Utterance error:', event?.error || event?.type || event)
+              isSpeakingRef.current = false
+              stopProgressTimer()
+              setAudioState((prev) => ({ ...prev, status: 'idle' }))
+            }
+            u.onend = () => {
+              playbackStateRef.current.currentIdx += 1
+              const { chunks: q2, currentIdx: i2 } = playbackStateRef.current
+              if (i2 >= q2.length) {
+                isSpeakingRef.current = false
+                resetAudioState()
+              } else {
+                speakNext()
+              }
+            }
+            utteranceRef.current = u
+            window.speechSynthesis.speak(u)
+          }
+          speakNext()
+        } else {
+          playParagraph(index, text)
+        }
       }
     } else {
       playParagraph(index, text)
@@ -548,11 +702,13 @@ export default function ArticleDetail() {
     setPopup(null)
   }
 
-  // 切换文章或卸载时停止语音
+  // 切换文章或卸载时停止语音并清空队列
   useEffect(() => {
     return () => {
       window.speechSynthesis.cancel()
       stopProgressTimer()
+      isSpeakingRef.current = false
+      playbackStateRef.current = { chunks: [], currentIdx: 0, paragraphId: null }
     }
   }, [id])
 
