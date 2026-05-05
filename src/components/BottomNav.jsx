@@ -12,13 +12,13 @@ const items = [
     ),
   },
   {
-    to: '/read',
-    label: '阅读',
+    to: '/reading',
+    label: '阅读听力',
     icon: <BookOpen className="w-5 h-5" />,
   },
   {
     to: '/listening',
-    label: '听力',
+    label: '语料中心',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-14 0m7 7v4m-4 0h8m-12-11a4 4 0 118 0v3a4 4 0 11-8 0V7z" />
@@ -43,6 +43,7 @@ export default function BottomNav() {
           <Link
             key={item.to}
             to={item.to}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'instant' })}
             className={`flex flex-col items-center justify-center gap-0.5 flex-1 h-full transition-colors ${
               isActive(item.to)
                 ? 'text-primary dark:text-primary-dark'

@@ -49,13 +49,14 @@ export default function WordPopup({ wordData, rect, isSaved, onSave, onRemove, o
   const popupWidth = 360
   const gap = 12
   const padding = 16
+  const bottomNavHeight = 64 // 底部固定导航栏高度 h-14=56，留一点余量
 
   let left = rect.left + rect.width / 2 - popupWidth / 2
   left = Math.max(padding, Math.min(left, window.innerWidth - popupWidth - padding))
 
   // 优先显示在单词下方；下方空间不足时再放到上方
   const estimatedHeight = 170 + Math.max(1, parsed.length) * 28
-  const overflowsBelow = rect.bottom + estimatedHeight + gap > window.innerHeight - padding
+  const overflowsBelow = rect.bottom + estimatedHeight + gap > window.innerHeight - padding - bottomNavHeight
   let initialTop = overflowsBelow
     ? rect.top - estimatedHeight - gap
     : rect.bottom + gap
@@ -66,7 +67,7 @@ export default function WordPopup({ wordData, rect, isSaved, onSave, onRemove, o
     const el = popupRef.current
     if (!el) return
     const h = el.offsetHeight
-    const overflows = rect.bottom + h + gap > window.innerHeight - padding
+    const overflows = rect.bottom + h + gap > window.innerHeight - padding - bottomNavHeight
     let t = overflows ? rect.top - h - gap : rect.bottom + gap
     t += scrollYAtMount
     setComputedTop(t)

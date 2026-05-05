@@ -1,33 +1,26 @@
 /**
- * 英语真题阅读材料库 (2020-2025)
- *
+ * 大学英语四级(CET-4)真题材料库 (2020-2025)
+ * 
  * 包含内容：
- * - 大学英语四级(CET-4)阅读理解 + 听力原文（2020-2025）
- * - 高考英语真题阅读（2020-2025）
- * - 大学英语六级(CET-6)阅读理解（2020-2025）
- *
+ * - 2020年7月-2025年6月全部阅读理解真题（仔细阅读 Section C）
+ * - 2020年7月-2025年6月全部听力真题原文（长对话、短文、新闻报道）
+ * 
  * 数据说明：
  * - 文章数据硬编码在JS中，无需后端接口
  * - 听力使用浏览器TTS（语音合成）实时朗读，无需音频文件
  * - 每篇文章包含英文原文和中文翻译，逐段对照
- *
+ * 
  * 使用方式：
  *   import { mockArticles } from './mockArticles';
- *
- * 总计：约240篇文章（CET-4 106篇 + 高考 93篇 + CET-6 41篇）
- * 数据来源：历年四六级/高考真题公开资料
+ * 
+ * 总计：106篇文章（43篇阅读 + 63篇听力）
+ * 数据来源：历年四级真题公开资料
  */
 
-import gaokaoRaw from './mockArticles3.js'
-import { mockArticles as cet6Raw } from './mockArticles4.js'
-import { extraArticles } from './mockArticles5.js'
-
-const rawMockArticles = [
+export const mockArticles = [
   {
     id: 'cet4_listening_2020_07_01',
     title: '离职话题',
-    enTitle: 'Job Change Topic',
-    cnTitle: '离职话题',
     description: '听力原文：Woman: I\'ve been thinking about changing my job. I\'ve been working in the same company for over five...',
     category: '社会',
     wordCount: 169,
@@ -43,8 +36,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2020_07_02',
     title: '独处与孤独',
-    enTitle: 'Solitude and Loneliness',
-    cnTitle: '独处与孤独',
     description: '听力原文：There is a saying that goes something along the lines of \'You must love yourself first before you ca...',
     category: '健康',
     wordCount: 267,
@@ -56,8 +47,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2020_07_03',
     title: '父亲的砖块清洁生意',
-    enTitle: 'Father\'s Brick Cleaning Business',
-    cnTitle: '父亲的砖块清洁生意',
     description: '听力原文：When I turned twelve, I worked summers at my father\'s small brick cleaning business. I remember the ...',
     category: '教育',
     wordCount: 278,
@@ -72,8 +61,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2020_07_04',
     title: '看电视与记忆衰退',
-    enTitle: 'TV Watching and Memory Decline',
-    cnTitle: '看电视与记忆衰退',
     description: '听力原文：Watching more than 3 hours of television a day doubles memory loss in older people, a new study of m...',
     category: '科技',
     wordCount: 284,
@@ -87,8 +74,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2020_07_01',
     title: '体育锻炼与学业表现',
-    enTitle: 'Physical Exercise and Academic Performance',
-    cnTitle: '体育锻炼与学业表现',
     description: '阅读理解：Physical activity does the body good, and there\'s growing evidence that it helps the brain too. Rese...',
     category: '教育',
     wordCount: 228,
@@ -102,8 +87,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2020_07_02',
     title: '教育公平与农村教育',
-    enTitle: 'Education Equity and Rural Education',
-    cnTitle: '教育公平与农村教育',
     description: '阅读理解：In order to promote equity in education, China has invested 36 billion yuan for the improvement of e...',
     category: '教育',
     wordCount: 129,
@@ -115,8 +98,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2020_12_01',
     title: '咨询公司业务',
-    enTitle: 'Consulting Company Business',
-    cnTitle: '咨询公司业务',
     description: '听力原文：WOMAN: Mr. Smith, It\'s a pleasure meeting you!...',
     category: '社会',
     wordCount: 306,
@@ -134,8 +115,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2020_12_02',
     title: '室内装修',
-    enTitle: 'Interior Decoration',
-    cnTitle: '室内装修',
     description: '听力原文：Woman: Wow, congratulations, Simon! The place looks absolutely amazing!...',
     category: '生活',
     wordCount: 296,
@@ -155,8 +134,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2020_12_03',
     title: '耳朵和鼻子里的异物',
-    enTitle: 'Foreign Objects in Ears and Nose',
-    cnTitle: '耳朵和鼻子里的异物',
     description: '听力原文：Removing foreign objects from ears and noses costs England almost £3m a year, a study suggests. Chil...',
     category: '健康',
     wordCount: 263,
@@ -169,8 +146,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2020_12_04',
     title: 'ReBicycle慈善机构',
-    enTitle: 'ReBicycle Charity',
-    cnTitle: 'ReBicycle慈善机构',
     description: '听力原文：Good morning, I\'d like to talk to you about my charity ReBicycle. But before that, let me introduce ...',
     category: '社会',
     wordCount: 256,
@@ -183,8 +158,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2020_12_05',
     title: '太空中的老鼠',
-    enTitle: 'Mice in Space',
-    cnTitle: '太空中的老鼠',
     description: '听力原文：Thanks to the International Space Station we know quite a bit about the effects of low gravity on th...',
     category: '科技',
     wordCount: 99,
@@ -197,8 +170,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2020_12_01',
     title: '互联网革命 (The Rise of the Internet)',
-    enTitle: 'The Rise of the Internet',
-    cnTitle: '互联网革命',
     description: '阅读理解：The rise of the Internet has been one of the most transformative developments in human history, comp...',
     category: '科技',
     wordCount: 356,
@@ -209,12 +180,20 @@ const rawMockArticles = [
       { en: 'In their book, the authors provide the most authoritative volume to date that describes--and more importantly predicts--how the Internet will shape our lives in the coming decades. They paint a picture of a world in which individuals, companies, institutions, and governments must deal with two realities, one physical, and one virtual. At the core of the book is the idea that this concept as a starting point, the authors aim to move beyond the now familiar optimist vs. pessimist dichotomy that has characterized many recent debates about whether the rise of the Internet will ultimately be good or bad for society.', zh: '在书中，作者提供了迄今为止最权威的著作，描述——更重要的是预测——互联网将在未来几十年如何塑造我们的生活。他们描绘了一个世界，在这个世界中，个人、公司、机构和政府必须处理两种现实，一种是物理的，一种是虚拟的。这本书的核心思想是，以这一概念为出发点，作者旨在超越现在熟悉的乐观主义者与悲观主义者的二分法，这一直是最近关于互联网兴起最终对社会是好是坏的许多辩论的特征。' }
     ]
   },
-
+  {
+    id: 'cet4_reading_2020_12_02',
+    title: '远程工作 (Remote Work)',
+    description: '阅读理解：As many office workers adapt to remote work, cities may undergo fundamental change if offices remain...',
+    category: '科技',
+    wordCount: 153,
+    coverColor: 'bg-amber-500',
+    paragraphs: [
+      { en: 'As many office workers adapt to remote work, cities may undergo fundamental change if offices remain under-utilized. Who will benefit if working from home becomes the norm? Employers argue they make considerable savings on real estate when workers shift from office to home work. However, these savings result from passing costs on to workers. Though employers are backed by a chorus of remote work advocates, reduced productivity and other challenges negatively impact productivity. Workers are spending more on home office setups, electricity, and internet, while shouldering the burden of blurred work-life boundaries. The question remains whether the shift to remote work will create a more equitable future or simply transfer costs from employers to employees.', zh: '随着许多办公室工作人员适应远程工作，如果办公室持续未被充分利用，城市可能会经历根本性变化。如果在家工作成为常态，谁将受益？雇主认为，当员工从办公室工作转向家庭工作时，他们在房地产方面节省了大量开支。然而，这些节省是通过将成本转嫁给工人实现的。尽管雇主得到了远程工作倡导者的一致支持，但生产力下降和其他挑战对生产力产生了负面影响。工人在家庭办公设备、电力和互联网上花费更多，同时承担着工作与生活界限模糊的负担。问题仍然是，向远程工作的转变是否会创造一个更公平的未来，还是仅仅将成本从雇主转移给雇员。' }
+    ]
+  },
   {
     id: 'cet4_reading_2020_12_03',
     title: '好奇心 (The Human Thirst for Knowledge)',
-    enTitle: 'The Human Thirst for Knowledge',
-    cnTitle: '好奇心',
     description: '阅读理解：The human thirst for knowledge is the driving force behind our successful development as a species. ...',
     category: '教育',
     wordCount: 416,
@@ -230,10 +209,34 @@ const rawMockArticles = [
     ]
   },
   {
+    id: 'cet4_reading_2020_12_04',
+    title: '无聊与创造力 (Boredom and Creativity)',
+    description: '阅读理解：Boredom has become trendy. Studies point to how boredom is good for creativity. Research suggests th...',
+    category: '教育',
+    wordCount: 196,
+    coverColor: 'bg-rose-500',
+    paragraphs: [
+      { en: 'Boredom has become trendy. Studies point to how boredom is good for creativity. Research suggests that when we are bored, our minds wander, making us more likely to think creatively and come up with new ideas. When people are bored, they tend to seek out new experiences and challenges, which can lead to personal growth and innovation.', zh: '无聊已成为一种趋势。研究表明无聊对创造力有好处。研究显示，当我们感到无聊时，我们的思维会漫游，使我们更有可能进行创造性思考并提出新想法。当人们感到无聊时，他们倾向于寻找新的体验和挑战，这可以带来个人成长和创新。' },
+      { en: 'However, there is a downside. Excessive boredom can lead to feelings of isolation and disconnection. In a world where we are constantly connected to technology, some people may find it difficult to be alone with their thoughts. This can prevent people from developing a genuine sense of community and belonging.', zh: '然而，也有不利的一面。过度无聊会导致孤立和疏离感。在一个我们不断与技术相连的世界里，有些人可能发现很难独自面对自己的想法。这可能会阻止人们发展真正的社区意识和归属感。' },
+      { en: 'To harness the benefits of boredom while avoiding its pitfalls, experts recommend setting aside time for unstructured activities that allow the mind to wander freely. This might include taking a walk without your phone, daydreaming, or engaging in simple, repetitive tasks. The key is to find a balance between stimulation and stillness.', zh: '为了利用无聊的好处同时避免其陷阱，专家建议留出时间进行无结构的活动，让思维自由漫游。这可能包括不带手机散步、做白日梦，或从事简单重复的任务。关键在于找到刺激与宁静之间的平衡。' }
+    ]
+  },
+  {
+    id: 'cet4_reading_2020_12_05',
+    title: '卡路里摄入量研究 (Calorie Intake)',
+    description: '阅读理解：Can you remember what you ate yesterday? If asked, most people will be able to give a vague descript...',
+    category: '健康',
+    wordCount: 167,
+    coverColor: 'bg-violet-500',
+    paragraphs: [
+      { en: 'Can you remember what you ate yesterday? If asked, most people will be able to give a vague description of their main meals: breakfast, lunch, dinner. But can you be sure you\'ve noted every snack bar in your car, or every handful of nuts at your desk? Most people will have a feeling that they\'ve missed something out.', zh: '你能记得昨天吃了什么吗？如果被问到，大多数人能够大致描述他们的主餐：早餐、午餐、晚餐。但是你能确定你记录下了车里的每一块零食棒，或者办公桌上的每一把坚果吗？大多数人会觉得自己遗漏了一些东西。' },
+      { en: 'We originally had this suspicion back in 2016, puzzled by the fact that national statistics showed calorie consumption falling dramatically over past decades. We found reliable evidence that people were drastically under-reporting what they ate.', zh: '我们最初在2016年就有了这种怀疑，被国家统计数据显示过去几十年卡路里消耗量急剧下降这一事实所困惑。我们发现了可靠的证据，表明人们严重少报了他们所吃的东西。' },
+      { en: 'People\'s calorie intake was far from accurately reported. The growing trend of eating out also contributes to the problem, as restaurant meals tend to be higher in calories than home-cooked food. Researchers need to rethink how they collect dietary data to ensure accuracy.', zh: '人们的卡路里摄入量远未被准确报告。外出就餐的日益增长的趋势也加剧了这个问题，因为餐厅餐食往往比家常菜热量更高。研究人员需要重新思考如何收集饮食数据以确保准确性。' }
+    ]
+  },
+  {
     id: 'cet4_listening_2021_06_01',
     title: '友谊的力量',
-    enTitle: 'The Power of Friendship',
-    cnTitle: '友谊的力量',
     description: '听力原文：I first met Joe Ganz when we were both nine years old, which is probably the only reason he is one o...',
     category: '生活',
     wordCount: 155,
@@ -245,8 +248,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2021_06_02',
     title: '创造力',
-    enTitle: 'Creativity',
-    cnTitle: '创造力',
     description: '听力原文：Well, to pick up where we left off last time, I believe we already established that creativity is no...',
     category: '教育',
     wordCount: 134,
@@ -259,8 +260,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2021_06_03',
     title: '停车罚单',
-    enTitle: 'Parking Ticket',
-    cnTitle: '停车罚单',
     description: '听力原文：When it comes to dealing with bad luck, I\'ve had more than my fair share. The latest incident happen...',
     category: '生活',
     wordCount: 119,
@@ -272,8 +271,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2021_06_01',
     title: '教育与创造力 (Educators and Business Leaders)',
-    enTitle: 'Educators and Business Leaders',
-    cnTitle: '教育与创造力',
     description: '阅读理解：Educators and business leaders have more in common than it may seem. Teachers want to prepare studen...',
     category: '教育',
     wordCount: 265,
@@ -288,8 +285,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2021_06_02',
     title: 'IT工作者 (Being an IT Worker)',
-    enTitle: 'Being an IT Worker',
-    cnTitle: 'IT工作者',
     description: '阅读理解：Being an information technology, or IT, worker is not a job I envy. They are the ones who, right in ...',
     category: '科技',
     wordCount: 294,
@@ -303,8 +298,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2021_06_03',
     title: '糖业资助研究 (Sugar Industry-Funded Research)',
-    enTitle: 'Sugar Industry-Funded Research',
-    cnTitle: '糖业资助研究',
     description: '阅读理解：Sugar shocked. That describes the reaction of many Americans this week following revelations that, 5...',
     category: '健康',
     wordCount: 325,
@@ -320,8 +313,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2021_06_04',
     title: '成功的定义 (Success)',
-    enTitle: 'Success',
-    cnTitle: '成功的定义',
     description: '阅读理解：How people view success has changed dramatically over the generations. In our grandparents\' day, suc...',
     category: '文化',
     wordCount: 207,
@@ -335,8 +326,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2021_06_05',
     title: '无聊与创造力 (Boredom and Creativity)',
-    enTitle: 'Boredom and Creativity',
-    cnTitle: '无聊与创造力',
     description: '阅读理解：Boredom has become trendy. Studies point to how boredom is good for creativity. It facilitates innov...',
     category: '教育',
     wordCount: 212,
@@ -351,8 +340,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2021_06_06',
     title: '饮食习惯与卡路里 (Calorie Consumption)',
-    enTitle: 'Calorie Consumption',
-    cnTitle: '饮食习惯与卡路里',
     description: '阅读理解：Can you remember what you ate yesterday? If asked, most people will be able to give a vague descript...',
     category: '健康',
     wordCount: 187,
@@ -366,8 +353,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2021_12_01',
     title: '月球上的垃圾',
-    enTitle: 'Trash on the Moon',
-    cnTitle: '月球上的垃圾',
     description: '听力原文：One thing about the moon many people don\'t know is that it has a lot of garbage on its surface, huma...',
     category: '科技',
     wordCount: 235,
@@ -379,8 +364,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2021_12_02',
     title: '语言学习',
-    enTitle: 'Language Learning',
-    cnTitle: '语言学习',
     description: '听力原文：I have learned many languages, but I haven\'t learned them as well as a professional interpreter woul...',
     category: '教育',
     wordCount: 176,
@@ -392,8 +375,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2021_12_03',
     title: '左撇子儿童教育',
-    enTitle: 'Education for Left-Handed Children',
-    cnTitle: '左撇子儿童教育',
     description: '听力原文：Campaigners have warned that the British government is not doing enough to prevent left-handed pupil...',
     category: '教育',
     wordCount: 224,
@@ -406,8 +387,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2021_12_04',
     title: '跑步与健康',
-    enTitle: 'Running and Health',
-    cnTitle: '跑步与健康',
     description: '听力原文：One 60-minute run can add 7 hours to your life. This was a claim made by The Times last week. The cl...',
     category: '健康',
     wordCount: 286,
@@ -422,8 +401,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2021_12_01',
     title: '远程工作 (Remote Work)',
-    enTitle: 'Remote Work',
-    cnTitle: '远程工作',
     description: '阅读理解：As many office workers adapt to remote work, cities may undergo fundamental change if offices remain...',
     category: '科技',
     wordCount: 271,
@@ -434,12 +411,24 @@ const rawMockArticles = [
       { en: 'Despite these challenges, some experts believe that the shift to remote work could ultimately lead to positive changes. If managed properly, remote work could reduce traffic congestion, lower carbon emissions, and give workers more flexibility to balance their personal and professional lives. The key is to develop policies that support workers and ensure that the benefits of remote work are shared equitably.', zh: '尽管面临这些挑战，一些专家认为，向远程工作的转变最终可能带来积极的变化。如果管理得当，远程工作可以减少交通拥堵、降低碳排放，并给工人更多的灵活性来平衡个人和职业生活。关键是制定支持工人的政策，确保远程工作的好处得到公平分享。' }
     ]
   },
-
+  {
+    id: 'cet4_reading_2021_12_02',
+    title: '好奇心 (Curiosity)',
+    description: '阅读理解：The human thirst for knowledge is the driving force behind our successful development as a species. ...',
+    category: '教育',
+    wordCount: 275,
+    coverColor: 'bg-amber-500',
+    paragraphs: [
+      { en: 'The human thirst for knowledge is the driving force behind our successful development as a species. But curiosity can also be dangerous, leading to setbacks or even downfalls. Given curiosity\'s complexity, scientists have found it hard to define.', zh: '人类对知识的渴望是我们作为一个物种成功发展背后的驱动力。但好奇心也可能是危险的，会导致挫折甚至失败。鉴于好奇心的复杂性，科学家们发现很难给它下定义。' },
+      { en: 'While pinning down a definition has proven tricky, the general consensus is it\'s some means of information gathering. Psychologists also agree curiosity is intrinsically motivated.', zh: '虽然确定一个定义已被证明很棘手，但普遍的共识是它是某种信息收集的方式。心理学家们也认同好奇心是内在驱动的。' },
+      { en: 'Curiosity covers such a large set of behaviors that there probably isn\'t any single \"curiosity gene\" that makes humans wonder about and explore their environment. That said, curiosity does have a genetic component. Genes and the environment interact in many complex ways to shape individuals and guide their behavior, including their curiosity.', zh: '好奇心涵盖了如此广泛的一系列行为，以至于可能不存在任何单一的\"好奇心基因\"能让人类对环境感到好奇并去探索它。话虽如此，好奇心确实有一个遗传成分。基因和环境以许多复杂的方式相互作用，塑造个体并引导他们的行为，包括他们的好奇心。' },
+      { en: 'Regardless of their genetic makeup, infants have to learn an incredible amount of information in a short time, and curiosity is one of the tools humans have found to accomplish that gigantic task. Hundreds of studies show that infants prefer novelty. It\'s what motivates non-human animals, human infants and probably human adults to explore and seek out new things before growing less interested in them after continued exposure.', zh: '不管他们的基因构成如何，婴儿必须在短时间内学习大量令人难以置信的信息，而好奇心是人类发现的完成这项艰巨任务的工具之一。数百项研究表明婴儿更喜欢新奇事物。正是这种偏好促使非人类动物、人类婴儿，可能还有人类成年人去探索并寻找新事物，直到在持续接触后对它们的兴趣逐渐降低。' },
+      { en: 'But curiosity often comes with a cost. In some situations, the stakes are low and failure is a healthy part of growth. But sometimes, testing out a new idea can lead to disaster.', zh: '但好奇心往往伴随着代价。在某些情况下，风险较低，失败是成长中健康的一部分。但有时，测试一个新想法可能会导致灾难。' }
+    ]
+  },
   {
     id: 'cet4_reading_2021_12_03',
     title: '体重与基因 (Weight and Genes)',
-    enTitle: 'Weight and Genes',
-    cnTitle: '体重与基因',
     description: '阅读理解：For decades, scientists have been trying to unravel the complex relationship between genetics and bo...',
     category: '科技',
     wordCount: 279,
@@ -454,8 +443,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2021_12_04',
     title: '男性幼儿教师 (Male Early Childhood Teachers)',
-    enTitle: 'Male Early Childhood Teachers',
-    cnTitle: '男性幼儿教师',
     description: '阅读理解：Nationwide, only about three percent of early childhood teachers are male in the U.S. Experts say th...',
     category: '教育',
     wordCount: 289,
@@ -470,8 +457,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2021_12_05',
     title: '身体接触文化 (Hugging and Touching)',
-    enTitle: 'Hugging and Touching',
-    cnTitle: '身体接触文化',
     description: '阅读理解：Have you ever wondered how acceptable it is to hug or touch someone? The answer depends largely on c...',
     category: '文化',
     wordCount: 231,
@@ -486,8 +471,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2021_12_06',
     title: '成长型兴趣思维 (Growth Mindset of Interest)',
-    enTitle: 'Growth Mindset of Interest',
-    cnTitle: '成长型兴趣思维',
     description: '阅读理解：From climate change to the ongoing pandemic and beyond, the issues facing today\'s world are increasi...',
     category: '教育',
     wordCount: 327,
@@ -502,7 +485,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2022_06_01',
     title: 'Employee Retention and Loyalty',
-    cnTitle: '员工留任与忠诚度',
     description: '阅读理解：Questions 46 to 50 are based on the following passage....',
     category: '社会',
     wordCount: 50,
@@ -514,7 +496,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2022_06_02',
     title: 'Online Learning and Students',
-    cnTitle: '在线学习与学生',
     description: '阅读理解：Questions 51 to 55 are based on the following passage....',
     category: '教育',
     wordCount: 50,
@@ -526,8 +507,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2022_06_01',
     title: 'A Writer and His Children',
-    cnTitle: '作家与他的孩子们',
-    cnTitle: '作家与他的孩子们',
     description: '听力原文：M: Hi, I\'m a staff writer for a magazine. I\'m also a father of four kids. People often ask me how I ...',
     category: '教育',
     wordCount: 123,
@@ -539,8 +518,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2022_06_02',
     title: 'A Fashion Entrepreneur',
-    cnTitle: '时尚创业者',
-    cnTitle: '时尚创业者',
     description: '听力原文：W: I\'m a successful entrepreneur in the fashion industry. I started my own business after graduating...',
     category: '生活',
     wordCount: 113,
@@ -552,8 +529,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2022_06_03',
     title: 'Person Perception',
-    cnTitle: '人际感知',
-    cnTitle: '人际感知',
     description: '听力原文：In social psychology, the term person perception refers to the mental processes that we use to form ...',
     category: '健康',
     wordCount: 288,
@@ -566,8 +541,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2022_06_04',
     title: 'Active vs. Passive Inspiration',
-    cnTitle: '主动与被动灵感',
-    cnTitle: '主动与被动灵感',
     description: '听力原文：It\'s easy to spend all day searching for inspiration. You can find incredible videos, articles, and ...',
     category: '生活',
     wordCount: 282,
@@ -580,7 +553,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2022_09_01',
     title: 'Academic Dishonesty and Technology',
-    cnTitle: '学术不端与技术',
     description: '阅读理解：Questions 46 to 50 are based on the following passage....',
     category: '教育',
     wordCount: 279,
@@ -594,7 +566,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2022_09_02',
     title: 'Success and Life Purpose',
-    cnTitle: '成功与人生目标',
     description: '阅读理解：While 92% of people believe others care most about fame and fortune, this is according to the newly ...',
     category: '社会',
     wordCount: 137,
@@ -606,7 +577,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2022_09_01',
     title: 'Birthday Blues',
-    cnTitle: '生日忧郁',
     description: '听力原文：W: It\'s your birthday next week. What have you got planned?\nM: I\'m not sure. I often feel strange on...',
     category: '健康',
     wordCount: 298,
@@ -618,7 +588,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2022_09_02',
     title: 'Commuting Problems',
-    cnTitle: '通勤问题',
     description: '听力原文：W: The Metro was absolutely terrible this morning.\nM: Oh, was there a delay?\nW: No, but the train wa...',
     category: '生活',
     wordCount: 300,
@@ -630,7 +599,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2022_09_03',
     title: 'The Importance of Women\'s Rights',
-    cnTitle: '女性权利的重要性',
     description: '听力原文：A new study has demonstrated the importance of women\'s rights. The researchers behind the study stat...',
     category: '健康',
     wordCount: 307,
@@ -644,7 +612,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2022_09_04',
     title: 'Color Psychology',
-    cnTitle: '色彩心理学',
     description: '听力原文：The passage discusses color psychology and how different colors affect our mood and behavior. People...',
     category: '健康',
     wordCount: 145,
@@ -656,7 +623,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2022_09_05',
     title: 'Reading to Children',
-    cnTitle: '给孩子读书',
     description: '听力原文：The passage emphasizes the importance of reading to children. Research shows that reading to their c...',
     category: '教育',
     wordCount: 120,
@@ -668,7 +634,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2022_12_01',
     title: 'Aquaculture and Fish Farming',
-    cnTitle: '水产养殖与鱼类养殖',
     description: '阅读理解：Questions 46 to 50 are based on the following passage....',
     category: '科技',
     wordCount: 148,
@@ -682,7 +647,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2022_12_02',
     title: 'World Food Programme and Global Hunger',
-    cnTitle: '世界粮食计划署与全球饥饿',
     description: '阅读理解：Questions 51 to 55 are based on the following passage....',
     category: '社会',
     wordCount: 194,
@@ -697,7 +661,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2022_12_01',
     title: 'Gym Membership',
-    cnTitle: '健身房会员',
     description: '听力原文：W: Hi, Christi\'s Gym Center? How can I help you.\nM: Hi. I\'m calling to ask about the newly scheduled...',
     category: '健康',
     wordCount: 277,
@@ -709,7 +672,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2022_12_02',
     title: 'Business Trip',
-    cnTitle: '商务出差',
     description: '听力原文：W: Well, I think that was quite a successful trip in the end, don\'t you think, Jenny?\nM: Absolutely....',
     category: '社会',
     wordCount: 284,
@@ -719,9 +681,43 @@ const rawMockArticles = [
     ]
   },
   {
+    id: 'cet4_listening_2022_12_03',
+    title: 'Birthday Anxiety',
+    description: '听力原文：W: It\'s your birthday next week. What have you got planned?\nM: I\'m not sure. I often feel strange on...',
+    category: '健康',
+    wordCount: 250,
+    coverColor: 'bg-teal-500',
+    paragraphs: [
+      { en: 'W: It\'s your birthday next week. What have you got planned?\nM: I\'m not sure. I often feel strange on my birthday. It\'s like my brain decides to have a crisis.\nW: It\'s not entirely unusual to feel anxious or sad around your birthday. Birthdays can tap into a lot of things people worry about, including their achievements in life in the past decade or their accomplishments of the past year. Many begin to search for the meaning of their existence, leading to behaviors such as ending or starting a relationship, or plans like starting a vigorous diet or fitness program.\nM: I have wonderful friends, and I love celebrating their birthdays. But I don\'t like being the center of attention, receiving gifts, and having a fuss made. It seems to trigger a type of social anxiety.\nW: Well, to deal with the birthday blues, you should not isolate yourself. It\'s best to gradually face your birthday with people you trust. That would help you learn self-acceptance, or that it\'s okay to be the focus. Perhaps, you could perceive your birthday as an opportunity to do something for others, like asking people to make a donation instead of buying a gift.\nM: Exactly, or even simply see your birthday as an opportunity to bring people together for them to have fun.', zh: '女：下周是你的生日。你有什么计划？\n男：我不太确定。我生日时经常感觉怪怪的。就像我的大脑要经历一场危机。\n女：在生日前后感到焦虑或悲伤并不罕见。生日会触及人们担忧的很多事情，包括过去十年的人生成就或过去一年的成就。很多人开始寻找自己存在的意义，从而导致结束或开始一段关系等行为，或者制定计划，如开始严格的饮食或健身计划。\n男：我有很好的朋友，我喜欢庆祝他们的生日。但我不喜欢成为关注的焦点，不喜欢收礼物，也不喜欢被大惊小怪。这似乎会引发一种社交焦虑。\n女：那么，为了应对生日忧郁，你不应该孤立自己。最好与你信任的人一起逐渐面对你的生日。这将帮助你学会自我接纳，或者认识到成为焦点也没什么。也许，你可以把生日看作是为他人做些事情的机会，比如让人们捐款而不是买礼物。\n男：没错，或者甚至简单地把你的生日看作是一个让人们聚在一起享受乐趣的机会。' }
+    ]
+  },
+  {
+    id: 'cet4_listening_2022_12_04',
+    title: 'Subway Commute',
+    description: '听力原文：W: The Metro was absolutely terrible this morning.\nM: Oh, was there a delay?\nW: No, but the train wa...',
+    category: '生活',
+    wordCount: 300,
+    coverColor: 'bg-blue-500',
+    paragraphs: [
+      { en: 'W: The Metro was absolutely terrible this morning.\nM: Oh, was there a delay?\nW: No, but the train was so packed that I could barely move. And it was difficult to breathe too. At every station, more people squeezed in, and I got pushed further and further inside. When I got to my station, I could hardly get out. Once I did get out, I was totally exhausted.\nM: That sounds like a nightmare. Why didn\'t you take the bus?\nW: The bus takes twice as long and it\'s just as crowded.\nM: Well, what\'s the alternative? Haven\'t you got a car?\nW: I\'ve got a driver\'s license, but that\'s all. I\'m saving up to buy something reasonably small and cute, but it\'s still a bit expensive for me. And it\'ll take a while before I have enough money.\nM: Have you thought about getting an electric motorbike?\nW: I considered that for maybe a minute, but honestly, I\'ve just seen too many horrible accidents involving those dangerous monsters.\nM: What about those popular share bikes? You could register to use one.\nW: Yeah, that\'s a possibility. There are always several of those bikes out in front of our apartment complex.\nM: Or you could just walk to work.\nW: Well, it\'s 5 km from home to the office. But you\'ve given me a thought. I could take a change of clothes and jog to work. But at this time of year, the air pollution is a real problem.\nM: Get a taxi if you really have to.\nW: Well, that\'s an expensive way to get to work.\nM: Not if you use a Rye cherry app.\nW: Good idea! I\'ll download one immediately. Thank you!', zh: '女：今天早上地铁真是太糟糕了。\n男：哦，是晚点了吗？\n女：没有，但是地铁里挤得我都动不了。连呼吸都困难。每到一站，就又有人挤进来，我被推得越来越往里。到我到站的时候，我几乎都出不去了。等出去后，我已经累得不行了。\n男：这听起来像噩梦一样。你为什么没坐公交车？\n女：公交车要慢一倍，而且也很挤。\n男：那么，还有什么别的选择吗？你没买车吗？\n女：我有驾照，仅此而已。我正攒钱想买一辆小巧可爱的，但对我来说还是有点贵。而且我得攒一段时间才能买得起。\n男：你有没有想过买辆电动摩托车？\n女：我考虑过一分钟，但说实话，我看到过太多涉及那些危险家伙的可怕事故。\n男：那么那些流行的共享单车呢？你可以注册一辆使用。\n女：嗯，这是个选择。我们公寓楼前总有几辆那样的自行车。\n男：或者你可以步行去上班。\n女：嗯，从家到办公室有5公里。但你给我提了个醒。我可以带套换洗的衣服，跑着去上班。但每年这个时候，空气污染真是个大问题。\n男：如果你真的需要，那就打车吧。\n女：嗯，打车上班太贵了。\n男：如果你用打车软件的话就不贵。\n女：好主意！我马上下载一个。谢谢你！' }
+    ]
+  },
+  {
+    id: 'cet4_listening_2022_12_05',
+    title: 'Women\'s Rights and Public Health',
+    description: '听力原文：A new study has demonstrated the importance of women\'s rights. The researchers behind the study stat...',
+    category: '健康',
+    wordCount: 257,
+    coverColor: 'bg-amber-500',
+    paragraphs: [
+      { en: 'A new study has demonstrated the importance of women\'s rights. The researchers behind the study state that many parts of the world have made good economic progress, but women\'s rights are often overlooked. Thus, they wanted to determine if there was a link between protection of women\'s rights and public health. The researchers analyzed databases which held information from 162 countries for the period 2004 to 2010.', zh: '一项新研究证明了女性权利的重要性。该研究背后的研究人员指出，世界许多地区在经济上取得了良好进展，但女性权利常常被忽视。因此，他们想确定保护女性权利与公共卫生之间是否存在联系。研究人员分析了包含162个国家2004年至2010年信息的数据库。' },
+      { en: 'Countries were classified according to the respect they gave to women\'s economic and social rights. There were three categories. They were high, moderate, and poor. Analysis of the data showed that countries with strong women\'s rights had better health than those where women\'s rights were not as respected. The health indicators studied included disease prevention, reproductive health, death rates, and life expectancy.', zh: '国家根据其对女性经济和社会权利的尊重程度进行分类。有三个类别：高、中、低。数据分析显示，在女性权利强有力的国家，健康状况比女性权利不受尊重的国家更好。研究的健康指标包括疾病预防、生殖健康、死亡率和预期寿命。' },
+      { en: 'Furthermore, in countries where women\'s rights were most respected, but where access to hospitals and doctors was below average, health outcomes were still better than in countries rated as moderate or poor. This confirms that even with a lack of resources, if a country has strong women\'s rights, the health outcomes are better. Thus, the researchers argue that gender equality is not just a women\'s rights issue. It is also a development issue.', zh: '此外，在女性权利最受尊重的国家，即使医院和医生的可及性低于平均水平，健康结果仍然比被评为中等或低等的国家更好。这证实了即使缺乏资源，如果一个国家拥有强大的女性权利，健康结果也会更好。因此，研究人员认为，性别平等不仅仅是女性权利问题，它也是一个发展问题。' }
+    ]
+  },
+  {
     id: 'cet4_listening_2022_12_06',
     title: 'Left-handed People',
-    cnTitle: '左撇子',
     description: '听力原文：The passage discusses the characteristics of left-handed people, who make up about 10% of the popula...',
     category: '科技',
     wordCount: 203,
@@ -735,7 +731,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2023_03_01',
     title: 'Intelligence and Blind Spots',
-    cnTitle: '智力与盲点',
     description: '阅读理解：Questions 46 to 50 are based on the following passage....',
     category: '教育',
     wordCount: 198,
@@ -751,7 +746,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2023_03_02',
     title: 'Online Learning for Refugees',
-    cnTitle: '难民的在线学习',
     description: '阅读理解：Questions 51 to 55 are based on the following passage....',
     category: '教育',
     wordCount: 411,
@@ -767,7 +761,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_03_01',
     title: 'Study Guide',
-    cnTitle: '学习指南',
     description: '听力原文：M: Hi, Jennifer. I am really struggling with this semester\'s workload. Do you have any advice?\nW: Ha...',
     category: '教育',
     wordCount: 323,
@@ -779,7 +772,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_03_02',
     title: 'Taking Risks in Business',
-    cnTitle: '商业冒险',
     description: '听力原文：Taking risks in business does not mean going into business blindly and then expecting great results....',
     category: '社会',
     wordCount: 274,
@@ -793,7 +785,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_03_03',
     title: 'Stress Management',
-    cnTitle: '压力管理',
     description: '听力原文：A recent study led by Patricia Pendry aimed to examine the effects of interacting with pets on stres...',
     category: '健康',
     wordCount: 167,
@@ -807,7 +798,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2023_06_01',
     title: 'Open-plan Offices',
-    cnTitle: '开放式办公室',
     description: '阅读理解：Questions 46 to 50 are based on the following passage....',
     category: '社会',
     wordCount: 194,
@@ -822,7 +812,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2023_06_02',
     title: 'Homelessness',
-    cnTitle: '无家可归问题',
     description: '阅读理解：Questions 51 to 55 are based on the following passage....',
     category: '社会',
     wordCount: 187,
@@ -837,7 +826,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_06_01',
     title: 'Apartment and Roommates',
-    cnTitle: '公寓与室友',
     description: '听力原文：M: Hello. Matt Ellis speaking.\nW: Hello, Dr. Ellis, my name\'s Pan Johnson. My roommate, Janet Holmes...',
     category: '生活',
     wordCount: 170,
@@ -849,7 +837,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_06_02',
     title: 'Blue Light and Sleep',
-    cnTitle: '蓝光与睡眠',
     description: '听力原文：M: What\'s that thing on your computer screen?\nW: It\'s a plastic sheet that blocks blue light. I have...',
     category: '科技',
     wordCount: 292,
@@ -861,7 +848,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_06_03',
     title: 'Children\'s Career Dreams',
-    cnTitle: '儿童的职业梦想',
     description: '听力原文：W: As a kid, did you know what job you wanted to do when you grew up?\nM: No, I didn\'t. And I got sic...',
     category: '教育',
     wordCount: 302,
@@ -873,7 +859,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_06_04',
     title: 'Internet Access in Africa',
-    cnTitle: '非洲的互联网接入',
     description: '听力原文：Greater Internet access correlates directly with improved health care, education, and economic devel...',
     category: '科技',
     wordCount: 218,
@@ -887,7 +872,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_06_05',
     title: 'Friendship and Work',
-    cnTitle: '友谊与工作',
     description: '听力原文：The passage discusses the relationship between friendship and work performance. Research shows that ...',
     category: '社会',
     wordCount: 206,
@@ -902,7 +886,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_06_06',
     title: 'Napping at Work',
-    cnTitle: '工作中的午睡',
     description: '听力原文：A man named Jake has started a business that rents places for nap-takers. It is essentially a nap re...',
     category: '健康',
     wordCount: 246,
@@ -918,7 +901,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2023_12_01',
     title: 'Horse Racing',
-    cnTitle: '赛马',
     description: '阅读理解：Questions 46 to 50 are based on the following passage....',
     category: '文化',
     wordCount: 158,
@@ -933,7 +915,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2023_12_02',
     title: 'Decision Making',
-    cnTitle: '决策制定',
     description: '阅读理解：Questions 51 to 55 are based on the following passage....',
     category: '健康',
     wordCount: 233,
@@ -949,7 +930,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2023_12_03',
     title: 'Multitasking',
-    cnTitle: '多任务处理',
     description: '阅读理解：Questions 51 to 55 are based on the following passage....',
     category: '科技',
     wordCount: 347,
@@ -965,7 +945,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2023_12_04',
     title: 'Teenagers and Social Networks',
-    cnTitle: '青少年与社交网络',
     description: '阅读理解：As a parent of two boys at primary school, I worry about the impact of social media on their develop...',
     category: '教育',
     wordCount: 171,
@@ -979,7 +958,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_12_01',
     title: 'Hotel Check-in',
-    cnTitle: '酒店入住',
     description: '听力原文：W: Hi there. How are you today? Do you have a reservation with us already?\nM: Good afternoon. Yes. W...',
     category: '生活',
     wordCount: 308,
@@ -991,7 +969,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_12_02',
     title: 'Computer Games',
-    cnTitle: '电脑游戏',
     description: '听力原文：W: Jeremy, you should throw that soup in the bin. It\'s been sitting out for hours.\nM: But it\'s still...',
     category: '生活',
     wordCount: 120,
@@ -1003,7 +980,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_12_03',
     title: 'E-textbooks vs Printed Books',
-    cnTitle: '电子教科书与纸质书',
     description: '听力原文：M: I\'m looking forward to the change. Our school is switching to e-textbooks next semester.\nW: I\'ll ...',
     category: '教育',
     wordCount: 188,
@@ -1013,9 +989,21 @@ const rawMockArticles = [
     ]
   },
   {
+    id: 'cet4_listening_2023_12_04',
+    title: 'Business Risk Taking',
+    description: '听力原文：Taking risks in business does not mean going into business blindly and then expecting great results....',
+    category: '社会',
+    wordCount: 233,
+    coverColor: 'bg-teal-500',
+    paragraphs: [
+      { en: 'Taking risks in business does not mean going into business blindly and then expecting great results. On the contrary, taking risks in entrepreneurship involves careful planning and hard work. Nobody can really be sure if risks will be met with success, no matter how calculated they may be. But this should not stop you from taking risks as risks are necessary if you want your business to succeed. Some risks may not work out, but an optimistic risk taker will always look at failure as an opportunity to learn.', zh: '商业冒险并不意味着盲目地进入商界然后期待好结果。相反，创业冒险需要精心计划和努力工作。没有人能真正确定冒险是否会成功，无论它们经过多么周密的计算。但这不应该阻止你去冒险，因为如果你想让你的企业成功，冒险是必要的。有些风险可能不会有结果，但乐观的风险承担者总是将失败视为学习的机会。' },
+      { en: 'The willingness to experiment with new ideas is key to business growth. As the old saying goes, nothing ventured, nothing gained. Failure will teach you how to think and plan strategically, but just remember that not all risks are good ones. And when you fail, learn from it and move forward.', zh: '尝试新想法的意愿是企业成长的关键。正如老话所说，不入虎穴，焉得虎子。失败会教会你如何战略性思考和计划，但要记住并非所有风险都是好的。当你失败时，从中学习并继续前进。' },
+      { en: 'Since most people tend to avoid risk, businesses that are brave enough to take risks already have a competitive advantage. They are the ones setting the standard with new ideas, fresh offers and bold inventions. Risk takers are best at adapting in difficult times. Simply put, when most individuals stay away from risk, it means less competition for risk takers.', zh: '由于大多数人倾向于回避风险，敢于冒险的企业已经拥有了竞争优势。他们是用新想法、新创意和大胆发明来制定标准的人。风险承担者最擅长在困难时期适应。简单地说，当大多数人远离风险时，对风险承担者来说就意味着更少的竞争。' }
+    ]
+  },
+  {
     id: 'cet4_listening_2023_12_05',
     title: 'Mobile Phones Changing Our Skeletons',
-    cnTitle: '手机改变我们的骨骼',
     description: '听力原文：Mobile phones have changed the way we live, how we read, work, communicate and shop, but we already ...',
     category: '科技',
     wordCount: 205,
@@ -1029,7 +1017,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2023_12_06',
     title: 'Parental Leave Policies',
-    cnTitle: '育儿假政策',
     description: '听力原文：The passage discusses the impact of parental leave policies on workplace gender equality. In the Uni...',
     category: '社会',
     wordCount: 208,
@@ -1044,7 +1031,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2024_06_01',
     title: 'The Art of Self-Control and Willpower',
-    cnTitle: '自控与意志力的艺术',
     description: '阅读理解：People often wonder why some entrepreneurs are more successful than others. I believe the key to suc...',
     category: '教育',
     wordCount: 309,
@@ -1059,7 +1045,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2024_06_02',
     title: 'Scientific Research Funding',
-    cnTitle: '科学研究资助',
     description: '阅读理解：Today, most scientific research is funded by government grants, companies doing research and develop...',
     category: '科技',
     wordCount: 373,
@@ -1074,7 +1059,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2024_06_03',
     title: 'Aging and Learning',
-    cnTitle: '老龄化与学习',
     description: '阅读理解：Some people have said aging is more a slide into forgetfulness than a journey towards wisdom. Howeve...',
     category: '教育',
     wordCount: 443,
@@ -1091,7 +1075,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2024_06_04',
     title: 'Fashion and Law',
-    cnTitle: '时尚与法律',
     description: '阅读理解：Richard Thompson Ford is a law professor, and you probably won\'t forget that for even one page. His ...',
     category: '文化',
     wordCount: 239,
@@ -1106,7 +1089,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2024_06_01',
     title: 'The Three Body Problem',
-    cnTitle: '三体问题',
     description: '听力原文：W: Tom, did you see the article online about the new TV series based on the book The Three Body Prob...',
     category: '教育',
     wordCount: 291,
@@ -1126,7 +1108,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2024_06_02',
     title: 'Vegetarian Food Festival',
-    cnTitle: '素食节',
     description: '听力原文：W: Hello, good afternoon. I have an inquiry to make. It\'s about the vegetarian food festival you are...',
     category: '社会',
     wordCount: 268,
@@ -1144,7 +1125,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2024_06_03',
     title: 'Wild Camping in the UK',
-    cnTitle: '英国野外露营',
     description: '听力原文：Supporters call it wild camping. Opponents call it illegal camping. What both sides accept is that t...',
     category: '环境',
     wordCount: 233,
@@ -1160,7 +1140,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2024_06_04',
     title: 'Teaching Children About Money',
-    cnTitle: '教孩子理财',
     description: '听力原文：M: What\'s the best way to teach children how to save and spend their money?...',
     category: '教育',
     wordCount: 313,
@@ -1182,7 +1161,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2024_06_05',
     title: 'Rewarding Success (Book Review)',
-    cnTitle: '奖励成功（书评）',
     description: '听力原文：W: Welcome to Books in Review. Our guest today is John Banks, the author of the bestselling new book...',
     category: '教育',
     wordCount: 395,
@@ -1209,7 +1187,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2024_06_06',
     title: 'Saying \"I\'m Busy\"',
-    cnTitle: '说"我很忙"',
     description: '听力原文：The speaker is launching a campaign to prevent people from complaining about being \"busy.\" Next time...',
     category: '社会',
     wordCount: 262,
@@ -1226,7 +1203,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2024_06_07',
     title: 'Extreme Sports',
-    cnTitle: '极限运动',
     description: '听力原文：It may sound strange to say that extreme sports can help one reduce fear. But research shows that fa...',
     category: '健康',
     wordCount: 252,
@@ -1243,7 +1219,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2024_06_08',
     title: 'Conflict in Organizations',
-    cnTitle: '组织中的冲突',
     description: '听力原文：Conflict in organizations is natural. Whenever people work together, differences of opinion are inev...',
     category: '社会',
     wordCount: 297,
@@ -1261,7 +1236,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2024_12_01',
     title: 'The Human Connection to Nature',
-    cnTitle: '人类与自然的联系',
     description: '阅读理解：The weakening of the human connection to nature might be good for economic growth but is bad for peo...',
     category: '环境',
     wordCount: 408,
@@ -1277,7 +1251,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2024_12_02',
     title: 'Chocolate and Global Warming',
-    cnTitle: '巧克力与全球变暖',
     description: '阅读理解：Chocolates save us from many things, especially emotional distress. People believe chocolates can ch...',
     category: '科技',
     wordCount: 333,
@@ -1294,7 +1267,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2024_12_03',
     title: 'Self-Driving Cars and Accidents',
-    cnTitle: '自动驾驶汽车与事故',
     description: '阅读理解：Research in human-vehicle interaction has shown even systems designed to automate driving are far fr...',
     category: '科技',
     wordCount: 312,
@@ -1311,7 +1283,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2024_12_04',
     title: 'Protein Consumption',
-    cnTitle: '蛋白质摄入',
     description: '阅读理解：Do you ever blend up a protein drink for breakfast, or grab a protein bar following an afternoon wor...',
     category: '健康',
     wordCount: 437,
@@ -1332,7 +1303,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2024_12_01',
     title: 'Buying a New Phone',
-    cnTitle: '买新手机',
     description: '听力原文：M: I\'m going to the city centre to buy a new phone today....',
     category: '社会',
     wordCount: 274,
@@ -1352,7 +1322,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2024_12_02',
     title: 'Tiny Home Movement',
-    cnTitle: '小房子运动',
     description: '听力原文：W: Welcome to The Morning Show. Our guest today is a popular blog writer and a major figure in the t...',
     category: '环境',
     wordCount: 316,
@@ -1377,7 +1346,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2024_12_03',
     title: 'Physical Activity for Children',
-    cnTitle: '儿童体育活动',
     description: '听力原文：Kids need time every day to run, jump, stretch and play. These experiences have been shown to build ...',
     category: '教育',
     wordCount: 319,
@@ -1392,9 +1360,22 @@ const rawMockArticles = [
     ]
   },
   {
+    id: 'cet4_listening_2024_12_04',
+    title: '(补充)',
+    description: '听力原文：The passage discusses the importance of reading for pleasure. It notes that few of us read books aft...',
+    category: '教育',
+    wordCount: 175,
+    coverColor: 'bg-rose-500',
+    paragraphs: [
+      { en: 'The passage discusses the importance of reading for pleasure. It notes that few of us read books after leaving school, which is disturbing because books are no less necessary to one\'s mental life than fresh air is to one\'s physical life.', zh: '这篇文章讨论了为乐趣而阅读的重要性。它指出，我们中很少有人在学校毕业后还会读书，这令人不安，因为书籍对一个人的精神生活的必要性，不亚于新鲜空气对身体生活的必要性。' },
+      { en: 'From good reading we can derive companionship, experience and instruction. A good book is our faithful friend. It can increase our contentment when we are cheerful and happy, and lessen our pain when we are sad or lonely. Books can also offer us a wide range of experience.', zh: '从良好的阅读中，我们可以获得陪伴、经验和教诲。一本好书是我们忠实的朋友。当我们快乐幸福时，它可以增加我们的满足感；当我们悲伤或孤独时，它可以减轻我们的痛苦。书籍还可以为我们提供广泛的经验。' },
+      { en: 'Few of us can travel far from home or live long over 100, but all of us can live many lives through the pages of books. What\'s more, reading books can increase our intellectual ability, broaden our minds and make us wise.', zh: '我们中很少有人能远行或活到100岁以上，但我们都可以通过书页经历许多种人生。更重要的是，读书可以提高我们的智力，开阔我们的视野，使我们变得明智。' },
+      { en: 'With the coming of TV, books are no longer read as widely as they once were. However, nothing can replace the role that books play in our lives.', zh: '随着电视的到来，书籍不再像过去那样被广泛阅读。然而，没有什么可以替代书籍在我们生活中扮演的角色。' }
+    ]
+  },
+  {
     id: 'cet4_reading_2025_06_01',
     title: 'Pandas and Research',
-    cnTitle: '熊猫与研究',
     description: '阅读理解：New research suggests that pandas may have more secrets than previously thought. These beloved black...',
     category: '科技',
     wordCount: 320,
@@ -1410,7 +1391,6 @@ const rawMockArticles = [
   {
     id: 'cet4_reading_2025_06_02',
     title: 'American Obsession with Looks',
-    cnTitle: '美国人对外貌的痴迷',
     description: '阅读理解：A fight is going on to remove pressure on women to conform to an absurd beauty ideal. For decades, w...',
     category: '健康',
     wordCount: 321,
@@ -1426,7 +1406,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2025_06_01',
     title: 'Rush Hour Traffic',
-    cnTitle: '高峰时段交通',
     description: '听力原文：M: Hey Mariah, you seem to be very much annoyed. What happened?...',
     category: '社会',
     wordCount: 299,
@@ -1450,7 +1429,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2025_06_02',
     title: 'Evolution of Human Sound',
-    cnTitle: '人类声音的演变',
     description: '听力原文：Humans developed the ability to make sounds through evolution. People initially made sounds by imita...',
     category: '科技',
     wordCount: 65,
@@ -1462,7 +1440,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2025_06_03',
     title: 'Teamwork and Competition',
-    cnTitle: '团队合作与竞争',
     description: '听力原文：The passage discusses human attitudes toward teamwork and competition. People are somewhat selfish b...',
     category: '教育',
     wordCount: 67,
@@ -1474,7 +1451,6 @@ const rawMockArticles = [
   {
     id: 'cet4_listening_2025_06_04',
     title: 'History of Animal Imagery in Art',
-    cnTitle: '艺术中动物形象的历史',
     description: '听力原文：The passage explores the history of animal imagery in art. Early art contained more images of animal...',
     category: '文化',
     wordCount: 60,
@@ -1485,71 +1461,4 @@ const rawMockArticles = [
   }
 ];
 
-
-// 为每篇文章补充 year / type / region / level 字段（从 id 中解析）
-rawMockArticles.forEach(a => {
-  const parts = a.id.split('_')
-  if (!a.year && parts.length >= 3) a.year = parseInt(parts[2], 10)
-  if (!a.type && parts.length >= 2) a.type = parts[1]
-  if (!a.region) a.region = '全国'
-  if (!a.level && !a.id.startsWith('extra_')) a.level = 'cet4'
-})
-
-// 处理高考数据
-const gaokaoArticles = gaokaoRaw.map(a => {
-  const match = a.id.match(/gk(\d{4})/)
-  return {
-    ...a,
-    year: match ? parseInt(match[1], 10) : 2020,
-    type: 'reading',
-    region: '全国',
-    level: 'gaokao',
-  }
-})
-
-// 处理 CET-6 数据
-function getCet6Year(index) {
-  if (index < 10) return 2020
-  if (index < 20) return 2021
-  if (index < 25) return 2022
-  if (index < 30) return 2023
-  if (index < 35) return 2024
-  return 2025
-}
-
-const cet6Articles = cet6Raw.map((a, index) => ({
-  ...a,
-  year: getCet6Year(index),
-  type: 'reading',
-  region: '全国',
-  level: 'cet6',
-}))
-
-export const mockArticles = [...extraArticles, ...rawMockArticles, ...gaokaoArticles, ...cet6Articles]
-
-// 辅助导出
-const allCategories = [...new Set(mockArticles.map(a => a.category))].sort()
-export const categories = ['全部', ...allCategories]
-
-const allYears = [...new Set(mockArticles.map(a => a.year))].sort((a, b) => b - a)
-export const years = ['全部', ...allYears]
-
-const allRegions = [...new Set(mockArticles.map(a => a.region))].sort()
-export const regions = ['全部', ...allRegions]
-
-const allLevels = [...new Set(mockArticles.map(a => a.level))].sort()
-export const levels = ['全部', 'cet4', 'gaokao', 'cet6']
-
-export const types = ['全部', 'reading', 'listening']
-
-export const totalCount = mockArticles.length
-export const readingCount = mockArticles.filter(a => a.type === 'reading').length
-export const listeningCount = mockArticles.filter(a => a.type === 'listening').length
-
-export function getArticleById(id) {
-  return mockArticles.find(a => a.id === id)
-}
-
-export function estimateReadingMinutes(wordCount) {
-  return Math.max(1, Math.round(wordCount / 200))
-}
+export default mockArticles;

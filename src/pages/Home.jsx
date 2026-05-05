@@ -334,7 +334,7 @@ function Home() {
             </div>
             <div className="mt-4">
               <div className="inline-flex items-center rounded-lg bg-violet-100 px-2.5 py-1 text-xs font-medium text-violet-700 dark:bg-violet-500/15 dark:text-violet-300">
-                阅读学习
+                阅读听力
               </div>
               <p className="mt-2 text-sm text-violet-600/70 dark:text-violet-400/60">
                 {readingWordCount > 0

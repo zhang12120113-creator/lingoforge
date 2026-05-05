@@ -146,7 +146,7 @@ export default function Stats() {
             Icon={BookOpen}
           />
           <StatsCard
-            label="听力训练"
+            label="语料中心"
             value={totalListeningMinutes}
             unit="m"
             Icon={Headphones}

@@ -12,7 +12,8 @@
     "dict:cleanup": "node scripts/remove-sentences.mjs",
     "dict:validate": "node scripts/validate-dicts.mjs",
     "dict:levels": "node scripts/validate-levels.mjs",
-    "dict:check": "npm run dict:cleanup && npm run dict:validate && npm run dict:levels"
+    "dict:check": "npm run dict:cleanup && npm run dict:validate && npm run dict:levels",
+    "add:cntitle": "node scripts/add-cnTitle.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.14.0",

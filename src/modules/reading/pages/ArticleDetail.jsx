@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { ArrowLeft, Bookmark, ChevronDown, Clock, FileText, Headphones, Pause, Play } from 'lucide-react'
+import { ArrowLeft, Bookmark, ChevronDown, Clock, FileText, Headphones, MapPin, Pause, Play, Volume2 } from 'lucide-react'
 import { estimateReadingMinutes, getArticleById } from '../data/mockArticles'
 import { useReadingStore } from '../hooks/useReadingStore'
 import useStudyTracker from '../hooks/useStudyTracker'
@@ -14,21 +14,21 @@ import WordPopup from '../components/WordPopup.jsx'
 
 const FULL_TEXT_INDEX = -1
 
-const DIFFICULTY_DOT = {
-  初级: 'bg-emerald-500',
-  中级: 'bg-amber-500',
-  高级: 'bg-rose-500',
-}
-
 const CATEGORY_TAG = {
-  商业: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300',
-  生活: 'bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300',
-  科技: 'bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-300',
+  健康: 'bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-300',
+  教育: 'bg-sky-50 text-sky-600 dark:bg-sky-500/10 dark:text-sky-300',
   文化: 'bg-violet-50 text-violet-600 dark:bg-violet-500/10 dark:text-violet-300',
+  旅行: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300',
+  生活: 'bg-amber-50 text-amber-700 dark:bg-amber-500/10 dark:text-amber-300',
+  科技: 'bg-cyan-50 text-cyan-600 dark:bg-cyan-500/10 dark:text-cyan-300',
+  商业: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300',
   社会: 'bg-rose-50 text-rose-600 dark:bg-rose-500/10 dark:text-rose-300',
   历史: 'bg-stone-50 text-stone-600 dark:bg-stone-500/10 dark:text-stone-300',
   自然: 'bg-lime-50 text-lime-600 dark:bg-lime-500/10 dark:text-lime-300',
   考试: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300',
+  环境: 'bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300',
+  经济: 'bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-300',
+  心理: 'bg-fuchsia-50 text-fuchsia-600 dark:bg-fuchsia-500/10 dark:text-fuchsia-300',
 }
 
 function formatTime(seconds) {
@@ -61,6 +61,61 @@ const cleanWordForLookup = (raw) => {
   return raw.replace(/^[^a-zA-Z]+|[^a-zA-Z]+$/g, '').toLowerCase()
 }
 
+const tokenizeText = (text, paraIndex, onWordClick, keyPrefix = 'plain') => {
+  const elements = []
+  const regex = /[a-zA-Z]+(?:['-][a-zA-Z0-9]+)*/g
+  let match
+  let lastIndex = 0
+
+  while ((match = regex.exec(text)) !== null) {
+    const rawWord = match[0]
+    const index = match.index
+
+    if (index > lastIndex) {
+      elements.push(
+        <span key={`${paraIndex}-${keyPrefix}-pre-${lastIndex}`} className="non-clickable">
+          {text.slice(lastIndex, index)}
+        </span>
+      )
+    }
+
+    const lookupWord = cleanWordForLookup(rawWord)
+
+    if (isValidWord(lookupWord)) {
+      elements.push(
+        <span
+          key={`${paraIndex}-${keyPrefix}-word-${index}`}
+          className="word-clickable cursor-pointer hover:underline hover:opacity-80 transition-opacity select-none"
+          onClick={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            onWordClick(lookupWord, getWordRect(e.target), e.target)
+          }}
+          title={lookupWord}
+        >
+          {rawWord}
+        </span>
+      )
+    } else {
+      elements.push(
+        <span key={`${paraIndex}-${keyPrefix}-txt-${index}`}>{rawWord}</span>
+      )
+    }
+
+    lastIndex = index + rawWord.length
+  }
+
+  if (lastIndex < text.length) {
+    elements.push(
+      <span key={`${paraIndex}-${keyPrefix}-post-${lastIndex}`} className="non-clickable">
+        {text.slice(lastIndex)}
+      </span>
+    )
+  }
+
+  return elements
+}
+
 const renderParagraph = (text, paraIndex, onWordClick) => {
   if (!text || typeof text !== 'string') {
     console.warn(`[Reading] Paragraph ${paraIndex} is not string:`, text)
@@ -76,54 +131,27 @@ const renderParagraph = (text, paraIndex, onWordClick) => {
     .replace(/&#39;/g, "'")
 
   const elements = []
-  const regex = /[a-zA-Z]+(?:['-][a-zA-Z0-9]+)*/g
+  const tagRegex = /<(strong|em|b|i|u)>([\s\S]*?)<\/\1>/g
   let match
   let lastIndex = 0
 
-  while ((match = regex.exec(decoded)) !== null) {
-    const rawWord = match[0]
+  while ((match = tagRegex.exec(decoded)) !== null) {
+    const [fullMatch, tag, content] = match
     const index = match.index
 
     if (index > lastIndex) {
-      elements.push(
-        <span key={`${paraIndex}-pre-${lastIndex}`} className="non-clickable">
-          {decoded.slice(lastIndex, index)}
-        </span>
-      )
+      elements.push(...tokenizeText(decoded.slice(lastIndex, index), paraIndex, onWordClick, `out-${index}`))
     }
 
-    const lookupWord = cleanWordForLookup(rawWord)
+    const innerElements = tokenizeText(content, paraIndex, onWordClick, `${tag}-${index}`)
+    const Tag = tag
+    elements.push(<Tag key={`${paraIndex}-tag-${index}`}>{innerElements}</Tag>)
 
-    if (isValidWord(lookupWord)) {
-      elements.push(
-        <span
-          key={`${paraIndex}-word-${index}`}
-          className="word-clickable cursor-pointer hover:underline hover:opacity-80 transition-opacity select-none"
-          onClick={(e) => {
-            e.stopPropagation()
-            e.preventDefault()
-            onWordClick(lookupWord, getWordRect(e.target), e.target)
-          }}
-          title={lookupWord}
-        >
-          {rawWord}
-        </span>
-      )
-    } else {
-      elements.push(
-        <span key={`${paraIndex}-txt-${index}`}>{rawWord}</span>
-      )
-    }
-
-    lastIndex = index + rawWord.length
+    lastIndex = index + fullMatch.length
   }
 
   if (lastIndex < decoded.length) {
-    elements.push(
-      <span key={`${paraIndex}-post-${lastIndex}`} className="non-clickable">
-        {decoded.slice(lastIndex)}
-      </span>
-    )
+    elements.push(...tokenizeText(decoded.slice(lastIndex), paraIndex, onWordClick, `tail-${lastIndex}`))
   }
 
   return (
@@ -213,7 +241,7 @@ function ParagraphBlock({ en, zh, index, audioState, onToggle, onSeek, onWordCli
               onClick={handleSeek}
             >
               <div
-                className="h-full bg-primary rounded-full transition-[width] duration-100"
+                className="h-full bg-primary rounded-full transition-[width] duration-200 ease-linear"
                 style={{ width: `${audioState.progress}%` }}
               />
             </div>
@@ -338,19 +366,22 @@ export default function ArticleDetail() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id, article])
 
-  // 估算段落朗读时长（秒）
+  // 估算段落朗读时长（秒）：rate=0.9 时 TTS 约 3 词/秒，留 10% 余量
   function estimateDuration(text) {
     const cleanText = text.replace(/<[^>]+>/g, '')
     const wordCount = cleanText.trim().split(/\s+/).filter(Boolean).length
-    return Math.max(1, Math.ceil(wordCount / 2.2))
+    return Math.max(1, (wordCount / 3) * 1.1)
   }
 
   function startProgressTimer(duration, initialElapsed = 0) {
     if (timerRef.current) clearInterval(timerRef.current)
     elapsedRef.current = initialElapsed
     timerRef.current = setInterval(() => {
-      elapsedRef.current += 0.1
-      const progress = Math.min(100, (elapsedRef.current / duration) * 100)
+      const remaining = duration - elapsedRef.current
+      // 接近末尾时减速逼近，避免长时间停在 99%
+      const advance = remaining > 0.5 ? 0.1 : Math.max(0.01, remaining * 0.08)
+      elapsedRef.current = Math.min(duration * 0.99, elapsedRef.current + advance)
+      const progress = Math.min(99, (elapsedRef.current / duration) * 100)
       setAudioState((prev) => ({ ...prev, elapsed: elapsedRef.current, progress }))
     }, 100)
   }
@@ -419,20 +450,8 @@ export default function ArticleDetail() {
       resetAudioState()
     }
 
-    utterance.onboundary = (e) => {
-      if (currentUtteranceRef.current !== thisUtterance) return
-      if (e.name === 'word' || e.name === 'sentence') {
-        const relativeProgress = cleanText.length > 0 ? (e.charIndex / cleanText.length) : 0
-        const actualProgress = Math.min(100, startProgress + relativeProgress * (100 - startProgress))
-        elapsedRef.current = startElapsed + relativeProgress * (fullDuration - startElapsed)
-        setAudioState((prev) => ({
-          ...prev,
-          progress: actualProgress,
-          elapsed: elapsedRef.current,
-        }))
-      }
-    }
-
+    // 不监听 onboundary：boundary 触发频率与 timer 不同步会导致进度条抖动，
+    // 这里完全交给 timer 平滑推进，进度由 estimateDuration 估算。
     utteranceRef.current = utterance
     window.speechSynthesis.speak(utterance)
   }
@@ -470,7 +489,7 @@ export default function ArticleDetail() {
         setAudioState((prev) => ({ ...prev, status: 'paused' }))
       } else if (audioState.status === 'paused') {
         window.speechSynthesis.resume()
-        startProgressTimer(audioState.duration)
+        startProgressTimer(audioState.duration, elapsedRef.current)
         setAudioState((prev) => ({ ...prev, status: 'playing' }))
       }
     } else {
@@ -541,7 +560,7 @@ export default function ArticleDetail() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center px-6 text-center">
         <p className="text-content-secondary dark:text-gray-300 mb-4">没有找到这篇文章</p>
-        <button onClick={() => navigate('/read')} className="btn-secondary">
+        <button onClick={() => navigate('/reading')} className="btn-secondary">
           返回列表
         </button>
       </div>
@@ -551,7 +570,6 @@ export default function ArticleDetail() {
   const tagClass =
     CATEGORY_TAG[article.category] ||
     'bg-gray-100 text-gray-600 dark:bg-white/[0.06] dark:text-gray-300'
-  const dotClass = DIFFICULTY_DOT[article.difficulty] || 'bg-gray-400'
   const isBookmarked = store.isBookmarked(article.id)
   const readingMinutes = estimateReadingMinutes(article.wordCount)
 
@@ -561,7 +579,7 @@ export default function ArticleDetail() {
       <div className="sticky top-12 md:top-16 z-40 glass-card border-b border-gray-200/70 dark:border-white/[0.06] backdrop-blur-md">
         <div className="max-w-3xl mx-auto px-4 md:px-6 h-12 flex items-center justify-between gap-3">
           <button
-            onClick={() => navigate('/read')}
+            onClick={() => navigate('/reading')}
             className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-sm text-content-secondary dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/[0.05] transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -569,7 +587,7 @@ export default function ArticleDetail() {
           </button>
           <div className="flex-1 min-w-0 text-center">
             <p className="text-sm font-medium text-content dark:text-gray-200 truncate px-3">
-              {article.title}
+              {article.enTitle || article.title}
             </p>
           </div>
           <button
@@ -600,15 +618,39 @@ export default function ArticleDetail() {
         </div>
 
         {/* 标题 */}
-        <h1 className="text-3xl md:text-4xl font-bold leading-tight text-content dark:text-gray-100 mb-5">
-          {article.title}
-        </h1>
+        <div className="mb-5">
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight text-content dark:text-gray-100">
+            {article.enTitle || article.title}
+          </h1>
+          {article.cnTitle && (
+            <p className="text-lg text-content-tertiary dark:text-gray-400 mt-1">
+              {article.cnTitle}
+            </p>
+          )}
+        </div>
 
         {/* 元信息 */}
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-content-tertiary dark:text-gray-500 mb-8">
           <div className="flex items-center gap-1.5">
-            <span className={`w-2 h-2 rounded-full ${dotClass}`} />
-            <span>{article.difficulty}</span>
+            <span className="w-2 h-2 rounded-full bg-primary" />
+            <span>{article.year} 年</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <MapPin className="w-3.5 h-3.5" />
+            <span>{article.region}</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            {article.type === 'listening' ? (
+              <>
+                <Volume2 className="w-3.5 h-3.5" />
+                <span>听力</span>
+              </>
+            ) : (
+              <>
+                <FileText className="w-3.5 h-3.5" />
+                <span>阅读</span>
+              </>
+            )}
           </div>
           <div className="flex items-center gap-1.5">
             <FileText className="w-3.5 h-3.5" />
@@ -671,7 +713,7 @@ export default function ArticleDetail() {
                       onClick={handleFullSeek}
                     >
                       <div
-                        className="h-full bg-primary rounded-full transition-[width] duration-100"
+                        className="h-full bg-primary rounded-full transition-[width] duration-200 ease-linear"
                         style={{ width: `${audioState.progress}%` }}
                       />
                     </div>

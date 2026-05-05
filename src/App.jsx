@@ -30,7 +30,7 @@ function App() {
             <Route path="/" element={<Navigate to="/word" replace />} />
             <Route path="/word" element={<Home />} />
             <Route path="/read/*" element={<ReadingModule />} />
-            <Route path="/reading" element={<Navigate to="/read" replace />} />
+            <Route path="/reading/*" element={<ReadingModule />} />
             <Route path="/listening" element={<ListeningPlaceholder />} />
             <Route path="/stats" element={<Stats />} />
             <Route path="/dict/:dictId" element={<ChapterSelect />} />
