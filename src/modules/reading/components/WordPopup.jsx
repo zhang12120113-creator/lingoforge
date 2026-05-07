@@ -157,7 +157,7 @@ export default function WordPopup({ wordData, rect, isSaved, onSave, onRemove, o
   return (
     <div
       ref={popupRef}
-      className="absolute z-[100] bg-white dark:bg-[#1a1a24] rounded-2xl shadow-xl border border-gray-100 dark:border-white/[0.06] overflow-hidden"
+      className="absolute z-[100] reading-word-popup bg-white dark:bg-[#1a1a24] rounded-2xl shadow-xl border border-gray-100 dark:border-white/[0.06] overflow-hidden"
       style={{ left, top: computedTop ?? initialTop, width: popupWidth }}
     >
       {/* Header */}
@@ -230,7 +230,7 @@ export default function WordPopup({ wordData, rect, isSaved, onSave, onRemove, o
           className={`flex-1 flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 active:scale-[0.97] ${
             isSaved
               ? 'bg-gray-100 dark:bg-white/[0.06] text-content-secondary dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-white/[0.1]'
-              : 'bg-content dark:bg-white text-white dark:text-content hover:opacity-90'
+              : 'bg-content dark:bg-white text-white dark:text-gray-900 hover:opacity-90'
           }`}
         >
           {isSaved ? (
