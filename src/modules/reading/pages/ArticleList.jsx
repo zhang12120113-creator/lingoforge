@@ -5,10 +5,8 @@ import {
   useMemo,
   useRef,
   useState,
-  forwardRef,
 } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { VirtuosoGrid } from 'react-virtuoso'
 import { Bookmark, ChevronDown, BookOpen, Search, Volume2 } from 'lucide-react'
 import {
   mockArticles,
@@ -21,6 +19,7 @@ import {
 import { useReadingStore } from '../hooks/useReadingStore'
 import { getReadingWordBookCount } from '../../../utils/readingWordBook.js'
 import ArticleCard from '../components/ArticleCard'
+import { VirtualGrid } from '../../../components/virtual/VirtualGrid'
 
 function Dropdown({ label, value, options, onChange, formatOption }) {
   const [open, setOpen] = useState(false)
@@ -67,26 +66,10 @@ function Dropdown({ label, value, options, onChange, formatOption }) {
   )
 }
 
-// VirtuosoGrid 自定义 List/Item 组件，提供响应式网格布局
-const ListComponent = forwardRef(function ListComponent(props, ref) {
-  const { className: _omit, ...rest } = props
-  return (
-    <div
-      ref={ref}
-      {...rest}
-      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-    />
-  )
-})
-
-const ItemComponent = (props) => {
-  const { className: _omit, ...rest } = props
-  return <div {...rest} className="h-full" />
-}
-
 export default function ArticleList() {
   const navigate = useNavigate()
   const store = useReadingStore()
+  const gridRef = useRef(null)
 
   const [categoryFilter, setCategoryFilter] = useState('全部')
   const [yearFilter, setYearFilter] = useState('全部')
@@ -105,12 +88,10 @@ export default function ArticleList() {
     if (savedScroll !== null) {
       const top = parseInt(savedScroll, 10)
       sessionStorage.removeItem('reading_list_scroll')
-      // 等 VirtuosoGrid 完成首次渲染后再恢复滚动位置
+      // 等 VirtualGrid 完成首次渲染后再恢复滚动位置
       setTimeout(() => {
-        window.scrollTo({ top, behavior: 'instant' })
+        gridRef.current?.scrollToOffset(top, { behavior: 'instant' })
       }, 100)
-    } else {
-      window.scrollTo({ top: 0, behavior: 'instant' })
     }
   }, [])
 
@@ -146,7 +127,8 @@ export default function ArticleList() {
   // 稳定的事件回调
   const handleArticleClick = useCallback(
     (id) => {
-      sessionStorage.setItem('reading_list_scroll', String(window.scrollY))
+      const offset = gridRef.current?.getScrollOffset?.() ?? 0
+      sessionStorage.setItem('reading_list_scroll', String(offset))
       navigate(`/reading/${id}`)
     },
     [navigate]
@@ -179,19 +161,14 @@ export default function ArticleList() {
     navigate('/dict/reading-word-book')
   }, [navigate])
 
-  const virtuosoComponents = useMemo(
-    () => ({ List: ListComponent, Item: ItemComponent }),
-    []
-  )
-
-  const itemContent = useCallback(
-    (index, article) => (
+  const renderArticle = useCallback(
+    (article) => (
       <ArticleCard
         article={article}
         readPercent={store.getProgress(article.id)}
         lastReadAt={store.getLastReadAt(article.id)}
         isBookmarked={bookmarkSet.has(article.id)}
-        onClick={() => handleArticleClick(article.id)}
+        onClick={handleArticleClick}
         onToggleBookmark={handleToggleBookmark}
       />
     ),
@@ -199,107 +176,111 @@ export default function ArticleList() {
   )
 
   return (
-    <div className="min-h-screen bg-background dark:bg-transparent p-4 md:p-6 transition-colors duration-500 animate-page-fade-in">
-      <div className="max-w-6xl mx-auto px-2 md:px-6">
+    <div className="bg-background dark:bg-transparent p-4 md:p-6 transition-colors duration-500 animate-page-fade-in">
+      <div className="max-w-6xl mx-auto px-2 md:px-6 w-full">
         {/* 顶部标题区 */}
-        <div className="mt-10 md:mt-16 mb-8 md:mb-10">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <div className="text-left">
-              <h1 className="text-display gradient-text mb-3 tracking-tight text-glow-primary">
-                阅读& 听力
-              </h1>
-              <p className="text-content-tertiary text-body max-w-xl leading-relaxed">
-                精选英语文章，沉浸式阅读与听力体验，在语境中自然掌握词汇。
-              </p>
-              {/* 统计信息 */}
-              <div className="mt-3 flex items-center gap-3 text-sm text-content-tertiary dark:text-gray-500">
-                <span className="inline-flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  共 {totalCount} 篇
-                </span>
-                <span className="text-gray-300 dark:text-gray-700">|</span>
-                <span className="inline-flex items-center gap-1.5">
-                  <BookOpen className="w-3.5 h-3.5" />
-                  阅读 {readingCount} 篇
-                </span>
-                <span className="text-gray-300 dark:text-gray-700">|</span>
-                <span className="inline-flex items-center gap-1.5">
-                  <Volume2 className="w-3.5 h-3.5" />
-                  听力 {listeningCount} 篇
-                </span>
+        <div>
+          <div className="mt-10 md:mt-16 mb-8 md:mb-10">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+              <div className="text-left">
+                <h1 className="text-display gradient-text mb-3 tracking-tight text-glow-primary">
+                  阅读& 听力
+                </h1>
+                <p className="text-content-tertiary text-body max-w-xl leading-relaxed">
+                  精选英语文章，沉浸式阅读与听力体验，在语境中自然掌握词汇。
+                </p>
+                {/* 统计信息 */}
+                <div className="mt-3 flex items-center gap-3 text-sm text-content-tertiary dark:text-gray-500">
+                  <span className="inline-flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                    共 {totalCount} 篇
+                  </span>
+                  <span className="text-gray-300 dark:text-gray-700">|</span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <BookOpen className="w-3.5 h-3.5" />
+                    阅读 {readingCount} 篇
+                  </span>
+                  <span className="text-gray-300 dark:text-gray-700">|</span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Volume2 className="w-3.5 h-3.5" />
+                    听力 {listeningCount} 篇
+                  </span>
+                </div>
+              </div>
+
+              {/* 筛选栏 */}
+              <div className="flex flex-wrap items-center gap-2 md:gap-3">
+                <button
+                  onClick={handleNavigateWordBook}
+                  className="flex items-center gap-2 px-4 py-2 glass-card rounded-button text-sm font-medium text-content-secondary dark:text-gray-300 hover:border-primary/40 transition-colors cursor-pointer"
+                >
+                  <BookOpen className="w-4 h-4" />
+                  <span>阅读词本</span>
+                  {readingWordCount > 0 && (
+                    <span className="ml-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-violet-100 dark:bg-violet-500/20 px-1.5 text-xs font-semibold text-violet-700 dark:text-violet-300">
+                      {readingWordCount}
+                    </span>
+                  )}
+                </button>
+                <Dropdown
+                  label="全部分类"
+                  value={categoryFilter}
+                  options={categories}
+                  onChange={handleCategoryChange}
+                />
+                <Dropdown
+                  label="全部年份"
+                  value={yearFilter}
+                  options={yearOptions}
+                  onChange={handleYearChange}
+                />
+                <button
+                  onClick={handleBookmarkOnlyToggle}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-button text-sm font-medium transition-colors cursor-pointer ${
+                    bookmarkOnly
+                      ? 'bg-primary text-white shadow-sm'
+                      : 'glass-card text-content-secondary dark:text-gray-300 hover:border-primary/40'
+                  }`}
+                  aria-pressed={bookmarkOnly}
+                >
+                  <Bookmark
+                    className="w-4 h-4"
+                    fill={bookmarkOnly ? 'currentColor' : 'none'}
+                    strokeWidth={2}
+                  />
+                  <span>{bookmarkOnly ? '已收藏' : '只看收藏'}</span>
+                </button>
               </div>
             </div>
-
-            {/* 筛选栏 */}
-            <div className="flex flex-wrap items-center gap-2 md:gap-3">
-              <button
-                onClick={handleNavigateWordBook}
-                className="flex items-center gap-2 px-4 py-2 glass-card rounded-button text-sm font-medium text-content-secondary dark:text-gray-300 hover:border-primary/40 transition-colors cursor-pointer"
-              >
-                <BookOpen className="w-4 h-4" />
-                <span>阅读词本</span>
-                {readingWordCount > 0 && (
-                  <span className="ml-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-violet-100 dark:bg-violet-500/20 px-1.5 text-xs font-semibold text-violet-700 dark:text-violet-300">
-                    {readingWordCount}
-                  </span>
-                )}
-              </button>
-              <Dropdown
-                label="全部分类"
-                value={categoryFilter}
-                options={categories}
-                onChange={handleCategoryChange}
-              />
-              <Dropdown
-                label="全部年份"
-                value={yearFilter}
-                options={yearOptions}
-                onChange={handleYearChange}
-              />
-              <button
-                onClick={handleBookmarkOnlyToggle}
-                className={`flex items-center gap-2 px-4 py-2 rounded-button text-sm font-medium transition-colors cursor-pointer ${
-                  bookmarkOnly
-                    ? 'bg-primary text-white shadow-sm'
-                    : 'glass-card text-content-secondary dark:text-gray-300 hover:border-primary/40'
-                }`}
-                aria-pressed={bookmarkOnly}
-              >
-                <Bookmark
-                  className="w-4 h-4"
-                  fill={bookmarkOnly ? 'currentColor' : 'none'}
-                  strokeWidth={2}
-                />
-                <span>{bookmarkOnly ? '已收藏' : '只看收藏'}</span>
-              </button>
-            </div>
           </div>
-        </div>
 
-        {/* 搜索框 */}
-        <div className="mb-6">
-          <div className="relative max-w-md">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-content-tertiary dark:text-gray-500" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={handleSearchChange}
-              placeholder="搜索标题或描述..."
-              className="w-full pl-10 pr-4 py-2.5 bg-surface border border-gray-200 dark:border-white/[0.08] rounded-button text-sm text-content placeholder-gray-400 focus:outline-none focus:border-primary/50 transition-all"
-            />
+          {/* 搜索框 */}
+          <div className="mb-6">
+            <div className="relative max-w-md">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-content-tertiary dark:text-gray-500" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={handleSearchChange}
+                placeholder="搜索标题或描述..."
+                className="w-full pl-10 pr-4 py-2.5 bg-surface border border-gray-200 dark:border-white/[0.08] rounded-button text-sm text-content placeholder-gray-400 focus:outline-none focus:border-primary/50 transition-all"
+              />
+            </div>
           </div>
         </div>
 
         {/* 卡片网格 - 虚拟滚动 */}
         {filtered.length > 0 ? (
-          <VirtuosoGrid
-            useWindowScroll
-            data={filtered}
-            components={virtuosoComponents}
-            itemContent={itemContent}
-            overscan={400}
-            computeItemKey={(_, article) => article.id}
-          />
+          <div className="pb-28">
+            <VirtualGrid
+              ref={gridRef}
+              items={filtered}
+              estimateRowSize={320}
+              overscan={3}
+              gapClass="gap-5"
+              renderItem={renderArticle}
+            />
+          </div>
         ) : (
           <div className="glass-card rounded-card p-12 text-center">
             <p className="text-content-secondary dark:text-gray-300 mb-2">没有匹配的文章</p>

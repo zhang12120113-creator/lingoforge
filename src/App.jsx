@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react'
+import { useScrollingFlag } from './hooks/useScrollingFlag'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { Toaster } from 'sonner'
 import Layout from './components/Layout'
@@ -14,6 +15,7 @@ const TrainingCenter = lazy(() => import('./pages/TrainingCenter'))
 const PersonalCenter = lazy(() => import('./pages/PersonalCenter'))
 
 function App() {
+  useScrollingFlag()
   return (
     <>
       <Toaster

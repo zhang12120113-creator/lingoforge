@@ -1,13 +1,13 @@
-import React, { useEffect, useRef, memo } from 'react';
+import React, { useEffect, useRef, useCallback, memo } from 'react';
 import { Volume2, Check, X } from 'lucide-react';
+import { VirtualList } from './virtual/VirtualList';
 
-const WordListItem = memo(function WordListItem({ word, idx, currentIndex, onPlaySound, onJumpTo, activeRef }) {
+const WordListItem = memo(function WordListItem({ word, idx, currentIndex, onPlaySound, onJumpTo }) {
   const isActive = idx === currentIndex;
   const isDone = idx < currentIndex;
 
   return (
     <div
-      ref={isActive ? activeRef : null}
       onClick={() => onJumpTo?.(idx)}
       className={`
         group mx-2 px-3 py-2.5 rounded-lg cursor-pointer transition-all
@@ -48,11 +48,26 @@ const WordListItem = memo(function WordListItem({ word, idx, currentIndex, onPla
 });
 
 const WordListPanel = memo(function WordListPanel({ words, currentIndex, onPlaySound, onJumpTo, onClose }) {
-  const activeRef = useRef(null);
+  const listRef = useRef(null);
 
   useEffect(() => {
-    activeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (listRef.current && currentIndex >= 0) {
+      listRef.current.scrollToIndex(currentIndex, { align: 'center', behavior: 'smooth' });
+    }
   }, [currentIndex]);
+
+  const renderWord = useCallback(
+    (word, idx) => (
+      <WordListItem
+        word={word}
+        idx={idx}
+        currentIndex={currentIndex}
+        onPlaySound={onPlaySound}
+        onJumpTo={onJumpTo}
+      />
+    ),
+    [currentIndex, onPlaySound, onJumpTo]
+  );
 
   if (!words || words.length === 0) return null;
 
@@ -74,19 +89,16 @@ const WordListPanel = memo(function WordListPanel({ words, currentIndex, onPlayS
         </button>
       </div>
 
-      {/* 单词列表 */}
-      <div className="flex-1 overflow-y-auto py-2 pb-6 space-y-1 custom-scrollbar">
-        {words.map((word, idx) => (
-          <WordListItem
-            key={`${word.name}-${idx}`}
-            word={word}
-            idx={idx}
-            currentIndex={currentIndex}
-            onPlaySound={onPlaySound}
-            onJumpTo={onJumpTo}
-            activeRef={activeRef}
-          />
-        ))}
+      {/* 单词列表 - 虚拟滚动 */}
+      <div className="flex-1 overflow-hidden">
+        <VirtualList
+          ref={listRef}
+          items={words}
+          estimateSize={60}
+          overscan={10}
+          className="h-full py-2 pb-6 custom-scrollbar"
+          renderItem={renderWord}
+        />
       </div>
     </div>
   );

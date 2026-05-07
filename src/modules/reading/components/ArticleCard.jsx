@@ -45,8 +45,8 @@ function ArticleCard({
 
   return (
     <div
-      onClick={onClick}
-      className="group card card-hover relative overflow-hidden cursor-pointer glow-border-subtle active:scale-[0.98] transition-transform duration-150 flex flex-col h-full bg-white dark:bg-white/[0.03] rounded-xl shadow-sm"
+      onClick={() => onClick?.(article.id)}
+      className="group card card-hover relative overflow-hidden cursor-pointer glow-border-subtle active:scale-[0.98] transition-transform duration-150 flex flex-col min-h-[280px] h-full bg-white dark:bg-white/[0.03] rounded-xl shadow-sm"
     >
       {/* 收藏按钮 */}
       <button
@@ -68,7 +68,7 @@ function ArticleCard({
         />
       </button>
 
-      <div className="p-5 flex flex-col flex-1">
+      <div className="p-5 flex flex-col flex-1 justify-between">
         {/* 顶部：分类 + 类型标签 */}
         <div className="flex items-start gap-3 mb-3">
           <div className="flex-1 min-w-0 pt-0.5">
@@ -113,30 +113,30 @@ function ArticleCard({
           </p>
         )}
 
-        {/* 描述（2行截断） */}
-        <p className="text-sm text-content-tertiary dark:text-gray-400 line-clamp-2 mb-4 leading-relaxed flex-1">
+        {/* 描述（3行截断） */}
+        <p className="text-sm text-content-tertiary dark:text-gray-400 line-clamp-3 mb-4 leading-relaxed">
           {article.description}
         </p>
 
-        {/* 分隔线 */}
-        <div className="border-t border-gray-200/70 dark:border-white/[0.06]" />
-
-        {/* 底部信息 */}
-        <div className="flex items-center justify-between mt-3">
-          <div className="flex items-center gap-2 text-xs text-content-tertiary dark:text-gray-500">
-            <span>{article.year}</span>
-            <span className="text-gray-300 dark:text-gray-700">|</span>
-            <span>{article.wordCount} 词</span>
-            <span className="text-gray-300 dark:text-gray-700">|</span>
-            <Volume2 className="w-3.5 h-3.5" />
+        {/* 底部区域：始终固定在卡片底部 */}
+        <div className="mt-auto">
+          <div className="border-t border-gray-200/70 dark:border-white/[0.06]" />
+          <div className="flex items-center justify-between pt-3">
+            <div className="flex items-center gap-2 text-xs text-content-tertiary dark:text-gray-500">
+              <span>{article.year}</span>
+              <span className="text-gray-300 dark:text-gray-700">|</span>
+              <span>{article.wordCount} 词</span>
+              <span className="text-gray-300 dark:text-gray-700">|</span>
+              <Volume2 className="w-3.5 h-3.5" />
+            </div>
+            <button
+              type="button"
+              tabIndex={-1}
+              className="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/[0.06] text-content-secondary dark:text-gray-300 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-200"
+            >
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
-          <button
-            type="button"
-            tabIndex={-1}
-            className="w-8 h-8 rounded-full bg-gray-100 dark:bg-white/[0.06] text-content-secondary dark:text-gray-300 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-200"
-          >
-            <ArrowRight className="w-4 h-4" />
-          </button>
         </div>
       </div>
     </div>

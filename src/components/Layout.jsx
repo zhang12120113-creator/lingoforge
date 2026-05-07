@@ -31,7 +31,7 @@ function Layout() {
           <Toolbar />
         </div>
       </nav>
-      <div className={`relative ${showBottomNav ? 'pb-14' : ''}`}>
+      <div className={`relative ${showBottomNav ? 'pb-24' : ''}`}>
         <Outlet />
       </div>
       {showBottomNav && <BottomNav />}

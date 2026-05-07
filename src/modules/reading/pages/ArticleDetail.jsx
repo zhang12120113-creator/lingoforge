@@ -901,7 +901,7 @@ export default function ArticleDetail() {
       </article>
 
       {/* 底部空间 */}
-      <div className="h-20" />
+      <div className="h-28" />
 
       {/* 单词弹窗 */}
       {popup && (

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body, #root {
+  min-height: 100%;
+}
+
 :root {
   --color-primary: #6366f1;
   --color-primary-soft: rgba(99, 102, 241, 0.12);
@@ -106,6 +110,55 @@
   background: rgba(255, 255, 255, 0.15);
 }
 
+/* 虚拟滚动 — 全局滚动条统一（防宽度变化抖动 + Firefox 适配） */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+/* 暗色 / 灰色 / 星空主题 — 滚动条对比度调整 */
+[data-theme="gray"] ::-webkit-scrollbar-thumb,
+[data-theme="star"] ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+[data-theme="gray"] ::-webkit-scrollbar-thumb:hover,
+[data-theme="star"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+[data-theme="gray"] *,
+[data-theme="star"] * {
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+/* 暖米主题 — 滚动条配色 */
+[data-theme="warm"] ::-webkit-scrollbar-thumb {
+  background: rgba(120, 110, 90, 0.4);
+}
+[data-theme="warm"] ::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 110, 90, 0.6);
+}
+[data-theme="warm"] * {
+  scrollbar-color: rgba(120, 110, 90, 0.4) transparent;
+}
+
 /* Selection colors */
 ::selection {
   background: rgba(99, 102, 241, 0.2);
@@ -118,15 +171,17 @@
 /* Component layer */
 @layer components {
   .card {
-    @apply bg-surface rounded-card border border-gray-200/60 backdrop-blur-sm;
+    @apply bg-surface rounded-card border border-gray-200/60;
+    contain: layout paint;
   }
   .dark .card {
-    background: rgba(19, 19, 31, 0.7);
+    background: rgba(19, 19, 31, 0.88);
     border-color: rgba(255, 255, 255, 0.06);
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-card-light dark:hover:shadow-card-dark-hover hover:-translate-y-0.5;
+    @apply hover:shadow-card-light dark:hover:shadow-card-dark-hover hover:-translate-y-0.5;
+    transition: transform 200ms, box-shadow 200ms;
   }
 
   .btn-primary {
@@ -314,12 +369,12 @@
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .glow-border-subtle:hover {
-  box-shadow: 0 0 20px rgba(99, 102, 241, 0.1), 0 0 40px rgba(99, 102, 241, 0.05);
+  box-shadow: 0 0 16px rgba(99, 102, 241, 0.12);
   border-color: rgba(99, 102, 241, 0.25);
 }
 
 .dark .glow-border-subtle:hover {
-  box-shadow: 0 0 20px rgba(129, 140, 248, 0.12), 0 0 40px rgba(129, 140, 248, 0.06);
+  box-shadow: 0 0 16px rgba(129, 140, 248, 0.14);
   border-color: rgba(129, 140, 248, 0.2);
 }
 
@@ -384,6 +439,17 @@
   .card-interactive {
     @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 active:scale-[0.98] active:translate-y-0;
   }
+}
+
+/* 滚动时临时禁用卡片 hover 过渡，防止滚动中鼠标扫过触发昂贵绘制 */
+body[data-scrolling="true"] .card-hover,
+body[data-scrolling="true"] .glow-border-subtle {
+  transition: none !important;
+}
+body[data-scrolling="true"] .card-hover:hover,
+body[data-scrolling="true"] .glow-border-subtle:hover {
+  box-shadow: none !important;
+  transform: none !important;
 }
 
 /* 防止 iOS 双击缩放 */
@@ -558,7 +624,7 @@
   box-shadow: 0 0 15px rgba(255,255,255,0.04), inset 0 0 15px rgba(255,255,255,0.02);
 }
 [data-theme="gray"] .glow-border-subtle:hover {
-  box-shadow: 0 0 20px rgba(255,255,255,0.06), 0 0 40px rgba(255,255,255,0.03);
+  box-shadow: 0 0 16px rgba(255,255,255,0.08);
   border-color: rgba(255,255,255,0.12);
 }
 [data-theme="gray"] .text-glow-primary {
