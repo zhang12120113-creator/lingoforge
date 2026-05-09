@@ -323,7 +323,7 @@ function StarryBackground() {
       return (
         <div className="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
           <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-[#D9A87C]/20 rounded-full blur-[80px]" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#C28E5C]/15 rounded-full blur-[60px]" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#C28E5C]/8 rounded-full blur-[60px]" />
           <div className="absolute top-[40%] left-[60%] w-[30%] h-[30%] bg-[#E8B98A]/15 rounded-full blur-[40px]" />
         </div>
       );

@@ -1,5 +1,6 @@
 import { getErrorBookCount, loadErrorBookAsDictionary } from '../utils/errorBook.js';
 import { getReadingWordBookCount, loadReadingWordBookAsDictionary } from '../utils/readingWordBook.js';
+import { getCorpusWordBookCount, loadCorpusWordBookAsDictionary } from '../utils/corpusWordBook.js';
 
 const warmColors = [
   'warm-coral',
@@ -57,6 +58,19 @@ export const getMeta = (id) => {
       totalChapters: dict.chapters?.length || 0,
       totalWords: count,
       color: 'warm-violet',
+    };
+  }
+  if (id === 'corpus-word-book') {
+    const dict = loadCorpusWordBookAsDictionary();
+    const count = getCorpusWordBookCount();
+    return {
+      id: 'corpus-word-book',
+      name: '语料词本',
+      category: '我的',
+      description: '从语料字幕中积累的词汇',
+      totalChapters: dict.chapters?.length || 0,
+      totalWords: count,
+      color: 'warm-teal',
     };
   }
   return dictionaryMeta.find((d) => d.id === id);

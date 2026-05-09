@@ -1,5 +1,6 @@
 import { loadErrorBookAsDictionary } from './errorBook.js';
 import { loadReadingWordBookAsDictionary, enrichReadingWordBook } from './readingWordBook.js';
+import { loadCorpusWordBookAsDictionary, enrichCorpusWordBook } from './corpusWordBook.js';
 
 const loaders = {
   junior: () => import('../dictionaries/junior.json'),
@@ -22,11 +23,15 @@ const loaders = {
     await enrichReadingWordBook();
     return { default: loadReadingWordBookAsDictionary() };
   },
+  'corpus-word-book': async () => {
+    await enrichCorpusWordBook();
+    return { default: loadCorpusWordBookAsDictionary() };
+  },
 }
 
 const cache = new Map()
 
-const noCacheIds = new Set(['error-book', 'reading-word-book'])
+const noCacheIds = new Set(['error-book', 'reading-word-book', 'corpus-word-book'])
 
 export async function loadDictionary(id) {
   if (!noCacheIds.has(id) && cache.has(id)) return cache.get(id)

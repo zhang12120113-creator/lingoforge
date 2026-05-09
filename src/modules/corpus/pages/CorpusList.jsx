@@ -1,91 +1,82 @@
-import {
-  useCallback,
-  useDeferredValue,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react'
+import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Bookmark, BookOpen, Search, Volume2 } from 'lucide-react'
+import { Bookmark, BookOpen, Search, Video } from 'lucide-react'
 import {
-  mockArticles,
+  mockCorpusVideos,
   categories,
-  years,
   totalCount,
-  readingCount,
-  listeningCount,
-} from '../data/mockArticles'
-import { useReadingStore } from '../hooks/useReadingStore'
-import { getReadingWordBookCount } from '../../../utils/readingWordBook.js'
-import ArticleCard from '../components/ArticleCard'
+} from '../data/mockCorpusVideos'
+import { DIFFICULTY_LABELS, getDifficultyLabel } from '../utils/difficulty'
+import { useCorpusStore } from '../hooks/useCorpusStore'
+import { getCorpusWordBookCount } from '../../../utils/corpusWordBook.js'
+import VideoCard from '../components/VideoCard'
 import Dropdown from '../../../components/Dropdown'
 import { VirtualGrid } from '../../../components/virtual/VirtualGrid'
 
-export default function ArticleList() {
+export default function CorpusList() {
   const navigate = useNavigate()
-  const store = useReadingStore()
+  const store = useCorpusStore()
   const gridRef = useRef(null)
+  const scrollRestoredRef = useRef(false)
 
   const [categoryFilter, setCategoryFilter] = useState('全部')
-  const [yearFilter, setYearFilter] = useState('全部')
+  const [difficultyFilter, setDifficultyFilter] = useState('全部')
   const [searchQuery, setSearchQuery] = useState('')
   const deferredQuery = useDeferredValue(searchQuery)
   const [bookmarkOnly, setBookmarkOnly] = useState(false)
-  const [readingWordCount, setReadingWordCount] = useState(0)
-  const scrollRestoredRef = useRef(false)
+  const [corpusWordCount, setCorpusWordCount] = useState(0)
 
   useEffect(() => {
     if (scrollRestoredRef.current) return
     scrollRestoredRef.current = true
 
-    setReadingWordCount(getReadingWordBookCount())
-    const savedScroll = sessionStorage.getItem('reading_list_scroll')
+    setCorpusWordCount(getCorpusWordBookCount())
+    const savedScroll = sessionStorage.getItem('corpus_list_scroll')
     if (savedScroll !== null) {
       const top = parseInt(savedScroll, 10)
-      sessionStorage.removeItem('reading_list_scroll')
-      // 等 VirtualGrid 完成首次渲染后再恢复滚动位置
+      sessionStorage.removeItem('corpus_list_scroll')
       setTimeout(() => {
         gridRef.current?.scrollToOffset(top, { behavior: 'instant' })
       }, 100)
     }
   }, [])
 
-  // bookmarks 数组转 Set，加速 has 查找并避免每次 filter/render 都遍历数组
   const bookmarkSet = useMemo(
     () => new Set(store.bookmarks),
     [store.bookmarks]
   )
 
-  // 缓存 years.map(String)，避免每次渲染重建数组
-  const yearOptions = useMemo(() => years.map(String), [])
+  const difficultyOptions = useMemo(() => ['全部', ...DIFFICULTY_LABELS], [])
 
   const filtered = useMemo(() => {
     const q = deferredQuery.trim().toLowerCase()
-    return mockArticles.filter((a) => {
-      if (categoryFilter !== '全部' && a.category !== categoryFilter) return false
-      if (yearFilter !== '全部' && String(a.year) !== yearFilter) return false
-      if (bookmarkOnly && !bookmarkSet.has(a.id)) return false
+    return mockCorpusVideos.filter((v) => {
+      if (categoryFilter !== '全部' && v.category !== categoryFilter) return false
+      if (difficultyFilter !== '全部' && getDifficultyLabel(v.sentenceCount) !== difficultyFilter) return false
+      if (bookmarkOnly && !bookmarkSet.has(v.id)) return false
       if (q) {
         const hay = (
-          (a.enTitle || a.title || '') +
+          (v.title || '') +
           ' ' +
-          (a.cnTitle || '') +
+          (v.subtitle || '') +
           ' ' +
-          (a.description || '')
+          (v.description || '') +
+          ' ' +
+          (v.speaker || '') +
+          ' ' +
+          (v.tags || []).join(' ')
         ).toLowerCase()
         if (!hay.includes(q)) return false
       }
       return true
     })
-  }, [categoryFilter, yearFilter, bookmarkOnly, deferredQuery, bookmarkSet])
+  }, [categoryFilter, difficultyFilter, bookmarkOnly, deferredQuery, bookmarkSet])
 
-  // 稳定的事件回调
-  const handleArticleClick = useCallback(
+  const handleVideoClick = useCallback(
     (id) => {
       const offset = gridRef.current?.getScrollOffset?.() ?? 0
-      sessionStorage.setItem('reading_list_scroll', String(offset))
-      navigate(`/reading/${id}`)
+      sessionStorage.setItem('corpus_list_scroll', String(offset))
+      navigate(`/listening/${id}`)
     },
     [navigate]
   )
@@ -101,8 +92,8 @@ export default function ArticleList() {
     setCategoryFilter(value)
   }, [])
 
-  const handleYearChange = useCallback((value) => {
-    setYearFilter(value)
+  const handleDifficultyChange = useCallback((value) => {
+    setDifficultyFilter(value)
   }, [])
 
   const handleBookmarkOnlyToggle = useCallback(() => {
@@ -114,52 +105,43 @@ export default function ArticleList() {
   }, [])
 
   const handleNavigateWordBook = useCallback(() => {
-    navigate('/dict/reading-word-book')
+    navigate('/dict/corpus-word-book')
   }, [navigate])
 
-  const renderArticle = useCallback(
-    (article) => (
-      <ArticleCard
-        article={article}
-        readPercent={store.getProgress(article.id)}
-        lastReadAt={store.getLastReadAt(article.id)}
-        isBookmarked={bookmarkSet.has(article.id)}
-        onClick={handleArticleClick}
+  const renderVideo = useCallback(
+    (video) => (
+      <VideoCard
+        video={video}
+        isBookmarked={bookmarkSet.has(video.id)}
+        onClick={handleVideoClick}
         onToggleBookmark={handleToggleBookmark}
       />
     ),
-    [store, bookmarkSet, handleArticleClick, handleToggleBookmark]
+    [bookmarkSet, handleVideoClick, handleToggleBookmark]
   )
 
   return (
     <div className="bg-background dark:bg-transparent p-4 md:p-6 transition-colors duration-500 animate-page-fade-in">
       <div className="max-w-6xl mx-auto px-2 md:px-6 w-full">
-        {/* 顶部标题区 */}
         <div>
           <div className="mt-10 md:mt-16 mb-8 md:mb-10">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div className="text-left">
                 <h1 className="text-display gradient-text mb-3 tracking-tight text-glow-primary">
-                  阅读& 听力
+                  语料中心
                 </h1>
                 <p className="text-content-tertiary text-body max-w-xl leading-relaxed">
-                  精选英语文章，沉浸式阅读与听力体验，在语境中自然掌握词汇。
+                  精选演讲与短视频，逐句字幕跟读、单句循环、变速练习,在真实语境中磨炼听说能力。
                 </p>
-                {/* 统计信息 */}
                 <div className="mt-3 flex items-center gap-3 text-sm text-content-tertiary dark:text-gray-500">
                   <span className="inline-flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    共 {totalCount} 篇
+                    共 {totalCount} 期
                   </span>
                   <span className="text-gray-300 dark:text-gray-700">|</span>
                   <span className="inline-flex items-center gap-1.5">
-                    <BookOpen className="w-3.5 h-3.5" />
-                    阅读 {readingCount} 篇
-                  </span>
-                  <span className="text-gray-300 dark:text-gray-700">|</span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <Volume2 className="w-3.5 h-3.5" />
-                    听力 {listeningCount} 篇
+                    <Video className="w-3.5 h-3.5" />
+                    视频 + 双语字幕
                   </span>
                 </div>
               </div>
@@ -171,10 +153,10 @@ export default function ArticleList() {
                   className="flex items-center gap-2 px-4 py-2 glass-card rounded-button text-sm font-medium text-content-secondary dark:text-gray-300 hover:border-primary/40 transition-colors cursor-pointer"
                 >
                   <BookOpen className="w-4 h-4" />
-                  <span>阅读词本</span>
-                  {readingWordCount > 0 && (
+                  <span>语料词本</span>
+                  {corpusWordCount > 0 && (
                     <span className="ml-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-violet-100 dark:bg-violet-500/20 px-1.5 text-xs font-semibold text-violet-700 dark:text-violet-300">
-                      {readingWordCount}
+                      {corpusWordCount}
                     </span>
                   )}
                 </button>
@@ -185,10 +167,10 @@ export default function ArticleList() {
                   onChange={handleCategoryChange}
                 />
                 <Dropdown
-                  label="全部年份"
-                  value={yearFilter}
-                  options={yearOptions}
-                  onChange={handleYearChange}
+                  label="全部难度"
+                  value={difficultyFilter}
+                  options={difficultyOptions}
+                  onChange={handleDifficultyChange}
                 />
                 <button
                   onClick={handleBookmarkOnlyToggle}
@@ -210,7 +192,6 @@ export default function ArticleList() {
             </div>
           </div>
 
-          {/* 搜索框 */}
           <div className="mb-6">
             <div className="relative max-w-md">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-content-tertiary dark:text-gray-500" />
@@ -218,28 +199,27 @@ export default function ArticleList() {
                 type="text"
                 value={searchQuery}
                 onChange={handleSearchChange}
-                placeholder="搜索标题或描述..."
+                placeholder="搜索标题、主讲人或标签..."
                 className="w-full pl-10 pr-4 py-2.5 bg-surface border border-gray-200 dark:border-white/[0.08] rounded-button text-sm text-content placeholder-gray-400 focus:outline-none focus:border-primary/50 transition-all"
               />
             </div>
           </div>
         </div>
 
-        {/* 卡片网格 - 虚拟滚动 */}
         {filtered.length > 0 ? (
           <div className="pb-28">
             <VirtualGrid
               ref={gridRef}
               items={filtered}
-              estimateRowSize={320}
+              estimateRowSize={420}
               overscan={3}
               gapClass="gap-5"
-              renderItem={renderArticle}
+              renderItem={renderVideo}
             />
           </div>
         ) : (
           <div className="glass-card rounded-card p-12 text-center">
-            <p className="text-content-secondary dark:text-gray-300 mb-2">没有匹配的文章</p>
+            <p className="text-content-secondary dark:text-gray-300 mb-2">没有匹配的视频</p>
             <p className="text-sm text-content-tertiary dark:text-gray-500">
               试试调整筛选条件，或清除收藏过滤
             </p>

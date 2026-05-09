@@ -10,7 +10,13 @@ import {
   isInReadingWordBook,
   removeFromReadingWordBook,
 } from '../../../utils/readingWordBook.js'
-import WordPopup from '../components/WordPopup.jsx'
+import {
+  cleanWordForLookup,
+  getWordRect,
+  isValidWord,
+  tokenizeText,
+} from '../../../utils/wordTokenize.jsx'
+import WordPopup from '../../../components/WordPopup.jsx'
 
 const FULL_TEXT_INDEX = -1
 
@@ -40,21 +46,6 @@ function formatTime(seconds) {
 
 // 行内元素的 getBoundingClientRect 会包含 line-height 带来的额外空间，
 // getClientRects()[0] 通常更贴近实际渲染的文本边界。
-function getWordRect(target) {
-  if (!target) return null
-  if (typeof target.getClientRects === 'function') {
-    const rects = target.getClientRects()
-    if (rects && rects.length > 0) return rects[0]
-  }
-  return typeof target.getBoundingClientRect === 'function'
-    ? target.getBoundingClientRect()
-    : null
-}
-
-const isValidWord = (str) => {
-  if (!str || typeof str !== 'string') return false
-  return /[a-zA-Z]/.test(str)
-}
 
 // 按句子切分长文本，避免 Android Chrome ~200 字符 TTS 限制
 function splitIntoChunks(text, maxLen = 180) {
@@ -126,66 +117,6 @@ function createEnglishUtterance(text, voice = null) {
   u.rate = 0.9
   if (voice) u.voice = voice
   return u
-}
-
-const cleanWordForLookup = (raw) => {
-  if (!raw) return ''
-  return raw.replace(/^[^a-zA-Z]+|[^a-zA-Z]+$/g, '').toLowerCase()
-}
-
-const tokenizeText = (text, paraIndex, onWordClick, keyPrefix = 'plain') => {
-  const elements = []
-  const regex = /[a-zA-Z]+(?:['-][a-zA-Z0-9]+)*/g
-  let match
-  let lastIndex = 0
-
-  while ((match = regex.exec(text)) !== null) {
-    const rawWord = match[0]
-    const index = match.index
-
-    if (index > lastIndex) {
-      elements.push(
-        <span key={`${paraIndex}-${keyPrefix}-pre-${lastIndex}`} className="non-clickable">
-          {text.slice(lastIndex, index)}
-        </span>
-      )
-    }
-
-    const lookupWord = cleanWordForLookup(rawWord)
-
-    if (isValidWord(lookupWord)) {
-      elements.push(
-        <span
-          key={`${paraIndex}-${keyPrefix}-word-${index}`}
-          className="word-clickable cursor-pointer hover:underline hover:opacity-80 transition-opacity select-none"
-          onClick={(e) => {
-            e.stopPropagation()
-            e.preventDefault()
-            onWordClick(lookupWord, getWordRect(e.target), e.target)
-          }}
-          title={lookupWord}
-        >
-          {rawWord}
-        </span>
-      )
-    } else {
-      elements.push(
-        <span key={`${paraIndex}-${keyPrefix}-txt-${index}`}>{rawWord}</span>
-      )
-    }
-
-    lastIndex = index + rawWord.length
-  }
-
-  if (lastIndex < text.length) {
-    elements.push(
-      <span key={`${paraIndex}-${keyPrefix}-post-${lastIndex}`} className="non-clickable">
-        {text.slice(lastIndex)}
-      </span>
-    )
-  }
-
-  return elements
 }
 
 const renderParagraph = (text, paraIndex, onWordClick) => {
@@ -912,6 +843,7 @@ export default function ArticleDetail() {
           onSave={handleSaveWord}
           onRemove={handleRemoveWord}
           onClose={handleClosePopup}
+          wordBookLabel="阅读词本"
         />
       )}
     </div>

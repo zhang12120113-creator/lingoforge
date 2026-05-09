@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 
 const themes = [
   { key: 'light', label: '浅色', icon: '☀️', desc: '清爽明亮' },
-  { key: 'gray',  label: '灰色', icon: '🌑', desc: '深色护眼' },
+  { key: 'gray',  label: '曜黑', icon: '🌑', desc: '深邃高级' },
   { key: 'star',  label: '星空', icon: '✨', desc: '沉浸星空' },
   { key: 'warm',  label: '暖米', icon: '☕', desc: '纸感温润' },
 ];

@@ -5,10 +5,10 @@ import { loadDictionary } from '../utils/loadDictionary.js'
 import { buildWordIndex, searchWordIndex } from '../utils/wordIndex.js'
 import { getErrorBookCount } from '../utils/errorBook.js'
 import { getReadingWordBookCount } from '../utils/readingWordBook.js'
+import { getCorpusWordBookCount } from '../utils/corpusWordBook.js'
 import { useDebounce } from '../hooks/useDebounce.js'
 import Hero from '../components/Hero'
 import Features from '../components/Features'
-import Footer from '../components/Footer'
 import ErrorBookCard from '../components/ErrorBookCard'
 
 function Home() {
@@ -29,6 +29,7 @@ function Home() {
 
   const [searchQuery, setSearchQuery] = useState('')
   const readingWordCount = getReadingWordBookCount()
+  const corpusWordCount = getCorpusWordBookCount()
 
   // 单词搜索:跨词库
   const [wordQuery, setWordQuery] = useState('')
@@ -343,6 +344,37 @@ function Home() {
               </p>
             </div>
           </div>
+          {/* 语料词本卡片 */}
+          <div
+            onClick={() => navigate('/dict/corpus-word-book')}
+            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border-2 border-cyan-200 bg-gradient-to-br from-cyan-50 to-sky-50 p-6 cursor-pointer hover:shadow-lg hover:border-cyan-300 dark:border-cyan-900/40 dark:from-cyan-950/30 dark:to-sky-950/20 dark:hover:border-cyan-700/60 dark:hover:shadow-cyan-900/20 animate-card-enter glow-border-subtle transition-all duration-150 active:scale-[0.98]"
+          >
+            <div className="absolute top-0 left-0 w-full h-1 bg-cyan-500 opacity-80" />
+            <div className="flex items-start justify-between">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-100 text-cyan-600 dark:bg-cyan-500/15 dark:text-cyan-400">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-cyan-900 dark:text-cyan-200">语料词本</h3>
+                  <p className="text-sm text-cyan-600/80 dark:text-cyan-400/70">从语料字幕中积累词汇</p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-4">
+              <div className="inline-flex items-center rounded-lg bg-cyan-100 px-2.5 py-1 text-xs font-medium text-cyan-700 dark:bg-cyan-500/15 dark:text-cyan-300">
+                语料中心
+              </div>
+              <p className="mt-2 text-sm text-cyan-600/70 dark:text-cyan-400/60">
+                {corpusWordCount > 0
+                  ? `已积累 ${corpusWordCount} 个词汇`
+                  : '观看语料视频，在真实语境中掌握单词'}
+              </p>
+            </div>
+          </div>
           {filteredDictionaries.map((dict, index) => {
             const colors = tagColors[dict.color] || tagColors['warm-coral'];
             return (
@@ -382,7 +414,6 @@ function Home() {
         </div>
       </div>
       </div>
-      <Footer />
     </>
   )
 }

@@ -102,7 +102,15 @@ function parseTrans(trans) {
   })
 }
 
-export default function WordPopup({ wordData, rect, isSaved, onSave, onRemove, onClose }) {
+export default function WordPopup({
+  wordData,
+  rect,
+  isSaved,
+  onSave,
+  onRemove,
+  onClose,
+  wordBookLabel = '阅读词本',
+}) {
   const popupRef = useRef(null)
   const [computedTop, setComputedTop] = useState(null)
   // 捕获挂载时的 scrollY，用于把视口坐标转换为文档坐标，使弹窗跟随滚动
@@ -236,12 +244,12 @@ export default function WordPopup({ wordData, rect, isSaved, onSave, onRemove, o
           {isSaved ? (
             <>
               <Check className="w-4 h-4" />
-              <span>已加入阅读词本</span>
+              <span>已加入{wordBookLabel}</span>
             </>
           ) : (
             <>
               <BookOpen className="w-4 h-4" />
-              <span>加入阅读词本</span>
+              <span>加入{wordBookLabel}</span>
             </>
           )}
         </button>
