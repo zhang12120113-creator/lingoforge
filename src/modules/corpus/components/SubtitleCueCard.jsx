@@ -104,6 +104,7 @@ function SubtitleCueCardInner({
   index,
   active,
   posMap,
+  phonetic,
   onClick,
   onWordClick,
   onPlay,
@@ -116,20 +117,27 @@ function SubtitleCueCardInner({
   return (
     <div
       onClick={onClick}
-      className={`group p-3 md:p-4 transition-colors cursor-pointer ${
+      className={`group relative p-3 md:p-4 transition-colors cursor-pointer ${
         active
-          ? 'bg-primary-soft/60 dark:bg-primary-soft/30'
+          ? 'bg-primary-soft/60 dark:bg-primary-soft/30 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[2px] before:bg-primary'
           : 'hover:bg-gray-50 dark:hover:bg-white/[0.03]'
       }`}
     >
       {/* 顶部行：时间戳 (左) + 操作图标 (右) */}
-      <div className="flex items-center justify-between mb-2">
+      <div className="flex items-center justify-between mb-1.5">
         <div className="text-xs text-content-tertiary dark:text-gray-500 tabular-nums">
           <span className="font-medium">{index + 1}</span>
           <span className="mx-2">{formatTime(subtitle.start)} - {formatTime(subtitle.end)}</span>
         </div>
         <CueActions onPlay={onPlay} onCopy={handleCopy} />
       </div>
+
+      {/* 整句音标 */}
+      {phonetic && (
+        <div className="text-xs text-content-tertiary/80 dark:text-gray-500 font-mono leading-snug mb-1">
+          {phonetic}
+        </div>
+      )}
 
       {/* 英文 */}
       {subtitle.en && (

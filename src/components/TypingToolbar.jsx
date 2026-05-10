@@ -10,7 +10,7 @@ const REPEAT_OPTIONS = [
   { value: 0, label: '无限' },
 ];
 
-const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, chapters, config, toggleConfig, updateConfig, onOpenWrongBook, isErrorBookMode, isReadingWordBookMode, onDeleteCurrentWord }) {
+const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, chapters, config, toggleConfig, updateConfig, onOpenWrongBook, isErrorBookMode, isReadingWordBookMode, isCorpusWordBookMode, onDeleteCurrentWord }) {
   const navigate = useNavigate();
   const [showChapterMenu, setShowChapterMenu] = useState(false);
   const [showRepeatMenu, setShowRepeatMenu] = useState(false);
@@ -61,7 +61,7 @@ const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, ch
           </div></>)}
         </div>
 
-        {!isErrorBookMode && !isReadingWordBookMode && (
+        {!isErrorBookMode && !isReadingWordBookMode && !isCorpusWordBookMode && (
           <div className="relative">
             <button onClick={() => setShowChapterMenu(!showChapterMenu)} className={toolbarBtn} title="切换章节">
               <svg className={iconCls} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
@@ -96,8 +96,8 @@ const TypingToolbar = memo(function TypingToolbar({ dictId, currentChapterId, ch
           <span className="text-[11px] hidden sm:inline">错题本</span>
         </button>
 
-        {(isErrorBookMode || isReadingWordBookMode) && onDeleteCurrentWord && (
-          <button onClick={onDeleteCurrentWord} className={toolbarBtn} title={isErrorBookMode ? '练熟了，移出错题本' : '已掌握，移出阅读词本'}>
+        {(isErrorBookMode || isReadingWordBookMode || isCorpusWordBookMode) && onDeleteCurrentWord && (
+          <button onClick={onDeleteCurrentWord} className={toolbarBtn} title={isErrorBookMode ? '练熟了，移出错题本' : isReadingWordBookMode ? '已掌握，移出阅读词本' : '已掌握，移出语料词本'}>
             <Trash2 className={`${iconCls} text-red-500 hover:text-red-600`} />
             <span className="text-[11px] hidden sm:inline text-red-500">移除</span>
           </button>

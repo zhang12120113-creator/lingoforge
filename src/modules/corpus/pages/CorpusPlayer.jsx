@@ -52,7 +52,7 @@ function CorpusPlayerInner({ video, posterUrl, onBack }) {
     <div className="h-[100dvh] flex flex-col overflow-hidden bg-background dark:bg-[#0f0f13] transition-colors duration-500 animate-page-fade-in">
       {/* 顶栏 */}
       <div className="shrink-0 bg-white dark:bg-[#0f0f13] border-b border-gray-200/70 dark:border-white/[0.06]">
-        <div className="max-w-[1400px] mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center gap-3 md:gap-4">
+        <div className="w-full px-4 md:px-6 h-14 md:h-16 flex items-center gap-3 md:gap-4">
           <button
             onClick={onBack}
             className="w-9 h-9 flex items-center justify-center rounded-full text-content-secondary dark:text-gray-300 hover:bg-gray-100/60 dark:hover:bg-white/[0.06] transition-colors shrink-0"
@@ -76,17 +76,17 @@ function CorpusPlayerInner({ video, posterUrl, onBack }) {
           </div>
           <button
             type="button"
-            onClick={player.toggleHideVideo}
-            aria-pressed={player.hideVideo}
-            aria-label={player.hideVideo ? '显示视频' : '隐藏视频'}
-            title={player.hideVideo ? '显示视频' : '隐藏视频'}
+            onClick={player.toggleHideSubtitle}
+            aria-pressed={player.hideSubtitle}
+            aria-label={player.hideSubtitle ? '显示字幕' : '隐藏字幕'}
+            title={player.hideSubtitle ? '显示字幕' : '隐藏字幕'}
             className={`w-9 h-9 flex items-center justify-center rounded-full transition-colors shrink-0 ${
-              player.hideVideo
+              player.hideSubtitle
                 ? 'bg-primary-soft text-primary'
                 : 'text-content-secondary dark:text-gray-300 hover:bg-gray-100/60 dark:hover:bg-white/[0.06]'
             }`}
           >
-            {player.hideVideo ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
+            {player.hideSubtitle ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
           </button>
           <button
             type="button"
@@ -105,18 +105,29 @@ function CorpusPlayerInner({ video, posterUrl, onBack }) {
       </div>
 
       {/* 主体 */}
-      <div className="flex-1 min-h-0 w-full max-w-[1400px] mx-auto px-3 md:px-4 flex flex-col">
-        <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4">
-          {/* 左侧：视频 + 控制栏 + 当前句子 */}
-          <div className="min-w-0 min-h-0 h-full flex flex-col gap-2 md:gap-3">
-            <VideoPlayer src={video.videoUrl} poster={posterUrl} />
-            <PlayerControls />
-            <CurrentSentencePanel />
-          </div>
-          {/* 右侧：字幕列表 */}
-          <div className="min-w-0 min-h-0 h-full">
+      <div className="flex-1 min-h-0 w-full flex">
+        {/* 左侧 ~45%：视频 + 控制栏 + 当前句子 */}
+        <div className="hidden md:flex md:flex-[45] min-w-0 min-h-0 flex-col gap-2 md:gap-3 p-3 md:p-4 border-r border-gray-200/70 dark:border-white/[0.06]">
+          <VideoPlayer src={video.videoUrl} poster={posterUrl} />
+          <PlayerControls />
+          <CurrentSentencePanel />
+        </div>
+        {/* 右侧 ~55%：字幕列表 */}
+        <div className="flex-1 md:flex-[55] min-w-0 min-h-0 h-full">
+          {player.hideSubtitle ? (
+            <button
+              type="button"
+              onClick={player.toggleHideSubtitle}
+              className="w-full h-full flex items-center justify-center text-content-secondary dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/[0.05] transition-colors cursor-pointer"
+            >
+              <div className="text-center">
+                <p className="text-sm">已隐藏字幕</p>
+                <p className="text-xs text-content-tertiary dark:text-gray-500 mt-1">点击显示</p>
+              </div>
+            </button>
+          ) : (
             <SubtitlePanel />
-          </div>
+          )}
         </div>
       </div>
 

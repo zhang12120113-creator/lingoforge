@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
 
 const themes = [
-  { key: 'light', label: '浅色', icon: '☀️', desc: '清爽明亮' },
-  { key: 'gray',  label: '曜黑', icon: '🌑', desc: '深邃高级' },
-  { key: 'star',  label: '星空', icon: '✨', desc: '沉浸星空' },
-  { key: 'warm',  label: '暖米', icon: '☕', desc: '纸感温润' },
+  { key: 'light', label: '浅色', icon: '☀️', desc: '清爽明亮', activeClass: 'bg-yellow-500/10 text-yellow-600 dark:text-yellow-400' },
+  { key: 'gray',  label: '曜黑', icon: '🌑', desc: '深邃高级', activeClass: 'bg-gray-200 text-gray-700 dark:bg-white dark:text-gray-900' },
+  { key: 'star',  label: '星空', icon: '✨', desc: '沉浸星空', activeClass: 'bg-amber-100 text-amber-700 dark:bg-white dark:text-gray-900' },
+  { key: 'warm',  label: '暖米', icon: '☕', desc: '纸感温润', activeClass: 'bg-orange-100 text-orange-700 dark:bg-orange-500/10 dark:text-orange-400' },
 ];
 
 export default function ThemeToggle({ theme, setTheme }) {
@@ -50,7 +50,7 @@ export default function ThemeToggle({ theme, setTheme }) {
                 onClick={() => { setTheme(t.key); setOpen(false); }}
                 className={`w-full flex items-center gap-3 px-3 py-2.5 text-left transition-colors ${
                   active
-                    ? 'bg-primary-soft text-primary dark:text-primary-dark'
+                    ? t.activeClass
                     : 'hover:bg-gray-50 dark:hover:bg-white/[0.05] text-content-secondary dark:text-gray-300'
                 }`}
               >

@@ -14,8 +14,8 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
   const [pauseAfterCue, setPauseAfterCue] = useState(false)
   // 间隔（秒），用于听写/跟读自动重播时的等待时间
   const [intervalGap, setIntervalGapState] = useState(0)
-  // 隐藏视频（只听不看）
-  const [hideVideo, setHideVideo] = useState(false)
+  // 隐藏字幕面板
+  const [hideSubtitle, setHideSubtitle] = useState(false)
 
   const loopingRef = useRef(false)
   const abLoopRef = useRef(abLoop)
@@ -184,8 +184,8 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
     setIntervalGapState(Math.max(0, sec))
   }, [])
 
-  const toggleHideVideo = useCallback(() => {
-    setHideVideo((v) => !v)
+  const toggleHideSubtitle = useCallback(() => {
+    setHideSubtitle((v) => !v)
   }, [])
 
   const requestFullscreen = useCallback(() => {
@@ -243,7 +243,7 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
     abLoop,
     pauseAfterCue,
     intervalGap,
-    hideVideo,
+    hideSubtitle,
     cueIndex,
     cueTotal,
     play,
@@ -256,7 +256,7 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
     clearAbLoop,
     togglePauseAfterCue,
     setIntervalGap,
-    toggleHideVideo,
+    toggleHideSubtitle,
     requestFullscreen,
     jumpToCue,
     prevCue,

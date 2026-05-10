@@ -5,6 +5,7 @@ const STORAGE_KEY = 'lingoforge_corpus_settings'
 const DEFAULTS = {
   subtitleSize: 16,           // 12-20
   videoLoop: false,           // <video loop>
+  hideVideo: false,           // 隐藏视频画面（保留音频/字幕）
   showPhonetic: true,         // 单词卡是否显示音标
   showNotes: true,            // 字幕笔记
   dictationFollowMode: 'dictation', // 听写 vs 跟读: 'dictation' | 'follow'

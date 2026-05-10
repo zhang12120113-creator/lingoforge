@@ -2,6 +2,7 @@ import { memo, useMemo } from 'react'
 import { Heart, Mic, PenLine } from 'lucide-react'
 import { useCorpusContext } from '../context/CorpusPlayerContext.jsx'
 import { tokenizeEnglish, getPosColor } from '../utils/wordColorMap.js'
+import { buildPhonetic } from '../utils/buildPhonetic.js'
 import { useCorpusStore } from '../hooks/useCorpusStore.js'
 
 function HighlightedSentence({ text, posMap, onWordClick }) {
@@ -52,7 +53,7 @@ function HighlightedSentence({ text, posMap, onWordClick }) {
 }
 
 function CurrentSentencePanelInner() {
-  const { subtitles, player, posMap, handleWordClick, videoId } = useCorpusContext()
+  const { subtitles, player, posMap, wordMap, settings, handleWordClick, videoId } = useCorpusContext()
   const { isBookmarked, toggleBookmark } = useCorpusStore()
   const liked = videoId ? isBookmarked(videoId) : false
 
@@ -60,6 +61,24 @@ function CurrentSentencePanelInner() {
     if (!subtitles?.length || !player.activeId) return null
     return subtitles.find((s) => s.id === player.activeId) || null
   }, [subtitles, player.activeId])
+
+  const phonetic = useMemo(
+    () => (settings?.showPhonetic && current?.en ? buildPhonetic(current.en, wordMap) : ''),
+    [current?.en, wordMap, settings?.showPhonetic]
+  )
+
+  if (player.hideSubtitle) {
+    return (
+      <button
+        type="button"
+        onClick={player.toggleHideSubtitle}
+        className="flex-1 min-h-[120px] rounded-2xl bg-surface dark:bg-white/[0.03] border border-gray-200/70 dark:border-white/[0.06] shadow-sm flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 dark:hover:bg-white/[0.05] transition-colors"
+      >
+        <span className="text-sm text-content-secondary dark:text-gray-300">已隐藏字幕</span>
+        <span className="text-xs text-content-tertiary dark:text-gray-500 mt-1">点击显示</span>
+      </button>
+    )
+  }
 
   if (!current) {
     return (
@@ -114,6 +133,13 @@ function CurrentSentencePanelInner() {
 
         {/* 英文+中文 居中区 */}
         <div className="flex-1 flex flex-col items-center justify-center gap-2 text-center">
+          {/* 整句音标 */}
+          {phonetic && (
+            <div className="text-sm md:text-[15px] text-content-tertiary dark:text-gray-400 font-mono leading-relaxed">
+              {phonetic}
+            </div>
+          )}
+
           {/* 英文句子（大字号，带高亮 pill） */}
           <div className="text-lg md:text-xl leading-relaxed text-content dark:text-gray-100">
             <HighlightedSentence

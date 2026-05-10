@@ -8,6 +8,8 @@ import {
   Maximize,
   PauseCircle,
   Hourglass,
+  Video,
+  VideoOff,
 } from 'lucide-react'
 import { useCorpusContext } from '../context/CorpusPlayerContext.jsx'
 
@@ -27,7 +29,7 @@ function LabeledBtn({ active, onClick, label, ariaLabel, children }) {
       <span
         className={`w-9 h-9 flex items-center justify-center rounded-full transition-colors ${
           active
-            ? 'bg-primary-soft text-primary'
+            ? 'bg-primary-soft text-primary dark:bg-white dark:text-gray-900'
             : 'text-content-secondary dark:text-gray-300 group-hover:bg-gray-100/60 dark:group-hover:bg-white/[0.06]'
         }`}
       >
@@ -35,7 +37,7 @@ function LabeledBtn({ active, onClick, label, ariaLabel, children }) {
       </span>
       <span
         className={`text-[10px] leading-none whitespace-nowrap ${
-          active ? 'text-primary' : 'text-content-tertiary dark:text-gray-500'
+          active ? 'text-primary dark:text-white' : 'text-content-tertiary dark:text-gray-500'
         }`}
       >
         {label}
@@ -82,7 +84,7 @@ function RateMenu({ rate, onChange }) {
               }}
               className={`block w-full px-3 py-1.5 text-left text-xs ${
                 rate === r
-                  ? 'bg-primary-soft text-primary'
+                  ? 'bg-primary-soft text-primary dark:bg-white dark:text-gray-900'
                   : 'text-content-secondary dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/[0.04]'
               }`}
             >
@@ -118,7 +120,7 @@ function IntervalMenu({ value, onChange }) {
         <span
           className={`w-9 h-9 flex items-center justify-center rounded-full transition-colors ${
             active
-              ? 'bg-primary-soft text-primary'
+              ? 'bg-primary-soft text-primary dark:bg-white dark:text-gray-900'
               : 'text-content-secondary dark:text-gray-300 group-hover:bg-gray-100/60 dark:group-hover:bg-white/[0.06]'
           }`}
         >
@@ -126,7 +128,7 @@ function IntervalMenu({ value, onChange }) {
         </span>
         <span
           className={`text-[10px] leading-none ${
-            active ? 'text-primary' : 'text-content-tertiary dark:text-gray-500'
+            active ? 'text-primary dark:text-white' : 'text-content-tertiary dark:text-gray-500'
           }`}
         >
           {active ? `${value}s` : '间隔'}
@@ -144,7 +146,7 @@ function IntervalMenu({ value, onChange }) {
               }}
               className={`block w-full px-3 py-1.5 text-left text-xs ${
                 value === s
-                  ? 'bg-primary-soft text-primary'
+                  ? 'bg-primary-soft text-primary dark:bg-white dark:text-gray-900'
                   : 'text-content-secondary dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/[0.04]'
               }`}
             >
@@ -192,6 +194,18 @@ export default function PlayerControls() {
   return (
     <div className="shrink-0 px-2 py-2 flex items-end justify-center gap-1 overflow-x-auto">
       <RateMenu rate={rate} onChange={setRate} />
+      <LabeledBtn
+        active={settings.hideVideo}
+        onClick={() => toggleSetting('hideVideo')}
+        label="隐藏视频"
+        ariaLabel={settings.hideVideo ? '显示视频' : '隐藏视频'}
+      >
+        {settings.hideVideo ? (
+          <VideoOff className="w-4 h-4" />
+        ) : (
+          <Video className="w-4 h-4" />
+        )}
+      </LabeledBtn>
       <LabeledBtn onClick={requestFullscreen} label="全屏">
         <Maximize className="w-4 h-4" />
       </LabeledBtn>
@@ -215,7 +229,7 @@ export default function PlayerControls() {
         type="button"
         onClick={toggle}
         title={isPlaying ? '暂停' : '播放'}
-        className="shrink-0 mx-1 mb-3 w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/25 hover:opacity-90 transition-opacity"
+        className="shrink-0 mx-1 mb-3 w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/25 dark:bg-white dark:text-gray-900 dark:shadow-white/20 hover:opacity-90 transition-opacity"
       >
         {isPlaying ? (
           <Pause className="w-5 h-5" fill="currentColor" />
@@ -241,7 +255,7 @@ export default function PlayerControls() {
         <span
           className={`w-9 h-9 flex items-center justify-center rounded-full text-sm font-semibold transition-colors ${
             abLoop.enabled
-              ? 'bg-primary text-white'
+              ? 'bg-primary text-white dark:bg-white dark:text-gray-900'
               : abLoop.a != null
               ? 'bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-300'
               : 'text-content-secondary dark:text-gray-300 group-hover:bg-gray-100/60 dark:group-hover:bg-white/[0.06]'
@@ -252,7 +266,7 @@ export default function PlayerControls() {
         <span
           className={`text-[10px] leading-none ${
             abLoop.enabled || abLoop.a != null
-              ? 'text-primary'
+              ? 'text-primary dark:text-white'
               : 'text-content-tertiary dark:text-gray-500'
           }`}
         >
