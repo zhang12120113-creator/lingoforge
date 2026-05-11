@@ -1,0 +1,662 @@
+{
+  "wordbook_name": "电工英语",
+  "wordbook_name_en": "Electrical English",
+  "category": "electrical",
+  "description": "电气工程与电工专业英语词汇，涵盖基础电气概念、电气元件、电路术语、电力设备、测量仪器、安全规范、布线安装等核心词汇",
+  "total_words": 70,
+  "words": [
+    {
+      "word": "voltage",
+      "phonetic": "/ˈvəʊltɪdʒ/",
+      "meanings": [
+        "电压",
+        "电位差"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "current",
+      "phonetic": "/ˈkʌrənt/",
+      "meanings": [
+        "电流",
+        "流动"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "resistance",
+      "phonetic": "/rɪˈzɪstəns/",
+      "meanings": [
+        "电阻",
+        "阻力",
+        "反抗"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "power",
+      "phonetic": "/ˈpaʊə(r)/",
+      "meanings": [
+        "功率",
+        "电力",
+        "电源"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "frequency",
+      "phonetic": "/ˈfriːkwənsi/",
+      "meanings": [
+        "频率",
+        "频次"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "impedance",
+      "phonetic": "/ɪmˈpiːdns/",
+      "meanings": [
+        "阻抗",
+        "电阻抗"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "phase",
+      "phonetic": "/feɪz/",
+      "meanings": [
+        "相位",
+        "相",
+        "阶段"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "conductor",
+      "phonetic": "/kənˈdʌktə(r)/",
+      "meanings": [
+        "导体",
+        "导线",
+        "导电体"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "insulator",
+      "phonetic": "/ˈɪnsjuleɪtə(r)/",
+      "meanings": [
+        "绝缘体",
+        "绝缘子"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "ground",
+      "phonetic": "/ɡraʊnd/",
+      "meanings": [
+        "接地",
+        "地线",
+        "地面"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "resistor",
+      "phonetic": "/rɪˈzɪstə(r)/",
+      "meanings": [
+        "电阻器",
+        "电阻"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "capacitor",
+      "phonetic": "/kəˈpæsɪtə(r)/",
+      "meanings": [
+        "电容器",
+        "电容"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "inductor",
+      "phonetic": "/ɪnˈdʌktə(r)/",
+      "meanings": [
+        "电感器",
+        "电感线圈"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "diode",
+      "phonetic": "/ˈdaɪəʊd/",
+      "meanings": [
+        "二极管"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "transistor",
+      "phonetic": "/trænˈzɪstə(r)/",
+      "meanings": [
+        "晶体管",
+        "三极管"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "transformer",
+      "phonetic": "/trænsˈfɔːmə(r)/",
+      "meanings": [
+        "变压器",
+        "变换器"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "relay",
+      "phonetic": "/ˈriːleɪ/",
+      "meanings": [
+        "继电器",
+        "中继"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "contactor",
+      "phonetic": "/ˈkɒntæktə(r)/",
+      "meanings": [
+        "接触器"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "fuse",
+      "phonetic": "/fjuːz/",
+      "meanings": [
+        "熔断器",
+        "保险丝",
+        "引信"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "LED",
+      "phonetic": "/el iː ˈdiː/",
+      "meanings": [
+        "发光二极管",
+        "LED灯"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "circuit",
+      "phonetic": "/ˈsɜːkɪt/",
+      "meanings": [
+        "电路",
+        "回路",
+        "线路"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "series",
+      "phonetic": "/ˈsɪəriːz/",
+      "meanings": [
+        "串联",
+        "系列"
+      ],
+      "pos": "n./adj."
+    },
+    {
+      "word": "parallel",
+      "phonetic": "/ˈpærəlel/",
+      "meanings": [
+        "并联",
+        "并行的"
+      ],
+      "pos": "adj./n."
+    },
+    {
+      "word": "short circuit",
+      "phonetic": "/ʃɔːt ˈsɜːkɪt/",
+      "meanings": [
+        "短路"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "breaker",
+      "phonetic": "/ˈbreɪkə(r)/",
+      "meanings": [
+        "断路器",
+        "开关"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "switch",
+      "phonetic": "/swɪtʃ/",
+      "meanings": [
+        "开关",
+        "转换器",
+        "切换"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "node",
+      "phonetic": "/nəʊd/",
+      "meanings": [
+        "节点",
+        "结点"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "load",
+      "phonetic": "/ləʊd/",
+      "meanings": [
+        "负载",
+        "负荷"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "source",
+      "phonetic": "/sɔːs/",
+      "meanings": [
+        "电源",
+        "信号源",
+        "来源"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "schematic",
+      "phonetic": "/skiˈmætɪk/",
+      "meanings": [
+        "原理图",
+        "电路图",
+        "简图"
+      ],
+      "pos": "n./adj."
+    },
+    {
+      "word": "generator",
+      "phonetic": "/ˈdʒenəreɪtə(r)/",
+      "meanings": [
+        "发电机",
+        "发生器"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "motor",
+      "phonetic": "/ˈməʊtə(r)/",
+      "meanings": [
+        "电动机",
+        "马达",
+        "发动机"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "switchgear",
+      "phonetic": "/ˈswɪtʃɡɪə(r)/",
+      "meanings": [
+        "开关柜",
+        "开关设备",
+        "配电装置"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "stator",
+      "phonetic": "/ˈsteɪtə(r)/",
+      "meanings": [
+        "定子"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "rotor",
+      "phonetic": "/ˈrəʊtə(r)/",
+      "meanings": [
+        "转子"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "distribution board",
+      "phonetic": "/ˌdɪstrɪˈbjuːʃn bɔːd/",
+      "meanings": [
+        "配电箱",
+        "配电盘",
+        "配电板"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "inverter",
+      "phonetic": "/ɪnˈvɜːtə(r)/",
+      "meanings": [
+        "逆变器",
+        "变频器"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "rectifier",
+      "phonetic": "/ˈrektɪfaɪə(r)/",
+      "meanings": [
+        "整流器"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "turbine",
+      "phonetic": "/ˈtɜːbaɪn/",
+      "meanings": [
+        "涡轮机",
+        "汽轮机",
+        "水轮机"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "solenoid",
+      "phonetic": "/ˈsəʊlənɔɪd/",
+      "meanings": [
+        "电磁线圈",
+        "螺线管"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "multimeter",
+      "phonetic": "/ˌmʌltiˈmiːtə(r)/",
+      "meanings": [
+        "万用表",
+        "多用电表"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "ammeter",
+      "phonetic": "/ˈæmiːtə(r)/",
+      "meanings": [
+        "电流表",
+        "安培表"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "voltmeter",
+      "phonetic": "/ˈvəʊltmiːtə(r)/",
+      "meanings": [
+        "电压表",
+        "伏特表"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "ohmmeter",
+      "phonetic": "/ˈəʊmˈmiːtə(r)/",
+      "meanings": [
+        "电阻表",
+        "欧姆表"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "oscilloscope",
+      "phonetic": "/əˈsɪləskəʊp/",
+      "meanings": [
+        "示波器"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "clamp meter",
+      "phonetic": "/klæmp ˈmiːtə(r)/",
+      "meanings": [
+        "钳形电流表",
+        "钳形表"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "megger",
+      "phonetic": "/ˈmeɡə(r)/",
+      "meanings": [
+        "兆欧表",
+        "绝缘电阻测试仪"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "galvanometer",
+      "phonetic": "/ˌɡælvəˈnɒmɪtə(r)/",
+      "meanings": [
+        "检流计",
+        "电流计"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "probe",
+      "phonetic": "/prəʊb/",
+      "meanings": [
+        "探头",
+        "探针",
+        "探测"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "wattmeter",
+      "phonetic": "/ˈwɒtˌmiːtə(r)/",
+      "meanings": [
+        "功率表",
+        "瓦特表"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "insulation",
+      "phonetic": "/ˌɪnsjuˈleɪʃn/",
+      "meanings": [
+        "绝缘",
+        "隔离",
+        "绝缘材料"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "grounding",
+      "phonetic": "/ˈɡraʊndɪŋ/",
+      "meanings": [
+        "接地",
+        "接地保护"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "hazard",
+      "phonetic": "/ˈhæzəd/",
+      "meanings": [
+        "危险",
+        "危害",
+        "隐患"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "arc flash",
+      "phonetic": "/ɑːk flæʃ/",
+      "meanings": [
+        "电弧闪光",
+        "电弧放电"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "shock",
+      "phonetic": "/ʃɒk/",
+      "meanings": [
+        "电击",
+        "触电",
+        "冲击"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "PPE",
+      "phonetic": "/ˌpiː piː ˈiː/",
+      "meanings": [
+        "个人防护装备",
+        "安全防护用品"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "lockout",
+      "phonetic": "/ˈlɒkaʊt/",
+      "meanings": [
+        "上锁",
+        "锁定",
+        "停工"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "tagout",
+      "phonetic": "/ˈtæɡaʊt/",
+      "meanings": [
+        "挂牌",
+        "标签警示"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "surge",
+      "phonetic": "/sɜːdʒ/",
+      "meanings": [
+        "浪涌",
+        "电涌",
+        "激增"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "isolation",
+      "phonetic": "/ˌaɪsəˈleɪʃn/",
+      "meanings": [
+        "隔离",
+        "绝缘",
+        "断开"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "cable",
+      "phonetic": "/ˈkeɪbl/",
+      "meanings": [
+        "电缆",
+        "线缆",
+        "缆绳"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "wire",
+      "phonetic": "/ˈwaɪə(r)/",
+      "meanings": [
+        "电线",
+        "导线",
+        "金属丝"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "conduit",
+      "phonetic": "/ˈkɒndjuɪt/",
+      "meanings": [
+        "导管",
+        "线管",
+        "管道"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "junction box",
+      "phonetic": "/ˈdʒʌŋkʃn bɒks/",
+      "meanings": [
+        "接线盒",
+        "分线盒",
+        "接线箱"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "outlet",
+      "phonetic": "/ˈaʊtlet/",
+      "meanings": [
+        "插座",
+        "电源插口",
+        "出口"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "switchboard",
+      "phonetic": "/ˈswɪtʃbɔːd/",
+      "meanings": [
+        "配电盘",
+        "开关盘",
+        "交换台"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "panelboard",
+      "phonetic": "/ˈpænlbɔːd/",
+      "meanings": [
+        "配电箱面板",
+        "配电盘"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "trunking",
+      "phonetic": "/ˈtrʌŋkɪŋ/",
+      "meanings": [
+        "线槽",
+        "电缆槽",
+        "走线槽"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "terminal",
+      "phonetic": "/ˈtɜːmɪnl/",
+      "meanings": [
+        "端子",
+        "接线端",
+        "终端"
+      ],
+      "pos": "n./adj."
+    },
+    {
+      "word": "bundle",
+      "phonetic": "/ˈbʌndl/",
+      "meanings": [
+        "线束",
+        "捆束",
+        "束"
+      ],
+      "pos": "n./v."
+    }
+  ]
+}

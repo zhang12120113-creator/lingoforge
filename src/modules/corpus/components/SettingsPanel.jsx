@@ -1,8 +1,7 @@
 import { useEffect } from 'react'
-import { X, Maximize, BookmarkCheck, Bookmark, FileText, Music, PlaySquare } from 'lucide-react'
+import { X } from 'lucide-react'
 import { useCorpusContext } from '../context/CorpusPlayerContext.jsx'
 import { useUserConfig } from '../../../hooks/useUserConfig.js'
-import { useCorpusStore } from '../hooks/useCorpusStore.js'
 
 const THEME_OPTIONS = [
   { value: 'light', label: '浅色', activeClass: 'bg-yellow-500/10 text-yellow-600 dark:text-yellow-400' },
@@ -79,10 +78,8 @@ function Segmented({ options, value, onChange }) {
 }
 
 export default function SettingsPanel({ open, onClose }) {
-  const { settings, updateSetting, toggleSetting, videoId, player } = useCorpusContext()
+  const { settings, updateSetting, toggleSetting, player } = useCorpusContext()
   const { theme, setTheme } = useUserConfig()
-  const { isBookmarked, toggleBookmark } = useCorpusStore()
-  const bookmarked = videoId ? isBookmarked(videoId) : false
 
   useEffect(() => {
     if (!open) return
@@ -113,59 +110,6 @@ export default function SettingsPanel({ open, onClose }) {
             className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/[0.06] text-content-tertiary dark:text-gray-400"
           >
             <X className="w-4 h-4" />
-          </button>
-        </div>
-
-        {/* 顶部按钮行 */}
-        <div className="shrink-0 px-4 py-3 grid grid-cols-5 gap-2 border-b border-gray-100 dark:border-white/[0.06]">
-          <button
-            type="button"
-            onClick={() => player.requestFullscreen?.()}
-            className="flex flex-col items-center gap-1 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-white/[0.06] text-xs text-content-secondary dark:text-gray-300"
-            title="全屏"
-          >
-            <Maximize className="w-4 h-4" />
-            <span>全屏</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => videoId && toggleBookmark(videoId)}
-            className="flex flex-col items-center gap-1 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-white/[0.06] text-xs text-content-secondary dark:text-gray-300"
-            title={bookmarked ? '取消收藏' : '收藏'}
-          >
-            {bookmarked ? (
-              <BookmarkCheck className="w-4 h-4 text-primary" />
-            ) : (
-              <Bookmark className="w-4 h-4" />
-            )}
-            <span>{bookmarked ? '已收藏' : '收藏'}</span>
-          </button>
-          <button
-            type="button"
-            disabled
-            className="flex flex-col items-center gap-1 py-2 rounded-md text-xs text-content-tertiary dark:text-gray-500 opacity-50 cursor-not-allowed"
-            title="即将开放"
-          >
-            <FileText className="w-4 h-4" />
-            <span>字幕</span>
-          </button>
-          <button
-            type="button"
-            disabled
-            className="flex flex-col items-center gap-1 py-2 rounded-md text-xs text-content-tertiary dark:text-gray-500 opacity-50 cursor-not-allowed"
-            title="即将开放"
-          >
-            <Music className="w-4 h-4" />
-            <span>音频</span>
-          </button>
-          <button
-            type="button"
-            disabled
-            className="flex flex-col items-center gap-1 py-2 rounded-md text-xs text-content-tertiary dark:text-gray-500 opacity-50 cursor-not-allowed"
-            title="即将开放"
-          >
-            <PlaySquare className="w-4 h-4" />
-            <span>YouTube</span>
           </button>
         </div>
 

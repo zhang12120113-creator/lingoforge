@@ -1,0 +1,684 @@
+{
+  "name": "航海英语",
+  "name_en": "Nautical English / Maritime English",
+  "description": "基于IMO SMCP（标准海事通信用语）、国际海上人命安全公约（SOLAS）、GMDSS全球海上遇险与安全系统及权威航海教材，涵盖船舶结构、导航航行、船舶操作、货物港口、安全救生、船员职务、轮机设备、通信法规等核心航海场景的高频专业词汇。",
+  "word_count": 80,
+  "categories": [
+    "船舶基本结构",
+    "导航与航行",
+    "船舶操作",
+    "货物与港口",
+    "安全与救生",
+    "船员与职务",
+    "轮机与设备",
+    "通信与法规"
+  ],
+  "source_references": [
+    "IMO Standard Marine Communication Phrases (SMCP)",
+    "SOLAS - Safety of Life at Sea Convention",
+    "GMDSS - Global Maritime Distress and Safety System",
+    "航海英语词汇详解 - 船舶行业指南"
+  ],
+  "vocabulary": [
+    {
+      "word": "anchor",
+      "phonetic": "/ˈæŋkər/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "锚",
+        "抛锚，停泊"
+      ]
+    },
+    {
+      "word": "ballast",
+      "phonetic": "/ˈbæləst/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "压载物",
+        "压载水"
+      ]
+    },
+    {
+      "word": "bow",
+      "phonetic": "/baʊ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "船首，船头"
+      ]
+    },
+    {
+      "word": "bridge",
+      "phonetic": "/brɪdʒ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "驾驶台，舰桥"
+      ]
+    },
+    {
+      "word": "bulkhead",
+      "phonetic": "/ˈbʌlkhed/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "舱壁，隔堵"
+      ]
+    },
+    {
+      "word": "cargo hold",
+      "phonetic": "/ˈkɑːɡəʊ həʊld/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "货舱"
+      ]
+    },
+    {
+      "word": "deck",
+      "phonetic": "/dek/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "甲板"
+      ]
+    },
+    {
+      "word": "hull",
+      "phonetic": "/hʌl/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "船体，船身"
+      ]
+    },
+    {
+      "word": "keel",
+      "phonetic": "/kiːl/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "龙骨（船体底部纵向主结构）"
+      ]
+    },
+    {
+      "word": "stern",
+      "phonetic": "/stɜːrn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "船尾，艉部"
+      ]
+    },
+    {
+      "word": "bearing",
+      "phonetic": "/ˈbeərɪŋ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "方位，方向",
+        "轴承"
+      ]
+    },
+    {
+      "word": "chart",
+      "phonetic": "/tʃɑːt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "海图，航海图"
+      ]
+    },
+    {
+      "word": "compass",
+      "phonetic": "/ˈkʌmpəs/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "罗经，指南针"
+      ]
+    },
+    {
+      "word": "course",
+      "phonetic": "/kɔːs/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "航向",
+        "航线",
+        "课程"
+      ]
+    },
+    {
+      "word": "ECDIS",
+      "phonetic": "/ˈekdɪs/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "电子海图显示与信息系统"
+      ]
+    },
+    {
+      "word": "gyrocompass",
+      "phonetic": "/ˈdʒaɪrəʊkʌmpəs/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "陀螺罗经，电罗经"
+      ]
+    },
+    {
+      "word": "heading",
+      "phonetic": "/ˈhedɪŋ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "船首向，航首向"
+      ]
+    },
+    {
+      "word": "latitude",
+      "phonetic": "/ˈlætɪtjuːd/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "纬度"
+      ]
+    },
+    {
+      "word": "longitude",
+      "phonetic": "/ˈlɒndʒɪtjuːd/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "经度"
+      ]
+    },
+    {
+      "word": "navigation",
+      "phonetic": "/ˌnævɪˈɡeɪʃən/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "航行，航海",
+        "导航"
+      ]
+    },
+    {
+      "word": "radar",
+      "phonetic": "/ˈreɪdɑːr/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "雷达"
+      ]
+    },
+    {
+      "word": "sextant",
+      "phonetic": "/ˈsekstənt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "六分仪"
+      ]
+    },
+    {
+      "word": "berth",
+      "phonetic": "/bɜːθ/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "泊位，锚地",
+        "使停泊"
+      ]
+    },
+    {
+      "word": "collision",
+      "phonetic": "/kəˈlɪʒən/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "碰撞，冲突"
+      ]
+    },
+    {
+      "word": "distress",
+      "phonetic": "/dɪˈstres/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "遇险，危难",
+        "遇险信号"
+      ]
+    },
+    {
+      "word": "draft",
+      "phonetic": "/drɑːft/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "吃水（深度）"
+      ]
+    },
+    {
+      "word": "flooding",
+      "phonetic": "/ˈflʌdɪŋ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "进水，浸水"
+      ]
+    },
+    {
+      "word": "grounding",
+      "phonetic": "/ˈɡraʊndɪŋ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "搁浅，触浅"
+      ]
+    },
+    {
+      "word": "helm",
+      "phonetic": "/helm/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "舵",
+        "舵轮",
+        "操舵装置"
+      ]
+    },
+    {
+      "word": "knot",
+      "phonetic": "/nɒt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "节（航速单位，1节=1海里/小时）"
+      ]
+    },
+    {
+      "word": "mooring",
+      "phonetic": "/ˈmʊərɪŋ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "系泊，系留",
+        "系泊设备"
+      ]
+    },
+    {
+      "word": "tide",
+      "phonetic": "/taɪd/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "潮汐，潮流"
+      ]
+    },
+    {
+      "word": "underway",
+      "phonetic": "/ˌʌndərˈweɪ/",
+      "part_of_speech": "adj.",
+      "meanings": [
+        "航行中的，在航的"
+      ]
+    },
+    {
+      "word": "cargo",
+      "phonetic": "/ˈkɑːɡəʊ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "货物，载货"
+      ]
+    },
+    {
+      "word": "crane",
+      "phonetic": "/kreɪn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "起重机，克令吊"
+      ]
+    },
+    {
+      "word": "harbor",
+      "phonetic": "/ˈhɑːrbər/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "港口，港湾",
+        "避风港"
+      ]
+    },
+    {
+      "word": "manifest",
+      "phonetic": "/ˈmænɪfest/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "舱单，货物清单",
+        "显示"
+      ]
+    },
+    {
+      "word": "port",
+      "phonetic": "/pɔːt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "港口",
+        "左舷"
+      ]
+    },
+    {
+      "word": "quay",
+      "phonetic": "/kiː/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "码头，埠头"
+      ]
+    },
+    {
+      "word": "starboard",
+      "phonetic": "/ˈstɑːrbərd/",
+      "part_of_speech": "n./adj.",
+      "meanings": [
+        "右舷"
+      ]
+    },
+    {
+      "word": "tanker",
+      "phonetic": "/ˈtæŋkər/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "油船，油轮",
+        "罐车"
+      ]
+    },
+    {
+      "word": "vessel",
+      "phonetic": "/ˈvesəl/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "船舶，舰艇",
+        "容器"
+      ]
+    },
+    {
+      "word": "visibility",
+      "phonetic": "/ˌvɪzəˈbɪləti/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "能见度，视距"
+      ]
+    },
+    {
+      "word": "beacon",
+      "phonetic": "/ˈbiːkən/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "信标，灯塔，灯标"
+      ]
+    },
+    {
+      "word": "buoy",
+      "phonetic": "/bɔɪ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "浮标，浮筒"
+      ]
+    },
+    {
+      "word": "damage control",
+      "phonetic": "/ˈdæmɪdʒ kənˈtrəʊl/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "损害管制，应急处理"
+      ]
+    },
+    {
+      "word": "EPIRB",
+      "phonetic": "/ˈepɜːrb/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "应急无线电示位标（Emergency Position Indicating Radio Beacon）"
+      ]
+    },
+    {
+      "word": "fender",
+      "phonetic": "/ˈfendər/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "碰垫，护舷垫"
+      ]
+    },
+    {
+      "word": "lifeboat",
+      "phonetic": "/ˈlaɪfbəʊt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "救生艇"
+      ]
+    },
+    {
+      "word": "lifebuoy",
+      "phonetic": "/ˈlaɪfbɔɪ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "救生圈"
+      ]
+    },
+    {
+      "word": "liferaft",
+      "phonetic": "/ˈlaɪfræft/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "救生筏"
+      ]
+    },
+    {
+      "word": "Mayday",
+      "phonetic": "/ˈmeɪdeɪ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "国际无线电求救信号"
+      ]
+    },
+    {
+      "word": "Pan-Pan",
+      "phonetic": "/pɑːn pɑːn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "国际无线电紧急信号（次于Mayday）"
+      ]
+    },
+    {
+      "word": "SART",
+      "phonetic": "/sɑːrt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "搜救应答器（Search and Rescue Transponder）"
+      ]
+    },
+    {
+      "word": "SOLAS",
+      "phonetic": "/ˈsəʊləs/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "国际海上人命安全公约（Safety of Life at Sea）"
+      ]
+    },
+    {
+      "word": "captain",
+      "phonetic": "/ˈkæptɪn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "船长",
+        "队长"
+      ]
+    },
+    {
+      "word": "chief engineer",
+      "phonetic": "/tʃiːf ˌendʒɪˈnɪər/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "轮机长"
+      ]
+    },
+    {
+      "word": "chief officer",
+      "phonetic": "/tʃiːf ˈɒfɪsər/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "大副"
+      ]
+    },
+    {
+      "word": "logbook",
+      "phonetic": "/ˈlɒɡbʊk/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "航海日志"
+      ]
+    },
+    {
+      "word": "officer",
+      "phonetic": "/ˈɒfɪsər/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "驾驶员，高级船员"
+      ]
+    },
+    {
+      "word": "pilot",
+      "phonetic": "/ˈpaɪlət/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "引航员，引水员",
+        "飞行员"
+      ]
+    },
+    {
+      "word": "seamanship",
+      "phonetic": "/ˈsiːmənʃɪp/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "航海技术，船艺"
+      ]
+    },
+    {
+      "word": "boiler",
+      "phonetic": "/ˈbɔɪlər/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "锅炉"
+      ]
+    },
+    {
+      "word": "diesel engine",
+      "phonetic": "/ˈdiːzl endʒɪn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "柴油机"
+      ]
+    },
+    {
+      "word": "engine room",
+      "phonetic": "/ˈendʒɪn ruːm/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "机舱"
+      ]
+    },
+    {
+      "word": "generator",
+      "phonetic": "/ˈdʒenəreɪtər/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "发电机"
+      ]
+    },
+    {
+      "word": "main engine",
+      "phonetic": "/meɪn ˈendʒɪn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "主机"
+      ]
+    },
+    {
+      "word": "propeller",
+      "phonetic": "/prəˈpelər/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "螺旋桨，推进器"
+      ]
+    },
+    {
+      "word": "winch",
+      "phonetic": "/wɪntʃ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "绞车，绞盘"
+      ]
+    },
+    {
+      "word": "windlass",
+      "phonetic": "/ˈwɪndləs/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "起锚机，绞盘"
+      ]
+    },
+    {
+      "word": "COLREGs",
+      "phonetic": "/ˈkɒlreɡz/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "国际海上避碰规则"
+      ]
+    },
+    {
+      "word": "GMDSS",
+      "phonetic": "/dʒiː em diː es es/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "全球海上遇险与安全系统"
+      ]
+    },
+    {
+      "word": "INMARSAT",
+      "phonetic": "/ˈɪnməsæt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "国际海事卫星组织"
+      ]
+    },
+    {
+      "word": "man overboard",
+      "phonetic": "/mæn ˈəʊvəbɔːd/",
+      "part_of_speech": "phrase",
+      "meanings": [
+        "人员落水"
+      ]
+    },
+    {
+      "word": "MMSI",
+      "phonetic": "/ˈemzi/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "海上移动业务识别码（Maritime Mobile Service Identity）"
+      ]
+    },
+    {
+      "word": "nautical mile",
+      "phonetic": "/ˈnɔːtɪkl maɪl/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "海里，浬（等于1.852公里）"
+      ]
+    },
+    {
+      "word": "SAR",
+      "phonetic": "/es eɪ ɑːr/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "搜索与救援（Search and Rescue）"
+      ]
+    },
+    {
+      "word": "VHF",
+      "phonetic": "/ˌviː eɪtʃ ˈef/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "甚高频（Very High Frequency）"
+      ]
+    },
+    {
+      "word": "voyage",
+      "phonetic": "/ˈvɔɪɪdʒ/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "航行，航程",
+        "航海"
+      ]
+    },
+    {
+      "word": "watch",
+      "phonetic": "/wɒtʃ/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "值班，守望",
+        "手表"
+      ]
+    }
+  ]
+}

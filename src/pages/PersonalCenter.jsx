@@ -6,7 +6,7 @@ export default function PersonalCenter() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
         </svg>
       </div>
-      <h2 className="text-title text-content dark:text-gray-100 mb-2">个人中心</h2>
+      <h2 className="text-title text-content dark:text-gray-100 mb-2">我的</h2>
       <p className="text-body text-content-tertiary dark:text-gray-400">即将上线，敬请期待</p>
     </div>
   )

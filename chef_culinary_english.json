@@ -1,0 +1,645 @@
+{
+  "wordbook_name": "厨师英语",
+  "wordbook_name_en": "Culinary English",
+  "category": "culinary",
+  "description": "烹饪与厨师专业英语词汇，涵盖厨房职位、烹饪技法、工具设备、食材调料、刀工术语等核心词汇",
+  "total_words": 70,
+  "words": [
+    {
+      "word": "chef",
+      "phonetic": "/ʃef/",
+      "meanings": [
+        "厨师",
+        "主厨"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "sous chef",
+      "phonetic": "/ˌsuː ˈʃef/",
+      "meanings": [
+        "副主厨",
+        "副厨师长"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "line cook",
+      "phonetic": "/ˌlaɪn ˈkʊk/",
+      "meanings": [
+        "线厨",
+        " station 厨师"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "pastry chef",
+      "phonetic": "/ˈpeɪstri ʃef/",
+      "meanings": [
+        "糕点师",
+        "西点师"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "commis chef",
+      "phonetic": "/ˈkɒmi ʃef/",
+      "meanings": [
+        "助理厨师",
+        "学徒厨师"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "cook",
+      "phonetic": "/kʊk/",
+      "meanings": [
+        "厨师",
+        "烹饪"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "executive chef",
+      "phonetic": "/ɪɡˌzekjətɪv ˈʃef/",
+      "meanings": [
+        "行政总厨",
+        "执行主厨"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "garde manger",
+      "phonetic": "/ˌɡɑːd ˈmɒ̃ʒeɪ/",
+      "meanings": [
+        "冷菜厨师",
+        "冷盘主管"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "sauté",
+      "phonetic": "/ˈsəʊteɪ/",
+      "meanings": [
+        "嫩煎",
+        "快炒",
+        " sauté 烹调法"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "braise",
+      "phonetic": "/breɪz/",
+      "meanings": [
+        "焖炖",
+        " braising 炖法"
+      ],
+      "pos": "v."
+    },
+    {
+      "word": "grill",
+      "phonetic": "/ɡrɪl/",
+      "meanings": [
+        "烧烤",
+        "炙烤"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "roast",
+      "phonetic": "/rəʊst/",
+      "meanings": [
+        "烘烤",
+        " roasting 烤法"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "boil",
+      "phonetic": "/bɔɪl/",
+      "meanings": [
+        "煮沸",
+        " boiling 煮法"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "steam",
+      "phonetic": "/stiːm/",
+      "meanings": [
+        "蒸",
+        " steaming 蒸法"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "fry",
+      "phonetic": "/fraɪ/",
+      "meanings": [
+        "油炸",
+        "煎炒"
+      ],
+      "pos": "v."
+    },
+    {
+      "word": "simmer",
+      "phonetic": "/ˈsɪmə(r)/",
+      "meanings": [
+        "小火慢炖",
+        "煨"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "poach",
+      "phonetic": "/pəʊtʃ/",
+      "meanings": [
+        "水煮",
+        " poaching 水煮法"
+      ],
+      "pos": "v."
+    },
+    {
+      "word": "blanch",
+      "phonetic": "/blɑːntʃ/",
+      "meanings": [
+        "焯水",
+        "烫漂",
+        " blanching 漂烫法"
+      ],
+      "pos": "v."
+    },
+    {
+      "word": "deglaze",
+      "phonetic": "/diːˈɡleɪz/",
+      "meanings": [
+        " deglazing 溶解锅底焦痕",
+        "用液体溶解锅中沉淀物"
+      ],
+      "pos": "v."
+    },
+    {
+      "word": "sear",
+      "phonetic": "/sɪə(r)/",
+      "meanings": [
+        "煎封",
+        "高温快煎"
+      ],
+      "pos": "v."
+    },
+    {
+      "word": "marinate",
+      "phonetic": "/ˈmærɪneɪt/",
+      "meanings": [
+        "腌制",
+        "浸泡调味"
+      ],
+      "pos": "v."
+    },
+    {
+      "word": "spatula",
+      "phonetic": "/ˈspætʃələ/",
+      "meanings": [
+        "锅铲",
+        "抹刀",
+        "刮刀"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "whisk",
+      "phonetic": "/wɪsk/",
+      "meanings": [
+        "打蛋器",
+        "搅拌器",
+        " whisking 搅打法"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "oven",
+      "phonetic": "/ˈʌvn/",
+      "meanings": [
+        "烤箱",
+        "烤炉"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "ladle",
+      "phonetic": "/ˈleɪdl/",
+      "meanings": [
+        "汤勺",
+        "长柄勺"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "tongs",
+      "phonetic": "/tɒŋz/",
+      "meanings": [
+        "夹子",
+        "食品夹"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "colander",
+      "phonetic": "/ˈkʌləndə(r)/",
+      "meanings": [
+        "滤水篮",
+        "漏勺"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "sieve",
+      "phonetic": "/sɪv/",
+      "meanings": [
+        "筛子",
+        "细滤网"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "rolling pin",
+      "phonetic": "/ˈrəʊlɪŋ pɪn/",
+      "meanings": [
+        "擀面杖"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "cutting board",
+      "phonetic": "/ˈkʌtɪŋ bɔːd/",
+      "meanings": [
+        "砧板",
+        "切菜板"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "mixing bowl",
+      "phonetic": "/ˈmɪksɪŋ bəʊl/",
+      "meanings": [
+        "搅拌碗",
+        "料理盆"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "ingredient",
+      "phonetic": "/ɪnˈɡriːdiənt/",
+      "meanings": [
+        "原料",
+        "食材",
+        "配料"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "protein",
+      "phonetic": "/ˈprəʊtiːn/",
+      "meanings": [
+        "蛋白质",
+        "蛋白类食材"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "dairy",
+      "phonetic": "/ˈdeəri/",
+      "meanings": [
+        "乳制品",
+        "奶制品"
+      ],
+      "pos": "n./adj."
+    },
+    {
+      "word": "poultry",
+      "phonetic": "/ˈpəʊltri/",
+      "meanings": [
+        "家禽",
+        "禽肉"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "seafood",
+      "phonetic": "/ˈsiːfuːd/",
+      "meanings": [
+        "海鲜",
+        "海产品"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "grain",
+      "phonetic": "/ɡreɪn/",
+      "meanings": [
+        "谷物",
+        "粮食"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "vegetable",
+      "phonetic": "/ˈvedʒtəbl/",
+      "meanings": [
+        "蔬菜"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "seasoning",
+      "phonetic": "/ˈsiːznɪŋ/",
+      "meanings": [
+        "调味料",
+        "调味品"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "spice",
+      "phonetic": "/spaɪs/",
+      "meanings": [
+        "香料",
+        "辛香料"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "herb",
+      "phonetic": "/hɜːb/",
+      "meanings": [
+        "香草",
+        "草本植物"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "sauce",
+      "phonetic": "/sɔːs/",
+      "meanings": [
+        "酱汁",
+        "沙司"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "vinegar",
+      "phonetic": "/ˈvɪnɪɡə(r)/",
+      "meanings": [
+        "醋"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "marinade",
+      "phonetic": "/ˌmærɪˈneɪd/",
+      "meanings": [
+        "腌料",
+        "腌泡汁",
+        " marinade 腌汁"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "condiment",
+      "phonetic": "/ˈkɒndɪmənt/",
+      "meanings": [
+        "调味品",
+        "佐料"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "roux",
+      "phonetic": "/ruː/",
+      "meanings": [
+        "面糊",
+        "油面糊(黄油与面粉混合物，用于增稠酱汁)"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "demi-glace",
+      "phonetic": "/ˈdemi ɡlɑːs/",
+      "meanings": [
+        " demi-glace 浓酱汁",
+        "半浓缩酱"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "chop",
+      "phonetic": "/tʃɒp/",
+      "meanings": [
+        "切碎",
+        "斩",
+        " chopp 粗切"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "dice",
+      "phonetic": "/daɪs/",
+      "meanings": [
+        "切丁",
+        "切成小方块"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "mince",
+      "phonetic": "/mɪns/",
+      "meanings": [
+        "剁碎",
+        "切碎末"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "julienne",
+      "phonetic": "/ˈdʒuːlien/",
+      "meanings": [
+        "切丝",
+        "切成火柴棍状细条"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "slice",
+      "phonetic": "/slaɪs/",
+      "meanings": [
+        "切片"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "grate",
+      "phonetic": "/ɡreɪt/",
+      "meanings": [
+        "磨碎",
+        "刨丝"
+      ],
+      "pos": "v."
+    },
+    {
+      "word": "peel",
+      "phonetic": "/piːl/",
+      "meanings": [
+        "削皮",
+        "去皮"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "brunoise",
+      "phonetic": "/bruːˈnwɑːz/",
+      "meanings": [
+        "细丁",
+        "brunoise 切法(极细的蔬菜丁)"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "knead",
+      "phonetic": "/niːd/",
+      "meanings": [
+        "揉面",
+        "揉捏面团"
+      ],
+      "pos": "v."
+    },
+    {
+      "word": "fold",
+      "phonetic": "/fəʊld/",
+      "meanings": [
+        "翻拌",
+        " folding 轻柔拌入法"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "proof",
+      "phonetic": "/pruːf/",
+      "meanings": [
+        "发酵",
+        " proofing 面团醒发"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "dough",
+      "phonetic": "/dəʊ/",
+      "meanings": [
+        "面团"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "batter",
+      "phonetic": "/ˈbætə(r)/",
+      "meanings": [
+        "面糊",
+        " batter 稀面糊(用于蛋糕、煎饼)"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "whip",
+      "phonetic": "/wɪp/",
+      "meanings": [
+        "打发",
+        "搅打(奶油、蛋白等)"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "cream",
+      "phonetic": "/kriːm/",
+      "meanings": [
+        "奶油",
+        "奶油状物质",
+        " creaming 奶油搅拌法"
+      ],
+      "pos": "n./v."
+    },
+    {
+      "word": "sift",
+      "phonetic": "/sɪft/",
+      "meanings": [
+        "筛粉",
+        "过筛"
+      ],
+      "pos": "v."
+    },
+    {
+      "word": "glaze",
+      "phonetic": "/ɡleɪz/",
+      "meanings": [
+        " glazing 上光",
+        "涂釉",
+        " glazing 糖浆浇面"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "mise en place",
+      "phonetic": "/ˌmiːz ɒ̃ ˈplɑːs/",
+      "meanings": [
+        "准备工作",
+        "一切就绪(法语烹饪术语，指烹饪前的准备工作)"
+      ],
+      "pos": "phr."
+    },
+    {
+      "word": "recipe",
+      "phonetic": "/ˈresəpi/",
+      "meanings": [
+        "食谱",
+        "配方",
+        "菜谱"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "garnish",
+      "phonetic": "/ˈɡɑːnɪʃ/",
+      "meanings": [
+        "装饰",
+        " garnish 配菜点缀物"
+      ],
+      "pos": "v./n."
+    },
+    {
+      "word": "stock",
+      "phonetic": "/stɒk/",
+      "meanings": [
+        "高汤",
+        " stock 汤底"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "cuisine",
+      "phonetic": "/kwɪˈziːn/",
+      "meanings": [
+        "菜肴",
+        "烹饪风格",
+        " cuisine 菜系"
+      ],
+      "pos": "n."
+    },
+    {
+      "word": "plating",
+      "phonetic": "/ˈpleɪtɪŋ/",
+      "meanings": [
+        "摆盘",
+        "装盘艺术"
+      ],
+      "pos": "n."
+    }
+  ]
+}

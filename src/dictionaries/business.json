@@ -1,0 +1,556 @@
+{
+  "id": "business",
+  "name": "商务英语",
+  "description": "基于BEC官方词汇的商务场景核心词汇",
+  "category": "专业英语",
+  "totalChapters": 3,
+  "totalWords": 66,
+  "chapters": [
+    {
+      "id": 1,
+      "name": "章节一",
+      "words": [
+        {
+          "name": "contract",
+          "usphone": "ˈkɒntrækt/ (n.) /kənˈtrækt/ (v.)",
+          "ukphone": "ˈkɒntrækt/ (n.) /kənˈtrækt/ (v.)",
+          "trans": [
+            "n./v. 合同，契约，收缩，订立合同"
+          ]
+        },
+        {
+          "name": "negotiate",
+          "usphone": "nɪˈɡəʊʃieɪt",
+          "ukphone": "nɪˈɡəʊʃieɪt",
+          "trans": [
+            "v. 谈判，协商，顺利通过"
+          ]
+        },
+        {
+          "name": "revenue",
+          "usphone": "ˈrevənjuː",
+          "ukphone": "ˈrevənjuː",
+          "trans": [
+            "n. 收入，收益，（政府的）税收"
+          ]
+        },
+        {
+          "name": "profit",
+          "usphone": "ˈprɒfɪt",
+          "ukphone": "ˈprɒfɪt",
+          "trans": [
+            "n./v. 利润，收益，获益，获利"
+          ]
+        },
+        {
+          "name": "budget",
+          "usphone": "ˈbʌdʒɪt",
+          "ukphone": "ˈbʌdʒɪt",
+          "trans": [
+            "n./v. 预算，编入预算，规划"
+          ]
+        },
+        {
+          "name": "strategy",
+          "usphone": "ˈstrætədʒi",
+          "ukphone": "ˈstrætədʒi",
+          "trans": [
+            "n. 战略，策略，策划，规划"
+          ]
+        },
+        {
+          "name": "stakeholder",
+          "usphone": "ˈsteɪkhəʊldə(r)",
+          "ukphone": "ˈsteɪkhəʊldə(r)",
+          "trans": [
+            "n. 利益相关者，股东，投资人"
+          ]
+        },
+        {
+          "name": "deadline",
+          "usphone": "ˈdedlaɪn",
+          "ukphone": "ˈdedlaɪn",
+          "trans": [
+            "n. 截止日期，最后期限"
+          ]
+        },
+        {
+          "name": "objective",
+          "usphone": "əbˈdʒektɪv",
+          "ukphone": "əbˈdʒektɪv",
+          "trans": [
+            "n./adj. 目标，目的，客观的，公正的"
+          ]
+        },
+        {
+          "name": "agenda",
+          "usphone": "əˈdʒendə",
+          "ukphone": "əˈdʒendə",
+          "trans": [
+            "n. 议程，议事日程，目的，动机"
+          ]
+        },
+        {
+          "name": "proposal",
+          "usphone": "prəˈpəʊzl",
+          "ukphone": "prəˈpəʊzl",
+          "trans": [
+            "n. 提案，建议，求婚"
+          ]
+        },
+        {
+          "name": "resources",
+          "usphone": "rɪˈsɔːsɪz",
+          "ukphone": "rɪˈsɔːsɪz",
+          "trans": [
+            "n. 资源，财力，资金"
+          ]
+        },
+        {
+          "name": "opportunity",
+          "usphone": "ˌɒpəˈtjuːnəti",
+          "ukphone": "ˌɒpəˈtjuːnəti",
+          "trans": [
+            "n. 机会，机遇，有利时机"
+          ]
+        },
+        {
+          "name": "partnership",
+          "usphone": "ˈpɑːtnəʃɪp",
+          "ukphone": "ˈpɑːtnəʃɪp",
+          "trans": [
+            "n. 合作关系，合伙，合伙企业"
+          ]
+        },
+        {
+          "name": "acquisition",
+          "usphone": "ˌækwɪˈzɪʃn",
+          "ukphone": "ˌækwɪˈzɪʃn",
+          "trans": [
+            "n. 收购，并购，获得，取得"
+          ]
+        },
+        {
+          "name": "assets",
+          "usphone": "ˈæsets",
+          "ukphone": "ˈæsets",
+          "trans": [
+            "n. 资产，财产，有价值的人/物"
+          ]
+        },
+        {
+          "name": "liability",
+          "usphone": "ˌlaɪəˈbɪləti",
+          "ukphone": "ˌlaɪəˈbɪləti",
+          "trans": [
+            "n. 负债，债务，责任，义务"
+          ]
+        },
+        {
+          "name": "balance sheet",
+          "usphone": "ˈbæləns ʃiːt",
+          "ukphone": "ˈbæləns ʃiːt",
+          "trans": [
+            "n. 资产负债表"
+          ]
+        },
+        {
+          "name": "cash flow",
+          "usphone": "ˈkæʃ fləʊ",
+          "ukphone": "ˈkæʃ fləʊ",
+          "trans": [
+            "n. 现金流，现金流动"
+          ]
+        },
+        {
+          "name": "invoice",
+          "usphone": "ˈɪnvɔɪs",
+          "ukphone": "ˈɪnvɔɪs",
+          "trans": [
+            "n./v. 发票，账单，开发票，开账单"
+          ]
+        },
+        {
+          "name": "investment",
+          "usphone": "ɪnˈvestmənt",
+          "ukphone": "ɪnˈvestmənt",
+          "trans": [
+            "n. 投资，投入，投资额"
+          ]
+        },
+        {
+          "name": "forecast",
+          "usphone": "ˈfɔːkɑːst",
+          "ukphone": "ˈfɔːkɑːst",
+          "trans": [
+            "n./v. 预测，预报，财务预测"
+          ]
+        },
+        {
+          "name": "expense",
+          "usphone": "ɪkˈspens",
+          "ukphone": "ɪkˈspens",
+          "trans": [
+            "n. 费用，开支，代价"
+          ]
+        },
+        {
+          "name": "equity",
+          "usphone": "ˈekwɪti",
+          "ukphone": "ˈekwɪti",
+          "trans": [
+            "n. 权益，股本，公平，公正"
+          ]
+        },
+        {
+          "name": "audit",
+          "usphone": "ˈɔːdɪt",
+          "ukphone": "ˈɔːdɪt",
+          "trans": [
+            "n./v. 审计，查账，审查，检查"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "章节二",
+      "words": [
+        {
+          "name": "depreciation",
+          "usphone": "dɪˌpriːʃiˈeɪʃn",
+          "ukphone": "dɪˌpriːʃiˈeɪʃn",
+          "trans": [
+            "n. 折旧，贬值，跌价"
+          ]
+        },
+        {
+          "name": "overhead",
+          "usphone": "ˈəʊvəhed",
+          "ukphone": "ˈəʊvəhed",
+          "trans": [
+            "n./adj. 管理费用，经常性开支，头顶上的"
+          ]
+        },
+        {
+          "name": "liquidity",
+          "usphone": "lɪˈkwɪdəti",
+          "ukphone": "lɪˈkwɪdəti",
+          "trans": [
+            "n. 流动性，流动资产"
+          ]
+        },
+        {
+          "name": "marketing",
+          "usphone": "ˈmɑːkɪtɪŋ",
+          "ukphone": "ˈmɑːkɪtɪŋ",
+          "trans": [
+            "n. 市场营销，促销，销售活动"
+          ]
+        },
+        {
+          "name": "brand",
+          "usphone": "brænd",
+          "ukphone": "brænd",
+          "trans": [
+            "n./v. 品牌，商标，打烙印于"
+          ]
+        },
+        {
+          "name": "market share",
+          "usphone": "ˈmɑːkɪt ʃeə(r)",
+          "ukphone": "ˈmɑːkɪt ʃeə(r)",
+          "trans": [
+            "n. 市场份额，市场占有率"
+          ]
+        },
+        {
+          "name": "campaign",
+          "usphone": "kæmˈpeɪn",
+          "ukphone": "kæmˈpeɪn",
+          "trans": [
+            "n./v. （广告）活动，运动，发起运动"
+          ]
+        },
+        {
+          "name": "prospect",
+          "usphone": "ˈprɒspekt/ (n.) /prəˈspekt/ (v.)",
+          "ukphone": "ˈprɒspekt/ (n.) /prəˈspekt/ (v.)",
+          "trans": [
+            "n./v. 潜在客户，前景，勘探，寻找"
+          ]
+        },
+        {
+          "name": "conversion",
+          "usphone": "kənˈvɜːʃn",
+          "ukphone": "kənˈvɜːʃn",
+          "trans": [
+            "n. 转化，转换，改造，改建"
+          ]
+        },
+        {
+          "name": "client",
+          "usphone": "ˈklaɪənt",
+          "ukphone": "ˈklaɪənt",
+          "trans": [
+            "n. 客户，委托人，顾客"
+          ]
+        },
+        {
+          "name": "promotion",
+          "usphone": "prəˈməʊʃn",
+          "ukphone": "prəˈməʊʃn",
+          "trans": [
+            "n. 促销，推广，晋升，升职"
+          ]
+        },
+        {
+          "name": "advertising",
+          "usphone": "ˈædvətaɪzɪŋ",
+          "ukphone": "ˈædvətaɪzɪŋ",
+          "trans": [
+            "n. 广告，广告业，广告宣传"
+          ]
+        },
+        {
+          "name": "recruitment",
+          "usphone": "rɪˈkruːtmənt",
+          "ukphone": "rɪˈkruːtmənt",
+          "trans": [
+            "n. 招聘，招募，征兵"
+          ]
+        },
+        {
+          "name": "performance",
+          "usphone": "pəˈfɔːməns",
+          "ukphone": "pəˈfɔːməns",
+          "trans": [
+            "n. 绩效，业绩，表演，演出"
+          ]
+        },
+        {
+          "name": "salary",
+          "usphone": "ˈsæləri",
+          "ukphone": "ˈsæləri",
+          "trans": [
+            "n. 薪水，薪金（通常按月）"
+          ]
+        },
+        {
+          "name": "benefits",
+          "usphone": "ˈbenɪfɪts",
+          "ukphone": "ˈbenɪfɪts",
+          "trans": [
+            "n. 福利，津贴，利益，好处"
+          ]
+        },
+        {
+          "name": "interview",
+          "usphone": "ˈɪntəvjuː",
+          "ukphone": "ˈɪntəvjuː",
+          "trans": [
+            "n./v. 面试，面谈，采访"
+          ]
+        },
+        {
+          "name": "onboarding",
+          "usphone": "ˈɒnbɔːdɪŋ",
+          "ukphone": "ˈɒnbɔːdɪŋ",
+          "trans": [
+            "n. 新员工入职培训，新人融入"
+          ]
+        },
+        {
+          "name": "turnover",
+          "usphone": "ˈtɜːnəʊvə(r)",
+          "ukphone": "ˈtɜːnəʊvə(r)",
+          "trans": [
+            "n. 人员流动率，营业额，成交量"
+          ]
+        },
+        {
+          "name": "termination",
+          "usphone": "ˌtɜːmɪˈneɪʃn",
+          "ukphone": "ˌtɜːmɪˈneɪʃn",
+          "trans": [
+            "n. 解雇，终止，结束，终点"
+          ]
+        },
+        {
+          "name": "supply chain",
+          "usphone": "səˈplaɪ tʃeɪn",
+          "ukphone": "səˈplaɪ tʃeɪn",
+          "trans": [
+            "n. 供应链"
+          ]
+        },
+        {
+          "name": "inventory",
+          "usphone": "ˈɪnvəntri",
+          "ukphone": "ˈɪnvəntri",
+          "trans": [
+            "n. 库存，存货，清单，细目"
+          ]
+        },
+        {
+          "name": "logistics",
+          "usphone": "ləˈdʒɪstɪks",
+          "ukphone": "ləˈdʒɪstɪks",
+          "trans": [
+            "n. 物流，后勤"
+          ]
+        },
+        {
+          "name": "shipment",
+          "usphone": "ˈʃɪpmənt",
+          "ukphone": "ˈʃɪpmənt",
+          "trans": [
+            "n. 装运，运输，一批货物"
+          ]
+        },
+        {
+          "name": "lead time",
+          "usphone": "ˈliːd taɪm",
+          "ukphone": "ˈliːd taɪm",
+          "trans": [
+            "n. 交货期，提前期，准备时间"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "章节三",
+      "words": [
+        {
+          "name": "import",
+          "usphone": "ˈɪmpɔːt/ (n.) /ɪmˈpɔːt/ (v.)",
+          "ukphone": "ˈɪmpɔːt/ (n.) /ɪmˈpɔːt/ (v.)",
+          "trans": [
+            "n./v. 进口，输入，进口商品"
+          ]
+        },
+        {
+          "name": "export",
+          "usphone": "ˈekspɔːt/ (n.) /ɪkˈspɔːt/ (v.)",
+          "ukphone": "ˈekspɔːt/ (n.) /ɪkˈspɔːt/ (v.)",
+          "trans": [
+            "n./v. 出口，输出，出口商品"
+          ]
+        },
+        {
+          "name": "warehouse",
+          "usphone": "ˈweəhaʊs/ (n.) /ˈweəhaʊz/ (v.)",
+          "ukphone": "ˈweəhaʊs/ (n.) /ˈweəhaʊz/ (v.)",
+          "trans": [
+            "n./v. 仓库，货栈，存入仓库"
+          ]
+        },
+        {
+          "name": "outsource",
+          "usphone": "ˈaʊtsɔːs",
+          "ukphone": "ˈaʊtsɔːs",
+          "trans": [
+            "v. 外包，外购，外部采购"
+          ]
+        },
+        {
+          "name": "minutes",
+          "usphone": "ˈmɪnɪts",
+          "ukphone": "ˈmɪnɪts",
+          "trans": [
+            "n. 会议记录，纪要，分钟"
+          ]
+        },
+        {
+          "name": "feedback",
+          "usphone": "ˈfiːdbæk",
+          "ukphone": "ˈfiːdbæk",
+          "trans": [
+            "n. 反馈，回馈，意见，建议"
+          ]
+        },
+        {
+          "name": "follow-up",
+          "usphone": "ˈfɒləʊ ʌp",
+          "ukphone": "ˈfɒləʊ ʌp",
+          "trans": [
+            "n./adj. 跟进，后续，后续的"
+          ]
+        },
+        {
+          "name": "brainstorming",
+          "usphone": "ˈbreɪnstɔːmɪŋ",
+          "ukphone": "ˈbreɪnstɔːmɪŋ",
+          "trans": [
+            "n. 头脑风暴，集思广益"
+          ]
+        },
+        {
+          "name": "presentation",
+          "usphone": "ˌpreznˈteɪʃn",
+          "ukphone": "ˌpreznˈteɪʃn",
+          "trans": [
+            "n. 演讲，展示，介绍，陈述"
+          ]
+        },
+        {
+          "name": "confirm",
+          "usphone": "kənˈfɜːm",
+          "ukphone": "kənˈfɜːm",
+          "trans": [
+            "v. 确认，证实，批准，认可"
+          ]
+        },
+        {
+          "name": "ROI",
+          "usphone": "ˌɑːr əʊ ˈaɪ",
+          "ukphone": "ˌɑːr əʊ ˈaɪ",
+          "trans": [
+            "abbr. Return on Investment 投资回报率"
+          ]
+        },
+        {
+          "name": "KPI",
+          "usphone": "ˌkeɪ piː ˈaɪ",
+          "ukphone": "ˌkeɪ piː ˈaɪ",
+          "trans": [
+            "abbr. Key Performance Indicator 关键绩效指标"
+          ]
+        },
+        {
+          "name": "B2B",
+          "usphone": "ˌbiː tə ˈbiː",
+          "ukphone": "ˌbiː tə ˈbiː",
+          "trans": [
+            "abbr. Business-to-Business 企业对企业"
+          ]
+        },
+        {
+          "name": "CEO",
+          "usphone": "ˌsiː iː ˈəʊ",
+          "ukphone": "ˌsiː iː ˈəʊ",
+          "trans": [
+            "abbr. Chief Executive Officer 首席执行官"
+          ]
+        },
+        {
+          "name": "HR",
+          "usphone": "ˌeɪtʃ ˈɑː(r)",
+          "ukphone": "ˌeɪtʃ ˈɑː(r)",
+          "trans": [
+            "abbr. Human Resources 人力资源"
+          ]
+        },
+        {
+          "name": "startup",
+          "usphone": "ˈstɑːtʌp",
+          "ukphone": "ˈstɑːtʌp",
+          "trans": [
+            "n. 初创公司，新兴企业"
+          ]
+        }
+      ]
+    }
+  ]
+}

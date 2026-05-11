@@ -18,6 +18,11 @@ const loaders = {
   sat: () => import('../dictionaries/sat.json'),
   postgraduate: () => import('../dictionaries/postgraduate.json'),
   programmer: () => import('../dictionaries/programmer.json'),
+  nautical: () => import('../dictionaries/nautical.json'),
+  business: () => import('../dictionaries/business.json'),
+  automotive: () => import('../dictionaries/automotive.json'),
+  chef: () => import('../dictionaries/chef.json'),
+  electrician: () => import('../dictionaries/electrician.json'),
   'error-book': () => Promise.resolve({ default: loadErrorBookAsDictionary() }),
   'reading-word-book': async () => {
     await enrichReadingWordBook();

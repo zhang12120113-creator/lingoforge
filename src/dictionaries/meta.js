@@ -28,10 +28,15 @@ export const dictionaryMeta = [
   { id: 'toefl', name: '托福词汇', category: '托福', description: '托福考试核心词汇', totalChapters: 415, totalWords: 10368, color: warmColors[3] },
   { id: 'sat', name: 'SAT 词汇', category: 'SAT', description: 'SAT 考试核心词汇', totalChapters: 177, totalWords: 4423, color: warmColors[4] },
   { id: 'postgraduate', name: '考研词汇', category: '考研', description: '考研英语核心词汇', totalChapters: 228, totalWords: 5698, color: warmColors[5] },
-  { id: 'programmer', name: '程序员常见词汇', category: '程序员英语', description: '程序员工作中高频使用的英语单词', totalChapters: 67, totalWords: 1665, color: warmColors[6] }
+  { id: 'programmer', name: '程序员常见词汇', category: '程序员英语', description: '程序员工作中高频使用的英语单词', totalChapters: 67, totalWords: 1665, color: warmColors[6] },
+  { id: 'nautical', name: '航海英语', category: '专业英语', description: '基于IMO标准海事通信用语的专业航海词汇', totalChapters: 4, totalWords: 80, color: warmColors[7] },
+  { id: 'business', name: '商务英语', category: '专业英语', description: '基于BEC官方词汇的商务场景核心词汇', totalChapters: 3, totalWords: 66, color: warmColors[0] },
+  { id: 'automotive', name: '汽修英语', category: '专业英语', description: '汽车维修专业英语词汇，涵盖发动机、传动系统、底盘、制动系统、电气系统等核心词汇', totalChapters: 3, totalWords: 66, color: warmColors[1] },
+  { id: 'chef', name: '厨师英语', category: '专业英语', description: '烹饪与厨师专业英语词汇，涵盖厨房职位、烹饪技法、工具设备、食材调料等核心词汇', totalChapters: 3, totalWords: 70, color: warmColors[2] },
+  { id: 'electrician', name: '电工英语', category: '专业英语', description: '电气工程与电工专业英语词汇，涵盖基础电气概念、电气元件、电路术语、电力设备等核心词汇', totalChapters: 3, totalWords: 70, color: warmColors[3] }
 ];
 
-export const categories = ['初中英语', '高中英语', '英语4级', '英语6级', '英语专四', '英语专八', '雅思', '托福', 'SAT', '考研', '程序员英语'];
+export const categories = ['初中英语', '高中英语', '英语4级', '英语6级', '英语专四', '英语专八', '雅思', '托福', 'SAT', '考研', '程序员英语', '专业英语'];
 
 export const getMeta = (id) => {
   if (id === 'error-book') {

@@ -1,0 +1,556 @@
+{
+  "id": "automotive",
+  "name": "汽修英语",
+  "description": "汽车维修专业英语词汇，涵盖发动机、传动系统、底盘、制动系统、电气系统、燃油排气、冷却润滑、车身内饰、维修工具、故障诊断等核心词汇",
+  "category": "专业英语",
+  "totalChapters": 3,
+  "totalWords": 66,
+  "chapters": [
+    {
+      "id": 1,
+      "name": "章节一",
+      "words": [
+        {
+          "name": "automotive",
+          "usphone": "ˌɔːtəˈməʊtɪv",
+          "ukphone": "ˌɔːtəˈməʊtɪv",
+          "trans": [
+            "adj. 汽车的，机动车的"
+          ]
+        },
+        {
+          "name": "engine",
+          "usphone": "ˈendʒɪn",
+          "ukphone": "ˈendʒɪn",
+          "trans": [
+            "n. 发动机，引擎"
+          ]
+        },
+        {
+          "name": "cylinder",
+          "usphone": "ˈsɪlɪndə(r)",
+          "ukphone": "ˈsɪlɪndə(r)",
+          "trans": [
+            "n. 气缸，圆筒"
+          ]
+        },
+        {
+          "name": "piston",
+          "usphone": "ˈpɪstən",
+          "ukphone": "ˈpɪstən",
+          "trans": [
+            "n. 活塞"
+          ]
+        },
+        {
+          "name": "crankshaft",
+          "usphone": "ˈkræŋkʃɑːft",
+          "ukphone": "ˈkræŋkʃɑːft",
+          "trans": [
+            "n. 曲轴"
+          ]
+        },
+        {
+          "name": "camshaft",
+          "usphone": "ˈkæmʃɑːft",
+          "ukphone": "ˈkæmʃɑːft",
+          "trans": [
+            "n. 凸轮轴"
+          ]
+        },
+        {
+          "name": "valve",
+          "usphone": "vælv",
+          "ukphone": "vælv",
+          "trans": [
+            "n. 气门，阀"
+          ]
+        },
+        {
+          "name": "spark plug",
+          "usphone": "spɑːk plʌɡ",
+          "ukphone": "spɑːk plʌɡ",
+          "trans": [
+            "n. 火花塞"
+          ]
+        },
+        {
+          "name": "connecting rod",
+          "usphone": "kəˈnektɪŋ rɒd",
+          "ukphone": "kəˈnektɪŋ rɒd",
+          "trans": [
+            "n. 连杆"
+          ]
+        },
+        {
+          "name": "transmission",
+          "usphone": "trænsˈmɪʃn",
+          "ukphone": "trænsˈmɪʃn",
+          "trans": [
+            "n. 变速器，传动系统，变速箱"
+          ]
+        },
+        {
+          "name": "clutch",
+          "usphone": "klʌtʃ",
+          "ukphone": "klʌtʃ",
+          "trans": [
+            "n. 离合器"
+          ]
+        },
+        {
+          "name": "gearbox",
+          "usphone": "ˈɡɪəbɒks",
+          "ukphone": "ˈɡɪəbɒks",
+          "trans": [
+            "n. 变速箱，齿轮箱"
+          ]
+        },
+        {
+          "name": "driveshaft",
+          "usphone": "ˈdraɪvʃɑːft",
+          "ukphone": "ˈdraɪvʃɑːft",
+          "trans": [
+            "n. 传动轴，驱动轴"
+          ]
+        },
+        {
+          "name": "differential",
+          "usphone": "ˌdɪfəˈrenʃl",
+          "ukphone": "ˌdɪfəˈrenʃl",
+          "trans": [
+            "n. 差速器"
+          ]
+        },
+        {
+          "name": "torque converter",
+          "usphone": "tɔːk kənˈvɜːtə(r)",
+          "ukphone": "tɔːk kənˈvɜːtə(r)",
+          "trans": [
+            "n. 液力变矩器"
+          ]
+        },
+        {
+          "name": "flywheel",
+          "usphone": "ˈflaɪwiːl",
+          "ukphone": "ˈflaɪwiːl",
+          "trans": [
+            "n. 飞轮"
+          ]
+        },
+        {
+          "name": "chassis",
+          "usphone": "ˈʃæsi",
+          "ukphone": "ˈʃæsi",
+          "trans": [
+            "n. 底盘，车架"
+          ]
+        },
+        {
+          "name": "suspension",
+          "usphone": "səˈspenʃn",
+          "ukphone": "səˈspenʃn",
+          "trans": [
+            "n. 悬挂系统，减震系统"
+          ]
+        },
+        {
+          "name": "shock absorber",
+          "usphone": "ʃɒk əbˈzɔːbə(r)",
+          "ukphone": "ʃɒk əbˈzɔːbə(r)",
+          "trans": [
+            "n. 减震器，避震器"
+          ]
+        },
+        {
+          "name": "axle",
+          "usphone": "ˈæksl",
+          "ukphone": "ˈæksl",
+          "trans": [
+            "n. 车桥，轴"
+          ]
+        },
+        {
+          "name": "control arm",
+          "usphone": "kənˈtrəʊl ɑːm",
+          "ukphone": "kənˈtrəʊl ɑːm",
+          "trans": [
+            "n. 控制臂，摇臂"
+          ]
+        },
+        {
+          "name": "tie rod",
+          "usphone": "taɪ rɒd",
+          "ukphone": "taɪ rɒd",
+          "trans": [
+            "n. 横拉杆，转向拉杆"
+          ]
+        },
+        {
+          "name": "steering wheel",
+          "usphone": "ˈstɪərɪŋ wiːl",
+          "ukphone": "ˈstɪərɪŋ wiːl",
+          "trans": [
+            "n. 方向盘"
+          ]
+        },
+        {
+          "name": "brake",
+          "usphone": "breɪk",
+          "ukphone": "breɪk",
+          "trans": [
+            "n. 制动器，刹车，制动"
+          ]
+        },
+        {
+          "name": "disc brake",
+          "usphone": "dɪsk breɪk",
+          "ukphone": "dɪsk breɪk",
+          "trans": [
+            "n. 盘式制动器"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "章节二",
+      "words": [
+        {
+          "name": "brake pad",
+          "usphone": "breɪk pæd",
+          "ukphone": "breɪk pæd",
+          "trans": [
+            "n. 刹车片"
+          ]
+        },
+        {
+          "name": "brake caliper",
+          "usphone": "breɪk ˈkælɪpə(r)",
+          "ukphone": "breɪk ˈkælɪpə(r)",
+          "trans": [
+            "n. 制动卡钳"
+          ]
+        },
+        {
+          "name": "drum brake",
+          "usphone": "drʌm breɪk",
+          "ukphone": "drʌm breɪk",
+          "trans": [
+            "n. 鼓式制动器"
+          ]
+        },
+        {
+          "name": "ABS",
+          "usphone": "ˈeɪ biː ˈes",
+          "ukphone": "ˈeɪ biː ˈes",
+          "trans": [
+            "n. 防抱死制动系统，防抱死系统"
+          ]
+        },
+        {
+          "name": "master cylinder",
+          "usphone": "ˈmɑːstə(r) ˈsɪlɪndə(r)",
+          "ukphone": "ˈmɑːstə(r) ˈsɪlɪndə(r)",
+          "trans": [
+            "n. 制动总泵，主缸"
+          ]
+        },
+        {
+          "name": "battery",
+          "usphone": "ˈbætri",
+          "ukphone": "ˈbætri",
+          "trans": [
+            "n. 蓄电池"
+          ]
+        },
+        {
+          "name": "alternator",
+          "usphone": "ˈɔːltərneɪtə(r)",
+          "ukphone": "ˈɔːltərneɪtə(r)",
+          "trans": [
+            "n. 发电机，交流发电机"
+          ]
+        },
+        {
+          "name": "starter",
+          "usphone": "ˈstɑːtə(r)",
+          "ukphone": "ˈstɑːtə(r)",
+          "trans": [
+            "n. 起动机"
+          ]
+        },
+        {
+          "name": "ignition",
+          "usphone": "ɪgˈnɪʃn",
+          "ukphone": "ɪgˈnɪʃn",
+          "trans": [
+            "n. 点火系统，点火装置"
+          ]
+        },
+        {
+          "name": "ignition coil",
+          "usphone": "ɪgˈnɪʃn kɔɪl",
+          "ukphone": "ɪgˈnɪʃn kɔɪl",
+          "trans": [
+            "n. 点火线圈"
+          ]
+        },
+        {
+          "name": "fuse",
+          "usphone": "fjuːz",
+          "ukphone": "fjuːz",
+          "trans": [
+            "n. 保险丝，熔断器"
+          ]
+        },
+        {
+          "name": "ECU",
+          "usphone": "ˌiː siː ˈjuː",
+          "ukphone": "ˌiː siː ˈjuː",
+          "trans": [
+            "n. 发动机控制单元，电子控制单元"
+          ]
+        },
+        {
+          "name": "fuel injector",
+          "usphone": "ˈfjuːəl ɪnˈdʒektə(r)",
+          "ukphone": "ˈfjuːəl ɪnˈdʒektə(r)",
+          "trans": [
+            "n. 燃油喷油器，喷油器"
+          ]
+        },
+        {
+          "name": "carburetor",
+          "usphone": "ˌˈkɑːbəreɪtə(r)",
+          "ukphone": "ˌˈkɑːbəreɪtə(r)",
+          "trans": [
+            "n. 化油器"
+          ]
+        },
+        {
+          "name": "exhaust manifold",
+          "usphone": "ɪgˈzɔːst ˈmænɪfəʊld",
+          "ukphone": "ɪgˈzɔːst ˈmænɪfəʊld",
+          "trans": [
+            "n. 排气屿管"
+          ]
+        },
+        {
+          "name": "muffler",
+          "usphone": "ˈmʌflə(r)",
+          "ukphone": "ˈmʌflə(r)",
+          "trans": [
+            "n. 消声器"
+          ]
+        },
+        {
+          "name": "catalytic converter",
+          "usphone": "ˌˈkætəlɪtɪk kənˈvɜːtə(r)",
+          "ukphone": "ˌˈkætəlɪtɪk kənˈvɜːtə(r)",
+          "trans": [
+            "n. 催化转换器，催化净化器"
+          ]
+        },
+        {
+          "name": "radiator",
+          "usphone": "ˈreɭdieɪtə(r)",
+          "ukphone": "ˈreɭdieɪtə(r)",
+          "trans": [
+            "n. 散热器，水箱"
+          ]
+        },
+        {
+          "name": "coolant",
+          "usphone": "ˈkuːlənt",
+          "ukphone": "ˈkuːlənt",
+          "trans": [
+            "n. 冷却液"
+          ]
+        },
+        {
+          "name": "thermostat",
+          "usphone": "ˈθɜːməstæt",
+          "ukphone": "ˈθɜːməstæt",
+          "trans": [
+            "n. 节温器，恒温器"
+          ]
+        },
+        {
+          "name": "water pump",
+          "usphone": "ˈwɔːtə pʌmp",
+          "ukphone": "ˈwɔːtə pʌmp",
+          "trans": [
+            "n. 水泵"
+          ]
+        },
+        {
+          "name": "oil pump",
+          "usphone": "ɔɪl pʌmp",
+          "ukphone": "ɔɪl pʌmp",
+          "trans": [
+            "n. 机油泵"
+          ]
+        },
+        {
+          "name": "lubrication",
+          "usphone": "ˌluːbrɪˈkeɪʃn",
+          "ukphone": "ˌluːbrɪˈkeɪʃn",
+          "trans": [
+            "n. 润滑"
+          ]
+        },
+        {
+          "name": "oil filter",
+          "usphone": "ɔɪl ˈfɪltə(r)",
+          "ukphone": "ɔɪl ˈfɪltə(r)",
+          "trans": [
+            "n. 机油滤清器"
+          ]
+        },
+        {
+          "name": "body",
+          "usphone": "ˈbɒdi",
+          "ukphone": "ˈbɒdi",
+          "trans": [
+            "n. 车身"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "章节三",
+      "words": [
+        {
+          "name": "fender",
+          "usphone": "ˈfendə(r)",
+          "ukphone": "ˈfendə(r)",
+          "trans": [
+            "n. 翼子板"
+          ]
+        },
+        {
+          "name": "bumper",
+          "usphone": "ˈbʌmpə(r)",
+          "ukphone": "ˈbʌmpə(r)",
+          "trans": [
+            "n. 保险杠"
+          ]
+        },
+        {
+          "name": "hood",
+          "usphone": "hʊd",
+          "ukphone": "hʊd",
+          "trans": [
+            "n. 引擎盖"
+          ]
+        },
+        {
+          "name": "dashboard",
+          "usphone": "ˈdæʃbɔːd",
+          "ukphone": "ˈdæʃbɔːd",
+          "trans": [
+            "n. 仪表板"
+          ]
+        },
+        {
+          "name": "windshield",
+          "usphone": "ˈwɪndʃiːld",
+          "ukphone": "ˈwɪndʃiːld",
+          "trans": [
+            "n. 挡风玻璃"
+          ]
+        },
+        {
+          "name": "wrench",
+          "usphone": "rentʃ",
+          "ukphone": "rentʃ",
+          "trans": [
+            "n. 扳手"
+          ]
+        },
+        {
+          "name": "socket",
+          "usphone": "ˈsɒkɪt",
+          "ukphone": "ˈsɒkɪt",
+          "trans": [
+            "n. 套筒，套管"
+          ]
+        },
+        {
+          "name": "jack",
+          "usphone": "dʒæk",
+          "ukphone": "dʒæk",
+          "trans": [
+            "n. 千斤顶"
+          ]
+        },
+        {
+          "name": "torque wrench",
+          "usphone": "tɔːk rentʃ",
+          "ukphone": "tɔːk rentʃ",
+          "trans": [
+            "n. 扭力扳手"
+          ]
+        },
+        {
+          "name": "scanner",
+          "usphone": "ˈskænə(r)",
+          "ukphone": "ˈskænə(r)",
+          "trans": [
+            "n. 诊断仪，扫描仪"
+          ]
+        },
+        {
+          "name": "diagnostic",
+          "usphone": "ˌdaɪəɡˈnɒstɪk",
+          "ukphone": "ˌdaɪəɡˈnɒstɪk",
+          "trans": [
+            "adj. 诊断的，诊断"
+          ]
+        },
+        {
+          "name": "trouble code",
+          "usphone": "ˈtrʌbl kəʊd",
+          "ukphone": "ˈtrʌbl kəʊd",
+          "trans": [
+            "n. 故障码"
+          ]
+        },
+        {
+          "name": "sensor",
+          "usphone": "ˈsensə(r)",
+          "ukphone": "ˈsensə(r)",
+          "trans": [
+            "n. 传感器"
+          ]
+        },
+        {
+          "name": "OBD",
+          "usphone": "ˈəʊ biː ˈdiː",
+          "ukphone": "ˈəʊ biː ˈdiː",
+          "trans": [
+            "n. 车载诊断系统"
+          ]
+        },
+        {
+          "name": "maintenance",
+          "usphone": "ˈmeɪntənəns",
+          "ukphone": "ˈmeɪntənəns",
+          "trans": [
+            "n. 保养，维护"
+          ]
+        },
+        {
+          "name": "tire",
+          "usphone": "ˈtaɪə(r)",
+          "ukphone": "ˈtaɪə(r)",
+          "trans": [
+            "n. 轮胎"
+          ]
+        }
+      ]
+    }
+  ]
+}

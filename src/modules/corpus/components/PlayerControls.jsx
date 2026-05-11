@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback, useLayoutEffect } from 'react'
+import { createPortal } from 'react-dom'
 import {
   Pause,
   Play,
@@ -13,8 +14,14 @@ import {
 } from 'lucide-react'
 import { useCorpusContext } from '../context/CorpusPlayerContext.jsx'
 
-const RATE_OPTIONS = [0.75, 1, 1.25, 1.5, 1.75, 2]
-const INTERVAL_OPTIONS = [0, 0.5, 1, 2, 3]
+const RATE_OPTIONS = [
+  0.3, 0.4, 0.5, 0.6,
+  0.7, 0.8, 0.9, 1,
+  1.1, 1.2, 1.3, 1.4,
+  1.5, 2,
+]
+const INTERVAL_OPTIONS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const LOOP_OPTIONS = [1, 2, 3, 4, 5, 10, -1] // -1 = 无限
 
 function LabeledBtn({ active, onClick, label, ariaLabel, children }) {
   return (
@@ -48,18 +55,53 @@ function LabeledBtn({ active, onClick, label, ariaLabel, children }) {
 
 function RateMenu({ rate, onChange }) {
   const [open, setOpen] = useState(false)
-  const ref = useRef(null)
+  const [pos, setPos] = useState({ left: 0, top: 0, ready: false })
+  const btnRef = useRef(null)
+  const panelRef = useRef(null)
+
+  const layout = useCallback(() => {
+    const btn = btnRef.current
+    const panel = panelRef.current
+    if (!btn || !panel) return
+    const b = btn.getBoundingClientRect()
+    const p = panel.getBoundingClientRect()
+    const margin = 8
+    const centerX = b.left + b.width / 2
+    let left = centerX - p.width / 2
+    left = Math.max(margin, Math.min(window.innerWidth - p.width - margin, left))
+    setPos({ left, top: b.bottom + margin, ready: true })
+  }, [])
+
+  useLayoutEffect(() => {
+    if (!open) {
+      setPos((prev) => (prev.ready ? { ...prev, ready: false } : prev))
+      return
+    }
+    layout()
+  }, [open, layout])
+
   useEffect(() => {
     if (!open) return
-    const fn = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false)
+    const onDown = (e) => {
+      if (btnRef.current?.contains(e.target)) return
+      if (panelRef.current?.contains(e.target)) return
+      setOpen(false)
     }
-    document.addEventListener('mousedown', fn)
-    return () => document.removeEventListener('mousedown', fn)
-  }, [open])
+    const onRecalc = () => layout()
+    document.addEventListener('mousedown', onDown)
+    window.addEventListener('resize', onRecalc)
+    window.addEventListener('scroll', onRecalc, true)
+    return () => {
+      document.removeEventListener('mousedown', onDown)
+      window.removeEventListener('resize', onRecalc)
+      window.removeEventListener('scroll', onRecalc, true)
+    }
+  }, [open, layout])
+
   return (
-    <div className="relative shrink-0" ref={ref}>
+    <div className="relative shrink-0">
       <button
+        ref={btnRef}
         type="button"
         onClick={() => setOpen((v) => !v)}
         className="flex flex-col items-center gap-0.5 group min-w-[44px]"
@@ -72,26 +114,41 @@ function RateMenu({ rate, onChange }) {
           倍速
         </span>
       </button>
-      {open && (
-        <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 min-w-[80px] rounded-md py-1 z-50 bg-surface dark:bg-[#1a1a24] border border-gray-200 dark:border-white/[0.08] shadow-lg">
-          {RATE_OPTIONS.map((r) => (
-            <button
-              key={r}
-              type="button"
-              onClick={() => {
-                onChange(r)
-                setOpen(false)
-              }}
-              className={`block w-full px-3 py-1.5 text-left text-xs ${
-                rate === r
-                  ? 'bg-primary-soft text-primary dark:bg-white dark:text-gray-900'
-                  : 'text-content-secondary dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/[0.04]'
-              }`}
-            >
-              {r}x
-            </button>
-          ))}
-        </div>
+      {open && createPortal(
+        <div
+          ref={panelRef}
+          style={{
+            position: 'fixed',
+            left: pos.left,
+            top: pos.top,
+            visibility: pos.ready ? 'visible' : 'hidden',
+          }}
+          className="z-[100] rounded-xl p-3 bg-surface dark:bg-[#1a1a24] border border-gray-200 dark:border-white/[0.08] shadow-xl"
+        >
+          <div className="text-[11px] text-content-tertiary dark:text-gray-400 text-center mb-2">
+            播放倍速
+          </div>
+          <div className="grid grid-cols-4 gap-2">
+            {RATE_OPTIONS.map((r) => (
+              <button
+                key={r}
+                type="button"
+                onClick={() => {
+                  onChange(r)
+                  setOpen(false)
+                }}
+                className={`px-3 py-1.5 rounded-md text-xs font-medium tabular-nums transition-colors ${
+                  rate === r
+                    ? 'bg-primary text-white dark:bg-white dark:text-gray-900'
+                    : 'bg-gray-100 text-content-secondary hover:bg-gray-200 dark:bg-white/[0.06] dark:text-gray-200 dark:hover:bg-white/[0.12]'
+                }`}
+              >
+                {r}x
+              </button>
+            ))}
+          </div>
+        </div>,
+        document.body
       )}
     </div>
   )
@@ -159,6 +216,107 @@ function IntervalMenu({ value, onChange }) {
   )
 }
 
+function LoopCountMenu({ value, onChange }) {
+  const [open, setOpen] = useState(false)
+  const [anchor, setAnchor] = useState(null)
+  const btnRef = useRef(null)
+  const panelRef = useRef(null)
+
+  const active = value !== 0
+  const label = active ? (value === -1 ? '∞' : `×${value}`) : '单句循环'
+
+  const updateAnchor = useCallback(() => {
+    const el = btnRef.current
+    if (!el) return
+    const r = el.getBoundingClientRect()
+    setAnchor({ x: r.left + r.width / 2, y: r.bottom })
+  }, [])
+
+  useEffect(() => {
+    if (!open) return
+    updateAnchor()
+    const onDown = (e) => {
+      if (btnRef.current?.contains(e.target)) return
+      if (panelRef.current?.contains(e.target)) return
+      setOpen(false)
+    }
+    const onScrollOrResize = () => updateAnchor()
+    document.addEventListener('mousedown', onDown)
+    window.addEventListener('resize', onScrollOrResize)
+    window.addEventListener('scroll', onScrollOrResize, true)
+    return () => {
+      document.removeEventListener('mousedown', onDown)
+      window.removeEventListener('resize', onScrollOrResize)
+      window.removeEventListener('scroll', onScrollOrResize, true)
+    }
+  }, [open, updateAnchor])
+
+  return (
+    <div className="relative shrink-0">
+      <button
+        ref={btnRef}
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="flex flex-col items-center gap-0.5 group min-w-[44px]"
+        title="单句循环"
+      >
+        <span
+          className={`w-9 h-9 flex items-center justify-center rounded-full transition-colors ${
+            active
+              ? 'bg-primary-soft text-primary dark:bg-white dark:text-gray-900'
+              : 'text-content-secondary dark:text-gray-300 group-hover:bg-gray-100/60 dark:group-hover:bg-white/[0.06]'
+          }`}
+        >
+          <Repeat className="w-4 h-4" />
+        </span>
+        <span
+          className={`text-[10px] leading-none ${
+            active ? 'text-primary dark:text-white' : 'text-content-tertiary dark:text-gray-500'
+          }`}
+        >
+          {label}
+        </span>
+      </button>
+      {open && anchor && createPortal(
+        <div
+          ref={panelRef}
+          style={{
+            position: 'fixed',
+            left: anchor.x,
+            top: anchor.y + 8,
+            transform: 'translate(-50%, 0)',
+          }}
+          className="z-[100] rounded-xl p-3 bg-surface dark:bg-[#1a1a24] border border-gray-200 dark:border-white/[0.08] shadow-xl"
+        >
+          <div className="text-[11px] text-content-tertiary dark:text-gray-400 text-center mb-2">
+            设置单句循环次数
+          </div>
+          <div className="grid grid-cols-3 gap-2">
+            {LOOP_OPTIONS.map((opt) => (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => {
+                  onChange(opt)
+                  setOpen(false)
+                }}
+                className={`w-10 h-10 rounded-md text-xs font-medium tabular-nums transition-colors flex items-center justify-center ${
+                  value === opt
+                    ? 'bg-primary text-white dark:bg-white dark:text-gray-900'
+                    : 'bg-gray-100 text-content-secondary hover:bg-gray-200 dark:bg-white/[0.06] dark:text-gray-200 dark:hover:bg-white/[0.12]'
+                }`}
+              >
+                {opt === -1 ? '无限' : opt}
+              </button>
+            ))}
+          </div>
+        </div>,
+        document.body
+      )}
+    </div>
+  )
+}
+
 function VerticalSep() {
   return <span className="mx-1 self-center h-7 w-px bg-gray-200 dark:bg-white/[0.08]" />
 }
@@ -169,27 +327,18 @@ export default function PlayerControls() {
   const {
     isPlaying,
     rate,
-    isLooping,
-    abLoop,
+    loopCount,
     pauseAfterCue,
     intervalGap,
     toggle,
     setRate,
-    toggleLoop,
-    setAbPoint,
+    setLoopCount,
     togglePauseAfterCue,
     setIntervalGap,
     requestFullscreen,
     prevCue,
     nextCue,
   } = player
-
-  const abLabel =
-    abLoop.a == null
-      ? 'A点'
-      : abLoop.b == null
-      ? 'B点?'
-      : 'A↻B'
 
   return (
     <div className="shrink-0 px-2 py-2 flex items-end justify-center gap-1 overflow-x-auto">
@@ -244,39 +393,7 @@ export default function PlayerControls() {
 
       <VerticalSep />
 
-      {/* A 点按钮 —— 用 LabeledBtn 但内部是文字 */}
-      <button
-        type="button"
-        onClick={setAbPoint}
-        title={abLabel}
-        aria-pressed={abLoop.enabled}
-        className="shrink-0 flex flex-col items-center gap-0.5 group min-w-[44px]"
-      >
-        <span
-          className={`w-9 h-9 flex items-center justify-center rounded-full text-sm font-semibold transition-colors ${
-            abLoop.enabled
-              ? 'bg-primary text-white dark:bg-white dark:text-gray-900'
-              : abLoop.a != null
-              ? 'bg-amber-100 text-amber-700 dark:bg-amber-500/20 dark:text-amber-300'
-              : 'text-content-secondary dark:text-gray-300 group-hover:bg-gray-100/60 dark:group-hover:bg-white/[0.06]'
-          }`}
-        >
-          A
-        </span>
-        <span
-          className={`text-[10px] leading-none ${
-            abLoop.enabled || abLoop.a != null
-              ? 'text-primary dark:text-white'
-              : 'text-content-tertiary dark:text-gray-500'
-          }`}
-        >
-          A点
-        </span>
-      </button>
-
-      <LabeledBtn active={isLooping} onClick={toggleLoop} label="单句循环">
-        <Repeat className="w-4 h-4" />
-      </LabeledBtn>
+      <LoopCountMenu value={loopCount} onChange={setLoopCount} />
 
       <IntervalMenu value={intervalGap} onChange={setIntervalGap} />
 

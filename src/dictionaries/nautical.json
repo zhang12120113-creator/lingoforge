@@ -1,0 +1,674 @@
+{
+  "id": "nautical",
+  "name": "航海英语",
+  "description": "基于IMO标准海事通信用语的专业航海词汇",
+  "category": "专业英语",
+  "totalChapters": 4,
+  "totalWords": 80,
+  "chapters": [
+    {
+      "id": 1,
+      "name": "章节一",
+      "words": [
+        {
+          "name": "anchor",
+          "usphone": "ˈæŋkər",
+          "ukphone": "ˈæŋkər",
+          "trans": [
+            "n./v. 锚，抛锚，停泊"
+          ]
+        },
+        {
+          "name": "ballast",
+          "usphone": "ˈbæləst",
+          "ukphone": "ˈbæləst",
+          "trans": [
+            "n. 压载物，压载水"
+          ]
+        },
+        {
+          "name": "bow",
+          "usphone": "baʊ",
+          "ukphone": "baʊ",
+          "trans": [
+            "n. 船首，船头"
+          ]
+        },
+        {
+          "name": "bridge",
+          "usphone": "brɪdʒ",
+          "ukphone": "brɪdʒ",
+          "trans": [
+            "n. 驾驶台，舰桥"
+          ]
+        },
+        {
+          "name": "bulkhead",
+          "usphone": "ˈbʌlkhed",
+          "ukphone": "ˈbʌlkhed",
+          "trans": [
+            "n. 舱壁，隔堵"
+          ]
+        },
+        {
+          "name": "cargo hold",
+          "usphone": "ˈkɑːɡəʊ həʊld",
+          "ukphone": "ˈkɑːɡəʊ həʊld",
+          "trans": [
+            "n. 货舱"
+          ]
+        },
+        {
+          "name": "deck",
+          "usphone": "dek",
+          "ukphone": "dek",
+          "trans": [
+            "n. 甲板"
+          ]
+        },
+        {
+          "name": "hull",
+          "usphone": "hʌl",
+          "ukphone": "hʌl",
+          "trans": [
+            "n. 船体，船身"
+          ]
+        },
+        {
+          "name": "keel",
+          "usphone": "kiːl",
+          "ukphone": "kiːl",
+          "trans": [
+            "n. 龙骨（船体底部纵向主结构）"
+          ]
+        },
+        {
+          "name": "stern",
+          "usphone": "stɜːrn",
+          "ukphone": "stɜːrn",
+          "trans": [
+            "n. 船尾，艉部"
+          ]
+        },
+        {
+          "name": "bearing",
+          "usphone": "ˈbeərɪŋ",
+          "ukphone": "ˈbeərɪŋ",
+          "trans": [
+            "n. 方位，方向，轴承"
+          ]
+        },
+        {
+          "name": "chart",
+          "usphone": "tʃɑːt",
+          "ukphone": "tʃɑːt",
+          "trans": [
+            "n. 海图，航海图"
+          ]
+        },
+        {
+          "name": "compass",
+          "usphone": "ˈkʌmpəs",
+          "ukphone": "ˈkʌmpəs",
+          "trans": [
+            "n. 罗经，指南针"
+          ]
+        },
+        {
+          "name": "course",
+          "usphone": "kɔːs",
+          "ukphone": "kɔːs",
+          "trans": [
+            "n. 航向，航线，课程"
+          ]
+        },
+        {
+          "name": "ECDIS",
+          "usphone": "ˈekdɪs",
+          "ukphone": "ˈekdɪs",
+          "trans": [
+            "n. 电子海图显示与信息系统"
+          ]
+        },
+        {
+          "name": "gyrocompass",
+          "usphone": "ˈdʒaɪrəʊkʌmpəs",
+          "ukphone": "ˈdʒaɪrəʊkʌmpəs",
+          "trans": [
+            "n. 陀螺罗经，电罗经"
+          ]
+        },
+        {
+          "name": "heading",
+          "usphone": "ˈhedɪŋ",
+          "ukphone": "ˈhedɪŋ",
+          "trans": [
+            "n. 船首向，航首向"
+          ]
+        },
+        {
+          "name": "latitude",
+          "usphone": "ˈlætɪtjuːd",
+          "ukphone": "ˈlætɪtjuːd",
+          "trans": [
+            "n. 纬度"
+          ]
+        },
+        {
+          "name": "longitude",
+          "usphone": "ˈlɒndʒɪtjuːd",
+          "ukphone": "ˈlɒndʒɪtjuːd",
+          "trans": [
+            "n. 经度"
+          ]
+        },
+        {
+          "name": "navigation",
+          "usphone": "ˌnævɪˈɡeɪʃən",
+          "ukphone": "ˌnævɪˈɡeɪʃən",
+          "trans": [
+            "n. 航行，航海，导航"
+          ]
+        },
+        {
+          "name": "radar",
+          "usphone": "ˈreɪdɑːr",
+          "ukphone": "ˈreɪdɑːr",
+          "trans": [
+            "n. 雷达"
+          ]
+        },
+        {
+          "name": "sextant",
+          "usphone": "ˈsekstənt",
+          "ukphone": "ˈsekstənt",
+          "trans": [
+            "n. 六分仪"
+          ]
+        },
+        {
+          "name": "berth",
+          "usphone": "bɜːθ",
+          "ukphone": "bɜːθ",
+          "trans": [
+            "n./v. 泊位，锚地，使停泊"
+          ]
+        },
+        {
+          "name": "collision",
+          "usphone": "kəˈlɪʒən",
+          "ukphone": "kəˈlɪʒən",
+          "trans": [
+            "n. 碰撞，冲突"
+          ]
+        },
+        {
+          "name": "distress",
+          "usphone": "dɪˈstres",
+          "ukphone": "dɪˈstres",
+          "trans": [
+            "n. 遇险，危难，遇险信号"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "章节二",
+      "words": [
+        {
+          "name": "draft",
+          "usphone": "drɑːft",
+          "ukphone": "drɑːft",
+          "trans": [
+            "n. 吃水（深度）"
+          ]
+        },
+        {
+          "name": "flooding",
+          "usphone": "ˈflʌdɪŋ",
+          "ukphone": "ˈflʌdɪŋ",
+          "trans": [
+            "n. 进水，浸水"
+          ]
+        },
+        {
+          "name": "grounding",
+          "usphone": "ˈɡraʊndɪŋ",
+          "ukphone": "ˈɡraʊndɪŋ",
+          "trans": [
+            "n. 搁浅，触浅"
+          ]
+        },
+        {
+          "name": "helm",
+          "usphone": "helm",
+          "ukphone": "helm",
+          "trans": [
+            "n. 舵，舵轮，操舵装置"
+          ]
+        },
+        {
+          "name": "knot",
+          "usphone": "nɒt",
+          "ukphone": "nɒt",
+          "trans": [
+            "n. 节（航速单位，1节=1海里/小时）"
+          ]
+        },
+        {
+          "name": "mooring",
+          "usphone": "ˈmʊərɪŋ",
+          "ukphone": "ˈmʊərɪŋ",
+          "trans": [
+            "n. 系泊，系留，系泊设备"
+          ]
+        },
+        {
+          "name": "tide",
+          "usphone": "taɪd",
+          "ukphone": "taɪd",
+          "trans": [
+            "n. 潮汐，潮流"
+          ]
+        },
+        {
+          "name": "underway",
+          "usphone": "ˌʌndərˈweɪ",
+          "ukphone": "ˌʌndərˈweɪ",
+          "trans": [
+            "adj. 航行中的，在航的"
+          ]
+        },
+        {
+          "name": "cargo",
+          "usphone": "ˈkɑːɡəʊ",
+          "ukphone": "ˈkɑːɡəʊ",
+          "trans": [
+            "n. 货物，载货"
+          ]
+        },
+        {
+          "name": "crane",
+          "usphone": "kreɪn",
+          "ukphone": "kreɪn",
+          "trans": [
+            "n. 起重机，克令吊"
+          ]
+        },
+        {
+          "name": "harbor",
+          "usphone": "ˈhɑːrbər",
+          "ukphone": "ˈhɑːrbər",
+          "trans": [
+            "n. 港口，港湾，避风港"
+          ]
+        },
+        {
+          "name": "manifest",
+          "usphone": "ˈmænɪfest",
+          "ukphone": "ˈmænɪfest",
+          "trans": [
+            "n./v. 舱单，货物清单，显示"
+          ]
+        },
+        {
+          "name": "port",
+          "usphone": "pɔːt",
+          "ukphone": "pɔːt",
+          "trans": [
+            "n. 港口，左舷"
+          ]
+        },
+        {
+          "name": "quay",
+          "usphone": "kiː",
+          "ukphone": "kiː",
+          "trans": [
+            "n. 码头，埠头"
+          ]
+        },
+        {
+          "name": "starboard",
+          "usphone": "ˈstɑːrbərd",
+          "ukphone": "ˈstɑːrbərd",
+          "trans": [
+            "n./adj. 右舷"
+          ]
+        },
+        {
+          "name": "tanker",
+          "usphone": "ˈtæŋkər",
+          "ukphone": "ˈtæŋkər",
+          "trans": [
+            "n. 油船，油轮，罐车"
+          ]
+        },
+        {
+          "name": "vessel",
+          "usphone": "ˈvesəl",
+          "ukphone": "ˈvesəl",
+          "trans": [
+            "n. 船舶，舰艇，容器"
+          ]
+        },
+        {
+          "name": "visibility",
+          "usphone": "ˌvɪzəˈbɪləti",
+          "ukphone": "ˌvɪzəˈbɪləti",
+          "trans": [
+            "n. 能见度，视距"
+          ]
+        },
+        {
+          "name": "beacon",
+          "usphone": "ˈbiːkən",
+          "ukphone": "ˈbiːkən",
+          "trans": [
+            "n. 信标，灯塔，灯标"
+          ]
+        },
+        {
+          "name": "buoy",
+          "usphone": "bɔɪ",
+          "ukphone": "bɔɪ",
+          "trans": [
+            "n. 浮标，浮筒"
+          ]
+        },
+        {
+          "name": "damage control",
+          "usphone": "ˈdæmɪdʒ kənˈtrəʊl",
+          "ukphone": "ˈdæmɪdʒ kənˈtrəʊl",
+          "trans": [
+            "n. 损害管制，应急处理"
+          ]
+        },
+        {
+          "name": "EPIRB",
+          "usphone": "ˈepɜːrb",
+          "ukphone": "ˈepɜːrb",
+          "trans": [
+            "n. 应急无线电示位标（Emergency Position Indicating Radio Beacon）"
+          ]
+        },
+        {
+          "name": "fender",
+          "usphone": "ˈfendər",
+          "ukphone": "ˈfendər",
+          "trans": [
+            "n. 碰垫，护舷垫"
+          ]
+        },
+        {
+          "name": "lifeboat",
+          "usphone": "ˈlaɪfbəʊt",
+          "ukphone": "ˈlaɪfbəʊt",
+          "trans": [
+            "n. 救生艇"
+          ]
+        },
+        {
+          "name": "lifebuoy",
+          "usphone": "ˈlaɪfbɔɪ",
+          "ukphone": "ˈlaɪfbɔɪ",
+          "trans": [
+            "n. 救生圈"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "章节三",
+      "words": [
+        {
+          "name": "liferaft",
+          "usphone": "ˈlaɪfræft",
+          "ukphone": "ˈlaɪfræft",
+          "trans": [
+            "n. 救生筏"
+          ]
+        },
+        {
+          "name": "Mayday",
+          "usphone": "ˈmeɪdeɪ",
+          "ukphone": "ˈmeɪdeɪ",
+          "trans": [
+            "n. 国际无线电求救信号"
+          ]
+        },
+        {
+          "name": "Pan-Pan",
+          "usphone": "pɑːn pɑːn",
+          "ukphone": "pɑːn pɑːn",
+          "trans": [
+            "n. 国际无线电紧急信号（次于Mayday）"
+          ]
+        },
+        {
+          "name": "SART",
+          "usphone": "sɑːrt",
+          "ukphone": "sɑːrt",
+          "trans": [
+            "n. 搜救应答器（Search and Rescue Transponder）"
+          ]
+        },
+        {
+          "name": "SOLAS",
+          "usphone": "ˈsəʊləs",
+          "ukphone": "ˈsəʊləs",
+          "trans": [
+            "n. 国际海上人命安全公约（Safety of Life at Sea）"
+          ]
+        },
+        {
+          "name": "captain",
+          "usphone": "ˈkæptɪn",
+          "ukphone": "ˈkæptɪn",
+          "trans": [
+            "n. 船长，队长"
+          ]
+        },
+        {
+          "name": "chief engineer",
+          "usphone": "tʃiːf ˌendʒɪˈnɪər",
+          "ukphone": "tʃiːf ˌendʒɪˈnɪər",
+          "trans": [
+            "n. 轮机长"
+          ]
+        },
+        {
+          "name": "chief officer",
+          "usphone": "tʃiːf ˈɒfɪsər",
+          "ukphone": "tʃiːf ˈɒfɪsər",
+          "trans": [
+            "n. 大副"
+          ]
+        },
+        {
+          "name": "logbook",
+          "usphone": "ˈlɒɡbʊk",
+          "ukphone": "ˈlɒɡbʊk",
+          "trans": [
+            "n. 航海日志"
+          ]
+        },
+        {
+          "name": "officer",
+          "usphone": "ˈɒfɪsər",
+          "ukphone": "ˈɒfɪsər",
+          "trans": [
+            "n. 驾驶员，高级船员"
+          ]
+        },
+        {
+          "name": "pilot",
+          "usphone": "ˈpaɪlət",
+          "ukphone": "ˈpaɪlət",
+          "trans": [
+            "n. 引航员，引水员，飞行员"
+          ]
+        },
+        {
+          "name": "seamanship",
+          "usphone": "ˈsiːmənʃɪp",
+          "ukphone": "ˈsiːmənʃɪp",
+          "trans": [
+            "n. 航海技术，船艺"
+          ]
+        },
+        {
+          "name": "boiler",
+          "usphone": "ˈbɔɪlər",
+          "ukphone": "ˈbɔɪlər",
+          "trans": [
+            "n. 锅炉"
+          ]
+        },
+        {
+          "name": "diesel engine",
+          "usphone": "ˈdiːzl endʒɪn",
+          "ukphone": "ˈdiːzl endʒɪn",
+          "trans": [
+            "n. 柴油机"
+          ]
+        },
+        {
+          "name": "engine room",
+          "usphone": "ˈendʒɪn ruːm",
+          "ukphone": "ˈendʒɪn ruːm",
+          "trans": [
+            "n. 机舱"
+          ]
+        },
+        {
+          "name": "generator",
+          "usphone": "ˈdʒenəreɪtər",
+          "ukphone": "ˈdʒenəreɪtər",
+          "trans": [
+            "n. 发电机"
+          ]
+        },
+        {
+          "name": "main engine",
+          "usphone": "meɪn ˈendʒɪn",
+          "ukphone": "meɪn ˈendʒɪn",
+          "trans": [
+            "n. 主机"
+          ]
+        },
+        {
+          "name": "propeller",
+          "usphone": "prəˈpelər",
+          "ukphone": "prəˈpelər",
+          "trans": [
+            "n. 螺旋桨，推进器"
+          ]
+        },
+        {
+          "name": "winch",
+          "usphone": "wɪntʃ",
+          "ukphone": "wɪntʃ",
+          "trans": [
+            "n. 绞车，绞盘"
+          ]
+        },
+        {
+          "name": "windlass",
+          "usphone": "ˈwɪndləs",
+          "ukphone": "ˈwɪndləs",
+          "trans": [
+            "n. 起锚机，绞盘"
+          ]
+        },
+        {
+          "name": "COLREGs",
+          "usphone": "ˈkɒlreɡz",
+          "ukphone": "ˈkɒlreɡz",
+          "trans": [
+            "n. 国际海上避碰规则"
+          ]
+        },
+        {
+          "name": "GMDSS",
+          "usphone": "dʒiː em diː es es",
+          "ukphone": "dʒiː em diː es es",
+          "trans": [
+            "n. 全球海上遇险与安全系统"
+          ]
+        },
+        {
+          "name": "INMARSAT",
+          "usphone": "ˈɪnməsæt",
+          "ukphone": "ˈɪnməsæt",
+          "trans": [
+            "n. 国际海事卫星组织"
+          ]
+        },
+        {
+          "name": "man overboard",
+          "usphone": "mæn ˈəʊvəbɔːd",
+          "ukphone": "mæn ˈəʊvəbɔːd",
+          "trans": [
+            "phrase 人员落水"
+          ]
+        },
+        {
+          "name": "MMSI",
+          "usphone": "ˈemzi",
+          "ukphone": "ˈemzi",
+          "trans": [
+            "n. 海上移动业务识别码（Maritime Mobile Service Identity）"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "章节四",
+      "words": [
+        {
+          "name": "nautical mile",
+          "usphone": "ˈnɔːtɪkl maɪl",
+          "ukphone": "ˈnɔːtɪkl maɪl",
+          "trans": [
+            "n. 海里，浬（等于1.852公里）"
+          ]
+        },
+        {
+          "name": "SAR",
+          "usphone": "es eɪ ɑːr",
+          "ukphone": "es eɪ ɑːr",
+          "trans": [
+            "n. 搜索与救援（Search and Rescue）"
+          ]
+        },
+        {
+          "name": "VHF",
+          "usphone": "ˌviː eɪtʃ ˈef",
+          "ukphone": "ˌviː eɪtʃ ˈef",
+          "trans": [
+            "n. 甚高频（Very High Frequency）"
+          ]
+        },
+        {
+          "name": "voyage",
+          "usphone": "ˈvɔɪɪdʒ",
+          "ukphone": "ˈvɔɪɪdʒ",
+          "trans": [
+            "n./v. 航行，航程，航海"
+          ]
+        },
+        {
+          "name": "watch",
+          "usphone": "wɒtʃ",
+          "ukphone": "wɒtʃ",
+          "trans": [
+            "n./v. 值班，守望，手表"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,588 @@
+{
+  "id": "chef",
+  "name": "厨师英语",
+  "description": "烹饪与厨师专业英语词汇，涵盖厨房职位、烹饪技法、工具设备、食材调料、刀工术语等核心词汇",
+  "category": "专业英语",
+  "totalChapters": 3,
+  "totalWords": 70,
+  "chapters": [
+    {
+      "id": 1,
+      "name": "章节一",
+      "words": [
+        {
+          "name": "chef",
+          "usphone": "ʃef",
+          "ukphone": "ʃef",
+          "trans": [
+            "n. 厨师，主厨"
+          ]
+        },
+        {
+          "name": "sous chef",
+          "usphone": "ˌsuː ˈʃef",
+          "ukphone": "ˌsuː ˈʃef",
+          "trans": [
+            "n. 副主厨，副厨师长"
+          ]
+        },
+        {
+          "name": "line cook",
+          "usphone": "ˌlaɪn ˈkʊk",
+          "ukphone": "ˌlaɪn ˈkʊk",
+          "trans": [
+            "n. 线厨， station 厨师"
+          ]
+        },
+        {
+          "name": "pastry chef",
+          "usphone": "ˈpeɪstri ʃef",
+          "ukphone": "ˈpeɪstri ʃef",
+          "trans": [
+            "n. 糕点师，西点师"
+          ]
+        },
+        {
+          "name": "commis chef",
+          "usphone": "ˈkɒmi ʃef",
+          "ukphone": "ˈkɒmi ʃef",
+          "trans": [
+            "n. 助理厨师，学徒厨师"
+          ]
+        },
+        {
+          "name": "cook",
+          "usphone": "kʊk",
+          "ukphone": "kʊk",
+          "trans": [
+            "n./v. 厨师，烹饪"
+          ]
+        },
+        {
+          "name": "executive chef",
+          "usphone": "ɪɡˌzekjətɪv ˈʃef",
+          "ukphone": "ɪɡˌzekjətɪv ˈʃef",
+          "trans": [
+            "n. 行政总厨，执行主厨"
+          ]
+        },
+        {
+          "name": "garde manger",
+          "usphone": "ˌɡɑːd ˈmɒ̃ʒeɪ",
+          "ukphone": "ˌɡɑːd ˈmɒ̃ʒeɪ",
+          "trans": [
+            "n. 冷菜厨师，冷盘主管"
+          ]
+        },
+        {
+          "name": "sauté",
+          "usphone": "ˈsəʊteɪ",
+          "ukphone": "ˈsəʊteɪ",
+          "trans": [
+            "v./n. 嫩煎，快炒， sauté 烹调法"
+          ]
+        },
+        {
+          "name": "braise",
+          "usphone": "breɪz",
+          "ukphone": "breɪz",
+          "trans": [
+            "v. 焖炖， braising 炖法"
+          ]
+        },
+        {
+          "name": "grill",
+          "usphone": "ɡrɪl",
+          "ukphone": "ɡrɪl",
+          "trans": [
+            "v./n. 烧烤，炙烤"
+          ]
+        },
+        {
+          "name": "roast",
+          "usphone": "rəʊst",
+          "ukphone": "rəʊst",
+          "trans": [
+            "v./n. 烘烤， roasting 烤法"
+          ]
+        },
+        {
+          "name": "boil",
+          "usphone": "bɔɪl",
+          "ukphone": "bɔɪl",
+          "trans": [
+            "v./n. 煮沸， boiling 煮法"
+          ]
+        },
+        {
+          "name": "steam",
+          "usphone": "stiːm",
+          "ukphone": "stiːm",
+          "trans": [
+            "v./n. 蒸， steaming 蒸法"
+          ]
+        },
+        {
+          "name": "fry",
+          "usphone": "fraɪ",
+          "ukphone": "fraɪ",
+          "trans": [
+            "v. 油炸，煎炒"
+          ]
+        },
+        {
+          "name": "simmer",
+          "usphone": "ˈsɪmə(r)",
+          "ukphone": "ˈsɪmə(r)",
+          "trans": [
+            "v./n. 小火慢炖，煨"
+          ]
+        },
+        {
+          "name": "poach",
+          "usphone": "pəʊtʃ",
+          "ukphone": "pəʊtʃ",
+          "trans": [
+            "v. 水煮， poaching 水煮法"
+          ]
+        },
+        {
+          "name": "blanch",
+          "usphone": "blɑːntʃ",
+          "ukphone": "blɑːntʃ",
+          "trans": [
+            "v. 焯水，烫漂， blanching 漂烫法"
+          ]
+        },
+        {
+          "name": "deglaze",
+          "usphone": "diːˈɡleɪz",
+          "ukphone": "diːˈɡleɪz",
+          "trans": [
+            "v.  deglazing 溶解锅底焦痕，用液体溶解锅中沉淀物"
+          ]
+        },
+        {
+          "name": "sear",
+          "usphone": "sɪə(r)",
+          "ukphone": "sɪə(r)",
+          "trans": [
+            "v. 煎封，高温快煎"
+          ]
+        },
+        {
+          "name": "marinate",
+          "usphone": "ˈmærɪneɪt",
+          "ukphone": "ˈmærɪneɪt",
+          "trans": [
+            "v. 腌制，浸泡调味"
+          ]
+        },
+        {
+          "name": "spatula",
+          "usphone": "ˈspætʃələ",
+          "ukphone": "ˈspætʃələ",
+          "trans": [
+            "n. 锅铲，抹刀，刮刀"
+          ]
+        },
+        {
+          "name": "whisk",
+          "usphone": "wɪsk",
+          "ukphone": "wɪsk",
+          "trans": [
+            "n./v. 打蛋器，搅拌器， whisking 搅打法"
+          ]
+        },
+        {
+          "name": "oven",
+          "usphone": "ˈʌvn",
+          "ukphone": "ˈʌvn",
+          "trans": [
+            "n. 烤箱，烤炉"
+          ]
+        },
+        {
+          "name": "ladle",
+          "usphone": "ˈleɪdl",
+          "ukphone": "ˈleɪdl",
+          "trans": [
+            "n./v. 汤勺，长柄勺"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "章节二",
+      "words": [
+        {
+          "name": "tongs",
+          "usphone": "tɒŋz",
+          "ukphone": "tɒŋz",
+          "trans": [
+            "n. 夹子，食品夹"
+          ]
+        },
+        {
+          "name": "colander",
+          "usphone": "ˈkʌləndə(r)",
+          "ukphone": "ˈkʌləndə(r)",
+          "trans": [
+            "n. 滤水篮，漏勺"
+          ]
+        },
+        {
+          "name": "sieve",
+          "usphone": "sɪv",
+          "ukphone": "sɪv",
+          "trans": [
+            "n./v. 筛子，细滤网"
+          ]
+        },
+        {
+          "name": "rolling pin",
+          "usphone": "ˈrəʊlɪŋ pɪn",
+          "ukphone": "ˈrəʊlɪŋ pɪn",
+          "trans": [
+            "n. 擀面杖"
+          ]
+        },
+        {
+          "name": "cutting board",
+          "usphone": "ˈkʌtɪŋ bɔːd",
+          "ukphone": "ˈkʌtɪŋ bɔːd",
+          "trans": [
+            "n. 砧板，切菜板"
+          ]
+        },
+        {
+          "name": "mixing bowl",
+          "usphone": "ˈmɪksɪŋ bəʊl",
+          "ukphone": "ˈmɪksɪŋ bəʊl",
+          "trans": [
+            "n. 搅拌碗，料理盆"
+          ]
+        },
+        {
+          "name": "ingredient",
+          "usphone": "ɪnˈɡriːdiənt",
+          "ukphone": "ɪnˈɡriːdiənt",
+          "trans": [
+            "n. 原料，食材，配料"
+          ]
+        },
+        {
+          "name": "protein",
+          "usphone": "ˈprəʊtiːn",
+          "ukphone": "ˈprəʊtiːn",
+          "trans": [
+            "n. 蛋白质，蛋白类食材"
+          ]
+        },
+        {
+          "name": "dairy",
+          "usphone": "ˈdeəri",
+          "ukphone": "ˈdeəri",
+          "trans": [
+            "n./adj. 乳制品，奶制品"
+          ]
+        },
+        {
+          "name": "poultry",
+          "usphone": "ˈpəʊltri",
+          "ukphone": "ˈpəʊltri",
+          "trans": [
+            "n. 家禽，禽肉"
+          ]
+        },
+        {
+          "name": "seafood",
+          "usphone": "ˈsiːfuːd",
+          "ukphone": "ˈsiːfuːd",
+          "trans": [
+            "n. 海鲜，海产品"
+          ]
+        },
+        {
+          "name": "grain",
+          "usphone": "ɡreɪn",
+          "ukphone": "ɡreɪn",
+          "trans": [
+            "n. 谷物，粮食"
+          ]
+        },
+        {
+          "name": "vegetable",
+          "usphone": "ˈvedʒtəbl",
+          "ukphone": "ˈvedʒtəbl",
+          "trans": [
+            "n. 蔬菜"
+          ]
+        },
+        {
+          "name": "seasoning",
+          "usphone": "ˈsiːznɪŋ",
+          "ukphone": "ˈsiːznɪŋ",
+          "trans": [
+            "n. 调味料，调味品"
+          ]
+        },
+        {
+          "name": "spice",
+          "usphone": "spaɪs",
+          "ukphone": "spaɪs",
+          "trans": [
+            "n./v. 香料，辛香料"
+          ]
+        },
+        {
+          "name": "herb",
+          "usphone": "hɜːb",
+          "ukphone": "hɜːb",
+          "trans": [
+            "n. 香草，草本植物"
+          ]
+        },
+        {
+          "name": "sauce",
+          "usphone": "sɔːs",
+          "ukphone": "sɔːs",
+          "trans": [
+            "n. 酱汁，沙司"
+          ]
+        },
+        {
+          "name": "vinegar",
+          "usphone": "ˈvɪnɪɡə(r)",
+          "ukphone": "ˈvɪnɪɡə(r)",
+          "trans": [
+            "n. 醋"
+          ]
+        },
+        {
+          "name": "marinade",
+          "usphone": "ˌmærɪˈneɪd",
+          "ukphone": "ˌmærɪˈneɪd",
+          "trans": [
+            "n./v. 腌料，腌泡汁， marinade 腌汁"
+          ]
+        },
+        {
+          "name": "condiment",
+          "usphone": "ˈkɒndɪmənt",
+          "ukphone": "ˈkɒndɪmənt",
+          "trans": [
+            "n. 调味品，佐料"
+          ]
+        },
+        {
+          "name": "roux",
+          "usphone": "ruː",
+          "ukphone": "ruː",
+          "trans": [
+            "n. 面糊，油面糊(黄油与面粉混合物，用于增稠酱汁)"
+          ]
+        },
+        {
+          "name": "demi-glace",
+          "usphone": "ˈdemi ɡlɑːs",
+          "ukphone": "ˈdemi ɡlɑːs",
+          "trans": [
+            "n.  demi-glace 浓酱汁，半浓缩酱"
+          ]
+        },
+        {
+          "name": "chop",
+          "usphone": "tʃɒp",
+          "ukphone": "tʃɒp",
+          "trans": [
+            "v./n. 切碎，斩， chopp 粗切"
+          ]
+        },
+        {
+          "name": "dice",
+          "usphone": "daɪs",
+          "ukphone": "daɪs",
+          "trans": [
+            "v./n. 切丁，切成小方块"
+          ]
+        },
+        {
+          "name": "mince",
+          "usphone": "mɪns",
+          "ukphone": "mɪns",
+          "trans": [
+            "v./n. 剁碎，切碎末"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "章节三",
+      "words": [
+        {
+          "name": "julienne",
+          "usphone": "ˈdʒuːlien",
+          "ukphone": "ˈdʒuːlien",
+          "trans": [
+            "v./n. 切丝，切成火柴棍状细条"
+          ]
+        },
+        {
+          "name": "slice",
+          "usphone": "slaɪs",
+          "ukphone": "slaɪs",
+          "trans": [
+            "v./n. 切片"
+          ]
+        },
+        {
+          "name": "grate",
+          "usphone": "ɡreɪt",
+          "ukphone": "ɡreɪt",
+          "trans": [
+            "v. 磨碎，刨丝"
+          ]
+        },
+        {
+          "name": "peel",
+          "usphone": "piːl",
+          "ukphone": "piːl",
+          "trans": [
+            "v./n. 削皮，去皮"
+          ]
+        },
+        {
+          "name": "brunoise",
+          "usphone": "bruːˈnwɑːz",
+          "ukphone": "bruːˈnwɑːz",
+          "trans": [
+            "n. 细丁，brunoise 切法(极细的蔬菜丁)"
+          ]
+        },
+        {
+          "name": "knead",
+          "usphone": "niːd",
+          "ukphone": "niːd",
+          "trans": [
+            "v. 揉面，揉捏面团"
+          ]
+        },
+        {
+          "name": "fold",
+          "usphone": "fəʊld",
+          "ukphone": "fəʊld",
+          "trans": [
+            "v./n. 翻拌， folding 轻柔拌入法"
+          ]
+        },
+        {
+          "name": "proof",
+          "usphone": "pruːf",
+          "ukphone": "pruːf",
+          "trans": [
+            "v./n. 发酵， proofing 面团醒发"
+          ]
+        },
+        {
+          "name": "dough",
+          "usphone": "dəʊ",
+          "ukphone": "dəʊ",
+          "trans": [
+            "n. 面团"
+          ]
+        },
+        {
+          "name": "batter",
+          "usphone": "ˈbætə(r)",
+          "ukphone": "ˈbætə(r)",
+          "trans": [
+            "n. 面糊， batter 稀面糊(用于蛋糕、煎饼)"
+          ]
+        },
+        {
+          "name": "whip",
+          "usphone": "wɪp",
+          "ukphone": "wɪp",
+          "trans": [
+            "v./n. 打发，搅打(奶油、蛋白等)"
+          ]
+        },
+        {
+          "name": "cream",
+          "usphone": "kriːm",
+          "ukphone": "kriːm",
+          "trans": [
+            "n./v. 奶油，奶油状物质， creaming 奶油搅拌法"
+          ]
+        },
+        {
+          "name": "sift",
+          "usphone": "sɪft",
+          "ukphone": "sɪft",
+          "trans": [
+            "v. 筛粉，过筛"
+          ]
+        },
+        {
+          "name": "glaze",
+          "usphone": "ɡleɪz",
+          "ukphone": "ɡleɪz",
+          "trans": [
+            "v./n.  glazing 上光，涂釉， glazing 糖浆浇面"
+          ]
+        },
+        {
+          "name": "mise en place",
+          "usphone": "ˌmiːz ɒ̃ ˈplɑːs",
+          "ukphone": "ˌmiːz ɒ̃ ˈplɑːs",
+          "trans": [
+            "phr. 准备工作，一切就绪(法语烹饪术语，指烹饪前的准备工作)"
+          ]
+        },
+        {
+          "name": "recipe",
+          "usphone": "ˈresəpi",
+          "ukphone": "ˈresəpi",
+          "trans": [
+            "n. 食谱，配方，菜谱"
+          ]
+        },
+        {
+          "name": "garnish",
+          "usphone": "ˈɡɑːnɪʃ",
+          "ukphone": "ˈɡɑːnɪʃ",
+          "trans": [
+            "v./n. 装饰， garnish 配菜点缀物"
+          ]
+        },
+        {
+          "name": "stock",
+          "usphone": "stɒk",
+          "ukphone": "stɒk",
+          "trans": [
+            "n. 高汤， stock 汤底"
+          ]
+        },
+        {
+          "name": "cuisine",
+          "usphone": "kwɪˈziːn",
+          "ukphone": "kwɪˈziːn",
+          "trans": [
+            "n. 菜肴，烹饪风格， cuisine 菜系"
+          ]
+        },
+        {
+          "name": "plating",
+          "usphone": "ˈpleɪtɪŋ",
+          "ukphone": "ˈpleɪtɪŋ",
+          "trans": [
+            "n. 摆盘，装盘艺术"
+          ]
+        }
+      ]
+    }
+  ]
+}

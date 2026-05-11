@@ -1,0 +1,604 @@
+{
+  "name": "商务英语",
+  "name_en": "Business English",
+  "description": "基于BEC（剑桥商务英语证书）官方词汇、牛津商务英语词典及权威教育平台，涵盖综合商务、财务会计、市场营销、人力资源、供应链贸易、会议沟通等核心商务场景的66个高频词汇。",
+  "word_count": 66,
+  "categories": [
+    "综合商务",
+    "财务与会计",
+    "市场营销与销售",
+    "人力资源",
+    "供应链与贸易",
+    "会议与沟通",
+    "缩写与术语"
+  ],
+  "source_references": [
+    "BEC Preliminary/Vantage/Higher Official Vocabulary List - Cambridge ESOL",
+    "Oxford Business English Dictionary",
+    "Collins Workplace English"
+  ],
+  "vocabulary": [
+    {
+      "word": "contract",
+      "phonetic": "/ˈkɒntrækt/ (n.) /kənˈtrækt/ (v.)",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "合同，契约",
+        "收缩",
+        "订立合同"
+      ]
+    },
+    {
+      "word": "negotiate",
+      "phonetic": "/nɪˈɡəʊʃieɪt/",
+      "part_of_speech": "v.",
+      "meanings": [
+        "谈判，协商",
+        "顺利通过"
+      ]
+    },
+    {
+      "word": "revenue",
+      "phonetic": "/ˈrevənjuː/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "收入，收益",
+        "（政府的）税收"
+      ]
+    },
+    {
+      "word": "profit",
+      "phonetic": "/ˈprɒfɪt/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "利润，收益",
+        "获益，获利"
+      ]
+    },
+    {
+      "word": "budget",
+      "phonetic": "/ˈbʌdʒɪt/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "预算",
+        "编入预算，规划"
+      ]
+    },
+    {
+      "word": "strategy",
+      "phonetic": "/ˈstrætədʒi/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "战略，策略",
+        "策划，规划"
+      ]
+    },
+    {
+      "word": "stakeholder",
+      "phonetic": "/ˈsteɪkhəʊldə(r)/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "利益相关者",
+        "股东，投资人"
+      ]
+    },
+    {
+      "word": "deadline",
+      "phonetic": "/ˈdedlaɪn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "截止日期，最后期限"
+      ]
+    },
+    {
+      "word": "objective",
+      "phonetic": "/əbˈdʒektɪv/",
+      "part_of_speech": "n./adj.",
+      "meanings": [
+        "目标，目的",
+        "客观的，公正的"
+      ]
+    },
+    {
+      "word": "agenda",
+      "phonetic": "/əˈdʒendə/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "议程，议事日程",
+        "目的，动机"
+      ]
+    },
+    {
+      "word": "proposal",
+      "phonetic": "/prəˈpəʊzl/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "提案，建议",
+        "求婚"
+      ]
+    },
+    {
+      "word": "resources",
+      "phonetic": "/rɪˈsɔːsɪz/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "资源",
+        "财力，资金"
+      ]
+    },
+    {
+      "word": "opportunity",
+      "phonetic": "/ˌɒpəˈtjuːnəti/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "机会，机遇",
+        "有利时机"
+      ]
+    },
+    {
+      "word": "partnership",
+      "phonetic": "/ˈpɑːtnəʃɪp/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "合作关系，合伙",
+        "合伙企业"
+      ]
+    },
+    {
+      "word": "acquisition",
+      "phonetic": "/ˌækwɪˈzɪʃn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "收购，并购",
+        "获得，取得"
+      ]
+    },
+    {
+      "word": "assets",
+      "phonetic": "/ˈæsets/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "资产，财产",
+        "有价值的人/物"
+      ]
+    },
+    {
+      "word": "liability",
+      "phonetic": "/ˌlaɪəˈbɪləti/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "负债，债务",
+        "责任，义务"
+      ]
+    },
+    {
+      "word": "balance sheet",
+      "phonetic": "/ˈbæləns ʃiːt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "资产负债表"
+      ]
+    },
+    {
+      "word": "cash flow",
+      "phonetic": "/ˈkæʃ fləʊ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "现金流",
+        "现金流动"
+      ]
+    },
+    {
+      "word": "invoice",
+      "phonetic": "/ˈɪnvɔɪs/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "发票，账单",
+        "开发票，开账单"
+      ]
+    },
+    {
+      "word": "investment",
+      "phonetic": "/ɪnˈvestmənt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "投资，投入",
+        "投资额"
+      ]
+    },
+    {
+      "word": "forecast",
+      "phonetic": "/ˈfɔːkɑːst/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "预测，预报",
+        "财务预测"
+      ]
+    },
+    {
+      "word": "expense",
+      "phonetic": "/ɪkˈspens/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "费用，开支",
+        "代价"
+      ]
+    },
+    {
+      "word": "equity",
+      "phonetic": "/ˈekwɪti/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "权益，股本",
+        "公平，公正"
+      ]
+    },
+    {
+      "word": "audit",
+      "phonetic": "/ˈɔːdɪt/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "审计，查账",
+        "审查，检查"
+      ]
+    },
+    {
+      "word": "depreciation",
+      "phonetic": "/dɪˌpriːʃiˈeɪʃn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "折旧",
+        "贬值，跌价"
+      ]
+    },
+    {
+      "word": "overhead",
+      "phonetic": "/ˈəʊvəhed/",
+      "part_of_speech": "n./adj.",
+      "meanings": [
+        "管理费用，经常性开支",
+        "头顶上的"
+      ]
+    },
+    {
+      "word": "liquidity",
+      "phonetic": "/lɪˈkwɪdəti/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "流动性",
+        "流动资产"
+      ]
+    },
+    {
+      "word": "marketing",
+      "phonetic": "/ˈmɑːkɪtɪŋ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "市场营销",
+        "促销，销售活动"
+      ]
+    },
+    {
+      "word": "brand",
+      "phonetic": "/brænd/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "品牌，商标",
+        "打烙印于"
+      ]
+    },
+    {
+      "word": "market share",
+      "phonetic": "/ˈmɑːkɪt ʃeə(r)/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "市场份额，市场占有率"
+      ]
+    },
+    {
+      "word": "campaign",
+      "phonetic": "/kæmˈpeɪn/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "（广告）活动，运动",
+        "发起运动"
+      ]
+    },
+    {
+      "word": "prospect",
+      "phonetic": "/ˈprɒspekt/ (n.) /prəˈspekt/ (v.)",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "潜在客户，前景",
+        "勘探，寻找"
+      ]
+    },
+    {
+      "word": "conversion",
+      "phonetic": "/kənˈvɜːʃn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "转化，转换",
+        "改造，改建"
+      ]
+    },
+    {
+      "word": "client",
+      "phonetic": "/ˈklaɪənt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "客户，委托人",
+        "顾客"
+      ]
+    },
+    {
+      "word": "promotion",
+      "phonetic": "/prəˈməʊʃn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "促销，推广",
+        "晋升，升职"
+      ]
+    },
+    {
+      "word": "advertising",
+      "phonetic": "/ˈædvətaɪzɪŋ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "广告，广告业",
+        "广告宣传"
+      ]
+    },
+    {
+      "word": "recruitment",
+      "phonetic": "/rɪˈkruːtmənt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "招聘，招募",
+        "征兵"
+      ]
+    },
+    {
+      "word": "performance",
+      "phonetic": "/pəˈfɔːməns/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "绩效，业绩",
+        "表演，演出"
+      ]
+    },
+    {
+      "word": "salary",
+      "phonetic": "/ˈsæləri/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "薪水，薪金（通常按月）"
+      ]
+    },
+    {
+      "word": "benefits",
+      "phonetic": "/ˈbenɪfɪts/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "福利，津贴",
+        "利益，好处"
+      ]
+    },
+    {
+      "word": "interview",
+      "phonetic": "/ˈɪntəvjuː/",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "面试，面谈",
+        "采访"
+      ]
+    },
+    {
+      "word": "onboarding",
+      "phonetic": "/ˈɒnbɔːdɪŋ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "新员工入职培训",
+        "新人融入"
+      ]
+    },
+    {
+      "word": "turnover",
+      "phonetic": "/ˈtɜːnəʊvə(r)/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "人员流动率",
+        "营业额，成交量"
+      ]
+    },
+    {
+      "word": "termination",
+      "phonetic": "/ˌtɜːmɪˈneɪʃn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "解雇，终止",
+        "结束，终点"
+      ]
+    },
+    {
+      "word": "supply chain",
+      "phonetic": "/səˈplaɪ tʃeɪn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "供应链"
+      ]
+    },
+    {
+      "word": "inventory",
+      "phonetic": "/ˈɪnvəntri/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "库存，存货",
+        "清单，细目"
+      ]
+    },
+    {
+      "word": "logistics",
+      "phonetic": "/ləˈdʒɪstɪks/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "物流，后勤"
+      ]
+    },
+    {
+      "word": "shipment",
+      "phonetic": "/ˈʃɪpmənt/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "装运，运输",
+        "一批货物"
+      ]
+    },
+    {
+      "word": "lead time",
+      "phonetic": "/ˈliːd taɪm/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "交货期，提前期",
+        "准备时间"
+      ]
+    },
+    {
+      "word": "import",
+      "phonetic": "/ˈɪmpɔːt/ (n.) /ɪmˈpɔːt/ (v.)",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "进口，输入",
+        "进口商品"
+      ]
+    },
+    {
+      "word": "export",
+      "phonetic": "/ˈekspɔːt/ (n.) /ɪkˈspɔːt/ (v.)",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "出口，输出",
+        "出口商品"
+      ]
+    },
+    {
+      "word": "warehouse",
+      "phonetic": "/ˈweəhaʊs/ (n.) /ˈweəhaʊz/ (v.)",
+      "part_of_speech": "n./v.",
+      "meanings": [
+        "仓库，货栈",
+        "存入仓库"
+      ]
+    },
+    {
+      "word": "outsource",
+      "phonetic": "/ˈaʊtsɔːs/",
+      "part_of_speech": "v.",
+      "meanings": [
+        "外包，外购",
+        "外部采购"
+      ]
+    },
+    {
+      "word": "minutes",
+      "phonetic": "/ˈmɪnɪts/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "会议记录，纪要",
+        "分钟"
+      ]
+    },
+    {
+      "word": "feedback",
+      "phonetic": "/ˈfiːdbæk/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "反馈，回馈",
+        "意见，建议"
+      ]
+    },
+    {
+      "word": "follow-up",
+      "phonetic": "/ˈfɒləʊ ʌp/",
+      "part_of_speech": "n./adj.",
+      "meanings": [
+        "跟进，后续",
+        "后续的"
+      ]
+    },
+    {
+      "word": "brainstorming",
+      "phonetic": "/ˈbreɪnstɔːmɪŋ/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "头脑风暴，集思广益"
+      ]
+    },
+    {
+      "word": "presentation",
+      "phonetic": "/ˌpreznˈteɪʃn/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "演讲，展示",
+        "介绍，陈述"
+      ]
+    },
+    {
+      "word": "confirm",
+      "phonetic": "/kənˈfɜːm/",
+      "part_of_speech": "v.",
+      "meanings": [
+        "确认，证实",
+        "批准，认可"
+      ]
+    },
+    {
+      "word": "ROI",
+      "phonetic": "/ˌɑːr əʊ ˈaɪ/",
+      "part_of_speech": "abbr.",
+      "meanings": [
+        "Return on Investment 投资回报率"
+      ]
+    },
+    {
+      "word": "KPI",
+      "phonetic": "/ˌkeɪ piː ˈaɪ/",
+      "part_of_speech": "abbr.",
+      "meanings": [
+        "Key Performance Indicator 关键绩效指标"
+      ]
+    },
+    {
+      "word": "B2B",
+      "phonetic": "/ˌbiː tə ˈbiː/",
+      "part_of_speech": "abbr.",
+      "meanings": [
+        "Business-to-Business 企业对企业"
+      ]
+    },
+    {
+      "word": "CEO",
+      "phonetic": "/ˌsiː iː ˈəʊ/",
+      "part_of_speech": "abbr.",
+      "meanings": [
+        "Chief Executive Officer 首席执行官"
+      ]
+    },
+    {
+      "word": "HR",
+      "phonetic": "/ˌeɪtʃ ˈɑː(r)/",
+      "part_of_speech": "abbr.",
+      "meanings": [
+        "Human Resources 人力资源"
+      ]
+    },
+    {
+      "word": "startup",
+      "phonetic": "/ˈstɑːtʌp/",
+      "part_of_speech": "n.",
+      "meanings": [
+        "初创公司，新兴企业"
+      ]
+    }
+  ]
+}
