@@ -126,8 +126,6 @@ function ArticleCard({
               <span>{article.year}</span>
               <span className="text-gray-300 dark:text-gray-700">|</span>
               <span>{article.wordCount} 词</span>
-              <span className="text-gray-300 dark:text-gray-700">|</span>
-              <Volume2 className="w-3.5 h-3.5" />
             </div>
             <button
               type="button"

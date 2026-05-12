@@ -140,10 +140,10 @@ export default function ArticleList() {
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div className="text-left">
                 <h1 className="text-display gradient-text mb-3 tracking-tight text-glow-primary">
-                  阅读& 听力
+                  阅读
                 </h1>
                 <p className="text-content-tertiary text-body max-w-xl leading-relaxed">
-                  精选英语文章，沉浸式阅读与听力体验，在语境中自然掌握词汇。
+                  精选英语文章，让每一次阅读都成为沉浸式的语言旅行。
                 </p>
                 {/* 统计信息 */}
                 <div className="mt-3 flex items-center gap-3 text-sm text-content-tertiary dark:text-gray-500">

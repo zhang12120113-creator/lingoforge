@@ -141,7 +141,7 @@ export default function Stats() {
             Icon={Keyboard}
           />
           <StatsCard
-            label="阅读听力"
+            label="阅读"
             value={totalReadingMinutes}
             unit="m"
             Icon={BookOpen}

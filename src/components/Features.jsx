@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 const features = [
   { icon: '⌨️', title: '打字记忆', desc: '手指动起来，单词记得牢', path: '/word' },
-  { icon: '📖', title: '阅读听力', desc: '沉浸阅读，逐句精听', path: '/reading' },
+  { icon: '📖', title: '阅读', desc: '沉浸阅读，逐句精听', path: '/reading' },
   { icon: '📺', title: '语料中心', desc: '视频语料，沉浸学习', path: '/listening' },
   { icon: '🎯', title: '训练中心', desc: '专项训练，全面提升', path: '/training' },
 ];

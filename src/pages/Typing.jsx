@@ -35,6 +35,10 @@ export default function Typing() {
   const hasJumpedRef = useRef(false);
   const [inputValue, setInputValue] = useState('');
   const inputValueRef = useRef('');
+  const [keyboardActive, setKeyboardActive] = useState(true);
+  const keyboardActiveRef = useRef(true);
+  const touchStartRef = useRef(null);
+  const suppressClickRef = useRef(false);
 
   const isMobile = useIsMobile();
   const isErrorBookMode = dictId === 'error-book';
@@ -137,26 +141,33 @@ export default function Typing() {
 
   // 移动端：点击/触摸页面任意位置重新聚焦输入框，防止失焦后无法打字
   useEffect(() => {
-    if (!isMobile || isFinished || words.length === 0) return;
-    const focusInput = () => hiddenInputRef.current?.focus();
+    if (!isMobile || isFinished || words.length === 0 || !keyboardActive) return;
+    const focusInput = () => {
+      if (suppressClickRef.current) return;
+      hiddenInputRef.current?.focus();
+    };
     document.addEventListener('click', focusInput);
     document.addEventListener('touchstart', focusInput, { passive: true });
     return () => {
       document.removeEventListener('click', focusInput);
       document.removeEventListener('touchstart', focusInput);
     };
-  }, [isMobile, isFinished, words.length]);
+  }, [isMobile, isFinished, words.length, keyboardActive]);
 
   // 页面加载/章节切换后自动聚焦隐藏输入框并清空残留
   useEffect(() => {
     if (words.length > 0 && hiddenInputRef.current) {
       setTimeout(() => {
+        if (isMobile && !keyboardActiveRef.current) return;
         hiddenInputRef.current?.focus();
         inputValueRef.current = '';
         setInputValue('');
       }, 300);
     }
   }, [words]);
+
+  // 同步 keyboardActive 到 ref，避免 setTimeout 闭包 stale
+  useEffect(() => { keyboardActiveRef.current = keyboardActive; }, [keyboardActive]);
 
   // 核心输入处理函数，供 keydown 和 input 代理层双轨复用
   const handleCharacterInput = useCallback((char) => {
@@ -177,14 +188,25 @@ export default function Typing() {
     const onKeyDown = (e) => {
       if (isFinished) return;
       if (e.isComposing) return;
+      if (isWordListOpen) return;
       if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.key === 'Tab' || e.key === 'ArrowRight') {
+        e.preventDefault();
+        if (wordIndex < words.length - 1) jumpTo(wordIndex + 1);
+        return;
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        if (wordIndex > 0) jumpTo(wordIndex - 1);
+        return;
+      }
       if (e.key === ' ') e.preventDefault();
       if (e.key === 'Backspace') { e.preventDefault(); handleBackspace(); return; }
       if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); handleCharacterInput(e.key); }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-  }, [isMobile, isFinished, handleBackspace, handleCharacterInput]);
+  }, [isMobile, isFinished, isWordListOpen, handleBackspace, handleCharacterInput, wordIndex, words.length, jumpTo]);
 
   // 移动端输入处理：通过隐藏 input 代理键盘输入
   const handleInputChange = useCallback((e) => {
@@ -204,20 +226,55 @@ export default function Typing() {
   }, [isFinished, handleCharacterInput, handleBackspace]);
 
   const handleInputBlur = useCallback(() => {
+    if (isMobile) {
+      // 只有真正收起键盘（无新焦点）时才进入滑动模式，而非点击按钮导致失焦
+      if (!document.activeElement || document.activeElement === document.body) {
+        setKeyboardActive(false);
+      }
+      return;
+    }
     setTimeout(() => {
       hiddenInputRef.current?.focus();
     }, 100);
-  }, []);
+  }, [isMobile]);
 
-  const handleRestart = useCallback(() => {
-    reset();
-  }, [reset]);
+  const handleTouchStart = useCallback((e) => {
+    if (!isMobile || isFinished) return;
+    const t = e.touches[0];
+    touchStartRef.current = { x: t.clientX, y: t.clientY, t: Date.now() };
+  }, [isMobile, isFinished]);
+
+  const handleTouchEnd = useCallback((e) => {
+    if (!isMobile || isFinished || !touchStartRef.current) return;
+    const start = touchStartRef.current;
+    touchStartRef.current = null;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - start.x;
+    const dy = t.clientY - start.y;
+    const dt = Date.now() - start.t;
+    const absX = Math.abs(dx), absY = Math.abs(dy);
+
+    const SWIPE_THRESHOLD = 50;
+    const TAP_THRESHOLD = 10;
+    const SWIPE_MAX_DURATION = 800;
+
+    if (absX > SWIPE_THRESHOLD && absX > absY && dt < SWIPE_MAX_DURATION) {
+      suppressClickRef.current = true;
+      setTimeout(() => { suppressClickRef.current = false; }, 350);
+      if (dx > 0 && wordIndex > 0) jumpTo(wordIndex - 1);
+      else if (dx < 0 && wordIndex < words.length - 1) jumpTo(wordIndex + 1);
+      return;
+    }
+
+    if (!keyboardActive && absX < TAP_THRESHOLD && absY < TAP_THRESHOLD) {
+      setKeyboardActive(true);
+      setTimeout(() => hiddenInputRef.current?.focus(), 0);
+    }
+  }, [isMobile, isFinished, wordIndex, words.length, jumpTo, keyboardActive]);
+
   const handleGoHome = useCallback(() => {
-    if (isErrorBookMode) navigate('/dict/error-book');
-    else if (isReadingWordBookMode) navigate('/dict/reading-word-book');
-    else if (isCorpusWordBookMode) navigate('/dict/corpus-word-book');
-    else navigate('/');
-  }, [navigate, isErrorBookMode, isReadingWordBookMode, isCorpusWordBookMode]);
+    navigate('/word?tab=library');
+  }, [navigate]);
 
   const handleDeleteCurrentWord = useCallback(() => {
     if (!currentWord || words.length === 0) return;
@@ -247,8 +304,8 @@ export default function Typing() {
   const handleJumpToWord = useCallback((index) => {
     jumpTo(index);
     setIsWordListOpen(false);
-    if (isMobile) hiddenInputRef.current?.focus();
-  }, [jumpTo, isMobile]);
+    if (isMobile && keyboardActive) hiddenInputRef.current?.focus();
+  }, [jumpTo, isMobile, keyboardActive]);
 
   const handlePlaySound = useCallback((word) => {
     const audio = new Audio(`https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(word)}&type=2`);
@@ -276,14 +333,7 @@ export default function Typing() {
           </svg>
         </div>
         <p className="text-indigo-500 dark:text-violet-400 mb-6 font-medium">{error}</p>
-        {isErrorBookMode || isWordBookMode ? (
-          <button onClick={() => navigate(`/dict/${dictId}`)} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20">返回词库</button>
-        ) : (
-          <>
-            <button onClick={() => navigate(`/dict/${dictId}`)} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20 mr-3">返回章节</button>
-            <button onClick={() => navigate('/')} className="px-5 py-2.5 bg-gray-100 dark:bg-white/[0.05] hover:bg-gray-200 dark:hover:bg-white/[0.08] text-content-secondary dark:text-gray-300 rounded-button font-medium transition">返回首页</button>
-          </>
-        )}
+        <button onClick={() => navigate('/word?tab=library')} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20">返回词库列表</button>
       </div>
     </div>
   );
@@ -310,7 +360,7 @@ export default function Typing() {
             </div>
             <p className="text-green-600 dark:text-green-400 mb-2 font-medium text-xl">{emptyTitle}</p>
             <p className="text-content-tertiary dark:text-gray-400 mb-6">{emptyDesc}</p>
-            <button onClick={() => navigate(`/dict/${dictId}`)} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20">返回词库</button>
+            <button onClick={() => navigate('/word?tab=library')} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20">返回词库列表</button>
           </div>
         </div>
       );
@@ -338,7 +388,14 @@ export default function Typing() {
       <div
         className="flex-1 flex flex-col min-w-0 relative"
         id="typing-container"
-        onClick={() => hiddenInputRef.current?.focus()}
+        onClick={() => {
+          if (!isMobile) { hiddenInputRef.current?.focus(); return; }
+          if (suppressClickRef.current) return;
+          if (keyboardActive) hiddenInputRef.current?.focus();
+        }}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        onTouchCancel={() => { touchStartRef.current = null; }}
       >
         {/* 左侧中部展开列表按钮 */}
         <button
@@ -358,11 +415,11 @@ export default function Typing() {
 
         {/* 顶部栏 */}
         <div className="min-h-12 md:h-14 shrink-0 flex items-center justify-between px-3 md:px-4 z-40">
-          <button onClick={() => navigate(`/dict/${dictId}`)} className="text-content-tertiary dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark flex items-center gap-2 text-sm transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.04]">
+          <button onClick={() => navigate('/word?tab=library')} className="text-content-tertiary dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark flex items-center gap-2 text-sm transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.04]">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            <span className="hidden sm:inline">{isErrorBookMode || isWordBookMode ? '返回词库' : '返回章节'}</span>
+            <span className="hidden sm:inline">返回词库列表</span>
           </button>
 
           <div className="flex flex-col items-center">
@@ -416,7 +473,7 @@ export default function Typing() {
               autoCorrect="off"
               autoCapitalize="off"
               spellCheck="false"
-              className="absolute inset-0 w-full h-full opacity-0 cursor-text z-50"
+              className={`absolute inset-0 w-full h-full opacity-0 z-50 ${keyboardActive ? 'cursor-text' : 'pointer-events-none'}`}
               style={{
                 fontSize: '16px',
                 caretColor: 'transparent',
@@ -444,7 +501,7 @@ export default function Typing() {
 
         <StatsPanel stats={stats} />
 
-        {isFinished && <ResultModal stats={stats} onRestart={handleRestart} onGoHome={handleGoHome} isErrorBookMode={isErrorBookMode} remainingErrorCount={remainingErrorCount} isReadingWordBookMode={isReadingWordBookMode} remainingReadingCount={remainingReadingCount} isCorpusWordBookMode={isCorpusWordBookMode} remainingCorpusCount={remainingCorpusCount} />}
+        {isFinished && <ResultModal stats={stats} onRestart={reset} onGoHome={handleGoHome} isErrorBookMode={isErrorBookMode} remainingErrorCount={remainingErrorCount} isReadingWordBookMode={isReadingWordBookMode} remainingReadingCount={remainingReadingCount} isCorpusWordBookMode={isCorpusWordBookMode} remainingCorpusCount={remainingCorpusCount} />}
         {showWrongBook && <WrongBookModal onClose={() => setShowWrongBook(false)} onWordRemoved={isErrorBookMode || isWordBookMode ? handleWordRemovedFromModal : undefined} />}
       </div>
     </div>

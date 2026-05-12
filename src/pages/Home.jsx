@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect, useMemo } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { dictionaryMeta, categories } from '../dictionaries/meta.js'
 import { loadDictionary } from '../utils/loadDictionary.js'
 import { buildWordIndex, searchWordIndex } from '../utils/wordIndex.js'
@@ -13,6 +13,7 @@ import ErrorBookCard from '../components/ErrorBookCard'
 
 function Home() {
   const navigate = useNavigate()
+  const location = useLocation()
   const [selectedCategory, setSelectedCategory] = useState('全部')
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
@@ -26,6 +27,24 @@ function Home() {
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
+
+  // 从练习页/章节页返回时，自动滚动到词库列表区域
+  useEffect(() => {
+    const shouldScroll = location.search.includes('tab=library') || location.state?.scrollToWordbooks
+    if (!shouldScroll) return
+
+    const timer = setTimeout(() => {
+      const el = document.getElementById('wordbooks')
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+      // 用原生 API 清理 query，不触发 React 重新渲染
+      if (window.location.search.includes('tab=library')) {
+        window.history.replaceState(null, '', window.location.pathname)
+      }
+    }, 200)
+    return () => clearTimeout(timer)
+  }, [location.key])
 
   const [searchQuery, setSearchQuery] = useState('')
   const readingWordCount = getReadingWordBookCount()
@@ -335,7 +354,7 @@ function Home() {
             </div>
             <div className="mt-4">
               <div className="inline-flex items-center rounded-lg bg-violet-100 px-2.5 py-1 text-xs font-medium text-violet-700 dark:bg-violet-500/15 dark:text-violet-300">
-                阅读听力
+                阅读
               </div>
               <p className="mt-2 text-sm text-violet-600/70 dark:text-violet-400/60">
                 {readingWordCount > 0

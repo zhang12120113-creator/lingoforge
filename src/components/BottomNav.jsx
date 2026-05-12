@@ -11,7 +11,7 @@ const items = [
   },
   {
     to: '/reading',
-    label: '阅读听力',
+    label: '阅读',
     icon: <BookOpen className="w-5 h-5" />,
   },
   {
