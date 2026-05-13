@@ -142,11 +142,33 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
   // 收集 setTimeout 引用，组件卸载时统一清理
   const timeoutsRef = useRef([]);
 
+  const audioCacheRef = useRef(new Map());
+
+  const getOrCreateAudio = useCallback((word) => {
+    const cache = audioCacheRef.current;
+    let audio = cache.get(word);
+    if (!audio) {
+      audio = new Audio(`https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(word)}&type=2`);
+      audio.preload = 'auto';
+      cache.set(word, audio);
+    }
+    return audio;
+  }, []);
+
+  const preloadWord = useCallback((word) => {
+    if (!soundEnabled || !word) return;
+    const audio = getOrCreateAudio(word);
+    if (audio.readyState === 0) {
+      try { audio.load(); } catch {}
+    }
+  }, [soundEnabled, getOrCreateAudio]);
+
   const speakWord = useCallback((word) => {
     if (!soundEnabled || !word) return;
-    const audio = new Audio(`https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(word)}&type=2`);
+    const audio = getOrCreateAudio(word);
+    try { audio.currentTime = 0; } catch {}
     audio.play().catch(() => {});
-  }, [soundEnabled]);
+  }, [soundEnabled, getOrCreateAudio]);
 
   // words 变化时重置状态
   useEffect(() => {
@@ -165,16 +187,17 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
     return () => {
       timeoutsRef.current.forEach(clearTimeout);
       timeoutsRef.current = [];
+      audioCacheRef.current.clear();
     };
   }, [words]);
 
   // soundEnabled 为 true 时朗读首词
   useEffect(() => {
     if (soundEnabled && words.length > 0 && wordIndex === 0 && currentInput === '') {
-      const timer = setTimeout(() => speakWord(words[0]?.name), 100);
-      return () => clearTimeout(timer);
+      speakWord(words[0]?.name);
+      preloadWord(words[1]?.name);
     }
-  }, [soundEnabled, words, wordIndex, currentInput, speakWord]);
+  }, [soundEnabled, words, wordIndex, currentInput, speakWord, preloadWord]);
 
   // 计时器
   useEffect(() => {
@@ -237,15 +260,14 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
             setCurrentInput('');
             repeatCountRef.current = 0;
             hasWrongInCurrentWordRef.current = false;
-            const t = setTimeout(() => speakWord(wordsRef.current[wordIndex + 1]?.name), 100);
-            timeoutsRef.current.push(t);
+            speakWord(wordsRef.current[wordIndex + 1]?.name);
+            preloadWord(wordsRef.current[wordIndex + 2]?.name);
           }
         } else {
           repeatCountRef.current = completedTimes;
           currentInputRef.current = '';
           setCurrentInput('');
-          const t = setTimeout(() => speakWord(currentWord?.name), 100);
-          timeoutsRef.current.push(t);
+          speakWord(currentWord?.name);
         }
       }
     } else {
@@ -266,7 +288,7 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
 
       setTimeout(() => { currentInputRef.current = ''; setCurrentInput(''); setIsWrong(false); }, 300);
     }
-  }, [currentWord, wordIndex, words, isFinished, startTime, speakWord, soundEnabled, wordRepeatCount, isErrorBookMode, dictName, autoRemoveErrorWord]);
+  }, [currentWord, wordIndex, words, isFinished, startTime, speakWord, preloadWord, soundEnabled, wordRepeatCount, isErrorBookMode, dictName, autoRemoveErrorWord]);
 
   const jumpTo = useCallback((index) => {
     if (index < 0 || index >= wordsRef.current.length) return;
@@ -278,10 +300,10 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
     repeatCountRef.current = 0;
     hasWrongInCurrentWordRef.current = false;
     if (soundEnabled) {
-      const t = setTimeout(() => speakWord(wordsRef.current[index]?.name), 100);
-      timeoutsRef.current.push(t);
+      speakWord(wordsRef.current[index]?.name);
+      preloadWord(wordsRef.current[index + 1]?.name);
     }
-  }, [soundEnabled, speakWord]);
+  }, [soundEnabled, speakWord, preloadWord]);
 
   const reset = useCallback(() => {
     setWordIndex(0); currentInputRef.current = ''; setCurrentInput(''); setIsWrong(false); setIsFinished(false); setStartTime(null);
@@ -290,10 +312,10 @@ export default function useTyping(words, soundEnabled, wordRepeatCount = 1, isEr
     hasWrongInCurrentWordRef.current = false;
     if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
     if (soundEnabled && wordsRef.current.length > 0) {
-      const t = setTimeout(() => speakWord(wordsRef.current[0]?.name), 100);
-      timeoutsRef.current.push(t);
+      speakWord(wordsRef.current[0]?.name);
+      preloadWord(wordsRef.current[1]?.name);
     }
-  }, [soundEnabled, speakWord]);
+  }, [soundEnabled, speakWord, preloadWord]);
 
   return { currentWord, currentInput, wordIndex, stats, isFinished, isWrong, handleInput, jumpTo, reset, startTime };
 }

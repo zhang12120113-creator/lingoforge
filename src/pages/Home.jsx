@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useMemo } from 'react'
+import { useState, useRef, useEffect, useMemo, useCallback } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { dictionaryMeta, categories } from '../dictionaries/meta.js'
 import { loadDictionary } from '../utils/loadDictionary.js'
@@ -11,9 +11,18 @@ import Hero from '../components/Hero'
 import Features from '../components/Features'
 import ErrorBookCard from '../components/ErrorBookCard'
 
+const SCROLL_KEY = 'lf_wordlib_scroll_y'
+const RESTORE_KEY = 'lf_wordlib_should_restore'
+
 function Home() {
   const navigate = useNavigate()
   const location = useLocation()
+
+  const saveScrollAndNavigate = useCallback((path) => {
+    sessionStorage.setItem(SCROLL_KEY, String(window.scrollY))
+    navigate(path)
+  }, [navigate])
+
   const [selectedCategory, setSelectedCategory] = useState('全部')
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const dropdownRef = useRef(null)
@@ -28,22 +37,19 @@ function Home() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  // 从练习页/章节页返回时，自动滚动到词库列表区域
   useEffect(() => {
-    const shouldScroll = location.search.includes('tab=library') || location.state?.scrollToWordbooks
-    if (!shouldScroll) return
+    const shouldRestore = sessionStorage.getItem(RESTORE_KEY) === 'true'
+    const savedY = sessionStorage.getItem(SCROLL_KEY)
 
-    const timer = setTimeout(() => {
-      const el = document.getElementById('wordbooks')
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      }
-      // 用原生 API 清理 query，不触发 React 重新渲染
-      if (window.location.search.includes('tab=library')) {
-        window.history.replaceState(null, '', window.location.pathname)
-      }
-    }, 200)
-    return () => clearTimeout(timer)
+    sessionStorage.removeItem(SCROLL_KEY)
+    sessionStorage.removeItem(RESTORE_KEY)
+
+    if (shouldRestore && savedY !== null) {
+      const y = parseInt(savedY, 10)
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: y, behavior: 'instant' })
+      })
+    }
   }, [location.key])
 
   const [searchQuery, setSearchQuery] = useState('')
@@ -107,7 +113,7 @@ function Home() {
   const handleWordSelect = (item) => {
     setWordQuery('')
     setShowWordResults(false)
-    navigate(`/typing/${item.dictId}/${item.chapterId}?wordIndex=${item.wordIndex}`)
+    saveScrollAndNavigate(`/typing/${item.dictId}/${item.chapterId}?wordIndex=${item.wordIndex}`)
   }
 
   const filteredDictionaries = dictionaryMeta.filter((d) => {
@@ -331,11 +337,11 @@ function Home() {
           {/* 错题本卡片（始终显示在最前面，空题时置灰禁用） */}
           <ErrorBookCard
             count={errorBookCount}
-            onClick={() => navigate('/dict/error-book')}
+            onClick={() => saveScrollAndNavigate('/dict/error-book')}
           />
           {/* 阅读词本卡片 */}
           <div
-            onClick={() => navigate('/dict/reading-word-book')}
+            onClick={() => saveScrollAndNavigate('/dict/reading-word-book')}
             className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border-2 border-violet-200 bg-gradient-to-br from-violet-50 to-purple-50 p-6 cursor-pointer hover:shadow-lg hover:border-violet-300 dark:border-violet-900/40 dark:from-violet-950/30 dark:to-purple-950/20 dark:hover:border-violet-700/60 dark:hover:shadow-violet-900/20 animate-card-enter glow-border-subtle transition-all duration-150 active:scale-[0.98]"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-violet-500 opacity-80" />
@@ -365,7 +371,7 @@ function Home() {
           </div>
           {/* 语料词本卡片 */}
           <div
-            onClick={() => navigate('/dict/corpus-word-book')}
+            onClick={() => saveScrollAndNavigate('/dict/corpus-word-book')}
             className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border-2 border-cyan-200 bg-gradient-to-br from-cyan-50 to-sky-50 p-6 cursor-pointer hover:shadow-lg hover:border-cyan-300 dark:border-cyan-900/40 dark:from-cyan-950/30 dark:to-sky-950/20 dark:hover:border-cyan-700/60 dark:hover:shadow-cyan-900/20 animate-card-enter glow-border-subtle transition-all duration-150 active:scale-[0.98]"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-cyan-500 opacity-80" />
@@ -399,7 +405,7 @@ function Home() {
             return (
               <div
                 key={dict.id}
-                onClick={() => navigate(`/dict/${dict.id}`)}
+                onClick={() => saveScrollAndNavigate(`/dict/${dict.id}`)}
                 onMouseEnter={() => {
                   // 预加载词库数据
                   loadDictionary(dict.id).catch(() => {});

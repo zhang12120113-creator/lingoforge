@@ -15,10 +15,26 @@ import SettingsPanel from '../components/SettingsPanel'
 import CurrentSentencePanel from '../components/CurrentSentencePanel'
 import WordPopup from '../../../components/WordPopup.jsx'
 
+function SettingsLauncher() {
+  const [open, setOpen] = useState(false)
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="w-9 h-9 flex items-center justify-center rounded-full text-content-secondary dark:text-gray-300 hover:bg-gray-100/60 dark:hover:bg-white/[0.06] transition-colors shrink-0"
+        aria-label="设置"
+      >
+        <SettingsIcon className="w-4 h-4" />
+      </button>
+      <SettingsPanel open={open} onClose={() => setOpen(false)} />
+    </>
+  )
+}
+
 function CorpusPlayerInner({ video, posterUrl, onBack }) {
   const { player, popup, closePopup, saveWord, removeWord, loadError } =
     useCorpusContext()
-  const [settingsOpen, setSettingsOpen] = useState(false)
 
   // 键盘快捷键
   useEffect(() => {
@@ -76,26 +92,19 @@ function CorpusPlayerInner({ video, posterUrl, onBack }) {
           </div>
           <button
             type="button"
-            onClick={player.toggleHideSubtitle}
-            aria-pressed={player.hideSubtitle}
-            aria-label={player.hideSubtitle ? '显示字幕' : '隐藏字幕'}
-            title={player.hideSubtitle ? '显示字幕' : '隐藏字幕'}
+            onClick={player.toggleAllSubtitles}
+            aria-pressed={player.hideSubtitleRight && player.hideSubtitleBottom}
+            aria-label={player.hideSubtitleRight && player.hideSubtitleBottom ? '显示字幕' : '隐藏字幕'}
+            title={player.hideSubtitleRight && player.hideSubtitleBottom ? '显示字幕' : '隐藏字幕'}
             className={`w-9 h-9 flex items-center justify-center rounded-full transition-colors shrink-0 ${
-              player.hideSubtitle
-                ? 'bg-primary-soft text-primary'
+              player.hideSubtitleRight && player.hideSubtitleBottom
+                ? 'bg-primary-soft text-primary dark:bg-white/10 dark:text-white'
                 : 'text-content-secondary dark:text-gray-300 hover:bg-gray-100/60 dark:hover:bg-white/[0.06]'
             }`}
           >
-            {player.hideSubtitle ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+            {player.hideSubtitleRight && player.hideSubtitleBottom ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
           </button>
-          <button
-            type="button"
-            onClick={() => setSettingsOpen(true)}
-            className="w-9 h-9 flex items-center justify-center rounded-full text-content-secondary dark:text-gray-300 hover:bg-gray-100/60 dark:hover:bg-white/[0.06] transition-colors shrink-0"
-            aria-label="设置"
-          >
-            <SettingsIcon className="w-4 h-4" />
-          </button>
+          <SettingsLauncher />
         </div>
       </div>
 
@@ -114,10 +123,10 @@ function CorpusPlayerInner({ video, posterUrl, onBack }) {
         </div>
         {/* 右侧 ~55%：字幕列表 */}
         <div className="flex-1 md:flex-[55] min-w-0 min-h-0 h-full">
-          {player.hideSubtitle ? (
+          {player.hideSubtitleRight ? (
             <button
               type="button"
-              onClick={player.toggleHideSubtitle}
+              onClick={player.toggleHideSubtitleRight}
               className="w-full h-full flex items-center justify-center text-content-secondary dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/[0.05] transition-colors cursor-pointer"
             >
               <div className="text-center">
@@ -130,9 +139,6 @@ function CorpusPlayerInner({ video, posterUrl, onBack }) {
           )}
         </div>
       </div>
-
-      {/* 设置抽屉 */}
-      <SettingsPanel open={settingsOpen} onClose={() => setSettingsOpen(false)} />
 
       {/* 单词弹窗 */}
       {popup && (

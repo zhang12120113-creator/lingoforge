@@ -39,13 +39,13 @@ function ToggleRow({ label, value, onChange, hint }) {
         aria-checked={value}
         className={`shrink-0 relative w-9 h-5 rounded-full transition-colors ${
           value
-            ? 'bg-primary'
+            ? 'bg-primary dark:bg-white'
             : 'bg-gray-200 dark:bg-white/[0.1]'
         }`}
       >
         <span
-          className={`absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-white shadow transition-transform ${
-            value ? 'translate-x-4' : ''
+          className={`absolute top-0.5 left-0.5 w-4 h-4 rounded-full shadow transition-transform ${
+            value ? 'translate-x-4 bg-white dark:bg-gray-900' : 'bg-white'
           }`}
         />
       </button>
@@ -78,7 +78,7 @@ function Segmented({ options, value, onChange }) {
 }
 
 export default function SettingsPanel({ open, onClose }) {
-  const { settings, updateSetting, toggleSetting, player } = useCorpusContext()
+  const { settings, toggleSetting } = useCorpusContext()
   const { theme, setTheme } = useUserConfig()
 
   useEffect(() => {
@@ -96,7 +96,7 @@ export default function SettingsPanel({ open, onClose }) {
     <>
       {/* 遮罩 */}
       <div
-        className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 animate-[fadeIn_0.18s_ease-out]"
+        className="fixed inset-0 bg-black/40 z-50 animate-[fadeIn_0.18s_ease-out]"
         onClick={onClose}
       />
       <aside className="corpus-settings-drawer text-content dark:text-gray-100">
@@ -114,50 +114,12 @@ export default function SettingsPanel({ open, onClose }) {
         </div>
 
         <div className="flex-1 min-h-0 overflow-y-auto">
-          {/* 字幕大小 */}
-          <Section title="字幕大小">
-            <div className="flex items-center gap-3">
-              <span className="text-xs text-content-tertiary dark:text-gray-500 w-6 text-right">
-                12
-              </span>
-              <input
-                type="range"
-                min={12}
-                max={22}
-                step={1}
-                value={settings.subtitleSize}
-                onChange={(e) =>
-                  updateSetting('subtitleSize', parseInt(e.target.value, 10))
-                }
-                className="flex-1 accent-primary cursor-pointer"
-              />
-              <span className="text-xs text-primary tabular-nums w-8 text-right font-medium">
-                {settings.subtitleSize}
-              </span>
-            </div>
-          </Section>
-
           {/* 一组开关 */}
           <Section title="播放偏好">
             <ToggleRow
               label="视频循环"
               value={settings.videoLoop}
               onChange={() => toggleSetting('videoLoop')}
-            />
-            <ToggleRow
-              label="播放完当前句暂停"
-              value={player.pauseAfterCue}
-              onChange={() => player.togglePauseAfterCue()}
-            />
-            <ToggleRow
-              label="显示音标"
-              value={settings.showPhonetic}
-              onChange={() => toggleSetting('showPhonetic')}
-            />
-            <ToggleRow
-              label="显示字幕笔记"
-              value={settings.showNotes}
-              onChange={() => toggleSetting('showNotes')}
             />
           </Section>
 

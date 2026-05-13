@@ -67,11 +67,11 @@ function CurrentSentencePanelInner() {
     [current?.en, wordMap, settings?.showPhonetic]
   )
 
-  if (player.hideSubtitle) {
+  if (player.hideSubtitleBottom) {
     return (
       <button
         type="button"
-        onClick={player.toggleHideSubtitle}
+        onClick={player.toggleHideSubtitleBottom}
         className="flex-1 min-h-[120px] rounded-2xl bg-surface dark:bg-white/[0.03] border border-gray-200/70 dark:border-white/[0.06] shadow-sm flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 dark:hover:bg-white/[0.05] transition-colors"
       >
         <span className="text-sm text-content-secondary dark:text-gray-300">已隐藏字幕</span>

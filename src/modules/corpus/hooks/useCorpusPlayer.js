@@ -6,15 +6,16 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
   const [duration, setDuration] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
   const [rate, setRateState] = useState(1)
-  // 单句循环次数：0=关闭, -1=无限, 正数=额外循环次数
+  // 单句循环次数：0=关闭, -1=无限, 正数=总播放次数
   const [loopCount, setLoopCountState] = useState(0)
 
   // 单句结束自动暂停
   const [pauseAfterCue, setPauseAfterCue] = useState(false)
   // 间隔（秒），用于听写/跟读自动重播时的等待时间
   const [intervalGap, setIntervalGapState] = useState(0)
-  // 隐藏字幕面板
-  const [hideSubtitle, setHideSubtitle] = useState(false)
+  // 隐藏字幕面板：右侧字幕列表 / 下方当前句卡片 独立控制
+  const [hideSubtitleRight, setHideSubtitleRight] = useState(false)
+  const [hideSubtitleBottom, setHideSubtitleBottom] = useState(false)
 
   const loopCountRef = useRef(0)
   const loopsRemainingRef = useRef(0)
@@ -27,11 +28,15 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
   const intervalGapRef = useRef(0)
   const intervalTimerRef = useRef(null)
   const lastIntervalCueRef = useRef(null)
+  const hideSubtitleRightRef = useRef(false)
+  const hideSubtitleBottomRef = useRef(false)
 
   useEffect(() => { loopCountRef.current = loopCount }, [loopCount])
   useEffect(() => { pauseAfterCueRef.current = pauseAfterCue }, [pauseAfterCue])
   useEffect(() => { intervalGapRef.current = intervalGap }, [intervalGap])
   useEffect(() => { subtitlesRef.current = subtitles }, [subtitles])
+  useEffect(() => { hideSubtitleRightRef.current = hideSubtitleRight }, [hideSubtitleRight])
+  useEffect(() => { hideSubtitleBottomRef.current = hideSubtitleBottom }, [hideSubtitleBottom])
 
   const clearIntervalTimer = useCallback(() => {
     if (intervalTimerRef.current) {
@@ -58,6 +63,59 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
       }
       const nextId = next?.id ?? null
       if (nextId !== activeIdRef.current) {
+        // 如果离开了上一个句子，先检查是否需要对上一句执行 pauseAfterCue / intervalGap / loop
+        const prevId = activeIdRef.current
+        const prevCue = prevId != null ? cues.find((c) => c.id === prevId) : null
+        if (prevCue) {
+          // pauseAfterCue
+          if (pauseAfterCueRef.current && lastPausedCueRef.current !== prevCue.id) {
+            lastPausedCueRef.current = prevCue.id
+            v.pause()
+            activeIdRef.current = nextId
+            setActiveId(nextId)
+            loopsRemainingRef.current = loopCountRef.current > 0 ? loopCountRef.current - 1 : 0
+            return
+          }
+
+          // intervalGap
+          if (intervalGapRef.current > 0 && lastIntervalCueRef.current !== prevCue.id) {
+            lastIntervalCueRef.current = prevCue.id
+            const gap = intervalGapRef.current
+            v.pause()
+            activeIdRef.current = nextId
+            setActiveId(nextId)
+            intervalTimerRef.current = setTimeout(() => {
+              intervalTimerRef.current = null
+              const vid = videoRef.current
+              if (!vid) return
+              const cues2 = subtitlesRef.current
+              const idx = cues2.findIndex((c) => c.id === prevCue.id)
+              if (idx >= 0 && idx < cues2.length - 1) {
+                vid.currentTime = cues2[idx + 1].start
+                activeIdRef.current = cues2[idx + 1].id
+                setActiveId(cues2[idx + 1].id)
+                vid.play()
+              }
+              // 否则为最后一句：保持暂停
+            }, gap * 1000)
+            return
+          }
+
+          // loopCount
+          if (loopCountRef.current !== 0) {
+            const remaining = loopsRemainingRef.current
+            if (loopCountRef.current === -1 || remaining > 0) {
+              if (remaining > 0) {
+                loopsRemainingRef.current = remaining - 1
+              }
+              v.currentTime = prevCue.start
+              // 保持 activeId 为 prevCue，不更新
+              return
+            }
+          }
+        }
+
+        // 正常切换
         activeIdRef.current = nextId
         setActiveId(nextId)
         // 切到新句时清掉 pauseAfterCue 防抖标记
@@ -65,10 +123,11 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
         // 切到新句时清掉 intervalGap 防抖标记
         lastIntervalCueRef.current = null
         // 切到新句时重置循环计数
-        loopsRemainingRef.current = loopCountRef.current
+        loopsRemainingRef.current = loopCountRef.current > 0 ? loopCountRef.current - 1 : 0
       }
 
-      // ---- 优先级：pauseAfterCue > intervalGap > 单句循环 ----
+      // ---- 后备逻辑（timeupdate 恰好在句子末尾前触发时） ----
+      // 优先级：pauseAfterCue > intervalGap > 单句循环
       if (pauseAfterCueRef.current && activeIdRef.current != null) {
         const cur = cues.find((c) => c.id === activeIdRef.current)
         if (cur && t >= cur.end - 0.05 && lastPausedCueRef.current !== cur.id) {
@@ -81,30 +140,20 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
         if (cur && t >= cur.end - 0.05 && lastIntervalCueRef.current !== cur.id) {
           lastIntervalCueRef.current = cur.id
           const gap = intervalGapRef.current
-          const lc = loopCountRef.current
-          const willLoop = lc !== 0 && (lc === -1 || loopsRemainingRef.current > 0)
           v.pause()
           intervalTimerRef.current = setTimeout(() => {
             intervalTimerRef.current = null
             const vid = videoRef.current
             if (!vid) return
-            if (willLoop) {
-              if (loopsRemainingRef.current > 0) {
-                loopsRemainingRef.current = loopsRemainingRef.current - 1
-              }
-              vid.currentTime = cur.start
-              // 允许在下次到达 cur.end 时再次触发间隔
-              lastIntervalCueRef.current = null
+            const cues2 = subtitlesRef.current
+            const idx = cues2.findIndex((c) => c.id === cur.id)
+            if (idx >= 0 && idx < cues2.length - 1) {
+              vid.currentTime = cues2[idx + 1].start
+              activeIdRef.current = cues2[idx + 1].id
+              setActiveId(cues2[idx + 1].id)
               vid.play()
-            } else {
-              const cues2 = subtitlesRef.current
-              const idx = cues2.findIndex((c) => c.id === cur.id)
-              if (idx >= 0 && idx < cues2.length - 1) {
-                vid.currentTime = cues2[idx + 1].start
-                vid.play()
-              }
-              // 否则为最后一句：保持暂停
             }
+            // 否则为最后一句：保持暂停
           }, gap * 1000)
           return
         }
@@ -185,13 +234,13 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
     [videoRef]
   )
 
-  // 设置单句循环次数：0=关闭, -1=无限, 正数=额外循环次数
+  // 设置单句循环次数：0=关闭, -1=无限, 正数=总播放次数
   const setLoopCount = useCallback((count) => {
     const next = count === 0 ? 0 : count === -1 ? -1 : Math.max(1, Math.floor(count))
     setLoopCountState(next)
     if (next !== 0) {
       setPauseAfterCue(false)
-      loopsRemainingRef.current = next
+      loopsRemainingRef.current = next > 0 ? next - 1 : 0
     }
   }, [])
 
@@ -201,7 +250,7 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
       const next = prev === 0 ? -1 : 0
       if (next !== 0) {
         setPauseAfterCue(false)
-        loopsRemainingRef.current = next
+        loopsRemainingRef.current = next > 0 ? next - 1 : 0
       }
       return next
     })
@@ -230,8 +279,18 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
     setIntervalGapState(next)
   }, [videoRef])
 
-  const toggleHideSubtitle = useCallback(() => {
-    setHideSubtitle((v) => !v)
+  const toggleHideSubtitleRight = useCallback(() => {
+    setHideSubtitleRight((v) => !v)
+  }, [])
+  const toggleHideSubtitleBottom = useCallback(() => {
+    setHideSubtitleBottom((v) => !v)
+  }, [])
+  // 总开关：任一可见 → 全部隐藏；两个都已隐藏 → 全部显示
+  const toggleAllSubtitles = useCallback(() => {
+    const allHidden = hideSubtitleRightRef.current && hideSubtitleBottomRef.current
+    const next = !allHidden
+    setHideSubtitleRight(next)
+    setHideSubtitleBottom(next)
   }, [])
 
   const requestFullscreen = useCallback(() => {
@@ -290,7 +349,8 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
     loopCount,
     pauseAfterCue,
     intervalGap,
-    hideSubtitle,
+    hideSubtitleRight,
+    hideSubtitleBottom,
     cueIndex,
     cueTotal,
     play,
@@ -302,7 +362,9 @@ export function useCorpusPlayer({ videoRef, subtitles }) {
     toggleLoop,
     togglePauseAfterCue,
     setIntervalGap,
-    toggleHideSubtitle,
+    toggleHideSubtitleRight,
+    toggleHideSubtitleBottom,
+    toggleAllSubtitles,
     requestFullscreen,
     jumpToCue,
     prevCue,

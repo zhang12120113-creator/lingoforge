@@ -1542,10 +1542,6 @@ export const levels = ['全部', 'cet4', 'gaokao', 'cet6']
 
 export const types = ['全部', 'reading', 'listening']
 
-export const totalCount = mockArticles.length
-export const readingCount = mockArticles.filter(a => a.type === 'reading').length
-export const listeningCount = mockArticles.filter(a => a.type === 'listening').length
-
 export function getArticleById(id) {
   return mockArticles.find(a => a.id === id)
 }

@@ -7,14 +7,11 @@ import {
   useState,
 } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Bookmark, BookOpen, Search, Volume2 } from 'lucide-react'
+import { Bookmark, BookOpen, Search } from 'lucide-react'
 import {
   mockArticles,
   categories,
   years,
-  totalCount,
-  readingCount,
-  listeningCount,
 } from '../data/mockArticles'
 import { useReadingStore } from '../hooks/useReadingStore'
 import { getReadingWordBookCount } from '../../../utils/readingWordBook.js'
@@ -145,23 +142,6 @@ export default function ArticleList() {
                 <p className="text-content-tertiary text-body max-w-xl leading-relaxed">
                   精选英语文章，让每一次阅读都成为沉浸式的语言旅行。
                 </p>
-                {/* 统计信息 */}
-                <div className="mt-3 flex items-center gap-3 text-sm text-content-tertiary dark:text-gray-500">
-                  <span className="inline-flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    共 {totalCount} 篇
-                  </span>
-                  <span className="text-gray-300 dark:text-gray-700">|</span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <BookOpen className="w-3.5 h-3.5" />
-                    阅读 {readingCount} 篇
-                  </span>
-                  <span className="text-gray-300 dark:text-gray-700">|</span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <Volume2 className="w-3.5 h-3.5" />
-                    听力 {listeningCount} 篇
-                  </span>
-                </div>
               </div>
 
               {/* 筛选栏 */}

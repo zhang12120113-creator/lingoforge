@@ -156,23 +156,46 @@ function RateMenu({ rate, onChange }) {
 
 function IntervalMenu({ value, onChange }) {
   const [open, setOpen] = useState(false)
-  const ref = useRef(null)
+  const [anchor, setAnchor] = useState(null)
+  const btnRef = useRef(null)
+  const panelRef = useRef(null)
+
+  const active = value > 0
+
+  const updateAnchor = useCallback(() => {
+    const el = btnRef.current
+    if (!el) return
+    const r = el.getBoundingClientRect()
+    setAnchor({ x: r.left + r.width / 2, y: r.bottom })
+  }, [])
+
   useEffect(() => {
     if (!open) return
-    const fn = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false)
+    updateAnchor()
+    const onDown = (e) => {
+      if (btnRef.current?.contains(e.target)) return
+      if (panelRef.current?.contains(e.target)) return
+      setOpen(false)
     }
-    document.addEventListener('mousedown', fn)
-    return () => document.removeEventListener('mousedown', fn)
-  }, [open])
-  const active = value > 0
+    const onScrollOrResize = () => updateAnchor()
+    document.addEventListener('mousedown', onDown)
+    window.addEventListener('resize', onScrollOrResize)
+    window.addEventListener('scroll', onScrollOrResize, true)
+    return () => {
+      document.removeEventListener('mousedown', onDown)
+      window.removeEventListener('resize', onScrollOrResize)
+      window.removeEventListener('scroll', onScrollOrResize, true)
+    }
+  }, [open, updateAnchor])
+
   return (
-    <div className="relative shrink-0" ref={ref}>
+    <div className="relative shrink-0">
       <button
+        ref={btnRef}
         type="button"
         onClick={() => setOpen((v) => !v)}
         className="flex flex-col items-center gap-0.5 group min-w-[44px]"
-        title="单句重播间隔"
+        title="单句间隔"
       >
         <span
           className={`w-9 h-9 flex items-center justify-center rounded-full transition-colors ${
@@ -185,32 +208,47 @@ function IntervalMenu({ value, onChange }) {
         </span>
         <span
           className={`text-[10px] leading-none ${
-            active ? 'text-primary dark:text-white' : 'text-content-tertiary dark:text-gray-500'
+            active ? 'text-primary dark:text-white' : 'text-content-tertiary dark:text-gray-400'
           }`}
         >
           {active ? `${value}s` : '间隔'}
         </span>
       </button>
-      {open && (
-        <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 min-w-[100px] rounded-md py-1 z-50 bg-surface dark:bg-[#1a1a24] border border-gray-200 dark:border-white/[0.08] shadow-lg">
-          {INTERVAL_OPTIONS.map((s) => (
-            <button
-              key={s}
-              type="button"
-              onClick={() => {
-                onChange(s)
-                setOpen(false)
-              }}
-              className={`block w-full px-3 py-1.5 text-left text-xs ${
-                value === s
-                  ? 'bg-primary-soft text-primary dark:bg-white dark:text-gray-900'
-                  : 'text-content-secondary dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/[0.04]'
-              }`}
-            >
-              {s === 0 ? '关闭' : `${s} 秒`}
-            </button>
-          ))}
-        </div>
+      {open && anchor && createPortal(
+        <div
+          ref={panelRef}
+          style={{
+            position: 'fixed',
+            left: anchor.x,
+            top: anchor.y + 8,
+            transform: 'translate(-50%, 0)',
+          }}
+          className="z-[100] min-w-[120px] rounded-xl py-1.5 bg-surface dark:bg-[#1a1a24] border border-gray-200 dark:border-white/[0.12] shadow-xl"
+        >
+          <div className="text-[11px] text-content-tertiary dark:text-gray-400 text-center mb-2 px-3">
+            单句间隔
+          </div>
+          <div className="grid grid-cols-4 gap-2">
+            {INTERVAL_OPTIONS.map((s) => (
+              <button
+                key={s}
+                type="button"
+                onClick={() => {
+                  onChange(s)
+                  setOpen(false)
+                }}
+                className={`h-9 rounded-md text-xs font-medium tabular-nums transition-colors flex items-center justify-center ${
+                  value === s
+                    ? 'bg-primary text-white dark:bg-white dark:text-gray-900'
+                    : 'bg-gray-100 text-content-secondary hover:bg-gray-200 dark:bg-white/[0.06] dark:text-gray-200 dark:hover:bg-white/[0.12]'
+                }`}
+              >
+                {s === 0 ? '关闭' : `${s}s`}
+              </button>
+            ))}
+          </div>
+        </div>,
+        document.body
       )}
     </div>
   )
