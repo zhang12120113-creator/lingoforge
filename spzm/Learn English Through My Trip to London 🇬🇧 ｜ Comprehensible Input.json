@@ -1,0 +1,1430 @@
+[
+  {
+    "id": 1,
+    "start": 17.52,
+    "end": 19.44,
+    "en": "today",
+    "zh": "今天"
+  },
+  {
+    "id": 2,
+    "start": 19.44,
+    "end": 21.6,
+    "en": "I'm going back to the UK",
+    "zh": "我要回英国了"
+  },
+  {
+    "id": 3,
+    "start": 21.6,
+    "end": 24.56,
+    "en": "and you are coming with me",
+    "zh": "而且你要跟我一起"
+  },
+  {
+    "id": 4,
+    "start": 24.56,
+    "end": 28.24,
+    "en": "so let's travel and learn some English",
+    "zh": "那就跟我一起边旅行边学英语吧"
+  },
+  {
+    "id": 5,
+    "start": 33.2,
+    "end": 44.32,
+    "en": "[Music]",
+    "zh": "[Music]"
+  },
+  {
+    "id": 6,
+    "start": 44.32,
+    "end": 45.04,
+    "en": "all right",
+    "zh": "好啦"
+  },
+  {
+    "id": 7,
+    "start": 45.04,
+    "end": 46.88,
+    "en": "we've arrived in London",
+    "zh": "我们到伦敦了"
+  },
+  {
+    "id": 8,
+    "start": 46.88,
+    "end": 48.64,
+    "en": "got my coffee",
+    "zh": "咖啡买好了"
+  },
+  {
+    "id": 9,
+    "start": 48.64,
+    "end": 50.48,
+    "en": "got my suitcase",
+    "zh": "行李也拿好了"
+  },
+  {
+    "id": 10,
+    "start": 50.48,
+    "end": 52.8,
+    "en": "going to go to the center now and find my uncle",
+    "zh": "现在要去市中心找我叔叔"
+  },
+  {
+    "id": 11,
+    "start": 52.8,
+    "end": 54,
+    "en": "let's go",
+    "zh": "走吧"
+  },
+  {
+    "id": 12,
+    "start": 54,
+    "end": 56.32,
+    "en": "it's lovely British summertime",
+    "zh": "英国美好的夏天"
+  },
+  {
+    "id": 13,
+    "start": 56.32,
+    "end": 58.88,
+    "en": "i'm with my uncle Lee",
+    "zh": "我和我叔叔Lee在一起"
+  },
+  {
+    "id": 14,
+    "start": 58.88,
+    "end": 60.24,
+    "en": "we're going to go get the tube",
+    "zh": "我们要去坐地铁了"
+  },
+  {
+    "id": 15,
+    "start": 60.24,
+    "end": 62.16,
+    "en": "and explore London",
+    "zh": "去探索伦敦"
+  },
+  {
+    "id": 16,
+    "start": 62.16,
+    "end": 64.32,
+    "en": "all right here we are queens station",
+    "zh": "好啦，我们到Queens站了"
+  },
+  {
+    "id": 17,
+    "start": 64.32,
+    "end": 66.72,
+    "en": "heading into the tube",
+    "zh": "进地铁站"
+  },
+  {
+    "id": 18,
+    "start": 66.72,
+    "end": 70.72,
+    "en": "i'm tapping my card and walking through the barriers",
+    "zh": "我刷了下卡，过了闸机"
+  },
+  {
+    "id": 19,
+    "start": 70.72,
+    "end": 72.48,
+    "en": "the tube has arrived",
+    "zh": "地铁来了"
+  },
+  {
+    "id": 20,
+    "start": 72.48,
+    "end": 74.64,
+    "en": "the tube has arrived",
+    "zh": "地铁来了"
+  },
+  {
+    "id": 21,
+    "start": 74.64,
+    "end": 78.24,
+    "en": "we're getting on",
+    "zh": "我们上车了"
+  },
+  {
+    "id": 22,
+    "start": 78.24,
+    "end": 81.04,
+    "en": "now we're getting off",
+    "zh": "现在我们下车了"
+  },
+  {
+    "id": 23,
+    "start": 81.04,
+    "end": 82.88,
+    "en": "all right just coming out of the tube",
+    "zh": "好啦，刚从地铁出来"
+  },
+  {
+    "id": 24,
+    "start": 82.88,
+    "end": 85.36,
+    "en": "and going onto the escalator",
+    "zh": "现在要上扶梯了"
+  },
+  {
+    "id": 25,
+    "start": 85.36,
+    "end": 88.72,
+    "en": "this is an escalator",
+    "zh": "这就是扶梯"
+  },
+  {
+    "id": 26,
+    "start": 88.72,
+    "end": 90.88,
+    "en": "please hold the handrail",
+    "zh": "请抓好扶手"
+  },
+  {
+    "id": 27,
+    "start": 90.88,
+    "end": 93.04,
+    "en": "this is a handrail",
+    "zh": "这就是扶手"
+  },
+  {
+    "id": 28,
+    "start": 93.04,
+    "end": 97.04,
+    "en": "a police car with a flashing sirens",
+    "zh": "一辆闪着警灯的警车"
+  },
+  {
+    "id": 29,
+    "start": 97.04,
+    "end": 98.48,
+    "en": "restaurant",
+    "zh": "餐厅"
+  },
+  {
+    "id": 30,
+    "start": 98.48,
+    "end": 102.96,
+    "en": "a little girl in a pink hoodie is chasing a pigeon and giggling",
+    "zh": "一个穿粉色连帽衫的小女孩在追鸽子，咯咯地笑"
+  },
+  {
+    "id": 31,
+    "start": 102.96,
+    "end": 105.6,
+    "en": "but the pigeon flew away",
+    "zh": "但是鸽子飞走了"
+  },
+  {
+    "id": 32,
+    "start": 105.6,
+    "end": 106.96,
+    "en": "all right guys",
+    "zh": "好啦各位"
+  },
+  {
+    "id": 33,
+    "start": 106.96,
+    "end": 108.56,
+    "en": "the London Eye",
+    "zh": "伦敦眼"
+  },
+  {
+    "id": 34,
+    "start": 108.56,
+    "end": 110.48,
+    "en": "the famous London Eye",
+    "zh": "大名鼎鼎的伦敦眼"
+  },
+  {
+    "id": 35,
+    "start": 110.48,
+    "end": 112.8,
+    "en": "this is called a carousel",
+    "zh": "这叫旋转木马"
+  },
+  {
+    "id": 36,
+    "start": 112.8,
+    "end": 113.76,
+    "en": "you're riding the horses",
+    "zh": "你骑在马上"
+  },
+  {
+    "id": 37,
+    "start": 113.76,
+    "end": 117.44,
+    "en": "and you spin round and round",
+    "zh": "然后转啊转啊转"
+  },
+  {
+    "id": 38,
+    "start": 117.44,
+    "end": 120.72,
+    "en": "and a bit of classic Britishness for you",
+    "zh": "给你来点经典的英伦风味"
+  },
+  {
+    "id": 39,
+    "start": 120.72,
+    "end": 123.2,
+    "en": "fish and chips",
+    "zh": "炸鱼薯条"
+  },
+  {
+    "id": 40,
+    "start": 123.2,
+    "end": 124.24,
+    "en": "love it",
+    "zh": "超爱"
+  },
+  {
+    "id": 41,
+    "start": 124.24,
+    "end": 128.4,
+    "en": "all right we are walking by the famous River Thames",
+    "zh": "好啦，我们正沿着著名的泰晤士河散步"
+  },
+  {
+    "id": 42,
+    "start": 128.4,
+    "end": 129.52,
+    "en": "this is the River Thames",
+    "zh": "这就是泰晤士河"
+  },
+  {
+    "id": 43,
+    "start": 129.52,
+    "end": 131.44,
+    "en": "and the sun has come out to grace us",
+    "zh": "太阳也出来眷顾我们了"
+  },
+  {
+    "id": 44,
+    "start": 131.44,
+    "end": 134.56,
+    "en": "look how beautiful it is, London",
+    "zh": "看看伦敦多美啊"
+  },
+  {
+    "id": 45,
+    "start": 134.56,
+    "end": 137.68,
+    "en": "there we have Big Ben",
+    "zh": "那边就是大本钟"
+  },
+  {
+    "id": 46,
+    "start": 137.68,
+    "end": 141.28,
+    "en": "okay okay and if I flip the camera around",
+    "zh": "好好好，如果我把镜头转过来"
+  },
+  {
+    "id": 47,
+    "start": 141.28,
+    "end": 144.56,
+    "en": "there we got the London Eye",
+    "zh": "那边就是伦敦眼"
+  },
+  {
+    "id": 48,
+    "start": 144.56,
+    "end": 147.44,
+    "en": "these are pods or capsules",
+    "zh": "这些是座舱"
+  },
+  {
+    "id": 49,
+    "start": 147.44,
+    "end": 150.64,
+    "en": "and this right here is a spiral staircase",
+    "zh": "然后这是一个旋转楼梯"
+  },
+  {
+    "id": 50,
+    "start": 150.64,
+    "end": 152.08,
+    "en": "street lamp",
+    "zh": "路灯"
+  },
+  {
+    "id": 51,
+    "start": 152.08,
+    "end": 153.52,
+    "en": "ice cream truck",
+    "zh": "冰激凌车"
+  },
+  {
+    "id": 52,
+    "start": 153.52,
+    "end": 158.8,
+    "en": "and these people are waiting in a queue",
+    "zh": "这些人在排队"
+  },
+  {
+    "id": 53,
+    "start": 158.8,
+    "end": 161.04,
+    "en": "a long queue",
+    "zh": "好长的队啊"
+  },
+  {
+    "id": 54,
+    "start": 161.04,
+    "end": 163.12,
+    "en": "it's a gazebo",
+    "zh": "这是个凉亭"
+  },
+  {
+    "id": 55,
+    "start": 163.12,
+    "end": 166,
+    "en": "gazebo",
+    "zh": "凉亭"
+  },
+  {
+    "id": 56,
+    "start": 166,
+    "end": 167.12,
+    "en": "photo booth",
+    "zh": "照相亭"
+  },
+  {
+    "id": 57,
+    "start": 169.28,
+    "end": 171.68,
+    "en": "the London Dungeon",
+    "zh": "伦敦地牢（London Dungeon）"
+  },
+  {
+    "id": 58,
+    "start": 171.68,
+    "end": 173.92,
+    "en": "these are black cabs",
+    "zh": "这些是黑色出租车"
+  },
+  {
+    "id": 59,
+    "start": 173.92,
+    "end": 176.32,
+    "en": "cab is another word for taxi",
+    "zh": "cab就是出租车的另一种说法"
+  },
+  {
+    "id": 60,
+    "start": 176.32,
+    "end": 179.04,
+    "en": "so right now walking over",
+    "zh": "所以现在正走过去"
+  },
+  {
+    "id": 61,
+    "start": 179.04,
+    "end": 179.76,
+    "en": "what's the name of the bridge?",
+    "zh": "这座桥叫什么来着？"
+  },
+  {
+    "id": 62,
+    "start": 179.76,
+    "end": 180.56,
+    "en": "Westminster Bridge",
+    "zh": "威斯敏斯特桥（Westminster Bridge）"
+  },
+  {
+    "id": 63,
+    "start": 180.56,
+    "end": 182.48,
+    "en": "Westminster Bridge",
+    "zh": "威斯敏斯特桥"
+  },
+  {
+    "id": 64,
+    "start": 182.48,
+    "end": 186,
+    "en": "and that is the Houses of Parliament",
+    "zh": "那边就是英国议会大厦"
+  },
+  {
+    "id": 65,
+    "start": 186,
+    "end": 188.56,
+    "en": "where all the politicians hang out and chat",
+    "zh": "政客们都在那儿晃悠聊天"
+  },
+  {
+    "id": 66,
+    "start": 188.56,
+    "end": 191.52,
+    "en": "we got some massive seagulls up here",
+    "zh": "这上面有超大的海鸥"
+  },
+  {
+    "id": 67,
+    "start": 191.52,
+    "end": 192.96,
+    "en": "this is Big Ben",
+    "zh": "这就是大本钟"
+  },
+  {
+    "id": 68,
+    "start": 192.96,
+    "end": 195.68,
+    "en": "not the clock tower but the bell inside",
+    "zh": "不是指钟楼，是里面的那口钟"
+  },
+  {
+    "id": 69,
+    "start": 195.68,
+    "end": 199.92,
+    "en": "the clock tower is called Elizabeth Tower",
+    "zh": "钟楼叫伊丽莎白塔"
+  },
+  {
+    "id": 70,
+    "start": 199.92,
+    "end": 204.96,
+    "en": "the lady in the pink dress is talking to a policeman",
+    "zh": "穿粉色裙子的女士正在跟警察说话"
+  },
+  {
+    "id": 71,
+    "start": 204.96,
+    "end": 207.44,
+    "en": "that's a double-decker bus",
+    "zh": "那是双层巴士"
+  },
+  {
+    "id": 72,
+    "start": 207.44,
+    "end": 208.08,
+    "en": "i love it",
+    "zh": "我太喜欢了"
+  },
+  {
+    "id": 73,
+    "start": 208.08,
+    "end": 211.2,
+    "en": "busy busy busy around here",
+    "zh": "这附近好忙好忙好忙"
+  },
+  {
+    "id": 74,
+    "start": 211.2,
+    "end": 215.84,
+    "en": "there's a helicopter flying past",
+    "zh": "有架直升机飞过去了"
+  },
+  {
+    "id": 75,
+    "start": 215.84,
+    "end": 220.48,
+    "en": "that's the Union Jack flag at top the Westminster Palace",
+    "zh": "那是威斯敏斯特宫顶上的英国国旗"
+  },
+  {
+    "id": 76,
+    "start": 220.48,
+    "end": 225.12,
+    "en": "all right guys we have a red telephone box",
+    "zh": "好啦伙计们，我们看到了一个红色电话亭"
+  },
+  {
+    "id": 77,
+    "start": 225.12,
+    "end": 225.68,
+    "en": "i can",
+    "zh": "我能"
+  },
+  {
+    "id": 78,
+    "start": 225.68,
+    "end": 227.2,
+    "en": "Oh no i can't open the door",
+    "zh": "哎呀不行，门打不开"
+  },
+  {
+    "id": 79,
+    "start": 227.2,
+    "end": 229.12,
+    "en": "it's locked",
+    "zh": "锁上了"
+  },
+  {
+    "id": 80,
+    "start": 229.12,
+    "end": 230,
+    "en": "no one's home",
+    "zh": "没人在家"
+  },
+  {
+    "id": 81,
+    "start": 230,
+    "end": 235.04,
+    "en": "right now we are walking to Notting Hill via Portobello Road",
+    "zh": "现在我们正沿着波托贝洛路走去诺丁山"
+  },
+  {
+    "id": 82,
+    "start": 235.04,
+    "end": 237.92,
+    "en": "and we're going to try find",
+    "zh": "我们要去找找看"
+  },
+  {
+    "id": 83,
+    "start": 237.92,
+    "end": 240.96,
+    "en": "where Hugh Grant had the famous scene at the bookshop",
+    "zh": "休·格兰特在书店拍那场经典戏的地方"
+  },
+  {
+    "id": 84,
+    "start": 240.96,
+    "end": 242.08,
+    "en": "in Notting Hill",
+    "zh": "就在诺丁山"
+  },
+  {
+    "id": 85,
+    "start": 242.08,
+    "end": 244,
+    "en": "so let's see if we can find it",
+    "zh": "看看能不能找到"
+  },
+  {
+    "id": 86,
+    "start": 244,
+    "end": 246.16,
+    "en": "you can see to my right hand side",
+    "zh": "你们看我右手边"
+  },
+  {
+    "id": 87,
+    "start": 246.16,
+    "end": 248.08,
+    "en": "we have a canal",
+    "zh": "有一条运河"
+  },
+  {
+    "id": 88,
+    "start": 248.08,
+    "end": 250.08,
+    "en": "there are some ducks swimming on the canal",
+    "zh": "有几只鸭子在运河里游"
+  },
+  {
+    "id": 89,
+    "start": 250.08,
+    "end": 251.92,
+    "en": "there's graffiti on the wall",
+    "zh": "墙上有涂鸦"
+  },
+  {
+    "id": 90,
+    "start": 251.92,
+    "end": 254.4,
+    "en": "all right these are called narrow boats",
+    "zh": "好啦，这些叫窄船"
+  },
+  {
+    "id": 91,
+    "start": 255.04,
+    "end": 257.52,
+    "en": "one two three four ducks",
+    "zh": "一二三四，四只鸭子"
+  },
+  {
+    "id": 92,
+    "start": 257.52,
+    "end": 260,
+    "en": "they are perched on the edge of the canal",
+    "zh": "它们蹲在运河边上"
+  },
+  {
+    "id": 93,
+    "start": 260,
+    "end": 262.48,
+    "en": "a male duck is called a drake",
+    "zh": "公鸭叫drake"
+  },
+  {
+    "id": 94,
+    "start": 262.48,
+    "end": 264.24,
+    "en": "just like Drake the artist",
+    "zh": "就跟歌手Drake一样"
+  },
+  {
+    "id": 95,
+    "start": 264.24,
+    "end": 267.68,
+    "en": "all right check out what we have just spotted",
+    "zh": "好啦，看看我们刚发现了什么"
+  },
+  {
+    "id": 96,
+    "start": 267.68,
+    "end": 270.96,
+    "en": "this is a phone box turned cash machine",
+    "zh": "这是一个电话亭改造的取款机"
+  },
+  {
+    "id": 97,
+    "start": 270.96,
+    "end": 274.24,
+    "en": "so come here and we're going to learn some English",
+    "zh": "过来过来，我们来学点英语"
+  },
+  {
+    "id": 98,
+    "start": 274.24,
+    "end": 277.68,
+    "en": "i'm taking out my credit card or debit card",
+    "zh": "我掏出我的信用卡或者借记卡"
+  },
+  {
+    "id": 99,
+    "start": 277.68,
+    "end": 280.24,
+    "en": "i'm inserting it into the slot",
+    "zh": "把它插进卡槽里"
+  },
+  {
+    "id": 100,
+    "start": 280.24,
+    "end": 281.76,
+    "en": "it says \"Please enter your PIN.\"",
+    "zh": "上面显示\"请输入您的PIN码\""
+  },
+  {
+    "id": 101,
+    "start": 281.76,
+    "end": 283.6,
+    "en": "So I'm going to type my PIN",
+    "zh": "那我要输密码了"
+  },
+  {
+    "id": 102,
+    "start": 283.6,
+    "end": 285.04,
+    "en": "if I can remember it",
+    "zh": "前提是我能想起来"
+  },
+  {
+    "id": 103,
+    "start": 285.04,
+    "end": 287.12,
+    "en": "i'm going to withdraw 20 quid",
+    "zh": "我要取20镑"
+  },
+  {
+    "id": 104,
+    "start": 287.12,
+    "end": 289.28,
+    "en": "in England we say quid",
+    "zh": "在英国我们说quid"
+  },
+  {
+    "id": 105,
+    "start": 289.28,
+    "end": 290.72,
+    "en": "that means pounds",
+    "zh": "意思就是英镑"
+  },
+  {
+    "id": 106,
+    "start": 290.72,
+    "end": 293.44,
+    "en": "and this is a cash machine or an ATM",
+    "zh": "这是取款机 也叫ATM"
+  },
+  {
+    "id": 107,
+    "start": 293.44,
+    "end": 299.52,
+    "en": "i'm taking my card putting it in my wallet",
+    "zh": "我把卡拔出来 放进钱包里"
+  },
+  {
+    "id": 108,
+    "start": 299.52,
+    "end": 301.44,
+    "en": "and there we go look at that",
+    "zh": "好了 瞧瞧"
+  },
+  {
+    "id": 109,
+    "start": 301.44,
+    "end": 304.08,
+    "en": "£20 British pounds",
+    "zh": "20英镑"
+  },
+  {
+    "id": 110,
+    "start": 304.08,
+    "end": 305.44,
+    "en": "lovely",
+    "zh": "太棒了"
+  },
+  {
+    "id": 111,
+    "start": 305.44,
+    "end": 308.48,
+    "en": "that is 20 quid",
+    "zh": "这就是20镑"
+  },
+  {
+    "id": 112,
+    "start": 308.48,
+    "end": 310.4,
+    "en": "here we have some street art",
+    "zh": "这儿有一些街头艺术"
+  },
+  {
+    "id": 113,
+    "start": 310.4,
+    "end": 312.96,
+    "en": "now we are walking on Portobello Road",
+    "zh": "现在我们走在波托贝洛路上"
+  },
+  {
+    "id": 114,
+    "start": 312.96,
+    "end": 315.92,
+    "en": "still not found Hugh Grant's bookshop yet",
+    "zh": "还没找到休·格兰特的书店呢"
+  },
+  {
+    "id": 115,
+    "start": 315.92,
+    "end": 317.44,
+    "en": "so more to come",
+    "zh": "继续逛吧"
+  },
+  {
+    "id": 116,
+    "start": 317.44,
+    "end": 319.92,
+    "en": "we stopped in the deli for a quick snack",
+    "zh": "我们在熟食店停下来快速吃点东西"
+  },
+  {
+    "id": 117,
+    "start": 319.92,
+    "end": 321.76,
+    "en": "this is an aisle",
+    "zh": "这是货架通道"
+  },
+  {
+    "id": 118,
+    "start": 321.76,
+    "end": 325.52,
+    "en": "these are tins and these are jars",
+    "zh": "这些是罐头 这些是玻璃罐"
+  },
+  {
+    "id": 119,
+    "start": 325.52,
+    "end": 329.36,
+    "en": "uncle Lee is going to pay",
+    "zh": "Lee叔叔来付钱"
+  },
+  {
+    "id": 120,
+    "start": 329.36,
+    "end": 333.04,
+    "en": "this is a till",
+    "zh": "这是收银机"
+  },
+  {
+    "id": 121,
+    "start": 333.04,
+    "end": 337.2,
+    "en": "right that there is a market with some market stalls",
+    "zh": "看那边是个集市 有一些摊位"
+  },
+  {
+    "id": 122,
+    "start": 337.2,
+    "end": 342.08,
+    "en": "and here we have one of the most famous bakeries in England",
+    "zh": "这里是英国最有名的面包店之一"
+  },
+  {
+    "id": 123,
+    "start": 342.08,
+    "end": 344.48,
+    "en": "Gregs",
+    "zh": "Greggs"
+  },
+  {
+    "id": 124,
+    "start": 344.48,
+    "end": 346.4,
+    "en": "all right this is a pharmacy",
+    "zh": "好啦 这是药店"
+  },
+  {
+    "id": 125,
+    "start": 346.4,
+    "end": 349.76,
+    "en": "in the UK we say chemist",
+    "zh": "在英国我们说chemist"
+  },
+  {
+    "id": 126,
+    "start": 349.76,
+    "end": 354.72,
+    "en": "behind me the oldest cinema in London",
+    "zh": "我身后就是伦敦最古老的电影院"
+  },
+  {
+    "id": 127,
+    "start": 354.72,
+    "end": 356.16,
+    "en": "all right we found it",
+    "zh": "好啦，我们找到了"
+  },
+  {
+    "id": 128,
+    "start": 356.16,
+    "end": 363.28,
+    "en": "the Notting Hill bookshop is where they filmed the film Notting Hill",
+    "zh": "诺丁山书店就是电影《诺丁山》的取景地"
+  },
+  {
+    "id": 129,
+    "start": 363.28,
+    "end": 364.8,
+    "en": "should we go inside",
+    "zh": "要进去看看吗"
+  },
+  {
+    "id": 130,
+    "start": 364.8,
+    "end": 366.08,
+    "en": "let's go in",
+    "zh": "走吧，进去看看"
+  },
+  {
+    "id": 131,
+    "start": 380.2,
+    "end": 381.2,
+    "en": "[Music]",
+    "zh": "[Music]"
+  },
+  {
+    "id": 132,
+    "start": 381.2,
+    "end": 383.76,
+    "en": "wow look at these donuts",
+    "zh": "哇，看看这些甜甜圈"
+  },
+  {
+    "id": 133,
+    "start": 383.76,
+    "end": 384.88,
+    "en": "yeah look unreal",
+    "zh": "是啊，看起来太不真实了"
+  },
+  {
+    "id": 134,
+    "start": 384.88,
+    "end": 386.88,
+    "en": "jammy dodger",
+    "zh": "果酱饼干"
+  },
+  {
+    "id": 135,
+    "start": 386.88,
+    "end": 390,
+    "en": "Gordon Jamsy",
+    "zh": "戈登·果酱希"
+  },
+  {
+    "id": 136,
+    "start": 390,
+    "end": 392.88,
+    "en": "that's sick look at that the colorful houses",
+    "zh": "太酷了，你看那些彩色房子"
+  },
+  {
+    "id": 137,
+    "start": 392.88,
+    "end": 394.96,
+    "en": "we call these terrace houses",
+    "zh": "我们管这些叫联排房屋"
+  },
+  {
+    "id": 138,
+    "start": 394.96,
+    "end": 398.16,
+    "en": "which are houses built in a row and joined together",
+    "zh": "就是一排排连在一起的 house"
+  },
+  {
+    "id": 139,
+    "start": 398.16,
+    "end": 401.68,
+    "en": "so right now we're just cutting it a bit late",
+    "zh": "所以现在时间有点赶了"
+  },
+  {
+    "id": 140,
+    "start": 401.68,
+    "end": 404.16,
+    "en": "but we're going to head to King's Cross station",
+    "zh": "不过我们要去国王十字车站了"
+  },
+  {
+    "id": 141,
+    "start": 404.16,
+    "end": 407.2,
+    "en": "and go back to my hometown",
+    "zh": "然后回我老家"
+  },
+  {
+    "id": 142,
+    "start": 407.2,
+    "end": 407.76,
+    "en": "let's go",
+    "zh": "走吧"
+  },
+  {
+    "id": 143,
+    "start": 407.76,
+    "end": 411.92,
+    "en": "can you guess where we're going?",
+    "zh": "猜猜我们要去哪儿"
+  },
+  {
+    "id": 144,
+    "start": 411.92,
+    "end": 414.64,
+    "en": "just arrived at King's Cross",
+    "zh": "刚到国王十字车站"
+  },
+  {
+    "id": 145,
+    "start": 414.64,
+    "end": 417.2,
+    "en": "and going to find our train",
+    "zh": "准备去找我们的火车"
+  },
+  {
+    "id": 146,
+    "start": 417.2,
+    "end": 422.16,
+    "en": "but first let's look for the Harry Potter 9 and 3/4 platform",
+    "zh": "不过先去找找哈利·波特的9¾站台"
+  },
+  {
+    "id": 147,
+    "start": 422.96,
+    "end": 425.52,
+    "en": "that's where the people are queuing up",
+    "zh": "就是那边排队的地方"
+  },
+  {
+    "id": 148,
+    "start": 425.52,
+    "end": 430.8,
+    "en": "there it is",
+    "zh": "就在那儿"
+  },
+  {
+    "id": 149,
+    "start": 430.8,
+    "end": 433.68,
+    "en": "all right let's go in the shop",
+    "zh": "好啦，我们去店里逛逛"
+  },
+  {
+    "id": 150,
+    "start": 433.68,
+    "end": 435.76,
+    "en": "backpack no worries",
+    "zh": "背包可以背的，没问题"
+  },
+  {
+    "id": 151,
+    "start": 435.76,
+    "end": 437.04,
+    "en": "can I film in here is that all right",
+    "zh": "我可以在这里拍视频吗，没问题吧"
+  },
+  {
+    "id": 152,
+    "start": 437.04,
+    "end": 438,
+    "en": "nice one man",
+    "zh": "谢了兄弟"
+  },
+  {
+    "id": 153,
+    "start": 438,
+    "end": 440.8,
+    "en": "harry Potter t-shirt",
+    "zh": "哈利·波特T恤"
+  },
+  {
+    "id": 154,
+    "start": 440.8,
+    "end": 447.52,
+    "en": "harry Potter mugs",
+    "zh": "哈利·波特马克杯"
+  },
+  {
+    "id": 155,
+    "start": 453.52,
+    "end": 455.6,
+    "en": "harry Potter",
+    "zh": "哈利·波特"
+  },
+  {
+    "id": 156,
+    "start": 455.6,
+    "end": 459.68,
+    "en": "hello",
+    "zh": "你好"
+  },
+  {
+    "id": 157,
+    "start": 459.68,
+    "end": 462.32,
+    "en": "all right we got the robes",
+    "zh": "好啦，看看这些魔法袍"
+  },
+  {
+    "id": 158,
+    "start": 462.32,
+    "end": 472.24,
+    "en": "Gryffindor robe ones",
+    "zh": "格兰芬多的款式"
+  },
+  {
+    "id": 159,
+    "start": 472.24,
+    "end": 475.12,
+    "en": "hoodies",
+    "zh": "连帽衫"
+  },
+  {
+    "id": 160,
+    "start": 475.12,
+    "end": 476.56,
+    "en": "mugs",
+    "zh": "马克杯"
+  },
+  {
+    "id": 161,
+    "start": 477.68,
+    "end": 478.96,
+    "en": "key rings",
+    "zh": "钥匙扣"
+  },
+  {
+    "id": 162,
+    "start": 478.96,
+    "end": 480.48,
+    "en": "scarves",
+    "zh": "围巾"
+  },
+  {
+    "id": 163,
+    "start": 480.48,
+    "end": 487.28,
+    "en": "who needs to queue when you can see that there",
+    "zh": "能看到这些还排什么队啊"
+  },
+  {
+    "id": 164,
+    "start": 487.28,
+    "end": 488.56,
+    "en": "all right that was cool",
+    "zh": "好啦，太酷了"
+  },
+  {
+    "id": 165,
+    "start": 488.56,
+    "end": 489.76,
+    "en": "seen the Harry Potter shop",
+    "zh": "哈利·波特商店逛完啦"
+  },
+  {
+    "id": 166,
+    "start": 489.76,
+    "end": 492.96,
+    "en": "now time to get the train",
+    "zh": "现在该去坐火车了"
+  },
+  {
+    "id": 167,
+    "start": 492.96,
+    "end": 498.72,
+    "en": "we have the departure board",
+    "zh": "这是发车信息板"
+  },
+  {
+    "id": 168,
+    "start": 498.72,
+    "end": 500.8,
+    "en": "these are where you get your tickets",
+    "zh": "在这儿买票"
+  },
+  {
+    "id": 169,
+    "start": 500.8,
+    "end": 502,
+    "en": "ticket machines",
+    "zh": "售票机"
+  },
+  {
+    "id": 170,
+    "start": 502,
+    "end": 504.16,
+    "en": "these are the barriers",
+    "zh": "这是检票闸机"
+  },
+  {
+    "id": 171,
+    "start": 504.16,
+    "end": 505.84,
+    "en": "all right this is where you scan your ticket",
+    "zh": "好啦，在这儿刷票"
+  },
+  {
+    "id": 172,
+    "start": 505.84,
+    "end": 509.84,
+    "en": "got my ticket here and we go through the barriers",
+    "zh": "票拿好了，过闸机"
+  },
+  {
+    "id": 173,
+    "start": 509.84,
+    "end": 515.36,
+    "en": "right here we are on the train platforms",
+    "zh": "好啦，我们到火车站台了"
+  },
+  {
+    "id": 174,
+    "start": 515.36,
+    "end": 516.88,
+    "en": "walking to our train",
+    "zh": "走去我们的火车那边"
+  },
+  {
+    "id": 175,
+    "start": 516.88,
+    "end": 519.36,
+    "en": "we made it",
+    "zh": "我们到啦"
+  },
+  {
+    "id": 176,
+    "start": 519.36,
+    "end": 522.24,
+    "en": "but there we have the clock",
+    "zh": "不过那边有个钟"
+  },
+  {
+    "id": 177,
+    "start": 522.24,
+    "end": 524.56,
+    "en": "the train is on my right",
+    "zh": "火车在我右边"
+  },
+  {
+    "id": 178,
+    "start": 524.56,
+    "end": 527.84,
+    "en": "we are walking to our carriage",
+    "zh": "我们正往车厢走"
+  },
+  {
+    "id": 179,
+    "start": 527.84,
+    "end": 530.48,
+    "en": "getting on the train",
+    "zh": "上火车啦"
+  },
+  {
+    "id": 180,
+    "start": 530.48,
+    "end": 533.52,
+    "en": "please mind the gap",
+    "zh": "请注意脚下间隙"
+  },
+  {
+    "id": 181,
+    "start": 548.12,
+    "end": 549.12,
+    "en": "[Music]",
+    "zh": "[Music]"
+  },
+  {
+    "id": 182,
+    "start": 549.12,
+    "end": 552.4,
+    "en": "let's go we have arrived in York",
+    "zh": "走啦，我们到约克了"
+  },
+  {
+    "id": 183,
+    "start": 552.4,
+    "end": 559.36,
+    "en": "we are home",
+    "zh": "我们到家啦"
+  },
+  {
+    "id": 184,
+    "start": 564.4,
+    "end": 567.36,
+    "en": "wagging his tail",
+    "zh": "摇着尾巴呢"
+  },
+  {
+    "id": 185,
+    "start": 567.36,
+    "end": 568.24,
+    "en": "i love you",
+    "zh": "我爱你"
+  },
+  {
+    "id": 186,
+    "start": 568.24,
+    "end": 569.52,
+    "en": "hello fella",
+    "zh": "你好呀小家伙"
+  },
+  {
+    "id": 187,
+    "start": 569.52,
+    "end": 574.48,
+    "en": "oh sweet",
+    "zh": "哦，好乖呀"
+  },
+  {
+    "id": 188,
+    "start": 574.48,
+    "end": 578.16,
+    "en": "look who we have here Lenny",
+    "zh": "看看谁在这儿呢，莱尼"
+  },
+  {
+    "id": 189,
+    "start": 578.16,
+    "end": 580.16,
+    "en": "say hello Lenny",
+    "zh": "打个招呼呀莱尼"
+  },
+  {
+    "id": 190,
+    "start": 580.16,
+    "end": 583.2,
+    "en": "hello can you speak some English",
+    "zh": "你好呀，你会说英语吗"
+  },
+  {
+    "id": 191,
+    "start": 583.2,
+    "end": 584.48,
+    "en": "he's still learning",
+    "zh": "他还在学呢"
+  },
+  {
+    "id": 192,
+    "start": 584.48,
+    "end": 587.92,
+    "en": "i am feeling very jet-lagged",
+    "zh": "我感觉时差反应好严重"
+  },
+  {
+    "id": 193,
+    "start": 587.92,
+    "end": 590.32,
+    "en": "very tired from all my travels",
+    "zh": "一路旅途折腾得我好累"
+  },
+  {
+    "id": 194,
+    "start": 590.32,
+    "end": 593.2,
+    "en": "but there's one feeling I want to leave you guys with",
+    "zh": "但我想给你们留下一种感受"
+  },
+  {
+    "id": 195,
+    "start": 593.2,
+    "end": 596.48,
+    "en": "and this feeling is serene",
+    "zh": "这种感受就是\"宁静\""
+  },
+  {
+    "id": 196,
+    "start": 596.48,
+    "end": 599.36,
+    "en": "it means peaceful and calm",
+    "zh": "意思是平和又安宁"
+  },
+  {
+    "id": 197,
+    "start": 599.36,
+    "end": 603.84,
+    "en": "as today was a travel episode where is your dream destination",
+    "zh": "既然今天是一期旅行视频，你梦想中的目的地是哪里呢"
+  },
+  {
+    "id": 198,
+    "start": 603.84,
+    "end": 607.44,
+    "en": "where would you love to travel to in the future and why",
+    "zh": "你未来最想去哪里旅行，为什么呢"
+  },
+  {
+    "id": 199,
+    "start": 607.44,
+    "end": 610.08,
+    "en": "let me know in the comments i'm curious to know",
+    "zh": "在评论区告诉我吧，我很好奇"
+  },
+  {
+    "id": 200,
+    "start": 610.08,
+    "end": 612.88,
+    "en": "and I will respond to every single one of you",
+    "zh": "而且我会一一回复你们的"
+  },
+  {
+    "id": 201,
+    "start": 612.88,
+    "end": 615.04,
+    "en": "as always thank you for watching",
+    "zh": "还是老规矩，感谢你的收看"
+  },
+  {
+    "id": 202,
+    "start": 615.04,
+    "end": 616.32,
+    "en": "much love",
+    "zh": "爱你们"
+  },
+  {
+    "id": 203,
+    "start": 616.32,
+    "end": 617.68,
+    "en": "peace",
+    "zh": "Peace"
+  },
+  {
+    "id": 204,
+    "start": 617.68,
+    "end": 622.72,
+    "en": "see you soon",
+    "zh": "回头见啦"
+  }
+]
