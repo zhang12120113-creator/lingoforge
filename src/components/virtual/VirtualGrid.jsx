@@ -115,7 +115,7 @@ export const VirtualGrid = forwardRef(function VirtualGrid(
                 {row.map((item, colIdx) => {
                   const flatIndex = virtualRow.index * columns + colIdx;
                   return (
-                    <div key={flatIndex}>
+                    <div key={flatIndex} className="h-full">
                       {renderItem(item, flatIndex)}
                     </div>
                   );
