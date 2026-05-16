@@ -14,7 +14,7 @@ const WordDisplay = memo(function WordDisplay({ word, currentInput, isWrong }) {
   prevLenRef.current = currentInput.length;
 
   return (
-    <div className={`text-5xl md:text-9xl font-mono tracking-[0.15em] flex gap-1.5 md:gap-4 justify-center select-none shrink-0 ${isWrong ? 'animate-shake' : ''}`}>
+    <div className={`text-[clamp(2rem,8vw,4rem)] md:text-9xl font-mono tracking-[0.15em] flex gap-1.5 md:gap-4 justify-center select-none shrink-0 ${isWrong ? 'animate-shake' : ''}`}>
       {chars.map((char, i) => {
         let className;
         const isCorrect = i < currentInput.length && currentInput[i] === char;

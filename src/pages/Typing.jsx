@@ -38,6 +38,7 @@ export default function Typing() {
   const [keyboardActive, setKeyboardActive] = useState(true);
   const keyboardActiveRef = useRef(true);
   const [keyboardHeight, setKeyboardHeight] = useState(0);
+  const [viewportHeight, setViewportHeight] = useState(null);
   const touchStartRef = useRef(null);
   const suppressClickRef = useRef(false);
 
@@ -171,22 +172,34 @@ export default function Typing() {
   useEffect(() => { keyboardActiveRef.current = keyboardActive; }, [keyboardActive]);
 
   // 移动端：监听 visualViewport 高度变化，检测虚拟键盘弹出/收起
+  // 不支持 visualViewport 的浏览器 fallback 到 window.innerHeight
   useEffect(() => {
     if (!isMobile) return;
     const vv = window.visualViewport;
-    if (!vv) return;
 
-    const initialHeight = vv.height || window.innerHeight;
+    if (vv) {
+      const initialHeight = vv.height || window.innerHeight;
+      const handleResize = () => {
+        const currentHeight = vv.height;
+        const kbdHeight = Math.max(0, initialHeight - currentHeight);
+        setKeyboardHeight(kbdHeight);
+        setViewportHeight(kbdHeight > 0 ? currentHeight : null);
+      };
+      vv.addEventListener('resize', handleResize);
+      handleResize();
+      return () => vv.removeEventListener('resize', handleResize);
+    }
 
+    const initialHeight = window.innerHeight;
     const handleResize = () => {
-      const kbdHeight = Math.max(0, initialHeight - vv.height);
+      const currentHeight = window.innerHeight;
+      const kbdHeight = Math.max(0, initialHeight - currentHeight);
       setKeyboardHeight(kbdHeight);
+      setViewportHeight(kbdHeight > 0 ? currentHeight : null);
     };
-
-    vv.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
     handleResize();
-
-    return () => vv.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, [isMobile]);
 
   // 核心输入处理函数，供 keydown 和 input 代理层双轨复用
@@ -389,7 +402,20 @@ export default function Typing() {
   }
 
   return (
-    <div className="h-[calc(100dvh-3rem)] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden">
+    <div
+      className="h-[var(--mobile-viewport-height,calc(100dvh-3rem))] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden"
+      style={
+        isMobile
+          ? {
+              ...(viewportHeight
+                ? { '--mobile-viewport-height': `calc(${viewportHeight}px - 3rem)` }
+                : {}),
+              transition:
+                'height 0.2s ease, background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease',
+            }
+          : undefined
+      }
+    >
       {/* 左侧可折叠单词列表 */}
       <div className={`
         transition-all duration-300 ease-in-out shrink-0 self-stretch

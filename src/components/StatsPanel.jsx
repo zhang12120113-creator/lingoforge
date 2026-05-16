@@ -50,7 +50,7 @@ function StatsPanel({ stats, keyboardHeight = 0 }) {
             <div className={`
               font-extrabold text-primary dark:text-primary-dark tabular-nums tracking-tight
               dark:drop-shadow-[0_0_8px_rgba(99,102,241,0.35)]
-              ${isCompact ? 'text-lg' : 'text-xl md:text-4xl'}
+              ${isCompact ? 'text-lg leading-none' : 'text-xl md:text-4xl'}
             `}>{item.value}</div>
             <div className={`
               text-content-tertiary dark:text-gray-500 flex items-center
