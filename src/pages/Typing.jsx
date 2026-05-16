@@ -180,6 +180,27 @@ export default function Typing() {
   // 同步 keyboardActive 到 ref，避免 setTimeout 闭包 stale
   useEffect(() => { keyboardActiveRef.current = keyboardActive; }, [keyboardActive]);
 
+  // 移动端：锁定 body/html 滚动，防止键盘弹出时浏览器自动滚动页面
+  useEffect(() => {
+    if (!isMobile) return;
+    const html = document.documentElement;
+    const body = document.body;
+    const prevHtmlOverflow = html.style.overflow;
+    const prevBodyOverflow = body.style.overflow;
+    const prevHtmlHeight = html.style.height;
+    const prevBodyHeight = body.style.height;
+    html.style.overflow = 'hidden';
+    html.style.height = '100%';
+    body.style.overflow = 'hidden';
+    body.style.height = '100%';
+    return () => {
+      html.style.overflow = prevHtmlOverflow;
+      html.style.height = prevHtmlHeight;
+      body.style.overflow = prevBodyOverflow;
+      body.style.height = prevBodyHeight;
+    };
+  }, [isMobile]);
+
   // 移动端：监听 visualViewport 高度变化，检测虚拟键盘弹出/收起
   // 不支持 visualViewport 的浏览器 fallback 到 window.innerHeight
   useEffect(() => {
@@ -192,7 +213,7 @@ export default function Typing() {
     };
 
     if (vv) {
-      const initialHeight = vv.height || window.innerHeight;
+      const initialHeight = window.innerHeight;
       const handleResize = () => {
         const currentHeight = vv.height;
         const kbdHeight = Math.max(0, initialHeight - currentHeight);
@@ -432,7 +453,7 @@ export default function Typing() {
 
   return (
     <div
-      className={`h-[var(--vv-height,calc(100dvh-3rem))] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in ${keyboardHeight > 0 ? '' : 'overflow-hidden'}`}
+      className="h-[var(--vv-height,calc(100dvh-3rem))] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden"
       style={
         isMobile
           ? {
@@ -461,7 +482,7 @@ export default function Typing() {
 
       {/* 右侧主练习区 */}
       <div
-        className={`flex-1 flex flex-col min-w-0 relative ${keyboardHeight > 0 ? 'justify-start overflow-y-auto' : ''}`}
+        className={`flex-1 flex flex-col min-w-0 relative ${keyboardHeight > 0 ? 'justify-between' : ''}`}
         id="typing-container"
         onClick={() => {
           if (!isMobile) { hiddenInputRef.current?.focus(); return; }
@@ -541,7 +562,7 @@ export default function Typing() {
         />
 
         {/* 单词显示 */}
-        <div className={`flex flex-col items-center px-4 min-h-0 relative ${keyboardHeight > 0 ? 'flex-1 min-h-0 justify-start pt-4' : 'flex-1 justify-center overflow-hidden'}`}>
+        <div className={`flex flex-col items-center px-4 min-h-0 relative ${keyboardHeight > 0 ? 'flex-1 min-h-0 justify-start pt-2' : 'flex-1 justify-center overflow-hidden'}`}>
           {/* 移动端：覆盖单词区域的透明输入框 */}
           {/* 移动端：覆盖单词区域的透明输入框 */}
           {isMobile && (
