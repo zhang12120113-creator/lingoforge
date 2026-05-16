@@ -37,6 +37,7 @@ export default function Typing() {
   const inputValueRef = useRef('');
   const [keyboardActive, setKeyboardActive] = useState(true);
   const keyboardActiveRef = useRef(true);
+  const [keyboardHeight, setKeyboardHeight] = useState(0);
   const touchStartRef = useRef(null);
   const suppressClickRef = useRef(false);
 
@@ -168,6 +169,25 @@ export default function Typing() {
 
   // 同步 keyboardActive 到 ref，避免 setTimeout 闭包 stale
   useEffect(() => { keyboardActiveRef.current = keyboardActive; }, [keyboardActive]);
+
+  // 移动端：监听 visualViewport 高度变化，检测虚拟键盘弹出/收起
+  useEffect(() => {
+    if (!isMobile) return;
+    const vv = window.visualViewport;
+    if (!vv) return;
+
+    const initialHeight = vv.height || window.innerHeight;
+
+    const handleResize = () => {
+      const kbdHeight = Math.max(0, initialHeight - vv.height);
+      setKeyboardHeight(kbdHeight);
+    };
+
+    vv.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => vv.removeEventListener('resize', handleResize);
+  }, [isMobile]);
 
   // 核心输入处理函数，供 keydown 和 input 代理层双轨复用
   const handleCharacterInput = useCallback((char) => {
@@ -463,7 +483,7 @@ export default function Typing() {
         />
 
         {/* 单词显示 */}
-        <div className="flex-1 flex flex-col items-center justify-center px-4 min-h-0 overflow-hidden relative">
+        <div className={`flex-1 flex flex-col items-center justify-center px-4 min-h-0 overflow-hidden relative ${keyboardHeight > 0 ? 'pb-2' : ''}`}>
           {/* 移动端：覆盖单词区域的透明输入框 */}
           {isMobile && (
             <input
@@ -503,7 +523,7 @@ export default function Typing() {
           </div>
         </div>
 
-        <StatsPanel stats={stats} />
+        <StatsPanel stats={stats} keyboardHeight={keyboardHeight} />
 
         {isFinished && <ResultModal stats={stats} onRestart={reset} onGoHome={handleGoHome} isErrorBookMode={isErrorBookMode} remainingErrorCount={remainingErrorCount} isReadingWordBookMode={isReadingWordBookMode} remainingReadingCount={remainingReadingCount} isCorpusWordBookMode={isCorpusWordBookMode} remainingCorpusCount={remainingCorpusCount} />}
         {showWrongBook && <WrongBookModal onClose={() => setShowWrongBook(false)} onWordRemoved={isErrorBookMode || isWordBookMode ? handleWordRemovedFromModal : undefined} />}

@@ -1,6 +1,7 @@
 import { memo } from 'react';
 
-function StatsPanel({ stats }) {
+function StatsPanel({ stats, keyboardHeight = 0 }) {
+  const isCompact = keyboardHeight > 0;
   const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
@@ -26,14 +27,38 @@ function StatsPanel({ stats }) {
   ];
 
   return (
-    <div className="shrink-0 bg-white/90 dark:bg-[#13131f]/90 border-t border-gray-200/60 dark:border-white/[0.04] pt-3 md:pt-4 pb-[calc(0.75rem+env(safe-area-inset-bottom))] md:pb-[calc(1rem+env(safe-area-inset-bottom))] px-3 md:px-6 z-30">
-      <div className="max-w-2xl mx-auto flex flex-wrap justify-center md:grid md:grid-cols-5 gap-x-8 gap-y-2 md:gap-4 text-center">
+    <div
+      className={`
+        bg-white/90 dark:bg-[#13131f]/90 backdrop-blur-sm
+        border-t border-gray-200/60 dark:border-white/[0.04]
+        transition-all duration-200 ease-out
+        ${isCompact
+          ? 'fixed left-0 right-0 z-50 pt-2 pb-2 px-3'
+          : 'shrink-0 pt-3 md:pt-4 pb-[calc(0.75rem+env(safe-area-inset-bottom))] md:pb-[calc(1rem+env(safe-area-inset-bottom))] px-3 md:px-6 z-30'
+        }
+      `}
+      style={isCompact ? { bottom: keyboardHeight } : undefined}
+    >
+      <div className={`
+        max-w-2xl mx-auto text-center
+        ${isCompact
+          ? 'flex justify-around gap-x-1'
+          : 'flex flex-wrap justify-center md:grid md:grid-cols-5 gap-x-8 gap-y-2 md:gap-4'
+        }
+      `}>
         {items.map((item) => (
-          <div key={item.label} className="w-[26%] md:w-auto flex flex-col items-center">
-            <div className="text-xl md:text-4xl font-extrabold text-primary dark:text-primary-dark tabular-nums tracking-tight dark:drop-shadow-[0_0_8px_rgba(99,102,241,0.35)]">{item.value}</div>
-            <div className="text-[10px] md:text-base text-content-tertiary dark:text-gray-500 mt-0.5 md:mt-1 flex items-center gap-0.5 md:gap-1">
+          <div key={item.label} className={`flex flex-col items-center ${isCompact ? 'flex-1 min-w-0' : 'w-[26%] md:w-auto'}`}>
+            <div className={`
+              font-extrabold text-primary dark:text-primary-dark tabular-nums tracking-tight
+              dark:drop-shadow-[0_0_8px_rgba(99,102,241,0.35)]
+              ${isCompact ? 'text-lg' : 'text-xl md:text-4xl'}
+            `}>{item.value}</div>
+            <div className={`
+              text-content-tertiary dark:text-gray-500 flex items-center
+              ${isCompact ? 'text-[10px] mt-0 gap-0.5' : 'text-[10px] md:text-base mt-0.5 md:mt-1 gap-0.5 md:gap-1'}
+            `}>
               {item.icon}
-              {item.label}
+              <span className={isCompact ? 'hidden sm:inline' : ''}>{item.label}</span>
             </div>
           </div>
         ))}
