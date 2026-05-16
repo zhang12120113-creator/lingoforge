@@ -389,7 +389,10 @@ export default function Typing() {
   }
 
   return (
-    <div className="h-[calc(100dvh-3rem)] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden">
+    <div
+      className="h-[calc(100dvh-3rem)] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden"
+      style={isMobile && keyboardHeight > 0 ? { paddingBottom: keyboardHeight } : undefined}
+    >
       {/* 左侧可折叠单词列表 */}
       <div className={`
         transition-all duration-300 ease-in-out shrink-0 self-stretch
@@ -406,7 +409,7 @@ export default function Typing() {
 
       {/* 右侧主练习区 */}
       <div
-        className={`flex-1 flex flex-col min-w-0 relative ${keyboardHeight > 0 ? 'justify-between' : ''}`}
+        className={`flex-1 flex flex-col min-w-0 relative ${keyboardHeight > 0 ? 'justify-around' : ''}`}
         id="typing-container"
         onClick={() => {
           if (!isMobile) { hiddenInputRef.current?.focus(); return; }
