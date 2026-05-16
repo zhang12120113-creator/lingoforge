@@ -171,6 +171,18 @@ export default function Typing() {
   // 同步 keyboardActive 到 ref，避免 setTimeout 闭包 stale
   useEffect(() => { keyboardActiveRef.current = keyboardActive; }, [keyboardActive]);
 
+  // 移动端：键盘弹出后，自动滚动确保单词显示在可视区域
+  useEffect(() => {
+    if (!isMobile || keyboardHeight <= 0) return;
+    const container = document.getElementById('typing-container');
+    if (!container) return;
+    // 短暂延迟等待布局稳定后滚动到顶部，确保单词可见
+    const timer = setTimeout(() => {
+      container.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [isMobile, keyboardHeight]);
+
   // 移动端：监听 visualViewport 高度变化，检测虚拟键盘弹出/收起
   // 不支持 visualViewport 的浏览器 fallback 到 window.innerHeight
   useEffect(() => {
@@ -412,7 +424,7 @@ export default function Typing() {
 
   return (
     <div
-      className="h-[var(--vv-height,calc(100dvh-3rem))] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden"
+      className={`h-[var(--vv-height,calc(100dvh-3rem))] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in ${keyboardHeight > 0 ? '' : 'overflow-hidden'}`}
       style={
         isMobile
           ? {
@@ -441,7 +453,7 @@ export default function Typing() {
 
       {/* 右侧主练习区 */}
       <div
-        className={`flex-1 flex flex-col min-w-0 relative ${keyboardHeight > 0 ? 'justify-between' : ''}`}
+        className={`flex-1 flex flex-col min-w-0 relative ${keyboardHeight > 0 ? 'justify-start overflow-y-auto' : ''}`}
         id="typing-container"
         onClick={() => {
           if (!isMobile) { hiddenInputRef.current?.focus(); return; }
@@ -518,7 +530,7 @@ export default function Typing() {
         />
 
         {/* 单词显示 */}
-        <div className={`flex flex-col items-center px-4 min-h-0 overflow-hidden relative ${keyboardHeight > 0 ? 'flex-1 min-h-0 justify-center' : 'flex-1 justify-center'}`}>
+        <div className={`flex flex-col items-center px-4 min-h-0 relative ${keyboardHeight > 0 ? 'flex-1 min-h-0 justify-start pt-4' : 'flex-1 justify-center overflow-hidden'}`}>
           {/* 移动端：覆盖单词区域的透明输入框 */}
           {isMobile && (
             <input
