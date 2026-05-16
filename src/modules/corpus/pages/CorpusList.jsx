@@ -211,7 +211,7 @@ export default function CorpusList() {
             <VirtualGrid
               ref={gridRef}
               items={filtered}
-              estimateRowSize={420}
+              estimateRowSize={500}
               overscan={3}
               gapClass="gap-5"
               renderItem={renderVideo}
