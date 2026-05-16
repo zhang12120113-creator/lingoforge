@@ -389,10 +389,7 @@ export default function Typing() {
   }
 
   return (
-    <div
-      className="h-[calc(100dvh-3rem)] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden"
-      style={isMobile && keyboardHeight > 0 ? { paddingBottom: keyboardHeight } : undefined}
-    >
+    <div className="h-[calc(100dvh-3rem)] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden">
       {/* 左侧可折叠单词列表 */}
       <div className={`
         transition-all duration-300 ease-in-out shrink-0 self-stretch
