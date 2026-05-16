@@ -406,7 +406,7 @@ export default function Typing() {
 
       {/* 右侧主练习区 */}
       <div
-        className="flex-1 flex flex-col min-w-0 relative"
+        className={`flex-1 flex flex-col min-w-0 relative ${keyboardHeight > 0 ? 'justify-between' : ''}`}
         id="typing-container"
         onClick={() => {
           if (!isMobile) { hiddenInputRef.current?.focus(); return; }
@@ -483,7 +483,7 @@ export default function Typing() {
         />
 
         {/* 单词显示 */}
-        <div className={`flex flex-col items-center px-4 min-h-0 overflow-hidden relative ${keyboardHeight > 0 ? 'shrink-0 pt-3 pb-2' : 'flex-1 justify-center'}`}>
+        <div className={`flex flex-col items-center px-4 min-h-0 overflow-hidden relative ${keyboardHeight > 0 ? 'shrink-0 justify-start pt-1 pb-1' : 'flex-1 justify-center'}`}>
           {/* 移动端：覆盖单词区域的透明输入框 */}
           {isMobile && (
             <input
@@ -504,9 +504,9 @@ export default function Typing() {
               }}
             />
           )}
-          <div className="flex flex-col items-center gap-2 md:gap-10 text-center">
+          <div className={`flex flex-col items-center text-center ${keyboardHeight > 0 ? 'gap-0.5' : 'gap-2 md:gap-10'}`}>
             {showPhonetic && (currentWord?.usphone || currentWord?.us || currentWord?.ukphone || currentWord?.uk) && (
-              <div className="text-content-tertiary dark:text-gray-500 text-xl md:text-5xl mb-1 md:mb-4 font-mono tracking-wide shrink-0">
+              <div className={`text-content-tertiary dark:text-gray-500 font-mono tracking-wide shrink-0 ${keyboardHeight > 0 ? 'text-lg mb-0' : 'text-xl md:text-5xl mb-1 md:mb-4'}`}>
                 /{currentWord.usphone || currentWord.us || currentWord.ukphone || currentWord.uk}/
               </div>
             )}
@@ -516,7 +516,7 @@ export default function Typing() {
             </div>
 
             {currentWord?.trans && showTranslation && (
-              <div className="text-sm md:text-2xl text-content-tertiary dark:text-gray-400 leading-relaxed md:leading-normal max-w-full md:max-w-2xl shrink-0">
+              <div className={`text-content-tertiary dark:text-gray-400 leading-relaxed md:leading-normal max-w-full md:max-w-2xl shrink-0 ${keyboardHeight > 0 ? 'text-xs' : 'text-sm md:text-2xl'}`}>
                 {Array.isArray(currentWord.trans) ? currentWord.trans.join('；') : currentWord.trans}
               </div>
             )}

@@ -33,11 +33,10 @@ function StatsPanel({ stats, keyboardHeight = 0 }) {
         border-t border-gray-200/60 dark:border-white/[0.04]
         transition-all duration-200 ease-out
         ${isCompact
-          ? 'fixed left-0 right-0 z-50 pt-2 pb-2 px-3'
+          ? 'shrink-0 pt-1.5 pb-1.5 px-3 z-30'
           : 'shrink-0 pt-3 md:pt-4 pb-[calc(0.75rem+env(safe-area-inset-bottom))] md:pb-[calc(1rem+env(safe-area-inset-bottom))] px-3 md:px-6 z-30'
         }
       `}
-      style={isCompact ? { bottom: keyboardHeight } : undefined}
     >
       <div className={`
         max-w-2xl mx-auto text-center
