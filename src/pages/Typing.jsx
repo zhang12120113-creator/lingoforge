@@ -406,7 +406,7 @@ export default function Typing() {
 
       {/* 右侧主练习区 */}
       <div
-        className="flex-1 flex flex-col min-w-0 relative"
+        className={`flex-1 flex flex-col min-w-0 relative ${keyboardHeight > 0 ? 'justify-around' : ''}`}
         id="typing-container"
         onClick={() => {
           if (!isMobile) { hiddenInputRef.current?.focus(); return; }
@@ -438,7 +438,7 @@ export default function Typing() {
         </button>
 
         {/* 顶部栏 */}
-        <div className={`${keyboardHeight > 0 ? 'flex-1' : 'min-h-12 md:h-14 shrink-0'} flex items-center justify-between px-3 md:px-4 z-40`}>
+        <div className="min-h-12 md:h-14 shrink-0 flex items-center justify-between px-3 md:px-4 z-40">
           <button onClick={() => navigate('/word')} className="text-content-tertiary dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark flex items-center gap-2 text-sm transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.04]">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -483,7 +483,7 @@ export default function Typing() {
         />
 
         {/* 单词显示 */}
-        <div className="flex flex-col items-center px-4 min-h-0 overflow-hidden relative flex-1 justify-center">
+        <div className={`flex flex-col items-center px-4 min-h-0 overflow-hidden relative ${keyboardHeight > 0 ? 'shrink-0 justify-center' : 'flex-1 justify-center'}`}>
           {/* 移动端：覆盖单词区域的透明输入框 */}
           {isMobile && (
             <input
@@ -523,13 +523,7 @@ export default function Typing() {
           </div>
         </div>
 
-        {keyboardHeight > 0 ? (
-          <div className="flex-1 flex flex-col justify-center">
-            <StatsPanel stats={stats} keyboardHeight={keyboardHeight} />
-          </div>
-        ) : (
-          <StatsPanel stats={stats} keyboardHeight={keyboardHeight} />
-        )}
+        <StatsPanel stats={stats} keyboardHeight={keyboardHeight} />
 
         {isFinished && <ResultModal stats={stats} onRestart={reset} onGoHome={handleGoHome} isErrorBookMode={isErrorBookMode} remainingErrorCount={remainingErrorCount} isReadingWordBookMode={isReadingWordBookMode} remainingReadingCount={remainingReadingCount} isCorpusWordBookMode={isCorpusWordBookMode} remainingCorpusCount={remainingCorpusCount} />}
         {showWrongBook && <WrongBookModal onClose={() => setShowWrongBook(false)} onWordRemoved={isErrorBookMode || isWordBookMode ? handleWordRemovedFromModal : undefined} />}
