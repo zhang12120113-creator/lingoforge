@@ -84,6 +84,23 @@ export const mockCorpusVideos = [
     coverUrl: 'https://lingoforge-videos.oss-cn-shenzhen.aliyuncs.com/corpus/HomebodyinNewYorkWhatIEatinaDay%28comfortfoodI%27vebeencraving%29.png',
     subtitleUrl: '/corpus/subtitles/005.json',
   },
+  {
+    id: '6',
+    title: 'Spring In London | A Solo Bike Ride Vlog',
+    subtitle: '伦敦春日 Vlog：独自骑行的悠闲一天',
+    description: '跟随博主在春日的伦敦,从换装出门、骑车穿梭街头,到漫步 Turnham Green 与 Chiswick 街区,记录独自一人的悠闲一天。在地道的英式口语(jumper、mate 等)和日常生活场景中,学习自然轻松的英语表达。',
+    speaker: 'London Vlogger',
+    category: '生活',
+    tags: ['英语学习', 'Vlog', '伦敦', '春天', '骑行'],
+    accent: '英音',
+    durationSec: 618,
+    sentenceCount: 146,
+    vocabCount: 146,
+    date: '2026-05-16',
+    videoUrl: 'https://lingoforge-videos.oss-cn-shenzhen.aliyuncs.com/corpus/SpringInLondon.mp4',
+    coverUrl: 'https://lingoforge-videos.oss-cn-shenzhen.aliyuncs.com/corpus/SpringInLondon.png',
+    subtitleUrl: '/corpus/subtitles/006.json',
+  },
 ]
 
 
