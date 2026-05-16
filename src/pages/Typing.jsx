@@ -279,6 +279,16 @@ export default function Typing() {
     setInputValue(newVal);
   }, [isFinished, handleCharacterInput, handleBackspace]);
 
+  const handleInputFocus = useCallback(() => {
+    if (!isMobile) return;
+    // 输入框 focus 时浏览器可能自动滚动，手动确保单词区域在可视范围内
+    requestAnimationFrame(() => {
+      const container = document.getElementById('typing-container');
+      if (container) container.scrollTo({ top: 0, behavior: 'auto' });
+      window.scrollTo(0, 0);
+    });
+  }, [isMobile]);
+
   const handleInputBlur = useCallback(() => {
     if (isMobile) {
       // 只有真正收起键盘（无新焦点）时才进入滑动模式，而非点击按钮导致失焦
@@ -533,23 +543,32 @@ export default function Typing() {
         <div className={`flex flex-col items-center px-4 min-h-0 relative ${keyboardHeight > 0 ? 'flex-1 min-h-0 justify-start pt-4' : 'flex-1 justify-center overflow-hidden'}`}>
           {/* 移动端：覆盖单词区域的透明输入框 */}
           {isMobile && (
-            <input
-              ref={hiddenInputRef}
-              type="text"
-              autoFocus
-              value={inputValue}
-              onChange={handleInputChange}
-              onBlur={handleInputBlur}
-              autoComplete="off"
-              autoCorrect="off"
-              autoCapitalize="off"
-              spellCheck="false"
-              className={`absolute inset-0 w-full h-full opacity-0 z-50 ${keyboardActive ? 'cursor-text' : 'pointer-events-none'}`}
-              style={{
-                fontSize: '16px',
-                caretColor: 'transparent',
-              }}
-            />
+            <>
+              {/* 透明点击层：覆盖单词区域，点击时聚焦输入框 */}
+              <div
+                className={`absolute inset-0 z-[35] ${keyboardActive ? '' : 'pointer-events-none'}`}
+                onClick={() => hiddenInputRef.current?.focus()}
+              />
+              {/* 隐藏输入框：固定在底部，避免浏览器 focus 时大面积滚动导致单词被推出可视区 */}
+              <input
+                ref={hiddenInputRef}
+                type="text"
+                autoFocus
+                value={inputValue}
+                onChange={handleInputChange}
+                onFocus={handleInputFocus}
+                onBlur={handleInputBlur}
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck="false"
+                className={`fixed bottom-0 left-0 w-full h-10 opacity-0 z-50 ${keyboardActive ? '' : 'pointer-events-none'}`}
+                style={{
+                  fontSize: '16px',
+                  caretColor: 'transparent',
+                }}
+              />
+            </>
           )}
           <div className={`flex flex-col items-center text-center ${keyboardHeight > 0 ? 'gap-0.5' : 'gap-2 md:gap-10'}`}>
             {showPhonetic && (currentWord?.usphone || currentWord?.us || currentWord?.ukphone || currentWord?.uk) && (
