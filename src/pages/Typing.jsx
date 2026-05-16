@@ -146,7 +146,11 @@ export default function Typing() {
     if (!isMobile || isFinished || words.length === 0 || !keyboardActive) return;
     const focusInput = () => {
       if (suppressClickRef.current) return;
-      hiddenInputRef.current?.focus();
+      try {
+        hiddenInputRef.current?.focus({ preventScroll: true });
+      } catch {
+        hiddenInputRef.current?.focus();
+      }
     };
     document.addEventListener('click', focusInput);
     document.addEventListener('touchstart', focusInput, { passive: true });
@@ -161,27 +165,20 @@ export default function Typing() {
     if (words.length > 0 && hiddenInputRef.current) {
       setTimeout(() => {
         if (isMobile && !keyboardActiveRef.current) return;
-        hiddenInputRef.current?.focus();
+        if (isMobile) {
+          try { hiddenInputRef.current?.focus({ preventScroll: true }); }
+          catch { hiddenInputRef.current?.focus(); }
+        } else {
+          hiddenInputRef.current?.focus();
+        }
         inputValueRef.current = '';
         setInputValue('');
       }, 300);
     }
-  }, [words]);
+  }, [words, isMobile]);
 
   // 同步 keyboardActive 到 ref，避免 setTimeout 闭包 stale
   useEffect(() => { keyboardActiveRef.current = keyboardActive; }, [keyboardActive]);
-
-  // 移动端：键盘弹出后，自动滚动确保单词显示在可视区域
-  useEffect(() => {
-    if (!isMobile || keyboardHeight <= 0) return;
-    const container = document.getElementById('typing-container');
-    if (!container) return;
-    // 短暂延迟等待布局稳定后滚动到顶部，确保单词可见
-    const timer = setTimeout(() => {
-      container.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 50);
-    return () => clearTimeout(timer);
-  }, [isMobile, keyboardHeight]);
 
   // 移动端：监听 visualViewport 高度变化，检测虚拟键盘弹出/收起
   // 不支持 visualViewport 的浏览器 fallback 到 window.innerHeight
@@ -279,16 +276,6 @@ export default function Typing() {
     setInputValue(newVal);
   }, [isFinished, handleCharacterInput, handleBackspace]);
 
-  const handleInputFocus = useCallback(() => {
-    if (!isMobile) return;
-    // 输入框 focus 时浏览器可能自动滚动，手动确保单词区域在可视范围内
-    requestAnimationFrame(() => {
-      const container = document.getElementById('typing-container');
-      if (container) container.scrollTo({ top: 0, behavior: 'auto' });
-      window.scrollTo(0, 0);
-    });
-  }, [isMobile]);
-
   const handleInputBlur = useCallback(() => {
     if (isMobile) {
       // 只有真正收起键盘（无新焦点）时才进入滑动模式，而非点击按钮导致失焦
@@ -298,7 +285,12 @@ export default function Typing() {
       return;
     }
     setTimeout(() => {
-      hiddenInputRef.current?.focus();
+      if (isMobile) {
+        try { hiddenInputRef.current?.focus({ preventScroll: true }); }
+        catch { hiddenInputRef.current?.focus(); }
+      } else {
+        hiddenInputRef.current?.focus();
+      }
     }, 100);
   }, [isMobile]);
 
@@ -332,7 +324,10 @@ export default function Typing() {
 
     if (!keyboardActive && absX < TAP_THRESHOLD && absY < TAP_THRESHOLD) {
       setKeyboardActive(true);
-      setTimeout(() => hiddenInputRef.current?.focus(), 0);
+      setTimeout(() => {
+        try { hiddenInputRef.current?.focus({ preventScroll: true }); }
+        catch { hiddenInputRef.current?.focus(); }
+      }, 0);
     }
   }, [isMobile, isFinished, wordIndex, words.length, jumpTo, keyboardActive]);
 
@@ -368,7 +363,10 @@ export default function Typing() {
   const handleJumpToWord = useCallback((index) => {
     jumpTo(index);
     setIsWordListOpen(false);
-    if (isMobile && keyboardActive) hiddenInputRef.current?.focus();
+    if (isMobile && keyboardActive) {
+      try { hiddenInputRef.current?.focus({ preventScroll: true }); }
+      catch { hiddenInputRef.current?.focus(); }
+    }
   }, [jumpTo, isMobile, keyboardActive]);
 
   const handlePlaySound = useCallback((word) => {
@@ -468,7 +466,10 @@ export default function Typing() {
         onClick={() => {
           if (!isMobile) { hiddenInputRef.current?.focus(); return; }
           if (suppressClickRef.current) return;
-          if (keyboardActive) hiddenInputRef.current?.focus();
+          if (keyboardActive) {
+            try { hiddenInputRef.current?.focus({ preventScroll: true }); }
+            catch { hiddenInputRef.current?.focus(); }
+          }
         }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
@@ -542,33 +543,24 @@ export default function Typing() {
         {/* 单词显示 */}
         <div className={`flex flex-col items-center px-4 min-h-0 relative ${keyboardHeight > 0 ? 'flex-1 min-h-0 justify-start pt-4' : 'flex-1 justify-center overflow-hidden'}`}>
           {/* 移动端：覆盖单词区域的透明输入框 */}
+          {/* 移动端：覆盖单词区域的透明输入框 */}
           {isMobile && (
-            <>
-              {/* 透明点击层：覆盖单词区域，点击时聚焦输入框 */}
-              <div
-                className={`absolute inset-0 z-[35] ${keyboardActive ? '' : 'pointer-events-none'}`}
-                onClick={() => hiddenInputRef.current?.focus()}
-              />
-              {/* 隐藏输入框：固定在底部，避免浏览器 focus 时大面积滚动导致单词被推出可视区 */}
-              <input
-                ref={hiddenInputRef}
-                type="text"
-                autoFocus
-                value={inputValue}
-                onChange={handleInputChange}
-                onFocus={handleInputFocus}
-                onBlur={handleInputBlur}
-                autoComplete="off"
-                autoCorrect="off"
-                autoCapitalize="off"
-                spellCheck="false"
-                className={`fixed bottom-0 left-0 w-full h-10 opacity-0 z-50 ${keyboardActive ? '' : 'pointer-events-none'}`}
-                style={{
-                  fontSize: '16px',
-                  caretColor: 'transparent',
-                }}
-              />
-            </>
+            <input
+              ref={hiddenInputRef}
+              type="text"
+              value={inputValue}
+              onChange={handleInputChange}
+              onBlur={handleInputBlur}
+              autoComplete="off"
+              autoCorrect="off"
+              autoCapitalize="off"
+              spellCheck="false"
+              className={`absolute inset-0 w-full h-full opacity-0 z-50 ${keyboardActive ? 'cursor-text' : 'pointer-events-none'}`}
+              style={{
+                fontSize: '16px',
+                caretColor: 'transparent',
+              }}
+            />
           )}
           <div className={`flex flex-col items-center text-center ${keyboardHeight > 0 ? 'gap-0.5' : 'gap-2 md:gap-10'}`}>
             {showPhonetic && (currentWord?.usphone || currentWord?.us || currentWord?.ukphone || currentWord?.uk) && (
