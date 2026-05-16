@@ -399,9 +399,13 @@ export default function Typing() {
       >
         {/* 左侧中部展开列表按钮 */}
         <button
-          onClick={() => setIsWordListOpen(v => !v)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsWordListOpen(v => !v);
+            if (isMobile) hiddenInputRef.current?.blur();
+          }}
           className={`
-            fixed left-2 md:left-4 top-[55%] md:top-1/2 -translate-y-1/2 z-40 p-3 rounded-full shadow-lg
+            fixed left-2 md:left-4 top-[55%] md:top-1/2 -translate-y-1/2 z-[60] p-3 rounded-full shadow-lg
             transition-all duration-300 backdrop-blur-sm
             ${isWordListOpen
               ? 'opacity-0 pointer-events-none -translate-x-4'
