@@ -7,6 +7,7 @@ html, body, #root {
 }
 
 :root {
+  --safe-area-inset-bottom: env(safe-area-inset-bottom);
   --color-primary: #6366f1;
   --color-primary-soft: rgba(99, 102, 241, 0.12);
   --color-primary-dark: #818cf8;
@@ -487,6 +488,24 @@ body[data-scrolling="true"] .glow-border-subtle:hover {
 @supports (height: 100dvh) {
   .min-h-dscreen {
     min-height: 100dvh;
+  }
+}
+
+/* 移动端打字页时间栏紧凑模式样式 */
+@media (max-width: 767px) {
+  .stats-compact {
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+    flex-shrink: 0;
+  }
+
+  .stats-compact .stat-value {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    line-height: 1.1;
+  }
+
+  .stats-compact .stat-label {
+    font-size: 0.65rem;
+    line-height: 1.1;
   }
 }
 

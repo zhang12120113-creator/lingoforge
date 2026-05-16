@@ -26,6 +26,23 @@ function StatsPanel({ stats, keyboardHeight = 0 }) {
     )},
   ];
 
+  const StatItem = ({ item, compact }) => (
+    <div className={`flex flex-col items-center ${compact ? 'flex-1 min-w-0' : 'w-[26%] md:w-auto'}`}>
+      <div className={`
+        font-extrabold text-primary dark:text-primary-dark tabular-nums tracking-tight
+        dark:drop-shadow-[0_0_8px_rgba(99,102,241,0.35)]
+        ${compact ? 'text-[clamp(1.2rem,5vw,1.8rem)] leading-[1.1]' : 'text-xl md:text-4xl leading-none'}
+      `}>{item.value}</div>
+      <div className={`
+        text-content-tertiary dark:text-gray-500 flex items-center
+        ${compact ? 'text-[10px] mt-0 gap-0.5 leading-[1.1]' : 'text-[10px] md:text-base mt-0.5 md:mt-1 gap-0.5 md:gap-1'}
+      `}>
+        {item.icon}
+        <span>{item.label}</span>
+      </div>
+    </div>
+  );
+
   return (
     <div
       className={`
@@ -33,35 +50,31 @@ function StatsPanel({ stats, keyboardHeight = 0 }) {
         border-t border-gray-200/60 dark:border-white/[0.04]
         transition-all duration-200 ease-out
         ${isCompact
-          ? 'shrink-0 pt-1.5 pb-1.5 px-3 z-30'
+          ? 'stats-compact shrink-0 pt-1.5 px-3 z-30'
           : 'shrink-0 pt-3 md:pt-4 pb-[calc(0.75rem+env(safe-area-inset-bottom))] md:pb-[calc(1rem+env(safe-area-inset-bottom))] px-3 md:px-6 z-30'
         }
       `}
     >
-      <div className={`
-        max-w-2xl mx-auto text-center
-        ${isCompact
-          ? 'flex justify-around gap-x-1'
-          : 'flex flex-wrap justify-center md:grid md:grid-cols-5 gap-x-8 gap-y-2 md:gap-4'
-        }
-      `}>
-        {items.map((item) => (
-          <div key={item.label} className={`flex flex-col items-center ${isCompact ? 'flex-1 min-w-0' : 'w-[26%] md:w-auto'}`}>
-            <div className={`
-              font-extrabold text-primary dark:text-primary-dark tabular-nums tracking-tight
-              dark:drop-shadow-[0_0_8px_rgba(99,102,241,0.35)]
-              ${isCompact ? 'text-lg leading-none' : 'text-xl md:text-4xl'}
-            `}>{item.value}</div>
-            <div className={`
-              text-content-tertiary dark:text-gray-500 flex items-center
-              ${isCompact ? 'text-[10px] mt-0 gap-0.5' : 'text-[10px] md:text-base mt-0.5 md:mt-1 gap-0.5 md:gap-1'}
-            `}>
-              {item.icon}
-              <span className={isCompact ? 'hidden sm:inline' : ''}>{item.label}</span>
-            </div>
+      {isCompact ? (
+        <div className="max-w-2xl mx-auto flex flex-col gap-1">
+          <div className="flex justify-around">
+            {items.slice(0, 3).map((item) => (
+              <StatItem key={item.label} item={item} compact={true} />
+            ))}
           </div>
-        ))}
-      </div>
+          <div className="flex justify-around">
+            {items.slice(3).map((item) => (
+              <StatItem key={item.label} item={item} compact={true} />
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="max-w-2xl mx-auto text-center flex flex-wrap justify-center md:grid md:grid-cols-5 gap-x-8 gap-y-2 md:gap-4">
+          {items.map((item) => (
+            <StatItem key={item.label} item={item} compact={false} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

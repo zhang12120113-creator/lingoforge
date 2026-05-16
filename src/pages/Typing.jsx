@@ -177,13 +177,20 @@ export default function Typing() {
     if (!isMobile) return;
     const vv = window.visualViewport;
 
+    const getSafeAreaBottom = () => {
+      const val = getComputedStyle(document.documentElement).getPropertyValue('--safe-area-inset-bottom');
+      return parseFloat(val) || 0;
+    };
+
     if (vv) {
       const initialHeight = vv.height || window.innerHeight;
       const handleResize = () => {
         const currentHeight = vv.height;
         const kbdHeight = Math.max(0, initialHeight - currentHeight);
         setKeyboardHeight(kbdHeight);
-        setViewportHeight(kbdHeight > 0 ? currentHeight : null);
+        const safeAreaBottom = getSafeAreaBottom();
+        const adjustedHeight = Math.max(0, currentHeight - safeAreaBottom);
+        setViewportHeight(kbdHeight > 0 ? adjustedHeight : null);
       };
       vv.addEventListener('resize', handleResize);
       handleResize();
@@ -195,7 +202,9 @@ export default function Typing() {
       const currentHeight = window.innerHeight;
       const kbdHeight = Math.max(0, initialHeight - currentHeight);
       setKeyboardHeight(kbdHeight);
-      setViewportHeight(kbdHeight > 0 ? currentHeight : null);
+      const safeAreaBottom = getSafeAreaBottom();
+      const adjustedHeight = Math.max(0, currentHeight - safeAreaBottom);
+      setViewportHeight(kbdHeight > 0 ? adjustedHeight : null);
     };
     window.addEventListener('resize', handleResize);
     handleResize();
@@ -403,12 +412,12 @@ export default function Typing() {
 
   return (
     <div
-      className="h-[var(--mobile-viewport-height,calc(100dvh-3rem))] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden"
+      className="h-[var(--vv-height,calc(100dvh-3rem))] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden"
       style={
         isMobile
           ? {
               ...(viewportHeight
-                ? { '--mobile-viewport-height': `calc(${viewportHeight}px - 3rem)` }
+                ? { '--vv-height': `calc(${viewportHeight}px - 3rem)` }
                 : {}),
               transition:
                 'height 0.2s ease, background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease',
@@ -432,7 +441,7 @@ export default function Typing() {
 
       {/* 右侧主练习区 */}
       <div
-        className={`flex-1 flex flex-col min-w-0 relative ${keyboardHeight > 0 ? 'justify-around' : ''}`}
+        className={`flex-1 flex flex-col min-w-0 relative ${keyboardHeight > 0 ? 'justify-between' : ''}`}
         id="typing-container"
         onClick={() => {
           if (!isMobile) { hiddenInputRef.current?.focus(); return; }
@@ -509,7 +518,7 @@ export default function Typing() {
         />
 
         {/* 单词显示 */}
-        <div className={`flex flex-col items-center px-4 min-h-0 overflow-hidden relative ${keyboardHeight > 0 ? 'shrink-0 justify-center' : 'flex-1 justify-center'}`}>
+        <div className={`flex flex-col items-center px-4 min-h-0 overflow-hidden relative ${keyboardHeight > 0 ? 'flex-1 min-h-0 justify-center' : 'flex-1 justify-center'}`}>
           {/* 移动端：覆盖单词区域的透明输入框 */}
           {isMobile && (
             <input
