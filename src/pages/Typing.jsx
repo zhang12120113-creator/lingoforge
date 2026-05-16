@@ -483,7 +483,7 @@ export default function Typing() {
         />
 
         {/* 单词显示 */}
-        <div className={`flex-1 flex flex-col items-center px-4 min-h-0 overflow-hidden relative ${keyboardHeight > 0 ? 'justify-start pt-4 pb-2' : 'justify-center'}`}>
+        <div className={`flex flex-col items-center px-4 min-h-0 overflow-hidden relative ${keyboardHeight > 0 ? 'shrink-0 pt-3 pb-2' : 'flex-1 justify-center'}`}>
           {/* 移动端：覆盖单词区域的透明输入框 */}
           {isMobile && (
             <input
