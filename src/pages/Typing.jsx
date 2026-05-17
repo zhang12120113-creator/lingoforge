@@ -180,27 +180,6 @@ export default function Typing() {
   // 同步 keyboardActive 到 ref，避免 setTimeout 闭包 stale
   useEffect(() => { keyboardActiveRef.current = keyboardActive; }, [keyboardActive]);
 
-  // 移动端：锁定 body/html 滚动，防止键盘弹出时浏览器自动滚动页面
-  useEffect(() => {
-    if (!isMobile) return;
-    const html = document.documentElement;
-    const body = document.body;
-    const prevHtmlOverflow = html.style.overflow;
-    const prevBodyOverflow = body.style.overflow;
-    const prevHtmlHeight = html.style.height;
-    const prevBodyHeight = body.style.height;
-    html.style.overflow = 'hidden';
-    html.style.height = '100%';
-    body.style.overflow = 'hidden';
-    body.style.height = '100%';
-    return () => {
-      html.style.overflow = prevHtmlOverflow;
-      html.style.height = prevHtmlHeight;
-      body.style.overflow = prevBodyOverflow;
-      body.style.height = prevBodyHeight;
-    };
-  }, [isMobile]);
-
   // 移动端：监听 visualViewport 高度变化，检测虚拟键盘弹出/收起
   // 不支持 visualViewport 的浏览器 fallback 到 window.innerHeight
   useEffect(() => {
@@ -455,14 +434,8 @@ export default function Typing() {
     <div
       className="h-[var(--vv-height,calc(100dvh-3rem))] md:h-[calc(100vh-4rem)] flex bg-background dark:bg-transparent transition-colors duration-500 animate-page-fade-in overflow-hidden"
       style={
-        isMobile
-          ? {
-              ...(viewportHeight
-                ? { '--vv-height': `calc(${viewportHeight}px - 3rem)` }
-                : {}),
-              transition:
-                'height 0.2s ease, background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease',
-            }
+        isMobile && viewportHeight
+          ? { '--vv-height': `calc(${viewportHeight}px - 3rem)` }
           : undefined
       }
     >
