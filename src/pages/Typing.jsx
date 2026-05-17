@@ -186,20 +186,15 @@ export default function Typing() {
     if (!isMobile) return;
     const vv = window.visualViewport;
 
-    const getSafeAreaBottom = () => {
-      const val = getComputedStyle(document.documentElement).getPropertyValue('--safe-area-inset-bottom');
-      return parseFloat(val) || 0;
-    };
-
     if (vv) {
       const initialHeight = window.innerHeight;
       const handleResize = () => {
         const currentHeight = vv.height;
         const kbdHeight = Math.max(0, initialHeight - currentHeight);
         setKeyboardHeight(kbdHeight);
-        const safeAreaBottom = getSafeAreaBottom();
-        const adjustedHeight = Math.max(0, currentHeight - safeAreaBottom);
-        setViewportHeight(kbdHeight > 0 ? adjustedHeight : null);
+        // 键盘弹出时,vv.height 就是键盘上方的可视区域,直接用即可,
+        // 不要再减 safe-area(部分安卓机会把手势条/键盘高度算进 safe-area,导致下方留白)
+        setViewportHeight(kbdHeight > 0 ? currentHeight : null);
       };
       vv.addEventListener('resize', handleResize);
       handleResize();
@@ -211,9 +206,7 @@ export default function Typing() {
       const currentHeight = window.innerHeight;
       const kbdHeight = Math.max(0, initialHeight - currentHeight);
       setKeyboardHeight(kbdHeight);
-      const safeAreaBottom = getSafeAreaBottom();
-      const adjustedHeight = Math.max(0, currentHeight - safeAreaBottom);
-      setViewportHeight(kbdHeight > 0 ? adjustedHeight : null);
+      setViewportHeight(kbdHeight > 0 ? currentHeight : null);
     };
     window.addEventListener('resize', handleResize);
     handleResize();
