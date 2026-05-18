@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-function ResultModal({ stats, onRestart, onGoHome, isErrorBookMode, remainingErrorCount = 0, isReadingWordBookMode, remainingReadingCount = 0, isCorpusWordBookMode, remainingCorpusCount = 0 }) {
+function ResultModal({ stats, onRestart, onGoHome, onNextChapter, hasNextChapter, isErrorBookMode, remainingErrorCount = 0, isReadingWordBookMode, remainingReadingCount = 0, isCorpusWordBookMode, remainingCorpusCount = 0 }) {
   const statItems = [
     {
       label: '用时',
@@ -74,17 +74,24 @@ function ResultModal({ stats, onRestart, onGoHome, isErrorBookMode, remainingErr
           ))}
         </div>
 
-        <div className="flex gap-3">
-          {((!isErrorBookMode && !isReadingWordBookMode && !isCorpusWordBookMode) || remainingErrorCount > 0 || remainingReadingCount > 0 || remainingCorpusCount > 0) && (
-            <button onClick={onRestart} className="btn-primary flex-1">
-              {isErrorBookMode ? '继续错题练习' : isReadingWordBookMode ? '继续阅读词本练习' : isCorpusWordBookMode ? '继续语料词本练习' : '再来一次'}
+        <div className="flex flex-col gap-3">
+          {hasNextChapter && onNextChapter && (
+            <button onClick={onNextChapter} className="btn-primary w-full">
+              下一章
             </button>
           )}
-          {onGoHome && (
-            <button onClick={onGoHome} className={`btn-secondary ${((!isErrorBookMode && !isReadingWordBookMode && !isCorpusWordBookMode) || remainingErrorCount > 0 || remainingReadingCount > 0 || remainingCorpusCount > 0) ? 'flex-1' : 'w-full'}`}>
-              {isErrorBookMode || isReadingWordBookMode || isCorpusWordBookMode ? '返回词库' : '返回首页'}
-            </button>
-          )}
+          <div className="flex gap-3">
+            {((!isErrorBookMode && !isReadingWordBookMode && !isCorpusWordBookMode) || remainingErrorCount > 0 || remainingReadingCount > 0 || remainingCorpusCount > 0) && (
+              <button onClick={onRestart} className={`${hasNextChapter ? 'btn-secondary' : 'btn-primary'} flex-1`}>
+                {isErrorBookMode ? '继续错题练习' : isReadingWordBookMode ? '继续阅读词本练习' : isCorpusWordBookMode ? '继续语料词本练习' : '再来一次'}
+              </button>
+            )}
+            {onGoHome && (
+              <button onClick={onGoHome} className={`btn-secondary ${((!isErrorBookMode && !isReadingWordBookMode && !isCorpusWordBookMode) || remainingErrorCount > 0 || remainingReadingCount > 0 || remainingCorpusCount > 0) ? 'flex-1' : 'w-full'}`}>
+                {isErrorBookMode || isReadingWordBookMode || isCorpusWordBookMode ? '返回词库' : '返回首页'}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>

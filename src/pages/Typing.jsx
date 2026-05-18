@@ -328,6 +328,14 @@ export default function Typing() {
     navigate('/word');
   }, [navigate]);
 
+  const hasNextChapter = !isErrorBookMode && !isReadingWordBookMode && !isCorpusWordBookMode
+    && chapters.some(c => c.id === Number(chapterId) + 1);
+
+  const handleNextChapter = useCallback(() => {
+    const nextId = Number(chapterId) + 1;
+    navigate(`/typing/${dictId}/${nextId}`);
+  }, [navigate, dictId, chapterId]);
+
   const handleDeleteCurrentWord = useCallback(() => {
     if (!currentWord || words.length === 0) return;
     if (isErrorBookMode) {
@@ -570,7 +578,7 @@ export default function Typing() {
 
         <StatsPanel stats={stats} keyboardHeight={keyboardHeight} />
 
-        {isFinished && <ResultModal stats={stats} onRestart={reset} onGoHome={handleGoHome} isErrorBookMode={isErrorBookMode} remainingErrorCount={remainingErrorCount} isReadingWordBookMode={isReadingWordBookMode} remainingReadingCount={remainingReadingCount} isCorpusWordBookMode={isCorpusWordBookMode} remainingCorpusCount={remainingCorpusCount} />}
+        {isFinished && <ResultModal stats={stats} onRestart={reset} onGoHome={handleGoHome} onNextChapter={handleNextChapter} hasNextChapter={hasNextChapter} isErrorBookMode={isErrorBookMode} remainingErrorCount={remainingErrorCount} isReadingWordBookMode={isReadingWordBookMode} remainingReadingCount={remainingReadingCount} isCorpusWordBookMode={isCorpusWordBookMode} remainingCorpusCount={remainingCorpusCount} />}
         {showWrongBook && <WrongBookModal onClose={() => setShowWrongBook(false)} onWordRemoved={isErrorBookMode || isWordBookMode ? handleWordRemovedFromModal : undefined} />}
       </div>
     </div>

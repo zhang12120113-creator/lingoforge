@@ -2,6 +2,7 @@ import {
   useCallback,
   useDeferredValue,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -16,6 +17,7 @@ import {
 import { useReadingStore } from '../hooks/useReadingStore'
 import { getReadingWordBookCount } from '../../../utils/readingWordBook.js'
 import ArticleCard from '../components/ArticleCard'
+import GrammarOverview from '../components/GrammarOverview'
 import Dropdown from '../../../components/Dropdown'
 import { VirtualGrid } from '../../../components/virtual/VirtualGrid'
 
@@ -32,19 +34,30 @@ export default function ArticleList() {
   const [readingWordCount, setReadingWordCount] = useState(0)
   const scrollRestoredRef = useRef(false)
 
+  const pendingScrollRef = useRef(null)
+
+  useLayoutEffect(() => {
+    if (scrollRestoredRef.current) return
+    const savedScroll = sessionStorage.getItem('reading_list_scroll')
+    if (savedScroll !== null) {
+      const top = parseInt(savedScroll, 10)
+      sessionStorage.removeItem('reading_list_scroll')
+      pendingScrollRef.current = top
+      window.scrollTo(0, top)
+    }
+  }, [])
+
   useEffect(() => {
     if (scrollRestoredRef.current) return
     scrollRestoredRef.current = true
 
     setReadingWordCount(getReadingWordBookCount())
-    const savedScroll = sessionStorage.getItem('reading_list_scroll')
-    if (savedScroll !== null) {
-      const top = parseInt(savedScroll, 10)
-      sessionStorage.removeItem('reading_list_scroll')
-      // 等 VirtualGrid 完成首次渲染后再恢复滚动位置
-      setTimeout(() => {
-        gridRef.current?.scrollToOffset(top, { behavior: 'instant' })
-      }, 100)
+    if (pendingScrollRef.current !== null) {
+      const top = pendingScrollRef.current
+      pendingScrollRef.current = null
+      requestAnimationFrame(() => {
+        window.scrollTo(0, top)
+      })
     }
   }, [])
 
@@ -59,7 +72,7 @@ export default function ArticleList() {
 
   const filtered = useMemo(() => {
     const q = deferredQuery.trim().toLowerCase()
-    return mockArticles.filter((a) => {
+    const articles = mockArticles.filter((a) => {
       if (categoryFilter !== '全部' && a.category !== categoryFilter) return false
       if (yearFilter !== '全部' && String(a.year) !== yearFilter) return false
       if (bookmarkOnly && !bookmarkSet.has(a.id)) return false
@@ -75,6 +88,10 @@ export default function ArticleList() {
       }
       return true
     })
+    if (categoryFilter === '全部' && yearFilter === '全部' && !bookmarkOnly && !q) {
+      return [{ id: '__grammar__' }, ...articles]
+    }
+    return articles
   }, [categoryFilter, yearFilter, bookmarkOnly, deferredQuery, bookmarkSet])
 
   // 稳定的事件回调
@@ -115,16 +132,19 @@ export default function ArticleList() {
   }, [navigate])
 
   const renderArticle = useCallback(
-    (article) => (
-      <ArticleCard
-        article={article}
-        readPercent={store.getProgress(article.id)}
-        lastReadAt={store.getLastReadAt(article.id)}
-        isBookmarked={bookmarkSet.has(article.id)}
-        onClick={handleArticleClick}
-        onToggleBookmark={handleToggleBookmark}
-      />
-    ),
+    (article) => {
+      if (article.id === '__grammar__') return <GrammarOverview />
+      return (
+        <ArticleCard
+          article={article}
+          readPercent={store.getProgress(article.id)}
+          lastReadAt={store.getLastReadAt(article.id)}
+          isBookmarked={bookmarkSet.has(article.id)}
+          onClick={handleArticleClick}
+          onToggleBookmark={handleToggleBookmark}
+        />
+      )
+    },
     [store, bookmarkSet, handleArticleClick, handleToggleBookmark]
   )
 

@@ -1,4 +1,4 @@
-import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useDeferredValue, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Bookmark, BookOpen, Search, Video } from 'lucide-react'
 import {
@@ -26,18 +26,30 @@ export default function CorpusList() {
   const [bookmarkOnly, setBookmarkOnly] = useState(false)
   const [corpusWordCount, setCorpusWordCount] = useState(0)
 
+  const pendingScrollRef = useRef(null)
+
+  useLayoutEffect(() => {
+    if (scrollRestoredRef.current) return
+    const savedScroll = sessionStorage.getItem('corpus_list_scroll')
+    if (savedScroll !== null) {
+      const top = parseInt(savedScroll, 10)
+      sessionStorage.removeItem('corpus_list_scroll')
+      pendingScrollRef.current = top
+      window.scrollTo(0, top)
+    }
+  }, [])
+
   useEffect(() => {
     if (scrollRestoredRef.current) return
     scrollRestoredRef.current = true
 
     setCorpusWordCount(getCorpusWordBookCount())
-    const savedScroll = sessionStorage.getItem('corpus_list_scroll')
-    if (savedScroll !== null) {
-      const top = parseInt(savedScroll, 10)
-      sessionStorage.removeItem('corpus_list_scroll')
-      setTimeout(() => {
-        gridRef.current?.scrollToOffset(top, { behavior: 'instant' })
-      }, 100)
+    if (pendingScrollRef.current !== null) {
+      const top = pendingScrollRef.current
+      pendingScrollRef.current = null
+      requestAnimationFrame(() => {
+        window.scrollTo(0, top)
+      })
     }
   }, [])
 
