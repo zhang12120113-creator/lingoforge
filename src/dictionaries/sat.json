@@ -18056,8 +18056,8 @@
         },
         {
           "name": "apostate",
-          "usphone": "/əˈpɑːsteɪt/",
-          "ukphone": "/əˈpɒsteɪt/",
+          "usphone": "əˈpɑːsteɪt",
+          "ukphone": "əˈpɒsteɪt",
           "trans": [
             "变节的；脱党的；背教的",
             "脱党者；变节者；叛教者"
@@ -34247,7 +34247,7 @@
         },
         {
           "name": "superb",
-          "usphone": "/suːˈpɜːrb/",
+          "usphone": "suːˈpɜːrb",
           "ukphone": "suː'pɜːb; sjuː-",
           "trans": [
             "极好的；华丽的；宏伟的",

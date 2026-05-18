@@ -1,10 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { AlertCircle, ArrowLeft, Bookmark, ChevronDown, FileText, Headphones, MapPin, Pause, Play, Volume2, X } from 'lucide-react'
+import { ArrowLeft, Bookmark, ChevronDown, FileText, MapPin } from 'lucide-react'
 import { getArticleById } from '../data/mockArticles'
 import { useReadingStore } from '../hooks/useReadingStore'
 import useStudyTracker from '../hooks/useStudyTracker'
-import useReadingTTS from '../hooks/useReadingTTS'
 import { loadDictionary } from '../../../utils/loadDictionary.js'
 import {
   addToReadingWordBook,
@@ -83,80 +82,39 @@ function ParagraphBlock({
   zh,
   index,
   onWordClick,
-  isPlaying,
-  progress,
-  onPlay,
-  isActiveInAll,
 }) {
   const [showTrans, setShowTrans] = useState(false)
 
   return (
     <div
       id={`para-${index}`}
-      className={`group mb-4 rounded-2xl p-5 md:p-6 transition-colors ${
-        isActiveInAll
-          ? 'bg-[#e0ddd6] dark:bg-white/[0.08] ring-1 ring-primary/20 dark:ring-primary/30'
-          : 'bg-[#e8e6e1] dark:bg-white/[0.05]'
-      }`}
+      className="group mb-4 rounded-2xl p-5 md:p-6 transition-colors bg-[#e8e6e1] dark:bg-white/[0.05]"
     >
-      <div className="flex items-start gap-3 md:gap-4">
-        {/* 段落播放按钮：全文播放时不显示暂停状态，只保留可点击的播放按钮 */}
-        <button
-          type="button"
-          onClick={(e) => {
-            e.stopPropagation()
-            onPlay && onPlay()
-          }}
-          aria-label={isPlaying ? '停止朗读本段' : '朗读本段'}
-          className={`shrink-0 mt-0.5 w-9 h-9 rounded-full flex items-center justify-center transition-all duration-150 active:scale-90 ${
-            isPlaying
-              ? 'bg-primary text-white shadow-sm'
-              : 'bg-white/70 dark:bg-white/[0.08] text-content-secondary dark:text-gray-300 hover:bg-white dark:hover:bg-white/[0.14]'
-          }`}
-        >
-          {isPlaying ? (
-            <Pause className="w-4 h-4" fill="currentColor" />
-          ) : (
-            <Play className="w-4 h-4 ml-0.5" fill="currentColor" />
-          )}
-        </button>
+      <div className="flex-1 min-w-0">
+        {renderParagraph(en, index, onWordClick)}
 
-        <div className="flex-1 min-w-0">
-          {renderParagraph(en, index, onWordClick)}
-
-          {/* 段落播放进度条：仅单段播放时显示，全文播放时不显示 */}
-          {isPlaying && !isActiveInAll && (
-            <div className="mt-3 h-1 w-full rounded-full bg-black/[0.06] dark:bg-white/[0.08] overflow-hidden">
-              <div
-                className="h-full bg-primary"
-                style={{ width: `${Math.max(2, progress || 0)}%` }}
-              />
-            </div>
-          )}
-
-          {/* 翻译切换 */}
-          <div className="mt-3">
-            <button
-              onClick={() => setShowTrans((s) => !s)}
-              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-medium text-content-tertiary dark:text-gray-500 hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
-            >
-              <ChevronDown
-                className={`w-3.5 h-3.5 transition-transform duration-200 ${showTrans ? 'rotate-180' : ''}`}
-              />
-              <span>{showTrans ? '隐藏翻译' : '显示翻译'}</span>
-            </button>
-          </div>
-
-          {/* 中文翻译（可折叠） */}
-          <div
-            className={`grid transition-[grid-template-rows] duration-300 ease-out ${showTrans ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+        {/* 翻译切换 */}
+        <div className="mt-3">
+          <button
+            onClick={() => setShowTrans((s) => !s)}
+            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-medium text-content-tertiary dark:text-gray-500 hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
           >
-            <div className="overflow-hidden">
-              <div className="mt-3 border-l-2 border-primary/30 dark:border-primary/40">
-                <p className="text-[15px] md:text-base leading-[1.8] text-content-secondary dark:text-gray-400 pl-4">
-                  {zh}
-                </p>
-              </div>
+            <ChevronDown
+              className={`w-3.5 h-3.5 transition-transform duration-200 ${showTrans ? 'rotate-180' : ''}`}
+            />
+            <span>{showTrans ? '隐藏翻译' : '显示翻译'}</span>
+          </button>
+        </div>
+
+        {/* 中文翻译（可折叠） */}
+        <div
+          className={`grid transition-[grid-template-rows] duration-300 ease-out ${showTrans ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}
+        >
+          <div className="overflow-hidden">
+            <div className="mt-3 border-l-2 border-primary/30 dark:border-primary/40">
+              <p className="text-[15px] md:text-base leading-[1.8] text-content-secondary dark:text-gray-400 pl-4">
+                {zh}
+              </p>
             </div>
           </div>
         </div>
@@ -172,6 +130,7 @@ export default function ArticleDetail() {
   const article = useMemo(() => getArticleById(id), [id])
   const contentRef = useRef(null)
   const persistTimer = useRef(null)
+
   const [progress, setProgress] = useState(() => store.getProgress(id))
 
   // Word lookup states
@@ -180,48 +139,6 @@ export default function ArticleDetail() {
   const activeTokenRef = useRef(null)
 
   useStudyTracker(article ? id : null)
-
-  // 浏览器 TTS 听力
-  const tts = useReadingTTS({ rate: 0.95 })
-
-  // 切换文章时停止朗读
-  useEffect(() => {
-    tts.stop()
-    tts.clearError()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id])
-
-  // 记录听力时长
-  const listeningSecondsTimerRef = useRef(null)
-  const isTTSActive = tts.isPlayingAll || tts.playingIndex >= 0
-  useEffect(() => {
-    if (!isTTSActive) {
-      if (listeningSecondsTimerRef.current) {
-        clearInterval(listeningSecondsTimerRef.current)
-        listeningSecondsTimerRef.current = null
-      }
-      return
-    }
-    listeningSecondsTimerRef.current = setInterval(() => {
-      store.addListeningSeconds(5)
-    }, 5000)
-    return () => {
-      if (listeningSecondsTimerRef.current) {
-        clearInterval(listeningSecondsTimerRef.current)
-        listeningSecondsTimerRef.current = null
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isTTSActive])
-
-  function handleListenAll() {
-    if (!article) return
-    tts.playAll(article.paragraphs)
-  }
-
-  function handlePlayParagraph(text, index) {
-    tts.playOne(text, index)
-  }
 
   // Load all dictionaries for word lookup
   useEffect(() => {
@@ -398,7 +315,19 @@ export default function ArticleDetail() {
           </button>
         </div>
         {/* 顶部进度条 */}
-        <div className="h-0.5 w-full bg-gray-100 dark:bg-white/[0.05] overflow-hidden">
+        <div
+          className="h-0.5 w-full bg-gray-100 dark:bg-white/[0.05] overflow-hidden cursor-pointer"
+          onClick={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect()
+            const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width))
+            const el = contentRef.current
+            if (!el) return
+            const elTop = el.offsetTop
+            const elHeight = el.offsetHeight
+            const targetScroll = elTop + ratio * elHeight - window.innerHeight / 2
+            window.scrollTo({ top: Math.max(0, targetScroll), behavior: 'smooth' })
+          }}
+        >
           <div className="h-full bg-primary transition-[width] duration-150" style={{ width: `${progress}%` }} />
         </div>
       </div>
@@ -435,17 +364,8 @@ export default function ArticleDetail() {
             <span>{article.region}</span>
           </div>
           <div className="flex items-center gap-1.5">
-            {article.type === 'listening' ? (
-              <>
-                <Volume2 className="w-3.5 h-3.5" />
-                <span>听力</span>
-              </>
-            ) : (
-              <>
-                <FileText className="w-3.5 h-3.5" />
-                <span>阅读</span>
-              </>
-            )}
+            <FileText className="w-3.5 h-3.5" />
+            <span>{article.type === 'listening' ? '听力' : '阅读'}</span>
           </div>
           <div className="flex items-center gap-1.5">
             <FileText className="w-3.5 h-3.5" />
@@ -460,69 +380,6 @@ export default function ArticleDetail() {
           </p>
         </div>
 
-        {/* TTS 不可用警告（系统未装英文语音包 / 浏览器不支持） */}
-        {(tts.voiceStatus === 'no-english' || tts.voiceStatus === 'unsupported') && (
-          <div className="mb-4 flex items-start gap-2.5 rounded-xl border border-amber-200/70 dark:border-amber-500/30 bg-amber-50/80 dark:bg-amber-500/10 px-3.5 py-2.5">
-            <AlertCircle className="w-4 h-4 mt-0.5 shrink-0 text-amber-600 dark:text-amber-400" />
-            <div className="text-xs md:text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
-              {tts.voiceStatus === 'unsupported'
-                ? '当前浏览器不支持语音合成 (Web Speech API)，无法朗读文章。建议使用 Edge / Chrome 最新版。'
-                : '检测到系统未安装英文语音包，朗读可能无声。请在「设置 → 时间和语言 → 语音」中添加英语 (美国) 语音，或切换其他浏览器。'}
-            </div>
-          </div>
-        )}
-
-        {/* 听全文 */}
-        <div className="mb-6">
-          <button
-            type="button"
-            onClick={handleListenAll}
-            className="w-full flex items-center gap-3 p-4 md:p-5 rounded-xl bg-[#e8e6e1] dark:bg-white/[0.05] hover:bg-[#dedbd4] dark:hover:bg-white/[0.08] transition-colors text-left"
-          >
-            <span
-              className={`shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-colors ${
-                tts.isPlayingAll
-                  ? 'bg-primary text-white'
-                  : 'bg-white/70 dark:bg-white/[0.08] text-content dark:text-gray-200'
-              }`}
-            >
-              {tts.isPlayingAll ? (
-                <Pause className="w-4 h-4" fill="currentColor" />
-              ) : (
-                <Play className="w-4 h-4 ml-0.5" fill="currentColor" />
-              )}
-            </span>
-            <Headphones className="w-4 h-4 text-content-secondary dark:text-gray-400" />
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center justify-between gap-3">
-                <span className="text-sm md:text-[15px] font-medium text-content dark:text-gray-200">
-                  {tts.isPlayingAll ? '停止朗读' : '听全文'}
-                </span>
-                {tts.isPlayingAll && (
-                  <span className="text-xs text-content-tertiary dark:text-gray-500 tabular-nums">
-                    第 {tts.playingIndex + 1} / {article.paragraphs.length} 段
-                  </span>
-                )}
-              </div>
-              {tts.isPlayingAll && (
-                <div className="mt-2 h-1 w-full rounded-full bg-black/[0.06] dark:bg-white/[0.08] overflow-hidden">
-                  <div
-                    className="h-full bg-primary transition-[width] duration-150 ease-out"
-                    style={{
-                      width: `${Math.min(
-                        100,
-                        ((tts.playingIndex + (tts.segmentProgress || 0) / 100) /
-                          article.paragraphs.length) *
-                          100
-                      )}%`,
-                    }}
-                  />
-                </div>
-              )}
-            </div>
-          </button>
-        </div>
-
         {/* 正文段落 */}
         <div>
           {article.paragraphs.map((para, i) => (
@@ -532,10 +389,6 @@ export default function ArticleDetail() {
               en={para.en}
               zh={para.zh}
               onWordClick={handleWordClick}
-              isPlaying={!tts.isPlayingAll && tts.playingIndex === i}
-              isActiveInAll={tts.isPlayingAll && tts.playingIndex === i}
-              progress={tts.playingIndex === i ? tts.segmentProgress : 0}
-              onPlay={() => handlePlayParagraph(para.en, i)}
             />
           ))}
         </div>
@@ -555,26 +408,6 @@ export default function ArticleDetail() {
           onClose={handleClosePopup}
           wordBookLabel="阅读词本"
         />
-      )}
-
-      {/* TTS 错误 Toast */}
-      {tts.error && (
-        <div className="fixed left-1/2 -translate-x-1/2 bottom-24 z-50 max-w-md w-[min(92%,28rem)]">
-          <div className="flex items-start gap-2.5 rounded-xl border border-red-200 dark:border-red-500/30 bg-white dark:bg-zinc-900 shadow-lg px-4 py-3">
-            <AlertCircle className="w-4 h-4 mt-0.5 shrink-0 text-red-500" />
-            <div className="flex-1 text-sm text-content dark:text-gray-200 leading-relaxed">
-              {tts.error}
-            </div>
-            <button
-              type="button"
-              onClick={tts.clearError}
-              aria-label="关闭"
-              className="shrink-0 -mr-1 -mt-1 w-6 h-6 rounded-md inline-flex items-center justify-center text-content-tertiary hover:text-content hover:bg-black/[0.04] dark:hover:bg-white/[0.06] transition-colors"
-            >
-              <X className="w-3.5 h-3.5" />
-            </button>
-          </div>
-        </div>
       )}
     </div>
   )
