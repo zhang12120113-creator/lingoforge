@@ -1,6 +1,6 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useState, useEffect, useCallback } from 'react';
-import { loadDictionary } from '../utils/loadDictionary.js';
+import { loadDictionary, getCached } from '../utils/loadDictionary.js';
 import { getMeta } from '../dictionaries/meta.js';
 import { unlockAudio } from '../utils/audioContext.js';
 import ChapterSkeleton from '../components/ChapterSkeleton.jsx';
@@ -10,8 +10,8 @@ const RESTORE_KEY = 'lf_wordlib_should_restore';
 export default function ChapterSelect() {
   const { dictId } = useParams();
   const navigate = useNavigate();
-  const [dict, setDict] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [dict, setDict] = useState(() => getCached(dictId));
+  const [loading, setLoading] = useState(() => !getCached(dictId));
   const [error, setError] = useState(null);
   const meta = getMeta(dictId);
 

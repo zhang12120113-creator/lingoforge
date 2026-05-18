@@ -325,8 +325,12 @@ export default function Typing() {
   }, [isMobile, isFinished, wordIndex, words.length, jumpTo, keyboardActive]);
 
   const handleGoHome = useCallback(() => {
-    navigate('/word');
-  }, [navigate]);
+    if (isErrorBookMode || isReadingWordBookMode || isCorpusWordBookMode) {
+      navigate('/word');
+    } else {
+      navigate(`/dict/${dictId}`);
+    }
+  }, [navigate, dictId, isErrorBookMode, isReadingWordBookMode, isCorpusWordBookMode]);
 
   const hasNextChapter = !isErrorBookMode && !isReadingWordBookMode && !isCorpusWordBookMode
     && chapters.some(c => c.id === Number(chapterId) + 1);
@@ -396,7 +400,7 @@ export default function Typing() {
           </svg>
         </div>
         <p className="text-indigo-500 dark:text-violet-400 mb-6 font-medium">{error}</p>
-        <button onClick={() => navigate('/word')} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20">返回词库列表</button>
+        <button onClick={() => isErrorBookMode || isWordBookMode ? navigate('/word') : navigate(`/dict/${dictId}`)} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20">返回章节列表</button>
       </div>
     </div>
   );
@@ -423,7 +427,7 @@ export default function Typing() {
             </div>
             <p className="text-green-600 dark:text-green-400 mb-2 font-medium text-xl">{emptyTitle}</p>
             <p className="text-content-tertiary dark:text-gray-400 mb-6">{emptyDesc}</p>
-            <button onClick={() => navigate('/word')} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20">返回词库列表</button>
+            <button onClick={() => navigate('/word')} className="px-5 py-2.5 bg-primary hover:opacity-90 text-white rounded-button font-medium transition shadow-lg shadow-primary/20">返回词库</button>
           </div>
         </div>
       );
@@ -492,11 +496,11 @@ export default function Typing() {
 
         {/* 顶部栏 */}
         <div className="min-h-12 md:h-14 shrink-0 flex items-center justify-between px-3 md:px-4 z-40">
-          <button onClick={() => navigate('/word')} className="text-content-tertiary dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark flex items-center gap-2 text-sm transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.04]">
+          <button onClick={() => (isErrorBookMode || isReadingWordBookMode || isCorpusWordBookMode) ? navigate('/word') : navigate(`/dict/${dictId}`)} className="text-content-tertiary dark:text-gray-400 hover:text-primary dark:hover:text-primary-dark flex items-center gap-2 text-sm transition-colors px-3 py-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-white/[0.04]">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            <span className="hidden sm:inline">返回词库列表</span>
+            <span className="hidden sm:inline">{(isErrorBookMode || isReadingWordBookMode || isCorpusWordBookMode) ? '返回词库' : '返回章节列表'}</span>
           </button>
 
           <div className="flex flex-col items-center">

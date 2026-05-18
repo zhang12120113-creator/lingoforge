@@ -21,7 +21,7 @@ import GrammarOverview from '../components/GrammarOverview'
 import Dropdown from '../../../components/Dropdown'
 import { VirtualGrid } from '../../../components/virtual/VirtualGrid'
 
-export default function ArticleList() {
+export default function ArticleList({ scrollRef }) {
   const navigate = useNavigate()
   const store = useReadingStore()
   const gridRef = useRef(null)
@@ -32,33 +32,17 @@ export default function ArticleList() {
   const deferredQuery = useDeferredValue(searchQuery)
   const [bookmarkOnly, setBookmarkOnly] = useState(false)
   const [readingWordCount, setReadingWordCount] = useState(0)
-  const scrollRestoredRef = useRef(false)
-
-  const pendingScrollRef = useRef(null)
 
   useLayoutEffect(() => {
-    if (scrollRestoredRef.current) return
-    const savedScroll = sessionStorage.getItem('reading_list_scroll')
-    if (savedScroll !== null) {
-      const top = parseInt(savedScroll, 10)
-      sessionStorage.removeItem('reading_list_scroll')
-      pendingScrollRef.current = top
+    if (scrollRef.current > 0) {
+      const top = scrollRef.current
+      scrollRef.current = 0
       window.scrollTo(0, top)
     }
   }, [])
 
   useEffect(() => {
-    if (scrollRestoredRef.current) return
-    scrollRestoredRef.current = true
-
     setReadingWordCount(getReadingWordBookCount())
-    if (pendingScrollRef.current !== null) {
-      const top = pendingScrollRef.current
-      pendingScrollRef.current = null
-      requestAnimationFrame(() => {
-        window.scrollTo(0, top)
-      })
-    }
   }, [])
 
   // bookmarks 数组转 Set，加速 has 查找并避免每次 filter/render 都遍历数组
@@ -97,8 +81,7 @@ export default function ArticleList() {
   // 稳定的事件回调
   const handleArticleClick = useCallback(
     (id) => {
-      const offset = gridRef.current?.getScrollOffset?.() ?? 0
-      sessionStorage.setItem('reading_list_scroll', String(offset))
+      scrollRef.current = window.scrollY
       navigate(`/reading/${id}`)
     },
     [navigate]

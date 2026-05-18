@@ -58,6 +58,9 @@ function getModuleFromPath(pathname) {
   if (pathname === '/training' || pathname.startsWith('/training/')) {
     return 'training'
   }
+  if (pathname.startsWith('/reading/grammar')) {
+    return 'reading'
+  }
   return null
 }
 

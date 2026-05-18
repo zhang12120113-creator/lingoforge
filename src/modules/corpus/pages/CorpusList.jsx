@@ -13,11 +13,10 @@ import VideoCard from '../components/VideoCard'
 import Dropdown from '../../../components/Dropdown'
 import { VirtualGrid } from '../../../components/virtual/VirtualGrid'
 
-export default function CorpusList() {
+export default function CorpusList({ scrollRef }) {
   const navigate = useNavigate()
   const store = useCorpusStore()
   const gridRef = useRef(null)
-  const scrollRestoredRef = useRef(false)
 
   const [categoryFilter, setCategoryFilter] = useState('全部')
   const [difficultyFilter, setDifficultyFilter] = useState('全部')
@@ -26,31 +25,16 @@ export default function CorpusList() {
   const [bookmarkOnly, setBookmarkOnly] = useState(false)
   const [corpusWordCount, setCorpusWordCount] = useState(0)
 
-  const pendingScrollRef = useRef(null)
-
   useLayoutEffect(() => {
-    if (scrollRestoredRef.current) return
-    const savedScroll = sessionStorage.getItem('corpus_list_scroll')
-    if (savedScroll !== null) {
-      const top = parseInt(savedScroll, 10)
-      sessionStorage.removeItem('corpus_list_scroll')
-      pendingScrollRef.current = top
+    if (scrollRef.current > 0) {
+      const top = scrollRef.current
+      scrollRef.current = 0
       window.scrollTo(0, top)
     }
   }, [])
 
   useEffect(() => {
-    if (scrollRestoredRef.current) return
-    scrollRestoredRef.current = true
-
     setCorpusWordCount(getCorpusWordBookCount())
-    if (pendingScrollRef.current !== null) {
-      const top = pendingScrollRef.current
-      pendingScrollRef.current = null
-      requestAnimationFrame(() => {
-        window.scrollTo(0, top)
-      })
-    }
   }, [])
 
   const bookmarkSet = useMemo(
@@ -86,8 +70,7 @@ export default function CorpusList() {
 
   const handleVideoClick = useCallback(
     (id) => {
-      const offset = gridRef.current?.getScrollOffset?.() ?? 0
-      sessionStorage.setItem('corpus_list_scroll', String(offset))
+      scrollRef.current = window.scrollY
       navigate(`/listening/${id}`)
     },
     [navigate]

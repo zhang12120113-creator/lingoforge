@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import { ArrowRight, BookOpen, Type, Clock, MessageSquareText } from 'lucide-react'
 
 const modules = [
@@ -7,8 +8,12 @@ const modules = [
 ]
 
 export default function GrammarOverview() {
+  const navigate = useNavigate()
   return (
-    <div className="group card card-hover relative overflow-hidden cursor-pointer glow-border-subtle active:scale-[0.98] transition-transform duration-150 flex flex-col min-h-[280px] h-full bg-white dark:bg-white/[0.03] rounded-xl shadow-sm">
+    <div
+      onClick={() => navigate('/reading/grammar')}
+      className="group card card-hover relative overflow-hidden cursor-pointer glow-border-subtle active:scale-[0.98] transition-transform duration-150 flex flex-col min-h-[280px] h-full bg-white dark:bg-white/[0.03] rounded-xl shadow-sm"
+    >
       {/* 右下角装饰 */}
       <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-br from-primary/5 to-violet-500/5 dark:from-primary/10 dark:to-violet-500/10 rounded-full blur-2xl group-hover:from-primary/10 group-hover:to-violet-500/10 transition-all duration-500" />
 

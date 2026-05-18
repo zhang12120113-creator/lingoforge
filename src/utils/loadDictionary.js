@@ -59,6 +59,9 @@ function rechunkDictionary(data) {
   return { ...data, chapters, totalChapters: chapters.length }
 }
 
+export function isCached(id) { return cache.has(id) }
+export function getCached(id) { return cache.get(id) || null }
+
 export async function loadDictionary(id) {
   if (!noCacheIds.has(id) && cache.has(id)) return cache.get(id)
   const loader = loaders[id]
