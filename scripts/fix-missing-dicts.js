@@ -71,7 +71,7 @@ async function main() {
     dict.id = 'zhongkao';
     dict.name = '中考英语核心词汇';
     dict.description = '中考英语高频核心词汇';
-    dict.category = '初中英语';
+    dict.category = '中学英语';
     dict.totalWords = dict.chapters.reduce((s, c) => s + c.words.length, 0);
     const outPath = path.join(DICT_DIR, 'zhongkao.json');
     fs.writeFileSync(outPath, JSON.stringify(dict, null, 2), 'utf-8');
@@ -86,7 +86,7 @@ async function main() {
     dict.id = 'gaokao';
     dict.name = '高考英语核心词汇';
     dict.description = '高考英语高频核心词汇';
-    dict.category = '高中英语';
+    dict.category = '中学英语';
     dict.totalWords = dict.chapters.reduce((s, c) => s + c.words.length, 0);
     const outPath = path.join(DICT_DIR, 'gaokao.json');
     fs.writeFileSync(outPath, JSON.stringify(dict, null, 2), 'utf-8');
@@ -115,7 +115,7 @@ async function main() {
         id: 'programmer',
         name: '程序员常见词汇',
         description: '程序员工作中高频使用的英语单词',
-        category: '程序员英语',
+        category: '专业英语',
         totalChapters: chapters.length,
         totalWords: words.length,
         chapters

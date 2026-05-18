@@ -7,6 +7,7 @@ import { getErrorBookCount } from '../utils/errorBook.js'
 import { getReadingWordBookCount } from '../utils/readingWordBook.js'
 import { getCorpusWordBookCount } from '../utils/corpusWordBook.js'
 import { useDebounce } from '../hooks/useDebounce.js'
+import { useFavorites } from '../utils/favoriteDicts.js'
 import Hero from '../components/Hero'
 import Features from '../components/Features'
 import ErrorBookCard from '../components/ErrorBookCard'
@@ -25,7 +26,9 @@ function Home() {
 
   const [selectedCategory, setSelectedCategory] = useState('全部')
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [favoriteOnly, setFavoriteOnly] = useState(false)
   const dropdownRef = useRef(null)
+  const { favorites, isFavorite, toggleFavorite } = useFavorites()
 
   useEffect(() => {
     function handleClickOutside(e) {
@@ -123,55 +126,43 @@ function Home() {
       d.name.toLowerCase().includes(query) ||
       d.description.toLowerCase().includes(query) ||
       d.category.toLowerCase().includes(query)
-    return categoryMatch && searchMatch
+    const favoriteMatch = !favoriteOnly || isFavorite(d.id)
+    return categoryMatch && searchMatch && favoriteMatch
   })
 
   // 错题本数量（从 localStorage 读取，不依赖状态变化）
   const errorBookCount = getErrorBookCount()
 
   const categoryIcons = {
-    '初中英语': (
+    '功能词本': (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
+    ),
+    '中学英语': (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
     ),
-    '高中英语': (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-    ),
-    '英语4级': (
+    '大学英语': (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
     ),
-    '英语6级': (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
-    ),
-    '英语专四': (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
-    ),
-    '英语专八': (
+    '英专生英语': (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
     ),
-    '雅思': (
+    '留学英语': (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
     ),
-    '托福': (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-    ),
-    'SAT': (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z" /></svg>
-    ),
-    '考研': (
+    '考研英语': (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
     ),
-    '程序员英语': (
+    '专业英语': (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
     ),
   }
 
   const getCategoryColor = (title) => {
     const t = title.toLowerCase()
-    if (t.includes('初中') || t.includes('中考')) return 'bg-green-500'
-    if (t.includes('高中') || t.includes('高考')) return 'bg-blue-500'
-    if (t.includes('四级') || t.includes('六级')) return 'bg-orange-500'
-    if (t.includes('专四') || t.includes('专八')) return 'bg-red-500'
-    if (t.includes('雅思') || t.includes('托福') || t.includes('sat')) return 'bg-purple-500'
+    if (t.includes('中学') || t.includes('初中') || t.includes('中考') || t.includes('高中') || t.includes('高考')) return 'bg-green-500'
+    if (t.includes('大学') || t.includes('四级') || t.includes('六级')) return 'bg-orange-500'
+    if (t.includes('英专')) return 'bg-red-500'
+    if (t.includes('留学')) return 'bg-purple-500'
     if (t.includes('考研')) return 'bg-indigo-500'
     if (t.includes('程序员')) return 'bg-slate-500'
     return 'bg-indigo-500'
@@ -204,40 +195,55 @@ function Home() {
                 从丰富的词库中选择，开启你的单词记忆之旅
               </p>
             </div>
-            <div className="relative" ref={dropdownRef}>
+            <div className="flex items-center gap-2">
               <button
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center gap-2 px-4 py-2 glass-card rounded-button text-sm font-medium text-content-secondary dark:text-gray-300 hover:border-primary/40 dark:hover:border-primary/40 transition-colors cursor-pointer"
+                onClick={() => setFavoriteOnly(!favoriteOnly)}
+                className={`flex items-center gap-2 px-4 py-2 rounded-button text-sm font-medium transition-colors cursor-pointer ${
+                  favoriteOnly
+                    ? 'bg-amber-500 text-white shadow-md shadow-amber-500/25'
+                    : 'glass-card text-content-secondary dark:text-gray-300 hover:border-amber-400/40 dark:hover:border-amber-400/40'
+                }`}
               >
-                <span>{selectedCategory === '全部' ? '全部分类' : selectedCategory}</span>
-                <svg
-                  className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                <svg className="w-4 h-4" fill={favoriteOnly ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                 </svg>
+                <span>{favoriteOnly ? '已收藏' : '只看收藏'}</span>
               </button>
-              {dropdownOpen && (
-                <div className="dropdown-menu">
-                  <button
-                    onClick={() => { setSelectedCategory('全部'); setDropdownOpen(false) }}
-                    className={`dropdown-item ${selectedCategory === '全部' ? 'dropdown-item-active' : 'dropdown-item-inactive'}`}
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                  className="flex items-center gap-2 px-4 py-2 glass-card rounded-button text-sm font-medium text-content-secondary dark:text-gray-300 hover:border-primary/40 dark:hover:border-primary/40 transition-colors cursor-pointer"
+                >
+                  <span>{selectedCategory === '全部' ? '全部分类' : selectedCategory}</span>
+                  <svg
+                    className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
                   >
-                    全部分类
-                  </button>
-                  {categories.map((cat) => (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {dropdownOpen && (
+                  <div className="dropdown-menu">
                     <button
-                      key={cat}
-                      onClick={() => { setSelectedCategory(cat); setDropdownOpen(false) }}
-                      className={`dropdown-item ${selectedCategory === cat ? 'dropdown-item-active' : 'dropdown-item-inactive'}`}
+                      onClick={() => { setSelectedCategory('全部'); setDropdownOpen(false) }}
+                      className={`dropdown-item ${selectedCategory === '全部' ? 'dropdown-item-active' : 'dropdown-item-inactive'}`}
                     >
-                      {cat}
+                      全部分类
                     </button>
-                  ))}
-                </div>
-              )}
+                    {categories.map((cat) => (
+                      <button
+                        key={cat}
+                        onClick={() => { setSelectedCategory(cat); setDropdownOpen(false) }}
+                        className={`dropdown-item ${selectedCategory === cat ? 'dropdown-item-active' : 'dropdown-item-inactive'}`}
+                      >
+                        {cat}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
@@ -334,13 +340,18 @@ function Home() {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {/* 错题本卡片（始终显示在最前面，空题时置灰禁用） */}
-          <ErrorBookCard
+          {(() => {
+            const q = searchQuery.trim().toLowerCase()
+            const match = (keywords) => !q || keywords.some(k => k.toLowerCase().includes(q))
+            const showFunctionBooks = selectedCategory === '全部' || selectedCategory === '功能词本'
+            return (<>
+          {/* 错题本卡片 */}
+          {showFunctionBooks && match(['错题本']) && <ErrorBookCard
             count={errorBookCount}
             onClick={() => saveScrollAndNavigate('/dict/error-book')}
-          />
+          />}
           {/* 阅读词本卡片 */}
-          <div
+          {showFunctionBooks && match(['阅读词本']) && <div
             onClick={() => saveScrollAndNavigate('/dict/reading-word-book')}
             className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border-2 border-violet-200 bg-gradient-to-br from-violet-50 to-purple-50 p-6 cursor-pointer hover:shadow-lg hover:border-violet-300 dark:border-violet-900/40 dark:from-violet-950/30 dark:to-purple-950/20 dark:hover:border-violet-700/60 dark:hover:shadow-violet-900/20 animate-card-enter glow-border-subtle transition-all duration-150 active:scale-[0.98]"
           >
@@ -368,9 +379,9 @@ function Home() {
                   : '精选文章，在阅读中自然掌握单词'}
               </p>
             </div>
-          </div>
+          </div>}
           {/* 语料词本卡片 */}
-          <div
+          {showFunctionBooks && match(['语料词本']) && <div
             onClick={() => saveScrollAndNavigate('/dict/corpus-word-book')}
             className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border-2 border-cyan-200 bg-gradient-to-br from-cyan-50 to-sky-50 p-6 cursor-pointer hover:shadow-lg hover:border-cyan-300 dark:border-cyan-900/40 dark:from-cyan-950/30 dark:to-sky-950/20 dark:hover:border-cyan-700/60 dark:hover:shadow-cyan-900/20 animate-card-enter glow-border-subtle transition-all duration-150 active:scale-[0.98]"
           >
@@ -399,7 +410,7 @@ function Home() {
                   : '观看语料视频，在真实语境中掌握单词'}
               </p>
             </div>
-          </div>
+          </div>}
           {filteredDictionaries.map((dict, index) => {
             const colors = tagColors[dict.color] || tagColors['warm-coral'];
             return (
@@ -416,13 +427,21 @@ function Home() {
                 style={{ animationDelay: `${(index + 2) * 0.05}s` }}
               >
                 <div className={`absolute top-0 left-0 w-full h-1 ${getCategoryColor(dict.name)} opacity-80`} />
+                <button
+                  onClick={(e) => { e.stopPropagation(); toggleFavorite(dict.id) }}
+                  aria-label={isFavorite(dict.id) ? '取消收藏' : '收藏词库'}
+                  className={`absolute top-3 right-3 z-10 flex h-8 w-8 items-center justify-center rounded-full transition-colors cursor-pointer ${
+                    isFavorite(dict.id)
+                      ? 'bg-amber-100 text-amber-500 dark:bg-amber-500/15 dark:text-amber-400'
+                      : 'bg-transparent text-gray-300 hover:text-amber-500 hover:bg-amber-50 dark:text-gray-600 dark:hover:text-amber-400 dark:hover:bg-amber-500/10'
+                  }`}
+                >
+                  <svg className="w-4 h-4" fill={isFavorite(dict.id) ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                  </svg>
+                </button>
                 <div className="flex items-start justify-between mb-3">
-                  <h2 className="text-title text-content dark:text-gray-100 group-hover:text-primary transition-colors">{dict.name}</h2>
-                  <div className="text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">
-                    {categoryIcons[dict.category] || (
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-                    )}
-                  </div>
+                  <h2 className="text-title text-content dark:text-gray-100 group-hover:text-primary transition-colors pr-10">{dict.name}</h2>
                 </div>
                 <p className="text-body text-content-tertiary dark:text-gray-400 mb-4 leading-relaxed">{dict.description}</p>
                 <div className="flex items-center justify-between">
@@ -436,6 +455,7 @@ function Home() {
               </div>
             );
           })}
+          </>)})()}
         </div>
       </div>
       </div>

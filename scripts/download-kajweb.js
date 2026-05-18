@@ -11,14 +11,14 @@ if (!fs.existsSync(TMP_DIR)) fs.mkdirSync(TMP_DIR, { recursive: true });
 if (!fs.existsSync(DICT_DIR)) fs.mkdirSync(DICT_DIR, { recursive: true });
 
 const dictionaryMeta = {
-  junior:       { name: '初中英语词汇', category: '初中英语', description: '初中阶段必学英语词汇', totalChapters: 15, color: 'bg-green-400' },
-  senior:       { name: '高中英语词汇', category: '高中英语', description: '高中阶段必学英语词汇', totalChapters: 20, color: 'bg-teal-500' },
+  junior:       { name: '初中英语词汇', category: '中学英语', description: '初中阶段必学英语词汇', totalChapters: 15, color: 'bg-green-400' },
+  senior:       { name: '高中英语词汇', category: '中学英语', description: '高中阶段必学英语词汇', totalChapters: 20, color: 'bg-teal-500' },
   tem4:         { name: '英语专四',     category: '英语专四', description: '英语专业四级考试核心词汇', totalChapters: 20, color: 'bg-purple-500' },
   tem8:         { name: '英语专八',     category: '英语专八', description: '英语专业八级考试核心词汇', totalChapters: 25, color: 'bg-fuchsia-500' },
   ielts:        { name: '雅思词汇',     category: '雅思',     description: '雅思考试核心词汇', totalChapters: 20, color: 'bg-pink-500' },
   toefl:        { name: '托福词汇',     category: '托福',     description: '托福考试核心词汇', totalChapters: 24, color: 'bg-rose-500' },
   sat:          { name: 'SAT 词汇',     category: 'SAT',      description: 'SAT 考试核心词汇', totalChapters: 20, color: 'bg-orange-500' },
-  postgraduate: { name: '考研词汇',     category: '考研',     description: '考研英语核心词汇', totalChapters: 24, color: 'bg-blue-600' },
+  postgraduate: { name: '考研词汇',     category: '考研英语',     description: '考研英语核心词汇', totalChapters: 24, color: 'bg-blue-600' },
 };
 
 async function fetchWithRetry(url, retries = 3, delay = 2000) {

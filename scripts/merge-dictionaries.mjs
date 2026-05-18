@@ -194,6 +194,6 @@ const pgNetem = readNetem();
 const pgMerged = mergeWords('postgraduate', [pgKajweb1, pgKajweb2, pgNetem], pgExisting, phoneticLookup);
 // Filter out extremely basic words for postgraduate (optional: keep top 3000 by frequency?)
 // For now, keep all but deduplicated
-writeDict('postgraduate', '考研词汇', '考研英语核心词汇', '考研', pgMerged);
+writeDict('postgraduate', '考研词汇', '考研英语核心词汇', '考研英语', pgMerged);
 
 console.log('Done!');
